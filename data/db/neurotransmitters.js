@@ -18,7 +18,8 @@ SP.nts = [
       { ch: 'ch03', pages: '53, 55', text: '**5HT3** is a pentameric ligand-gated channel; antagonists include mirtazapine and vortioxetine (pro-cognitive, antidepressant) and antiemetics.', sec: 's3-drugs' },
       { ch: 'ch04', pages: '115–119', text: 'Autoreceptors: somatodendritic **5HT1A** (negative feedback) and **5HT2B** (feed-forward), terminal **5HT1B/D**. Unlike dopamine and NE neurons, the two ends carry different autoreceptors.', sec: 's4-5ht-pre' },
       { ch: 'ch04', pages: '122–131', text: 'Postsynaptic receptors on GABA interneurons flip the sign downstream: 5HT1A **raises** NE, DA and ACh; 5HT2C, 5HT3 and 5HT7 **lower** downstream release.', sec: 's4-5ht-post' },
-      { ch: 'ch04', pages: '131–141', text: 'The **serotonin hyperfunction** hypothesis: 5HT2A excess or imbalance on cortical glutamate neurons drives VTA dopamine (delusions, auditory hallucinations) and visual cortex (visual hallucinations).', sec: 's4-5ht-hyper' }
+      { ch: 'ch04', pages: '131–141', text: 'The **serotonin hyperfunction** hypothesis: 5HT2A excess or imbalance on cortical glutamate neurons drives VTA dopamine (delusions, auditory hallucinations) and visual cortex (visual hallucinations).', sec: 's4-5ht-hyper' },
+      { ch: 'ch05', pages: '184–195', text: '5HT2A antagonism and 5HT1A partial agonism at cortical glutamate neurons reshape downstream dopamine release: the basis of the so-called atypical drugs.', sec: 's5-three-pathways' }
     ],
     synthesis: [['Tryptophan', 'Transported from plasma into the brain'], ['5HTP', '**Tryptophan hydroxylase (TRY-OH)**'], ['5HT', '**Aromatic amino acid decarboxylase (AAADC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -57,7 +58,9 @@ SP.nts = [
       { ch: 'ch04', pages: '82–84', text: '**D2 and D3** serve as presynaptic autoreceptors (“gatekeepers”); **D3 is more sensitive**, braking release at lower concentrations.', sec: 's4-da-receptors' },
       { ch: 'ch04', pages: '84–85', text: 'In prefrontal cortex, few DATs and autoreceptors let dopamine diffuse widely to **D1** receptors (volume transmission); mesostriatal terminals have DATs and D2/D3 autoreceptors.', sec: 's4-da-receptors' },
       { ch: 'ch04', pages: '92–95', text: 'Imaging places schizophrenia’s hyperdopaminergia in the **associative striatum** (nigral input): the VTA–substantia nigra **integrative hub** is mesostriatal.', sec: 's4-hub' },
-      { ch: 'ch04', pages: '110–111', text: 'NMDA hypofunction and 5HT2A excess both converge on **downstream mesostriatal dopamine hyperactivity**.', sec: 's4-glu-da' }
+      { ch: 'ch04', pages: '110–111', text: 'NMDA hypofunction and 5HT2A excess both converge on **downstream mesostriatal dopamine hyperactivity**.', sec: 's4-glu-da' },
+      { ch: 'ch05', pages: '161–170', text: 'D2 blockade in each pathway: mesolimbic → antipsychotic and **secondary negative symptoms**; mesocortical → worse negative/cognitive symptoms; tuberoinfundibular → **hyperprolactinemia**; nigrostriatal → **DIP, dystonia, akathisia, NMS, TD**.', sec: 's5-negative' },
+      { ch: 'ch05', pages: '166–167', text: 'In the motor striatum dopamine and **acetylcholine** are reciprocal: dopamine at D2 suppresses ACh release from cholinergic interneurons.', sec: 's5-motor' }
     ],
     synthesis: [['Tyrosine', 'Taken into the terminal by a **tyrosine transporter**'], ['DOPA', '**Tyrosine hydroxylase (TOH)**, the rate-limiting enzyme'], ['Dopamine', '**DOPA decarboxylase (DDC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -80,7 +83,8 @@ SP.nts = [
       { ch: 'ch01', pages: '5', text: 'One of the **six key neurotransmitter systems** targeted by psychotropic drugs.' },
       { ch: 'ch02', pages: '34–35', text: 'Its precursor **choline** has a presynaptic transporter, and acetylcholine is packaged by **VAChT** (SLC18); no drugs target either.', sec: 's2-other' },
       { ch: 'ch02', pages: '40', text: 'Muscarinic receptors **M1, M4, M2/M3** are drug targets (Table 2-4); **acetylcholinesterase inhibition** boosts acetylcholine at all its receptors (Table 2-5).', sec: 's2-receptor-tables' },
-      { ch: 'ch03', pages: '53, 63–64', text: '**Nicotinic** receptors (α7, α4β2) are pentameric ligand-gated channels. Acetylcholine is hydrolyzed so quickly by abundant acetylcholinesterase that it rarely desensitizes them; nicotine is not, and does.', sec: 's3-states' }
+      { ch: 'ch03', pages: '53, 63–64', text: '**Nicotinic** receptors (α7, α4β2) are pentameric ligand-gated channels. Acetylcholine is hydrolyzed so quickly by abundant acetylcholinesterase that it rarely desensitizes them; nicotine is not, and does.', sec: 's3-states' },
+      { ch: 'ch05', pages: '166–169', text: 'D2 blockade **disinhibits** striatal ACh release, contributing to DIP; anticholinergics restore the balance. Xanomeline’s M4/M1 agonism is a new antipsychotic mechanism.', sec: 's5-motor' }
     ]
   },
   {
@@ -151,7 +155,8 @@ SP.nts = [
     facts: [
       { ch: 'ch01', pages: '5', text: 'Listed with neuropeptides and hormones as **other important neurotransmitters and neuromodulators**, mentioned in the relevant clinical chapters.' },
       { ch: 'ch02', pages: '35', text: 'Apparently has **no presynaptic transporter**, though it is packaged by **VMAT2**; inactivation is thought to be **entirely enzymatic**.', sec: 's2-missing' },
-      { ch: 'ch02', pages: '40', text: '**H1** antagonism and **H3** antagonism/inverse agonism are drug actions in Table 2-4.', sec: 's2-receptor-tables' }
+      { ch: 'ch02', pages: '40', text: '**H1** antagonism and **H3** antagonism/inverse agonism are drug actions in Table 2-4.', sec: 's2-receptor-tables' },
+      { ch: 'ch05', pages: '181–182', text: 'With ACh and NE, histamine drives **cortical arousal**; H1 blockade by drugs for psychosis causes sedation and weight gain.', sec: 's5-fga' }
     ]
   },
   {

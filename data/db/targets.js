@@ -14,7 +14,8 @@ SP.targets = [
       { ch: 'ch01', pages: '6', text: 'Elavil (amitriptyline) and Prozac (fluoxetine) entered practice **before molecular clarification of the serotonin transporter site**.', sec: 's1-nts' },
       { ch: 'ch02', pages: '31–33', text: 'Member of the **SLC6** gene family. Besides serotonin it carries **Ecstasy (MDMA)**, a “false substrate.”', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '33', text: 'Stahl’s **wagon** analogy: sodium inflates the tires so serotonin can bind; an SSRI such as fluoxetine sits in the **allosteric “front seat”**, lowering affinity for serotonin. SSRIs do not bind the substrate site and are **not transported**.', sec: 's2-monoamine' },
-      { ch: 'ch04', pages: '114–115', text: 'All 5HT neurons are thought to contain SERT; functional **polymorphisms** of its gene may predict response and side effects with SERT blockers.', sec: 's4-5ht-synth' }
+      { ch: 'ch04', pages: '114–115', text: 'All 5HT neurons are thought to contain SERT; functional **polymorphisms** of its gene may predict response and side effects with SERT blockers.', sec: 's4-5ht-synth' },
+      { ch: 'ch05', pages: '237', text: '**Lumateperone** binds SERT about as potently as D2; ziprasidone binds it weakly.', sec: 's5-dones' }
     ]
   },
   {
@@ -25,7 +26,8 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '31', text: 'Carries **dopamine, epinephrine and amphetamine** as well as norepinephrine; NET has **high affinity for dopamine**.', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '34', text: '“Stimulants” for ADHD (**methylphenidate, amphetamine**) and **cocaine** act on **DAT and NET**.', sec: 's2-monoamine' },
-      { ch: 'ch04', pages: '80–81', text: 'Takes up dopamine that diffuses from DAT-poor synapses (e.g., prefrontal cortex) as a **“false” substrate**.', sec: 's4-da-synth' }
+      { ch: 'ch04', pages: '80–81', text: 'Takes up dopamine that diffuses from DAT-poor synapses (e.g., prefrontal cortex) as a **“false” substrate**.', sec: 's4-da-synth' },
+      { ch: 'ch05', pages: '227–229', text: '**Norquetiapine** inhibits NET, a key part of quetiapine’s antidepressant action; ziprasidone and zotepine weakly inhibit NET.', sec: 's5-pines' }
     ]
   },
   {
@@ -93,11 +95,12 @@ SP.targets = [
     summary: 'The SLC18 vesicular transporter that packages serotonin, norepinephrine, dopamine and histamine into synaptic vesicles. Amphetamine is a substrate; tetrabenazine, deutetrabenazine and valbenazine inhibit it.',
     location: 'Synaptic vesicle membrane of serotonin, norepinephrine, dopamine and histamine neurons',
     coupling: 'Antiporter driven by a **proton pump** (proton ATPase): neurotransmitter goes in as protons go out',
-    block: ['VMAT2 inhibition (tetrabenazine and derivatives) treats movement disorders such as tardive dyskinesia (Chapter 5)'],
+    block: ['VMAT2 inhibition (tetrabenazine and derivatives) treats movement disorders such as tardive dyskinesia (Chapter 5)', 'Treats **tardive dyskinesia** by trimming dopamine “go” in direct and indirect pathways (Chapter 5)', 'Tetrabenazine: peak-dose **sedation** and **DIP**, depression/suicide risk in Huntington’s', 'Reserpine (with VMAT1): orthostatic hypotension, stuffy nose, itching, GI effects'],
     facts: [
       { ch: 'ch02', pages: '31', text: 'All three monoamine neurons share **the same vesicular transporter, VMAT2**, which also packages **histamine**.', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '35', text: 'Targeted especially in **dopamine neurons**: **amphetamine** as a transported substrate; **tetrabenazine, deutetrabenazine and valbenazine** as inhibitors.', sec: 's2-vesicular' },
-      { ch: 'ch04', pages: '79–80, 114', text: 'Packages newly made **dopamine** and **serotonin** into vesicles.', sec: 's4-da-synth' }
+      { ch: 'ch04', pages: '79–80, 114', text: 'Packages newly made **dopamine** and **serotonin** into vesicles.', sec: 's4-da-synth' },
+      { ch: 'ch05', pages: '174–179', text: 'Only in **CNS** neurons (VMAT1 is also peripheral). **Reserpine** irreversibly blocks both; tetrabenazine-type drugs reversibly block only VMAT2 and preferentially deplete **dopamine**. Perhaps **> 90%** inhibition is needed to treat TD.', sec: 's5-vmat2' }
     ]
   },
   {
@@ -142,29 +145,41 @@ SP.targets = [
   {
     id: 'd2', name: 'Dopamine D2 receptor', short: 'D2', family: 'G-protein-linked receptor', nt: 'dopamine',
     summary: 'The key target of so-called antipsychotics. An inhibitory D2-like receptor, postsynaptic in the striatum (indirect “stop” pathway) and a presynaptic autoreceptor on nigrostriatal neurons. Mesolimbic D2 hyperactivity is the classic hypothesis of positive symptoms.',
-    block: ['Antagonism or partial agonism: **antipsychotic** and **antimanic** actions', 'Mesolimbic blockade: reduces **positive symptoms**', 'Tuberoinfundibular blockade: **hyperprolactinemia** (galactorrhea, gynecomastia, amenorrhea, sexual dysfunction)', 'Nigrostriatal blockade: **drug-induced parkinsonism**, possibly akathisia and dystonia; chronically **tardive dyskinesia**', 'Worsens movement in **Parkinson’s disease**; increases stroke and death risk in **dementia**'],
+    block: ['Antagonism or partial agonism: **antipsychotic** and **antimanic** actions', 'Mesolimbic blockade: reduces **positive symptoms**', 'Tuberoinfundibular blockade: **hyperprolactinemia** (galactorrhea, gynecomastia, amenorrhea, sexual dysfunction)', 'Nigrostriatal blockade: **drug-induced parkinsonism**, possibly akathisia and dystonia; chronically **tardive dyskinesia**', 'Worsens movement in **Parkinson’s disease**; increases stroke and death risk in **dementia**', 'Mesolimbic reward blockade: **secondary negative symptoms** (neuroleptic-induced deficit syndrome)', 'Acute nigrostriatal blockade: **acute dystonia**, **akathisia**, rarely **NMS**'],
     facts: [
       { ch: 'ch02', pages: '39', text: 'Directly targeted as an **antagonist or partial agonist** for antipsychotic and antimanic actions (Table 2-4); detailed in Chapter 5.', sec: 's2-receptor-tables' },
       { ch: 'ch04', pages: '79', text: 'Classic hypothesis: **hyperactivity at mesolimbic D2** receptors causes positive symptoms; D2 blockers have been the mainstay for over 50 years.', sec: 's4-da-synth' },
       { ch: 'ch04', pages: '82–84', text: 'As an **autoreceptor**, D2 is **less sensitive** than D3, so synapses with D2 autoreceptors accumulate more dopamine and have a wider diffusion radius.', sec: 's4-da-receptors' },
-      { ch: 'ch04', pages: '86–89', text: 'Populates the striatal **indirect (“stop”)** pathway; dopamine at D2 inhibits it (“don’t stop”).', sec: 's4-da-pathways' }
+      { ch: 'ch04', pages: '86–89', text: 'Populates the striatal **indirect (“stop”)** pathway; dopamine at D2 inhibits it (“don’t stop”).', sec: 's4-da-pathways' },
+      { ch: 'ch05', pages: '161–162', text: 'By the 1970s, **D2 antagonism** in the mesolimbic/mesostriatal pathway was recognized as the key property of all neuroleptics.', sec: 's5-history' },
+      { ch: 'ch05', pages: '170–174', text: 'Chronic blockade causes **upregulated, supersensitive** indirect-pathway D2 receptors: the proposed mechanism of **tardive dyskinesia** (too much “go”).', sec: 's5-td' },
+      { ch: 'ch05', pages: '189–193', text: '**Partial agonists** for psychosis sit just next to antagonists on the spectrum; a tiny amount of intrinsic activity reduces motor effects, and lactotroph D2 receptors read them as agonists (prolactin **falls**).', sec: 's5-pa' },
+      { ch: 'ch05', pages: '195, 201', text: 'Drugs are dosed to occupy **60–80%** of D2 receptors for psychosis (about 80% in the emotional striatum); lumateperone, quetiapine and clozapine work below 60%.', sec: 's5-binding' }
     ],
     location: 'Postsynaptic in striatum (indirect pathway) and pituitary; presynaptic **autoreceptors** (terminal and somatodendritic)',
     coupling: 'D2-like: **inhibitory**, negatively linked to adenylate cyclase',
-    stim: ['Indirect stimulation by **amphetamine/cocaine** (dopamine excess): paranoid psychosis with auditory hallucinations', 'Chronic stimulation by **levodopa**: levodopa-induced dyskinesias']
+    stim: ['Indirect stimulation by **amphetamine/cocaine** (dopamine excess): paranoid psychosis with auditory hallucinations', 'Chronic stimulation by **levodopa**: levodopa-induced dyskinesias', '**Partial agonism** (aripiprazole, brexpiprazole, cariprazine): antipsychotic with less DIP and **lower prolactin**; some **akathisia**']
   },
   {
     id: 'd3', name: 'Dopamine D3 receptor', short: 'D3', family: 'G-protein-linked receptor', nt: 'dopamine',
     summary: 'An inhibitory D2-like receptor. As a presynaptic autoreceptor it is more sensitive to dopamine than D2, braking release at lower concentrations; it regulates mesolimbic dopamine neurons.',
     location: 'Presynaptic **autoreceptors** on mesolimbic neurons (VTA cell bodies and striatal terminals); postsynaptic in striatum',
     coupling: 'D2-like: **inhibitory**, negatively linked to adenylate cyclase',
-    facts: [{ ch: 'ch04', pages: '81–85', text: '**More sensitive** to dopamine than D2, so a lower synaptic concentration turns off further release; mesolimbic neurons carry D3 autoreceptors.', sec: 's4-da-receptors' }]
+    facts: [
+      { ch: 'ch04', pages: '81–85', text: '**More sensitive** to dopamine than D2, so a lower synaptic concentration turns off further release; mesolimbic neurons carry D3 autoreceptors.', sec: 's4-da-receptors' },
+      { ch: 'ch05', pages: '202–203, 239–241', text: '**Cariprazine** and **blonanserin** have higher affinity for D3 than dopamine itself; sulpiride and amisulpride add D3 antagonist actions. D3 antagonism/partial agonism may improve **negative, affective and cognitive** symptoms by raising prefrontal dopamine.', sec: 's5-pips' }
+    ],
+    stim: ['**Partial agonism** (cariprazine): may improve **negative symptoms**, mood, cognition and reward/substance use (preclinical)'],
+    block: ['Antagonism of limbic D3: may reduce emotional-striatum overactivity; at somatodendritic D3: more **prefrontal dopamine**', 'Candidate **antidepressant** mechanism (sulpiride, amisulpride; Chapter 7)']
   },
   {
     id: 'd4', name: 'Dopamine D4 receptor', short: 'D4', family: 'G-protein-linked receptor', nt: 'dopamine',
     summary: 'An inhibitory D2-like receptor (negatively linked to adenylate cyclase).',
     coupling: 'D2-like: **inhibitory**, negatively linked to adenylate cyclase',
-    facts: [{ ch: 'ch04', pages: '81', text: 'One of the three **D2-like** receptors (D2, D3, D4).', sec: 's4-da-receptors' }]
+    facts: [
+      { ch: 'ch04', pages: '81', text: 'One of the three **D2-like** receptors (D2, D3, D4).', sec: 's4-da-receptors' },
+      { ch: 'ch05', pages: '236–237', text: '**Lurasidone** binds D4 most potently of all its targets; the effects of D4 binding are **not well understood**.', sec: 's5-dones' }
+    ]
   },
   {
     id: 'd5', name: 'Dopamine D5 receptor', short: 'D5', family: 'G-protein-linked receptor', nt: 'dopamine',
@@ -180,7 +195,8 @@ SP.targets = [
       { ch: 'ch02', pages: '39', text: '**Partial agonist** actions: reduced drug-induced parkinsonism, anxiolytic, booster of SSRI/SNRI antidepressant action (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch02', pages: '40', text: 'Stimulated **indirectly** at presynaptic somatodendritic autoreceptors when SSRIs or SNRIs block serotonin reuptake (Table 2-5).', sec: 's2-receptor-tables' },
       { ch: 'ch04', pages: '115–119', text: 'As a **somatodendritic autoreceptor** in the raphe it provides negative feedback; its **downregulation/desensitization** is thought critical to reuptake-blocker antidepressant action.', sec: 's4-5ht-pre' },
-      { ch: 'ch04', pages: '122–125', text: 'Always inhibitory, but often on **prefrontal GABA interneurons**, so stimulation **increases NE, DA and ACh** release. Many drugs for psychosis, mood and anxiety are 5HT1A agonists or partial agonists.', sec: 's4-5ht-post' }
+      { ch: 'ch04', pages: '122–125', text: 'Always inhibitory, but often on **prefrontal GABA interneurons**, so stimulation **increases NE, DA and ACh** release. Many drugs for psychosis, mood and anxiety are 5HT1A agonists or partial agonists.', sec: 's4-5ht-post' },
+      { ch: 'ch05', pages: '193–195', text: 'The **brake** on cortical glutamate neurons (5HT2A is the accelerator): partial agonism releases dopamine in motor striatum and prefrontal cortex, reducing motor effects and helping negative and affective symptoms. Brexpiprazole’s most potent property.', sec: 's5-5ht1a' }
     ]
   },
   {
@@ -197,13 +213,16 @@ SP.targets = [
   {
     id: '5ht2a', name: 'Serotonin 5HT2A receptor', short: '5HT2A', family: 'G-protein-linked receptor', nt: 'serotonin',
     summary: 'A pivotal serotonin receptor. Antagonism (or inverse agonism) is antipsychotic and reduces drug-induced parkinsonism; agonism is psychotomimetic.',
-    block: ['Antipsychotic actions in **Parkinson’s disease psychosis** and **dementia-related psychosis**', '**Reduced drug-induced parkinsonism**', 'Possible reduction of negative symptoms in schizophrenia', 'Possible mood-stabilizing and antidepressant actions in bipolar disorder', 'Improves **insomnia and anxiety**'],
+    block: ['Antipsychotic actions in **Parkinson’s disease psychosis** and **dementia-related psychosis**', '**Reduced drug-induced parkinsonism**', 'Possible reduction of negative symptoms in schizophrenia', 'Possible mood-stabilizing and antidepressant actions in bipolar disorder', 'Improves **insomnia and anxiety**', 'Added to D2 blockade: **less DIP**, **less prolactin**, possible gains in positive and **negative** symptoms (Chapter 5)', 'Helps **akathisia**'],
     stim: ['**Psychotomimetic** actions', 'Experimental treatment of refractory depression and other disorders, especially accompanying psychotherapy', 'Indirect 5HT2A/2C agonism via serotonin release by MDMA: “empathogen”', 'Agonism by **LSD, psilocybin, mescaline**: psychosis, dissociation, **visual hallucinations** (Chapter 4)'],
     facts: [
       { ch: 'ch02', pages: '39', text: 'Antagonist or **inverse agonist** actions listed in Table 2-4; agonist actions are psychotomimetic and experimental for refractory depression.', sec: 's2-receptor-tables' },
       { ch: 'ch02', pages: '45', text: 'Drugs long considered **5HT2A antagonists** may turn out to be **inverse agonists** in some brain areas.', sec: 's2-spectrum' },
       { ch: 'ch04', pages: '125–126', text: 'Always excitatory: on **apical dendrites of pyramidal neurons** it raises glutamate output; on **GABA interneurons** it lowers it. Most hallucinogens are 5HT2A agonists.', sec: 's4-5ht-post' },
-      { ch: 'ch04', pages: '131–141', text: 'Central to the **serotonin hyperfunction** hypothesis: overstimulated by LSD, psilocybin and mescaline; **upregulated** in Parkinson’s disease psychosis; **unopposed** after loss of GABA inhibition in dementia. 5HT2A antagonists treat PDP and dementia-related psychosis.', sec: 's4-5ht-hyper' }
+      { ch: 'ch04', pages: '131–141', text: 'Central to the **serotonin hyperfunction** hypothesis: overstimulated by LSD, psilocybin and mescaline; **upregulated** in Parkinson’s disease psychosis; **unopposed** after loss of GABA inhibition in dementia. 5HT2A antagonists treat PDP and dementia-related psychosis.', sec: 's4-5ht-hyper' },
+      { ch: 'ch05', pages: '184–187', text: 'On three populations of cortical glutamate neurons: blocking them **lowers** mesostriatal dopamine (antipsychotic), but **raises** nigrostriatal (fewer motor effects) and mesocortical dopamine (negative/cognitive/affective benefit).', sec: 's5-three-pathways' },
+      { ch: 'ch05', pages: '187–189', text: 'On pituitary **lactotrophs**, serotonin at 5HT2A stimulates prolactin, so 5HT2A antagonism offsets D2-blocker hyperprolactinemia.', sec: 's5-5ht2a-prolactin' },
+      { ch: 'ch05', pages: '204–222', text: 'Almost all drugs for psychosis bind **5HT2A more potently than D2**, except the D2 partial agonists.', sec: 's5-binding' }
     ]
   },
   {
@@ -216,11 +235,12 @@ SP.targets = [
   {
     id: '5ht2c', name: 'Serotonin 5HT2C receptor', short: '5HT2C', family: 'G-protein-linked receptor', nt: 'serotonin',
     summary: 'A serotonin receptor where antagonism has antidepressant actions.',
-    block: ['Antagonism: **antidepressant**', 'Antagonism: treats **psychosis and mood disorders** (Chapter 4)'],
+    block: ['Antagonism: **antidepressant**', 'Antagonism: treats **psychosis and mood disorders** (Chapter 4)', 'With H1 antagonism: **weight gain** (Chapter 5)'],
     stim: ['Indirect agonism via serotonin release by MDMA (with 5HT2A)', 'Agonism: treats **obesity**; on GABA interneurons, **reduces prefrontal NE and DA** (Chapter 4)'],
     facts: [
       { ch: 'ch02', pages: '39–40', text: '**Antagonist** actions are antidepressant (Table 2-4); stimulated indirectly by MDMA-induced serotonin release (Table 2-5).', sec: 's2-receptor-tables' },
-      { ch: 'ch04', pages: '126–127', text: 'Excitatory, postsynaptic and mostly on **GABA interneurons**, so serotonin here **inhibits NE and DA** release in prefrontal cortex. Agonists treat **obesity**; antagonists treat psychosis and mood disorders.', sec: 's4-5ht-post' }
+      { ch: 'ch04', pages: '126–127', text: 'Excitatory, postsynaptic and mostly on **GABA interneurons**, so serotonin here **inhibits NE and DA** release in prefrontal cortex. Agonists treat **obesity**; antagonists treat psychosis and mood disorders.', sec: 's4-5ht-post' },
+      { ch: 'ch05', pages: '198–199', text: 'With **H1** antagonism, 5HT2C antagonism is linked to **weight gain** (clozapine, olanzapine, quetiapine, mirtazapine); it is also a candidate antidepressant property.', sec: 's5-metabolic' }
     ]
   },
   {
@@ -238,7 +258,8 @@ SP.targets = [
     summary: 'A postsynaptic serotonin receptor that may regulate acetylcholine release and cognition; antagonists are proposed as pro-cognitive agents.',
     facts: [
       { ch: 'ch02', pages: '39', text: 'Pharmacological and therapeutic actions are marked **“?”** in Table 2-4; possibly stimulated postsynaptically by SSRIs (Table 2-5).', sec: 's2-receptor-tables' },
-      { ch: 'ch04', pages: '130', text: 'Postsynaptic; may be a key regulator of **ACh release** and cognition. Blockade improves learning and memory in animals, so **5HT6 antagonists** are proposed **pro-cognitive** agents for schizophrenia and Alzheimer disease.', sec: 's4-5ht-post' }
+      { ch: 'ch04', pages: '130', text: 'Postsynaptic; may be a key regulator of **ACh release** and cognition. Blockade improves learning and memory in animals, so **5HT6 antagonists** are proposed **pro-cognitive** agents for schizophrenia and Alzheimer disease.', sec: 's4-5ht-post' },
+      { ch: 'ch05', pages: '213', text: 'Clozapine, olanzapine, asenapine and zotepine bind 5HT6 about as potently as or more than D2; ziprasidone and iloperidone also bind it.', sec: 's5-binding' }
     ],
     block: ['Antagonism: proposed **pro-cognitive** action (animals: improved learning and memory) (Chapter 4)']
   },
@@ -248,7 +269,8 @@ SP.targets = [
     block: ['Antagonism: possible **pro-cognitive** and **antidepressant** actions', 'Antagonism: used for **psychosis and mood** (Chapter 4)'],
     facts: [
       { ch: 'ch02', pages: '39', text: 'Antagonist actions: possible pro-cognitive and antidepressant effects (Table 2-4).', sec: 's2-receptor-tables' },
-      { ch: 'ch04', pages: '130–131', text: 'Excitatory and frequently on **GABA interneurons**: in cortex it **inhibits glutamate** release; in the raphe, a recurrent collateral acting at 5HT7 on GABA neurons **inhibits further 5HT release**. 5HT7 antagonists treat psychosis and mood.', sec: 's4-5ht-post' }
+      { ch: 'ch04', pages: '130–131', text: 'Excitatory and frequently on **GABA interneurons**: in cortex it **inhibits glutamate** release; in the raphe, a recurrent collateral acting at 5HT7 on GABA neurons **inhibits further 5HT release**. 5HT7 antagonists treat psychosis and mood.', sec: 's4-5ht-post' },
+      { ch: 'ch05', pages: '195, 236', text: '5HT7 antagonism is a candidate antidepressant mechanism; **lurasidone** binds 5HT7 more potently than D2.', sec: 's5-dones' }
     ],
     stim: ['On cortical GABA interneurons: **less glutamate** release; in raphe: **less 5HT** release (Chapter 4)']
   },
@@ -257,13 +279,19 @@ SP.targets = [
     summary: 'A norepinephrine receptor targeted in both directions: antagonism is antidepressant, agonism helps ADHD.',
     block: ['Antagonism: **antidepressant** actions'],
     stim: ['Agonism: improved **cognition and behavioral disturbance in ADHD**'],
-    facts: [{ ch: 'ch02', pages: '39', text: 'Antagonists have antidepressant actions; agonists improve cognition and behavior in ADHD (Table 2-4).', sec: 's2-receptor-tables' }]
+    facts: [
+      { ch: 'ch02', pages: '39', text: 'Antagonists have antidepressant actions; agonists improve cognition and behavior in ADHD (Table 2-4).', sec: 's2-receptor-tables' },
+      { ch: 'ch05', pages: '195, 208', text: 'α2 antagonism is a candidate **antidepressant** property of several drugs for psychosis (risperidone, quetiapine via norquetiapine, brexpiprazole), though α1 blockade can cancel it.', sec: 's5-mania-dep' }
+    ]
   },
   {
     id: 'alpha1', name: 'α1-adrenergic receptor', short: 'α1', family: 'G-protein-linked receptor', nt: 'norepinephrine',
     summary: 'A norepinephrine receptor whose blockade helps nightmares and agitation but causes orthostatic hypotension.',
     block: ['Improved sleep (**nightmares**)', 'Improved **agitation in Alzheimer disease**', 'Side effects: **orthostatic hypotension** and possibly **sedation**'],
-    facts: [{ ch: 'ch02', pages: '39', text: '**Antagonist** actions: improved sleep (nightmares), improved agitation in Alzheimer disease; side effects of orthostatic hypotension and possibly sedation (Table 2-4).', sec: 's2-receptor-tables' }]
+    facts: [
+      { ch: 'ch02', pages: '39', text: '**Antagonist** actions: improved sleep (nightmares), improved agitation in Alzheimer disease; side effects of orthostatic hypotension and possibly sedation (Table 2-4).', sec: 's2-receptor-tables' },
+      { ch: 'ch05', pages: '181, 236', text: 'α1 blockade adds **sedation** and **orthostatic hypotension** (iloperidone, paliperidone, clozapine, quetiapine); it may also lower DIP risk (iloperidone) and help agitation (brexpiprazole).', sec: 's5-fga' }
+    ]
   },
   {
     id: 'gabab', name: 'GABA-B receptor', short: 'GABA-B', family: 'G-protein-linked receptor', nt: 'gaba',
@@ -283,7 +311,8 @@ SP.targets = [
     block: ['Therapeutic for **anxiety and insomnia**', 'Side effects: **sedation** and **weight gain**'],
     facts: [
       { ch: 'ch02', pages: '40', text: '**Antagonist** actions: therapeutic for anxiety and insomnia; side effects of sedation and weight gain (Table 2-4).', sec: 's2-receptor-tables' },
-      { ch: 'ch02', pages: '45', text: '**H1 antagonists/antihistamines** may turn out to be **inverse agonists** in some brain areas.', sec: 's2-spectrum' }
+      { ch: 'ch02', pages: '45', text: '**H1 antagonists/antihistamines** may turn out to be **inverse agonists** in some brain areas.', sec: 's2-spectrum' },
+      { ch: 'ch05', pages: '181, 198', text: 'Blocking H1 adds **weight gain and sedation**; with 5HT2C blockade it drives appetite on the metabolic highway. Quetiapine at 50 mg acts almost only here.', sec: 's5-fga' }
     ]
   },
   {
@@ -296,22 +325,31 @@ SP.targets = [
     id: 'm1', name: 'Muscarinic M1 receptor', short: 'M1', family: 'G-protein-linked receptor', nt: 'acetylcholine',
     summary: 'Agonism is pro-cognitive and antipsychotic; antagonism causes sedation and memory disturbance. Acetylcholinesterase inhibitors stimulate it indirectly.',
     stim: ['**Pro-cognitive** and **antipsychotic**', 'Indirect agonism via acetylcholinesterase inhibition: cognition in Alzheimer disease'],
-    block: ['Side effects: **sedation** and **memory disturbance**'],
-    facts: [{ ch: 'ch02', pages: '40', text: 'Agonist: pro-cognitive and antipsychotic. Antagonist: sedation and memory disturbance (Table 2-4). Stimulated indirectly by acetylcholinesterase inhibitors (Table 2-5).', sec: 's2-receptor-tables' }],
+    block: ['Side effects: **sedation** and **memory disturbance**', 'Treats **drug-induced parkinsonism** and **acute dystonia** (Chapter 5)', 'Strong muscarinic binding: **clozapine, olanzapine, quetiapine**; constipation, **paralytic ileus**, sialorrhea (clozapine)'],
+    facts: [
+      { ch: 'ch02', pages: '40', text: 'Agonist: pro-cognitive and antipsychotic. Antagonist: sedation and memory disturbance (Table 2-4). Stimulated indirectly by acetylcholinesterase inhibitors (Table 2-5).', sec: 's2-receptor-tables' },
+      { ch: 'ch05', pages: '166–169', text: 'Blocking **M1** relieves **drug-induced parkinsonism** by restoring the striatal dopamine–acetylcholine balance, at the cost of anticholinergic burden; an IM anticholinergic relieves **acute dystonia**.', sec: 's5-motor' }
+    ],
     updates: [{ year: '2024', title: 'First M1/M4 agonist approved', text: '**Xanomeline–trospium** (Cobenfy), with the M1/M4-preferring agonist xanomeline, was approved for schizophrenia in September 2024.', source: 'FDA, September 2024' }]
   },
   {
     id: 'm4', name: 'Muscarinic M4 receptor', short: 'M4', family: 'G-protein-linked receptor', nt: 'acetylcholine',
     summary: 'Agonism at M4 is listed as antipsychotic.',
     stim: ['**Antipsychotic**'],
-    facts: [{ ch: 'ch02', pages: '40', text: '**Agonist** actions are antipsychotic (Table 2-4).', sec: 's2-receptor-tables' }],
+    facts: [
+      { ch: 'ch02', pages: '40', text: '**Agonist** actions are antipsychotic (Table 2-4).', sec: 's2-receptor-tables' },
+      { ch: 'ch05', pages: '242', text: '**Xanomeline** (M4/M1 agonist) lowers VTA dopamine firing and raises prefrontal dopamine; combined with peripheral **trospium**.', sec: 's5-future' }
+    ],
     updates: [{ year: '2024', title: 'First M1/M4 agonist approved', text: '**Xanomeline–trospium** (Cobenfy) was approved for schizophrenia in September 2024.', source: 'FDA, September 2024' }]
   },
   {
     id: 'm2m3', name: 'Muscarinic M2 and M3 receptors', short: 'M2/M3', family: 'G-protein-linked receptor', nt: 'acetylcholine',
     summary: 'Blocking these produces classic peripheral anticholinergic side effects and may contribute to metabolic dysregulation.',
     block: ['**Dry mouth, blurred vision, constipation, urinary retention**', 'May contribute to **metabolic dysregulation** (dyslipidemia and diabetes)'],
-    facts: [{ ch: 'ch02', pages: '40', text: '**Antagonist** actions cause dry mouth, blurred vision, constipation and urinary retention, and may contribute to metabolic dysregulation (Table 2-4). M5 actions are marked unknown.', sec: 's2-receptor-tables' }]
+    facts: [
+      { ch: 'ch02', pages: '40', text: '**Antagonist** actions cause dry mouth, blurred vision, constipation and urinary retention, and may contribute to metabolic dysregulation (Table 2-4). M5 actions are marked unknown.', sec: 's2-receptor-tables' },
+      { ch: 'ch05', pages: '242', text: '**Trospium**, which does not enter the brain, blocks peripheral M2/M3 effects of xanomeline.', sec: 's5-future' }
+    ]
   },
   {
     id: 'mglur-g1', name: 'Group I metabotropic glutamate receptors (mGluR1, mGluR5)', short: 'mGluR I', family: 'G-protein-linked receptor', nt: 'glutamate',
@@ -340,10 +378,23 @@ SP.targets = [
     facts: [{ ch: 'ch02', pages: '40', text: '**Antagonist** actions at OX1 and OX2 are hypnotic for insomnia (Table 2-4); detailed in Chapter 10.', sec: 's2-receptor-tables' }]
   },
   {
+    id: 'taar1', name: 'Trace amine-associated receptor 1 (TAAR1)', short: 'TAAR1', family: 'G-protein-linked receptor', ntLabel: 'Trace amines',
+    summary: 'The main human receptor for trace amines, expressed in monoamine brainstem centers and projection areas. Agonists are a proposed antipsychotic mechanism that tames dopamine without blocking D2.',
+    location: 'Dorsal raphe, VTA and monoamine projection areas',
+    stim: ['Heterodimerizes with **D2** and biases signaling toward **Gi**: less presynaptic dopamine synthesis and release', 'Postsynaptically less **β-arrestin 2/GSK-3** signaling', 'Proposed **antipsychotic** (and antimanic) action without D2 blockade'],
+    facts: [{ ch: 'ch05', pages: '241–242', text: 'Trace amines (β-phenylethylamine, p-tyramine, tryptamine, p-octopamine, p-synephrine) form when the tyrosine or tryptophan hydroxylase step is skipped, are not stored in vesicles and are not released on firing; they are called the **“rheostat”** of dopamine, glutamate and serotonin transmission. Six human TAARs exist (1, 2, 5, 6, 8, 9); TAAR1 is the main one.', sec: 's5-future' }]
+  },
+  {
     id: 'cb1', name: 'Cannabinoid 1 receptor (CB1)', short: 'CB1', family: 'G-protein-linked receptor', nt: 'endocannabinoids',
     summary: 'The presynaptic receptor reached by retrograde endocannabinoid signaling.',
     location: '**Presynaptic** terminals',
     facts: [{ ch: 'ch01', pages: '6–7', text: 'Endocannabinoids made in the postsynaptic neuron diffuse back to **presynaptic cannabinoid receptors such as CB1**: the classic example of **retrograde neurotransmission**.', sec: 's1-classic' }]
+  },
+  {
+    id: 'mor', name: 'μ-Opioid receptor', short: 'μ-opioid', family: 'G-protein-linked receptor', nt: 'endorphin',
+    summary: 'The receptor for β-endorphin and morphine. In Chapter 5 its antagonist samidorphan is paired with olanzapine to limit weight gain; opioid pharmacology is covered later.',
+    block: ['**Samidorphan** with olanzapine: reduces olanzapine-induced **weight gain** (Chapter 5)'],
+    facts: [{ ch: 'ch05', pages: '201', text: 'The μ-opioid antagonist **samidorphan** combined with olanzapine was a new agent on the horizon to reduce olanzapine-induced weight gain.', sec: 's5-metabolic' }]
   },
   /* ---------------- ligand-gated ion channels ---------------- */
   {
@@ -377,7 +428,8 @@ SP.targets = [
     facts: [
       { ch: 'ch03', pages: '53', text: 'A **pentameric** ligand-gated ion channel (Table 3-1).', sec: 's3-structure' },
       { ch: 'ch03', pages: '55', text: '**Antagonists**: mirtazapine and vortioxetine (pro-cognitive, antidepressant); antiemetics for chemotherapy-induced emesis (Table 3-2).', sec: 's3-drugs' },
-      { ch: 'ch04', pages: '127–130', text: 'In the **chemoreceptor trigger zone** (outside the blood–brain barrier) it mediates nausea and vomiting; in cortex it sits on **non-parvalbumin GABA interneurons**, so serotonin here **inhibits ACh and NE** release and glutamate output. Antagonists should enhance ACh and NE release.', sec: 's4-5ht-post' }
+      { ch: 'ch04', pages: '127–130', text: 'In the **chemoreceptor trigger zone** (outside the blood–brain barrier) it mediates nausea and vomiting; in cortex it sits on **non-parvalbumin GABA interneurons**, so serotonin here **inhibits ACh and NE** release and glutamate output. Antagonists should enhance ACh and NE release.', sec: 's4-5ht-post' },
+      { ch: 'ch05', pages: '212', text: 'The pines bind 5HT3 weakly; the dones not at all; aripiprazole weakly. 5HT3 antagonism is a candidate antidepressant property.', sec: 's5-binding' }
     ],
     stim: ['Nausea and vomiting (CTZ); in cortex **less ACh, NE and glutamate** release (Chapter 4)']
   },
@@ -395,7 +447,8 @@ SP.targets = [
       { ch: 'ch03', pages: '55–56', text: 'A **tetrameric** ionotropic glutamate receptor (Table 3-3); subtype-selective glutamate drugs are under investigation but not in clinical use.', sec: 's3-structure' },
       { ch: 'ch03', pages: '66', text: '**PCP and ketamine** are NAMs that bind **inside the calcium channel**, entering only **when the channel is open**, and prevent glutamate/glycine cotransmission from opening it.', sec: 's3-pam' },
       { ch: 'ch04', pages: '100–101', text: 'A **coincidence detector**: opens only with glutamate bound, **glycine or D-serine** bound, and depolarization removing the **Mg²⁺** plug (Mg²⁺ acts as a NAM). Calcium entry drives **long-term potentiation**.', sec: 's4-glu-receptors' },
-      { ch: 'ch04', pages: '105–110', text: '**Hypofunction** at prefrontal **GABA interneurons** (from neurodevelopment, ketamine/PCP or neurodegeneration) is a leading hypothesis of psychosis.', sec: 's4-nmda-hypo' }
+      { ch: 'ch04', pages: '105–110', text: '**Hypofunction** at prefrontal **GABA interneurons** (from neurodevelopment, ketamine/PCP or neurodegeneration) is a leading hypothesis of psychosis.', sec: 's4-nmda-hypo' },
+      { ch: 'ch05', pages: '169, 237', text: '**Amantadine**’s weak NMDA antagonism may explain its benefit in DIP; NRX101 pairs the glycine-site agent **D-cycloserine** with lurasidone.', sec: 's5-motor' }
     ],
     updates: [
       { year: '2022', title: 'Dextromethorphan–bupropion approved', text: 'Approved for major depressive disorder in August 2022 (Auvelity).', source: 'FDA, August 2022' },
@@ -508,7 +561,16 @@ SP.targets = [
   {
     id: 'dao', name: 'D-amino acid oxidase (DAO)', short: 'DAO', family: 'Enzyme', nt: 'dserine',
     summary: 'Destroys D-serine by converting it to hydroxypyruvate; activated by DAOA, a schizophrenia susceptibility gene.',
-    facts: [{ ch: 'ch04', pages: '98–99, 152', text: 'Converts D-serine to inactive **hydroxypyruvate**; its activator **DAOA** is among the neurodevelopmental susceptibility genes.', sec: 's4-cotransmitters' }]
+    facts: [
+      { ch: 'ch04', pages: '98–99, 152', text: 'Converts D-serine to inactive **hydroxypyruvate**; its activator **DAOA** is among the neurodevelopmental susceptibility genes.', sec: 's4-cotransmitters' },
+      { ch: 'ch05', pages: '242', text: 'Inhibiting DAO to boost D-serine and NMDA function is still being pursued for schizophrenia.', sec: 's5-future' }
+    ]
+  },
+  {
+    id: 'pde', name: 'Phosphodiesterase types 9 and 10', short: 'PDE9/10', family: 'Enzyme', nt: 'dopamine',
+    summary: 'Second-messenger enzymes downstream of D1 and D2 receptors; inhibitors are in development as a novel way to blunt hyperactive dopamine signaling.',
+    block: ['Proposed: effects downstream similar to **D2 blockade**, perhaps more selective for hyperactive dopamine neurons'],
+    facts: [{ ch: 'ch05', pages: '242', text: 'Inhibiting PDE9/10 alters the signal transduction cascade of dopamine at **D1 and D2** receptors; several drugs are in development.', sec: 's5-future' }]
   },
   {
     id: 'ache', name: 'Acetylcholinesterase', short: 'AChE', family: 'Enzyme', nt: 'acetylcholine',
@@ -522,7 +584,8 @@ SP.targets = [
     block: ['Possible **neuroprotective** actions and **long-term plasticity**', 'May contribute to **antimanic and mood-stabilizing** actions (lithium; possibly valproate and ECT)'],
     facts: [
       { ch: 'ch01', pages: '17', text: 'One of the kinases at the end of the **neurotrophin signal transduction cascade** (Ras → Raf → MEK → ERK/RSK/MAPK/GSK-3).', sec: 's1-genes' },
-      { ch: 'ch02', pages: '48', text: 'Some neurotrophins, growth factors and other pathways act through GSK-3 to promote **cell death (proapoptotic)**. **Lithium** may inhibit it; **valproate** and **ECT** possibly too. Novel GSK-3 inhibitors are in development.', sec: 's2-enzymes' }
+      { ch: 'ch02', pages: '48', text: 'Some neurotrophins, growth factors and other pathways act through GSK-3 to promote **cell death (proapoptotic)**. **Lithium** may inhibit it; **valproate** and **ECT** possibly too. Novel GSK-3 inhibitors are in development.', sec: 's2-enzymes' },
+      { ch: 'ch05', pages: '241–242', text: 'Postsynaptic D2 overstimulation signals through **β-arrestin 2** to GSK-3; too much GSK-3 may be linked to mania and psychosis, and TAAR1 agonism may reduce it.', sec: 's5-future' }
     ]
   },
   {
@@ -538,7 +601,10 @@ SP.targets = [
   {
     id: 'cyp2d6', name: 'Cytochrome P450 2D6', short: 'CYP2D6', family: 'Enzyme',
     summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
-    facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }]
+    facts: [
+      { ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' },
+      { ch: 'ch05', pages: '175–176', text: 'Inactivates tetrabenazine’s dihydro metabolites; **deuteration** makes deutetrabenazine a poorer 2D6 substrate, and tetrabenazine dosing above standard levels needs 2D6 genotyping.', sec: 's5-vmat2' }
+    ]
   },
   {
     id: 'cyp2c9', name: 'Cytochrome P450 2C9', short: 'CYP2C9', family: 'Enzyme',
@@ -554,5 +620,11 @@ SP.targets = [
     id: 'cyp3a4', name: 'Cytochrome P450 3A4', short: 'CYP3A4', family: 'Enzyme',
     summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
     facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }]
+  },
+  /* ---------------- other targets ---------------- */
+  {
+    id: 'sigma', name: 'Sigma (σ) receptors', short: 'σ', family: 'Other', ntLabel: 'None (non-opioid binding sites)',
+    summary: 'Binding sites shown on the strips of haloperidol (σ) and roluperidone (σ2 antagonism).',
+    facts: [{ ch: 'ch05', pages: '204, 241', text: 'Haloperidol binds a site labelled **σ** in Figure 5-29 (the caption calls it “omega”); **roluperidone** combines 5HT2A antagonism with **σ2** antagonism.', sec: 's5-first-agents' }]
   }
 ];

@@ -1909,7 +1909,7 @@
     'agonist': { css: 'stim', label: 'Agonist' }, 'full agonist': { css: 'stim', label: 'Full agonist' }, 'releaser': { css: 'stim', label: 'Releaser' },
     'partial agonist': { css: 'partial', label: 'Partial agonist' },
     'modulator': { css: 'mod', label: 'Modulator' }, 'positive allosteric modulator': { css: 'mod', label: 'Positive allosteric modulator' },
-    'negative allosteric modulator': { css: 'block', label: 'Negative allosteric modulator' }, 'substrate': { css: 'mod', label: 'Substrate' }
+    'negative allosteric modulator': { css: 'block', label: 'Negative allosteric modulator' }, 'substrate': { css: 'mod', label: 'Substrate' }, 'binds': { css: 'mod', label: 'Binds' }
   };
   function actionOf(a) { return ACTIONS[(a || '').toLowerCase()] || { css: 'mod', label: a || 'Acts at' }; }
   function barHTML(x) {
@@ -1927,7 +1927,7 @@
       return '<div class="profile__row" role="row"><span class="profile__t" role="rowheader">' + name + '</span>' +
         '<span class="profile__bar" role="cell">' + barHTML(t) + '</span>' +
         '<span class="profile__a" role="cell">' + esc(a.label) + (t.note ? '<small>' + fmt(t.note) + '</small>' : '') + '</span></div>';
-    }).join('') + '<p class="profile__key"><span class="pkey pkey--block"></span>Blocks or inhibits <span class="pkey pkey--stim"></span>Stimulates <span class="pkey pkey--partial"></span>Partial agonist <span class="pkey pkey--mod"></span>Modulates. Bar length shows relative strength as the book describes it (longest = most potent action); striped bars mean the strength has not been described yet.</p></div>';
+    }).join('') + '<p class="profile__key"><span class="pkey pkey--block"></span>Blocks or inhibits <span class="pkey pkey--stim"></span>Stimulates <span class="pkey pkey--partial"></span>Partial agonist <span class="pkey pkey--mod"></span>Modulates. Bar length shows relative strength as the book describes it (longest = most potent action; for drugs for psychosis it follows the plus signs on the book’s binding strips, from + to ++++). Striped bars mean the strength has not been described yet.</p></div>';
   }
 
   /* ---------- drugs ---------- */

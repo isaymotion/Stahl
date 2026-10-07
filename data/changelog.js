@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 5,
+    date: "2026-10-07",
+    title: "Chapter 5: So-Called “Antipsychotics”",
+    summary: "Chapter 5 adds the drugs for psychosis, with binding profiles for two dozen agents drawn from the book’s binding strips.",
+    items: [
+      { type: "chapter", ch: "ch05", text: "Chapter 5: study guide (25 sections), high-yield summary, mechanism, drug and clinical cards, and 52 board-style questions.", href: "#/c/ch05/guide", link: "Open Chapter 5" },
+      { type: "update", text: "Drug database: 40 new entries, including every Table 5-1 agent, the pines, dones, pips and rip, pimavanserin, sertindole, perospirone, blonanserin, roluperidone, ulotaront, xanomeline, and benztropine, amantadine, dantrolene, reserpine, metformin and samidorphan. Binding bars follow the plus signs on the book’s strips.", href: "#/compare/clozapine,olanzapine,aripiprazole", link: "Compare three agents" },
+      { type: "feature", text: "Symptoms & circuits: nine maps for the effects of D2 blockers, from secondary negative symptoms and prolactin to tardive dyskinesia and metabolic risk.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Post-publication update boxes: clozapine REMS removed (2025), olanzapine–samidorphan (2021), 6-month paliperidone (2021), lumateperone and cariprazine depression approvals, iloperidone for bipolar I (2024), brexpiprazole PTSD decision (2025), and results for xanomeline–trospium, emraclidine, ulotaront and roluperidone.", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 4,
     date: "2026-10-07",
     title: "Chapter 4: Psychosis and Schizophrenia",

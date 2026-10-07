@@ -1,0 +1,25 @@
+/* Chapter 5 clinical flashcards. */
+SP.add("ch05", "clinical", [
+  { id: "k5-01", tag: "Negative symptoms", q: "A patient on a D2 blocker becomes apathetic and anhedonic. What are your options?", a: "Consider **secondary negative symptoms**: lower the dose, switch to a better-tolerated agent, or add an adjunct such as a drug for depression." },
+  { id: "k5-02", tag: "Motor", q: "Which motor side effect is most common with D2-targeting drugs?", a: "**Drug-induced parkinsonism**." },
+  { id: "k5-03", tag: "Motor", q: "A patient on a D2 blocker with several anticholinergic drugs develops severe constipation. What is the danger?", a: "**Paralytic ileus** from total **anticholinergic burden**." },
+  { id: "k5-04", tag: "Motor", q: "What are alternatives to adding an anticholinergic for DIP?", a: "Switch to a drug **without** that problem, stop unnecessary anticholinergics, or use **amantadine**." },
+  { id: "k5-05", tag: "Motor", q: "Why do anticholinergics fail for tardive dystonia?", a: "It is a form of **TD** (supersensitive D2), not DA–ACh imbalance; anticholinergics rarely help and may **worsen** it." },
+  { id: "k5-06", tag: "Motor", q: "How can akathisia be confused with illness?", a: "It can mimic the **agitation** and restless movements of the underlying psychiatric disorder." },
+  { id: "k5-07", tag: "TD", q: "Who should be monitored for TD and how?", a: "**Everyone** taking these drugs, including for depression, with a neurological exam and the **AIMS**." },
+  { id: "k5-08", tag: "TD", q: "Why is stopping the D2 blocker often not an option for TD?", a: "Most psychotic patients cannot tolerate it, movements usually **worsen immediately**, and long-standing TD rarely reverses." },
+  { id: "k5-09", tag: "TD", q: "Which patients may be at greater TD risk than in schizophrenia?", a: "Patients with **mood disorders** (and the elderly: up to 25% in year one)." },
+  { id: "k5-10", tag: "Prolactin", q: "Which patients are of particular concern with hyperprolactinemia and bone?", a: "**Postmenopausal women** not taking estrogen replacement (possible faster demineralization)." },
+  { id: "k5-11", tag: "Sedation", q: "When is sedation from a drug for psychosis desirable?", a: "**Short term**: early treatment, hospitalization, aggression, agitation, sleep induction." },
+  { id: "k5-12", tag: "Sedation", q: "Why avoid long-term sedation?", a: "Reduced arousal impairs **cognition**, compromising functional outcomes." },
+  { id: "k5-13", tag: "Metabolic", q: "What four parameters should you track on the metabolic highway?", a: "**BMI, fasting triglycerides, fasting glucose, blood pressure** (plus waist circumference in high-risk patients)." },
+  { id: "k5-14", tag: "Metabolic", q: "When should you switch agents for metabolic reasons?", a: "If **BMI or fasting triglycerides** rise significantly, consider a **low-metabolic-risk** agent." },
+  { id: "k5-15", tag: "Metabolic", q: "Why know a patient’s metabolic status before prescribing?", a: "To anticipate rare **DKA/HHS** in undiagnosed insulin resistance, prediabetes or diabetes." },
+  { id: "k5-16", tag: "Clozapine", q: "When is clozapine used, and is it used enough?", a: "When other drugs fail; Stahl considers it **underused** given how many patients respond inadequately." },
+  { id: "k5-17", tag: "Clozapine", q: "What logistical aids help clozapine prescribing?", a: "**Finger-stick point-of-care** blood counts and **therapeutic drug monitoring** of plasma levels." },
+  { id: "k5-18", tag: "Dementia", q: "Why is using drugs for psychosis in dementia agitation controversial?", a: "No clear efficacy in most studies and a **safety warning** for cardiovascular events and **death**." },
+  { id: "k5-19", tag: "Paliperidone", q: "What common error occurs with oral paliperidone?", a: "**Underdosing**, because its sustained-release form behaves differently from risperidone." },
+  { id: "k5-20", tag: "Asenapine", q: "How can asenapine avoid an injection in an agitated patient?", a: "Its rapid sublingual absorption allows a **PRN oral top-up**." },
+  { id: "k5-21", tag: "Lurasidone", q: "How can lurasidone’s motor effects and sedation be reduced?", a: "**Dose at night**." },
+  { id: "k5-22", tag: "Prolactin", q: "A patient on a D2 antagonist has hyperprolactinemia. Which add-on may reverse it?", a: "A **D2 partial agonist** (aripiprazole, brexpiprazole or cariprazine)." }
+]);

@@ -40,7 +40,13 @@ SP.manifest = [
     summary: 'Psychosis as a syndrome and its three hypotheses; the dopamine network (synthesis, D1–D5, five pathways, direct and indirect motor loops, the mesostriatal hub); glutamate recycling, glycine and D-serine, NMDA hypofunction at GABA interneurons; serotonin synthesis, autoreceptors and receptor-by-receptor network effects; 5HT2A in hallucinogen, Parkinson’s and dementia psychosis; and schizophrenia’s five dimensions, violence, causes and course.',
     files: SP.CHAPTER_FILES
   },
-  { id: 'ch05', number: 5, ready: false, pages: '159–243', title: 'Targeting Dopamine and Serotonin Receptors for Psychosis, Mood, and Beyond: So-Called “Antipsychotics”', short: 'So-called “antipsychotics”', summary: 'D2 blockade, serotonin receptor actions, binding profiles of individual agents, and side effects explained by receptor pharmacology.' },
+  {
+    id: 'ch05', number: 5, ready: true, pages: '159–243',
+    title: 'Targeting Dopamine and Serotonin Receptors for Psychosis, Mood, and Beyond: So-Called “Antipsychotics”',
+    short: 'So-called “antipsychotics”',
+    summary: 'D2 blockade pathway by pathway: antipsychotic action, secondary negative symptoms, prolactin and motor side effects; tardive dyskinesia and VMAT2 inhibitors; first-generation D2 antagonists; how 5HT2A antagonism, D2 partial agonism and 5HT1A partial agonism change the picture; mania, depression, agitation, sedation and cardiometabolic risk; binding profiles of the pines, dones, pips and rip; and future mechanisms (TAAR1, muscarinic).',
+    files: SP.CHAPTER_FILES
+  },
   { id: 'ch06', number: 6, ready: false, pages: '244–282', title: 'Mood Disorders and the Neurotransmitter Networks Norepinephrine and γ-Aminobutyric Acid (GABA)', short: 'Mood disorders, NE and GABA', summary: 'The mood spectrum, norepinephrine and GABA networks, and the neurobiology of depression and mania.' },
   { id: 'ch07', number: 7, ready: false, pages: '283–358', title: 'Treatments for Mood Disorders: So-Called “Antidepressants” and “Mood Stabilizers”', short: 'Antidepressants and mood stabilizers', summary: 'Mechanisms of antidepressants and mood stabilizers, rapid-acting agents, combinations and treatment strategy.' },
   { id: 'ch08', number: 8, ready: false, pages: '359–378', title: 'Anxiety, Trauma, and Treatment', short: 'Anxiety and trauma', summary: 'Fear circuits, anxiety and trauma-related disorders, and their treatments.' },
