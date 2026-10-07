@@ -4,6 +4,17 @@
  */
 SP.changelog = [
   {
+    id: 2,
+    date: "2026-10-07",
+    title: "Chapter 2: Transporters, Receptors, and Enzymes",
+    summary: "Chapter 2 is in, and the reference library grows with it: the drug database, neurotransmitters, receptors and side-effect mapper fill in from Tables 2-4 and 2-5.",
+    items: [
+      { type: "chapter", ch: "ch02", text: "Chapter 2: study guide, high-yield summary, mechanism, drug and clinical cards, and board-style questions.", href: "#/c/ch02/guide", link: "Open Chapter 2" },
+      { type: "update", text: "Library: 11 new drugs (stimulants, VMAT2 inhibitors, tiagabine, levetiracetam, lithium and more), about 35 new receptors, transporters and enzymes with side-effect mapping, and glycine, melatonin and orexin entries.", href: "#/targets", link: "Receptors and targets" },
+      { type: "update", text: "Post-publication update boxes: xanomeline–trospium approval (2024), MDMA-assisted therapy not approved (2024), valbenazine for Huntington’s chorea (2023), and the GlyT1 inhibitor iclepertin phase III results (2025).", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 1,
     date: "2026-10-07",
     title: "First release: Chapter 1, Chemical Neurotransmission",

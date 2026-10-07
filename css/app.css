@@ -1412,3 +1412,4 @@ a.ref-chip:hover { background: color-mix(in srgb, var(--m-clin) 12%, transparent
 :root[data-theme="dark"] .filter[aria-pressed="true"], :root[data-theme="dark"] .seg input:checked + span { background: var(--m-clin); color: #0B1A13; border-color: var(--m-clin); }
 .lib-sec .profile__key { font: 400 .78rem/1.7 var(--sans); color: var(--ink-3); }
 .lib-sec .profile__a small { font-family: var(--sans); }
+@media (max-width: 1299px) { .g-sec { scroll-margin-top: calc(var(--top) + 80px); } }

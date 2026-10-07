@@ -42,8 +42,8 @@
     });
   }
   /* Cross-references in content: [[drug:fluoxetine]], [[nt:dopamine|DA]], [[target:sert]], [[ch:ch02|Chapter 2]] */
-  var XREF_RE = /\[\[(drug|nt|target|ch|gl):([^|\]]+)(?:\|([^\]]+))?\]\]/g;
-  var XREF_HREF = { drug: '#/drugs/', nt: '#/nt/', target: '#/targets/', ch: '#/c/', gl: '#/glossary/' };
+  var XREF_RE = /\[\[(drug|nt|target|ch|gl|page):([^|\]]+)(?:\|([^\]]+))?\]\]/g;
+  var XREF_HREF = { drug: '#/drugs/', nt: '#/nt/', target: '#/targets/', ch: '#/c/', gl: '#/glossary/', page: '#/' };
   function xrefLabel(type, id, label) {
     if (label) return label;
     var list = type === 'drug' ? SP.drugs : type === 'nt' ? SP.nts : type === 'target' ? SP.targets : null;
@@ -687,7 +687,9 @@
     if (!target) return;
     var el = document.getElementById(target);
     if (!el) return;
-    var y = el.getBoundingClientRect().top + window.pageYOffset - headerH() - 24;
+    var tocm = main.querySelector('.toc-mobile');
+    var extra = tocm && getComputedStyle(tocm).display !== 'none' ? tocm.offsetHeight : 0;
+    var y = el.getBoundingClientRect().top + window.pageYOffset - headerH() - extra - 24;
     window.scrollTo({ top: y, behavior: reduceMotion() ? 'auto' : 'smooth' });
     if (target.indexOf('--') > -1) {
       el.classList.add('is-flash');
