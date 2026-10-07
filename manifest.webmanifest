@@ -1,0 +1,16 @@
+{
+  "name": "Stahl Study Companion",
+  "short_name": "Stahl",
+  "description": "Chapter-by-chapter study guides, high-yield summaries, flashcards, board questions and drug, neurotransmitter and receptor databases from Stahl's Essential Psychopharmacology, 5th edition.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0F1813",
+  "theme_color": "#0B1A13",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
