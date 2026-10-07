@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 4,
+    date: "2026-10-07",
+    title: "Chapter 4: Psychosis and Schizophrenia",
+    summary: "Chapter 4 builds the dopamine, glutamate and serotonin networks behind psychosis, and the Symptoms & circuits page gets its first maps.",
+    items: [
+      { type: "chapter", ch: "ch04", text: "Chapter 4: study guide (33 sections), high-yield summary, mechanism, drug and clinical cards, and 52 board-style questions.", href: "#/c/ch04/guide", link: "Open Chapter 4" },
+      { type: "feature", text: "Symptoms & circuits: 12 symptom-to-circuit maps for schizophrenia’s five dimensions, Parkinson’s and dementia psychosis, and drug-induced psychoses.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Library: dopamine, glutamate and serotonin entries now have synthesis, termination and pathway tables; a new D-serine entry; 21 new targets (D3–D5, 5HT2B, 5HT4, 5HT5, metabotropic glutamate groups, COMT, tyrosine hydroxylase, DAO, serine racemase and more); 9 new drugs (levodopa, LSD, psilocybin, mescaline, methamphetamine, cannabis, clozapine, pimavanserin, brexpiprazole).", href: "#/nt/dopamine", link: "Dopamine" },
+      { type: "update", text: "Post-publication update boxes: pimavanserin not approved for dementia-related or Alzheimer psychosis (2021, 2022) and brexpiprazole approved for Alzheimer agitation (2023), with xanomeline–trospium and iclepertin linked into the psychosis chapter.", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 3,
     date: "2026-10-07",
     title: "Chapter 3: Ion Channels",

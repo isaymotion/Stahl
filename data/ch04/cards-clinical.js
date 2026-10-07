@@ -1,0 +1,25 @@
+/* Chapter 4 clinical flashcards. */
+SP.add("ch04", "clinical", [
+  { id: "k4-01", tag: "Phenomenology", q: "What delusion is particular to Parkinson’s disease psychosis?", a: "That a **spouse is unfaithful** or **loved ones are stealing** (harming or deceiving)." },
+  { id: "k4-02", tag: "Phenomenology", q: "In which psychoses is disorientation common?", a: "Psychoses of **dementia** and **drug-induced** states." },
+  { id: "k4-03", tag: "Phenomenology", q: "Which psychotic cluster is hard to distinguish from negative symptoms?", a: "**Depressive** psychosis (psychomotor retardation and apathy)." },
+  { id: "k4-04", tag: "Phenomenology", q: "A patient hallucinates mostly visually. Which neurotransmitter hypothesis does this point toward?", a: "**Serotonin** (5HT2A); dopamine-linked psychoses are more often **auditory**." },
+  { id: "k4-05", tag: "Schizophrenia", q: "What duration criteria define schizophrenia in the book?", a: "**≥ 6 months**, including **≥ 1 month** of positive or negative symptoms." },
+  { id: "k4-06", tag: "Schizophrenia", q: "Why do positive symptoms dominate clinical attention?", a: "They are **dramatic**, erupt in psychotic **breaks**, bring patients to clinical and legal attention, and respond **best** to medication." },
+  { id: "k4-07", tag: "Negative symptoms", q: "Which negative symptoms can be spotted by observation alone?", a: "**Reduced speech**, **poor grooming** and **limited eye contact**." },
+  { id: "k4-08", tag: "Negative symptoms", q: "Which negative symptoms need some questioning?", a: "Reduced **emotional responsiveness**, reduced **interest**, reduced **social drive**." },
+  { id: "k4-09", tag: "Negative symptoms", q: "Why monitor negative symptoms in high-risk youth?", a: "They can form a **prodrome**, so treatment can start at the **first signs** of psychosis." },
+  { id: "k4-10", tag: "Cognition", q: "How do schizophrenia’s cognitive symptoms differ from dementia’s?", a: "They emphasize **executive dysfunction**, not **short-term memory** loss." },
+  { id: "k4-11", tag: "Cognition", q: "When do cognitive symptoms appear in schizophrenia?", a: "**Before** the first psychosis (lower IQ), worse in the **prodrome**, and **progressive** thereafter." },
+  { id: "k4-12", tag: "Affective", q: "Do SSRIs treat negative symptoms?", a: "They help **affective** symptoms but little if at all **true negative** symptoms." },
+  { id: "k4-13", tag: "Violence", q: "What is the most common type of violence in forensic settings?", a: "**Impulsive** (54%): provoked, high arousal, driven by anger or fear." },
+  { id: "k4-14", tag: "Violence", q: "Which violence is least common among institutionalized psychotic patients, and why?", a: "**Psychotic** violence (17%), presumably because positive symptoms are **treated effectively** there." },
+  { id: "k4-15", tag: "Violence", q: "How should organized (psychopathic) violence be managed?", a: "It is planned and unaroused; it may need **confinement** rather than drugs." },
+  { id: "k4-16", tag: "Course", q: "What happens to treatment response over repeated psychotic episodes?", a: "It **declines**, with progressive **brain tissue loss**, often after **medication discontinuation**." },
+  { id: "k4-17", tag: "Course", q: "Why is continuous treatment the standard of care after onset?", a: "To prevent or slow **deterioration**, tissue loss, a **tripling** of suicide attempts and **treatment resistance**." },
+  { id: "k4-18", tag: "PDP", q: "What is the prognosis once psychosis begins in Parkinson’s disease?", a: "High risk of admission and nursing-home placement; mortality about **40% at 3 years**." },
+  { id: "k4-19", tag: "Dementia", q: "Why distinguish agitation from psychosis in dementia?", a: "Different **pathways** and different, **evolving treatments**." },
+  { id: "k4-20", tag: "Dementia", q: "Which dementia’s psychosis most resembles PDP?", a: "**Lewy body dementia**: visual hallucinations and similar delusions." },
+  { id: "k4-21", tag: "Prolactin", q: "A woman on a D2 blocker develops amenorrhea and galactorrhea. Which pathway is responsible?", a: "The **tuberoinfundibular** dopamine pathway (loss of prolactin inhibition)." },
+  { id: "k4-22", tag: "Mood", q: "What is the rule for psychotic and affective symptoms that co-occur?", a: "Treat **whenever** encountered, both psychotic and affective symptoms, partly to **prevent suicide**." }
+]);

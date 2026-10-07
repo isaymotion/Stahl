@@ -33,7 +33,13 @@ SP.manifest = [
     summary: 'Ligand-gated (ionotropic) channels: pentameric GABA-A, nicotinic, 5HT3 and glycine receptors and tetrameric glutamate receptors; the drugs of Table 3-2; the agonist spectrum, five channel states and nicotine; PAMs and NAMs; and voltage-sensitive sodium and calcium channels, α2δ, snares and excitation–secretion coupling.',
     files: SP.CHAPTER_FILES
   },
-  { id: 'ch04', number: 4, ready: false, pages: '77–158', title: 'Psychosis, Schizophrenia, and the Neurotransmitter Networks Dopamine, Serotonin, and Glutamate', short: 'Psychosis and schizophrenia', summary: 'The dopamine, serotonin and glutamate theories of psychosis, the key pathways and circuits, and psychosis across disorders.' },
+  {
+    id: 'ch04', number: 4, ready: true, pages: '77–158',
+    title: 'Psychosis, Schizophrenia, and the Neurotransmitter Networks Dopamine, Serotonin, and Glutamate',
+    short: 'Psychosis and schizophrenia',
+    summary: 'Psychosis as a syndrome and its three hypotheses; the dopamine network (synthesis, D1–D5, five pathways, direct and indirect motor loops, the mesostriatal hub); glutamate recycling, glycine and D-serine, NMDA hypofunction at GABA interneurons; serotonin synthesis, autoreceptors and receptor-by-receptor network effects; 5HT2A in hallucinogen, Parkinson’s and dementia psychosis; and schizophrenia’s five dimensions, violence, causes and course.',
+    files: SP.CHAPTER_FILES
+  },
   { id: 'ch05', number: 5, ready: false, pages: '159–243', title: 'Targeting Dopamine and Serotonin Receptors for Psychosis, Mood, and Beyond: So-Called “Antipsychotics”', short: 'So-called “antipsychotics”', summary: 'D2 blockade, serotonin receptor actions, binding profiles of individual agents, and side effects explained by receptor pharmacology.' },
   { id: 'ch06', number: 6, ready: false, pages: '244–282', title: 'Mood Disorders and the Neurotransmitter Networks Norepinephrine and γ-Aminobutyric Acid (GABA)', short: 'Mood disorders, NE and GABA', summary: 'The mood spectrum, norepinephrine and GABA networks, and the neurobiology of depression and mania.' },
   { id: 'ch07', number: 7, ready: false, pages: '283–358', title: 'Treatments for Mood Disorders: So-Called “Antidepressants” and “Mood Stabilizers”', short: 'Antidepressants and mood stabilizers', summary: 'Mechanisms of antidepressants and mood stabilizers, rapid-acting agents, combinations and treatment strategy.' },

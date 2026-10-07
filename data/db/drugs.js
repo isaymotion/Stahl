@@ -21,9 +21,18 @@ SP.drugs = [
     nts: ['gaba'],
     targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Benzodiazepine site; phasic inhibition' }],
     uses: ['**Anxiolytic**', 'Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)'],
-    sideEffects: [{ e: 'Blocks short-term memory', via: 'GABA-A PAM action' }, { e: 'Sedation (sleep induction)', via: 'GABA-A PAM action' }],
-    chapters: [{ ch: 'ch01', pages: '6' }, { ch: 'ch03', pages: '55, 65' }],
-    facts: [{ ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' }, { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' }]
+    sideEffects: [
+      { e: 'Blocks short-term memory', via: 'GABA-A PAM action' },
+      { e: 'Sedation (sleep induction)', via: 'GABA-A PAM action' }
+    ],
+    chapters: [
+      { ch: 'ch01', pages: '6' },
+      { ch: 'ch03', pages: '55, 65' }
+    ],
+    facts: [
+      { ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' },
+      { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' }
+    ]
   },
   {
     id: 'alprazolam', name: 'Alprazolam', brand: 'Xanax', group: 'Benzodiazepine', cls: 'Benzodiazepine',
@@ -33,9 +42,18 @@ SP.drugs = [
     nts: ['gaba'],
     targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Benzodiazepine site; phasic inhibition' }],
     uses: ['**Anxiolytic**', 'Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)'],
-    sideEffects: [{ e: 'Blocks short-term memory', via: 'GABA-A PAM action' }, { e: 'Sedation (sleep induction)', via: 'GABA-A PAM action' }],
-    chapters: [{ ch: 'ch01', pages: '5–6' }, { ch: 'ch03', pages: '55, 65' }],
-    facts: [{ ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' }, { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' }]
+    sideEffects: [
+      { e: 'Blocks short-term memory', via: 'GABA-A PAM action' },
+      { e: 'Sedation (sleep induction)', via: 'GABA-A PAM action' }
+    ],
+    chapters: [
+      { ch: 'ch01', pages: '5–6' },
+      { ch: 'ch03', pages: '55, 65' }
+    ],
+    facts: [
+      { ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' },
+      { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' }
+    ]
   },
   {
     id: 'amitriptyline', name: 'Amitriptyline', brand: 'Elavil', group: 'Antidepressant', cls: 'Tricyclic antidepressant',
@@ -52,7 +70,10 @@ SP.drugs = [
     mechanism: 'Binds an **allosteric** (“other”) site on the **serotonin transporter (SERT)**, not the substrate site, and is **not transported** into the neuron. This lowers SERT’s affinity for serotonin, blocking reuptake so synaptic serotonin action is enhanced. In Stahl’s wagon analogy, fluoxetine sits in the **front seat** and keeps serotonin off. The brain may even make “its own Prozac.”',
     targets: [{ t: 'sert', action: 'inhibitor', note: 'Allosteric; strength and other actions added with Chapter 7' }],
     uses: ['Unipolar depression (SSRIs are first-line for many depressions)', 'As a SERT blocker, part of the class used for anxiety disorders, OCD, PTSD, eating disorders and other conditions (Chapter 2 overview)'],
-    chapters: [{ ch: 'ch01', pages: '5–6' }, { ch: 'ch02', pages: '33' }],
+    chapters: [
+      { ch: 'ch01', pages: '5–6' },
+      { ch: 'ch02', pages: '33' }
+    ],
     facts: [
       { ch: 'ch01', pages: '6', text: 'Entered clinical practice **before molecular clarification of the serotonin transporter site**.', sec: 's1-nts' },
       { ch: 'ch02', pages: '33', text: 'The book’s example of an SSRI at SERT’s **inhibitory allosteric site** (the “front seat” of the transporter wagon), reducing SERT’s affinity for serotonin.', sec: 's2-monoamine' }
@@ -63,7 +84,10 @@ SP.drugs = [
     nbn: 'Dopamine and norepinephrine transport (DAT/NET) inhibitor',
     short: 'Blocks DAT and NET; acts only at the transporters.',
     mechanism: 'Blocks the **dopamine (DAT)** and **norepinephrine (NET)** transporters, enhancing synaptic dopamine and norepinephrine. Unlike amphetamine it targets **only the monoamine transporters**, much as SSRIs act at SERT.',
-    targets: [{ t: 'dat', action: 'inhibitor', note: 'Strength added with Chapter 11' }, { t: 'net', action: 'inhibitor' }],
+    targets: [
+      { t: 'dat', action: 'inhibitor', note: 'Strength added with Chapter 11' },
+      { t: 'net', action: 'inhibitor' }
+    ],
     uses: ['ADHD', 'Indirect dopamine agonism also improves depression and wakefulness (Table 2-5)'],
     chapters: [{ ch: 'ch02', pages: '34–35, 40' }],
     facts: [
@@ -76,21 +100,58 @@ SP.drugs = [
     nbn: 'Dopamine and norepinephrine releaser (DAT/NET and VMAT2 substrate)',
     short: 'A transported substrate of DAT, NET and VMAT2: two targets.',
     mechanism: 'A **false substrate** carried into the neuron by **DAT and NET** (DAT has high affinity for amphetamines), and also a **transported substrate of VMAT2** in synaptic vesicles. Amphetamine therefore has **two targets**: the monoamine transporters and VMATs. Reuptake inhibition and release of dopamine stimulate D1–D5 receptors indirectly.',
-    targets: [{ t: 'dat', action: 'substrate', note: 'Transported (“false substrate”)' }, { t: 'net', action: 'substrate' }, { t: 'vmat2', action: 'substrate', note: 'Transported into vesicles' }],
+    targets: [
+      { t: 'dat', action: 'substrate', note: 'Transported (“false substrate”)' },
+      { t: 'net', action: 'substrate' },
+      { t: 'vmat2', action: 'substrate', note: 'Transported into vesicles' }
+    ],
     uses: ['ADHD', 'Indirect dopamine agonism improves depression and wakefulness (Table 2-5)'],
-    chapters: [{ ch: 'ch02', pages: '31–35, 40' }],
+    chapters: [
+      { ch: 'ch02', pages: '31–35, 40' },
+      { ch: 'ch04', pages: '78–79' }
+    ],
     facts: [
       { ch: 'ch02', pages: '31', text: 'Listed in Table 2-1 as a false substrate of both **NET and DAT**.', sec: 's2-monoamine' },
-      { ch: 'ch02', pages: '35', text: '**Amphetamine has two targets**: monoamine transporters and VMATs (as a transported substrate).', sec: 's2-vesicular' }
+      { ch: 'ch02', pages: '35', text: '**Amphetamine has two targets**: monoamine transporters and VMATs (as a transported substrate).', sec: 's2-vesicular' },
+      { ch: 'ch04', pages: '79', text: 'Dopamine release by amphetamine causes a **paranoid psychosis** much like schizophrenia: a cornerstone of the dopamine hypothesis. Table 4-1 lists psychostimulants as **D2 agonist** models with auditory hallucinations, paranoid delusions and no insight.', sec: 's4-three' }
     ]
   },
   {
     id: 'cocaine', name: 'Cocaine', group: 'Drug of abuse', cls: 'Stimulant drug of abuse',
     short: 'Blocks DAT and NET; acts only at the transporters.',
     mechanism: 'Acts on **DAT and NET**, blocking reuptake. Like methylphenidate, it targets **only the monoamine transporters**, not VMATs.',
-    targets: [{ t: 'dat', action: 'inhibitor' }, { t: 'net', action: 'inhibitor' }],
-    chapters: [{ ch: 'ch02', pages: '34–35' }],
-    facts: [{ ch: 'ch02', pages: '34–35', text: 'The “stimulant” drug of abuse cocaine acts on **DAT and NET** in much the same manner as SSRIs at SERT.', sec: 's2-vesicular' }]
+    targets: [
+      { t: 'dat', action: 'inhibitor' },
+      { t: 'net', action: 'inhibitor' }
+    ],
+    chapters: [
+      { ch: 'ch02', pages: '34–35' },
+      { ch: 'ch04', pages: '78, 90' }
+    ],
+    facts: [
+      { ch: 'ch02', pages: '34–35', text: 'The “stimulant” drug of abuse cocaine acts on **DAT and NET** in much the same manner as SSRIs at SERT.', sec: 's2-vesicular' },
+      { ch: 'ch04', pages: '78, 90', text: 'A psychostimulant model of psychosis (Table 4-1: auditory hallucinations, paranoid delusions, no insight) that causes mesolimbic dopamine hyperactivity **directly**.', sec: 's4-mesolimbic' }
+    ]
+  },
+  {
+    id: 'methamphetamine', name: 'Methamphetamine', group: 'Drug of abuse', cls: 'Stimulant drug of abuse',
+    short: 'Psychostimulant that causes mesolimbic dopamine hyperactivity directly.',
+    mechanism: 'A psychostimulant whose mesolimbic dopamine hyperactivity is a **direct** pharmacological effect; its abuse is covered in Chapter 13.',
+    nts: ['dopamine'],
+    sideEffects: [{ e: 'Paranoid psychosis', via: 'Mesolimbic dopamine excess' }],
+    chapters: [{ ch: 'ch04', pages: '90' }],
+    facts: [{ ch: 'ch04', pages: '90', text: 'With cocaine, the book’s example of a drug that produces mesolimbic hyperdopaminergia **directly**, unlike the indirect mechanisms of schizophrenia and other psychoses.', sec: 's4-mesolimbic' }]
+  },
+  {
+    id: 'levodopa', name: 'Levodopa', aka: ['L-DOPA'], group: 'Parkinson’s disease treatment', cls: 'Dopamine precursor',
+    short: 'Dopamine precursor for Parkinson’s disease; chronic use causes dyskinesias.',
+    mechanism: 'A dopamine precursor used to treat **Parkinson’s disease**. Chronic stimulation of nigrostriatal **D2** receptors is thought to cause **levodopa-induced dyskinesias (LID)**.',
+    nts: ['dopamine'],
+    targets: [{ t: 'd2', action: 'agonist', note: 'Indirect, via dopamine formed from levodopa' }],
+    uses: ['**Parkinson’s disease**'],
+    sideEffects: [{ e: 'Levodopa-induced dyskinesias', via: 'Chronic nigrostriatal D2 stimulation' }],
+    chapters: [{ ch: 'ch04', pages: '88–89' }],
+    facts: [{ ch: 'ch04', pages: '88–89', text: 'Chronic D2 stimulation by levodopa produces abnormal hyperkinetic movements (**LID**); chronic D2 **blockade** produces tardive dyskinesia.', sec: 's4-da-pathways' }]
   },
   {
     id: 'mdma', name: 'MDMA', brand: '“Ecstasy”', aka: ['3,4-methylenedioxymethamphetamine', 'midomafetamine'], group: 'Drug of abuse', cls: 'Empathogen; drug of abuse',
@@ -123,7 +184,10 @@ SP.drugs = [
     targets: [{ t: 'sv2a', action: 'modulator', note: 'Binds; mechanism uncertain' }],
     uses: ['Anticonvulsant'],
     chapters: [{ ch: 'ch02', pages: '35' }],
-    facts: [{ ch: 'ch02', pages: '35', text: 'Binds **SV2A** in the synaptic vesicle membrane.', sec: 's2-vesicular' }, { ch: 'ch03', pages: '72', text: 'SV2A is drawn on the synaptic vesicle beside the **snare proteins** that tie vesicles to N and P/Q calcium channels (Figure 3-24).', sec: 's3-vscc' }]
+    facts: [
+      { ch: 'ch02', pages: '35', text: 'Binds **SV2A** in the synaptic vesicle membrane.', sec: 's2-vesicular' },
+      { ch: 'ch03', pages: '72', text: 'SV2A is drawn on the synaptic vesicle beside the **snare proteins** that tie vesicles to N and P/Q calcium channels (Figure 3-24).', sec: 's3-vscc' }
+    ]
   },
   {
     id: 'tetrabenazine', name: 'Tetrabenazine', group: 'VMAT2 inhibitor', cls: 'VMAT2 inhibitor',
@@ -173,8 +237,8 @@ SP.drugs = [
     uses: ['Antimanic'],
     chapters: [{ ch: 'ch02', pages: '48' }],
     facts: [{ ch: 'ch02', pages: '48', text: 'The antimanic agent valproate **may** have actions on GSK-3 (marked with a question mark in Figure 2-14).', sec: 's2-enzymes' }]
-  }
-  ,{
+  },
+  {
     id: 'varenicline', name: 'Varenicline', group: 'Nicotinic partial agonist', cls: 'Nicotinic receptor partial agonist (NRPA)',
     nbn: 'Acetylcholine nicotinic α4β2 receptor partial agonist',
     short: 'Partial agonist at α4β2 nicotinic receptors.',
@@ -259,8 +323,73 @@ SP.drugs = [
     mechanism: 'A **NAM** at NMDA receptors that binds **inside the calcium channel**, getting in only **when the channel is open**, and prevents glutamate/glycine cotransmission from opening it.',
     targets: [{ t: 'nmda', action: 'negative allosteric modulator', note: 'Open-channel site' }],
     uses: ['Dissociative hallucinogen (drug of abuse)'],
-    chapters: [{ ch: 'ch03', pages: '55, 66' }],
-    facts: [{ ch: 'ch03', pages: '66', text: 'Also called **“angel dust”**; structurally related to the anesthetic ketamine.', sec: 's3-pam' }]
+    chapters: [
+      { ch: 'ch03', pages: '55, 66' },
+      { ch: 'ch04', pages: '78, 105–110' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '66', text: 'Also called **“angel dust”**; structurally related to the anesthetic ketamine.', sec: 's3-pam' },
+      { ch: 'ch04', pages: '78, 105–110', text: 'Causes a psychosis sharing features with schizophrenia by blocking NMDA receptors at the **PCP site** on prefrontal GABA interneurons (Table 4-1: visual hallucinations, paranoid delusions, no insight).', sec: 's4-nmda-hypo' }
+    ],
+    sideEffects: [{ e: 'Psychosis', via: 'NMDA blockade on prefrontal GABA interneurons' }]
+  },
+  {
+    id: 'lsd', name: 'LSD (lysergic acid diethylamide)', aka: ['lysergic acid diethylamide'], group: 'Hallucinogen', cls: 'Psychedelic hallucinogen',
+    nbn: 'Serotonin 5HT2A receptor agonist',
+    short: '5HT2A agonist hallucinogen; model of serotonin-driven psychosis.',
+    mechanism: 'A powerful **5HT2A agonist** that overstimulates prefrontal and visual cortex 5HT2A receptors on glutamate pyramidal neurons, causing psychosis, dissociative experiences and especially **visual hallucinations**. These effects are **blocked by 5HT2A antagonists**. Drugs of abuse are covered in Chapter 13.',
+    nts: ['serotonin'],
+    targets: [
+      { t: '5ht2a', action: 'agonist' },
+      { t: '5ht2c', action: 'agonist', note: 'To a lesser extent (Table 4-1)' }
+    ],
+    sideEffects: [
+      { e: 'Visual hallucinations', via: '5HT2A agonism in visual cortex' },
+      { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' }
+    ],
+    chapters: [{ ch: 'ch04', pages: '78, 111, 131–133' }],
+    facts: [
+      { ch: 'ch04', pages: '78', text: 'Table 4-1 psychedelic model: **5HT2A agonist** (and to a lesser extent 5HT2C), visual hallucinations, **mystical** delusions, **insight preserved**.', sec: 's4-three' },
+      { ch: 'ch04', pages: '131–133', text: 'Hallucinogen psychosis is blocked by **5HT2A antagonists**, showing that it arises from 5HT2A stimulation.', sec: 's4-5ht-hyper' }
+    ]
+  },
+  {
+    id: 'psilocybin', name: 'Psilocybin', group: 'Hallucinogen', cls: 'Psychedelic hallucinogen',
+    nbn: 'Serotonin 5HT2A receptor agonist',
+    short: '5HT2A agonist hallucinogen; model of serotonin-driven psychosis.',
+    mechanism: 'A powerful **5HT2A agonist** that overstimulates prefrontal and visual cortex 5HT2A receptors on glutamate pyramidal neurons, causing psychosis, dissociative experiences and especially **visual hallucinations**. These effects are **blocked by 5HT2A antagonists**. Drugs of abuse are covered in Chapter 13.',
+    nts: ['serotonin'],
+    targets: [{ t: '5ht2a', action: 'agonist' }],
+    sideEffects: [
+      { e: 'Visual hallucinations', via: '5HT2A agonism in visual cortex' },
+      { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' }
+    ],
+    chapters: [{ ch: 'ch04', pages: '78, 111, 131–133' }],
+    facts: [{ ch: 'ch04', pages: '78, 131–133', text: 'Listed with LSD as a psychedelic model of psychosis (Table 4-1) and as a 5HT2A agonist whose effects are blocked by 5HT2A antagonists.', sec: 's4-5ht-hyper' }]
+  },
+  {
+    id: 'mescaline', name: 'Mescaline', group: 'Hallucinogen', cls: 'Psychedelic hallucinogen',
+    nbn: 'Serotonin 5HT2A receptor agonist',
+    short: '5HT2A agonist hallucinogen; model of serotonin-driven psychosis.',
+    mechanism: 'A powerful **5HT2A agonist** that overstimulates prefrontal and visual cortex 5HT2A receptors on glutamate pyramidal neurons, causing psychosis, dissociative experiences and especially **visual hallucinations**. These effects are **blocked by 5HT2A antagonists**. Drugs of abuse are covered in Chapter 13.',
+    nts: ['serotonin'],
+    targets: [{ t: '5ht2a', action: 'agonist' }],
+    sideEffects: [
+      { e: 'Visual hallucinations', via: '5HT2A agonism in visual cortex' },
+      { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' }
+    ],
+    chapters: [{ ch: 'ch04', pages: '111, 131–133' }],
+    facts: [{ ch: 'ch04', pages: '111, 131–133', text: 'One of the three hallucinogens named as powerful **5HT2A agonists** that induce psychosis and visual hallucinations.', sec: 's4-5ht-hyper' }]
+  },
+  {
+    id: 'cannabis', name: 'Cannabis', aka: ['marijuana'], group: 'Drug of abuse', cls: 'Cannabinoid drug of abuse',
+    short: 'An environmental risk factor for psychosis, especially high-potency forms.',
+    mechanism: 'Acts on the endocannabinoid system (Chapter 13). In Chapter 4 it appears as an **environmental stressor** that can unmask schizophrenia in people with genetic risk.',
+    nts: ['endocannabinoids'],
+    targets: [{ t: 'cb1', action: 'agonist', note: 'Pharmacology covered in Chapter 13' }],
+    sideEffects: [{ e: 'Increased risk of psychosis', via: 'Environmental stressor acting on genetic risk' }],
+    chapters: [{ ch: 'ch04', pages: '150–151' }],
+    facts: [{ ch: 'ch04', pages: '150–151', text: 'Psychosis rates track cannabis use across European cities. Without **high-potency cannabis**, an estimated **12%** of first-episode psychosis across Europe would be prevented (**32%** in London, **50%** in Amsterdam).', sec: 's4-cause' }]
   },
   {
     id: 'ketamine', name: 'Ketamine', group: 'NMDA antagonist', cls: 'Anesthetic; rapid-acting antidepressant',
@@ -269,9 +398,16 @@ SP.drugs = [
     mechanism: 'Structurally related to PCP, ketamine is a **NAM** at NMDA receptors: it binds **inside the calcium channel**, can enter only **when the channel is open**, and prevents glutamate/glycine cotransmission from opening it. Details in Chapter 7.',
     targets: [{ t: 'nmda', action: 'negative allosteric modulator', note: 'Open-channel site' }],
     uses: ['Anesthetic', '**Treatment-resistant depression** and **suicidal thoughts**', 'Rapid-acting antidepressant'],
-    chapters: [{ ch: 'ch03', pages: '55, 66' }],
-    facts: [{ ch: 'ch03', pages: '66', text: 'Used as a treatment for **resistant depression and suicidal thoughts**.', sec: 's3-pam' }],
-    updates: [{ year: '2025', title: 'Esketamine monotherapy', text: 'Esketamine (the S-enantiomer of ketamine) nasal spray, approved in 2019 as add-on treatment, was approved in January 2025 as **monotherapy** for treatment-resistant depression.', source: 'FDA, January 2025' }]
+    chapters: [
+      { ch: 'ch03', pages: '55, 66' },
+      { ch: 'ch04', pages: '78, 105–110' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '66', text: 'Used as a treatment for **resistant depression and suicidal thoughts**.', sec: 's3-pam' },
+      { ch: 'ch04', pages: '78, 105–110', text: 'A model of NMDA-hypofunction psychosis (Table 4-1: **visual** hallucinations, paranoid delusions, no insight). Blocking NMDA receptors on prefrontal GABA interneurons is **acute and reversible**, unlike the neurodevelopmental defect of schizophrenia.', sec: 's4-nmda-hypo' }
+    ],
+    updates: [{ year: '2025', title: 'Esketamine monotherapy', text: 'Esketamine (the S-enantiomer of ketamine) nasal spray, approved in 2019 as add-on treatment, was approved in January 2025 as **monotherapy** for treatment-resistant depression.', source: 'FDA, January 2025' }],
+    sideEffects: [{ e: 'Psychosis (visual hallucinations, paranoia)', via: 'NMDA blockade on prefrontal GABA interneurons → glutamate and dopamine excess' }]
   },
   {
     id: 'dextromethorphan', name: 'Dextromethorphan', group: 'NMDA antagonist', cls: 'NMDA antagonist',
@@ -312,6 +448,36 @@ SP.drugs = [
     facts: [{ ch: 'ch03', pages: '55', text: 'A **5HT3 antagonist** with pro-cognitive and antidepressant actions (Table 3-2).', sec: 's3-drugs' }]
   },
   {
+    id: 'clozapine', name: 'Clozapine', group: 'Drug for psychosis', cls: 'Atypical antipsychotic',
+    short: 'Drug for psychosis that may help psychotic or impulsive violence.',
+    mechanism: 'A drug for psychosis whose full receptor profile is covered in Chapter 5.',
+    nts: ['dopamine', 'serotonin'],
+    uses: ['Schizophrenia (Chapter 5)', 'May be useful for **psychotic or impulsive violence** in psychotic disorders'],
+    chapters: [{ ch: 'ch04', pages: '147' }],
+    facts: [{ ch: 'ch04', pages: '147', text: 'With high doses of standard drugs for schizophrenia, may help **psychotic or impulsive violence**; behavioral measures help impulsive violence and organized violence may need confinement.', sec: 's4-aggression' }]
+  },
+  {
+    id: 'pimavanserin', name: 'Pimavanserin', group: 'Drug for psychosis', cls: 'Selective 5HT2A antagonist/inverse agonist',
+    nbn: 'Serotonin 5HT2A receptor antagonist (inverse agonist)',
+    short: 'Selective 5HT2A antagonist for Parkinson’s disease psychosis.',
+    mechanism: 'Chapter 4 describes, without naming a drug, how **selective 5HT2A antagonism** treats Parkinson’s disease psychosis (blocking overstimulated, upregulated 5HT2A receptors) and dementia-related psychosis (rebalancing surviving glutamate neurons that lost GABA inhibition). Pimavanserin is the selective agent detailed in Chapter 5.',
+    nts: ['serotonin'],
+    targets: [{ t: '5ht2a', action: 'antagonist', note: 'Selective; inverse agonist (Chapter 5)' }],
+    uses: ['**Parkinson’s disease psychosis**', 'Studied for dementia-related psychosis (see update)'],
+    chapters: [{ ch: 'ch04', pages: '131–141, 157' }],
+    facts: [{ ch: 'ch04', pages: '131–141', text: 'The 5HT2A mechanism avoids the D2 blockade that **worsens movement** in Parkinson’s disease and raises **stroke and death** risk in dementia.', sec: 's4-5ht-hyper' }],
+    updates: [{ year: '2022', title: 'Not approved for dementia-related psychosis', text: 'The FDA issued complete response letters for dementia-related psychosis (April 2021) and for hallucinations and delusions of Alzheimer disease psychosis (August 2022, after a 9–3 advisory committee vote against efficacy). Its US approval remains for Parkinson’s disease psychosis.', source: 'FDA actions reported April 2021 and August 4, 2022' }]
+  },
+  {
+    id: 'brexpiprazole', name: 'Brexpiprazole', brand: 'Rexulti', group: 'Drug for psychosis', cls: 'Atypical antipsychotic (D2 partial agonist)',
+    short: 'Drug for psychosis; later approved for Alzheimer agitation.',
+    mechanism: 'Receptor profile covered in Chapter 5. Listed here for its post-publication approval in dementia-related agitation, which Chapter 4 distinguishes from dementia-related psychosis.',
+    nts: ['dopamine', 'serotonin'],
+    chapters: [{ ch: 'ch04', pages: '146' }],
+    facts: [{ ch: 'ch04', pages: '146', text: 'Chapter 4 notes that **treatments for agitation in dementia are evolving separately** from those for psychosis in dementia and in schizophrenia.', sec: 's4-aggression' }],
+    updates: [{ year: '2023', title: 'Approved for Alzheimer agitation', text: 'Approved by the FDA for **agitation associated with dementia due to Alzheimer disease**, the first drug approved for this indication in the US.', source: 'FDA, May 10, 2023' }]
+  },
+  {
     id: 'pregabalin', name: 'Pregabalin', group: 'Anticonvulsant', cls: 'Anticonvulsant (α2δ ligand)',
     nbn: 'Voltage-sensitive calcium channel α2δ ligand',
     short: 'Binds the α2δ subunit of presynaptic calcium channels.',
@@ -331,5 +497,4 @@ SP.drugs = [
     chapters: [{ ch: 'ch03', pages: '71' }],
     facts: [{ ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' }]
   }
-
 ];

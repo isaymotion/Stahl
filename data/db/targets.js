@@ -13,7 +13,8 @@ SP.targets = [
     facts: [
       { ch: 'ch01', pages: '6', text: 'Elavil (amitriptyline) and Prozac (fluoxetine) entered practice **before molecular clarification of the serotonin transporter site**.', sec: 's1-nts' },
       { ch: 'ch02', pages: '31–33', text: 'Member of the **SLC6** gene family. Besides serotonin it carries **Ecstasy (MDMA)**, a “false substrate.”', sec: 's2-monoamine' },
-      { ch: 'ch02', pages: '33', text: 'Stahl’s **wagon** analogy: sodium inflates the tires so serotonin can bind; an SSRI such as fluoxetine sits in the **allosteric “front seat”**, lowering affinity for serotonin. SSRIs do not bind the substrate site and are **not transported**.', sec: 's2-monoamine' }
+      { ch: 'ch02', pages: '33', text: 'Stahl’s **wagon** analogy: sodium inflates the tires so serotonin can bind; an SSRI such as fluoxetine sits in the **allosteric “front seat”**, lowering affinity for serotonin. SSRIs do not bind the substrate site and are **not transported**.', sec: 's2-monoamine' },
+      { ch: 'ch04', pages: '114–115', text: 'All 5HT neurons are thought to contain SERT; functional **polymorphisms** of its gene may predict response and side effects with SERT blockers.', sec: 's4-5ht-synth' }
     ]
   },
   {
@@ -23,7 +24,8 @@ SP.targets = [
     block: ['Enhances synaptic norepinephrine action, indirectly stimulating all norepinephrine receptors', 'Antidepressant; neuropathic pain; ADHD (Table 2-5)'],
     facts: [
       { ch: 'ch02', pages: '31', text: 'Carries **dopamine, epinephrine and amphetamine** as well as norepinephrine; NET has **high affinity for dopamine**.', sec: 's2-monoamine' },
-      { ch: 'ch02', pages: '34', text: '“Stimulants” for ADHD (**methylphenidate, amphetamine**) and **cocaine** act on **DAT and NET**.', sec: 's2-monoamine' }
+      { ch: 'ch02', pages: '34', text: '“Stimulants” for ADHD (**methylphenidate, amphetamine**) and **cocaine** act on **DAT and NET**.', sec: 's2-monoamine' },
+      { ch: 'ch04', pages: '80–81', text: 'Takes up dopamine that diffuses from DAT-poor synapses (e.g., prefrontal cortex) as a **“false” substrate**.', sec: 's4-da-synth' }
     ]
   },
   {
@@ -35,7 +37,8 @@ SP.targets = [
     facts: [
       { ch: 'ch01', pages: '8', text: 'Because the **prefrontal cortex has very few DATs**, dopamine released there spills over to neighboring receptors: the book’s main example of **volume neurotransmission**. The **striatum** has DATs in abundance.', sec: 's1-volume' },
       { ch: 'ch02', pages: '31–32', text: 'Carries **norepinephrine, epinephrine and amphetamine** as well as dopamine; DAT has **high affinity for amphetamines**.', sec: 's2-monoamine' },
-      { ch: 'ch02', pages: '34', text: 'Methylphenidate, amphetamine and cocaine all act on **DAT and NET**.', sec: 's2-monoamine' }
+      { ch: 'ch02', pages: '34', text: 'Methylphenidate, amphetamine and cocaine all act on **DAT and NET**.', sec: 's2-monoamine' },
+      { ch: 'ch04', pages: '80–81', text: 'The **principal** route of dopamine inactivation where present (striatum), with COMT secondary. Some dopamine neurons lack DAT, unlike serotonin neurons, which are all thought to have SERT.', sec: 's4-da-synth' }
     ]
   },
   {
@@ -52,7 +55,10 @@ SP.targets = [
     id: 'glyt', name: 'Glycine transporters (GlyT1, GlyT2)', short: 'GlyT1–2', family: 'Transporter', nt: 'glycine',
     summary: 'SLC6 transporters for glycine. No clinically used drug blocks them; GlyT1 inhibitors were tested in schizophrenia.',
     location: 'GlyT1 mostly glial; GlyT2 neuronal',
-    facts: [{ ch: 'ch02', pages: '34', text: 'No drugs in clinical practice block glycine transporters, though new agents were **in clinical trials for schizophrenia** at publication.', sec: 's2-other' }],
+    facts: [
+      { ch: 'ch02', pages: '34', text: 'No drugs in clinical practice block glycine transporters, though new agents were **in clinical trials for schizophrenia** at publication.', sec: 's2-other' },
+      { ch: 'ch04', pages: '97–99', text: '**GlyT2** recaptures glycine into glycine neurons; glial **GlyT1** releases glycine (reversed) and is the **main terminator** of synaptic glycine at NMDA synapses (inward).', sec: 's4-cotransmitters' }
+    ],
     updates: [{ year: '2025', title: 'GlyT1 inhibitor fails phase III', text: 'The GlyT1 inhibitor **iclepertin** did not meet its primary or key secondary endpoints for cognitive impairment associated with schizophrenia in the phase III CONNEX program (January 2025).', source: 'Boehringer Ingelheim, January 2025' }]
   },
   {
@@ -61,8 +67,21 @@ SP.targets = [
     coupling: 'Sodium cotransport without chloride; almost always potassium countertransport; may work as trimers',
     facts: [
       { ch: 'ch02', pages: '31, 34', text: 'Carry **L-glutamate and L-aspartate**. Uptake **into glia** converts glutamate to **glutamine**, which enters the presynaptic neuron to be turned back into glutamate.', sec: 's2-other' },
-      { ch: 'ch02', pages: '35', text: 'Differ from SLC6 transporters: **no chloride** cotransport, **almost always potassium** countertransport, and perhaps **trimers** rather than dimers. Because reducing glutamate is often the goal, their future as targets is unclear.', sec: 's2-other' }
+      { ch: 'ch02', pages: '35', text: 'Differ from SLC6 transporters: **no chloride** cotransport, **almost always potassium** countertransport, and perhaps **trimers** rather than dimers. Because reducing glutamate is often the goal, their future as targets is unclear.', sec: 's2-other' },
+      { ch: 'ch04', pages: '96–97', text: 'Terminates glutamate’s action (there is **no enzymatic breakdown**); glial EAATs matter most for recycling.', sec: 's4-glu-synth' }
     ]
+  },
+  {
+    id: 'snat', name: 'Specific neutral amino acid transporters (SNAT)', short: 'SNAT', family: 'Transporter', nt: 'glutamate',
+    summary: 'Transporters that carry glutamine out of glia (reversed) and into glutamate neurons, completing the glutamate–glutamine cycle; glial SNATs also import glycine.',
+    location: 'Glia (export of glutamine by reverse transport; glycine import) and glutamate neurons (glutamine import)',
+    facts: [{ ch: 'ch04', pages: '96–98', text: 'Glial SNATs run in **reverse** to release glutamine, which a neuronal SNAT takes up; a glial **ASC-T** may also export glutamine.', sec: 's4-glu-synth' }]
+  },
+  {
+    id: 'dsert', name: 'D-serine transporter (D-SER-T)', short: 'D-SER-T', family: 'Transporter', nt: 'dserine',
+    summary: 'The glial transporter that releases D-serine into glutamate synapses (reversed) and takes it back up (inward).',
+    location: 'Glia',
+    facts: [{ ch: 'ch04', pages: '98–99', text: 'Releases D-serine by reverse transport and terminates its action by reuptake, along with **DAO**.', sec: 's4-cotransmitters' }]
   },
   {
     id: 'cht', name: 'Choline transporter', short: 'Choline transporter', family: 'Transporter', nt: 'acetylcholine',
@@ -77,7 +96,8 @@ SP.targets = [
     block: ['VMAT2 inhibition (tetrabenazine and derivatives) treats movement disorders such as tardive dyskinesia (Chapter 5)'],
     facts: [
       { ch: 'ch02', pages: '31', text: 'All three monoamine neurons share **the same vesicular transporter, VMAT2**, which also packages **histamine**.', sec: 's2-monoamine' },
-      { ch: 'ch02', pages: '35', text: 'Targeted especially in **dopamine neurons**: **amphetamine** as a transported substrate; **tetrabenazine, deutetrabenazine and valbenazine** as inhibitors.', sec: 's2-vesicular' }
+      { ch: 'ch02', pages: '35', text: 'Targeted especially in **dopamine neurons**: **amphetamine** as a transported substrate; **tetrabenazine, deutetrabenazine and valbenazine** as inhibitors.', sec: 's2-vesicular' },
+      { ch: 'ch04', pages: '79–80, 114', text: 'Packages newly made **dopamine** and **serotonin** into vesicles.', sec: 's4-da-synth' }
     ]
   },
   {
@@ -93,7 +113,10 @@ SP.targets = [
   {
     id: 'vglut', name: 'Vesicular glutamate transporters (vGluT1–3)', short: 'vGluT1–3', family: 'Transporter', nt: 'glutamate',
     summary: 'The SLC17 transporters that package glutamate into vesicles. No drug used in humans targets them.',
-    facts: [{ ch: 'ch02', pages: '35', text: 'Members of the **SLC17** family; not known to be targeted by any drug used in humans.', sec: 's2-vesicular' }]
+    facts: [
+      { ch: 'ch02', pages: '35', text: 'Members of the **SLC17** family; not known to be targeted by any drug used in humans.', sec: 's2-vesicular' },
+      { ch: 'ch04', pages: '97', text: 'Packages regenerated glutamate into vesicles at the end of the glutamate–glutamine cycle.', sec: 's4-glu-synth' }
+    ]
   },
   {
     id: 'sv2a', name: 'Synaptic vesicle protein 2A (SV2A)', short: 'SV2A', family: 'Transporter',
@@ -104,65 +127,130 @@ SP.targets = [
       { ch: 'ch03', pages: '72', text: 'Shown in Figure 3-24 on the synaptic vesicle alongside the **snare proteins** that link vesicles to presynaptic N and P/Q calcium channels.', sec: 's3-vscc' }
     ]
   },
-
   /* ---------------- G-protein-linked receptors (7 transmembrane regions) ---------------- */
   {
     id: 'd1', name: 'Dopamine D1 receptor', short: 'D1', family: 'G-protein-linked receptor', nt: 'dopamine',
-    summary: 'A dopamine receptor shown in the book’s example of volume neurotransmission in the prefrontal cortex. Stimulated indirectly when stimulants raise dopamine.',
+    summary: 'An excitatory D1-like receptor (positively linked to adenylate cyclase). Predominant in prefrontal cortex, where it is reached by volume transmission, and on the striatal direct (“go”) pathway.',
     stim: ['Indirect agonism at D1–D5 via dopamine reuptake inhibition or release (methylphenidate, amphetamine) improves ADHD, depression and wakefulness'],
     facts: [
       { ch: 'ch01', pages: '8', text: 'In Figure 1-7, prefrontal dopamine diffuses from its synapse to reach **D1 receptors** outside the synapse on the same neuron and on a neighboring neuron.', sec: 's1-volume' },
-      { ch: 'ch02', pages: '40', text: 'Stimulated **indirectly** (with D2–D5) when methylphenidate or amphetamine block reuptake or release dopamine (Table 2-5).', sec: 's2-receptor-tables' }
-    ]
+      { ch: 'ch02', pages: '40', text: 'Stimulated **indirectly** (with D2–D5) when methylphenidate or amphetamine block reuptake or release dopamine (Table 2-5).', sec: 's2-receptor-tables' },
+      { ch: 'ch04', pages: '81–85', text: '**D1-like** (with D5): excitatory, positively linked to adenylate cyclase. The **least sensitive** dopamine receptor and the predominant postsynaptic one in **prefrontal cortex**; populates the striatal **direct (“go”)** pathway.', sec: 's4-da-receptors' }
+    ],
+    location: 'Postsynaptic; predominant in **prefrontal cortex**; striatal **direct pathway** neurons'
   },
   {
     id: 'd2', name: 'Dopamine D2 receptor', short: 'D2', family: 'G-protein-linked receptor', nt: 'dopamine',
-    summary: 'The key target of so-called antipsychotics, which act as antagonists or partial agonists here.',
-    block: ['Antagonism or partial agonism: **antipsychotic** and **antimanic** actions'],
-    facts: [{ ch: 'ch02', pages: '39', text: 'Directly targeted as an **antagonist or partial agonist** for antipsychotic and antimanic actions (Table 2-4); detailed in Chapter 5.', sec: 's2-receptor-tables' }]
+    summary: 'The key target of so-called antipsychotics. An inhibitory D2-like receptor, postsynaptic in the striatum (indirect “stop” pathway) and a presynaptic autoreceptor on nigrostriatal neurons. Mesolimbic D2 hyperactivity is the classic hypothesis of positive symptoms.',
+    block: ['Antagonism or partial agonism: **antipsychotic** and **antimanic** actions', 'Mesolimbic blockade: reduces **positive symptoms**', 'Tuberoinfundibular blockade: **hyperprolactinemia** (galactorrhea, gynecomastia, amenorrhea, sexual dysfunction)', 'Nigrostriatal blockade: **drug-induced parkinsonism**, possibly akathisia and dystonia; chronically **tardive dyskinesia**', 'Worsens movement in **Parkinson’s disease**; increases stroke and death risk in **dementia**'],
+    facts: [
+      { ch: 'ch02', pages: '39', text: 'Directly targeted as an **antagonist or partial agonist** for antipsychotic and antimanic actions (Table 2-4); detailed in Chapter 5.', sec: 's2-receptor-tables' },
+      { ch: 'ch04', pages: '79', text: 'Classic hypothesis: **hyperactivity at mesolimbic D2** receptors causes positive symptoms; D2 blockers have been the mainstay for over 50 years.', sec: 's4-da-synth' },
+      { ch: 'ch04', pages: '82–84', text: 'As an **autoreceptor**, D2 is **less sensitive** than D3, so synapses with D2 autoreceptors accumulate more dopamine and have a wider diffusion radius.', sec: 's4-da-receptors' },
+      { ch: 'ch04', pages: '86–89', text: 'Populates the striatal **indirect (“stop”)** pathway; dopamine at D2 inhibits it (“don’t stop”).', sec: 's4-da-pathways' }
+    ],
+    location: 'Postsynaptic in striatum (indirect pathway) and pituitary; presynaptic **autoreceptors** (terminal and somatodendritic)',
+    coupling: 'D2-like: **inhibitory**, negatively linked to adenylate cyclase',
+    stim: ['Indirect stimulation by **amphetamine/cocaine** (dopamine excess): paranoid psychosis with auditory hallucinations', 'Chronic stimulation by **levodopa**: levodopa-induced dyskinesias']
+  },
+  {
+    id: 'd3', name: 'Dopamine D3 receptor', short: 'D3', family: 'G-protein-linked receptor', nt: 'dopamine',
+    summary: 'An inhibitory D2-like receptor. As a presynaptic autoreceptor it is more sensitive to dopamine than D2, braking release at lower concentrations; it regulates mesolimbic dopamine neurons.',
+    location: 'Presynaptic **autoreceptors** on mesolimbic neurons (VTA cell bodies and striatal terminals); postsynaptic in striatum',
+    coupling: 'D2-like: **inhibitory**, negatively linked to adenylate cyclase',
+    facts: [{ ch: 'ch04', pages: '81–85', text: '**More sensitive** to dopamine than D2, so a lower synaptic concentration turns off further release; mesolimbic neurons carry D3 autoreceptors.', sec: 's4-da-receptors' }]
+  },
+  {
+    id: 'd4', name: 'Dopamine D4 receptor', short: 'D4', family: 'G-protein-linked receptor', nt: 'dopamine',
+    summary: 'An inhibitory D2-like receptor (negatively linked to adenylate cyclase).',
+    coupling: 'D2-like: **inhibitory**, negatively linked to adenylate cyclase',
+    facts: [{ ch: 'ch04', pages: '81', text: 'One of the three **D2-like** receptors (D2, D3, D4).', sec: 's4-da-receptors' }]
+  },
+  {
+    id: 'd5', name: 'Dopamine D5 receptor', short: 'D5', family: 'G-protein-linked receptor', nt: 'dopamine',
+    summary: 'An excitatory D1-like receptor (positively linked to adenylate cyclase).',
+    coupling: 'D1-like: **excitatory**, positively linked to adenylate cyclase',
+    facts: [{ ch: 'ch04', pages: '81', text: 'One of the two **D1-like** receptors (D1, D5).', sec: 's4-da-receptors' }]
   },
   {
     id: '5ht1a', name: 'Serotonin 5HT1A receptor', short: '5HT1A', family: 'G-protein-linked receptor', nt: 'serotonin',
     summary: 'Found as somatodendritic autoreceptors and postsynaptically. Partial agonism is anxiolytic and boosts SSRIs; SSRIs stimulate it indirectly.',
-    stim: ['Partial agonism: **less drug-induced parkinsonism**, **anxiolytic**, **boosts** SSRI/SNRI antidepressant action', 'Indirect agonism at somatodendritic autoreceptors via SSRIs/SNRIs: antidepressant, anxiolytic'],
+    stim: ['Partial agonism: **less drug-induced parkinsonism**, **anxiolytic**, **boosts** SSRI/SNRI antidepressant action', 'Indirect agonism at somatodendritic autoreceptors via SSRIs/SNRIs: antidepressant, anxiolytic', 'On prefrontal GABA interneurons: **disinhibits NE, DA and ACh** release (Chapter 4)'],
     facts: [
       { ch: 'ch02', pages: '39', text: '**Partial agonist** actions: reduced drug-induced parkinsonism, anxiolytic, booster of SSRI/SNRI antidepressant action (Table 2-4).', sec: 's2-receptor-tables' },
-      { ch: 'ch02', pages: '40', text: 'Stimulated **indirectly** at presynaptic somatodendritic autoreceptors when SSRIs or SNRIs block serotonin reuptake (Table 2-5).', sec: 's2-receptor-tables' }
+      { ch: 'ch02', pages: '40', text: 'Stimulated **indirectly** at presynaptic somatodendritic autoreceptors when SSRIs or SNRIs block serotonin reuptake (Table 2-5).', sec: 's2-receptor-tables' },
+      { ch: 'ch04', pages: '115–119', text: 'As a **somatodendritic autoreceptor** in the raphe it provides negative feedback; its **downregulation/desensitization** is thought critical to reuptake-blocker antidepressant action.', sec: 's4-5ht-pre' },
+      { ch: 'ch04', pages: '122–125', text: 'Always inhibitory, but often on **prefrontal GABA interneurons**, so stimulation **increases NE, DA and ACh** release. Many drugs for psychosis, mood and anxiety are 5HT1A agonists or partial agonists.', sec: 's4-5ht-post' }
     ]
   },
   {
     id: '5ht1b1d', name: 'Serotonin 5HT1B/1D receptors', short: '5HT1B/1D', family: 'G-protein-linked receptor', nt: 'serotonin',
     summary: 'Serotonin receptors where antagonism or partial agonism may be pro-cognitive and antidepressant.',
     block: ['Antagonism or partial agonism: possible **pro-cognitive** and **antidepressant** actions'],
-    facts: [{ ch: 'ch02', pages: '39', text: 'Antagonist or partial agonist actions: possible pro-cognitive and antidepressant effects (Table 2-4).', sec: 's2-receptor-tables' }]
+    facts: [
+      { ch: 'ch02', pages: '39', text: 'Antagonist or partial agonist actions: possible pro-cognitive and antidepressant effects (Table 2-4).', sec: 's2-receptor-tables' },
+      { ch: 'ch04', pages: '117–119', text: '**5HT1B/D** is the serotonin neuron’s **terminal autoreceptor**: synaptic 5HT shuts off further release.', sec: 's4-5ht-pre' },
+      { ch: 'ch04', pages: '125', text: '5HT1B **heteroreceptors** on NE, DA, histamine and ACh terminals **inhibit** their release; a few 5HT1B antagonists that may boost these transmitters treat depression.', sec: 's4-5ht-post' }
+    ],
+    stim: ['Terminal autoreceptor: **shuts off 5HT release**; heteroreceptors: **less NE, DA, HA and ACh** release (Chapter 4)']
   },
   {
     id: '5ht2a', name: 'Serotonin 5HT2A receptor', short: '5HT2A', family: 'G-protein-linked receptor', nt: 'serotonin',
     summary: 'A pivotal serotonin receptor. Antagonism (or inverse agonism) is antipsychotic and reduces drug-induced parkinsonism; agonism is psychotomimetic.',
     block: ['Antipsychotic actions in **Parkinson’s disease psychosis** and **dementia-related psychosis**', '**Reduced drug-induced parkinsonism**', 'Possible reduction of negative symptoms in schizophrenia', 'Possible mood-stabilizing and antidepressant actions in bipolar disorder', 'Improves **insomnia and anxiety**'],
-    stim: ['**Psychotomimetic** actions', 'Experimental treatment of refractory depression and other disorders, especially accompanying psychotherapy', 'Indirect 5HT2A/2C agonism via serotonin release by MDMA: “empathogen”'],
+    stim: ['**Psychotomimetic** actions', 'Experimental treatment of refractory depression and other disorders, especially accompanying psychotherapy', 'Indirect 5HT2A/2C agonism via serotonin release by MDMA: “empathogen”', 'Agonism by **LSD, psilocybin, mescaline**: psychosis, dissociation, **visual hallucinations** (Chapter 4)'],
     facts: [
       { ch: 'ch02', pages: '39', text: 'Antagonist or **inverse agonist** actions listed in Table 2-4; agonist actions are psychotomimetic and experimental for refractory depression.', sec: 's2-receptor-tables' },
-      { ch: 'ch02', pages: '45', text: 'Drugs long considered **5HT2A antagonists** may turn out to be **inverse agonists** in some brain areas.', sec: 's2-spectrum' }
+      { ch: 'ch02', pages: '45', text: 'Drugs long considered **5HT2A antagonists** may turn out to be **inverse agonists** in some brain areas.', sec: 's2-spectrum' },
+      { ch: 'ch04', pages: '125–126', text: 'Always excitatory: on **apical dendrites of pyramidal neurons** it raises glutamate output; on **GABA interneurons** it lowers it. Most hallucinogens are 5HT2A agonists.', sec: 's4-5ht-post' },
+      { ch: 'ch04', pages: '131–141', text: 'Central to the **serotonin hyperfunction** hypothesis: overstimulated by LSD, psilocybin and mescaline; **upregulated** in Parkinson’s disease psychosis; **unopposed** after loss of GABA inhibition in dementia. 5HT2A antagonists treat PDP and dementia-related psychosis.', sec: 's4-5ht-hyper' }
     ]
+  },
+  {
+    id: '5ht2b', name: 'Serotonin 5HT2B receptor', short: '5HT2B', family: 'G-protein-linked receptor', nt: 'serotonin',
+    summary: 'A recently recognized somatodendritic autoreceptor on serotonin neurons that acts as a feed-forward accelerator, opposing 5HT1A.',
+    location: 'Somatodendritic (raphe serotonin neurons); can also be postsynaptic',
+    stim: ['Increases serotonin neuron **firing** and **5HT release** (feed-forward)'],
+    facts: [{ ch: 'ch04', pages: '117–119', text: 'Activates the serotonin neuron, increasing impulse flow and release: **feed-forward**, whereas 5HT1A is negative feedback. Which raphe neurons carry which receptor is not yet clear.', sec: 's4-5ht-pre' }]
   },
   {
     id: '5ht2c', name: 'Serotonin 5HT2C receptor', short: '5HT2C', family: 'G-protein-linked receptor', nt: 'serotonin',
     summary: 'A serotonin receptor where antagonism has antidepressant actions.',
-    block: ['Antagonism: **antidepressant**'],
-    stim: ['Indirect agonism via serotonin release by MDMA (with 5HT2A)'],
-    facts: [{ ch: 'ch02', pages: '39–40', text: '**Antagonist** actions are antidepressant (Table 2-4); stimulated indirectly by MDMA-induced serotonin release (Table 2-5).', sec: 's2-receptor-tables' }]
+    block: ['Antagonism: **antidepressant**', 'Antagonism: treats **psychosis and mood disorders** (Chapter 4)'],
+    stim: ['Indirect agonism via serotonin release by MDMA (with 5HT2A)', 'Agonism: treats **obesity**; on GABA interneurons, **reduces prefrontal NE and DA** (Chapter 4)'],
+    facts: [
+      { ch: 'ch02', pages: '39–40', text: '**Antagonist** actions are antidepressant (Table 2-4); stimulated indirectly by MDMA-induced serotonin release (Table 2-5).', sec: 's2-receptor-tables' },
+      { ch: 'ch04', pages: '126–127', text: 'Excitatory, postsynaptic and mostly on **GABA interneurons**, so serotonin here **inhibits NE and DA** release in prefrontal cortex. Agonists treat **obesity**; antagonists treat psychosis and mood disorders.', sec: 's4-5ht-post' }
+    ]
+  },
+  {
+    id: '5ht4', name: 'Serotonin 5HT4 receptor', short: '5HT4', family: 'G-protein-linked receptor', nt: 'serotonin',
+    summary: 'A postsynaptic serotonin receptor that is excitatory on cortical glutamate pyramidal neurons.',
+    facts: [{ ch: 'ch04', pages: '120–121', text: 'One of the receptors through which serotonin **excites** glutamate pyramidal neurons (with 5HT2A, 2C, 6 and 7).', sec: 's4-5ht-network' }]
+  },
+  {
+    id: '5ht5', name: 'Serotonin 5HT5 receptor', short: '5HT5', family: 'G-protein-linked receptor', nt: 'serotonin',
+    summary: 'A postsynaptic serotonin receptor that is inhibitory on cortical glutamate pyramidal neurons.',
+    facts: [{ ch: 'ch04', pages: '120–121', text: 'One of the receptors through which serotonin **inhibits** glutamate pyramidal neurons (with 5HT1A and possibly postsynaptic 5HT1B).', sec: 's4-5ht-network' }]
   },
   {
     id: '5ht6', name: 'Serotonin 5HT6 receptor', short: '5HT6', family: 'G-protein-linked receptor', nt: 'serotonin',
-    summary: 'A serotonin receptor whose drug actions and therapeutic role are listed as unknown in Table 2-4.',
-    facts: [{ ch: 'ch02', pages: '39', text: 'Pharmacological and therapeutic actions are marked **“?”** in Table 2-4; possibly stimulated postsynaptically by SSRIs (Table 2-5).', sec: 's2-receptor-tables' }]
+    summary: 'A postsynaptic serotonin receptor that may regulate acetylcholine release and cognition; antagonists are proposed as pro-cognitive agents.',
+    facts: [
+      { ch: 'ch02', pages: '39', text: 'Pharmacological and therapeutic actions are marked **“?”** in Table 2-4; possibly stimulated postsynaptically by SSRIs (Table 2-5).', sec: 's2-receptor-tables' },
+      { ch: 'ch04', pages: '130', text: 'Postsynaptic; may be a key regulator of **ACh release** and cognition. Blockade improves learning and memory in animals, so **5HT6 antagonists** are proposed **pro-cognitive** agents for schizophrenia and Alzheimer disease.', sec: 's4-5ht-post' }
+    ],
+    block: ['Antagonism: proposed **pro-cognitive** action (animals: improved learning and memory) (Chapter 4)']
   },
   {
     id: '5ht7', name: 'Serotonin 5HT7 receptor', short: '5HT7', family: 'G-protein-linked receptor', nt: 'serotonin',
     summary: 'A serotonin receptor where antagonism may be pro-cognitive and antidepressant.',
-    block: ['Antagonism: possible **pro-cognitive** and **antidepressant** actions'],
-    facts: [{ ch: 'ch02', pages: '39', text: 'Antagonist actions: possible pro-cognitive and antidepressant effects (Table 2-4).', sec: 's2-receptor-tables' }]
+    block: ['Antagonism: possible **pro-cognitive** and **antidepressant** actions', 'Antagonism: used for **psychosis and mood** (Chapter 4)'],
+    facts: [
+      { ch: 'ch02', pages: '39', text: 'Antagonist actions: possible pro-cognitive and antidepressant effects (Table 2-4).', sec: 's2-receptor-tables' },
+      { ch: 'ch04', pages: '130–131', text: 'Excitatory and frequently on **GABA interneurons**: in cortex it **inhibits glutamate** release; in the raphe, a recurrent collateral acting at 5HT7 on GABA neurons **inhibits further 5HT release**. 5HT7 antagonists treat psychosis and mood.', sec: 's4-5ht-post' }
+    ],
+    stim: ['On cortical GABA interneurons: **less glutamate** release; in raphe: **less 5HT** release (Chapter 4)']
   },
   {
     id: 'alpha2', name: 'α2-adrenergic receptor', short: 'α2', family: 'G-protein-linked receptor', nt: 'norepinephrine',
@@ -226,6 +314,26 @@ SP.targets = [
     facts: [{ ch: 'ch02', pages: '40', text: '**Antagonist** actions cause dry mouth, blurred vision, constipation and urinary retention, and may contribute to metabolic dysregulation (Table 2-4). M5 actions are marked unknown.', sec: 's2-receptor-tables' }]
   },
   {
+    id: 'mglur-g1', name: 'Group I metabotropic glutamate receptors (mGluR1, mGluR5)', short: 'mGluR I', family: 'G-protein-linked receptor', nt: 'glutamate',
+    summary: 'G-protein-linked glutamate receptors located mainly postsynaptically, where they hypothetically facilitate responses mediated by ionotropic glutamate receptors.',
+    facts: [{ ch: 'ch04', pages: '99–102', text: 'Group I (mGluR1, 5) are mainly **postsynaptic**, hypothetically strengthening ionotropic glutamate responses.', sec: 's4-glu-receptors' }],
+    location: 'Mainly **postsynaptic**'
+  },
+  {
+    id: 'mglur-g2', name: 'Group II metabotropic glutamate receptors (mGluR2, mGluR3)', short: 'mGluR II', family: 'G-protein-linked receptor', nt: 'glutamate',
+    summary: 'G-protein-linked glutamate receptors that can act as presynaptic autoreceptors to reduce glutamate release.',
+    facts: [{ ch: 'ch04', pages: '99–102', text: 'Group II (mGluR2, 3) can be **presynaptic autoreceptors** that block glutamate release; agonists might reduce release. **GRM3** (mGluR3) is a schizophrenia risk gene explored as a drug target.', sec: 's4-glu-receptors' }],
+    location: '**Presynaptic** autoreceptors (also elsewhere)',
+    stim: ['Agonism at presynaptic autoreceptors: **reduces glutamate release**']
+  },
+  {
+    id: 'mglur-g3', name: 'Group III metabotropic glutamate receptors (mGluR4, 6, 7, 8)', short: 'mGluR III', family: 'G-protein-linked receptor', nt: 'glutamate',
+    summary: 'G-protein-linked glutamate receptors that can act as presynaptic autoreceptors to reduce glutamate release.',
+    facts: [{ ch: 'ch04', pages: '99–102', text: 'Group III (mGluR4, 6, 7, 8) can also act as **presynaptic autoreceptors** reducing glutamate release.', sec: 's4-glu-receptors' }],
+    location: '**Presynaptic** autoreceptors',
+    stim: ['Agonism at presynaptic autoreceptors: **reduces glutamate release**']
+  },
+  {
     id: 'ox', name: 'Orexin receptors (OX1, OX2)', short: 'OX1/OX2', family: 'G-protein-linked receptor', nt: 'orexin',
     summary: 'Receptors for orexin A and B; antagonists are hypnotics for insomnia.',
     block: ['**Hypnotic** for insomnia'],
@@ -237,9 +345,7 @@ SP.targets = [
     location: '**Presynaptic** terminals',
     facts: [{ ch: 'ch01', pages: '6–7', text: 'Endocannabinoids made in the postsynaptic neuron diffuse back to **presynaptic cannabinoid receptors such as CB1**: the classic example of **retrograde neurotransmission**.', sec: 's1-classic' }]
   },
-
-
-  /* ---------------- ligand-gated ion channels (Chapter 3) ---------------- */
+  /* ---------------- ligand-gated ion channels ---------------- */
   {
     id: 'gabaa', name: 'GABA-A receptor', short: 'GABA-A', family: 'Ligand-gated ion channel', nt: 'gaba',
     summary: 'A pentameric ligand-gated chloride channel. Benzodiazepines and Z drugs are PAMs (full agonists at their allosteric sites) mediating phasic inhibition; neuroactive steroids act at benzodiazepine-insensitive sites mediating tonic inhibition.',
@@ -249,7 +355,8 @@ SP.targets = [
     facts: [
       { ch: 'ch03', pages: '53', text: 'A **pentameric** ligand-gated channel (Table 3-1); subtypes depend on which subunits (e.g., α1, γ, δ) are assembled.', sec: 's3-structure' },
       { ch: 'ch03', pages: '55', text: 'Table 3-2: **benzodiazepine** sites (anxiolytic) and **nonbenzodiazepine PAM** sites (Z drugs, insomnia) mediate **phasic** inhibition; **neurosteroid** sites (allopregnanolone) mediate **tonic** inhibition.', sec: 's3-drugs' },
-      { ch: 'ch03', pages: '65–66', text: 'Benzodiazepines are the book’s example of **PAMs**: acting as **full agonists at the PAM site**, they amplify GABA’s opening of the chloride channel. The **same site** gives NAM actions with an **inverse agonist**.', sec: 's3-pam' }
+      { ch: 'ch03', pages: '65–66', text: 'Benzodiazepines are the book’s example of **PAMs**: acting as **full agonists at the PAM site**, they amplify GABA’s opening of the chloride channel. The **same site** gives NAM actions with an **inverse agonist**.', sec: 's3-pam' },
+      { ch: 'ch04', pages: '105–108', text: '**α2-subunit** GABA-A receptors on the pyramidal neuron’s **axon initial segment** receive interneuron GABA; they are compensatorily **increased** in schizophrenia.', sec: 's4-nmda-hypo' }
     ],
     updates: [{ year: '2023', title: 'Oral neurosteroid approved', text: '**Zuranolone**, an oral GABA-A positive allosteric modulator, was approved in August 2023 for postpartum depression.', source: 'FDA, August 2023' }]
   },
@@ -269,8 +376,10 @@ SP.targets = [
     block: ['**Pro-cognitive** and **antidepressant** (mirtazapine, vortioxetine)', '**Antiemetic**: reduces chemotherapy-induced emesis'],
     facts: [
       { ch: 'ch03', pages: '53', text: 'A **pentameric** ligand-gated ion channel (Table 3-1).', sec: 's3-structure' },
-      { ch: 'ch03', pages: '55', text: '**Antagonists**: mirtazapine and vortioxetine (pro-cognitive, antidepressant); antiemetics for chemotherapy-induced emesis (Table 3-2).', sec: 's3-drugs' }
-    ]
+      { ch: 'ch03', pages: '55', text: '**Antagonists**: mirtazapine and vortioxetine (pro-cognitive, antidepressant); antiemetics for chemotherapy-induced emesis (Table 3-2).', sec: 's3-drugs' },
+      { ch: 'ch04', pages: '127–130', text: 'In the **chemoreceptor trigger zone** (outside the blood–brain barrier) it mediates nausea and vomiting; in cortex it sits on **non-parvalbumin GABA interneurons**, so serotonin here **inhibits ACh and NE** release and glutamate output. Antagonists should enhance ACh and NE release.', sec: 's4-5ht-post' }
+    ],
+    stim: ['Nausea and vomiting (CTZ); in cortex **less ACh, NE and glutamate** release (Chapter 4)']
   },
   {
     id: 'glyr', name: 'Glycine receptor (strychnine-sensitive)', short: 'Glycine receptor', family: 'Ligand-gated ion channel', nt: 'glycine',
@@ -281,10 +390,12 @@ SP.targets = [
     id: 'nmda', name: 'NMDA glutamate receptor', short: 'NMDA', family: 'Ligand-gated ion channel', nt: 'glutamate',
     summary: 'A tetrameric ionotropic glutamate receptor whose calcium channel opens with glutamate/glycine cotransmission. Memantine (Mg²⁺/NAM site) and open-channel blockers (PCP, ketamine, dextromethorphan, dextromethadone) act here.',
     coupling: 'Tetrameric; subunits NMDAR1, NMDAR2A–D, NMDAR3A; calcium channel opened by **glutamate with glycine** as cotransmitter',
-    block: ['NAM/Mg²⁺ site antagonism (memantine): **pro-cognitive in Alzheimer disease**', 'Open-channel antagonism (PCP, ketamine, dextromethorphan, dextromethadone): **dissociative hallucinogen; anesthetic; pseudobulbar affect; agitation in Alzheimer disease; rapid-acting antidepressant; treatment-resistant depression**'],
+    block: ['NAM/Mg²⁺ site antagonism (memantine): **pro-cognitive in Alzheimer disease**', 'Open-channel antagonism (PCP, ketamine, dextromethorphan, dextromethadone): **dissociative hallucinogen; anesthetic; pseudobulbar affect; agitation in Alzheimer disease; rapid-acting antidepressant; treatment-resistant depression**', 'Blockade on prefrontal GABA interneurons (ketamine, PCP): **psychosis** with visual hallucinations and paranoid delusions via downstream dopamine excess (Chapter 4)'],
     facts: [
       { ch: 'ch03', pages: '55–56', text: 'A **tetrameric** ionotropic glutamate receptor (Table 3-3); subtype-selective glutamate drugs are under investigation but not in clinical use.', sec: 's3-structure' },
-      { ch: 'ch03', pages: '66', text: '**PCP and ketamine** are NAMs that bind **inside the calcium channel**, entering only **when the channel is open**, and prevent glutamate/glycine cotransmission from opening it.', sec: 's3-pam' }
+      { ch: 'ch03', pages: '66', text: '**PCP and ketamine** are NAMs that bind **inside the calcium channel**, entering only **when the channel is open**, and prevent glutamate/glycine cotransmission from opening it.', sec: 's3-pam' },
+      { ch: 'ch04', pages: '100–101', text: 'A **coincidence detector**: opens only with glutamate bound, **glycine or D-serine** bound, and depolarization removing the **Mg²⁺** plug (Mg²⁺ acts as a NAM). Calcium entry drives **long-term potentiation**.', sec: 's4-glu-receptors' },
+      { ch: 'ch04', pages: '105–110', text: '**Hypofunction** at prefrontal **GABA interneurons** (from neurodevelopment, ketamine/PCP or neurodegeneration) is a leading hypothesis of psychosis.', sec: 's4-nmda-hypo' }
     ],
     updates: [
       { year: '2022', title: 'Dextromethorphan–bupropion approved', text: 'Approved for major depressive disorder in August 2022 (Auvelity).', source: 'FDA, August 2022' },
@@ -294,13 +405,20 @@ SP.targets = [
   {
     id: 'ampa', name: 'AMPA glutamate receptor', short: 'AMPA', family: 'Ligand-gated ion channel', nt: 'glutamate',
     summary: 'A tetrameric ionotropic glutamate receptor (GluR1–4 subunits). No subtype-selective drugs are in clinical use.',
-    facts: [{ ch: 'ch03', pages: '55–56', text: 'AMPA (α-amino-3-hydroxy-5-methyl-4-isoxazole-propionic acid) receptors are tetrameric, with **GluR1–4** subunits (Table 3-3).', sec: 's3-structure' }]
+    facts: [
+      { ch: 'ch03', pages: '55–56', text: 'AMPA (α-amino-3-hydroxy-5-methyl-4-isoxazole-propionic acid) receptors are tetrameric, with **GluR1–4** subunits (Table 3-3).', sec: 's3-structure' },
+      { ch: 'ch04', pages: '100–101, 151–154', text: 'Mediates **fast excitation** by admitting sodium; its depolarization helps unplug NMDA channels. LTP increases synaptic AMPA receptors, “strengthening” synapses; weak synapses with few AMPA receptors may be eliminated.', sec: 's4-glu-receptors' }
+    ]
   },
   {
     id: 'kainate', name: 'Kainate glutamate receptor', short: 'Kainate', family: 'Ligand-gated ion channel', nt: 'glutamate',
     summary: 'A tetrameric ionotropic glutamate receptor (GluR5–7, KA1–2 subunits). No subtype-selective drugs are in clinical use.',
-    facts: [{ ch: 'ch03', pages: '55–56', text: 'Kainate receptors are tetrameric, with **GluR5–7** and **KA1–2** subunits (Table 3-3).', sec: 's3-structure' }]
+    facts: [
+      { ch: 'ch03', pages: '55–56', text: 'Kainate receptors are tetrameric, with **GluR5–7** and **KA1–2** subunits (Table 3-3).', sec: 's3-structure' },
+      { ch: 'ch04', pages: '100–101', text: 'With AMPA, mediates **fast excitatory** neurotransmission via sodium entry.', sec: 's4-glu-receptors' }
+    ]
   },
+  /* ---------------- voltage-sensitive ion channels ---------------- */
   {
     id: 'a2d', name: 'α2δ subunit of voltage-sensitive calcium channels', short: 'α2δ', family: 'Voltage-sensitive ion channel',
     summary: 'A protein flanking the α1 pore of VSCCs, with a transmembrane δ part and an extracellular α2 part. Target of pregabalin and gabapentin.',
@@ -308,8 +426,6 @@ SP.targets = [
     block: ['Reduced neurotransmitter release in states of excess: **pain, seizures**, possibly **anxiety and sleep**'],
     facts: [{ ch: 'ch03', pages: '71', text: 'Has a **δ** part in the membrane and an **α2** part outside the cell; it is the target of **pregabalin and gabapentin** and may regulate how the channel opens and closes.', sec: 's3-vscc' }]
   },
-
-  /* ---------------- voltage-sensitive ion channels ---------------- */
   {
     id: 'vssc', name: 'Voltage-sensitive sodium channel (VSSC)', short: 'VSSC', family: 'Voltage-sensitive ion channel',
     summary: 'Opens when membrane charge changes, letting sodium in so the action potential travels along the axon. Four six-segment subunits form the α pore; segment 4 is the voltmeter and the III–IV loop plugs the pore. Site of action of several anticonvulsants.',
@@ -334,13 +450,65 @@ SP.targets = [
       { ch: 'ch03', pages: '71–73', text: 'Subtypes (Table 3-4): **L** (Cav1.2/1.3), **N** (Cav2.2), **P/Q** (Cav2.1), **R** (Cav2.3), **T** (Cav3.1–3.3). **N and P/Q** are presynaptic and regulate transmitter release.', sec: 's3-vscc' }
     ]
   },
-
   /* ---------------- enzymes ---------------- */
   {
     id: 'mao', name: 'Monoamine oxidase (MAO)', short: 'MAO', family: 'Enzyme', ntLabel: 'Monoamines',
     summary: 'An enzyme that destroys monoamines. MAO inhibitors raise monoamine levels, acting as indirect agonists.',
     block: ['Indirect full agonist action by blocking enzymatic destruction of monoamines (details in Chapter 7)'],
-    facts: [{ ch: 'ch02', pages: '41, 48', text: 'One of only **three enzymes** targeted by psychotropic drugs; inhibiting it produces **indirect full agonist** action.', sec: 's2-enzymes' }]
+    facts: [
+      { ch: 'ch02', pages: '41, 48', text: 'One of only **three enzymes** targeted by psychotropic drugs; inhibiting it produces **indirect full agonist** action.', sec: 's2-enzymes' },
+      { ch: 'ch04', pages: '80, 114', text: '**MAO-A and MAO-B** destroy unstored dopamine; serotonergic **MAO-B** has low affinity for 5HT and degrades it only at high intracellular levels.', sec: 's4-5ht-synth' }
+    ]
+  },
+  {
+    id: 'toh', name: 'Tyrosine hydroxylase (TOH)', short: 'TOH', family: 'Enzyme', nt: 'dopamine',
+    summary: 'The rate-limiting enzyme of dopamine synthesis, converting tyrosine to DOPA.',
+    facts: [{ ch: 'ch04', pages: '79–80', text: 'Converts tyrosine to **DOPA**: the **rate-limiting** step in dopamine synthesis.', sec: 's4-da-synth' }]
+  },
+  {
+    id: 'ddc', name: 'DOPA decarboxylase / aromatic amino acid decarboxylase (DDC, AAADC)', short: 'DDC/AAADC', family: 'Enzyme', ntLabel: 'Dopamine, serotonin',
+    summary: 'Converts DOPA to dopamine and 5-hydroxytryptophan to serotonin.',
+    facts: [{ ch: 'ch04', pages: '79–80, 114', text: 'Called **DDC** in dopamine synthesis (DOPA → dopamine) and **AAADC** in serotonin synthesis (5HTP → 5HT).', sec: 's4-5ht-synth' }]
+  },
+  {
+    id: 'comt', name: 'Catechol-O-methyltransferase (COMT)', short: 'COMT', family: 'Enzyme', nt: 'dopamine',
+    summary: 'An extracellular enzyme that breaks down dopamine: secondary to DAT in striatum, the principal route in prefrontal cortex.',
+    facts: [{ ch: 'ch04', pages: '80–81', text: 'Secondary inactivation where DATs exist; the **principal** route of dopamine inactivation in **prefrontal cortex**, where DATs are sparse.', sec: 's4-da-synth' }]
+  },
+  {
+    id: 'tph', name: 'Tryptophan hydroxylase (TRY-OH)', short: 'TRY-OH', family: 'Enzyme', nt: 'serotonin',
+    summary: 'The first enzyme of serotonin synthesis, converting tryptophan to 5-hydroxytryptophan.',
+    facts: [{ ch: 'ch04', pages: '114', text: 'Converts **tryptophan** to **5HTP**, which AAADC converts to serotonin.', sec: 's4-5ht-synth' }]
+  },
+  {
+    id: 'gad', name: 'Glutamic acid decarboxylase (GAD67)', short: 'GAD67', family: 'Enzyme', nt: 'gaba',
+    summary: 'The enzyme that makes GABA; reduced in prefrontal GABA interneurons in schizophrenia.',
+    facts: [{ ch: 'ch04', pages: '105–108', text: 'Decreased **GAD67** activity in schizophrenia GABA interneurons, with compensatory increases in postsynaptic α2 GABA-A receptors.', sec: 's4-nmda-hypo' }]
+  },
+  {
+    id: 'gs', name: 'Glutamine synthetase', short: 'Gln synthetase', family: 'Enzyme', nt: 'glutamate',
+    summary: 'The glial enzyme that converts recaptured glutamate into glutamine.',
+    facts: [{ ch: 'ch04', pages: '96', text: 'Converts glutamate to **glutamine** in glia, perhaps keeping it in the neurotransmitter pool rather than the protein pool.', sec: 's4-glu-synth' }]
+  },
+  {
+    id: 'gls', name: 'Glutaminase', short: 'Glutaminase', family: 'Enzyme', nt: 'glutamate',
+    summary: 'A mitochondrial enzyme in glutamate neurons that converts glutamine back into glutamate.',
+    facts: [{ ch: 'ch04', pages: '97', text: 'Regenerates **glutamate** from glutamine in neuronal mitochondria before vGluT packages it.', sec: 's4-glu-synth' }]
+  },
+  {
+    id: 'shmt', name: 'Serine hydroxymethyl-transferase (SHMT)', short: 'SHMT', family: 'Enzyme', nt: 'glycine',
+    summary: 'A glial enzyme that interconverts L-serine and glycine, supplying NMDA cotransmitters.',
+    facts: [{ ch: 'ch04', pages: '98–99', text: 'Makes **glycine** from L-serine (and the reverse), feeding both glycine and D-serine production.', sec: 's4-cotransmitters' }]
+  },
+  {
+    id: 'srr', name: 'Serine racemase', short: 'Serine racemase', family: 'Enzyme', nt: 'dserine',
+    summary: 'The glial enzyme that converts L-serine into D-serine.',
+    facts: [{ ch: 'ch04', pages: '98–99', text: 'Interconverts L- and **D-serine**, producing the NMDA cotransmitter.', sec: 's4-cotransmitters' }]
+  },
+  {
+    id: 'dao', name: 'D-amino acid oxidase (DAO)', short: 'DAO', family: 'Enzyme', nt: 'dserine',
+    summary: 'Destroys D-serine by converting it to hydroxypyruvate; activated by DAOA, a schizophrenia susceptibility gene.',
+    facts: [{ ch: 'ch04', pages: '98–99, 152', text: 'Converts D-serine to inactive **hydroxypyruvate**; its activator **DAOA** is among the neurodevelopmental susceptibility genes.', sec: 's4-cotransmitters' }]
   },
   {
     id: 'ache', name: 'Acetylcholinesterase', short: 'AChE', family: 'Enzyme', nt: 'acetylcholine',
@@ -357,10 +525,34 @@ SP.targets = [
       { ch: 'ch02', pages: '48', text: 'Some neurotrophins, growth factors and other pathways act through GSK-3 to promote **cell death (proapoptotic)**. **Lithium** may inhibit it; **valproate** and **ECT** possibly too. Novel GSK-3 inhibitors are in development.', sec: 's2-enzymes' }
     ]
   },
-  { id: 'cyp1a2', name: 'Cytochrome P450 1A2', short: 'CYP1A2', family: 'Enzyme', summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.', facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism. In the name, “1” is the family, “A” the subtype and “2” the gene product.', sec: 's2-cyp' }] },
-  { id: 'cyp2b6', name: 'Cytochrome P450 2B6', short: 'CYP2B6', family: 'Enzyme', summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.', facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }] },
-  { id: 'cyp2d6', name: 'Cytochrome P450 2D6', short: 'CYP2D6', family: 'Enzyme', summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.', facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }] },
-  { id: 'cyp2c9', name: 'Cytochrome P450 2C9', short: 'CYP2C9', family: 'Enzyme', summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.', facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }] },
-  { id: 'cyp2c19', name: 'Cytochrome P450 2C19', short: 'CYP2C19', family: 'Enzyme', summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.', facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }] },
-  { id: 'cyp3a4', name: 'Cytochrome P450 3A4', short: 'CYP3A4', family: 'Enzyme', summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.', facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }] }
+  {
+    id: 'cyp1a2', name: 'Cytochrome P450 1A2', short: 'CYP1A2', family: 'Enzyme',
+    summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
+    facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism. In the name, “1” is the family, “A” the subtype and “2” the gene product.', sec: 's2-cyp' }]
+  },
+  {
+    id: 'cyp2b6', name: 'Cytochrome P450 2B6', short: 'CYP2B6', family: 'Enzyme',
+    summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
+    facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }]
+  },
+  {
+    id: 'cyp2d6', name: 'Cytochrome P450 2D6', short: 'CYP2D6', family: 'Enzyme',
+    summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
+    facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }]
+  },
+  {
+    id: 'cyp2c9', name: 'Cytochrome P450 2C9', short: 'CYP2C9', family: 'Enzyme',
+    summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
+    facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }]
+  },
+  {
+    id: 'cyp2c19', name: 'Cytochrome P450 2C19', short: 'CYP2C19', family: 'Enzyme',
+    summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
+    facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }]
+  },
+  {
+    id: 'cyp3a4', name: 'Cytochrome P450 3A4', short: 'CYP3A4', family: 'Enzyme',
+    summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
+    facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }]
+  }
 ];
