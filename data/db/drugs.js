@@ -31,7 +31,8 @@ SP.drugs = [
     ],
     facts: [
       { ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' },
-      { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' }
+      { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' },
+      { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1, α2 and α3** benzodiazepine-sensitive GABA-A receptors (phasic inhibition); reversed by **flumazenil**.', sec: 's6-gabaa' }
     ]
   },
   {
@@ -52,8 +53,20 @@ SP.drugs = [
     ],
     facts: [
       { ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' },
-      { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' }
+      { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' },
+      { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1–3** GABA-A receptors; α2/α3 actions are thought anxiolytic, α1 actions sedating.', sec: 's6-gabaa' }
     ]
+  },
+  {
+    id: 'flumazenil', name: 'Flumazenil', group: 'Benzodiazepine antagonist', cls: 'Benzodiazepine receptor antagonist',
+    nbn: 'GABA-A benzodiazepine-site antagonist',
+    short: 'Neutral antagonist that reverses benzodiazepines.',
+    mechanism: 'A **neutral antagonist** at the benzodiazepine (PAM) site of GABA-A receptors. Its ability to reverse benzodiazepines shows that benzodiazepines act as **agonists** at their allosteric site (Figure 6-23).',
+    nts: ['gaba'],
+    targets: [{ t: 'gabaa', action: 'antagonist', note: 'Benzodiazepine site; neutral antagonist' }],
+    uses: ['Reversal of benzodiazepine **anesthesia**', 'Benzodiazepine **overdose**'],
+    chapters: [{ ch: 'ch06', pages: '261–262' }],
+    facts: [{ ch: 'ch06', pages: '261–262', text: 'Reverses a full-agonist benzodiazepine acting at its site on the GABA-A receptor.', sec: 's6-gabaa' }]
   },
   {
     id: 'amitriptyline', name: 'Amitriptyline', brand: 'Elavil', group: 'Antidepressant', cls: 'Tricyclic antidepressant',
@@ -404,8 +417,14 @@ SP.drugs = [
     mechanism: 'A **neuroactive steroid** acting as a full agonist at **benzodiazepine-insensitive neurosteroid sites** on GABA-A receptors, which mediate **tonic** inhibition. Details in Chapter 7.',
     targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Neurosteroid site; tonic inhibition' }],
     uses: ['**Postpartum depression**', 'Rapid-acting antidepressant', 'Anesthetic'],
-    chapters: [{ ch: 'ch03', pages: '55' }],
-    facts: [{ ch: 'ch03', pages: '55', text: 'The neuroactive steroid listed in Table 3-2 for postpartum depression, rapid antidepressant and anesthetic actions.', sec: 's3-drugs' }],
+    chapters: [
+      { ch: 'ch03', pages: '55' },
+      { ch: 'ch06', pages: '263–264' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '55', text: 'The neuroactive steroid listed in Table 3-2 for postpartum depression, rapid antidepressant and anesthetic actions.', sec: 's3-drugs' },
+      { ch: 'ch06', pages: '263–264', text: 'A neuroactive steroid acting mainly at **extrasynaptic δ** GABA-A sites (tonic inhibition). Postpartum depression may follow the **fall** in neurosteroids after delivery; a **60-hour IV infusion** may reverse it.', sec: 's6-neurosteroids' }
+    ],
     updates: [{ year: '2023', title: 'An oral neurosteroid', text: '**Zuranolone**, an oral neuroactive steroid GABA-A PAM, was approved in August 2023 as the first oral treatment for postpartum depression.', source: 'FDA, August 4, 2023' }]
   },
   {

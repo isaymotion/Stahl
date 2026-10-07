@@ -27,7 +27,8 @@ SP.targets = [
       { ch: 'ch02', pages: '31', text: 'Carries **dopamine, epinephrine and amphetamine** as well as norepinephrine; NET has **high affinity for dopamine**.', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '34', text: '“Stimulants” for ADHD (**methylphenidate, amphetamine**) and **cocaine** act on **DAT and NET**.', sec: 's2-monoamine' },
       { ch: 'ch04', pages: '80–81', text: 'Takes up dopamine that diffuses from DAT-poor synapses (e.g., prefrontal cortex) as a **“false” substrate**.', sec: 's4-da-synth' },
-      { ch: 'ch05', pages: '227–229', text: '**Norquetiapine** inhibits NET, a key part of quetiapine’s antidepressant action; ziprasidone and zotepine weakly inhibit NET.', sec: 's5-pines' }
+      { ch: 'ch05', pages: '227–229', text: '**Norquetiapine** inhibits NET, a key part of quetiapine’s antidepressant action; ziprasidone and zotepine weakly inhibit NET.', sec: 's5-pines' },
+      { ch: 'ch06', pages: '253–254', text: 'The NE “vacuum cleaner” that removes NE from the synapse without destroying it.', sec: 's6-ne' }
     ]
   },
   {
@@ -50,7 +51,8 @@ SP.targets = [
     block: ['GAT1 blockade raises synaptic GABA: anticonvulsant', 'May help anxiety, sleep disorders and pain'],
     facts: [
       { ch: 'ch02', pages: '31, 34', text: 'GAT2 and GAT3 also carry **beta-alanine**; GAT4 (also called the **betaine transporter, BGT1**) carries **betaine**.', sec: 's2-other' },
-      { ch: 'ch02', pages: '34', text: '**GAT1** is selectively blocked by the anticonvulsant **tiagabine**, increasing synaptic GABA; no other GAT inhibitor is in clinical use.', sec: 's2-other' }
+      { ch: 'ch02', pages: '34', text: '**GAT1** is selectively blocked by the anticonvulsant **tiagabine**, increasing synaptic GABA; no other GAT inhibitor is in clinical use.', sec: 's2-other' },
+      { ch: 'ch06', pages: '258', text: 'Terminates GABA action by reuptake; inside the neuron GABA may then be destroyed by **GABA-T**.', sec: 's6-gaba' }
     ]
   },
   {
@@ -111,7 +113,10 @@ SP.targets = [
   {
     id: 'viaat', name: 'Vesicular inhibitory amino acid transporter (VIAAT)', short: 'VIAAT', family: 'Transporter', nt: 'gaba',
     summary: 'The SLC32 transporter that packages GABA into vesicles. No drug used in humans targets it.',
-    facts: [{ ch: 'ch02', pages: '35', text: 'The GABA vesicular transporter (**SLC32**); not known to be targeted by any drug used in humans.', sec: 's2-vesicular' }]
+    facts: [
+      { ch: 'ch02', pages: '35', text: 'The GABA vesicular transporter (**SLC32**); not known to be targeted by any drug used in humans.', sec: 's2-vesicular' },
+      { ch: 'ch06', pages: '256', text: 'Packages GABA made by GAD into synaptic vesicles.', sec: 's6-gaba' }
+    ]
   },
   {
     id: 'vglut', name: 'Vesicular glutamate transporters (vGluT1–3)', short: 'vGluT1–3', family: 'Transporter', nt: 'glutamate',
@@ -281,7 +286,8 @@ SP.targets = [
     stim: ['Agonism: improved **cognition and behavioral disturbance in ADHD**'],
     facts: [
       { ch: 'ch02', pages: '39', text: 'Antagonists have antidepressant actions; agonists improve cognition and behavior in ADHD (Table 2-4).', sec: 's2-receptor-tables' },
-      { ch: 'ch05', pages: '195, 208', text: 'α2 antagonism is a candidate **antidepressant** property of several drugs for psychosis (risperidone, quetiapine via norquetiapine, brexpiprazole), though α1 blockade can cancel it.', sec: 's5-mania-dep' }
+      { ch: 'ch05', pages: '195, 208', text: 'α2 antagonism is a candidate **antidepressant** property of several drugs for psychosis (risperidone, quetiapine via norquetiapine, brexpiprazole), though α1 blockade can cancel it.', sec: 's5-mania-dep' },
+      { ch: 'ch06', pages: '254–255', text: 'The only NE receptor that can be a **presynaptic autoreceptor**: on axon terminals (gatekeepers that halt release) and somatodendritic (shut off firing). Agonists step on the brake; antagonists **cut the brake cable**.', sec: 's6-ne' }
     ]
   },
   {
@@ -294,16 +300,29 @@ SP.targets = [
     ]
   },
   {
+    id: 'beta-ar', name: 'β-adrenergic receptors (β1, β2, β3)', short: 'β1–β3', family: 'G-protein-linked receptor', nt: 'norepinephrine',
+    summary: 'Postsynaptic norepinephrine receptors (β1, β2, β3). β-blockers are among the treatments for akathisia (Chapter 5).',
+    location: 'Postsynaptic only (never presynaptic autoreceptors)',
+    block: ['β-adrenergic blockers: treat **akathisia** (Chapter 5)'],
+    facts: [{ ch: 'ch06', pages: '254', text: 'Postsynaptic NE receptors that convert NE occupancy into signal transduction and gene expression changes.', sec: 's6-ne' }]
+  },
+  {
     id: 'gabab', name: 'GABA-B receptor', short: 'GABA-B', family: 'G-protein-linked receptor', nt: 'gaba',
     summary: 'The G-protein-linked GABA receptor; agonism treats cataplexy and sleepiness in narcolepsy, among other possible uses.',
     stim: ['**Cataplexy** and **sleepiness in narcolepsy**', 'Possibly enhanced slow-wave sleep', 'Pain reduction in chronic pain and fibromyalgia', 'Possible use in alcohol use disorder and withdrawal'],
-    facts: [{ ch: 'ch02', pages: '39', text: '**Agonist** actions listed in Table 2-4 (cataplexy, sleepiness in narcolepsy, slow-wave sleep, pain, alcohol).', sec: 's2-receptor-tables' }]
+    facts: [
+      { ch: 'ch02', pages: '39', text: '**Agonist** actions listed in Table 2-4 (cataplexy, sleepiness in narcolepsy, slow-wave sleep, pain, alcohol).', sec: 's2-receptor-tables' },
+      { ch: 'ch06', pages: '258', text: 'The G-protein-linked GABA receptor, possibly coupled to calcium or potassium channels.', sec: 's6-gaba' }
+    ]
   },
   {
     id: 'mt1mt2', name: 'Melatonin MT1 and MT2 receptors', short: 'MT1/MT2', family: 'G-protein-linked receptor', nt: 'melatonin',
     summary: 'Melatonin receptors; agonists improve insomnia and circadian rhythms.',
     stim: ['Improvement of **insomnia** and **circadian rhythms**'],
-    facts: [{ ch: 'ch02', pages: '39', text: '**Agonist** actions at both MT1 and MT2 improve insomnia and circadian rhythms (Table 2-4).', sec: 's2-receptor-tables' }]
+    facts: [
+      { ch: 'ch02', pages: '39', text: '**Agonist** actions at both MT1 and MT2 improve insomnia and circadian rhythms (Table 2-4).', sec: 's2-receptor-tables' },
+      { ch: 'ch06', pages: '274–275', text: 'Melatonin acting on the **SCN** resets circadian rhythms; early-evening melatonin may correct the phase delay of depression.', sec: 's6-circadian' }
+    ]
   },
   {
     id: 'h1', name: 'Histamine H1 receptor', short: 'H1', family: 'G-protein-linked receptor', nt: 'histamine',
@@ -378,6 +397,18 @@ SP.targets = [
     facts: [{ ch: 'ch02', pages: '40', text: '**Antagonist** actions at OX1 and OX2 are hypnotic for insomnia (Table 2-4); detailed in Chapter 10.', sec: 's2-receptor-tables' }]
   },
   {
+    id: 'crf', name: 'Corticotropin-releasing factor (CRF) receptors', short: 'CRF-R', family: 'G-protein-linked receptor', ntLabel: 'Neuropeptide (CRF)',
+    summary: 'Receptors for hypothalamic CRF, which starts the HPA stress response; antagonists are in testing for depression and stress-related illness.',
+    block: ['Antagonists in testing to halt or reverse **HPA-axis hyperactivity** in depression'],
+    facts: [{ ch: 'ch06', pages: '270–271', text: 'Hypothalamic CRF → pituitary ACTH → adrenal glucocorticoid; in depression the axis is overactive and insensitive to feedback.', sec: 's6-hpa' }]
+  },
+  {
+    id: 'v1b', name: 'Vasopressin 1B receptor', short: 'V1B', family: 'G-protein-linked receptor', ntLabel: 'Neuropeptide (vasopressin)',
+    summary: 'A stress-axis receptor targeted by novel treatments in testing for depression.',
+    block: ['Antagonists in testing for **HPA-axis** abnormalities in depression'],
+    facts: [{ ch: 'ch06', pages: '270–271', text: 'Listed with CRF and glucocorticoid receptors as novel targets for stress-related illness.', sec: 's6-hpa' }]
+  },
+  {
     id: 'taar1', name: 'Trace amine-associated receptor 1 (TAAR1)', short: 'TAAR1', family: 'G-protein-linked receptor', ntLabel: 'Trace amines',
     summary: 'The main human receptor for trace amines, expressed in monoamine brainstem centers and projection areas. Agonists are a proposed antipsychotic mechanism that tames dopamine without blocking D2.',
     location: 'Dorsal raphe, VTA and monoamine projection areas',
@@ -402,14 +433,21 @@ SP.targets = [
     summary: 'A pentameric ligand-gated chloride channel. Benzodiazepines and Z drugs are PAMs (full agonists at their allosteric sites) mediating phasic inhibition; neuroactive steroids act at benzodiazepine-insensitive sites mediating tonic inhibition.',
     coupling: 'Opens a **chloride** channel; five subunits, each with four transmembrane regions (e.g., α1, γ, δ subunits)',
     stim: ['Benzodiazepine-site PAMs: **reduce anxiety, induce sleep, block convulsions, block short-term memory, relax muscles**', 'Nonbenzodiazepine PAM sites (Z drugs): **improve insomnia**', 'Neurosteroid sites (tonic inhibition): **postpartum depression**, rapid-acting antidepressant, anesthetic'],
-    block: ['Benzodiazepine **inverse agonists** (NAMs; experimental only): **panic attacks, seizures**, some improvement in memory'],
+    block: ['Benzodiazepine **inverse agonists** (NAMs; experimental only): **panic attacks, seizures**, some improvement in memory', 'Neutral antagonism at the benzodiazepine site (**flumazenil**): reverses benzodiazepine sedation and overdose'],
     facts: [
       { ch: 'ch03', pages: '53', text: 'A **pentameric** ligand-gated channel (Table 3-1); subtypes depend on which subunits (e.g., α1, γ, δ) are assembled.', sec: 's3-structure' },
       { ch: 'ch03', pages: '55', text: 'Table 3-2: **benzodiazepine** sites (anxiolytic) and **nonbenzodiazepine PAM** sites (Z drugs, insomnia) mediate **phasic** inhibition; **neurosteroid** sites (allopregnanolone) mediate **tonic** inhibition.', sec: 's3-drugs' },
       { ch: 'ch03', pages: '65–66', text: 'Benzodiazepines are the book’s example of **PAMs**: acting as **full agonists at the PAM site**, they amplify GABA’s opening of the chloride channel. The **same site** gives NAM actions with an **inverse agonist**.', sec: 's3-pam' },
-      { ch: 'ch04', pages: '105–108', text: '**α2-subunit** GABA-A receptors on the pyramidal neuron’s **axon initial segment** receive interneuron GABA; they are compensatorily **increased** in schizophrenia.', sec: 's4-nmda-hypo' }
+      { ch: 'ch04', pages: '105–108', text: '**α2-subunit** GABA-A receptors on the pyramidal neuron’s **axon initial segment** receive interneuron GABA; they are compensatorily **increased** in schizophrenia.', sec: 's4-nmda-hypo' },
+      { ch: 'ch06', pages: '259–262', text: 'Benzodiazepine-sensitive receptors need **two β, γ2 or γ3, and two α1–3**; one benzodiazepine binds between γ and α, two GABA molecules between α and β. **α1** subunits relate to **sleep**, **α2/α3** to **anxiety**; current benzodiazepines are nonselective.', sec: 's6-gabaa' },
+      { ch: 'ch06', pages: '262–264', text: 'Benzodiazepine-insensitive receptors (α4, α6, γ1 or δ) are **extrasynaptic** and mediate **tonic** inhibition; **neuroactive steroids** bind between α and δ. Abnormal γ2, α2 or δ expression is linked to **epilepsy**.', sec: 's6-neurosteroids' }
     ],
     updates: [{ year: '2023', title: 'Oral neurosteroid approved', text: '**Zuranolone**, an oral GABA-A positive allosteric modulator, was approved in August 2023 for postpartum depression.', source: 'FDA, August 2023' }]
+  },
+  {
+    id: 'gabac', name: 'GABA-C receptor', short: 'GABA-C', family: 'Ligand-gated ion channel', nt: 'gaba',
+    summary: 'A ligand-gated chloride-channel GABA receptor, one of the three major GABA receptor types.',
+    facts: [{ ch: 'ch06', pages: '258–259', text: 'Like GABA-A, a **ligand-gated ion channel** forming part of an inhibitory chloride channel complex.', sec: 's6-gaba' }]
   },
   {
     id: 'nicotinic', name: 'Nicotinic acetylcholine receptors (α4β2, α7)', short: 'Nicotinic', family: 'Ligand-gated ion channel', nt: 'acetylcholine',
@@ -510,23 +548,38 @@ SP.targets = [
     block: ['Indirect full agonist action by blocking enzymatic destruction of monoamines (details in Chapter 7)'],
     facts: [
       { ch: 'ch02', pages: '41, 48', text: 'One of only **three enzymes** targeted by psychotropic drugs; inhibiting it produces **indirect full agonist** action.', sec: 's2-enzymes' },
-      { ch: 'ch04', pages: '80, 114', text: '**MAO-A and MAO-B** destroy unstored dopamine; serotonergic **MAO-B** has low affinity for 5HT and degrades it only at high intracellular levels.', sec: 's4-5ht-synth' }
+      { ch: 'ch04', pages: '80, 114', text: '**MAO-A and MAO-B** destroy unstored dopamine; serotonergic **MAO-B** has low affinity for 5HT and degrades it only at high intracellular levels.', sec: 's4-5ht-synth' },
+      { ch: 'ch06', pages: '253', text: 'MAO-A or MAO-B in mitochondria destroys norepinephrine in the presynaptic neuron and elsewhere.', sec: 's6-ne' }
     ]
   },
   {
     id: 'toh', name: 'Tyrosine hydroxylase (TOH)', short: 'TOH', family: 'Enzyme', nt: 'dopamine',
     summary: 'The rate-limiting enzyme of dopamine synthesis, converting tyrosine to DOPA.',
-    facts: [{ ch: 'ch04', pages: '79–80', text: 'Converts tyrosine to **DOPA**: the **rate-limiting** step in dopamine synthesis.', sec: 's4-da-synth' }]
+    facts: [
+      { ch: 'ch04', pages: '79–80', text: 'Converts tyrosine to **DOPA**: the **rate-limiting** step in dopamine synthesis.', sec: 's4-da-synth' },
+      { ch: 'ch06', pages: '253', text: 'Also the rate-limiting and most important regulatory enzyme of **norepinephrine** synthesis.', sec: 's6-ne' }
+    ]
   },
   {
     id: 'ddc', name: 'DOPA decarboxylase / aromatic amino acid decarboxylase (DDC, AAADC)', short: 'DDC/AAADC', family: 'Enzyme', ntLabel: 'Dopamine, serotonin',
     summary: 'Converts DOPA to dopamine and 5-hydroxytryptophan to serotonin.',
-    facts: [{ ch: 'ch04', pages: '79–80, 114', text: 'Called **DDC** in dopamine synthesis (DOPA → dopamine) and **AAADC** in serotonin synthesis (5HTP → 5HT).', sec: 's4-5ht-synth' }]
+    facts: [
+      { ch: 'ch04', pages: '79–80, 114', text: 'Called **DDC** in dopamine synthesis (DOPA → dopamine) and **AAADC** in serotonin synthesis (5HTP → 5HT).', sec: 's4-5ht-synth' },
+      { ch: 'ch06', pages: '253', text: 'Converts DOPA to dopamine, the precursor of norepinephrine in noradrenergic neurons.', sec: 's6-ne' }
+    ]
+  },
+  {
+    id: 'dbh', name: 'Dopamine β-hydroxylase (DBH)', short: 'DBH', family: 'Enzyme', nt: 'norepinephrine',
+    summary: 'The third and final enzyme of norepinephrine synthesis, converting dopamine into norepinephrine.',
+    facts: [{ ch: 'ch06', pages: '253', text: 'In noradrenergic neurons dopamine is only a precursor; DBH converts it to NE, which is then stored in vesicles.', sec: 's6-ne' }]
   },
   {
     id: 'comt', name: 'Catechol-O-methyltransferase (COMT)', short: 'COMT', family: 'Enzyme', nt: 'dopamine',
     summary: 'An extracellular enzyme that breaks down dopamine: secondary to DAT in striatum, the principal route in prefrontal cortex.',
-    facts: [{ ch: 'ch04', pages: '80–81', text: 'Secondary inactivation where DATs exist; the **principal** route of dopamine inactivation in **prefrontal cortex**, where DATs are sparse.', sec: 's4-da-synth' }]
+    facts: [
+      { ch: 'ch04', pages: '80–81', text: 'Secondary inactivation where DATs exist; the **principal** route of dopamine inactivation in **prefrontal cortex**, where DATs are sparse.', sec: 's4-da-synth' },
+      { ch: 'ch06', pages: '253', text: 'Also destroys **norepinephrine**, largely outside the presynaptic terminal.', sec: 's6-ne' }
+    ]
   },
   {
     id: 'tph', name: 'Tryptophan hydroxylase (TRY-OH)', short: 'TRY-OH', family: 'Enzyme', nt: 'serotonin',
@@ -536,7 +589,15 @@ SP.targets = [
   {
     id: 'gad', name: 'Glutamic acid decarboxylase (GAD67)', short: 'GAD67', family: 'Enzyme', nt: 'gaba',
     summary: 'The enzyme that makes GABA; reduced in prefrontal GABA interneurons in schizophrenia.',
-    facts: [{ ch: 'ch04', pages: '105–108', text: 'Decreased **GAD67** activity in schizophrenia GABA interneurons, with compensatory increases in postsynaptic α2 GABA-A receptors.', sec: 's4-nmda-hypo' }]
+    facts: [
+      { ch: 'ch04', pages: '105–108', text: 'Decreased **GAD67** activity in schizophrenia GABA interneurons, with compensatory increases in postsynaptic α2 GABA-A receptors.', sec: 's4-nmda-hypo' },
+      { ch: 'ch06', pages: '256', text: 'Makes GABA from glutamate in GABA neurons.', sec: 's6-gaba' }
+    ]
+  },
+  {
+    id: 'gabat', name: 'GABA transaminase (GABA-T)', short: 'GABA-T', family: 'Enzyme', nt: 'gaba',
+    summary: 'The enzyme that converts GABA into an inactive substance, terminating its action after reuptake.',
+    facts: [{ ch: 'ch06', pages: '258', text: 'One of two ways GABA action ends, with reuptake by GAT.', sec: 's6-gaba' }]
   },
   {
     id: 'gs', name: 'Glutamine synthetase', short: 'Gln synthetase', family: 'Enzyme', nt: 'glutamate',
@@ -620,6 +681,20 @@ SP.targets = [
     id: 'cyp3a4', name: 'Cytochrome P450 3A4', short: 'CYP3A4', family: 'Enzyme',
     summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
     facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }]
+  },
+  /* ---------------- intracellular receptors ---------------- */
+  {
+    id: 'gr', name: 'Glucocorticoid receptor', short: 'GR', family: 'Intracellular receptor', ntLabel: 'Glucocorticoids (cortisol)',
+    summary: 'The receptor for adrenal glucocorticoids that mediates HPA feedback; antagonists are in testing for depression.',
+    block: ['Antagonists in testing to reverse **HPA-axis** abnormalities in depression'],
+    facts: [{ ch: 'ch06', pages: '270–271', text: 'Depression shows elevated glucocorticoids and **insensitivity** to feedback inhibition; high glucocorticoids may be toxic to hippocampal neurons.', sec: 's6-hpa' }]
+  },
+  /* ---------------- neurotrophin receptors ---------------- */
+  {
+    id: 'trkb', name: 'BDNF and its receptor TrkB', short: 'BDNF/TrkB', family: 'Neurotrophin receptor', nt: 'neurotrophins',
+    summary: 'Brain-derived neurotrophic factor supports neuronal growth, survival and synapses; its loss is central to the neuroprogression hypothesis of depression.',
+    stim: ['Increased BDNF signaling (downstream of effective antidepressants via CREB): synapse maintenance and possibly **restoration of lost synapses**'],
+    facts: [{ ch: 'ch06', pages: '266–270', text: 'Monoamine signaling releases BDNF; stress, inflammation and adversity may silence BDNF genes, leading to loss of spines, synapses and eventually neurons.', sec: 's6-neuroplasticity' }]
   },
   /* ---------------- other targets ---------------- */
   {

@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 6,
+    date: "2026-10-08",
+    title: "Chapter 6: Mood Disorders, Norepinephrine and GABA",
+    summary: "Chapter 6 adds the mood spectrum, the norepinephrine and GABA networks, the neurobiology of depression, and symptom-to-circuit maps for depression and mania.",
+    items: [
+      { type: "chapter", ch: "ch06", text: "Chapter 6: study guide (17 sections), high-yield summary, mechanism, drug and clinical cards, and 44 board-style questions.", href: "#/c/ch06/guide", link: "Open Chapter 6" },
+      { type: "feature", text: "Symptoms & circuits: 14 maps for the symptoms of major depression and mania, positive and negative affect, and circadian phase delay.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Library: norepinephrine and GABA now have synthesis, termination and pathway entries; new targets (GABA-C, β-adrenergic receptors, DBH, GABA-T, CRF, vasopressin 1B, glucocorticoid receptor, BDNF/TrkB) and flumazenil.", href: "#/nt/norepinephrine", link: "Norepinephrine" },
+      { type: "update", text: "Post-publication update box: oral zuranolone for postpartum depression (2023).", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 5,
     date: "2026-10-07",
     title: "Chapter 5: So-Called “Antipsychotics”",
