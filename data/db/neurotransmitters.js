@@ -14,7 +14,8 @@ SP.nts = [
       { ch: 'ch01', pages: '6', text: 'Amitriptyline (Elavil) and fluoxetine (Prozac) were in clinical use **before the serotonin transporter site was molecularly clarified**.' },
       { ch: 'ch01', pages: '8–9', text: 'As a monoamine, its neurons carry **somatodendritic autoreceptors** that inhibit release from the axon terminal and receive neurotransmitter by dendritic release (volume neurotransmission); this regulation is linked to how many antidepressants work.' },
       { ch: 'ch02', pages: '31–33', text: 'Recaptured by **SERT** (which also carries MDMA) and stored by **VMAT2**. SSRIs bind an **allosteric** site on SERT and block reuptake.', sec: 's2-monoamine' },
-      { ch: 'ch02', pages: '39–40', text: 'Receptor subtypes targeted by drugs: **5HT1A** (partial agonist), **5HT1B/1D**, **5HT2A** (antagonist/inverse agonist or agonist), **5HT2C**, **5HT6** and **5HT7** (Tables 2-4 and 2-5).', sec: 's2-receptor-tables' }
+      { ch: 'ch02', pages: '39–40', text: 'Receptor subtypes targeted by drugs: **5HT1A** (partial agonist), **5HT1B/1D**, **5HT2A** (antagonist/inverse agonist or agonist), **5HT2C**, **5HT6** and **5HT7** (Tables 2-4 and 2-5).', sec: 's2-receptor-tables' },
+      { ch: 'ch03', pages: '53, 55', text: '**5HT3** is a pentameric ligand-gated channel; antagonists include mirtazapine and vortioxetine (pro-cognitive, antidepressant) and antiemetics.', sec: 's3-drugs' }
     ]
   },
   {
@@ -52,7 +53,8 @@ SP.nts = [
     facts: [
       { ch: 'ch01', pages: '5', text: 'One of the **six key neurotransmitter systems** targeted by psychotropic drugs.' },
       { ch: 'ch02', pages: '34–35', text: 'Its precursor **choline** has a presynaptic transporter, and acetylcholine is packaged by **VAChT** (SLC18); no drugs target either.', sec: 's2-other' },
-      { ch: 'ch02', pages: '40', text: 'Muscarinic receptors **M1, M4, M2/M3** are drug targets (Table 2-4); **acetylcholinesterase inhibition** boosts acetylcholine at all its receptors (Table 2-5).', sec: 's2-receptor-tables' }
+      { ch: 'ch02', pages: '40', text: 'Muscarinic receptors **M1, M4, M2/M3** are drug targets (Table 2-4); **acetylcholinesterase inhibition** boosts acetylcholine at all its receptors (Table 2-5).', sec: 's2-receptor-tables' },
+      { ch: 'ch03', pages: '53, 63–64', text: '**Nicotinic** receptors (α7, α4β2) are pentameric ligand-gated channels. Acetylcholine is hydrolyzed so quickly by abundant acetylcholinesterase that it rarely desensitizes them; nicotine is not, and does.', sec: 's3-states' }
     ]
   },
   {
@@ -61,7 +63,9 @@ SP.nts = [
     termination: ['Uptake by **excitatory amino acid transporters (EAAT1–5)**, SLC1 family, especially **into glia**', 'In glia converted to **glutamine**, which returns to the neuron and is converted back to glutamate', 'Packaged into vesicles by **vGluT1–3** (SLC17)'],
     facts: [
       { ch: 'ch01', pages: '5', text: 'One of the **six key neurotransmitter systems** targeted by psychotropic drugs.' },
-      { ch: 'ch02', pages: '34–35', text: 'Glutamate transporters (EAAT1–5) are a unique **SLC1** family: no chloride cotransport, almost always potassium countertransport, perhaps trimers. **No drugs** target them, and since reducing glutamate is often the goal their future as targets is unclear.', sec: 's2-other' }
+      { ch: 'ch02', pages: '34–35', text: 'Glutamate transporters (EAAT1–5) are a unique **SLC1** family: no chloride cotransport, almost always potassium countertransport, perhaps trimers. **No drugs** target them, and since reducing glutamate is often the goal their future as targets is unclear.', sec: 's2-other' },
+      { ch: 'ch03', pages: '55–56', text: 'Its ionotropic receptors **AMPA, kainate and NMDA** are **tetrameric** (three transmembrane regions plus a re-entrant loop per subunit). NMDA channels open with **glutamate/glycine cotransmission**.', sec: 's3-structure' },
+      { ch: 'ch03', pages: '76', text: 'At the postsynaptic neuron, ligand-gated channels translate the glutamate signal into a nerve impulse and into **long-term potentiation**.', sec: 's3-together' }
     ]
   },
   {
@@ -73,14 +77,17 @@ SP.nts = [
       { ch: 'ch01', pages: '5', text: 'One of the **six key neurotransmitter systems** targeted by psychotropic drugs.' },
       { ch: 'ch01', pages: '6', text: 'Valium (diazepam) and Xanax (alprazolam) were prescribed **before benzodiazepine receptors were discovered**; the brain may even make “its own Xanax.”' },
       { ch: 'ch02', pages: '34', text: 'Called the **ubiquitous inhibitory neurotransmitter**. GAT1 is selectively blocked by **tiagabine**, increasing synaptic GABA.', sec: 's2-other' },
-      { ch: 'ch02', pages: '39', text: '**GABA-B** agonism: cataplexy, sleepiness in narcolepsy, possibly slow-wave sleep, chronic pain and alcohol use disorder (Table 2-4).', sec: 's2-receptor-tables' }
+      { ch: 'ch02', pages: '39', text: '**GABA-B** agonism: cataplexy, sleepiness in narcolepsy, possibly slow-wave sleep, chronic pain and alcohol use disorder (Table 2-4).', sec: 's2-receptor-tables' },
+      { ch: 'ch03', pages: '53, 55, 65', text: '**GABA-A** receptors are pentameric **chloride** channels. Benzodiazepines and Z drugs are PAMs at sites mediating **phasic** inhibition; neurosteroids act at benzodiazepine-insensitive sites mediating **tonic** inhibition.', sec: 's3-drugs' }
     ]
   },
   {
     id: 'glycine', name: 'Glycine', abbr: 'Gly', family: 'Amino acid', key6: false,
     summary: 'An amino acid neurotransmitter recaptured by glycine transporters GlyT1 and GlyT2; no clinically used drug blocks them.',
     termination: ['Reuptake by **GlyT1** (mostly glial) and **GlyT2** (neuronal), SLC6 family'],
-    facts: [{ ch: 'ch02', pages: '31, 34', text: 'Glycine transporters are SLC6 members with structure similar to the monoamine transporters; **no drugs** in clinical practice block them, though agents were in trials for schizophrenia.', sec: 's2-other' }],
+    facts: [{ ch: 'ch02', pages: '31, 34', text: 'Glycine transporters are SLC6 members with structure similar to the monoamine transporters; **no drugs** in clinical practice block them, though agents were in trials for schizophrenia.', sec: 's2-other' },
+      { ch: 'ch03', pages: '53, 66', text: 'Acts at pentameric **strychnine-sensitive glycine receptors** and as the **cotransmitter with glutamate** at NMDA receptors.', sec: 's3-pam' }
+    ],
     updates: [{ year: '2025', title: 'GlyT1 inhibitor fails phase III', text: 'Iclepertin, a GlyT1 inhibitor, did not meet its primary endpoints for cognitive impairment associated with schizophrenia (CONNEX program, January 2025).', source: 'Boehringer Ingelheim, January 2025' }]
   },
   {

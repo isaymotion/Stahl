@@ -1309,7 +1309,7 @@
     Object.keys(aliases).forEach(function (a) { if (map[aliases[a]]) forms.push(a.toLowerCase()); });
     forms.sort(function (a, b) { return b.length - a.length; });
     var alts = forms.map(function (f) { return escRe(f).replace(/\s+/g, '\\s+') + '(?:s|es)?'; }).join('|');
-    GL = { list: list, map: map, aliases: aliases, re: alts ? new RegExp('(^|[^\\p{L}\\p{N}])(' + alts + ')(?![\\p{L}\\p{N}])', 'giu') : null };
+    GL = { list: list, map: map, aliases: aliases, re: alts ? new RegExp('(^|[^\\p{L}\\p{N}\\-])(' + alts + ')(?![\\p{L}\\p{N}\\-])', 'giu') : null };
   }
   function glossLookup(raw) {
     var s = raw.toLowerCase().replace(/\s+/g, ' ');

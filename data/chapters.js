@@ -26,7 +26,13 @@ SP.manifest = [
     summary: 'The five molecular targets of psychotropic drugs; SLC transporter families, SERT/NET/DAT and how SSRIs and stimulants block them; vesicular transporters and VMAT2 inhibitors; G-protein-linked receptors and the agonist spectrum; enzyme inhibitors, GSK-3 and lithium; and CYP450 metabolism and pharmacogenomics.',
     files: SP.CHAPTER_FILES
   },
-  { id: 'ch03', number: 3, ready: false, pages: '51–76', title: 'Ion Channels as Targets of Psychopharmacological Drug Action', short: 'Ion channels', summary: 'Ligand-gated and voltage-sensitive ion channels as targets, from GABA-A and NMDA receptors to sodium and calcium channels.' },
+  {
+    id: 'ch03', number: 3, ready: true, pages: '51–76',
+    title: 'Ion Channels as Targets of Psychopharmacological Drug Action',
+    short: 'Ion channels',
+    summary: 'Ligand-gated (ionotropic) channels: pentameric GABA-A, nicotinic, 5HT3 and glycine receptors and tetrameric glutamate receptors; the drugs of Table 3-2; the agonist spectrum, five channel states and nicotine; PAMs and NAMs; and voltage-sensitive sodium and calcium channels, α2δ, snares and excitation–secretion coupling.',
+    files: SP.CHAPTER_FILES
+  },
   { id: 'ch04', number: 4, ready: false, pages: '77–158', title: 'Psychosis, Schizophrenia, and the Neurotransmitter Networks Dopamine, Serotonin, and Glutamate', short: 'Psychosis and schizophrenia', summary: 'The dopamine, serotonin and glutamate theories of psychosis, the key pathways and circuits, and psychosis across disorders.' },
   { id: 'ch05', number: 5, ready: false, pages: '159–243', title: 'Targeting Dopamine and Serotonin Receptors for Psychosis, Mood, and Beyond: So-Called “Antipsychotics”', short: 'So-called “antipsychotics”', summary: 'D2 blockade, serotonin receptor actions, binding profiles of individual agents, and side effects explained by receptor pharmacology.' },
   { id: 'ch06', number: 6, ready: false, pages: '244–282', title: 'Mood Disorders and the Neurotransmitter Networks Norepinephrine and γ-Aminobutyric Acid (GABA)', short: 'Mood disorders, NE and GABA', summary: 'The mood spectrum, norepinephrine and GABA networks, and the neurobiology of depression and mania.' },

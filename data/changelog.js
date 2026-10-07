@@ -4,6 +4,17 @@
  */
 SP.changelog = [
   {
+    id: 3,
+    date: "2026-10-07",
+    title: "Chapter 3: Ion Channels",
+    summary: "Chapter 3 adds ligand-gated and voltage-sensitive ion channels, with the benzodiazepines, Z drugs, NMDA blockers and anticonvulsants that act on them.",
+    items: [
+      { type: "chapter", ch: "ch03", text: "Chapter 3: study guide, high-yield summary, mechanism, drug and clinical cards, and board-style questions.", href: "#/c/ch03/guide", link: "Open Chapter 3" },
+      { type: "update", text: "Library: 16 new drugs (varenicline, the Z drugs, allopregnanolone, memantine, ketamine, dextromethorphan, pregabalin, gabapentin and more), new GABA-A, nicotinic, 5HT3, glutamate and \u03b12\u03b4 targets, and fuller sodium and calcium channel entries. Benzodiazepine entries now explain their PAM mechanism.", href: "#/targets/gabaa", link: "GABA-A receptor" },
+      { type: "update", text: "Post-publication update boxes: zuranolone for postpartum depression (2023), dextromethorphan\u2013bupropion for depression (2022), esketamine monotherapy (2025) and esmethadone development halted (2024).", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 2,
     date: "2026-10-07",
     title: "Chapter 2: Transporters, Receptors, and Enzymes",
