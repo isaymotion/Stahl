@@ -69,30 +69,658 @@ SP.drugs = [
     facts: [{ ch: 'ch06', pages: '261–262', text: 'Reverses a full-agonist benzodiazepine acting at its site on the GABA-A receptor.', sec: 's6-gabaa' }]
   },
   {
-    id: 'amitriptyline', name: 'Amitriptyline', brand: 'Elavil', group: 'Antidepressant', cls: 'Tricyclic antidepressant',
-    short: 'Acts at the serotonin transporter, among other targets.',
-    mechanism: 'Acts at the **serotonin transporter** site; its full multi-receptor profile is covered in the antidepressant chapter.',
-    targets: [{ t: 'sert', action: 'inhibitor', note: 'Strength and other targets added with Chapter 7' }],
-    chapters: [{ ch: 'ch01', pages: '6' }],
-    facts: [{ ch: 'ch01', pages: '6', text: 'Entered clinical practice **before molecular clarification of the serotonin transporter site**.', sec: 's1-nts' }]
+    id: 'amitriptyline', name: 'Amitriptyline', brand: 'Elavil', aka: ['Endep', 'Tryptizol', 'Laroxyl'], group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    short: 'A tricyclic blocking NET and SERT plus H1, α1, muscarinic receptors and sodium channels.',
+    mechanism: 'Like most TCAs it blocks both **NET** and **SERT** to some extent, plus the four unwanted TCA actions: **H1, muscarinic, α1** and **voltage-sensitive sodium channel** blockade.',
+    targets: [
+      { t: 'net', action: 'inhibitor' },
+      { t: 'sert', action: 'inhibitor', note: 'Most TCAs block both to some extent' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ],
+    chapters: [
+      { ch: 'ch01', pages: '6' },
+      { ch: 'ch07', pages: '333–336' }
+    ],
+    facts: [
+      { ch: 'ch01', pages: '6', text: 'Entered clinical practice **before molecular clarification of the serotonin transporter site**.', sec: 's1-nts' },
+      { ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (Elavil; Endep; Tryptizol; Laroxyl).', sec: 's7-tca' }
+    ],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ]
   },
   {
-    id: 'fluoxetine', name: 'Fluoxetine', brand: 'Prozac', group: 'Antidepressant', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
+    id: 'clomipramine', name: 'Clomipramine', brand: 'Anafranil', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'serotonin', 'histamine', 'acetylcholine'],
+    uses: ['**Obsessive–compulsive disorder**', 'Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Anafranil.', sec: 's7-tca' }],
+    short: 'TCA with the strongest SERT inhibition; treats OCD.',
+    mechanism: 'A TCA with **equal or greater potency at SERT** than NET, plus the shared H1, muscarinic, α1 and sodium channel blockade.',
+    targets: [
+      { t: 'sert', action: 'inhibitor', note: 'Equal or greater than NET' },
+      { t: 'net', action: 'inhibitor' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'imipramine', name: 'Imipramine', brand: 'Tofranil', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'serotonin', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Tofranil.', sec: 's7-tca' }],
+    short: 'Classic TCA blocking NET and SERT.',
+    mechanism: 'A classic TCA blocking **NET** and, to some extent, **SERT**, with the shared H1, muscarinic, α1 and sodium channel blockade.',
+    targets: [
+      { t: 'net', action: 'inhibitor' },
+      { t: 'sert', action: 'inhibitor' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'desipramine', name: 'Desipramine', brand: 'Norpramin; Pertofran', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Norpramin; Pertofran.', sec: 's7-tca' }],
+    short: 'Relatively NET-selective TCA.',
+    mechanism: 'A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.',
+    targets: [
+      { t: 'net', action: 'inhibitor', note: 'Relatively selective' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'nortriptyline', name: 'Nortriptyline', brand: 'Pamelor; Aventyl', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Pamelor; Aventyl.', sec: 's7-tca' }],
+    short: 'Relatively NET-selective TCA.',
+    mechanism: 'A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.',
+    targets: [
+      { t: 'net', action: 'inhibitor', note: 'Relatively selective' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'protriptyline', name: 'Protriptyline', brand: 'Vivactil', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Vivactil.', sec: 's7-tca' }],
+    short: 'Relatively NET-selective TCA.',
+    mechanism: 'A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.',
+    targets: [
+      { t: 'net', action: 'inhibitor', note: 'Relatively selective' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'maprotiline', name: 'Maprotiline', brand: 'Ludiomil', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Ludiomil.', sec: 's7-tca' }],
+    short: 'Relatively NET-selective TCA.',
+    mechanism: 'A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.',
+    targets: [
+      { t: 'net', action: 'inhibitor', note: 'Relatively selective' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'amoxapine', name: 'Amoxapine', brand: 'Asendin', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'serotonin', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Asendin.', sec: 's7-tca' }],
+    short: 'Tricyclic listed in Table 7-2.',
+    mechanism: 'Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.',
+    targets: [
+      { t: 'net', action: 'inhibitor', note: 'Class property' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'doxepin', name: 'Doxepin', brand: 'Sinequan; Adapin', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'serotonin', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Sinequan; Adapin.', sec: 's7-tca' }],
+    short: 'Tricyclic listed in Table 7-2.',
+    mechanism: 'Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.',
+    targets: [
+      { t: 'net', action: 'inhibitor', note: 'Class property' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'trimipramine', name: 'Trimipramine', brand: 'Surmontil', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'serotonin', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Surmontil.', sec: 's7-tca' }],
+    short: 'Tricyclic listed in Table 7-2.',
+    mechanism: 'Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.',
+    targets: [
+      { t: 'net', action: 'inhibitor', note: 'Class property' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'dothiepin', name: 'Dothiepin', brand: 'Prothiaden', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'serotonin', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Prothiaden.', sec: 's7-tca' }],
+    short: 'Tricyclic listed in Table 7-2.',
+    mechanism: 'Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.',
+    targets: [
+      { t: 'net', action: 'inhibitor', note: 'Class property' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'lofepramine', name: 'Lofepramine', brand: 'Deprimyl; Gamanil', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
+    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
+    nts: ['norepinephrine', 'serotonin', 'histamine', 'acetylcholine'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    sideEffects: [
+      { e: 'Sedation, weight gain', via: 'H1 antagonism' },
+      { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
+      { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
+      { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
+    ],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Deprimyl; Gamanil.', sec: 's7-tca' }],
+    short: 'Tricyclic listed in Table 7-2.',
+    mechanism: 'Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.',
+    targets: [
+      { t: 'net', action: 'inhibitor', note: 'Class property' },
+      { t: 'h1', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
+      { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
+    ]
+  },
+  {
+    id: 'tianeptine', name: 'Tianeptine', brand: 'Coaxil; Stablon', group: 'Tricyclic antidepressant', cls: 'Listed with the tricyclics (Table 7-2)',
+    chapters: [{ ch: 'ch07', pages: '335' }],
+    nts: [],
+    short: 'Listed in Table 7-2 among tricyclics still in use; pharmacology not described.',
+    mechanism: 'Appears in the book’s table of tricyclics still in use; Chapter 7 does not describe its pharmacology.',
+    uses: ['Depression (outside the US)'],
+    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (Coaxil; Stablon).', sec: 's7-tca' }]
+  },
+  {
+    id: 'phenelzine', name: 'Phenelzine', brand: 'Nardil', group: 'MAO inhibitor', cls: 'Irreversible MAO inhibitor',
+    chapters: [{ ch: 'ch07', pages: '336–338' }],
+    nbn: 'Monoamine oxidase inhibitor (MAO-A and MAO-B, irreversible)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    targets: [{ t: 'mao', action: 'inhibitor', note: 'Irreversible; MAO-A and MAO-B' }],
+    uses: ['Treatment-resistant unipolar depression (among the most powerful options)', '**Panic disorder** and **social anxiety disorder**'],
+    sideEffects: [
+      { e: '**Hypertensive crisis** with dietary tyramine', via: 'MAO-A inhibition prevents breakdown of tyramine-released NE' },
+      { e: 'Blood pressure rise with sympathomimetic drugs', via: 'Drug interaction' },
+      { e: 'Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors', via: 'Drug interaction' }
+    ],
+    short: 'Classic irreversible MAOI.',
+    mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; enzyme activity returns only after new enzyme is synthesized (about 2–3 weeks). Inhibiting both raises 5HT, NE **and DA**.'
+  },
+  {
+    id: 'tranylcypromine', name: 'Tranylcypromine', brand: 'Parnate', group: 'MAO inhibitor', cls: 'Irreversible MAO inhibitor',
+    chapters: [{ ch: 'ch07', pages: '336–338' }],
+    nbn: 'Monoamine oxidase inhibitor (MAO-A and MAO-B, irreversible)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    targets: [{ t: 'mao', action: 'inhibitor', note: 'Irreversible; MAO-A and MAO-B' }],
+    uses: ['Treatment-resistant unipolar depression (among the most powerful options)', '**Panic disorder** and **social anxiety disorder**'],
+    sideEffects: [
+      { e: '**Hypertensive crisis** with dietary tyramine', via: 'MAO-A inhibition prevents breakdown of tyramine-released NE' },
+      { e: 'Blood pressure rise with sympathomimetic drugs', via: 'Drug interaction' },
+      { e: 'Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors', via: 'Drug interaction' }
+    ],
+    short: 'Irreversible MAOI modeled on amphetamine.',
+    mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; its structure is modeled on **amphetamine**, so it also has amphetamine-like **dopamine-releasing** properties.'
+  },
+  {
+    id: 'isocarboxazid', name: 'Isocarboxazid', brand: 'Marplan', group: 'MAO inhibitor', cls: 'Irreversible MAO inhibitor',
+    chapters: [{ ch: 'ch07', pages: '336–338' }],
+    nbn: 'Monoamine oxidase inhibitor (MAO-A and MAO-B, irreversible)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    targets: [{ t: 'mao', action: 'inhibitor', note: 'Irreversible; MAO-A and MAO-B' }],
+    uses: ['Treatment-resistant unipolar depression (among the most powerful options)', '**Panic disorder** and **social anxiety disorder**'],
+    sideEffects: [
+      { e: '**Hypertensive crisis** with dietary tyramine', via: 'MAO-A inhibition prevents breakdown of tyramine-released NE' },
+      { e: 'Blood pressure rise with sympathomimetic drugs', via: 'Drug interaction' },
+      { e: 'Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors', via: 'Drug interaction' }
+    ],
+    short: 'Classic irreversible MAOI.',
+    mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; activity returns after about 2–3 weeks.'
+  },
+  {
+    id: 'selegiline', name: 'Selegiline', brand: 'Emsam; Eldepryl', group: 'MAO inhibitor', cls: 'Irreversible MAO inhibitor (MAO-B selective at low doses)',
+    chapters: [{ ch: 'ch07', pages: '336–338' }],
+    nbn: 'Monoamine oxidase inhibitor (MAO-A and MAO-B, irreversible)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    targets: [{ t: 'mao', action: 'inhibitor', note: 'Irreversible; MAO-A and MAO-B' }],
+    uses: ['Depression (when MAO-A is also inhibited)', '**Parkinson’s disease** (MAO-B selective doses)'],
+    sideEffects: [
+      { e: '**Hypertensive crisis** with dietary tyramine', via: 'MAO-A inhibition prevents breakdown of tyramine-released NE' },
+      { e: 'Blood pressure rise with sympathomimetic drugs', via: 'Drug interaction' },
+      { e: 'Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors', via: 'Drug interaction' }
+    ],
+    short: 'MAOI metabolized to l-amphetamine and l-methamphetamine; MAO-B selective at low doses.',
+    mechanism: 'An irreversible MAOI. At **selective MAO-B** doses it boosts levodopa in Parkinson’s disease but is not antidepressant; inhibiting both forms is needed for depression. Has no amphetamine-like action itself but is metabolized to **l-amphetamine and l-methamphetamine**.'
+  },
+  {
+    id: 'rasagiline', name: 'Rasagiline', brand: 'Azilect', group: 'Parkinson’s disease treatment', cls: 'MAO-B inhibitor',
+    chapters: [{ ch: 'ch07', pages: '338' }],
+    nbn: 'Monoamine oxidase B inhibitor',
+    nts: ['dopamine'],
+    short: 'Selective MAO-B inhibitor for Parkinson’s disease; not antidepressant.',
+    mechanism: 'Selectively inhibits **MAO-B**, boosting concomitant **levodopa** and reducing on/off fluctuations; at selective doses it does not treat depression.',
+    targets: [{ t: 'mao', action: 'inhibitor', note: 'MAO-B selective' }],
+    uses: ['**Parkinson’s disease**']
+  },
+  {
+    id: 'safinamide', name: 'Safinamide', brand: 'Xadago', group: 'Parkinson’s disease treatment', cls: 'MAO-B inhibitor',
+    chapters: [{ ch: 'ch07', pages: '338' }],
+    nbn: 'Monoamine oxidase B inhibitor',
+    nts: ['dopamine'],
+    short: 'Selective MAO-B inhibitor for Parkinson’s disease; not antidepressant.',
+    mechanism: 'Selectively inhibits **MAO-B**; approved for Parkinson’s disease, not effective for depression at selective doses.',
+    targets: [{ t: 'mao', action: 'inhibitor', note: 'MAO-B selective' }],
+    uses: ['**Parkinson’s disease**']
+  },
+  {
+    id: 'iproniazid', name: 'Iproniazid', group: 'MAO inhibitor', cls: 'MAO inhibitor (historical)',
+    chapters: [{ ch: 'ch07', pages: '336' }],
+    nbn: 'Monoamine oxidase inhibitor',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    short: 'The anti-tuberculosis drug that became the first antidepressant.',
+    mechanism: 'An anti-tuberculosis drug found by accident to improve depression in tuberculosis patients; its antidepressant action was due to **MAO inhibition**, unrelated to its antitubercular effect.',
+    targets: [{ t: 'mao', action: 'inhibitor' }],
+    uses: ['Historical: the **first** clinically effective drug for depression']
+  },
+  {
+    id: 'fluoxetine', name: 'Fluoxetine', brand: 'Prozac', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
     nbn: 'Serotonin transport (SERT) inhibitor',
-    short: 'Allosteric inhibitor of the serotonin transporter (SERT).',
-    mechanism: 'Binds an **allosteric** (“other”) site on the **serotonin transporter (SERT)**, not the substrate site, and is **not transported** into the neuron. This lowers SERT’s affinity for serotonin, blocking reuptake so synaptic serotonin action is enhanced. In Stahl’s wagon analogy, fluoxetine sits in the **front seat** and keeps serotonin off. The brain may even make “its own Prozac.”',
-    targets: [{ t: 'sert', action: 'inhibitor', note: 'Allosteric; strength and other actions added with Chapter 7' }],
-    uses: ['Unipolar depression (SSRIs are first-line for many depressions)', 'As a SERT blocker, part of the class used for anxiety disorders, OCD, PTSD, eating disorders and other conditions (Chapter 2 overview)'],
+    short: 'An activating SSRI with 5HT2C antagonism and a very long half-life.',
+    mechanism: 'Blocks **SERT**; also a **5HT2C antagonist**, which disinhibits NE and DA release and makes it **activating** from the first dose; weak **NET** inhibition only at very high doses. Half-life **2–3 days**; active metabolite about **2 weeks**.',
+    targets: [
+      { t: 'sert', action: 'inhibitor', note: 'Allosteric site (Chapter 2)' },
+      { t: '5ht2c', action: 'antagonist' },
+      { t: 'net', action: 'inhibitor', note: 'Weak; relevant only at very high doses' }
+    ],
+    uses: ['Unipolar depression (SSRIs are first-line for many depressions)', 'As a SERT blocker, part of the class used for anxiety disorders, OCD, PTSD, eating disorders and other conditions (Chapter 2 overview)', 'Only SSRI approved for **bulimia** (higher doses)', 'With **olanzapine**: treatment-resistant unipolar and bipolar depression', 'Best matched to reduced positive affect, hypersomnia, psychomotor retardation, apathy, fatigue'],
     chapters: [
       { ch: 'ch01', pages: '5–6' },
       { ch: 'ch02', pages: '33' },
-      { ch: 'ch05', pages: '226' }
+      { ch: 'ch05', pages: '226' },
+      { ch: 'ch07', pages: '289–294, 325–326, 343' }
     ],
     facts: [
       { ch: 'ch01', pages: '6', text: 'Entered clinical practice **before molecular clarification of the serotonin transporter site**.', sec: 's1-nts' },
       { ch: 'ch02', pages: '33', text: 'The book’s example of an SSRI at SERT’s **inhibitory allosteric site** (the “front seat” of the transporter wagon), reducing SERT’s affinity for serotonin.', sec: 's2-monoamine' },
-      { ch: 'ch05', pages: '226', text: 'Combined with **olanzapine** for bipolar depression and treatment-resistant unipolar depression; 5HT2C antagonism of both may contribute.', sec: 's5-pines' }
-    ]
+      { ch: 'ch05', pages: '226', text: 'Combined with **olanzapine** for bipolar depression and treatment-resistant unipolar depression; 5HT2C antagonism of both may contribute.', sec: 's5-pines' },
+      { ch: 'ch07', pages: '293–294', text: 'Long half-life reduces **withdrawal** reactions but means slow washout before starting drugs such as an **MAOI**; available once daily and **once weekly**.', sec: 's7-ssri-agents' }
+    ],
+    sideEffects: [{ e: 'Unwanted activation, even panic, in agitated, anxious or insomniac patients', via: '5HT2C antagonism' }]
+  },
+  {
+    id: 'sertraline', name: 'Sertraline', brand: 'Zoloft', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
+    chapters: [{ ch: 'ch07', pages: '292–295' }],
+    nbn: 'Serotonin transport (SERT) inhibitor',
+    nts: ['serotonin', 'dopamine'],
+    short: 'SSRI with weak DAT inhibition and σ1 binding.',
+    mechanism: 'Blocks **SERT**; also weakly inhibits **DAT** (clinical relevance debated, though a little DAT inhibition may aid energy, motivation and concentration) and binds **σ1** receptors.',
+    targets: [
+      { t: 'sert', action: 'inhibitor' },
+      { t: 'dat', action: 'inhibitor', note: 'Weak; relevance debated' },
+      { t: 'sigma', action: 'binds', note: 'σ1' }
+    ],
+    uses: ['Unipolar major depression', 'Anxiety disorders, PTSD, OCD, premenstrual dysphoric disorder, eating disorders (class uses)', 'Mild activation may help **atypical depression** (hypersomnia, low energy, mood reactivity)', 'Possible advantage in **psychotic/delusional depression** (σ1)', 'With bupropion (“Well-oft”)'],
+    sideEffects: [
+      { e: 'Early side effects that fade with time', via: 'Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize' },
+      { e: 'Sexual dysfunction, insomnia, activation/anxiety', via: '5HT at 5HT2A and 5HT2C receptors' },
+      { e: 'Nausea, GI effects', via: 'Peripheral 5HT3 stimulation' },
+      { e: 'Overactivation of some **panic** patients (titrate slowly)', via: 'Weak DAT inhibition' }
+    ],
+    facts: [{ ch: 'ch07', pages: '294–295', text: 'σ1 actions may contribute to anxiolytic effects and benefit in psychotic and delusional depression.', sec: 's7-ssri-agents' }]
+  },
+  {
+    id: 'paroxetine', name: 'Paroxetine', brand: 'Paxil', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
+    chapters: [{ ch: 'ch07', pages: '294–295' }],
+    nbn: 'Serotonin transport (SERT) inhibitor',
+    nts: ['serotonin', 'norepinephrine', 'acetylcholine'],
+    short: 'Calming SSRI with mild anticholinergic, weak NET and NOS-inhibiting actions.',
+    mechanism: 'Blocks **SERT**; mild **M1** antagonism (calming, even sedating early), weak **NET** inhibition (may add antidepressant action at high doses) and inhibition of **nitric oxide synthase**.',
+    targets: [
+      { t: 'sert', action: 'inhibitor' },
+      { t: 'm1', action: 'antagonist', note: 'Mild' },
+      { t: 'net', action: 'inhibitor', note: 'Weak to moderate' },
+      { t: 'nos', action: 'inhibitor' }
+    ],
+    uses: ['Unipolar major depression', 'Anxiety disorders, PTSD, OCD, premenstrual dysphoric disorder, eating disorders (class uses)'],
+    sideEffects: [
+      { e: 'Early side effects that fade with time', via: 'Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize' },
+      { e: 'Sexual dysfunction, insomnia, activation/anxiety', via: '5HT at 5HT2A and 5HT2C receptors' },
+      { e: 'Nausea, GI effects', via: 'Peripheral 5HT3 stimulation' },
+      { e: 'Sexual dysfunction, especially in men', via: 'NOS inhibition plus 5HT2A/2C stimulation' },
+      { e: 'Notorious **withdrawal**: akathisia, restlessness, GI upset, dizziness, tingling', via: 'SERT inhibition plus **anticholinergic rebound**' }
+    ],
+    facts: [{ ch: 'ch07', pages: '295', text: 'A **controlled-release** form may reduce side effects including discontinuation reactions.', sec: 's7-ssri-agents' }]
+  },
+  {
+    id: 'fluvoxamine', name: 'Fluvoxamine', brand: 'Luvox', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
+    chapters: [{ ch: 'ch07', pages: '295' }],
+    nbn: 'Serotonin transport (SERT) inhibitor',
+    nts: ['serotonin'],
+    short: 'SSRI with potent σ1 binding; an OCD drug in the US.',
+    mechanism: 'Blocks **SERT** and binds **σ1** sites more potently than sertraline; preclinical data suggest it may be a σ1 **agonist**, possibly adding anxiolytic action.',
+    targets: [
+      { t: 'sert', action: 'inhibitor' },
+      { t: 'sigma', action: 'binds', note: 'σ1; possibly agonist' }
+    ],
+    uses: ['**OCD** (never approved for depression in the US)', 'Depression elsewhere; one of the first SSRIs launched worldwide', 'Psychotic/delusional depression', 'CR form: high remission in **OCD** and **social anxiety disorder**'],
+    sideEffects: [
+      { e: 'Early side effects that fade with time', via: 'Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize' },
+      { e: 'Sexual dysfunction, insomnia, activation/anxiety', via: '5HT at 5HT2A and 5HT2C receptors' },
+      { e: 'Nausea, GI effects', via: 'Peripheral 5HT3 stimulation' }
+    ],
+    facts: [{ ch: 'ch07', pages: '295', text: 'The **controlled-release** form allows once-daily dosing (IR often twice daily) and may cause less peak-dose sedation.', sec: 's7-ssri-agents' }]
+  },
+  {
+    id: 'citalopram', name: 'Citalopram', brand: 'Celexa', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
+    chapters: [{ ch: 'ch07', pages: '295–296' }],
+    nbn: 'Serotonin transport (SERT) inhibitor',
+    nts: ['serotonin'],
+    short: 'Racemic SSRI; the R enantiomer adds antihistamine action and may hinder SERT inhibition.',
+    mechanism: 'A racemic mixture of **R and S** enantiomers. S inhibits **SERT**; R carries weak **antihistamine** action and may act at SERT in a way that **interferes** with S, reducing net SERT inhibition, especially at low doses.',
+    targets: [
+      { t: 'sert', action: 'inhibitor', note: 'S enantiomer' },
+      { t: 'h1', action: 'antagonist', note: 'Weak; R enantiomer' }
+    ],
+    uses: ['Unipolar depression; favorable findings in the **elderly**'],
+    sideEffects: [
+      { e: 'Early side effects that fade with time', via: 'Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize' },
+      { e: 'Sexual dysfunction, insomnia, activation/anxiety', via: '5HT at 5HT2A and 5HT2C receptors' },
+      { e: 'Nausea, GI effects', via: 'Peripheral 5HT3 stimulation' },
+      { e: '**QTc prolongation** at higher doses (limits dose increases)', via: 'Dose-related' }
+    ],
+    facts: [{ ch: 'ch07', pages: '295–296', text: 'Generally well tolerated but somewhat **inconsistent** at the lowest dose, often needing a dose increase that QTc concerns limit.', sec: 's7-ssri-agents' }]
+  },
+  {
+    id: 'escitalopram', name: 'Escitalopram', brand: 'Lexapro', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
+    chapters: [{ ch: 'ch07', pages: '296' }],
+    nbn: 'Serotonin transport (SERT) inhibitor',
+    nts: ['serotonin'],
+    short: 'The pure S enantiomer of citalopram: the “quintessential SSRI.”',
+    mechanism: 'The active **S enantiomer** of citalopram, without the R enantiomer. **Pure SERT inhibition** explains almost all of its actions.',
+    targets: [{ t: 'sert', action: 'inhibitor' }],
+    uses: ['Unipolar major depression', 'Anxiety disorders, PTSD, OCD, premenstrual dysphoric disorder, eating disorders (class uses)'],
+    sideEffects: [
+      { e: 'Early side effects that fade with time', via: 'Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize' },
+      { e: 'Sexual dysfunction, insomnia, activation/anxiety', via: '5HT at 5HT2A and 5HT2C receptors' },
+      { e: 'Nausea, GI effects', via: 'Peripheral 5HT3 stimulation' }
+    ],
+    facts: [{ ch: 'ch07', pages: '296', text: 'No antihistamine action, no higher-dose **QTc** restriction, lowest dose predictably effective; perhaps the **best-tolerated** SSRI with the **fewest CYP450 interactions**.', sec: 's7-ssri-agents' }]
+  },
+  {
+    id: 'vilazodone', name: 'Vilazodone', brand: 'Viibryd', group: 'Antidepressant', cls: 'Serotonin partial agonist reuptake inhibitor (SPARI)',
+    chapters: [{ ch: 'ch07', pages: '296–298' }],
+    nbn: 'Serotonin reuptake inhibitor and 5HT1A partial agonist',
+    nts: ['serotonin', 'dopamine'],
+    short: 'SPARI: SERT inhibition plus 5HT1A partial agonism in one molecule.',
+    mechanism: 'Inhibits **SERT** and is a **5HT1A partial agonist**. About half of SERTs and half of 5HT1A receptors are occupied immediately; partial agonism at somatodendritic autoreceptors speeds their **desensitization**, and postsynaptic 5HT1A action may release **dopamine** downstream.',
+    targets: [
+      { t: 'sert', action: 'inhibitor' },
+      { t: '5ht1a', action: 'partial agonist' }
+    ],
+    uses: ['Unipolar depression'],
+    sideEffects: [{ e: 'Less sexual dysfunction and weight gain (observed)', via: 'Downstream DA release from 5HT1A partial agonism' }],
+    facts: [{ ch: 'ch07', pages: '296', text: 'Recreates in one drug the long-used strategy of adding a 5HT1A partial agonist (buspirone, aripiprazole, brexpiprazole, cariprazine, quetiapine) to an SSRI, avoiding drug interactions and off-target effects.', sec: 's7-spari' }]
+  },
+  {
+    id: 'venlafaxine', name: 'Venlafaxine', brand: 'Effexor XR', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
+    chapters: [{ ch: 'ch07', pages: '298–302' }],
+    nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    short: 'SNRI whose NET inhibition grows with dose; CYP2D6 converts it to desvenlafaxine.',
+    mechanism: 'Inhibits **SERT** potently even at low doses and **NET** with moderate potency, robustly only at **higher doses**; no significant other receptor actions. **CYP2D6** converts it to **desvenlafaxine**, normally about twice the plasma level of parent drug.',
+    targets: [
+      { t: 'sert', action: 'inhibitor', s: 3, note: 'Robust at low doses' },
+      { t: 'net', action: 'inhibitor', s: 2, note: 'Recruited at higher doses' },
+      { t: 'cyp2d6', action: 'substrate', note: 'Converted to desvenlafaxine' }
+    ],
+    uses: ['Unipolar depression; efficacy often rises with dose (noradrenergic boost)', 'Several **anxiety disorders**'],
+    sideEffects: [
+      { e: 'Sweating, raised blood pressure', via: 'NET inhibition' },
+      { e: 'Nausea and other serotonergic effects', via: 'SERT inhibition' },
+      { e: 'Bothersome **withdrawal**, especially after high-dose long-term use', via: 'Sudden discontinuation' },
+      { e: 'Nausea, worse with the IR form', via: 'IR formulation (now little used)' }
+    ],
+    facts: [{ ch: 'ch07', pages: '302', text: '2D6 inhibitors and **poor metabolizers** shift the ratio toward parent venlafaxine, reducing NET inhibition: how much NET inhibition a dose gives is **unpredictable**. The XR form is a considerable improvement over IR.', sec: 's7-snri-agents' }]
+  },
+  {
+    id: 'desvenlafaxine', name: 'Desvenlafaxine', brand: 'Pristiq', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
+    chapters: [{ ch: 'ch07', pages: '302' }],
+    nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    short: 'Active metabolite of venlafaxine with more consistent NET inhibition.',
+    mechanism: 'Inhibits **SERT and NET**, with **more NET relative to SERT** than venlafaxine but still more potent at SERT. As a separate drug it gives more consistent NET inhibition across patients.',
+    targets: [
+      { t: 'sert', action: 'inhibitor', s: 3 },
+      { t: 'net', action: 'inhibitor', s: 2, note: 'Relatively greater than venlafaxine' }
+    ],
+    uses: ['Unipolar depression'],
+    sideEffects: [
+      { e: 'Sweating, raised blood pressure', via: 'NET inhibition' },
+      { e: 'Nausea and other serotonergic effects', via: 'SERT inhibition' }
+    ],
+    facts: [{ ch: 'ch07', pages: '302', text: 'Less need for dose titration than venlafaxine because NET inhibition does not depend on CYP2D6 conversion.', sec: 's7-snri-agents' }]
+  },
+  {
+    id: 'duloxetine', name: 'Duloxetine', brand: 'Cymbalta', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
+    chapters: [{ ch: 'ch07', pages: '299, 302–303' }],
+    nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    short: 'SNRI that treats depression, pain and painful physical symptoms.',
+    mechanism: 'Inhibits **SERT slightly more potently than NET**. NET inhibition seems critical for pain relief and, via raised PFC NE and DA, for cognitive symptoms.',
+    targets: [
+      { t: 'sert', action: 'inhibitor', s: 3 },
+      { t: 'net', action: 'inhibitor', s: 2, note: 'Slightly weaker than SERT' }
+    ],
+    uses: ['Unipolar depression, including **painful physical symptoms**', 'Diabetic peripheral **neuropathic pain**, **fibromyalgia**, chronic **musculoskeletal pain** (osteoarthritis, low back)', '**Cognitive symptoms** of geriatric depression'],
+    sideEffects: [
+      { e: 'Sweating, raised blood pressure', via: 'NET inhibition' },
+      { e: 'Nausea and other serotonergic effects', via: 'SERT inhibition' }
+    ],
+    facts: [{ ch: 'ch07', pages: '302–303', text: 'Showed that somatic pain is a legitimate symptom of depression. Usually started **twice daily**; once daily after tolerance. Less hypertension and milder withdrawal than venlafaxine.', sec: 's7-snri-agents' }]
+  },
+  {
+    id: 'milnacipran', name: 'Milnacipran', brand: 'Savella; Ixel', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
+    chapters: [{ ch: 'ch07', pages: '300, 303' }],
+    nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    short: 'SNRI that is more potent at NET than SERT; for fibromyalgia in the US.',
+    mechanism: 'A racemic SNRI that is **more potent at NET than SERT**, unlike venlafaxine and duloxetine. The S (levo) enantiomer is the active one.',
+    targets: [
+      { t: 'net', action: 'inhibitor', s: 3 },
+      { t: 'sert', action: 'inhibitor', s: 2 }
+    ],
+    uses: ['**Fibromyalgia** (US); **depression** (Europe, Japan)', 'Possibly painful physical symptoms, neuropathic pain and cognitive symptoms (“**fibro-fog**”)'],
+    sideEffects: [
+      { e: 'More **sweating** and **urinary hesitancy**', via: 'Robust NET inhibition (bladder α1)' },
+      { e: 'Energizing/activating', via: 'NET inhibition' }
+    ],
+    facts: [{ ch: 'ch07', pages: '303', text: 'The first SNRI in Japan and many European countries. Needs **twice-daily** dosing (short half-life). An α1 antagonist relieves urinary hesitancy.', sec: 's7-snri-agents' }]
+  },
+  {
+    id: 'levomilnacipran', name: 'Levomilnacipran', brand: 'Fetzima', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
+    chapters: [{ ch: 'ch07', pages: '300, 303' }],
+    nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    short: 'The active S enantiomer of milnacipran; once-daily SNRI for MDD.',
+    mechanism: 'The active **S enantiomer** of milnacipran, with **greater NET than SERT** inhibition, in a controlled-release once-daily form.',
+    targets: [
+      { t: 'net', action: 'inhibitor', s: 3 },
+      { t: 'sert', action: 'inhibitor', s: 2 }
+    ],
+    uses: ['Unipolar major depressive disorder (US); may target **fatigue and low energy**'],
+    sideEffects: [
+      { e: 'Sweating, raised blood pressure', via: 'NET inhibition' },
+      { e: 'Nausea and other serotonergic effects', via: 'SERT inhibition' }
+    ],
+    facts: [{ ch: 'ch07', pages: '303', text: 'Unlike racemic milnacipran it is given **once daily**.', sec: 's7-snri-agents' }]
+  },
+  {
+    id: 'bupropion', name: 'Bupropion', brand: 'Wellbutrin', group: 'Antidepressant', cls: 'Norepinephrine–dopamine reuptake inhibitor (NDRI)',
+    chapters: [{ ch: 'ch07', pages: '303–306, 333, 353–354' }],
+    nbn: 'Norepinephrine and dopamine reuptake inhibitor (NET/DAT)',
+    nts: ['norepinephrine', 'dopamine'],
+    short: 'NDRI with low, slow DAT occupancy; activating, no sexual dysfunction.',
+    mechanism: 'Weakly inhibits **DAT** and **NET**; active metabolites (most potently **radafaxine**, the + enantiomer of 6-hydroxy-bupropion) are more potent at NET, equally potent at DAT and concentrated in brain. PET shows only **10–30%** striatal DAT occupancy: **low, slow and long-lasting**, enough to help without abuse. Also a **CYP2D6 inhibitor**.',
+    targets: [
+      { t: 'dat', action: 'inhibitor', note: 'Weak; metabolites contribute' },
+      { t: 'net', action: 'inhibitor', note: 'Weak; metabolites more potent' },
+      { t: 'cyp2d6', action: 'inhibitor' }
+    ],
+    uses: ['Unipolar depression, especially **reduced positive affect** (“dopamine deficiency syndrome”)', 'Augmenting or replacing SSRIs/SNRIs (residual or drug-induced low energy, interest)', '**Smoking cessation**', 'With **naltrexone**: obesity', 'With **dextromethorphan**: depression and Alzheimer agitation (in trials at publication)'],
+    sideEffects: [
+      { e: '**Seizures** at peak plasma levels (reduced by SR and XL)', via: 'Peak drug levels' },
+      { e: 'Activation, stimulation', via: 'NE and DA reuptake inhibition' },
+      { e: 'No significant sexual dysfunction', via: 'No serotonergic component' }
+    ],
+    facts: [
+      { ch: 'ch07', pages: '306', text: 'IR (three times daily) → SR (twice daily) → **XL** (once daily); IR is all but abandoned.', sec: 's7-ndri' },
+      { ch: 'ch07', pages: '333–334', text: 'SSRI or SNRI + bupropion = **triple-action** combination, among the most popular in the US.', sec: 's7-combos' }
+    ],
+    updates: [{ year: '2022', title: 'Combined with dextromethorphan for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022, and for agitation associated with Alzheimer dementia in April 2026.', source: 'FDA, August 2022; Axsome Therapeutics, April 30, 2026' }]
+  },
+  {
+    id: 'agomelatine', name: 'Agomelatine', brand: 'Valdoxan', group: 'Antidepressant', cls: 'Melatonergic agonist and 5HT2C antagonist',
+    chapters: [{ ch: 'ch07', pages: '306–308' }],
+    nbn: 'Melatonin MT1/MT2 receptor agonist and serotonin 5HT2C receptor antagonist',
+    nts: ['melatonin', 'serotonin', 'norepinephrine', 'dopamine'],
+    short: 'MT1/MT2 agonist and 5HT2C/5HT2B antagonist that may reset circadian rhythms.',
+    mechanism: 'An **MT1/MT2 agonist** (“substitute melatonin” in the SCN) and a **5HT2C** and 5HT2B **antagonist**. 5HT2C blockade disinhibits **NE and DA** release in the PFC; combined SCN actions may **resynchronize** circadian rhythms and reverse the phase delay of depression.',
+    targets: [
+      { t: 'mt1mt2', action: 'agonist' },
+      { t: '5ht2c', action: 'antagonist' },
+      { t: '5ht2b', action: 'antagonist' }
+    ],
+    uses: ['Unipolar depression (many countries **outside the US**)'],
+    facts: [{ ch: 'ch07', pages: '307–308', text: 'Melatonin and 5HT2C receptors in the SCN are expressed most at night; agomelatine acts on both to reset rhythms (Figure 7-39).', sec: 's7-agomelatine' }]
   },
   {
     id: 'methylphenidate', name: 'Methylphenidate', group: 'Stimulant', cls: 'Stimulant (ADHD)',
@@ -123,13 +751,15 @@ SP.drugs = [
     uses: ['ADHD', 'Indirect dopamine agonism improves depression and wakefulness (Table 2-5)'],
     chapters: [
       { ch: 'ch02', pages: '31–35, 40' },
-      { ch: 'ch04', pages: '78–79' }
+      { ch: 'ch04', pages: '78–79' },
+      { ch: 'ch07', pages: '337, 356' }
     ],
     facts: [
       { ch: 'ch02', pages: '31', text: 'Listed in Table 2-1 as a false substrate of both **NET and DAT**.', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '35', text: '**Amphetamine has two targets**: monoamine transporters and VMATs (as a transported substrate).', sec: 's2-vesicular' },
       { ch: 'ch04', pages: '79', text: 'Dopamine release by amphetamine causes a **paranoid psychosis** much like schizophrenia: a cornerstone of the dopamine hypothesis. Table 4-1 lists psychostimulants as **D2 agonist** models with auditory hallucinations, paranoid delusions and no insight.', sec: 's4-three' },
-      { ch: 'ch05', pages: '174', text: 'A false substrate of **VMAT2** that competes with natural transmitters; dopamine or amphetamine are the “too hot” end of the Goldilocks analogy.', sec: 's5-vmat2' }
+      { ch: 'ch05', pages: '174', text: 'A false substrate of **VMAT2** that competes with natural transmitters; dopamine or amphetamine are the “too hot” end of the Goldilocks analogy.', sec: 's5-vmat2' },
+      { ch: 'ch07', pages: '337', text: 'Amphetamine is also a **weak, reversible MAO inhibitor**; some MAOIs (tranylcypromine, selegiline via metabolites) are closely linked to amphetamine.', sec: 's7-maoi' }
     ]
   },
   {
@@ -178,16 +808,24 @@ SP.drugs = [
   {
     id: 'mdma', name: 'MDMA', brand: '“Ecstasy”', aka: ['3,4-methylenedioxymethamphetamine', 'midomafetamine'], group: 'Drug of abuse', cls: 'Empathogen; drug of abuse',
     short: 'A false substrate of SERT that releases serotonin.',
-    mechanism: 'Carried into serotonin neurons by **SERT** as a false substrate, and **releases serotonin**, which indirectly stimulates **5HT2A/2C** receptors.',
+    mechanism: 'An amphetamine derivative: a powerful **SERT inhibitor** with **VMAT2** inhibition (it is a false substrate), so it releases **serotonin** (and dopamine). Released 5HT acts at all serotonin receptors, especially **5HT2A**.',
     targets: [{ t: 'sert', action: 'substrate', note: 'Transported (“false substrate”)' }],
     uses: ['“Empathogen”: experimental treatment of PTSD, especially with psychotherapy (at publication)'],
-    chapters: [{ ch: 'ch02', pages: '31–33, 40' }],
+    chapters: [
+      { ch: 'ch02', pages: '31–33, 40' },
+      { ch: 'ch07', pages: '355–358' }
+    ],
     facts: [
       { ch: 'ch02', pages: '31–33', text: 'SERT has high affinity for transporting **Ecstasy (MDMA)** as well as serotonin (Table 2-1).', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '40', text: 'Serotonin release by MDMA produces **indirect 5HT2A/2C agonism**: “empathogen,” experimental for PTSD with psychotherapy (Table 2-5).', sec: 's2-receptor-tables' },
-      { ch: 'ch05', pages: '174', text: 'Like amphetamine, carried by VMAT2 as a **false substrate**.', sec: 's5-vmat2' }
+      { ch: 'ch05', pages: '174', text: 'Like amphetamine, carried by VMAT2 as a **false substrate**.', sec: 's5-vmat2' },
+      { ch: 'ch07', pages: '356–357', text: 'In hallucinogen-assisted psychotherapy it may promote **trust, closeness**, energy and emotional warmth. Tested for PTSD, existential distress in terminal illness, social anxiety in autism, refractory depression and substance abuse. Street MDMA is often contaminated.', sec: 's7-psychedelics' }
     ],
-    updates: [{ year: '2024', title: 'Not approved for PTSD', text: 'In August 2024 the FDA issued a **complete response letter** declining approval of MDMA-assisted therapy (midomafetamine) for PTSD and requested another phase III trial.', source: 'FDA complete response letter to Lykos Therapeutics, August 9, 2024' }]
+    updates: [{ year: '2024', title: 'Not approved for PTSD', text: 'In August 2024 the FDA issued a **complete response letter** declining approval of MDMA-assisted therapy (midomafetamine) for PTSD and requested another phase III trial.', source: 'FDA complete response letter to Lykos Therapeutics, August 9, 2024' }],
+    sideEffects: [
+      { e: '**Hyperthermia**, organ damage, death (especially dancing all night, dehydrated)', via: 'Possibly 5HT2A stimulation' },
+      { e: 'Distorted sensory and time perception, hallucinations', via: '5HT2A stimulation' }
+    ]
   },
   {
     id: 'tiagabine', name: 'Tiagabine', group: 'Anticonvulsant', cls: 'Anticonvulsant',
@@ -336,21 +974,139 @@ SP.drugs = [
   },
   {
     id: 'lithium', name: 'Lithium', group: 'Mood stabilizer', cls: 'Mood stabilizer (antimanic)',
-    short: 'May inhibit the enzyme GSK-3.',
-    mechanism: 'May **inhibit glycogen synthase kinase-3 (GSK-3)**, a proapoptotic enzyme downstream of neurotrophins, insulin, IGF-1 and Wnt signaling. Inhibition could be neuroprotective, promote long-term plasticity, and contribute to lithium’s **antimanic and mood-stabilizing** actions. Full mechanism in Chapter 7.',
-    targets: [{ t: 'gsk3', action: 'inhibitor', note: 'Possible mechanism' }],
-    uses: ['Antimanic; mood stabilizer'],
-    chapters: [{ ch: 'ch02', pages: '48' }],
-    facts: [{ ch: 'ch02', pages: '48', text: 'The antimanic agent lithium **may target GSK-3**, one of only three enzymes targeted by psychotropic drugs.', sec: 's2-enzymes' }]
+    short: 'An ion with uncertain mechanism; proven in mania and in preventing suicide.',
+    mechanism: 'An **ion** whose mechanism is uncertain. Candidates are in signal transduction: inhibition of **inositol monophosphatase**, modulation of **G proteins**, and regulation of growth-factor and plasticity genes via cascades including inhibition of **GSK-3** and **protein kinase C**.',
+    targets: [
+      { t: 'gsk3', action: 'inhibitor', note: 'Possible mechanism' },
+      { t: 'impase', action: 'inhibitor', note: 'Possible mechanism' },
+      { t: 'pkc', action: 'inhibitor', note: 'Possible mechanism' }
+    ],
+    uses: ['**Manic episodes** and prevention of recurrence, especially of mania (perhaps less for depression)', 'Well established to help **prevent suicide** in mood disorders', 'Bipolar depression and augmentation in unipolar depression (not approved; lower doses; out of favor)', 'Added to serotonin/dopamine agents in mania'],
+    chapters: [
+      { ch: 'ch02', pages: '48' },
+      { ch: 'ch07', pages: '332, 345–346, 353' }
+    ],
+    facts: [
+      { ch: 'ch02', pages: '48', text: 'The antimanic agent lithium **may target GSK-3**, one of only three enzymes targeted by psychotropic drugs.', sec: 's2-enzymes' },
+      { ch: 'ch07', pages: '345–346', text: 'Used for more than 50 years. Modern expert use: one member of a **portfolio**, often **once daily** and at **lower doses** combined with other agents, rather than high-dose monotherapy for euphoric mania.', sec: 's7-lithium' }
+    ],
+    sideEffects: [
+      { e: 'GI upset: dyspepsia, nausea, vomiting, diarrhea', via: 'Lithium' },
+      { e: 'Weight gain, hair loss, acne, tremor, sedation, decreased cognition, incoordination', via: 'Lithium' },
+      { e: 'Long-term **thyroid** and **kidney** effects', via: 'Lithium' },
+      { e: 'Toxicity risk: **narrow therapeutic window**; monitor plasma levels', via: 'Pharmacokinetics' }
+    ]
   },
   {
-    id: 'valproate', name: 'Valproate', group: 'Mood stabilizer', cls: 'Anticonvulsant; antimanic',
-    short: 'May act on GSK-3 (possible).',
-    mechanism: 'Like ECT, it **may act on GSK-3**, alongside other mechanisms covered in Chapters 3 and 7.',
-    targets: [{ t: 'gsk3', action: 'inhibitor', note: 'Possible (“?” in Figure 2-14)' }],
-    uses: ['Antimanic'],
-    chapters: [{ ch: 'ch02', pages: '48' }],
-    facts: [{ ch: 'ch02', pages: '48', text: 'The antimanic agent valproate **may** have actions on GSK-3 (marked with a question mark in Figure 2-14).', sec: 's2-enzymes' }]
+    id: 'valproate', name: 'Valproate', aka: ['Valproic acid', 'Sodium valproate'], group: 'Mood stabilizer', cls: 'Anticonvulsant; antimanic',
+    short: 'Mania-minded anticonvulsant with uncertain mechanism (VSSC, GABA, signal transduction).',
+    mechanism: 'Mechanism uncertain. Three hypotheses: altering **VSSC** sensitivity (binding channel or regulatory units, or inhibiting phosphorylating enzymes) to reduce glutamate release; **enhancing GABA** (more release, less reuptake or slower breakdown by GABA-T); and regulating **signal transduction** (inhibiting GSK-3, PKC and MARCKS; activating ERK, BCL2 and GAP43). May also act at calcium channels and indirectly block glutamate.',
+    targets: [
+      { t: 'vssc', action: 'modulator', note: 'Possible; site unknown' },
+      { t: 'gabat', action: 'inhibitor', note: 'One possible way it enhances GABA' },
+      { t: 'gsk3', action: 'inhibitor', note: 'Possible' },
+      { t: 'pkc', action: 'inhibitor', note: 'Possible' },
+      { t: 'vscc', action: 'modulator', note: 'Possible; poorly characterized' }
+    ],
+    uses: ['**Acute mania** (proven); commonly long term to prevent mania (less established)', 'Possibly **rapid cycling** and **mixed** episodes (some experts), usually in combination', 'Epilepsy; **migraine**'],
+    chapters: [
+      { ch: 'ch02', pages: '48' },
+      { ch: 'ch07', pages: '346–350, 353' }
+    ],
+    facts: [
+      { ch: 'ch02', pages: '48', text: 'The antimanic agent valproate **may** have actions on GSK-3 (marked with a question mark in Figure 2-14).', sec: 's2-enzymes' },
+      { ch: 'ch07', pages: '349', text: 'Raises **lamotrigine** levels, increasing rash risk unless lamotrigine is titrated slowly (p. 352).', sec: 's7-lamotrigine' }
+    ],
+    sideEffects: [
+      { e: 'Hair loss, weight gain, sedation', via: 'Dose-related; harm adherence' },
+      { e: 'Bone marrow, liver and pancreatic toxicity; monitor counts and platelets', via: 'Chronic exposure' },
+      { e: '**Neural-tube defects** and other fetal toxicity', via: 'Teratogenic' },
+      { e: 'Amenorrhea, **polycystic ovaries**, hyperandrogenism, obesity, insulin resistance in women', via: 'Valproate exposure' }
+    ]
+  },
+  {
+    id: 'carbamazepine', name: 'Carbamazepine', brand: 'Tegretol; Equetro', group: 'Mood stabilizer', cls: 'Anticonvulsant; antimanic',
+    chapters: [{ ch: 'ch07', pages: '346–347, 350' }],
+    nbn: 'Voltage-sensitive sodium channel blocker',
+    nts: ['glutamate'],
+    short: 'Mania-minded anticonvulsant blocking the VSSC α subunit; CYP3A4 inducer.',
+    mechanism: 'Thought to bind a site **within the α subunit** of **voltage-sensitive sodium channels** in the open conformation, unlike valproate; may also act at calcium and potassium channels and thereby enhance GABA’s inhibitory actions.',
+    targets: [
+      { t: 'vssc', action: 'blocker', note: 'α subunit, open channel' },
+      { t: 'cyp3a4', action: 'inducer', note: 'Notable inducer' }
+    ],
+    uses: ['**Acute mania** (first anticonvulsant shown to work; FDA-approved later as a once-daily controlled-release form)', 'Epilepsy; **neuropathic pain**'],
+    sideEffects: [
+      { e: 'Profound early **bone marrow suppression**: monitor blood counts', via: 'Carbamazepine' },
+      { e: 'Drug interactions', via: '**CYP3A4 induction**' },
+      { e: 'Sedation', via: 'Ion channel actions' },
+      { e: '**Neural-tube defects**', via: 'Teratogenic' }
+    ],
+    facts: [{ ch: 'ch07', pages: '347', text: 'Table 7-3: epilepsy ++++, treat from above ++++, stabilize from above ++, treat from below +, stabilize from below +/−.', sec: 's7-anticonvulsants' }]
+  },
+  {
+    id: 'lamotrigine', name: 'Lamotrigine', brand: 'Lamictal', group: 'Mood stabilizer', cls: 'Anticonvulsant; depression-minded mood stabilizer',
+    chapters: [{ ch: 'ch07', pages: '346–347, 350–353' }],
+    nbn: 'Voltage-sensitive sodium channel blocker; glutamate release inhibitor',
+    nts: ['glutamate'],
+    short: 'Depression-minded anticonvulsant that prevents recurrence of both poles; rash risk.',
+    mechanism: 'Binds the **open-channel VSSC α subunit** (like carbamazepine) and may also act at calcium and potassium channels. Uniquely, it may **reduce glutamate release**, via VSSCs or an unidentified synaptic action, which could explain why it treats and stabilizes **from below**.',
+    targets: [{ t: 'vssc', action: 'blocker', note: 'α subunit, open channel' }],
+    uses: ['Prevention of **recurrence of mania and depression** in bipolar disorder (approved)', '**Bipolar depression** (believed effective by experts; not FDA-approved)', 'Added to serotonin/dopamine agents when depression is not controlled'],
+    sideEffects: [{ e: '**Rash**, rarely **Stevens–Johnson syndrome** (toxic epidermal necrolysis)', via: 'Minimized by very slow titration and managing interactions (e.g., **valproate** raises levels)' }],
+    facts: [
+      { ch: 'ch07', pages: '347', text: 'Table 7-3: epilepsy ++++, treat from above +/−, stabilize from above ++++, treat from below +++, stabilize from below ++++.', sec: 's7-anticonvulsants' },
+      { ch: 'ch07', pages: '351–352', text: 'Not approved for mania, perhaps because its sodium channel action is too weak or its long **titration** prevents the quick action mania needs.', sec: 's7-lamotrigine' }
+    ]
+  },
+  {
+    id: 'oxcarbazepine', name: 'Oxcarbazepine', brand: 'Trileptal', group: 'Anticonvulsant', cls: 'Anticonvulsant (prodrug of licarbazepine)',
+    chapters: [{ ch: 'ch07', pages: '347, 352' }],
+    nbn: 'Voltage-sensitive sodium channel blocker',
+    nts: ['glutamate'],
+    short: 'Carbamazepine relative and prodrug; better tolerated but unproven in bipolar disorder.',
+    mechanism: 'Structurally related to, but not a metabolite of, carbamazepine. A **prodrug** converted to the 10-hydroxy (monohydroxy) derivative **licarbazepine**, whose active S form is **eslicarbazepine**; presumed to bind the open-channel VSSC α subunit.',
+    targets: [{ t: 'vssc', action: 'blocker', note: 'Via licarbazepine; α subunit' }],
+    uses: ['Epilepsy', 'Used **off-label**, especially for mania, despite never being proven in acute mania or depression'],
+    sideEffects: [{ e: 'Less sedation, bone marrow toxicity and CYP3A4 interaction than carbamazepine', via: 'Different metabolism' }],
+    facts: [{ ch: 'ch07', pages: '347', text: 'Table 7-3 (oxcarbazepine/licarbazepine): epilepsy ++++, treat from above ++, stabilize from above +, treat and stabilize from below +/−.', sec: 's7-anticonvulsants' }]
+  },
+  {
+    id: 'eslicarbazepine', name: 'Eslicarbazepine', brand: 'Aptiom', group: 'Anticonvulsant', cls: 'Anticonvulsant (active S-licarbazepine)',
+    chapters: [{ ch: 'ch07', pages: '350, 352' }],
+    nbn: 'Voltage-sensitive sodium channel blocker',
+    nts: ['glutamate'],
+    short: 'The active S enantiomer of licarbazepine, oxcarbazepine’s active form.',
+    mechanism: 'The active **S enantiomer of licarbazepine**, through which oxcarbazepine works; presumed VSSC α-subunit binding like carbamazepine.',
+    targets: [{ t: 'vssc', action: 'blocker', note: 'α subunit' }],
+    uses: ['Anticonvulsant; used off-label, especially for mania']
+  },
+  {
+    id: 'topiramate', name: 'Topiramate', brand: 'Topamax', group: 'Anticonvulsant', cls: 'Anticonvulsant',
+    chapters: [{ ch: 'ch07', pages: '347, 352' }],
+    nts: [],
+    short: 'Anticonvulsant with ambiguous bipolar results; causes weight loss.',
+    mechanism: 'An anticonvulsant also approved for migraine; Chapter 7 does not detail its mechanism.',
+    uses: ['Epilepsy; **migraine**', 'Adjunct to drugs that cause weight gain (**weight loss**)', 'Tested in stimulant and alcohol use disorders', 'Bipolar disorder: **ambiguous** trials; not clearly a mood stabilizer'],
+    sideEffects: [
+      { e: 'Weight loss', via: 'Topiramate' },
+      { e: 'Unacceptable sedation in some', via: 'Topiramate' }
+    ],
+    facts: [
+      { ch: 'ch07', pages: '347', text: 'Table 7-3: epilepsy ++++, treat and stabilize from above +/−.', sec: 's7-anticonvulsants' },
+      { ch: 'ch07', pages: '352', text: 'The book says it is combined with **bupropion** for weight loss; the marketed weight-loss combinations pair bupropion with naltrexone and topiramate with phentermine.', sec: 's7-lamotrigine' }
+    ]
+  },
+  {
+    id: 'riluzole', name: 'Riluzole', brand: 'Rilutek', group: 'Glutamate modulator', cls: 'Glutamate release inhibitor (ALS drug)',
+    chapters: [{ ch: 'ch07', pages: '347, 352–353' }],
+    nbn: 'Voltage-sensitive sodium channel blocker; glutamate release inhibitor',
+    nts: ['glutamate'],
+    short: 'ALS drug that may reduce glutamate release like lamotrigine.',
+    mechanism: 'Developed to slow **ALS**; theoretically binds **VSSCs** and prevents **glutamate release**, like the action postulated for lamotrigine, to reduce excitotoxicity.',
+    targets: [{ t: 'vssc', action: 'blocker', note: 'Theoretical' }],
+    uses: ['**Amyotrophic lateral sclerosis**', 'Bipolar depression: theoretical rationale (excess glutamate)'],
+    facts: [{ ch: 'ch07', pages: '347', text: 'Table 7-3: epilepsy +, treat from below +, stabilize from below +/−.', sec: 's7-anticonvulsants' }]
   },
   {
     id: 'varenicline', name: 'Varenicline', group: 'Nicotinic partial agonist', cls: 'Nicotinic receptor partial agonist (NRPA)',
@@ -419,13 +1175,69 @@ SP.drugs = [
     uses: ['**Postpartum depression**', 'Rapid-acting antidepressant', 'Anesthetic'],
     chapters: [
       { ch: 'ch03', pages: '55' },
-      { ch: 'ch06', pages: '263–264' }
+      { ch: 'ch06', pages: '263–264' },
+      { ch: 'ch07', pages: '320–322' }
     ],
     facts: [
       { ch: 'ch03', pages: '55', text: 'The neuroactive steroid listed in Table 3-2 for postpartum depression, rapid antidepressant and anesthetic actions.', sec: 's3-drugs' },
-      { ch: 'ch06', pages: '263–264', text: 'A neuroactive steroid acting mainly at **extrasynaptic δ** GABA-A sites (tonic inhibition). Postpartum depression may follow the **fall** in neurosteroids after delivery; a **60-hour IV infusion** may reverse it.', sec: 's6-neurosteroids' }
+      { ch: 'ch06', pages: '263–264', text: 'A neuroactive steroid acting mainly at **extrasynaptic δ** GABA-A sites (tonic inhibition). Postpartum depression may follow the **fall** in neurosteroids after delivery; a **60-hour IV infusion** may reverse it.', sec: 's6-neurosteroids' },
+      { ch: 'ch07', pages: '320–322', text: 'Given IV as **brexanolone** for postpartum depression; neuroactive steroids act at both benzodiazepine-sensitive and **benzodiazepine-insensitive** GABA-A receptors.', sec: 's7-neurosteroids' }
     ],
     updates: [{ year: '2023', title: 'An oral neurosteroid', text: '**Zuranolone**, an oral neuroactive steroid GABA-A PAM, was approved in August 2023 as the first oral treatment for postpartum depression.', source: 'FDA, August 4, 2023' }]
+  },
+  {
+    id: 'brexanolone', name: 'Brexanolone', brand: 'Zulresso', group: 'Neuroactive steroid', cls: 'Neuroactive steroid (IV allopregnanolone)',
+    chapters: [{ ch: 'ch07', pages: '320–322' }],
+    nbn: 'GABA-A positive allosteric modulator (neurosteroid site)',
+    nts: ['gaba'],
+    short: 'Cyclodextrin-based IV allopregnanolone; a 60-hour infusion for postpartum depression.',
+    mechanism: 'A **cyclodextrin-based intravenous** formulation of **allopregnanolone**, a PAM at the neuroactive steroid site of **benzodiazepine-sensitive and -insensitive** GABA-A receptors. Restoring neurosteroid levels after their postpartum fall rapidly reverses depression.',
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Neurosteroid site; synaptic and extrasynaptic' }],
+    uses: ['**Postpartum depression**: 60-hour continuous IV infusion, rapid and sustained effect'],
+    facts: [{ ch: 'ch07', pages: '320–321', text: 'The 60-hour duration seems to give patients time to accommodate to lower neurosteroid levels without relapse.', sec: 's7-neurosteroids' }],
+    updates: [{ year: '2025', title: 'Withdrawn from the market', text: 'At Sage Therapeutics’ request, the FDA withdrew approval of Zulresso (brexanolone) effective April 14, 2025; the company said it was no longer marketed.', source: 'Federal Register, March 14, 2025' }]
+  },
+  {
+    id: 'zuranolone', name: 'Zuranolone (SAGE-217)', brand: 'Zurzuvae', aka: ['SAGE-217'], group: 'Neuroactive steroid', cls: 'Oral neuroactive steroid',
+    chapters: [{ ch: 'ch07', pages: '322' }],
+    nbn: 'GABA-A positive allosteric modulator (neurosteroid site)',
+    nts: ['gaba'],
+    short: 'Synthetic oral allopregnanolone analogue (SAGE-217 in the book).',
+    mechanism: 'A synthetic, **orally active allopregnanolone analogue**; like brexanolone it enhances GABA at GABA-A receptors via the neuroactive steroid site.',
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Neurosteroid site' }],
+    uses: ['In testing (at publication) as a **rapid-onset** treatment for major depressive disorder'],
+    updates: [{ year: '2023', title: 'Approved for postpartum depression', text: 'Approved in August 2023 as the first oral treatment for postpartum depression (once daily for 14 days); the major depressive disorder application received a complete response letter.', source: 'FDA, August 4, 2023' }]
+  },
+  {
+    id: 'buspirone', name: 'Buspirone', brand: 'BuSpar', group: '5HT1A partial agonist', cls: 'Anxiolytic (5HT1A partial agonist)',
+    chapters: [{ ch: 'ch07', pages: '296, 333' }],
+    nbn: 'Serotonin 5HT1A receptor partial agonist',
+    nts: ['serotonin'],
+    short: '5HT1A partial agonist sometimes added to SSRIs/SNRIs.',
+    mechanism: 'A **5HT1A partial agonist** (anxiolytic, Chapter 8). Adding it to an SSRI/SNRI resembles giving vilazodone or vortioxetine.',
+    targets: [{ t: '5ht1a', action: 'partial agonist' }],
+    uses: ['Anxiety (Chapter 8)', 'Augmentation of SSRIs/SNRIs in unipolar depression (not approved; less used than other 5HT1A agents)'],
+    updates: [{ year: '2023', title: 'A buspirone analogue approved for depression', text: 'Extended-release **gepirone** (Exxua), a pharmacologic analogue of buspirone and selective 5HT1A agonist, was approved for major depressive disorder in adults in September 2023.', source: 'FDA approval announced September 2023 (Psychiatric Times, September 29, 2023)' }]
+  },
+  {
+    id: 'thyroid-hormone', name: 'Thyroid hormones', group: 'Hormone', cls: 'Augmenting agent',
+    chapters: [{ ch: 'ch07', pages: '333' }],
+    nbn: 'Thyroid hormone receptor agonist',
+    nts: [],
+    short: 'Nuclear-receptor hormones once used to augment drugs for depression.',
+    mechanism: 'Bind **nuclear receptors** to form ligand-activated **transcription factors**; regulation of neuronal organization, arborization and synapse formation may boost monoamine transmission.',
+    targets: [{ t: 'thr', action: 'agonist' }],
+    uses: ['Augmentation of unipolar or bipolar depression treatment, to boost efficacy or speed onset (**out of favor**)']
+  },
+  {
+    id: 'modafinil', name: 'Modafinil', brand: 'Provigil', group: 'Wake-promoting agent', cls: 'Wake-promoting agent (DAT inhibitor)',
+    chapters: [{ ch: 'ch07', pages: '333, 335' }],
+    nbn: 'Dopamine reuptake inhibitor (DAT)',
+    nts: ['dopamine'],
+    short: 'A DAT inhibitor used with an SNRI as an “arousal combo.”',
+    mechanism: 'Described in Chapter 7 as **another DAT inhibitor**; fuller pharmacology appears in the sleep chapter.',
+    targets: [{ t: 'dat', action: 'inhibitor' }],
+    uses: ['With an SNRI for residual **fatigue, low energy and poor concentration/alertness** in depression (arousal combo)']
   },
   {
     id: 'memantine', name: 'Memantine', group: 'Dementia treatment', cls: 'NMDA glutamate antagonist',
@@ -477,15 +1289,28 @@ SP.drugs = [
     id: 'psilocybin', name: 'Psilocybin', group: 'Hallucinogen', cls: 'Psychedelic hallucinogen',
     nbn: 'Serotonin 5HT2A receptor agonist',
     short: '5HT2A agonist hallucinogen; model of serotonin-driven psychosis.',
-    mechanism: 'A powerful **5HT2A agonist** that overstimulates prefrontal and visual cortex 5HT2A receptors on glutamate pyramidal neurons, causing psychosis, dissociative experiences and especially **visual hallucinations**. These effects are **blocked by 5HT2A antagonists**. Drugs of abuse are covered in Chapter 13.',
+    mechanism: 'A prodrug rapidly **dephosphorylated** to **psilocin**. Both bind several serotonin receptors (5HT1A, 5HT2A, 5HT2C and others); hallucinations are linked to **5HT2A agonism**, reversed by 5HT2A antagonists but not selective D2 antagonists.',
     nts: ['serotonin'],
-    targets: [{ t: '5ht2a', action: 'agonist' }],
+    targets: [
+      { t: '5ht2a', action: 'agonist', s: 3 },
+      { t: '5ht2b', action: 'binds', s: 2 },
+      { t: '5ht6', action: 'binds', s: 1 },
+      { t: '5ht7', action: 'binds', s: 1 }
+    ],
     sideEffects: [
       { e: 'Visual hallucinations', via: '5HT2A agonism in visual cortex' },
       { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' }
     ],
-    chapters: [{ ch: 'ch04', pages: '78, 111, 131–133' }],
-    facts: [{ ch: 'ch04', pages: '78, 131–133', text: 'Listed with LSD as a psychedelic model of psychosis (Table 4-1) and as a 5HT2A agonist whose effects are blocked by 5HT2A antagonists.', sec: 's4-5ht-hyper' }]
+    chapters: [
+      { ch: 'ch04', pages: '78, 111, 131–133' },
+      { ch: 'ch07', pages: '355–358' }
+    ],
+    facts: [
+      { ch: 'ch04', pages: '78, 131–133', text: 'Listed with LSD as a psychedelic model of psychosis (Table 4-1) and as a 5HT2A agonist whose effects are blocked by 5HT2A antagonists.', sec: 's4-5ht-hyper' },
+      { ch: 'ch07', pages: '357', text: 'Bars follow psilocybin’s strip in **Figure 7-88** (5HT1E omitted). Psilocin’s strip differs: **5HT7 +++, 5HT2B +++, 5HT2A ++**, and + at 5HT1D, 5HT1E, 5HT2C, 5HT6, 5HT5, 5HT1B and 5HT1A.', sec: 's7-psychedelics' },
+      { ch: 'ch07', pages: '358', text: 'FDA **breakthrough therapy** designation for depression; studied for existential distress in terminal illness, substance abuse and PTSD.', sec: 's7-psychedelics' }
+    ],
+    updates: [{ year: '2026', title: 'Phase 3 program and filing', text: 'Compass Pathways reported positive phase 3 results for psilocybin (COMP360) in treatment-resistant depression; as of May 2026 a rolling new drug application was under way, with completion planned for late 2026. Not yet approved at that time.', source: 'Compass Pathways first-quarter 2026 report, May 13, 2026' }]
   },
   {
     id: 'mescaline', name: 'Mescaline', group: 'Hallucinogen', cls: 'Psychedelic hallucinogen',
@@ -515,54 +1340,195 @@ SP.drugs = [
     id: 'ketamine', name: 'Ketamine', group: 'NMDA antagonist', cls: 'Anesthetic; rapid-acting antidepressant',
     nbn: 'Glutamate NMDA receptor antagonist (open-channel)',
     short: 'Open-channel NMDA blocker; anesthetic and rapid-acting antidepressant.',
-    mechanism: 'Structurally related to PCP, ketamine is a **NAM** at NMDA receptors: it binds **inside the calcium channel**, can enter only **when the channel is open**, and prevents glutamate/glycine cotransmission from opening it. Details in Chapter 7.',
-    targets: [{ t: 'nmda', action: 'negative allosteric modulator', note: 'Open-channel site' }],
+    mechanism: 'A racemic (**R + S**) **NMDA antagonist** at the open-channel **PCP site**, with **σ1** binding; weak NET, μ-opioid and SERT actions are proposed but disputed. Subanesthetic infusions block NMDA on GABA interneurons, releasing a **burst of glutamate** that stimulates **AMPA** receptors and, via **mTOR** or **BDNF/VEGF** release, rapidly builds dendritic spines.',
+    targets: [
+      { t: 'nmda', action: 'negative allosteric modulator', s: 1, note: 'Open-channel PCP site' },
+      { t: 'sigma', action: 'binds', s: 1, note: 'σ1' },
+      { t: 'net', action: 'inhibitor', note: 'Weak; disputed' },
+      { t: 'mor', action: 'binds', note: 'Weak; disputed role' },
+      { t: 'sert', action: 'inhibitor', note: 'Weak' }
+    ],
     uses: ['Anesthetic', '**Treatment-resistant depression** and **suicidal thoughts**', 'Rapid-acting antidepressant'],
     chapters: [
       { ch: 'ch03', pages: '55, 66' },
-      { ch: 'ch04', pages: '78, 105–110' }
+      { ch: 'ch04', pages: '78, 105–110' },
+      { ch: 'ch07', pages: '328–331, 353' }
     ],
     facts: [
       { ch: 'ch03', pages: '66', text: 'Used as a treatment for **resistant depression and suicidal thoughts**.', sec: 's3-pam' },
-      { ch: 'ch04', pages: '78, 105–110', text: 'A model of NMDA-hypofunction psychosis (Table 4-1: **visual** hallucinations, paranoid delusions, no insight). Blocking NMDA receptors on prefrontal GABA interneurons is **acute and reversible**, unlike the neurodevelopmental defect of schizophrenia.', sec: 's4-nmda-hypo' }
+      { ch: 'ch04', pages: '78, 105–110', text: 'A model of NMDA-hypofunction psychosis (Table 4-1: **visual** hallucinations, paranoid delusions, no insight). Blocking NMDA receptors on prefrontal GABA interneurons is **acute and reversible**, unlike the neurodevelopmental defect of schizophrenia.', sec: 's4-nmda-hypo' },
+      { ch: 'ch07', pages: '328–331', text: 'Rapid, sometimes **anti-suicidal**, effects in patients failing many monoamine drugs; benefit usually fades over **a few days** but can be re-triggered by repeated infusions or extended by monoamine drugs. Used **off-label** after multiple failures.', sec: 's7-ketamine' }
     ],
     updates: [{ year: '2025', title: 'Esketamine monotherapy', text: 'Esketamine (the S-enantiomer of ketamine) nasal spray, approved in 2019 as add-on treatment, was approved in January 2025 as **monotherapy** for treatment-resistant depression.', source: 'FDA, January 2025' }],
     sideEffects: [{ e: 'Psychosis (visual hallucinations, paranoia)', via: 'NMDA blockade on prefrontal GABA interneurons → glutamate and dopamine excess' }]
   },
   {
+    id: 'esketamine', name: 'Esketamine', brand: 'Spravato', group: 'NMDA antagonist', cls: 'Rapid-acting antidepressant (S-ketamine)',
+    chapters: [{ ch: 'ch07', pages: '331–332' }],
+    nbn: 'Glutamate NMDA receptor antagonist (open-channel)',
+    nts: ['glutamate'],
+    short: 'Intranasal S-ketamine for treatment-resistant depression.',
+    mechanism: 'The **S enantiomer** of ketamine: an NMDA antagonist (with σ binding) given **intranasally**, rapidly active without IV infusion.',
+    targets: [
+      { t: 'nmda', action: 'antagonist', s: 1, note: 'Open-channel site' },
+      { t: 'sigma', action: 'binds', s: 1 }
+    ],
+    uses: ['**Treatment-resistant depression** as an augmenting agent: twice weekly at first, then weekly or every other week'],
+    facts: [{ ch: 'ch07', pages: '332', text: 'A study of up to a year of esketamine plus a switch to an untried oral monoamine drug showed sustained improvement and acceptable safety.', sec: 's7-ketamine' }],
+    updates: [{ year: '2025', title: 'Monotherapy approval', text: 'Approved in 2019 as add-on treatment, esketamine nasal spray was approved in January 2025 as **monotherapy** for treatment-resistant depression.', source: 'FDA, January 2025' }]
+  },
+  {
     id: 'dextromethorphan', name: 'Dextromethorphan', group: 'NMDA antagonist', cls: 'NMDA antagonist',
     nbn: 'Glutamate NMDA receptor antagonist (open-channel)',
     short: 'Open-channel NMDA antagonist.',
-    mechanism: 'An **antagonist at NMDA open-channel sites** (Table 3-2). Further actions are covered in Chapter 7.',
-    targets: [{ t: 'nmda', action: 'antagonist', note: 'Open-channel site' }],
+    mechanism: 'A **weak NMDA antagonist** with stronger binding at **SERT** and **σ1** (also α1D and weak μ-opioid). It is rapidly metabolized by **CYP2D6**, so it is combined with a 2D6 inhibitor: **bupropion** (also an NDRI, with possible synergy) or **quinidine**. A **deuterated** form extends its half-life.',
+    targets: [
+      { t: 'sert', action: 'inhibitor', s: 2 },
+      { t: 'sigma', action: 'binds', s: 1, note: 'σ1' },
+      { t: 'nmda', action: 'antagonist', s: 1, note: 'Open-channel site' },
+      { t: 'alpha1', action: 'binds', s: 1, note: 'α1D' },
+      { t: 'mor', action: 'binds', note: 'Weak' },
+      { t: 'cyp2d6', action: 'substrate', note: 'Rapid metabolism' }
+    ],
     uses: ['**Pseudobulbar affect**', 'Agitation in Alzheimer disease', 'Rapid-acting antidepressant (Table 3-2 class actions)'],
-    chapters: [{ ch: 'ch03', pages: '55' }],
-    facts: [{ ch: 'ch03', pages: '55', text: 'Listed with PCP, ketamine and dextromethadone at NMDA open-channel sites (Table 3-2).', sec: 's3-drugs' }],
-    updates: [{ year: '2022', title: 'Approved for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022.', source: 'FDA, August 2022' }]
+    chapters: [
+      { ch: 'ch03', pages: '55' },
+      { ch: 'ch07', pages: '353–355' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '55', text: 'Listed with PCP, ketamine and dextromethadone at NMDA open-channel sites (Table 3-2).', sec: 's3-drugs' },
+      { ch: 'ch07', pages: '353–354', text: 'With **quinidine**: approved for **pseudobulbar affect**. With **bupropion** (AXS-05): FDA breakthrough therapy for MDD and fast track for TRD and Alzheimer agitation (at publication). Bars follow the plus signs in **Figure 7-84**.', sec: 's7-dxm' }
+    ],
+    updates: [
+      { year: '2022', title: 'Approved for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022.', source: 'FDA, August 2022' },
+      { year: '2026', title: 'Approved for Alzheimer agitation', text: 'Axsome announced FDA approval of dextromethorphan–bupropion (Auvelity) for agitation associated with dementia due to Alzheimer disease on April 30, 2026.', source: 'Axsome Therapeutics, April 30, 2026' },
+      { year: '2024', title: 'Deuterated dextromethorphan–quinidine trial failed', text: 'AVP-786 (deuterated dextromethorphan with quinidine) missed its primary agitation endpoint in a phase 3 Alzheimer dementia trial reported in February 2024.', source: 'Otsuka, February 12, 2024' }
+    ]
   },
   {
-    id: 'dextromethadone', name: 'Dextromethadone', aka: ['esmethadone', 'REL-1017'], group: 'NMDA antagonist', cls: 'NMDA antagonist (investigational at publication)',
+    id: 'quinidine', name: 'Quinidine', group: 'CYP2D6 inhibitor', cls: 'CYP2D6 inhibitor (antiarrhythmic)',
+    chapters: [{ ch: 'ch07', pages: '353–354' }],
+    nts: [],
+    short: 'CYP2D6 inhibitor that boosts dextromethorphan levels.',
+    mechanism: 'Inhibits **CYP2D6** at doses below those with cardiovascular actions, preventing rapid breakdown of dextromethorphan.',
+    targets: [{ t: 'cyp2d6', action: 'inhibitor' }],
+    uses: ['With dextromethorphan: **pseudobulbar affect** (approved); depression and Alzheimer agitation (in trials at publication)']
+  },
+  {
+    id: 'dextromethadone', name: 'Dextromethadone', aka: ['Esmethadone', 'REL-1017'], group: 'NMDA antagonist', cls: 'NMDA antagonist (investigational at publication)',
     short: 'Open-channel NMDA antagonist studied as a rapid antidepressant.',
-    mechanism: 'An **antagonist at NMDA open-channel sites** (Table 3-2), studied as a rapid-acting antidepressant.',
-    targets: [{ t: 'nmda', action: 'antagonist', note: 'Open-channel site' }],
-    chapters: [{ ch: 'ch03', pages: '55' }],
-    facts: [{ ch: 'ch03', pages: '55', text: 'Listed among the NMDA open-channel antagonists in Table 3-2.', sec: 's3-drugs' }],
+    mechanism: 'The **dextro** enantiomer of methadone: a relatively more potent **NMDA antagonist** with much weaker μ-opioid agonism than levomethadone. Other binding (5HT2A, δ-opioid, SERT, σ) is less well characterized; μ action might enhance NMDA blockade via **NMDA–μ receptor dimers** (speculative).',
+    targets: [
+      { t: 'mor', action: 'agonist', s: 2, note: 'Weaker than levomethadone' },
+      { t: '5ht2a', action: 'binds', s: 1 },
+      { t: 'nmda', action: 'antagonist', s: 1 },
+      { t: 'sert', action: 'inhibitor', s: 1 },
+      { t: 'sigma', action: 'binds', s: 1 }
+    ],
+    chapters: [
+      { ch: 'ch03', pages: '55' },
+      { ch: 'ch07', pages: '355' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '55', text: 'Listed among the NMDA open-channel antagonists in Table 3-2.', sec: 's3-drugs' },
+      { ch: 'ch07', pages: '355', text: 'In clinical development (at publication) as a **rapid-onset** treatment for major depression with promising early results. Bars follow **Figure 7-86**; δ-opioid binding (+) has no separate target entry.', sec: 's7-dxm' }
+    ],
     updates: [{ year: '2024', title: 'Development halted', text: 'Relmada stopped its phase III trials of esmethadone (REL-1017) for adjunctive treatment of major depression in December 2024 after interim results showed little chance of success.', source: 'Relmada Therapeutics, December 2024' }]
   },
   {
-    id: 'mirtazapine', name: 'Mirtazapine', group: 'Antidepressant', cls: 'Antidepressant',
-    short: 'Among its actions, a 5HT3 antagonist.',
-    mechanism: 'Blocks **5HT3** receptors as part of a multi-receptor profile covered in Chapter 7.',
-    targets: [{ t: '5ht3', action: 'antagonist', note: 'Other actions added with Chapter 7' }],
-    uses: ['Antidepressant; possibly pro-cognitive (Table 3-2)'],
+    id: 'mirtazapine', name: 'Mirtazapine', brand: 'Remeron', group: 'Antidepressant', cls: 'α2 antagonist (NaSSA)',
+    short: 'α2 antagonist that also blocks 5HT2A, 5HT2C, 5HT3 and H1; blocks no transporter.',
+    mechanism: 'Blocks **no monoamine transporter**. **α2 antagonism** disinhibits both **NE** (autoreceptors) and **5HT** (heteroreceptors) release; **5HT2A** and **5HT2C** antagonism release DA and NE in the PFC and improve sleep; **5HT3** antagonism disinhibits glutamate, ACh and NE; **H1** antagonism sedates.',
+    targets: [
+      { t: 'alpha2', action: 'antagonist', note: 'Primary therapeutic action' },
+      { t: '5ht2a', action: 'antagonist' },
+      { t: '5ht2c', action: 'antagonist' },
+      { t: '5ht3', action: 'antagonist' },
+      { t: 'h1', action: 'antagonist' }
+    ],
+    uses: ['Antidepressant; possibly pro-cognitive (Table 3-2)', 'Unipolar depression worldwide', 'With an **SNRI** (“**California rocket fuel**”) for nonresponse to an SNRI alone'],
     chapters: [
       { ch: 'ch03', pages: '55' },
-      { ch: 'ch05', pages: '199, 232' }
+      { ch: 'ch05', pages: '199, 232' },
+      { ch: 'ch07', pages: '308–311, 333–334' }
     ],
     facts: [
       { ch: 'ch03', pages: '55', text: 'A **5HT3 antagonist** with pro-cognitive and antidepressant actions (Table 3-2).', sec: 's3-drugs' },
-      { ch: 'ch05', pages: '199, 232', text: 'Combined **H1 + 5HT2C** antagonism links it to weight gain; asenapine is structurally related and shares several of its binding properties.', sec: 's5-metabolic' }
+      { ch: 'ch05', pages: '199, 232', text: 'Combined **H1 + 5HT2C** antagonism links it to weight gain; asenapine is structurally related and shares several of its binding properties.', sec: 's5-metabolic' },
+      { ch: 'ch07', pages: '308–311', text: 'Five principal actions: **α2, 5HT2A, 5HT2C, 5HT3 and H1** antagonism. α2 antagonism gives a dual 5HT–NE action like an SNRI’s by a different mechanism, synergistic with reuptake blockade.', sec: 's7-mirtazapine' }
+    ],
+    nbn: 'Norepinephrine and serotonin receptor antagonist (α2, 5HT2A, 5HT2C, 5HT3, H1)',
+    nts: ['norepinephrine', 'serotonin', 'histamine'],
+    sideEffects: [{ e: 'Sedation, weight gain', via: 'H1 antagonism' }]
+  },
+  {
+    id: 'mianserin', name: 'Mianserin', group: 'Antidepressant', cls: 'α2 antagonist',
+    chapters: [{ ch: 'ch07', pages: '308–309' }],
+    nbn: 'Norepinephrine receptor antagonist (α2, α1) with 5HT2A, 5HT2C, 5HT3 and H1 antagonism',
+    nts: ['norepinephrine', 'serotonin', 'histamine'],
+    short: 'Mirtazapine-like α2 antagonist with added α1 blockade; not in the US.',
+    mechanism: 'Like mirtazapine (**α2, 5HT2A, 5HT2C, 5HT3, H1** antagonism) but with potent **α1 antagonism**, which mitigates serotonergic enhancement, so it boosts mainly **noradrenergic** transmission.',
+    targets: [
+      { t: 'alpha2', action: 'antagonist' },
+      { t: 'alpha1', action: 'antagonist', note: 'Potent' },
+      { t: '5ht2a', action: 'antagonist' },
+      { t: '5ht2c', action: 'antagonist' },
+      { t: '5ht3', action: 'antagonist' },
+      { t: 'h1', action: 'antagonist' }
+    ],
+    uses: ['Depression (worldwide **except the US**)'],
+    facts: [{ ch: 'ch07', pages: '308–309', text: 'Another α2 antagonist, **setiptiline**, is marketed in Japan.', sec: 's7-mirtazapine' }]
+  },
+  {
+    id: 'trazodone', name: 'Trazodone', brand: 'Desyrel; Oleptro', group: 'Antidepressant', cls: 'Serotonin antagonist/reuptake inhibitor (SARI)',
+    chapters: [{ ch: 'ch07', pages: '311–315, 327' }],
+    nbn: 'Serotonin receptor antagonist (5HT2A/2C) and reuptake inhibitor',
+    nts: ['serotonin', 'norepinephrine', 'histamine'],
+    short: 'SARI: a hypnotic at low doses and an antidepressant at high doses.',
+    mechanism: 'Blocks **5HT2A** and **5HT2C** receptors and **SERT**, plus 5HT1D, 5HT2B, 5HT7, **α1A/α1B**, α2B/α2C and **H1** receptors, with **5HT1A agonism**. Low doses engage only the highest-affinity targets (5HT2A, α1, H1: **hypnotic**); 150–600 mg saturates SERT and recruits the rest (**antidepressant**).',
+    targets: [
+      { t: '5ht2a', action: 'antagonist', s: 4 },
+      { t: 'alpha1', action: 'antagonist', s: 4, note: 'α1B highest; α1A high' },
+      { t: '5ht1b1d', action: 'antagonist', s: 4, note: '5HT1D high; 5HT1B low' },
+      { t: '5ht2b', action: 'antagonist', s: 3 },
+      { t: '5ht1a', action: 'agonist', s: 3 },
+      { t: 'h1', action: 'antagonist', s: 2 },
+      { t: 'sert', action: 'inhibitor', s: 2, note: 'Saturated at 150–600 mg' },
+      { t: '5ht2c', action: 'antagonist', s: 2 },
+      { t: 'alpha2', action: 'antagonist', s: 2, note: 'α2C, α2B' },
+      { t: '5ht7', action: 'antagonist', s: 2 },
+      { t: 'd3', action: 'binds', s: 1 },
+      { t: 'vssc', action: 'binds', s: 1, note: 'Rat sodium channel' },
+      { t: 'd2', action: 'binds', s: 1 },
+      { t: 'd1', action: 'binds', s: 1 },
+      { t: 'sigma', action: 'binds', s: 1, note: 'Nonselective σ' }
+    ],
+    uses: ['**Insomnia**, especially residual insomnia after SSRIs/SNRIs (25–150 mg, immediate release)', 'Unipolar depression (150–600 mg; once-nightly **XR** reduces daytime sedation)'],
+    sideEffects: [
+      { e: 'Daytime **sedation** at peak levels with IR antidepressant dosing', via: 'H1, α1, 5HT2A antagonism' },
+      { e: 'No sexual dysfunction or weight gain; less insomnia and anxiety than SSRIs', via: '5HT2A/5HT2C blockade' }
+    ],
+    facts: [
+      { ch: 'ch07', pages: '314', text: 'Bars follow the affinity (Ki) ranking in **Figure 7-45**, highest to lowest; actions beyond those named in the text are shown as “binds.”', sec: 's7-sari' },
+      { ch: 'ch07', pages: '312–313', text: '300 mg **XR** once nightly gives levels that never fall below the antidepressant minimum, with a peak similar to 100 mg IR (Figure 7-47).', sec: 's7-sari' }
     ]
+  },
+  {
+    id: 'nefazodone', name: 'Nefazodone', group: 'Antidepressant', cls: 'Serotonin antagonist/reuptake inhibitor (SARI)',
+    chapters: [{ ch: 'ch07', pages: '311, 314' }],
+    nbn: 'Serotonin receptor antagonist (5HT2A) and reuptake inhibitor',
+    nts: ['serotonin', 'norepinephrine'],
+    short: 'SARI with robust 5HT2A antagonism; rarely used because of liver toxicity.',
+    mechanism: 'Robust **5HT2A** antagonism with weaker **5HT2C** antagonism and **SERT** inhibition; its icon also shows **NET** inhibition and **α1** antagonism.',
+    targets: [
+      { t: '5ht2a', action: 'antagonist', note: 'Robust' },
+      { t: '5ht2c', action: 'antagonist', note: 'Weaker' },
+      { t: 'sert', action: 'inhibitor', note: 'Weaker' },
+      { t: 'net', action: 'inhibitor' },
+      { t: 'alpha1', action: 'antagonist' }
+    ],
+    uses: ['Unipolar depression (rarely used now)'],
+    sideEffects: [{ e: 'Rare **liver toxicity**', via: 'Idiosyncratic' }]
   },
   {
     id: 'chlorpromazine', name: 'Chlorpromazine', brand: 'Thorazine', aka: ['Largactil'], group: 'D2 antagonist (first generation)', cls: 'Conventional (first-generation) antipsychotic',
@@ -884,13 +1850,27 @@ SP.drugs = [
     facts: [{ ch: 'ch05', pages: '203', text: 'D3 antagonism and 5HT7 antagonism may explain its negative-symptom and antidepressant actions; its active isomer is in early clinical testing in the US.', sec: 's5-first-agents' }]
   },
   {
-    id: 'vortioxetine', name: 'Vortioxetine', group: 'Antidepressant', cls: 'Antidepressant',
-    short: 'Among its actions, a 5HT3 antagonist.',
-    mechanism: 'Blocks **5HT3** receptors as part of a multimodal profile covered in Chapter 7.',
-    targets: [{ t: '5ht3', action: 'antagonist', note: 'Other actions added with Chapter 7' }],
-    uses: ['Antidepressant; possibly pro-cognitive (Table 3-2)'],
-    chapters: [{ ch: 'ch03', pages: '55' }],
-    facts: [{ ch: 'ch03', pages: '55', text: 'A **5HT3 antagonist** with pro-cognitive and antidepressant actions (Table 3-2).', sec: 's3-drugs' }]
+    id: 'vortioxetine', name: 'Vortioxetine', brand: 'Trintellix', group: 'Antidepressant', cls: 'Multimodal serotonergic agent',
+    short: 'SERT inhibitor with 5HT3/5HT7 antagonism, 5HT1A agonism and 5HT1B/D partial agonism; pro-cognitive.',
+    mechanism: 'Inhibits **SERT**; **5HT3** antagonist (one of its most potent actions) and **5HT7** antagonist; **5HT1A agonist**; weak **5HT1B/D** partial agonist/antagonist. Some actions raise 5HT further (SERT, 5HT1B/D, 5HT7), others release **DA, NE, ACh and histamine** (5HT1A, 5HT1B heteroreceptors, 5HT3).',
+    targets: [
+      { t: 'sert', action: 'inhibitor' },
+      { t: '5ht3', action: 'antagonist', note: 'One of its most potent actions' },
+      { t: '5ht7', action: 'antagonist' },
+      { t: '5ht1a', action: 'agonist' },
+      { t: '5ht1b1d', action: 'partial agonist', note: 'Weak partial agonist to antagonist' }
+    ],
+    uses: ['Antidepressant; possibly pro-cognitive (Table 3-2)', 'Unipolar depression with **cognitive symptoms**: superior on the **DSST** (processing speed)'],
+    chapters: [
+      { ch: 'ch03', pages: '55' },
+      { ch: 'ch07', pages: '315–320' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '55', text: 'A **5HT3 antagonist** with pro-cognitive and antidepressant actions (Table 3-2).', sec: 's3-drugs' },
+      { ch: 'ch07', pages: '315–320', text: 'The DSST samples attention, executive function, memory and mostly **processing speed** (the “Fab Four”); vortioxetine improves it more than other antidepressants.', sec: 's7-vortioxetine' }
+    ],
+    nbn: 'Serotonin reuptake inhibitor and receptor modulator (multimodal)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine', 'acetylcholine', 'histamine']
   },
   {
     id: 'clozapine', name: 'Clozapine', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic (a “pine”)',
@@ -905,7 +1885,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch04', pages: '147', text: 'With high doses of standard drugs for schizophrenia, may help **psychotic or impulsive violence**; behavioral measures help impulsive violence and organized violence may need confinement.', sec: 's4-aggression' },
       { ch: 'ch05', pages: '222–225', text: 'Table 5-2 lists side effects needing expert management: neutropenia, constipation/paralytic ileus, sedation/orthostasis/tachycardia, sialorrhea, seizures, weight gain/dyslipidemia/hyperglycemia, myocarditis/cardiomyopathy/interstitial nephritis, DRESS/serositis.', sec: 's5-pines' },
-      { ch: 'ch05', pages: '219', text: 'One of the three agents with the widest 5HT2A–D2 separation and **D2 occupancy below 60%** at antipsychotic doses.', sec: 's5-binding' }
+      { ch: 'ch05', pages: '219', text: 'One of the three agents with the widest 5HT2A–D2 separation and **D2 occupancy below 60%** at antipsychotic doses.', sec: 's5-binding' },
+      { ch: 'ch07', pages: '328', text: 'Among the agents with the lowest DIP, attributed to robust **α1 + 5HT2A** antagonism.', sec: 's7-augment-sda' }
     ],
     nbn: 'Serotonin 5HT2A/dopamine D2 receptor antagonist (multimodal)',
     targets: [
@@ -971,8 +1952,14 @@ SP.drugs = [
       { e: 'Anticholinergic effects', via: 'Muscarinic antagonism' }
     ],
     pearls: ['Often used at **higher** doses than approved, guided by plasma levels', 'Forms: orally disintegrating, acute IM, **4-week depot**; inhaled form in development', 'Combination with **samidorphan** to limit weight gain'],
-    chapters: [{ ch: 'ch05', pages: '198, 225–226' }],
-    facts: [{ ch: 'ch05', pages: '225–226', text: 'Widely considered, by clinical experience rather than definitive trials, the **next most effective** after clozapine; 5HT2C plus weaker α2 antagonism, especially with fluoxetine’s 5HT2C antagonism, may explain efficacy in depression.', sec: 's5-pines' }],
+    chapters: [
+      { ch: 'ch05', pages: '198, 225–226' },
+      { ch: 'ch07', pages: '325–326, 343' }
+    ],
+    facts: [
+      { ch: 'ch05', pages: '225–226', text: 'Widely considered, by clinical experience rather than definitive trials, the **next most effective** after clozapine; 5HT2C plus weaker α2 antagonism, especially with fluoxetine’s 5HT2C antagonism, may explain efficacy in depression.', sec: 's5-pines' },
+      { ch: 'ch07', pages: '325–326, 343', text: 'Table 7-1: mania, maintenance; with **fluoxetine** for bipolar depression and treatment-resistant MDD; post hoc evidence in mania with mixed features. The combination acts as a potent SERT/5HT2C inhibitor but causes weight gain.', sec: 's7-augment-sda' }
+    ],
     updates: [{ year: '2021', title: 'Olanzapine–samidorphan approved', text: 'Olanzapine combined with the μ-opioid antagonist samidorphan (Lybalvi) was approved for schizophrenia and bipolar I disorder in May 2021.', source: 'FDA, May 28, 2021' }]
   },
   {
@@ -1009,8 +1996,14 @@ SP.drugs = [
       { e: 'Virtually no motor effects or prolactin elevation', via: 'Weak D2 binding' }
     ],
     pearls: ['**Baby Bear 50 mg**: H1 only; **Mama Bear 300 mg**: antidepressant mix; **Papa Bear 800 mg**: saturates H1 and 5HT2A, inconsistent >60% D2 occupancy'],
-    chapters: [{ ch: 'ch05', pages: '219–220, 226–231' }],
-    facts: [{ ch: 'ch05', pages: '227–231', text: 'Goldilocks and the three bears: different pharmacology at 50, 300 and 800 mg (Figure 5-46). Low D2 occupancy (< 60%) at antipsychotic doses.', sec: 's5-pines' }]
+    chapters: [
+      { ch: 'ch05', pages: '219–220, 226–231' },
+      { ch: 'ch07', pages: '326, 343' }
+    ],
+    facts: [
+      { ch: 'ch05', pages: '227–231', text: 'Goldilocks and the three bears: different pharmacology at 50, 300 and 800 mg (Figure 5-46). Low D2 occupancy (< 60%) at antipsychotic doses.', sec: 's5-pines' },
+      { ch: 'ch07', pages: '326, 343', text: 'Table 7-1: mania, maintenance, **bipolar depression** and **adjunct for MDD**; antidepressant action may come from norquetiapine at NET and 5HT2C plus 5HT2A, 5HT7, α2A antagonism and 5HT1A agonism.', sec: 's7-augment-sda' }
+    ]
   },
   {
     id: 'asenapine', name: 'Asenapine', brand: 'Saphris', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic (a “pine”)',
@@ -1045,8 +2038,14 @@ SP.drugs = [
       { e: 'Moderate weight gain, metabolic and motor effects', via: 'Class actions' }
     ],
     pearls: ['**Not absorbed if swallowed**: sublingual, usually twice daily; no food or drink for **10 minutes**', 'Also a **transdermal** formulation'],
-    chapters: [{ ch: 'ch05', pages: '198, 232–233' }],
-    facts: [{ ch: 'ch05', pages: '232–233', text: 'Rapid sublingual absorption gives rapid peak levels, unlike orally dissolving tablets that are absorbed later.', sec: 's5-pines' }]
+    chapters: [
+      { ch: 'ch05', pages: '198, 232–233' },
+      { ch: 'ch07', pages: '326' }
+    ],
+    facts: [
+      { ch: 'ch05', pages: '232–233', text: 'Rapid sublingual absorption gives rapid peak levels, unlike orally dissolving tablets that are absorbed later.', sec: 's5-pines' },
+      { ch: 'ch07', pages: '326', text: 'Table 7-1: approved for **bipolar mania** and **maintenance**; evidence in **mania with mixed features**.', sec: 's7-sda-mania' }
+    ]
   },
   {
     id: 'zotepine', name: 'Zotepine', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic (a “pine”)',
@@ -1112,8 +2111,14 @@ SP.drugs = [
       { e: 'Fewer motor effects at lower doses', via: 'D2 dose-dependence' }
     ],
     pearls: ['Depot injections lasting **2 or 4 weeks**; monitor plasma levels of risperidone + paliperidone', 'Orally disintegrating tablet and liquid'],
-    chapters: [{ ch: 'ch05', pages: '198, 234–235' }],
-    facts: [{ ch: 'ch05', pages: '234–235', text: 'Some prefer it for children and adolescents; it may need twice-daily dosing at initiation (especially in children or the elderly) to avoid sedation and orthostasis.', sec: 's5-dones' }]
+    chapters: [
+      { ch: 'ch05', pages: '198, 234–235' },
+      { ch: 'ch07', pages: '326' }
+    ],
+    facts: [
+      { ch: 'ch05', pages: '234–235', text: 'Some prefer it for children and adolescents; it may need twice-daily dosing at initiation (especially in children or the elderly) to avoid sedation and orthostasis.', sec: 's5-dones' },
+      { ch: 'ch07', pages: '326', text: 'Table 7-1: approved for **bipolar mania** and **maintenance**.', sec: 's7-sda-mania' }
+    ]
   },
   {
     id: 'paliperidone', name: 'Paliperidone', brand: 'Invega', aka: ['9-hydroxy-risperidone'], group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic (a “done”)',
@@ -1175,8 +2180,14 @@ SP.drugs = [
     uses: ['Schizophrenia/maintenance', 'Bipolar mania/maintenance', '**IM** form for urgent use'],
     sideEffects: [{ e: 'Little or no weight gain or metabolic effect', via: 'Lacks H1/5HT2C and “receptor X” liability' }],
     pearls: ['Short acting: more than once daily, **with food**', 'QTc concerns now seem **exaggerated**: no dose-dependent QTc prolongation, few drugs raise its levels'],
-    chapters: [{ ch: 'ch05', pages: '198, 236' }],
-    facts: [{ ch: 'ch05', pages: '236', text: 'Unlike iloperidone, zotepine, sertindole and amisulpride, ziprasidone does **not** cause dose-dependent QTc prolongation.', sec: 's5-dones' }]
+    chapters: [
+      { ch: 'ch05', pages: '198, 236' },
+      { ch: 'ch07', pages: '326' }
+    ],
+    facts: [
+      { ch: 'ch05', pages: '236', text: 'Unlike iloperidone, zotepine, sertindole and amisulpride, ziprasidone does **not** cause dose-dependent QTc prolongation.', sec: 's5-dones' },
+      { ch: 'ch07', pages: '326', text: 'Table 7-1: approved for **bipolar mania** and **maintenance**; evidence in **mania with mixed features**.', sec: 's7-sda-mania' }
+    ]
   },
   {
     id: 'sertindole', name: 'Sertindole', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic',
@@ -1235,8 +2246,14 @@ SP.drugs = [
       { t: '5ht2a', action: 'antagonist', s: 4 }
     ],
     uses: ['Schizophrenia (Asia), twice daily'],
-    chapters: [{ ch: 'ch05', pages: '241' }],
-    facts: [{ ch: 'ch05', pages: '241', text: 'Its D3 potency suggests utility for negative symptoms and bipolar depression, not yet well studied.', sec: 's5-others' }]
+    chapters: [
+      { ch: 'ch05', pages: '241' },
+      { ch: 'ch07', pages: '344' }
+    ],
+    facts: [
+      { ch: 'ch05', pages: '241', text: 'Its D3 potency suggests utility for negative symptoms and bipolar depression, not yet well studied.', sec: 's5-others' },
+      { ch: 'ch07', pages: '344', text: 'With cariprazine, one of only two agents whose **D3 affinity** is orders of magnitude higher than dopamine’s (Figure 7-72).', sec: 's7-bipolar-depression' }
+    ]
   },
   {
     id: 'roluperidone', name: 'Roluperidone', aka: ['MIN-101'], group: 'Investigational drug for psychosis', cls: '5HT2A/σ2 antagonist (investigational)',
@@ -1320,7 +2337,10 @@ SP.drugs = [
     ],
     pearls: ['18- to 33-hour half-life, but usually twice daily with **slow titration**, which delays onset'],
     chapters: [{ ch: 'ch05', pages: '198, 236' }],
-    facts: [{ ch: 'ch05', pages: '236', text: 'Its distinguishing features are very low motor side effects, low dyslipidemia, moderate weight gain and potent α1 antagonism.', sec: 's5-dones' }],
+    facts: [
+      { ch: 'ch05', pages: '236', text: 'Its distinguishing features are very low motor side effects, low dyslipidemia, moderate weight gain and potent α1 antagonism.', sec: 's5-dones' },
+      { ch: 'ch07', pages: '328', text: 'Among the agents with the lowest DIP, attributed to robust **α1 + 5HT2A** antagonism.', sec: 's7-augment-sda' }
+    ],
     updates: [{ year: '2024', title: 'Bipolar I indication', text: 'Iloperidone was approved for acute treatment of manic or mixed episodes of bipolar I disorder in adults in April 2024.', source: 'FDA, April 2, 2024' }]
   },
   {
@@ -1346,8 +2366,14 @@ SP.drugs = [
       { e: 'Motor effects and sedation (less if dosed at night)', via: 'D2 blockade' }
     ],
     pearls: ['**NRX101** (Cyclurad) adds D-cycloserine for acute suicidality and bipolar depression (early positive findings)'],
-    chapters: [{ ch: 'ch05', pages: '198, 236–237' }],
-    facts: [{ ch: 'ch05', pages: '236–237', text: 'Synergy among several potential antidepressant properties with good tolerability makes it one of the preferred bipolar-depression agents where approved.', sec: 's5-dones' }]
+    chapters: [
+      { ch: 'ch05', pages: '198, 236–237' },
+      { ch: 'ch07', pages: '343' }
+    ],
+    facts: [
+      { ch: 'ch05', pages: '236–237', text: 'Synergy among several potential antidepressant properties with good tolerability makes it one of the preferred bipolar-depression agents where approved.', sec: 's5-dones' },
+      { ch: 'ch07', pages: '343', text: 'Table 7-1: approved for **bipolar depression**; never tested in mania. The only agent with a large randomized trial in **unipolar depression with mixed features**; used at lower doses than for psychosis.', sec: 's7-bipolar-depression' }
+    ]
   },
   {
     id: 'lumateperone', name: 'Lumateperone', brand: 'Caplyta', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic (the “rone”)',
@@ -1401,10 +2427,14 @@ SP.drugs = [
       { e: 'Not generally sedating; little or no weight gain (some in children)', via: 'No M1/H1-type actions' }
     ],
     pearls: ['Oral, liquid, orally disintegrating; **4-week** and **4- to 8-week** long-acting injections (the latter with a day-1 loading injection)'],
-    chapters: [{ ch: 'ch05', pages: '193, 239' }],
+    chapters: [
+      { ch: 'ch05', pages: '193, 239' },
+      { ch: 'ch07', pages: '325–327' }
+    ],
     facts: [
       { ch: 'ch05', pages: '193', text: 'The result of “throwing a dart” closer to the antagonist end after OPC4392 and bifeprunox were too agonistic; some question its efficacy in the most severe psychosis (never proven).', sec: 's5-pa' },
-      { ch: 'ch05', pages: '239', text: '5HT1A partial agonism and 5HT2C/5HT7 antagonism at low doses are theoretical antidepressant mechanisms.', sec: 's5-pips' }
+      { ch: 'ch05', pages: '239', text: '5HT1A partial agonism and 5HT2C/5HT7 antagonism at low doses are theoretical antidepressant mechanisms.', sec: 's5-pips' },
+      { ch: 'ch07', pages: '325–327', text: 'Table 7-1: approved for **bipolar mania** and **maintenance** and as an **adjunct for MDD**; one of the most prescribed augmenters in the US; **5HT1A partial agonism** (plus D3, 5HT7, 5HT2C, α2) may explain antidepressant action; some **akathisia**; not approved for bipolar depression.', sec: 's7-augment-sda' }
     ]
   },
   {
@@ -1435,11 +2465,13 @@ SP.drugs = [
     nts: ['dopamine', 'serotonin'],
     chapters: [
       { ch: 'ch04', pages: '146' },
-      { ch: 'ch05', pages: '197, 239–240' }
+      { ch: 'ch05', pages: '197, 239–240' },
+      { ch: 'ch07', pages: '327–328' }
     ],
     facts: [
       { ch: 'ch04', pages: '146', text: 'Chapter 4 notes that **treatments for agitation in dementia are evolving separately** from those for psychosis in dementia and in schizophrenia.', sec: 's4-aggression' },
-      { ch: 'ch05', pages: '197, 239–240', text: 'Positive results for agitation in dementia suggest it may have a satisfactory risk:benefit profile; a positive study with sertraline in PTSD was a promising exception among anxiety/PTSD uses.', sec: 's5-pips' }
+      { ch: 'ch05', pages: '197, 239–240', text: 'Positive results for agitation in dementia suggest it may have a satisfactory risk:benefit profile; a positive study with sertraline in PTSD was a promising exception among anxiety/PTSD uses.', sec: 's5-pips' },
+      { ch: 'ch07', pages: '327–328', text: 'Table 7-1: approved as an **adjunct for MDD** only. Stronger 5HT2A, 5HT1A and **α1** binding than aripiprazole (possibly less akathisia); α1 + 5HT2A synergy may aid antidepressant action and evidence in Alzheimer agitation and PTSD.', sec: 's7-augment-sda' }
     ],
     updates: [
       { year: '2023', title: 'Approved for Alzheimer agitation', text: 'Approved by the FDA for **agitation associated with dementia due to Alzheimer disease**, the first drug approved for this indication in the US.', source: 'FDA, May 10, 2023' },
@@ -1492,8 +2524,14 @@ SP.drugs = [
       { e: 'Very low weight gain or metabolic disturbance', via: 'Low-risk tier' }
     ],
     pearls: ['Two long-lived active metabolites: potential weekly to monthly **“oral depot”**'],
-    chapters: [{ ch: 'ch05', pages: '193, 198, 240' }],
-    facts: [{ ch: 'ch05', pages: '240', text: 'D3 partial agonism shows preclinical promise for cognition, mood, emotion, reward/substance use and negative symptoms.', sec: 's5-pips' }],
+    chapters: [
+      { ch: 'ch05', pages: '193, 198, 240' },
+      { ch: 'ch07', pages: '343–345' }
+    ],
+    facts: [
+      { ch: 'ch05', pages: '240', text: 'D3 partial agonism shows preclinical promise for cognition, mood, emotion, reward/substance use and negative symptoms.', sec: 's5-pips' },
+      { ch: 'ch07', pages: '343–345', text: 'Table 7-1: approved for **bipolar mania** and **bipolar depression**; evidence in mania with mixed features and depression with mixed features. The most potent **D3** binder: VTA D3 blockade releases DA onto prefrontal D1 receptors.', sec: 's7-bipolar-depression' }
+    ],
     updates: [{ year: '2022', title: 'Adjunctive treatment of depression', text: 'Approved as an adjunct to antidepressants for major depressive disorder in adults in December 2022.', source: 'AbbVie/FDA, December 16, 2022' }]
   },
   {
@@ -1503,8 +2541,14 @@ SP.drugs = [
     mechanism: 'Binds the **α2δ** protein of voltage-sensitive calcium channels, which may regulate how the channel opens and closes. Reducing calcium entry at presynaptic N and P/Q channels can keep vesicles tethered and reduce release in states of excessive neurotransmission. Details in Chapters 8–10.',
     targets: [{ t: 'a2d', action: 'modulator', note: 'Binds α2δ' }],
     uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)'],
-    chapters: [{ ch: 'ch03', pages: '71' }],
-    facts: [{ ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' }]
+    chapters: [
+      { ch: 'ch03', pages: '71' },
+      { ch: 'ch07', pages: '347, 352' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' },
+      { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' }
+    ]
   },
   {
     id: 'gabapentin', name: 'Gabapentin', group: 'Anticonvulsant', cls: 'Anticonvulsant (α2δ ligand)',
@@ -1513,7 +2557,13 @@ SP.drugs = [
     mechanism: 'Binds the **α2δ** protein of voltage-sensitive calcium channels, like pregabalin. Details in Chapters 8–10.',
     targets: [{ t: 'a2d', action: 'modulator', note: 'Binds α2δ' }],
     uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)'],
-    chapters: [{ ch: 'ch03', pages: '71' }],
-    facts: [{ ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' }]
+    chapters: [
+      { ch: 'ch03', pages: '71' },
+      { ch: 'ch07', pages: '347, 352' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' },
+      { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' }
+    ]
   }
 ];

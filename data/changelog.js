@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 7,
+    date: "2026-10-08",
+    title: "Chapter 7: Treatments for Mood Disorders",
+    summary: "Chapter 7 adds every major drug mechanism for unipolar depression, treatment resistance, and the bipolar spectrum, with 48 new drug entries.",
+    items: [
+      { type: "chapter", ch: "ch07", text: "Chapter 7: study guide (32 sections), high-yield summary, mechanism, drug and clinical cards, and 60 board-style questions.", href: "#/c/ch07/guide", link: "Open Chapter 7" },
+      { type: "update", text: "Drug database: the six SSRIs, vilazodone, five SNRIs, bupropion, agomelatine, mianserin, trazodone, nefazodone, brexanolone, zuranolone, esketamine, buspirone, all Table 7-2 tricyclics, the MAOIs, carbamazepine, lamotrigine, oxcarbazepine, eslicarbazepine, topiramate, riluzole, modafinil and quinidine; fuller profiles for fluoxetine, mirtazapine, vortioxetine, lithium, valproate, ketamine, dextromethorphan, dextromethadone, MDMA and psilocybin. New targets: nitric oxide synthase, inositol monophosphatase, protein kinase C, thyroid hormone receptor and VEGF.", href: "#/compare/escitalopram,duloxetine,bupropion", link: "Compare three agents" },
+      { type: "feature", text: "Symptoms & circuits: eight treatment maps for residual symptoms, bipolar depression, mixed features and postpartum depression, and Chapter 6 mood and mania maps now list Chapter 7 treatments.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Post-publication update boxes: gepirone (2023), zuranolone and brexanolone, esketamine monotherapy (2025), cariprazine and lumateperone depression approvals, brexpiprazole decisions, dextromethorphan–bupropion for depression (2022) and Alzheimer agitation (2026), AVP-786 and esmethadone results, MDMA (2024) and psilocybin (2026).", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 6,
     date: "2026-10-08",
     title: "Chapter 6: Mood Disorders, Norepinephrine and GABA",

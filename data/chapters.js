@@ -54,7 +54,13 @@ SP.manifest = [
     summary: 'The mood spectrum, mixed features and telling unipolar from bipolar depression; the norepinephrine neuron and α2 brake; GABA and its GABA-A subtypes for phasic and tonic inhibition and neuroactive steroids; the monoamine, receptor and neuroplasticity hypotheses with BDNF, the HPA axis, neuroinflammation and circadian rhythms; and matching each mood symptom to a circuit for symptom-based treatment.',
     files: SP.CHAPTER_FILES
   },
-  { id: 'ch07', number: 7, ready: false, pages: '283–358', title: 'Treatments for Mood Disorders: So-Called “Antidepressants” and “Mood Stabilizers”', short: 'Antidepressants and mood stabilizers', summary: 'Mechanisms of antidepressants and mood stabilizers, rapid-acting agents, combinations and treatment strategy.' },
+  {
+    id: 'ch07', number: 7, ready: true, pages: '283–358',
+    title: 'Treatments for Mood Disorders: So-Called “Antidepressants” and “Mood Stabilizers”',
+    short: 'Antidepressants and mood stabilizers',
+    summary: 'Response versus remission and why relapse grows with each step; treating and stabilizing from above and below; SSRIs and their delayed 5HT1A cascade, SPARIs, SNRIs and their prefrontal dopamine boost, bupropion, agomelatine, mirtazapine, trazodone and vortioxetine; neuroactive steroids, ketamine and esketamine; augmentation, combinations, TCAs and MAOIs; serotonin/dopamine agents, lithium and anticonvulsants across the bipolar spectrum; and dextromethorphan, dextromethadone and hallucinogen-assisted psychotherapy.',
+    files: SP.CHAPTER_FILES
+  },
   { id: 'ch08', number: 8, ready: false, pages: '359–378', title: 'Anxiety, Trauma, and Treatment', short: 'Anxiety and trauma', summary: 'Fear circuits, anxiety and trauma-related disorders, and their treatments.' },
   { id: 'ch09', number: 9, ready: false, pages: '379–400', title: 'Chronic Pain and Its Treatment', short: 'Chronic pain', summary: 'Pain pathways, central sensitization, and treatments that target them.' },
   { id: 'ch10', number: 10, ready: false, pages: '401–448', title: 'Disorders of Sleep and Wakefulness and Their Treatment: Neurotransmitter Networks for Histamine and Orexin', short: 'Sleep and wakefulness', summary: 'The sleep–wake circuitry, histamine and orexin, insomnia and excessive sleepiness, and their treatments.' },

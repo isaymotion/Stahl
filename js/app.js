@@ -1909,7 +1909,7 @@
     'agonist': { css: 'stim', label: 'Agonist' }, 'full agonist': { css: 'stim', label: 'Full agonist' }, 'releaser': { css: 'stim', label: 'Releaser' },
     'partial agonist': { css: 'partial', label: 'Partial agonist' },
     'modulator': { css: 'mod', label: 'Modulator' }, 'positive allosteric modulator': { css: 'mod', label: 'Positive allosteric modulator' },
-    'negative allosteric modulator': { css: 'block', label: 'Negative allosteric modulator' }, 'substrate': { css: 'mod', label: 'Substrate' }, 'binds': { css: 'mod', label: 'Binds' }
+    'negative allosteric modulator': { css: 'block', label: 'Negative allosteric modulator' }, 'substrate': { css: 'mod', label: 'Substrate' }, 'binds': { css: 'mod', label: 'Binds' }, 'inducer': { css: 'stim', label: 'Inducer' }
   };
   function actionOf(a) { return ACTIONS[(a || '').toLowerCase()] || { css: 'mod', label: a || 'Acts at' }; }
   function barHTML(x) {

@@ -15,7 +15,9 @@ SP.targets = [
       { ch: 'ch02', pages: '31–33', text: 'Member of the **SLC6** gene family. Besides serotonin it carries **Ecstasy (MDMA)**, a “false substrate.”', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '33', text: 'Stahl’s **wagon** analogy: sodium inflates the tires so serotonin can bind; an SSRI such as fluoxetine sits in the **allosteric “front seat”**, lowering affinity for serotonin. SSRIs do not bind the substrate site and are **not transported**.', sec: 's2-monoamine' },
       { ch: 'ch04', pages: '114–115', text: 'All 5HT neurons are thought to contain SERT; functional **polymorphisms** of its gene may predict response and side effects with SERT blockers.', sec: 's4-5ht-synth' },
-      { ch: 'ch05', pages: '237', text: '**Lumateperone** binds SERT about as potently as D2; ziprasidone binds it weakly.', sec: 's5-dones' }
+      { ch: 'ch05', pages: '237', text: '**Lumateperone** binds SERT about as potently as D2; ziprasidone binds it weakly.', sec: 's5-dones' },
+      { ch: 'ch07', pages: '289–292', text: 'SSRIs must occupy perhaps **80–90%** of SERTs to work. Blocking SERT raises 5HT first at the **somatodendritic** area; delayed 5HT1A autoreceptor desensitization then disinhibits release at terminals.', sec: 's7-ssri' },
+      { ch: 'ch07', pages: '292–296', text: 'All six SSRIs share selective SERT inhibition; their **secondary properties** differ (Figures 7-16 to 7-21).', sec: 's7-ssri-agents' }
     ]
   },
   {
@@ -28,7 +30,9 @@ SP.targets = [
       { ch: 'ch02', pages: '34', text: '“Stimulants” for ADHD (**methylphenidate, amphetamine**) and **cocaine** act on **DAT and NET**.', sec: 's2-monoamine' },
       { ch: 'ch04', pages: '80–81', text: 'Takes up dopamine that diffuses from DAT-poor synapses (e.g., prefrontal cortex) as a **“false” substrate**.', sec: 's4-da-synth' },
       { ch: 'ch05', pages: '227–229', text: '**Norquetiapine** inhibits NET, a key part of quetiapine’s antidepressant action; ziprasidone and zotepine weakly inhibit NET.', sec: 's5-pines' },
-      { ch: 'ch06', pages: '253–254', text: 'The NE “vacuum cleaner” that removes NE from the synapse without destroying it.', sec: 's6-ne' }
+      { ch: 'ch06', pages: '253–254', text: 'The NE “vacuum cleaner” that removes NE from the synapse without destroying it.', sec: 's6-ne' },
+      { ch: 'ch07', pages: '299–301', text: 'The PFC has few DATs, so DA is cleared there by **NET** (which has higher affinity for DA than NE) or COMT. NET inhibition therefore raises **NE and DA in the PFC**: the “half” of SNRIs’ two-and-a-half actions.', sec: 's7-snri' },
+      { ch: 'ch07', pages: '305', text: 'Therapeutic and NE-mediated side effects may appear with perhaps as little as **50%** NET occupancy.', sec: 's7-ndri' }
     ]
   },
   {
@@ -41,7 +45,8 @@ SP.targets = [
       { ch: 'ch01', pages: '8', text: 'Because the **prefrontal cortex has very few DATs**, dopamine released there spills over to neighboring receptors: the book’s main example of **volume neurotransmission**. The **striatum** has DATs in abundance.', sec: 's1-volume' },
       { ch: 'ch02', pages: '31–32', text: 'Carries **norepinephrine, epinephrine and amphetamine** as well as dopamine; DAT has **high affinity for amphetamines**.', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '34', text: 'Methylphenidate, amphetamine and cocaine all act on **DAT and NET**.', sec: 's2-monoamine' },
-      { ch: 'ch04', pages: '80–81', text: 'The **principal** route of dopamine inactivation where present (striatum), with COMT secondary. Some dopamine neurons lack DAT, unlike serotonin neurons, which are all thought to have SERT.', sec: 's4-da-synth' }
+      { ch: 'ch04', pages: '80–81', text: 'The **principal** route of dopamine inactivation where present (striatum), with COMT secondary. Some dopamine neurons lack DAT, unlike serotonin neurons, which are all thought to have SERT.', sec: 's4-da-synth' },
+      { ch: 'ch07', pages: '304–306', text: 'Rapid, brief **≥ 50%** DAT occupancy causes euphoria and reinforcement (cocaine); slow, long-lasting occupancy is less abusable. Bupropion occupies only about **10–30%** of striatal DATs.', sec: 's7-ndri' }
     ]
   },
   {
@@ -172,7 +177,8 @@ SP.targets = [
     coupling: 'D2-like: **inhibitory**, negatively linked to adenylate cyclase',
     facts: [
       { ch: 'ch04', pages: '81–85', text: '**More sensitive** to dopamine than D2, so a lower synaptic concentration turns off further release; mesolimbic neurons carry D3 autoreceptors.', sec: 's4-da-receptors' },
-      { ch: 'ch05', pages: '202–203, 239–241', text: '**Cariprazine** and **blonanserin** have higher affinity for D3 than dopamine itself; sulpiride and amisulpride add D3 antagonist actions. D3 antagonism/partial agonism may improve **negative, affective and cognitive** symptoms by raising prefrontal dopamine.', sec: 's5-pips' }
+      { ch: 'ch05', pages: '202–203, 239–241', text: '**Cariprazine** and **blonanserin** have higher affinity for D3 than dopamine itself; sulpiride and amisulpride add D3 antagonist actions. D3 antagonism/partial agonism may improve **negative, affective and cognitive** symptoms by raising prefrontal dopamine.', sec: 's5-pips' },
+      { ch: 'ch07', pages: '343–345', text: 'Only **cariprazine** and **blonanserin** bind D3 with affinity orders of magnitude above dopamine’s. Blocking presynaptic D3 autoreceptors in the **VTA** releases DA onto prefrontal **D1** receptors: a proposed antidepressant mechanism (Figures 7-72, 7-73).', sec: 's7-bipolar-depression' }
     ],
     stim: ['**Partial agonism** (cariprazine): may improve **negative symptoms**, mood, cognition and reward/substance use (preclinical)'],
     block: ['Antagonism of limbic D3: may reduce emotional-striatum overactivity; at somatodendritic D3: more **prefrontal dopamine**', 'Candidate **antidepressant** mechanism (sulpiride, amisulpride; Chapter 7)']
@@ -201,7 +207,9 @@ SP.targets = [
       { ch: 'ch02', pages: '40', text: 'Stimulated **indirectly** at presynaptic somatodendritic autoreceptors when SSRIs or SNRIs block serotonin reuptake (Table 2-5).', sec: 's2-receptor-tables' },
       { ch: 'ch04', pages: '115–119', text: 'As a **somatodendritic autoreceptor** in the raphe it provides negative feedback; its **downregulation/desensitization** is thought critical to reuptake-blocker antidepressant action.', sec: 's4-5ht-pre' },
       { ch: 'ch04', pages: '122–125', text: 'Always inhibitory, but often on **prefrontal GABA interneurons**, so stimulation **increases NE, DA and ACh** release. Many drugs for psychosis, mood and anxiety are 5HT1A agonists or partial agonists.', sec: 's4-5ht-post' },
-      { ch: 'ch05', pages: '193–195', text: 'The **brake** on cortical glutamate neurons (5HT2A is the accelerator): partial agonism releases dopamine in motor striatum and prefrontal cortex, reducing motor effects and helping negative and affective symptoms. Brexpiprazole’s most potent property.', sec: 's5-5ht1a' }
+      { ch: 'ch05', pages: '193–195', text: 'The **brake** on cortical glutamate neurons (5HT2A is the accelerator): partial agonism releases dopamine in motor striatum and prefrontal cortex, reducing motor effects and helping negative and affective symptoms. Brexpiprazole’s most potent property.', sec: 's5-5ht1a' },
+      { ch: 'ch07', pages: '289–292', text: 'Desensitization of **somatodendritic 5HT1A autoreceptors** times the onset of SSRI action.', sec: 's7-ssri' },
+      { ch: 'ch07', pages: '296–298', text: 'Adding 5HT1A partial agonism to SERT inhibition (SPARI) speeds autoreceptor desensitization; downstream DA release may reduce sexual dysfunction.', sec: 's7-spari' }
     ]
   },
   {
@@ -211,7 +219,8 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '39', text: 'Antagonist or partial agonist actions: possible pro-cognitive and antidepressant effects (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch04', pages: '117–119', text: '**5HT1B/D** is the serotonin neuron’s **terminal autoreceptor**: synaptic 5HT shuts off further release.', sec: 's4-5ht-pre' },
-      { ch: 'ch04', pages: '125', text: '5HT1B **heteroreceptors** on NE, DA, histamine and ACh terminals **inhibit** their release; a few 5HT1B antagonists that may boost these transmitters treat depression.', sec: 's4-5ht-post' }
+      { ch: 'ch04', pages: '125', text: '5HT1B **heteroreceptors** on NE, DA, histamine and ACh terminals **inhibit** their release; a few 5HT1B antagonists that may boost these transmitters treat depression.', sec: 's4-5ht-post' },
+      { ch: 'ch07', pages: '317–318', text: 'Presynaptic **5HT1B/D autoreceptors** blunt 5HT build-up after SERT blockade; 5HT1B **heteroreceptors** on ACh, HA, DA and NE terminals inhibit their release. Vortioxetine’s partial agonism/antagonism removes both brakes.', sec: 's7-vortioxetine' }
     ],
     stim: ['Terminal autoreceptor: **shuts off 5HT release**; heteroreceptors: **less NE, DA, HA and ACh** release (Chapter 4)']
   },
@@ -227,7 +236,8 @@ SP.targets = [
       { ch: 'ch04', pages: '131–141', text: 'Central to the **serotonin hyperfunction** hypothesis: overstimulated by LSD, psilocybin and mescaline; **upregulated** in Parkinson’s disease psychosis; **unopposed** after loss of GABA inhibition in dementia. 5HT2A antagonists treat PDP and dementia-related psychosis.', sec: 's4-5ht-hyper' },
       { ch: 'ch05', pages: '184–187', text: 'On three populations of cortical glutamate neurons: blocking them **lowers** mesostriatal dopamine (antipsychotic), but **raises** nigrostriatal (fewer motor effects) and mesocortical dopamine (negative/cognitive/affective benefit).', sec: 's5-three-pathways' },
       { ch: 'ch05', pages: '187–189', text: 'On pituitary **lactotrophs**, serotonin at 5HT2A stimulates prolactin, so 5HT2A antagonism offsets D2-blocker hyperprolactinemia.', sec: 's5-5ht2a-prolactin' },
-      { ch: 'ch05', pages: '204–222', text: 'Almost all drugs for psychosis bind **5HT2A more potently than D2**, except the D2 partial agonists.', sec: 's5-binding' }
+      { ch: 'ch05', pages: '204–222', text: 'Almost all drugs for psychosis bind **5HT2A more potently than D2**, except the D2 partial agonists.', sec: 's5-binding' },
+      { ch: 'ch07', pages: '311–314', text: 'SSRI-raised 5HT at 5HT2A (and 5HT2C) receptors may cause **sexual dysfunction, insomnia and anxiety**; SARIs block it. 5HT2A antagonism increases **slow-wave sleep**.', sec: 's7-sari' }
     ]
   },
   {
@@ -245,7 +255,8 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '39–40', text: '**Antagonist** actions are antidepressant (Table 2-4); stimulated indirectly by MDMA-induced serotonin release (Table 2-5).', sec: 's2-receptor-tables' },
       { ch: 'ch04', pages: '126–127', text: 'Excitatory, postsynaptic and mostly on **GABA interneurons**, so serotonin here **inhibits NE and DA** release in prefrontal cortex. Agonists treat **obesity**; antagonists treat psychosis and mood disorders.', sec: 's4-5ht-post' },
-      { ch: 'ch05', pages: '198–199', text: 'With **H1** antagonism, 5HT2C antagonism is linked to **weight gain** (clozapine, olanzapine, quetiapine, mirtazapine); it is also a candidate antidepressant property.', sec: 's5-metabolic' }
+      { ch: 'ch05', pages: '198–199', text: 'With **H1** antagonism, 5HT2C antagonism is linked to **weight gain** (clozapine, olanzapine, quetiapine, mirtazapine); it is also a candidate antidepressant property.', sec: 's5-metabolic' },
+      { ch: 'ch07', pages: '293, 306–308', text: 'On brainstem **GABA interneurons**, 5HT2C receptors inhibit NE and DA release to the PFC; antagonists (fluoxetine, agomelatine, mirtazapine, trazodone, some TCAs, olanzapine, quetiapine) disinhibit them. 5HT2C receptors in the **SCN** fluctuate in a circadian way, high at night.', sec: 's7-agomelatine' }
     ]
   },
   {
@@ -275,7 +286,8 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '39', text: 'Antagonist actions: possible pro-cognitive and antidepressant effects (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch04', pages: '130–131', text: 'Excitatory and frequently on **GABA interneurons**: in cortex it **inhibits glutamate** release; in the raphe, a recurrent collateral acting at 5HT7 on GABA neurons **inhibits further 5HT release**. 5HT7 antagonists treat psychosis and mood.', sec: 's4-5ht-post' },
-      { ch: 'ch05', pages: '195, 236', text: '5HT7 antagonism is a candidate antidepressant mechanism; **lurasidone** binds 5HT7 more potently than D2.', sec: 's5-dones' }
+      { ch: 'ch05', pages: '195, 236', text: '5HT7 antagonism is a candidate antidepressant mechanism; **lurasidone** binds 5HT7 more potently than D2.', sec: 's5-dones' },
+      { ch: 'ch07', pages: '318–319', text: '5HT7 receptors on raphe **GABA** neurons inhibit 5HT release and on PFC GABA interneurons restrain glutamate; antagonists (vortioxetine, trazodone, quetiapine, brexpiprazole, aripiprazole, lurasidone) disinhibit both.', sec: 's7-vortioxetine' }
     ],
     stim: ['On cortical GABA interneurons: **less glutamate** release; in raphe: **less 5HT** release (Chapter 4)']
   },
@@ -287,7 +299,8 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '39', text: 'Antagonists have antidepressant actions; agonists improve cognition and behavior in ADHD (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch05', pages: '195, 208', text: 'α2 antagonism is a candidate **antidepressant** property of several drugs for psychosis (risperidone, quetiapine via norquetiapine, brexpiprazole), though α1 blockade can cancel it.', sec: 's5-mania-dep' },
-      { ch: 'ch06', pages: '254–255', text: 'The only NE receptor that can be a **presynaptic autoreceptor**: on axon terminals (gatekeepers that halt release) and somatodendritic (shut off firing). Agonists step on the brake; antagonists **cut the brake cable**.', sec: 's6-ne' }
+      { ch: 'ch06', pages: '254–255', text: 'The only NE receptor that can be a **presynaptic autoreceptor**: on axon terminals (gatekeepers that halt release) and somatodendritic (shut off firing). Agonists step on the brake; antagonists **cut the brake cable**.', sec: 's6-ne' },
+      { ch: 'ch07', pages: '309', text: 'α2 **heteroreceptors** on serotonin neurons let NE brake 5HT release; α2 antagonists (mirtazapine, mianserin) therefore release **both NE and 5HT**, synergizing with reuptake inhibitors.', sec: 's7-mirtazapine' }
     ]
   },
   {
@@ -296,7 +309,8 @@ SP.targets = [
     block: ['Improved sleep (**nightmares**)', 'Improved **agitation in Alzheimer disease**', 'Side effects: **orthostatic hypotension** and possibly **sedation**'],
     facts: [
       { ch: 'ch02', pages: '39', text: '**Antagonist** actions: improved sleep (nightmares), improved agitation in Alzheimer disease; side effects of orthostatic hypotension and possibly sedation (Table 2-4).', sec: 's2-receptor-tables' },
-      { ch: 'ch05', pages: '181, 236', text: 'α1 blockade adds **sedation** and **orthostatic hypotension** (iloperidone, paliperidone, clozapine, quetiapine); it may also lower DIP risk (iloperidone) and help agitation (brexpiprazole).', sec: 's5-fga' }
+      { ch: 'ch05', pages: '181, 236', text: 'α1 blockade adds **sedation** and **orthostatic hypotension** (iloperidone, paliperidone, clozapine, quetiapine); it may also lower DIP risk (iloperidone) and help agitation (brexpiprazole).', sec: 's5-fga' },
+      { ch: 'ch07', pages: '327–328', text: 'α1 receptors are **colocalized** with 5HT2A on pyramidal neurons; blocking both releases DA in the striatum (less DIP) and PFC (antidepressant). Bladder α1 stimulation causes urinary hesitancy (milnacipran), relieved by an α1 antagonist.', sec: 's7-augment-sda' }
     ]
   },
   {
@@ -321,7 +335,8 @@ SP.targets = [
     stim: ['Improvement of **insomnia** and **circadian rhythms**'],
     facts: [
       { ch: 'ch02', pages: '39', text: '**Agonist** actions at both MT1 and MT2 improve insomnia and circadian rhythms (Table 2-4).', sec: 's2-receptor-tables' },
-      { ch: 'ch06', pages: '274–275', text: 'Melatonin acting on the **SCN** resets circadian rhythms; early-evening melatonin may correct the phase delay of depression.', sec: 's6-circadian' }
+      { ch: 'ch06', pages: '274–275', text: 'Melatonin acting on the **SCN** resets circadian rhythms; early-evening melatonin may correct the phase delay of depression.', sec: 's6-circadian' },
+      { ch: 'ch07', pages: '306–308', text: '**Agomelatine** is an MT1/MT2 agonist; the so-called MT3 receptor is really the enzyme **NRH–quinone oxidoreductase 2**.', sec: 's7-agomelatine' }
     ]
   },
   {
@@ -331,7 +346,8 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '40', text: '**Antagonist** actions: therapeutic for anxiety and insomnia; side effects of sedation and weight gain (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch02', pages: '45', text: '**H1 antagonists/antihistamines** may turn out to be **inverse agonists** in some brain areas.', sec: 's2-spectrum' },
-      { ch: 'ch05', pages: '181, 198', text: 'Blocking H1 adds **weight gain and sedation**; with 5HT2C blockade it drives appetite on the metabolic highway. Quetiapine at 50 mg acts almost only here.', sec: 's5-fga' }
+      { ch: 'ch05', pages: '181, 198', text: 'Blocking H1 adds **weight gain and sedation**; with 5HT2C blockade it drives appetite on the metabolic highway. Quetiapine at 50 mg acts almost only here.', sec: 's5-fga' },
+      { ch: 'ch07', pages: '308–312, 335', text: 'H1 antagonism causes sedation and weight gain with mirtazapine and TCAs, and contributes to low-dose **trazodone**’s hypnotic action.', sec: 's7-sari' }
     ]
   },
   {
@@ -347,7 +363,8 @@ SP.targets = [
     block: ['Side effects: **sedation** and **memory disturbance**', 'Treats **drug-induced parkinsonism** and **acute dystonia** (Chapter 5)', 'Strong muscarinic binding: **clozapine, olanzapine, quetiapine**; constipation, **paralytic ileus**, sialorrhea (clozapine)'],
     facts: [
       { ch: 'ch02', pages: '40', text: 'Agonist: pro-cognitive and antipsychotic. Antagonist: sedation and memory disturbance (Table 2-4). Stimulated indirectly by acetylcholinesterase inhibitors (Table 2-5).', sec: 's2-receptor-tables' },
-      { ch: 'ch05', pages: '166–169', text: 'Blocking **M1** relieves **drug-induced parkinsonism** by restoring the striatal dopamine–acetylcholine balance, at the cost of anticholinergic burden; an IM anticholinergic relieves **acute dystonia**.', sec: 's5-motor' }
+      { ch: 'ch05', pages: '166–169', text: 'Blocking **M1** relieves **drug-induced parkinsonism** by restoring the striatal dopamine–acetylcholine balance, at the cost of anticholinergic burden; an IM anticholinergic relieves **acute dystonia**.', sec: 's5-motor' },
+      { ch: 'ch07', pages: '294–295, 335', text: '**Paroxetine** has mild M1 antagonism (calming; withdrawal rebound); all **TCAs** block muscarinic receptors.', sec: 's7-tca' }
     ],
     updates: [{ year: '2024', title: 'First M1/M4 agonist approved', text: '**Xanomeline–trospium** (Cobenfy), with the M1/M4-preferring agonist xanomeline, was approved for schizophrenia in September 2024.', source: 'FDA, September 2024' }]
   },
@@ -425,7 +442,10 @@ SP.targets = [
     id: 'mor', name: 'μ-Opioid receptor', short: 'μ-opioid', family: 'G-protein-linked receptor', nt: 'endorphin',
     summary: 'The receptor for β-endorphin and morphine. In Chapter 5 its antagonist samidorphan is paired with olanzapine to limit weight gain; opioid pharmacology is covered later.',
     block: ['**Samidorphan** with olanzapine: reduces olanzapine-induced **weight gain** (Chapter 5)'],
-    facts: [{ ch: 'ch05', pages: '201', text: 'The μ-opioid antagonist **samidorphan** combined with olanzapine was a new agent on the horizon to reduce olanzapine-induced weight gain.', sec: 's5-metabolic' }]
+    facts: [
+      { ch: 'ch05', pages: '201', text: 'The μ-opioid antagonist **samidorphan** combined with olanzapine was a new agent on the horizon to reduce olanzapine-induced weight gain.', sec: 's5-metabolic' },
+      { ch: 'ch07', pages: '328, 355', text: 'Possible μ-opioid contributions to the antidepressant effects of **ketamine** and **dextromethadone** are debated.', sec: 's7-dxm' }
+    ]
   },
   /* ---------------- ligand-gated ion channels ---------------- */
   {
@@ -440,7 +460,8 @@ SP.targets = [
       { ch: 'ch03', pages: '65–66', text: 'Benzodiazepines are the book’s example of **PAMs**: acting as **full agonists at the PAM site**, they amplify GABA’s opening of the chloride channel. The **same site** gives NAM actions with an **inverse agonist**.', sec: 's3-pam' },
       { ch: 'ch04', pages: '105–108', text: '**α2-subunit** GABA-A receptors on the pyramidal neuron’s **axon initial segment** receive interneuron GABA; they are compensatorily **increased** in schizophrenia.', sec: 's4-nmda-hypo' },
       { ch: 'ch06', pages: '259–262', text: 'Benzodiazepine-sensitive receptors need **two β, γ2 or γ3, and two α1–3**; one benzodiazepine binds between γ and α, two GABA molecules between α and β. **α1** subunits relate to **sleep**, **α2/α3** to **anxiety**; current benzodiazepines are nonselective.', sec: 's6-gabaa' },
-      { ch: 'ch06', pages: '262–264', text: 'Benzodiazepine-insensitive receptors (α4, α6, γ1 or δ) are **extrasynaptic** and mediate **tonic** inhibition; **neuroactive steroids** bind between α and δ. Abnormal γ2, α2 or δ expression is linked to **epilepsy**.', sec: 's6-neurosteroids' }
+      { ch: 'ch06', pages: '262–264', text: 'Benzodiazepine-insensitive receptors (α4, α6, γ1 or δ) are **extrasynaptic** and mediate **tonic** inhibition; **neuroactive steroids** bind between α and δ. Abnormal γ2, α2 or δ expression is linked to **epilepsy**.', sec: 's6-neurosteroids' },
+      { ch: 'ch07', pages: '320–322', text: 'Neuroactive steroids (brexanolone) act at both benzodiazepine-sensitive and **benzodiazepine-insensitive** GABA-A receptors; the latter (extrasynaptic, tonic) are thought to carry the antidepressant effect.', sec: 's7-neurosteroids' }
     ],
     updates: [{ year: '2023', title: 'Oral neurosteroid approved', text: '**Zuranolone**, an oral GABA-A positive allosteric modulator, was approved in August 2023 for postpartum depression.', source: 'FDA, August 2023' }]
   },
@@ -467,7 +488,8 @@ SP.targets = [
       { ch: 'ch03', pages: '53', text: 'A **pentameric** ligand-gated ion channel (Table 3-1).', sec: 's3-structure' },
       { ch: 'ch03', pages: '55', text: '**Antagonists**: mirtazapine and vortioxetine (pro-cognitive, antidepressant); antiemetics for chemotherapy-induced emesis (Table 3-2).', sec: 's3-drugs' },
       { ch: 'ch04', pages: '127–130', text: 'In the **chemoreceptor trigger zone** (outside the blood–brain barrier) it mediates nausea and vomiting; in cortex it sits on **non-parvalbumin GABA interneurons**, so serotonin here **inhibits ACh and NE** release and glutamate output. Antagonists should enhance ACh and NE release.', sec: 's4-5ht-post' },
-      { ch: 'ch05', pages: '212', text: 'The pines bind 5HT3 weakly; the dones not at all; aripiprazole weakly. 5HT3 antagonism is a candidate antidepressant property.', sec: 's5-binding' }
+      { ch: 'ch05', pages: '212', text: 'The pines bind 5HT3 weakly; the dones not at all; aripiprazole weakly. 5HT3 antagonism is a candidate antidepressant property.', sec: 's5-binding' },
+      { ch: 'ch07', pages: '309–311', text: 'Peripheral 5HT3 receptors (chemoreceptor trigger zone, gut) mediate nausea, vomiting and diarrhea; brain 5HT3 receptors on **GABA interneurons** are excitatory, so antagonists (mirtazapine, **vortioxetine**) release glutamate, ACh and NE.', sec: 's7-mirtazapine' }
     ],
     stim: ['Nausea and vomiting (CTZ); in cortex **less ACh, NE and glutamate** release (Chapter 4)']
   },
@@ -486,7 +508,8 @@ SP.targets = [
       { ch: 'ch03', pages: '66', text: '**PCP and ketamine** are NAMs that bind **inside the calcium channel**, entering only **when the channel is open**, and prevent glutamate/glycine cotransmission from opening it.', sec: 's3-pam' },
       { ch: 'ch04', pages: '100–101', text: 'A **coincidence detector**: opens only with glutamate bound, **glycine or D-serine** bound, and depolarization removing the **Mg²⁺** plug (Mg²⁺ acts as a NAM). Calcium entry drives **long-term potentiation**.', sec: 's4-glu-receptors' },
       { ch: 'ch04', pages: '105–110', text: '**Hypofunction** at prefrontal **GABA interneurons** (from neurodevelopment, ketamine/PCP or neurodegeneration) is a leading hypothesis of psychosis.', sec: 's4-nmda-hypo' },
-      { ch: 'ch05', pages: '169, 237', text: '**Amantadine**’s weak NMDA antagonism may explain its benefit in DIP; NRX101 pairs the glycine-site agent **D-cycloserine** with lurasidone.', sec: 's5-motor' }
+      { ch: 'ch05', pages: '169, 237', text: '**Amantadine**’s weak NMDA antagonism may explain its benefit in DIP; NRX101 pairs the glycine-site agent **D-cycloserine** with lurasidone.', sec: 's5-motor' },
+      { ch: 'ch07', pages: '328–332', text: 'Ketamine blocks NMDA at the open-channel **PCP site**: NMDA block on GABA interneurons → glutamate burst → **AMPA** → mTOR or BDNF/VEGF → rapid synaptogenesis.', sec: 's7-ketamine' }
     ],
     updates: [
       { year: '2022', title: 'Dextromethorphan–bupropion approved', text: 'Approved for major depressive disorder in August 2022 (Auvelity).', source: 'FDA, August 2022' },
@@ -498,7 +521,8 @@ SP.targets = [
     summary: 'A tetrameric ionotropic glutamate receptor (GluR1–4 subunits). No subtype-selective drugs are in clinical use.',
     facts: [
       { ch: 'ch03', pages: '55–56', text: 'AMPA (α-amino-3-hydroxy-5-methyl-4-isoxazole-propionic acid) receptors are tetrameric, with **GluR1–4** subunits (Table 3-3).', sec: 's3-structure' },
-      { ch: 'ch04', pages: '100–101, 151–154', text: 'Mediates **fast excitation** by admitting sodium; its depolarization helps unplug NMDA channels. LTP increases synaptic AMPA receptors, “strengthening” synapses; weak synapses with few AMPA receptors may be eliminated.', sec: 's4-glu-receptors' }
+      { ch: 'ch04', pages: '100–101, 151–154', text: 'Mediates **fast excitation** by admitting sodium; its depolarization helps unplug NMDA channels. LTP increases synaptic AMPA receptors, “strengthening” synapses; weak synapses with few AMPA receptors may be eliminated.', sec: 's4-glu-receptors' },
+      { ch: 'ch07', pages: '330–331', text: 'Glutamate released after ketamine stimulates AMPA receptors while NMDA receptors are blocked, triggering **ERK/AKT → mTOR** or **VSCC → BDNF/VEGF** signaling.', sec: 's7-ketamine' }
     ]
   },
   {
@@ -526,7 +550,9 @@ SP.targets = [
       { ch: 'ch01', pages: '9', text: 'In **excitation–secretion coupling**, electrical impulses open VSSCs; **sodium flows in** and the action potential moves along the axon to the presynaptic terminal.', sec: 's1-coupling' },
       { ch: 'ch03', pages: '67–68', text: '**Segment 4** is the **voltmeter**; the **5–6 extracellular loop** is the **ionic filter** (colander); the **III–IV cytoplasmic loop** is the **pore inactivator** plug.', sec: 's3-vssc' },
       { ch: 'ch03', pages: '68–69', text: 'Three states: **open**, **inactivated** (plugged before it closes) and **closed and inactivated**. β units and the α unit may be phosphoproteins regulated by signal transduction.', sec: 's3-vssc' },
-      { ch: 'ch03', pages: '69–70', text: 'There are many sodium channel subtypes; most anticonvulsants probably act at **multiple sites** on multiple types of channel.', sec: 's3-vssc' }
+      { ch: 'ch03', pages: '69–70', text: 'There are many sodium channel subtypes; most anticonvulsants probably act at **multiple sites** on multiple types of channel.', sec: 's3-vssc' },
+      { ch: 'ch07', pages: '335–336', text: 'All TCAs block VSSCs in heart and brain; in overdose this causes **coma, seizures, arrhythmia and death**.', sec: 's7-tca' },
+      { ch: 'ch07', pages: '347–353', text: 'Valproate may alter VSSC sensitivity; **carbamazepine**, oxcarbazepine/eslicarbazepine and **lamotrigine** bind the open-channel **α subunit**; lamotrigine and riluzole may thereby reduce **glutamate release**.', sec: 's7-valproate-cbz' }
     ]
   },
   {
@@ -538,19 +564,28 @@ SP.targets = [
     facts: [
       { ch: 'ch01', pages: '9', text: 'When the action potential reaches the terminal it opens VSCCs; **calcium influx** causes synaptic vesicles anchored to the inner membrane to **spill their contents** into the synapse.', sec: 's1-coupling' },
       { ch: 'ch03', pages: '70–71', text: 'The **II–III loop** of the α1 unit is a **snare** linking the channel to synaptic vesicles via SNAP 25, synaptobrevin, syntaxin and synaptotagmin: a “cocked gun.”', sec: 's3-vscc' },
-      { ch: 'ch03', pages: '71–73', text: 'Subtypes (Table 3-4): **L** (Cav1.2/1.3), **N** (Cav2.2), **P/Q** (Cav2.1), **R** (Cav2.3), **T** (Cav3.1–3.3). **N and P/Q** are presynaptic and regulate transmitter release.', sec: 's3-vscc' }
+      { ch: 'ch03', pages: '71–73', text: 'Subtypes (Table 3-4): **L** (Cav1.2/1.3), **N** (Cav2.2), **P/Q** (Cav2.1), **R** (Cav2.3), **T** (Cav3.1–3.3). **N and P/Q** are presynaptic and regulate transmitter release.', sec: 's3-vscc' },
+      { ch: 'ch07', pages: '352', text: '**L-type** calcium channels on vascular smooth muscle are targets of antihypertensive “calcium channel blockers”; anecdotal evidence suggests dihydropyridines may help some bipolar patients.', sec: 's7-lamotrigine' }
     ]
   },
   /* ---------------- enzymes ---------------- */
   {
     id: 'mao', name: 'Monoamine oxidase (MAO)', short: 'MAO', family: 'Enzyme', ntLabel: 'Monoamines',
     summary: 'An enzyme that destroys monoamines. MAO inhibitors raise monoamine levels, acting as indirect agonists.',
-    block: ['Indirect full agonist action by blocking enzymatic destruction of monoamines (details in Chapter 7)'],
+    block: ['Indirect full agonist action by blocking enzymatic destruction of monoamines (details in Chapter 7)', '**MAO-A**: antidepressant; **MAO-B**: boosts levodopa in Parkinson’s disease (Chapter 7)'],
     facts: [
       { ch: 'ch02', pages: '41, 48', text: 'One of only **three enzymes** targeted by psychotropic drugs; inhibiting it produces **indirect full agonist** action.', sec: 's2-enzymes' },
       { ch: 'ch04', pages: '80, 114', text: '**MAO-A and MAO-B** destroy unstored dopamine; serotonergic **MAO-B** has low affinity for 5HT and degrades it only at high intracellular levels.', sec: 's4-5ht-synth' },
-      { ch: 'ch06', pages: '253', text: 'MAO-A or MAO-B in mitochondria destroys norepinephrine in the presynaptic neuron and elsewhere.', sec: 's6-ne' }
+      { ch: 'ch06', pages: '253', text: 'MAO-A or MAO-B in mitochondria destroys norepinephrine in the presynaptic neuron and elsewhere.', sec: 's6-ne' },
+      { ch: 'ch07', pages: '336–338', text: '**MAO-A** prefers 5HT and NE (major form outside the brain); **MAO-B** prefers trace amines (serotonin neurons, platelets, lymphocytes); both destroy DA and **tyramine**. Brain MAO-A must be inhibited for antidepressant action; inhibiting both raises DA too.', sec: 's7-maoi' },
+      { ch: 'ch07', pages: '336', text: 'Phenelzine, tranylcypromine, isocarboxazid and selegiline inhibit MAO **irreversibly**: activity returns only after new enzyme is made, about **2–3 weeks**.', sec: 's7-maoi' }
     ]
+  },
+  {
+    id: 'nos', name: 'Nitric oxide synthase (NOS)', short: 'NOS', family: 'Enzyme', nt: 'nitric-oxide',
+    summary: 'The enzyme that makes the gas neurotransmitter nitric oxide. Paroxetine inhibits it, which may add to sexual dysfunction.',
+    block: ['Possible contribution to **sexual dysfunction**, especially in men (paroxetine)'],
+    facts: [{ ch: 'ch07', pages: '294–295', text: '**Paroxetine** inhibits nitric oxide synthase, which could theoretically contribute to sexual dysfunction, especially in men.', sec: 's7-ssri-agents' }]
   },
   {
     id: 'toh', name: 'Tyrosine hydroxylase (TOH)', short: 'TOH', family: 'Enzyme', nt: 'dopamine',
@@ -646,8 +681,21 @@ SP.targets = [
     facts: [
       { ch: 'ch01', pages: '17', text: 'One of the kinases at the end of the **neurotrophin signal transduction cascade** (Ras → Raf → MEK → ERK/RSK/MAPK/GSK-3).', sec: 's1-genes' },
       { ch: 'ch02', pages: '48', text: 'Some neurotrophins, growth factors and other pathways act through GSK-3 to promote **cell death (proapoptotic)**. **Lithium** may inhibit it; **valproate** and **ECT** possibly too. Novel GSK-3 inhibitors are in development.', sec: 's2-enzymes' },
-      { ch: 'ch05', pages: '241–242', text: 'Postsynaptic D2 overstimulation signals through **β-arrestin 2** to GSK-3; too much GSK-3 may be linked to mania and psychosis, and TAAR1 agonism may reduce it.', sec: 's5-future' }
+      { ch: 'ch05', pages: '241–242', text: 'Postsynaptic D2 overstimulation signals through **β-arrestin 2** to GSK-3; too much GSK-3 may be linked to mania and psychosis, and TAAR1 agonism may reduce it.', sec: 's5-future' },
+      { ch: 'ch07', pages: '345–349', text: 'Lithium may inhibit GSK-3 and protein kinase C; **valproate** may also inhibit GSK-3.', sec: 's7-lithium' }
     ]
+  },
+  {
+    id: 'impase', name: 'Inositol monophosphatase', short: 'IMPase', family: 'Enzyme', ntLabel: 'Phosphatidylinositol second-messenger system',
+    summary: 'An enzyme of the phosphatidylinositol second-messenger system; one candidate target of lithium.',
+    block: ['Possible **antimanic** action of lithium'],
+    facts: [{ ch: 'ch07', pages: '345–346', text: 'Lithium **inhibits inositol monophosphatase**, one of several candidate signal-transduction mechanisms for its antimanic action (Figure 7-74).', sec: 's7-lithium' }]
+  },
+  {
+    id: 'pkc', name: 'Protein kinase C (PKC)', short: 'PKC', family: 'Enzyme', ntLabel: 'Signal transduction',
+    summary: 'A kinase in downstream signal transduction cascades; lithium and valproate may inhibit it.',
+    block: ['Possible **antimanic** action of lithium and valproate'],
+    facts: [{ ch: 'ch07', pages: '346, 349', text: 'Lithium may inhibit **GSK-3 and protein kinase C**; valproate may inhibit **PKC** and **MARCKS** while activating ERK, BCL2 and GAP43 (Figures 7-74, 7-78).', sec: 's7-valproate-cbz' }]
   },
   {
     id: 'cyp1a2', name: 'Cytochrome P450 1A2', short: 'CYP1A2', family: 'Enzyme',
@@ -664,7 +712,8 @@ SP.targets = [
     summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
     facts: [
       { ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' },
-      { ch: 'ch05', pages: '175–176', text: 'Inactivates tetrabenazine’s dihydro metabolites; **deuteration** makes deutetrabenazine a poorer 2D6 substrate, and tetrabenazine dosing above standard levels needs 2D6 genotyping.', sec: 's5-vmat2' }
+      { ch: 'ch05', pages: '175–176', text: 'Inactivates tetrabenazine’s dihydro metabolites; **deuteration** makes deutetrabenazine a poorer 2D6 substrate, and tetrabenazine dosing above standard levels needs 2D6 genotyping.', sec: 's5-vmat2' },
+      { ch: 'ch07', pages: '302, 354', text: 'Converts **venlafaxine** to desvenlafaxine; rapidly metabolizes **dextromethorphan**, which is therefore combined with 2D6 inhibitors (**bupropion**, **quinidine**).', sec: 's7-dxm' }
     ]
   },
   {
@@ -680,7 +729,10 @@ SP.targets = [
   {
     id: 'cyp3a4', name: 'Cytochrome P450 3A4', short: 'CYP3A4', family: 'Enzyme',
     summary: 'One of the six most important CYP450 drug-metabolizing enzymes for psychotropic drugs.',
-    facts: [{ ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' }]
+    facts: [
+      { ch: 'ch02', pages: '49', text: 'One of six key CYP450 enzymes in psychotropic metabolism (Figure 2-16).', sec: 's2-cyp' },
+      { ch: 'ch07', pages: '350', text: '**Carbamazepine** notably induces CYP3A4; oxcarbazepine has fewer 3A4 interactions.', sec: 's7-valproate-cbz' }
+    ]
   },
   /* ---------------- intracellular receptors ---------------- */
   {
@@ -689,17 +741,35 @@ SP.targets = [
     block: ['Antagonists in testing to reverse **HPA-axis** abnormalities in depression'],
     facts: [{ ch: 'ch06', pages: '270–271', text: 'Depression shows elevated glucocorticoids and **insensitivity** to feedback inhibition; high glucocorticoids may be toxic to hippocampal neurons.', sec: 's6-hpa' }]
   },
+  {
+    id: 'thr', name: 'Thyroid hormone receptor', short: 'Thyroid receptor', family: 'Intracellular receptor', ntLabel: 'Thyroid hormones',
+    summary: 'A nuclear receptor: thyroid hormones bind it to form a ligand-activated transcription factor. Used to augment drugs for depression.',
+    stim: ['Possible **augmentation** of antidepressant action or faster onset (now out of favor)'],
+    facts: [{ ch: 'ch07', pages: '333', text: 'Thyroid hormones regulate neuronal organization, arborization and synapse formation, which may boost monoamine neurotransmission and explain augmentation.', sec: 's7-other-augment' }]
+  },
   /* ---------------- neurotrophin receptors ---------------- */
   {
     id: 'trkb', name: 'BDNF and its receptor TrkB', short: 'BDNF/TrkB', family: 'Neurotrophin receptor', nt: 'neurotrophins',
     summary: 'Brain-derived neurotrophic factor supports neuronal growth, survival and synapses; its loss is central to the neuroprogression hypothesis of depression.',
     stim: ['Increased BDNF signaling (downstream of effective antidepressants via CREB): synapse maintenance and possibly **restoration of lost synapses**'],
-    facts: [{ ch: 'ch06', pages: '266–270', text: 'Monoamine signaling releases BDNF; stress, inflammation and adversity may silence BDNF genes, leading to loss of spines, synapses and eventually neurons.', sec: 's6-neuroplasticity' }]
+    facts: [
+      { ch: 'ch06', pages: '266–270', text: 'Monoamine signaling releases BDNF; stress, inflammation and adversity may silence BDNF genes, leading to loss of spines, synapses and eventually neurons.', sec: 's6-neuroplasticity' },
+      { ch: 'ch07', pages: '329–331', text: 'Ketamine may rapidly raise **BDNF**, acting at TRKB, to restore dendritic spines.', sec: 's7-ketamine' }
+    ]
+  },
+  {
+    id: 'vegf', name: 'VEGF and its receptor FLK1', short: 'VEGF/FLK1', family: 'Neurotrophin receptor', nt: 'neurotrophins',
+    summary: 'Vascular endothelial growth factor, a growth factor reduced by chronic stress and depression and raised by ketamine; it acts at FLK1 (fetal liver kinase 1).',
+    stim: ['Hypothetically **synaptogenesis** and reversal of depression-related atrophy'],
+    facts: [{ ch: 'ch07', pages: '329–331', text: 'Loss of BDNF and VEGF is linked to neuronal atrophy in PFC and hippocampus; stress and depression also reduce their receptors **TRKB and FLK1**. Ketamine increases both growth factors (Figure 7-62).', sec: 's7-ketamine' }]
   },
   /* ---------------- other targets ---------------- */
   {
     id: 'sigma', name: 'Sigma (σ) receptors', short: 'σ', family: 'Other', ntLabel: 'None (non-opioid binding sites)',
     summary: 'Binding sites shown on the strips of haloperidol (σ) and roluperidone (σ2 antagonism).',
-    facts: [{ ch: 'ch05', pages: '204, 241', text: 'Haloperidol binds a site labelled **σ** in Figure 5-29 (the caption calls it “omega”); **roluperidone** combines 5HT2A antagonism with **σ2** antagonism.', sec: 's5-first-agents' }]
+    facts: [
+      { ch: 'ch05', pages: '204, 241', text: 'Haloperidol binds a site labelled **σ** in Figure 5-29 (the caption calls it “omega”); **roluperidone** combines 5HT2A antagonism with **σ2** antagonism.', sec: 's5-first-agents' },
+      { ch: 'ch07', pages: '294–295', text: '**Sertraline** and, more potently, **fluvoxamine** (possibly an agonist) bind σ1; the function of σ1 sites is the “sigma enigma.” Ketamine, dextromethorphan and dextromethadone also bind σ.', sec: 's7-ssri-agents' }
+    ]
   }
 ];

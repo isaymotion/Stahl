@@ -1,0 +1,26 @@
+/* Chapter 7 clinical flashcards. */
+SP.add("ch07", "clinical", [
+  { id: "k7-01", tag: "Goals", q: "Your patient is 60% better on an SSRI. Done?", a: "No: that is **response**. Aim for **remission**; residual symptoms raise relapse risk and may drive progression." },
+  { id: "k7-02", tag: "Residual", q: "Residual insomnia after an SSRI: a book option?", a: "Add a **hypnotic**, e.g., **low-dose trazodone**; it may also improve energy and mood and raise remission rates." },
+  { id: "k7-03", tag: "Residual", q: "Residual fatigue, low energy and poor concentration on an SNRI?", a: "Add **bupropion**, a **stimulant** or **modafinil** to recruit DA (arousal or triple-action combos)." },
+  { id: "k7-04", tag: "Residual", q: "Painful physical symptoms with depression: which class?", a: "An **SNRI** (e.g., duloxetine); NET inhibition seems critical." },
+  { id: "k7-05", tag: "SSRIs", q: "An anxious, insomniac patient feels jittery on fluoxetine. Why?", a: "**5HT2C antagonism** is activating and may suit hypersomnic, apathetic patients better." },
+  { id: "k7-06", tag: "SSRIs", q: "A panic patient is overactivated by sertraline. What does the book suggest?", a: "**Slower dose titration** (weak DAT action may contribute)." },
+  { id: "k7-07", tag: "SSRIs", q: "Stopping high-dose paroxetine abruptly: what may happen?", a: "Withdrawal: **akathisia, restlessness, GI upset, dizziness, tingling** (including anticholinergic rebound)." },
+  { id: "k7-08", tag: "Switching", q: "Why wait before starting an MAOI after fluoxetine?", a: "Fluoxetine and its metabolite clear **slowly** (metabolite half-life about 2 weeks)." },
+  { id: "k7-09", tag: "Sexual", q: "Sexual dysfunction on an SSRI: mechanism-based alternatives?", a: "**Bupropion** (no serotonergic action), a SARI (**trazodone**: 5HT2A/2C block), or **vilazodone**." },
+  { id: "k7-10", tag: "Cognition", q: "Slowed processing speed in depression: which drug and test?", a: "**Vortioxetine**; track with the **DSST**." },
+  { id: "k7-11", tag: "Postpartum", q: "Severe postpartum depression: rapid option in the book?", a: "**Brexanolone** IV over **60 hours**." },
+  { id: "k7-12", tag: "Resistance", q: "After one or two SSRI failures vs after many failures: typical next steps?", a: "Early: **serotonin/dopamine augmenters**. After many: **ketamine/esketamine**." },
+  { id: "k7-13", tag: "Ketamine", q: "A suicidal patient improves within hours of ketamine but relapses in 4 days. Expected?", a: "Yes: effects usually **fade over days**; repeated dosing or monoamine drugs can sustain them." },
+  { id: "k7-14", tag: "TCAs", q: "A TCA for a patient at suicide risk: the concern?", a: "About a **30-day supply** can be lethal (sodium channel blockade)." },
+  { id: "k7-15", tag: "MAOIs", q: "What two counseling areas are essential with classic MAOIs?", a: "**Dietary tyramine** and **drug interactions** (sympathomimetics; serotonin reuptake inhibitors)." },
+  { id: "k7-16", tag: "Bipolar", q: "First-line choice for bipolar depression per the book’s paradigm shift?", a: "An approved **serotonin/dopamine agent** (quetiapine, lurasidone, cariprazine, olanzapine–fluoxetine), not a reuptake inhibitor." },
+  { id: "k7-17", tag: "Bipolar", q: "Mania not controlled on a serotonin/dopamine agent: evidence-based add-on?", a: "**Lithium** or **valproate**." },
+  { id: "k7-18", tag: "Bipolar", q: "Bipolar depression not controlled on a serotonin/dopamine agent: practice-based add-on?", a: "**Lamotrigine** (or, controversially, a reuptake inhibitor)." },
+  { id: "k7-19", tag: "Lithium", q: "Why might a patient with recurrent bipolar disorder and suicide attempts be offered lithium?", a: "It is well established to **prevent suicide** and recurrence of mania." },
+  { id: "k7-20", tag: "Valproate", q: "Valproate in a woman of child-bearing potential: what risks?", a: "**Neural-tube defects**; amenorrhea, **polycystic ovaries**, hyperandrogenism, obesity, insulin resistance." },
+  { id: "k7-21", tag: "Carbamazepine", q: "What should you monitor when starting carbamazepine?", a: "**Blood counts** (bone marrow suppression) and **CYP3A4** induction interactions." },
+  { id: "k7-22", tag: "Lamotrigine", q: "Adding lamotrigine to valproate: what precaution?", a: "Valproate **raises lamotrigine levels**: titrate very slowly to reduce **rash/SJS** risk." },
+  { id: "k7-23", tag: "Mixed", q: "Unipolar depression with mixed features: which agent has the strongest trial evidence?", a: "**Lurasidone**." }
+]);

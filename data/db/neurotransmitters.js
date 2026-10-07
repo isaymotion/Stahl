@@ -20,7 +20,8 @@ SP.nts = [
       { ch: 'ch04', pages: '122–131', text: 'Postsynaptic receptors on GABA interneurons flip the sign downstream: 5HT1A **raises** NE, DA and ACh; 5HT2C, 5HT3 and 5HT7 **lower** downstream release.', sec: 's4-5ht-post' },
       { ch: 'ch04', pages: '131–141', text: 'The **serotonin hyperfunction** hypothesis: 5HT2A excess or imbalance on cortical glutamate neurons drives VTA dopamine (delusions, auditory hallucinations) and visual cortex (visual hallucinations).', sec: 's4-5ht-hyper' },
       { ch: 'ch05', pages: '184–195', text: '5HT2A antagonism and 5HT1A partial agonism at cortical glutamate neurons reshape downstream dopamine release: the basis of the so-called atypical drugs.', sec: 's5-three-pathways' },
-      { ch: 'ch06', pages: '277–278', text: 'Diffuse serotonin dysfunction is linked mainly to **increased negative affect**: guilt, disgust, fear, anxiety, hostility, irritability, loneliness. Ascending raphe projections regulate mood, anxiety and sleep; descending ones regulate pain.', sec: 's6-circuits' }
+      { ch: 'ch06', pages: '277–278', text: 'Diffuse serotonin dysfunction is linked mainly to **increased negative affect**: guilt, disgust, fear, anxiety, hostility, irritability, loneliness. Ascending raphe projections regulate mood, anxiety and sleep; descending ones regulate pain.', sec: 's6-circuits' },
+      { ch: 'ch07', pages: '289–292', text: 'SSRIs act through delayed **disinhibition** of serotonin release after somatodendritic 5HT1A autoreceptors desensitize.', sec: 's7-ssri' }
     ],
     synthesis: [['Tryptophan', 'Transported from plasma into the brain'], ['5HTP', '**Tryptophan hydroxylase (TRY-OH)**'], ['5HT', '**Aromatic amino acid decarboxylase (AAADC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -41,7 +42,8 @@ SP.nts = [
       { ch: 'ch02', pages: '40', text: 'Norepinephrine reuptake inhibition stimulates **all norepinephrine receptors** indirectly: antidepressant, neuropathic pain, ADHD (Table 2-5).', sec: 's2-receptor-tables' },
       { ch: 'ch04', pages: '80–81', text: 'Where DATs are absent (e.g., prefrontal cortex), **NET** takes up dopamine as a “false” substrate.', sec: 's4-da-synth' },
       { ch: 'ch06', pages: '253–256', text: 'Receptors: **NET**, **VMAT2**, **α1, α2A/B/C, β1/β2/β3**. Only **α2** can be presynaptic autoreceptors (terminal and somatodendritic): the neuron’s **brake**.', sec: 's6-ne' },
-      { ch: 'ch06', pages: '277–281', text: 'Boosting NE (with DA) targets residual **fatigue** and **problems concentrating** in depression.', sec: 's6-algorithm' }
+      { ch: 'ch06', pages: '277–281', text: 'Boosting NE (with DA) targets residual **fatigue** and **problems concentrating** in depression.', sec: 's6-algorithm' },
+      { ch: 'ch07', pages: '309', text: 'α2 antagonism “cuts the brake cable” on NE and, via heteroreceptors, 5HT release.', sec: 's7-mirtazapine' }
     ],
     synthesis: [['Tyrosine', 'Actively transported from blood into the neuron'], ['DOPA', '**Tyrosine hydroxylase (TOH)**, rate-limiting'], ['Dopamine', '**DOPA decarboxylase (DDC)**; only a precursor here'], ['Norepinephrine', '**Dopamine β-hydroxylase (DBH)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -70,7 +72,8 @@ SP.nts = [
       { ch: 'ch04', pages: '110–111', text: 'NMDA hypofunction and 5HT2A excess both converge on **downstream mesostriatal dopamine hyperactivity**.', sec: 's4-glu-da' },
       { ch: 'ch05', pages: '161–170', text: 'D2 blockade in each pathway: mesolimbic → antipsychotic and **secondary negative symptoms**; mesocortical → worse negative/cognitive symptoms; tuberoinfundibular → **hyperprolactinemia**; nigrostriatal → **DIP, dystonia, akathisia, NMS, TD**.', sec: 's5-negative' },
       { ch: 'ch05', pages: '166–167', text: 'In the motor striatum dopamine and **acetylcholine** are reciprocal: dopamine at D2 suppresses ACh release from cholinergic interneurons.', sec: 's5-motor' },
-      { ch: 'ch06', pages: '277–278', text: 'Diffuse dopamine dysfunction is linked mainly to **reduced positive affect**: loss of joy, interest, pleasure, energy, alertness and self-confidence.', sec: 's6-circuits' }
+      { ch: 'ch06', pages: '277–278', text: 'Diffuse dopamine dysfunction is linked mainly to **reduced positive affect**: loss of joy, interest, pleasure, energy, alertness and self-confidence.', sec: 's6-circuits' },
+      { ch: 'ch07', pages: '299–301', text: 'In the PFC, DA is cleared by **NET**, so NET inhibitors raise prefrontal DA; only MAO-A + MAO-B inhibition or DA-acting drugs raise DA elsewhere in depression.', sec: 's7-snri' }
     ],
     synthesis: [['Tyrosine', 'Taken into the terminal by a **tyrosine transporter**'], ['DOPA', '**Tyrosine hydroxylase (TOH)**, the rate-limiting enzyme'], ['Dopamine', '**DOPA decarboxylase (DDC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -109,7 +112,8 @@ SP.nts = [
       { ch: 'ch04', pages: '96–97', text: 'Recycled through the **glutamate–glutamine cycle**: EAATs into glia, glutamine synthetase, SNAT export and import, glutaminase, vGluT.', sec: 's4-glu-synth' },
       { ch: 'ch04', pages: '97–99', text: 'NMDA receptors need a **cotransmitter**: glycine or D-serine, both mainly supplied by glia.', sec: 's4-cotransmitters' },
       { ch: 'ch04', pages: '99–102', text: 'Receptors (Table 4-2): metabotropic groups I (mGluR1, 5), II (mGluR2, 3) and III (mGluR4, 6, 7, 8); ionotropic **AMPA** (GluR1–4), **kainate** (GluR5–7, KA1–2) and **NMDA** (NR1, NR2A–D).', sec: 's4-glu-receptors' },
-      { ch: 'ch04', pages: '105–110', text: 'The **NMDA hypofunction** hypothesis: faulty NMDA signaling on prefrontal GABA interneurons disinhibits pyramidal neurons, leading downstream to dopamine excess (positive) and deficit (negative).', sec: 's4-nmda-hypo' }
+      { ch: 'ch04', pages: '105–110', text: 'The **NMDA hypofunction** hypothesis: faulty NMDA signaling on prefrontal GABA interneurons disinhibits pyramidal neurons, leading downstream to dopamine excess (positive) and deficit (negative).', sec: 's4-nmda-hypo' },
+      { ch: 'ch07', pages: '328–331', text: 'Ketamine’s rapid antidepressant effect is thought to come from a **burst of glutamate** acting at AMPA receptors; lamotrigine and riluzole may reduce glutamate release.', sec: 's7-ketamine' }
     ],
     synthesis: [['Glutamine (glia)', 'Recaptured glutamate is converted by **glutamine synthetase**'], ['Export', 'Glutamine leaves glia on a reversed **SNAT** (or ASC-T)'], ['Neuronal uptake', 'A neuronal **SNAT** imports glutamine'], ['Glutamate', 'Mitochondrial **glutaminase**'], ['Vesicle', 'Packaged by **vGluT**']],
     pathways: [
@@ -138,7 +142,8 @@ SP.nts = [
       { ch: 'ch04', pages: '105–110', text: 'Prefrontal **GABA interneurons** are central to the NMDA hypofunction hypothesis: in schizophrenia they show reduced **GAD67** and their targets show compensatory **α2 GABA-A** upregulation.', sec: 's4-nmda-hypo' },
       { ch: 'ch04', pages: '122–131', text: 'Many serotonin receptors (5HT1A, 2A, 2C, 3, 7) sit on GABA interneurons, so serotonin’s downstream effect depends on whether it excites or inhibits these cells.', sec: 's4-5ht-post' },
       { ch: 'ch06', pages: '258–259', text: 'Three receptor types: **GABA-A** and **GABA-C** (ligand-gated chloride channels) and **GABA-B** (G-protein-linked).', sec: 's6-gaba' },
-      { ch: 'ch06', pages: '259–263', text: 'GABA-A subunits α1–6, β1–3, γ1–3, δ, ε, π, θ, ρ1–3. Benzodiazepine-sensitive (γ2/3 + α1–3) receptors are synaptic and **phasic**; δ-containing receptors with α4/α6 are extrasynaptic, **tonic** and bind **neuroactive steroids**.', sec: 's6-gabaa' }
+      { ch: 'ch06', pages: '259–263', text: 'GABA-A subunits α1–6, β1–3, γ1–3, δ, ε, π, θ, ρ1–3. Benzodiazepine-sensitive (γ2/3 + α1–3) receptors are synaptic and **phasic**; δ-containing receptors with α4/α6 are extrasynaptic, **tonic** and bind **neuroactive steroids**.', sec: 's6-gabaa' },
+      { ch: 'ch07', pages: '320–322', text: 'GABA is low in plasma, CSF and brain in depression; GABA interneurons are reduced. Neuroactive steroids boost GABA-A function for rapid antidepressant effects.', sec: 's7-neurosteroids' }
     ],
     synthesis: [['Glutamate', 'The amino acid precursor'], ['GABA', '**Glutamic acid decarboxylase (GAD)**'], ['Vesicle', 'Packaged by **VIAAT**']],
     roles: ['The principal **inhibitory** neurotransmitter, reducing the activity of many neurons', '**Phasic** inhibition at synaptic benzodiazepine-sensitive GABA-A receptors', '**Tonic** inhibition at extrasynaptic δ-containing GABA-A receptors sets neuronal excitability']
@@ -179,7 +184,8 @@ SP.nts = [
     clinical: ['MT1/MT2 agonism improves insomnia and circadian rhythms'],
     facts: [
       { ch: 'ch02', pages: '39', text: '**MT1 and MT2** agonist actions improve insomnia and circadian rhythms (Table 2-4).', sec: 's2-receptor-tables' },
-      { ch: 'ch06', pages: '271–275', text: 'In depression the nighttime **melatonin peak is lost**; early-evening melatonin can help reset a **phase-delayed** clock.', sec: 's6-circadian' }
+      { ch: 'ch06', pages: '271–275', text: 'In depression the nighttime **melatonin peak is lost**; early-evening melatonin can help reset a **phase-delayed** clock.', sec: 's6-circadian' },
+      { ch: 'ch07', pages: '306–308', text: 'Agomelatine acts as “substitute melatonin” at SCN MT1/MT2 receptors to resynchronize circadian rhythms.', sec: 's7-agomelatine' }
     ]
   },
   {
@@ -214,7 +220,8 @@ SP.nts = [
       { ch: 'ch01', pages: '6–7', text: '**Neurotrophic factors such as nerve growth factor (NGF)** act as retrograde neurotransmitters: released from postsynaptic sites, taken up into presynaptic vesicles, and carried by **retrograde transport to the nucleus** to interact with the genome.', sec: 's1-classic' },
       { ch: 'ch01', pages: '11–12, 17', text: 'First messenger of the **neurotrophin-linked cascade**: Ras (a G protein) → Raf (a kinase) → MEK → ERK, RSK, MAPK or GSK-3 → gene expression controlling **synaptogenesis, neuronal survival**, learning, memory and disease expression.', sec: 's1-four' },
       { ch: 'ch02', pages: '48', text: 'Some neurotrophins (with insulin, IGF-1 and Wnt glycoproteins) act through **GSK-3** to promote cell death; **lithium** may inhibit GSK-3.', sec: 's2-enzymes' },
-      { ch: 'ch06', pages: '266–270', text: '**BDNF** loss from stress, inflammation, early adversity, microbiome changes and poor sleep (via epigenetic silencing) may drive **neuroprogression**: lost synapses, then lost neurons. Effective antidepressants may raise BDNF via **CREB**.', sec: 's6-neuroplasticity' }
+      { ch: 'ch06', pages: '266–270', text: '**BDNF** loss from stress, inflammation, early adversity, microbiome changes and poor sleep (via epigenetic silencing) may drive **neuroprogression**: lost synapses, then lost neurons. Effective antidepressants may raise BDNF via **CREB**.', sec: 's6-neuroplasticity' },
+      { ch: 'ch07', pages: '329–331', text: 'Ketamine may raise **BDNF** and **VEGF** within minutes to hours, whereas monoamine drugs take weeks.', sec: 's7-ketamine' }
     ]
   },
   {
