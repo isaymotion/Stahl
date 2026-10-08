@@ -22,7 +22,8 @@ SP.nts = [
       { ch: 'ch05', pages: '184–195', text: '5HT2A antagonism and 5HT1A partial agonism at cortical glutamate neurons reshape downstream dopamine release: the basis of the so-called atypical drugs.', sec: 's5-three-pathways' },
       { ch: 'ch06', pages: '277–278', text: 'Diffuse serotonin dysfunction is linked mainly to **increased negative affect**: guilt, disgust, fear, anxiety, hostility, irritability, loneliness. Ascending raphe projections regulate mood, anxiety and sleep; descending ones regulate pain.', sec: 's6-circuits' },
       { ch: 'ch07', pages: '289–292', text: 'SSRIs act through delayed **disinhibition** of serotonin release after somatodendritic 5HT1A autoreceptors desensitize.', sec: 's7-ssri' },
-      { ch: 'ch08', pages: '368', text: 'Serotonin innervates the **amygdala** and the whole **CSTC** loop, so serotonergic drugs can reduce both fear and worry.', sec: 's8-serotonin' }
+      { ch: 'ch08', pages: '368', text: 'Serotonin innervates the **amygdala** and the whole **CSTC** loop, so serotonergic drugs can reduce both fear and worry.', sec: 's8-serotonin' },
+      { ch: 'ch09', pages: '390–393', text: 'The descending spinal 5HT pathway from the **raphe magnus** inhibits pain via 5HT1B/D but facilitates it via 5HT3.', sec: 's9-descending' }
     ],
     synthesis: [['Tryptophan', 'Transported from plasma into the brain'], ['5HTP', '**Tryptophan hydroxylase (TRY-OH)**'], ['5HT', '**Aromatic amino acid decarboxylase (AAADC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -45,12 +46,14 @@ SP.nts = [
       { ch: 'ch06', pages: '253–256', text: 'Receptors: **NET**, **VMAT2**, **α1, α2A/B/C, β1/β2/β3**. Only **α2** can be presynaptic autoreceptors (terminal and somatodendritic): the neuron’s **brake**.', sec: 's6-ne' },
       { ch: 'ch06', pages: '277–281', text: 'Boosting NE (with DA) targets residual **fatigue** and **problems concentrating** in depression.', sec: 's6-algorithm' },
       { ch: 'ch07', pages: '309', text: 'α2 antagonism “cuts the brake cable” on NE and, via heteroreceptors, 5HT release.', sec: 's7-mirtazapine' },
-      { ch: 'ch08', pages: '370', text: 'Locus coeruleus overactivity drives autonomic overdrive, **nightmares, hyperarousal, flashbacks and panic**, via α1 and β1 receptors.', sec: 's8-ne' }
+      { ch: 'ch08', pages: '370', text: 'Locus coeruleus overactivity drives autonomic overdrive, **nightmares, hyperarousal, flashbacks and panic**, via α1 and β1 receptors.', sec: 's8-ne' },
+      { ch: 'ch09', pages: '390–393', text: 'The descending spinal NE pathway from the locus coeruleus (caudal lateral tegmental cells) inhibits pain via **α2** receptors in the dorsal horn.', sec: 's9-descending' }
     ],
     synthesis: [['Tyrosine', 'Actively transported from blood into the neuron'], ['DOPA', '**Tyrosine hydroxylase (TOH)**, rate-limiting'], ['Dopamine', '**DOPA decarboxylase (DDC)**; only a precursor here'], ['Norepinephrine', '**Dopamine β-hydroxylase (DBH)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
       { name: 'Ascending noradrenergic', route: '**Locus coeruleus** → prefrontal cortex, basal forebrain, thalamus, hypothalamus, amygdala, hippocampus, cerebellum and more', role: 'Mood, arousal, cognition' },
-      { name: 'Descending noradrenergic', route: 'Brainstem → spinal cord', role: 'Regulates **pain** pathways' }
+      { name: 'Descending noradrenergic', route: 'Brainstem → spinal cord', role: 'Regulates **pain** pathways' },
+      { name: 'Descending spinal (pain)', route: '**Locus coeruleus** and caudal lateral tegmental cells → dorsal horn', role: 'Inhibits pain via α2 receptors (Chapter 9)' }
     ],
     roles: ['Mood, arousal and cognition', 'Involved in both **reduced positive affect** and **increased negative affect** in depression', 'With ACh and histamine, a driver of cortical arousal', 'Descending modulation of pain']
   },
@@ -116,7 +119,8 @@ SP.nts = [
       { ch: 'ch04', pages: '99–102', text: 'Receptors (Table 4-2): metabotropic groups I (mGluR1, 5), II (mGluR2, 3) and III (mGluR4, 6, 7, 8); ionotropic **AMPA** (GluR1–4), **kainate** (GluR5–7, KA1–2) and **NMDA** (NR1, NR2A–D).', sec: 's4-glu-receptors' },
       { ch: 'ch04', pages: '105–110', text: 'The **NMDA hypofunction** hypothesis: faulty NMDA signaling on prefrontal GABA interneurons disinhibits pyramidal neurons, leading downstream to dopamine excess (positive) and deficit (negative).', sec: 's4-nmda-hypo' },
       { ch: 'ch07', pages: '328–331', text: 'Ketamine’s rapid antidepressant effect is thought to come from a **burst of glutamate** acting at AMPA receptors; lamotrigine and riluzole may reduce glutamate release.', sec: 's7-ketamine' },
-      { ch: 'ch08', pages: '372–373', text: 'Fear conditioning strengthens **glutamate** synapses in the lateral and central amygdala; α2δ ligands reduce excess glutamate release in fear and worry circuits.', sec: 's8-conditioning' }
+      { ch: 'ch08', pages: '372–373', text: 'Fear conditioning strengthens **glutamate** synapses in the lateral and central amygdala; α2δ ligands reduce excess glutamate release in fear and worry circuits.', sec: 's8-conditioning' },
+      { ch: 'ch09', pages: '395', text: 'The main transmitter released in **suprasegmental** central sensitization (thalamus, cortex).', sec: 's9-a2d' }
     ],
     synthesis: [['Glutamine (glia)', 'Recaptured glutamate is converted by **glutamine synthetase**'], ['Export', 'Glutamine leaves glia on a reversed **SNAT** (or ASC-T)'], ['Neuronal uptake', 'A neuronal **SNAT** imports glutamine'], ['Glutamate', 'Mitochondrial **glutaminase**'], ['Vesicle', 'Packaged by **vGluT**']],
     pathways: [
@@ -201,7 +205,10 @@ SP.nts = [
   {
     id: 'endorphin', name: 'β-Endorphin', abbr: 'β-END', family: 'Neuropeptide', key6: false,
     summary: 'The brain’s own morphine: a prime example of “God’s pharmacopeia.”',
-    facts: [{ ch: 'ch01', pages: '5–6', text: 'The brain makes **its own morphine (β-endorphin)**. Morphine was used clinically **before β-endorphin was discovered**.', sec: 's1-nts' }]
+    facts: [
+      { ch: 'ch01', pages: '5–6', text: 'The brain makes **its own morphine (β-endorphin)**. Morphine was used clinically **before β-endorphin was discovered**.', sec: 's1-nts' },
+      { ch: 'ch09', pages: '390–392', text: 'Descending PAG-driven pathways release **endorphins** at μ receptors in the dorsal horn; placebo analgesia is reversed by naloxone.', sec: 's9-descending' }
+    ]
   },
   {
     id: 'endocannabinoids', name: 'Endocannabinoids', abbr: 'EC', family: 'Lipid (endocannabinoid)', key6: false,

@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 9,
+    date: "2026-10-08",
+    title: "Chapter 9: Chronic Pain and Its Treatment",
+    summary: "Chapter 9 adds the pain pathway, central sensitization, fibromyalgia, and why SNRIs and α2δ ligands treat pain across psychiatry.",
+    items: [
+      { type: "chapter", ch: "ch09", text: "Chapter 9: study guide (9 sections), high-yield summary, mechanism, drug and clinical cards, and 30 board-style questions.", href: "#/c/ch09/guide", link: "Open Chapter 9" },
+      { type: "feature", text: "Symptoms & circuits: eight maps for segmental and suprasegmental pain, painful symptoms of depression and the symptoms of fibromyalgia.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Library: lidocaine, clonidine, naloxone, cyclobenzaprine, sodium oxybate, armodafinil and atomoxetine; new targets VR1, NK1–3, CGRP, δ- and κ-opioid receptors; descending pain pathways added to norepinephrine.", href: "#/targets/vr1", link: "VR1" },
+      { type: "update", text: "Post-publication update boxes: suzetrigine for acute pain (2025) and sublingual cyclobenzaprine for fibromyalgia (2025).", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 8,
     date: "2026-10-08",
     title: "Chapter 8: Anxiety, Trauma, and Treatment",

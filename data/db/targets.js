@@ -34,7 +34,8 @@ SP.targets = [
       { ch: 'ch06', pages: '253–254', text: 'The NE “vacuum cleaner” that removes NE from the synapse without destroying it.', sec: 's6-ne' },
       { ch: 'ch07', pages: '299–301', text: 'The PFC has few DATs, so DA is cleared there by **NET** (which has higher affinity for DA than NE) or COMT. NET inhibition therefore raises **NE and DA in the PFC**: the “half” of SNRIs’ two-and-a-half actions.', sec: 's7-snri' },
       { ch: 'ch07', pages: '305', text: 'Therapeutic and NE-mediated side effects may appear with perhaps as little as **50%** NET occupancy.', sec: 's7-ndri' },
-      { ch: 'ch08', pages: '370', text: 'NET inhibitors can **transiently worsen** anxiety, then reduce fear and worry as β1 receptors downregulate.', sec: 's8-ne' }
+      { ch: 'ch08', pages: '370', text: 'NET inhibitors can **transiently worsen** anxiety, then reduce fear and worry as β1 receptors downregulate.', sec: 's8-ne' },
+      { ch: 'ch09', pages: '390–393', text: 'Boosting descending **NE** with SNRIs restores masking of irrelevant bodily input; the noradrenergic action may matter more than the serotonergic one for pain.', sec: 's9-descending' }
     ]
   },
   {
@@ -223,7 +224,8 @@ SP.targets = [
       { ch: 'ch02', pages: '39', text: 'Antagonist or partial agonist actions: possible pro-cognitive and antidepressant effects (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch04', pages: '117–119', text: '**5HT1B/D** is the serotonin neuron’s **terminal autoreceptor**: synaptic 5HT shuts off further release.', sec: 's4-5ht-pre' },
       { ch: 'ch04', pages: '125', text: '5HT1B **heteroreceptors** on NE, DA, histamine and ACh terminals **inhibit** their release; a few 5HT1B antagonists that may boost these transmitters treat depression.', sec: 's4-5ht-post' },
-      { ch: 'ch07', pages: '317–318', text: 'Presynaptic **5HT1B/D autoreceptors** blunt 5HT build-up after SERT blockade; 5HT1B **heteroreceptors** on ACh, HA, DA and NE terminals inhibit their release. Vortioxetine’s partial agonism/antagonism removes both brakes.', sec: 's7-vortioxetine' }
+      { ch: 'ch07', pages: '317–318', text: 'Presynaptic **5HT1B/D autoreceptors** blunt 5HT build-up after SERT blockade; 5HT1B **heteroreceptors** on ACh, HA, DA and NE terminals inhibit their release. Vortioxetine’s partial agonism/antagonism removes both brakes.', sec: 's7-vortioxetine' },
+      { ch: 'ch09', pages: '390–391', text: 'Descending serotonin **inhibits** primary afferent terminals via 5HT1B/D receptors.', sec: 's9-descending' }
     ],
     stim: ['Terminal autoreceptor: **shuts off 5HT release**; heteroreceptors: **less NE, DA, HA and ACh** release (Chapter 4)']
   },
@@ -303,7 +305,8 @@ SP.targets = [
       { ch: 'ch02', pages: '39', text: 'Antagonists have antidepressant actions; agonists improve cognition and behavior in ADHD (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch05', pages: '195, 208', text: 'α2 antagonism is a candidate **antidepressant** property of several drugs for psychosis (risperidone, quetiapine via norquetiapine, brexpiprazole), though α1 blockade can cancel it.', sec: 's5-mania-dep' },
       { ch: 'ch06', pages: '254–255', text: 'The only NE receptor that can be a **presynaptic autoreceptor**: on axon terminals (gatekeepers that halt release) and somatodendritic (shut off firing). Agonists step on the brake; antagonists **cut the brake cable**.', sec: 's6-ne' },
-      { ch: 'ch07', pages: '309', text: 'α2 **heteroreceptors** on serotonin neurons let NE brake 5HT release; α2 antagonists (mirtazapine, mianserin) therefore release **both NE and 5HT**, synergizing with reuptake inhibitors.', sec: 's7-mirtazapine' }
+      { ch: 'ch07', pages: '309', text: 'α2 **heteroreceptors** on serotonin neurons let NE brake 5HT release; α2 antagonists (mirtazapine, mianserin) therefore release **both NE and 5HT**, synergizing with reuptake inhibitors.', sec: 's7-mirtazapine' },
+      { ch: 'ch09', pages: '390–391', text: 'Descending NE from the **locus coeruleus** inhibits pain via presynaptic α2 on primary afferents and postsynaptic α2 on dorsal horn neurons; direct α2 agonists (clonidine) can relieve pain.', sec: 's9-descending' }
     ]
   },
   {
@@ -431,6 +434,16 @@ SP.targets = [
     ]
   },
   {
+    id: 'nk', name: 'Neurokinin receptors (NK1, NK2, NK3)', short: 'NK1–3', family: 'G-protein-linked receptor', ntLabel: 'Substance P',
+    summary: 'Receptors for substance P, one of the best-studied pain transmitters in the dorsal horn.',
+    facts: [{ ch: 'ch09', pages: '382–383', text: '**Substance P** acts at NK1, NK2 and NK3 receptors in the dorsal horn (Figure 9-2); its release depends on N and P/Q calcium channels.', sec: 's9-ascending' }]
+  },
+  {
+    id: 'cgrp', name: 'CGRP receptor', short: 'CGRP-R', family: 'G-protein-linked receptor', ntLabel: 'Calcitonin gene-related peptide',
+    summary: 'Receptor for calcitonin gene-related peptide, a pain transmitter released in the dorsal horn.',
+    facts: [{ ch: 'ch09', pages: '382–383, 395', text: 'CGRP is released in the dorsal horn with glutamate, aspartate and substance P via N and P/Q VSCCs.', sec: 's9-a2d' }]
+  },
+  {
     id: 'v1b', name: 'Vasopressin 1B receptor', short: 'V1B', family: 'G-protein-linked receptor', ntLabel: 'Neuropeptide (vasopressin)',
     summary: 'A stress-axis receptor targeted by novel treatments in testing for depression.',
     block: ['Antagonists in testing for **HPA-axis** abnormalities in depression'],
@@ -456,8 +469,20 @@ SP.targets = [
     facts: [
       { ch: 'ch05', pages: '201', text: 'The μ-opioid antagonist **samidorphan** combined with olanzapine was a new agent on the horizon to reduce olanzapine-induced weight gain.', sec: 's5-metabolic' },
       { ch: 'ch07', pages: '328, 355', text: 'Possible μ-opioid contributions to the antidepressant effects of **ketamine** and **dextromethadone** are debated.', sec: 's7-dxm' },
-      { ch: 'ch08', pages: '375', text: '**Opioids** given soon after trauma may mitigate consolidation of the traumatic memory and reduce the chance of PTSD.', sec: 's8-novel' }
-    ]
+      { ch: 'ch08', pages: '375', text: '**Opioids** given soon after trauma may mitigate consolidation of the traumatic memory and reduce the chance of PTSD.', sec: 's8-novel' },
+      { ch: 'ch09', pages: '390', text: 'Descending pathways release **endorphins** acting at mostly **presynaptic** μ receptors on nociceptive afferents; opioid analgesics act there and in the **PAG**. **Aβ fibers lack μ receptors**, so opioids spare touch.', sec: 's9-descending' }
+    ],
+    stim: ['**Analgesia** via spinal and periaqueductal gray μ receptors (Chapter 9)']
+  },
+  {
+    id: 'dor', name: 'δ-Opioid receptor', short: 'δ-opioid', family: 'G-protein-linked receptor', nt: 'endorphin',
+    summary: 'Opioid receptor for enkephalins, which are antinociceptive.',
+    facts: [{ ch: 'ch09', pages: '390', text: '**Enkephalins** acting via δ-opioid receptors are antinociceptive. Dextromethadone also binds δ (Figure 7-86).', sec: 's9-descending' }]
+  },
+  {
+    id: 'kor', name: 'κ-Opioid receptor', short: 'κ-opioid', family: 'G-protein-linked receptor', nt: 'endorphin',
+    summary: 'Opioid receptor for dynorphins, which can be either anti- or pronociceptive.',
+    facts: [{ ch: 'ch09', pages: '390', text: '**Dynorphins** acting at κ-opioid receptors can be anti- or **pronociceptive**.', sec: 's9-descending' }]
   },
   /* ---------------- ligand-gated ion channels ---------------- */
   {
@@ -494,6 +519,12 @@ SP.targets = [
     ]
   },
   {
+    id: 'vr1', name: 'Vanilloid receptor 1 (VR1)', short: 'VR1', family: 'Ligand-gated ion channel', ntLabel: 'Capsaicin, noxious heat',
+    summary: 'An ion channel on some primary afferent neurons, activated by capsaicin (chili peppers) and noxious heat: the source of the burning sensation.',
+    stim: ['**Burning** pain from capsaicin or heat'],
+    facts: [{ ch: 'ch09', pages: '381', text: 'Neurons expressing VR1 respond to **capsaicin** and **noxious heat**; channel content defines each primary afferent’s response properties.', sec: 's9-nociception' }]
+  },
+  {
     id: '5ht3', name: 'Serotonin 5HT3 receptor', short: '5HT3', family: 'Ligand-gated ion channel', nt: 'serotonin',
     summary: 'The only ligand-gated serotonin receptor (pentameric). Antagonists are antiemetic; mirtazapine and vortioxetine block it as part of their profiles.',
     block: ['**Pro-cognitive** and **antidepressant** (mirtazapine, vortioxetine)', '**Antiemetic**: reduces chemotherapy-induced emesis'],
@@ -502,7 +533,8 @@ SP.targets = [
       { ch: 'ch03', pages: '55', text: '**Antagonists**: mirtazapine and vortioxetine (pro-cognitive, antidepressant); antiemetics for chemotherapy-induced emesis (Table 3-2).', sec: 's3-drugs' },
       { ch: 'ch04', pages: '127–130', text: 'In the **chemoreceptor trigger zone** (outside the blood–brain barrier) it mediates nausea and vomiting; in cortex it sits on **non-parvalbumin GABA interneurons**, so serotonin here **inhibits ACh and NE** release and glutamate output. Antagonists should enhance ACh and NE release.', sec: 's4-5ht-post' },
       { ch: 'ch05', pages: '212', text: 'The pines bind 5HT3 weakly; the dones not at all; aripiprazole weakly. 5HT3 antagonism is a candidate antidepressant property.', sec: 's5-binding' },
-      { ch: 'ch07', pages: '309–311', text: 'Peripheral 5HT3 receptors (chemoreceptor trigger zone, gut) mediate nausea, vomiting and diarrhea; brain 5HT3 receptors on **GABA interneurons** are excitatory, so antagonists (mirtazapine, **vortioxetine**) release glutamate, ACh and NE.', sec: 's7-mirtazapine' }
+      { ch: 'ch07', pages: '309–311', text: 'Peripheral 5HT3 receptors (chemoreceptor trigger zone, gut) mediate nausea, vomiting and diarrhea; brain 5HT3 receptors on **GABA interneurons** are excitatory, so antagonists (mirtazapine, **vortioxetine**) release glutamate, ACh and NE.', sec: 's7-mirtazapine' },
+      { ch: 'ch09', pages: '390–391', text: 'Serotonin **facilitates** pain via excitatory 5HT3 receptors on some primary afferent terminals; this dual role makes SSRIs inconsistent for pain.', sec: 's9-descending' }
     ],
     stim: ['Nausea and vomiting (CTZ); in cortex **less ACh, NE and glutamate** release (Chapter 4)']
   },
@@ -523,7 +555,8 @@ SP.targets = [
       { ch: 'ch04', pages: '105–110', text: '**Hypofunction** at prefrontal **GABA interneurons** (from neurodevelopment, ketamine/PCP or neurodegeneration) is a leading hypothesis of psychosis.', sec: 's4-nmda-hypo' },
       { ch: 'ch05', pages: '169, 237', text: '**Amantadine**’s weak NMDA antagonism may explain its benefit in DIP; NRX101 pairs the glycine-site agent **D-cycloserine** with lurasidone.', sec: 's5-motor' },
       { ch: 'ch07', pages: '328–332', text: 'Ketamine blocks NMDA at the open-channel **PCP site**: NMDA block on GABA interneurons → glutamate burst → **AMPA** → mTOR or BDNF/VEGF → rapid synaptogenesis.', sec: 's7-ketamine' },
-      { ch: 'ch08', pages: '372–375', text: 'NMDA receptors embed **fear conditioning** via LTP in the lateral and central amygdala; boosting NMDA action during **exposure therapy** might strengthen **fear extinction** instead.', sec: 's8-novel' }
+      { ch: 'ch08', pages: '372–375', text: 'NMDA receptors embed **fear conditioning** via LTP in the lateral and central amygdala; boosting NMDA action during **exposure therapy** might strengthen **fear extinction** instead.', sec: 's8-novel' },
+      { ch: 'ch09', pages: '382–383', text: 'Glutamate acts at NMDA and AMPA receptors in the dorsal horn; glycine acts at the NMDA glycine site (Figure 9-2).', sec: 's9-ascending' }
     ],
     updates: [
       { year: '2022', title: 'Dextromethorphan–bupropion approved', text: 'Approved for major depressive disorder in August 2022 (Auvelity).', source: 'FDA, August 2022' },
@@ -552,10 +585,11 @@ SP.targets = [
     id: 'a2d', name: 'α2δ subunit of voltage-sensitive calcium channels', short: 'α2δ', family: 'Voltage-sensitive ion channel',
     summary: 'A protein flanking the α1 pore of VSCCs, with a transmembrane δ part and an extracellular α2 part. Target of pregabalin and gabapentin.',
     location: 'Presynaptic **N and P/Q** VSCCs (flanking the α1 pore)',
-    block: ['Reduced neurotransmitter release in states of excess: **pain, seizures**, possibly **anxiety and sleep**', '**Anxiolytic** actions (social anxiety, panic; approved for anxiety outside the US) (Chapter 8)'],
+    block: ['Reduced neurotransmitter release in states of excess: **pain, seizures**, possibly **anxiety and sleep**', '**Anxiolytic** actions (social anxiety, panic; approved for anxiety outside the US) (Chapter 8)', '**Neuropathic pain**: diabetic neuropathy, fibromyalgia, shingles, painful symptoms of depression/anxiety (Chapter 9)'],
     facts: [
       { ch: 'ch03', pages: '71', text: 'Has a **δ** part in the membrane and an **α2** part outside the cell; it is the target of **pregabalin and gabapentin** and may regulate how the channel opens and closes.', sec: 's3-vscc' },
-      { ch: 'ch08', pages: '366–368', text: 'α2δ ligands bind **open, overly active** N and P/Q channels in the amygdala and CSTC loops, cutting excess **glutamate** release to reduce fear and worry; anxiolytic in social anxiety and panic disorder.', sec: 's8-a2d' }
+      { ch: 'ch08', pages: '366–368', text: 'α2δ ligands bind **open, overly active** N and P/Q channels in the amygdala and CSTC loops, cutting excess **glutamate** release to reduce fear and worry; anxiolytic in social anxiety and panic disorder.', sec: 's8-a2d' },
+      { ch: 'ch09', pages: '395–399', text: 'α2δ ligands bind the **open-channel** conformation, giving use-dependent block of the most active channels in sensitized pain pathways while sparing normal transmission.', sec: 's9-a2d' }
     ]
   },
   {
@@ -569,7 +603,8 @@ SP.targets = [
       { ch: 'ch03', pages: '68–69', text: 'Three states: **open**, **inactivated** (plugged before it closes) and **closed and inactivated**. β units and the α unit may be phosphoproteins regulated by signal transduction.', sec: 's3-vssc' },
       { ch: 'ch03', pages: '69–70', text: 'There are many sodium channel subtypes; most anticonvulsants probably act at **multiple sites** on multiple types of channel.', sec: 's3-vssc' },
       { ch: 'ch07', pages: '335–336', text: 'All TCAs block VSSCs in heart and brain; in overdose this causes **coma, seizures, arrhythmia and death**.', sec: 's7-tca' },
-      { ch: 'ch07', pages: '347–353', text: 'Valproate may alter VSSC sensitivity; **carbamazepine**, oxcarbazepine/eslicarbazepine and **lamotrigine** bind the open-channel **α subunit**; lamotrigine and riluzole may thereby reduce **glutamate release**.', sec: 's7-valproate-cbz' }
+      { ch: 'ch07', pages: '347–353', text: 'Valproate may alter VSSC sensitivity; **carbamazepine**, oxcarbazepine/eslicarbazepine and **lamotrigine** bind the open-channel **α subunit**; lamotrigine and riluzole may thereby reduce **glutamate release**.', sec: 's7-valproate-cbz' },
+      { ch: 'ch09', pages: '381, 399', text: 'Nociceptive action potentials need **VSSCs**; local anesthetics (lidocaine) block them; second-line anticonvulsants for neuropathic pain also target sodium channels.', sec: 's9-nociception' }
     ]
   },
   {
@@ -582,7 +617,8 @@ SP.targets = [
       { ch: 'ch01', pages: '9', text: 'When the action potential reaches the terminal it opens VSCCs; **calcium influx** causes synaptic vesicles anchored to the inner membrane to **spill their contents** into the synapse.', sec: 's1-coupling' },
       { ch: 'ch03', pages: '70–71', text: 'The **II–III loop** of the α1 unit is a **snare** linking the channel to synaptic vesicles via SNAP 25, synaptobrevin, syntaxin and synaptotagmin: a “cocked gun.”', sec: 's3-vscc' },
       { ch: 'ch03', pages: '71–73', text: 'Subtypes (Table 3-4): **L** (Cav1.2/1.3), **N** (Cav2.2), **P/Q** (Cav2.1), **R** (Cav2.3), **T** (Cav3.1–3.3). **N and P/Q** are presynaptic and regulate transmitter release.', sec: 's3-vscc' },
-      { ch: 'ch07', pages: '352', text: '**L-type** calcium channels on vascular smooth muscle are targets of antihypertensive “calcium channel blockers”; anecdotal evidence suggests dihydropyridines may help some bipolar patients.', sec: 's7-lamotrigine' }
+      { ch: 'ch07', pages: '352', text: '**L-type** calcium channels on vascular smooth muscle are targets of antihypertensive “calcium channel blockers”; anecdotal evidence suggests dihydropyridines may help some bipolar patients.', sec: 's7-lamotrigine' },
+      { ch: 'ch09', pages: '395–399', text: 'Pain transmitter release (glutamate, aspartate, substance P, CGRP) requires **N- and P/Q-type** VSCCs in the dorsal horn, thalamus and cortex; excessive release drives central sensitization.', sec: 's9-a2d' }
     ]
   },
   /* ---------------- enzymes ---------------- */

@@ -12,11 +12,13 @@ SP.drugs = [
     nts: ['endorphin'],
     chapters: [
       { ch: 'ch01', pages: '5–6' },
-      { ch: 'ch08', pages: '375' }
+      { ch: 'ch08', pages: '375' },
+      { ch: 'ch09', pages: '382, 390' }
     ],
     facts: [
       { ch: 'ch01', pages: '5–6', text: 'Used clinically **before β-endorphin was discovered**: an example of a drug preceding knowledge of its natural counterpart (“God’s pharmacopeia”).', sec: 's1-nts' },
-      { ch: 'ch08', pages: '375', text: 'Opioids given soon after trauma may mitigate consolidation of the traumatic memory and reduce PTSD risk (investigational).', sec: 's8-novel' }
+      { ch: 'ch08', pages: '375', text: 'Opioids given soon after trauma may mitigate consolidation of the traumatic memory and reduce PTSD risk (investigational).', sec: 's8-novel' },
+      { ch: 'ch09', pages: '382, 390', text: 'Opiates reduce acute pain through **central** actions at spinal and PAG μ receptors, but are no better than SNRIs or α2δ ligands for chronic neuropathic pain and are not proven in fibromyalgia.', sec: 's9-descending' }
     ]
   },
   {
@@ -618,7 +620,10 @@ SP.drugs = [
   },
   {
     id: 'venlafaxine', name: 'Venlafaxine', brand: 'Effexor XR', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
-    chapters: [{ ch: 'ch07', pages: '298–302' }],
+    chapters: [
+      { ch: 'ch07', pages: '298–302' },
+      { ch: 'ch09', pages: '390–400' }
+    ],
     nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
     short: 'SNRI whose NET inhibition grows with dose; CYP2D6 converts it to desvenlafaxine.',
@@ -628,18 +633,24 @@ SP.drugs = [
       { t: 'net', action: 'inhibitor', s: 2, note: 'Recruited at higher doses' },
       { t: 'cyp2d6', action: 'substrate', note: 'Converted to desvenlafaxine' }
     ],
-    uses: ['Unipolar depression; efficacy often rises with dose (noradrenergic boost)', 'Several **anxiety disorders**'],
+    uses: ['Unipolar depression; efficacy often rises with dose (noradrenergic boost)', 'Several **anxiety disorders**', 'Neuropathic pain and fibromyalgia pain (Chapter 9)'],
     sideEffects: [
       { e: 'Sweating, raised blood pressure', via: 'NET inhibition' },
       { e: 'Nausea and other serotonergic effects', via: 'SERT inhibition' },
       { e: 'Bothersome **withdrawal**, especially after high-dose long-term use', via: 'Sudden discontinuation' },
       { e: 'Nausea, worse with the IR form', via: 'IR formulation (now little used)' }
     ],
-    facts: [{ ch: 'ch07', pages: '302', text: '2D6 inhibitors and **poor metabolizers** shift the ratio toward parent venlafaxine, reducing NET inhibition: how much NET inhibition a dose gives is **unpredictable**. The XR form is a considerable improvement over IR.', sec: 's7-snri-agents' }]
+    facts: [
+      { ch: 'ch07', pages: '302', text: '2D6 inhibitors and **poor metabolizers** shift the ratio toward parent venlafaxine, reducing NET inhibition: how much NET inhibition a dose gives is **unpredictable**. The XR form is a considerable improvement over IR.', sec: 's7-snri-agents' },
+      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' }
+    ]
   },
   {
     id: 'desvenlafaxine', name: 'Desvenlafaxine', brand: 'Pristiq', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
-    chapters: [{ ch: 'ch07', pages: '302' }],
+    chapters: [
+      { ch: 'ch07', pages: '302' },
+      { ch: 'ch09', pages: '390–400' }
+    ],
     nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
     short: 'Active metabolite of venlafaxine with more consistent NET inhibition.',
@@ -648,16 +659,22 @@ SP.drugs = [
       { t: 'sert', action: 'inhibitor', s: 3 },
       { t: 'net', action: 'inhibitor', s: 2, note: 'Relatively greater than venlafaxine' }
     ],
-    uses: ['Unipolar depression'],
+    uses: ['Unipolar depression', 'Neuropathic pain and fibromyalgia pain (Chapter 9)'],
     sideEffects: [
       { e: 'Sweating, raised blood pressure', via: 'NET inhibition' },
       { e: 'Nausea and other serotonergic effects', via: 'SERT inhibition' }
     ],
-    facts: [{ ch: 'ch07', pages: '302', text: 'Less need for dose titration than venlafaxine because NET inhibition does not depend on CYP2D6 conversion.', sec: 's7-snri-agents' }]
+    facts: [
+      { ch: 'ch07', pages: '302', text: 'Less need for dose titration than venlafaxine because NET inhibition does not depend on CYP2D6 conversion.', sec: 's7-snri-agents' },
+      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' }
+    ]
   },
   {
     id: 'duloxetine', name: 'Duloxetine', brand: 'Cymbalta', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
-    chapters: [{ ch: 'ch07', pages: '299, 302–303' }],
+    chapters: [
+      { ch: 'ch07', pages: '299, 302–303' },
+      { ch: 'ch09', pages: '390–400' }
+    ],
     nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
     short: 'SNRI that treats depression, pain and painful physical symptoms.',
@@ -671,11 +688,17 @@ SP.drugs = [
       { e: 'Sweating, raised blood pressure', via: 'NET inhibition' },
       { e: 'Nausea and other serotonergic effects', via: 'SERT inhibition' }
     ],
-    facts: [{ ch: 'ch07', pages: '302–303', text: 'Showed that somatic pain is a legitimate symptom of depression. Usually started **twice daily**; once daily after tolerance. Less hypertension and milder withdrawal than venlafaxine.', sec: 's7-snri-agents' }]
+    facts: [
+      { ch: 'ch07', pages: '302–303', text: 'Showed that somatic pain is a legitimate symptom of depression. Usually started **twice daily**; once daily after tolerance. Less hypertension and milder withdrawal than venlafaxine.', sec: 's7-snri-agents' },
+      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' }
+    ]
   },
   {
     id: 'milnacipran', name: 'Milnacipran', brand: 'Savella; Ixel', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
-    chapters: [{ ch: 'ch07', pages: '300, 303' }],
+    chapters: [
+      { ch: 'ch07', pages: '300, 303' },
+      { ch: 'ch09', pages: '390–400' }
+    ],
     nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
     short: 'SNRI that is more potent at NET than SERT; for fibromyalgia in the US.',
@@ -689,11 +712,18 @@ SP.drugs = [
       { e: 'More **sweating** and **urinary hesitancy**', via: 'Robust NET inhibition (bladder α1)' },
       { e: 'Energizing/activating', via: 'NET inhibition' }
     ],
-    facts: [{ ch: 'ch07', pages: '303', text: 'The first SNRI in Japan and many European countries. Needs **twice-daily** dosing (short half-life). An α1 antagonist relieves urinary hesitancy.', sec: 's7-snri-agents' }]
+    facts: [
+      { ch: 'ch07', pages: '303', text: 'The first SNRI in Japan and many European countries. Needs **twice-daily** dosing (short half-life). An α1 antagonist relieves urinary hesitancy.', sec: 's7-snri-agents' },
+      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' },
+      { ch: 'ch09', pages: '399', text: 'Potent NET binding at **all** clinically effective doses may make it especially useful for **fibro-fog**.', sec: 's9-ancillary' }
+    ]
   },
   {
     id: 'levomilnacipran', name: 'Levomilnacipran', brand: 'Fetzima', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
-    chapters: [{ ch: 'ch07', pages: '300, 303' }],
+    chapters: [
+      { ch: 'ch07', pages: '300, 303' },
+      { ch: 'ch09', pages: '390–400' }
+    ],
     nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
     short: 'The active S enantiomer of milnacipran; once-daily SNRI for MDD.',
@@ -707,11 +737,18 @@ SP.drugs = [
       { e: 'Sweating, raised blood pressure', via: 'NET inhibition' },
       { e: 'Nausea and other serotonergic effects', via: 'SERT inhibition' }
     ],
-    facts: [{ ch: 'ch07', pages: '303', text: 'Unlike racemic milnacipran it is given **once daily**.', sec: 's7-snri-agents' }]
+    facts: [
+      { ch: 'ch07', pages: '303', text: 'Unlike racemic milnacipran it is given **once daily**.', sec: 's7-snri-agents' },
+      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' },
+      { ch: 'ch09', pages: '399', text: 'Potent NET binding at **all** clinically effective doses may make it especially useful for **fibro-fog**.', sec: 's9-ancillary' }
+    ]
   },
   {
     id: 'bupropion', name: 'Bupropion', brand: 'Wellbutrin', group: 'Antidepressant', cls: 'Norepinephrine–dopamine reuptake inhibitor (NDRI)',
-    chapters: [{ ch: 'ch07', pages: '303–306, 333, 353–354' }],
+    chapters: [
+      { ch: 'ch07', pages: '303–306, 333, 353–354' },
+      { ch: 'ch09', pages: '399–400' }
+    ],
     nbn: 'Norepinephrine and dopamine reuptake inhibitor (NET/DAT)',
     nts: ['norepinephrine', 'dopamine'],
     short: 'NDRI with low, slow DAT occupancy; activating, no sexual dysfunction.',
@@ -729,7 +766,8 @@ SP.drugs = [
     ],
     facts: [
       { ch: 'ch07', pages: '306', text: 'IR (three times daily) → SR (twice daily) → **XL** (once daily); IR is all but abandoned.', sec: 's7-ndri' },
-      { ch: 'ch07', pages: '333–334', text: 'SSRI or SNRI + bupropion = **triple-action** combination, among the most popular in the US.', sec: 's7-combos' }
+      { ch: 'ch07', pages: '333–334', text: 'SSRI or SNRI + bupropion = **triple-action** combination, among the most popular in the US.', sec: 's7-combos' },
+      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' }
     ],
     updates: [{ year: '2022', title: 'Combined with dextromethorphan for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022, and for agitation associated with Alzheimer dementia in April 2026.', source: 'FDA, August 2022; Axsome Therapeutics, April 30, 2026' }]
   },
@@ -1263,13 +1301,35 @@ SP.drugs = [
   },
   {
     id: 'modafinil', name: 'Modafinil', brand: 'Provigil', group: 'Wake-promoting agent', cls: 'Wake-promoting agent (DAT inhibitor)',
-    chapters: [{ ch: 'ch07', pages: '333, 335' }],
+    chapters: [
+      { ch: 'ch07', pages: '333, 335' },
+      { ch: 'ch09', pages: '399–400' }
+    ],
     nbn: 'Dopamine reuptake inhibitor (DAT)',
     nts: ['dopamine'],
     short: 'A DAT inhibitor used with an SNRI as an “arousal combo.”',
     mechanism: 'Described in Chapter 7 as **another DAT inhibitor**; fuller pharmacology appears in the sleep chapter.',
     targets: [{ t: 'dat', action: 'inhibitor' }],
-    uses: ['With an SNRI for residual **fatigue, low energy and poor concentration/alertness** in depression (arousal combo)']
+    uses: ['With an SNRI for residual **fatigue, low energy and poor concentration/alertness** in depression (arousal combo)'],
+    facts: [{ ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' }]
+  },
+  {
+    id: 'armodafinil', name: 'Armodafinil', brand: 'Nuvigil', group: 'Wake-promoting agent', cls: 'Wake-promoting agent',
+    nts: ['dopamine'],
+    chapters: [{ ch: 'ch09', pages: '399' }],
+    short: 'Wake-promoting agent used for fibro-fog and fatigue.',
+    mechanism: 'Related to modafinil; pharmacology covered in the sleep chapter.',
+    uses: ['**Fibro-fog** and fatigue in fibromyalgia (as for cognitive dysfunction in depression)']
+  },
+  {
+    id: 'atomoxetine', name: 'Atomoxetine', brand: 'Strattera', group: 'NRI', cls: 'Selective norepinephrine reuptake inhibitor (NRI)',
+    nbn: 'Norepinephrine reuptake inhibitor (NET)',
+    nts: ['norepinephrine', 'dopamine'],
+    chapters: [{ ch: 'ch09', pages: '399' }],
+    short: 'Selective NET inhibitor used for fibro-fog (and ADHD, Chapter 11).',
+    mechanism: 'A **selective NET inhibitor**, which also raises **dopamine in the prefrontal cortex**.',
+    targets: [{ t: 'net', action: 'inhibitor' }],
+    uses: ['**Fibro-fog** in fibromyalgia', 'ADHD (Chapter 11)']
   },
   {
     id: 'prazosin', name: 'Prazosin', brand: 'Minipress', group: 'α1 antagonist', cls: 'α1-adrenergic antagonist',
@@ -1292,6 +1352,55 @@ SP.drugs = [
     targets: [{ t: 'h1', action: 'antagonist' }],
     uses: ['Off-label treatment of **anxiety** (GAD)'],
     sideEffects: [{ e: 'Sedation', via: 'H1 antagonism' }]
+  },
+  {
+    id: 'lidocaine', name: 'Lidocaine', brand: 'Xylocaine', group: 'Local anesthetic', cls: 'Local anesthetic',
+    nbn: 'Voltage-sensitive sodium channel blocker',
+    nts: [],
+    chapters: [{ ch: 'ch09', pages: '381' }],
+    short: 'Local anesthetic that blocks sodium channels on primary afferents.',
+    mechanism: 'Blocks **voltage-sensitive sodium channels** on primary afferent neurons, stopping nociceptive impulses from entering the CNS.',
+    targets: [{ t: 'vssc', action: 'blocker' }],
+    uses: ['Local anesthesia (peripherally administered)']
+  },
+  {
+    id: 'clonidine', name: 'Clonidine', brand: 'Catapres', group: 'α2 agonist', cls: 'α2-adrenergic agonist',
+    nbn: 'Norepinephrine α2 receptor agonist',
+    nts: ['norepinephrine'],
+    chapters: [{ ch: 'ch09', pages: '390' }],
+    short: 'Direct α2 agonist that can relieve pain by mimicking descending NE inhibition.',
+    mechanism: 'A **direct-acting α2 agonist**: mimics descending noradrenergic inhibition at α2 receptors in the dorsal horn.',
+    targets: [{ t: 'alpha2', action: 'agonist' }],
+    uses: ['Pain relief in some patients (Chapter 9); other uses in later chapters']
+  },
+  {
+    id: 'naloxone', name: 'Naloxone', brand: 'Narcan', group: 'Opioid antagonist', cls: 'μ-opioid antagonist',
+    nbn: 'Opioid μ receptor antagonist',
+    nts: ['endorphin'],
+    chapters: [{ ch: 'ch09', pages: '392' }],
+    short: 'μ-opioid antagonist that reverses placebo analgesia.',
+    mechanism: 'Blocks **μ-opioid** receptors. Its ability to reverse placebo pain relief suggests placebo analgesia involves endogenous opioid release.',
+    targets: [{ t: 'mor', action: 'antagonist' }],
+    uses: ['Opioid reversal (later chapters)']
+  },
+  {
+    id: 'cyclobenzaprine', name: 'Cyclobenzaprine', brand: 'Flexeril; Tonmya', group: 'Muscle relaxant', cls: 'Tricyclic muscle relaxant',
+    nts: [],
+    chapters: [{ ch: 'ch09', pages: '399' }],
+    short: 'Tricyclic muscle relaxant used second line for fibromyalgia.',
+    mechanism: 'A **tricyclic** muscle relaxant; the book does not detail its pharmacology.',
+    uses: ['Second-line treatment of **fibromyalgia** pain'],
+    facts: [{ ch: 'ch09', pages: '399', text: 'Spelled “cyclobenzapine” in the book.', sec: 's9-ancillary' }],
+    updates: [{ year: '2025', title: 'Sublingual form approved for fibromyalgia', text: 'Tonmya, a once-nightly sublingual cyclobenzaprine tablet, was approved for fibromyalgia in adults on August 15, 2025, the first new fibromyalgia drug in more than 15 years.', source: 'FDA approval reported by Healio, August 15, 2025' }]
+  },
+  {
+    id: 'sodium-oxybate', name: 'Sodium oxybate (GHB)', brand: 'Xyrem', aka: ['γ-Hydroxybutyrate', 'GHB'], group: 'Hypnotic', cls: 'Slow-wave sleep enhancer',
+    nts: ['gaba'],
+    chapters: [{ ch: 'ch09', pages: '399' }],
+    short: 'Narcolepsy drug that enhances slow-wave sleep; abuse and diversion risk.',
+    mechanism: 'Enhances **slow-wave sleep**; mechanism covered in Chapter 10.',
+    uses: ['**Narcolepsy** (approved)', 'Severe, treatment-resistant **fibromyalgia** in expert hands (heroic cases)'],
+    sideEffects: [{ e: '**Diversion and abuse** potential', via: 'GHB' }]
   },
   {
     id: 'memantine', name: 'Memantine', group: 'Dementia treatment', cls: 'NMDA glutamate antagonist',
@@ -1509,13 +1618,15 @@ SP.drugs = [
       { ch: 'ch03', pages: '55' },
       { ch: 'ch05', pages: '199, 232' },
       { ch: 'ch07', pages: '308–311, 333–334' },
-      { ch: 'ch08', pages: '377' }
+      { ch: 'ch08', pages: '377' },
+      { ch: 'ch09', pages: '399–400' }
     ],
     facts: [
       { ch: 'ch03', pages: '55', text: 'A **5HT3 antagonist** with pro-cognitive and antidepressant actions (Table 3-2).', sec: 's3-drugs' },
       { ch: 'ch05', pages: '199, 232', text: 'Combined **H1 + 5HT2C** antagonism links it to weight gain; asenapine is structurally related and shares several of its binding properties.', sec: 's5-metabolic' },
       { ch: 'ch07', pages: '308–311', text: 'Five principal actions: **α2, 5HT2A, 5HT2C, 5HT3 and H1** antagonism. α2 antagonism gives a dual 5HT–NE action like an SNRI’s by a different mechanism, synergistic with reuptake blockade.', sec: 's7-mirtazapine' },
-      { ch: 'ch08', pages: '377', text: 'Off-label option for **GAD** and for **panic attacks**.', sec: 's8-gad' }
+      { ch: 'ch08', pages: '377', text: 'Off-label option for **GAD** and for **panic attacks**.', sec: 's8-gad' },
+      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' }
     ],
     nbn: 'Norepinephrine and serotonin receptor antagonist (α2, 5HT2A, 5HT2C, 5HT3, H1)',
     nts: ['norepinephrine', 'serotonin', 'histamine'],
@@ -1543,7 +1654,8 @@ SP.drugs = [
     id: 'trazodone', name: 'Trazodone', brand: 'Desyrel; Oleptro', group: 'Antidepressant', cls: 'Serotonin antagonist/reuptake inhibitor (SARI)',
     chapters: [
       { ch: 'ch07', pages: '311–315, 327' },
-      { ch: 'ch08', pages: '377' }
+      { ch: 'ch08', pages: '377' },
+      { ch: 'ch09', pages: '399–400' }
     ],
     nbn: 'Serotonin receptor antagonist (5HT2A/2C) and reuptake inhibitor',
     nts: ['serotonin', 'norepinephrine', 'histamine'],
@@ -1574,7 +1686,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '314', text: 'Bars follow the affinity (Ki) ranking in **Figure 7-45**, highest to lowest; actions beyond those named in the text are shown as “binds.”', sec: 's7-sari' },
       { ch: 'ch07', pages: '312–313', text: '300 mg **XR** once nightly gives levels that never fall below the antidepressant minimum, with a peak similar to 100 mg IR (Figure 7-47).', sec: 's7-sari' },
-      { ch: 'ch08', pages: '377', text: 'Off-label option for **GAD** and for **panic attacks**.', sec: 's8-gad' }
+      { ch: 'ch08', pages: '377', text: 'Off-label option for **GAD** and for **panic attacks**.', sec: 's8-gad' },
+      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' }
     ]
   },
   {
@@ -2606,16 +2719,18 @@ SP.drugs = [
     short: 'Binds the α2δ subunit of presynaptic calcium channels.',
     mechanism: 'Binds the **α2δ** protein of voltage-sensitive calcium channels, which may regulate how the channel opens and closes. Reducing calcium entry at presynaptic N and P/Q channels can keep vesicles tethered and reduce release in states of excessive neurotransmission. Details in Chapters 8–10.',
     targets: [{ t: 'a2d', action: 'modulator', note: 'Binds α2δ' }],
-    uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)', '**Anxiety**: shown in social anxiety and panic disorder; approved for anxiety in Europe and other countries, not the US; off-label add-on or alternative to benzodiazepines'],
+    uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)', '**Anxiety**: shown in social anxiety and panic disorder; approved for anxiety in Europe and other countries, not the US; off-label add-on or alternative to benzodiazepines', '**Neuropathic pain**: diabetic peripheral neuropathy, fibromyalgia, shingles; painful physical symptoms of depression/anxiety'],
     chapters: [
       { ch: 'ch03', pages: '71' },
       { ch: 'ch07', pages: '347, 352' },
-      { ch: 'ch08', pages: '366–368, 377' }
+      { ch: 'ch08', pages: '366–368, 377' },
+      { ch: 'ch09', pages: '395–400' }
     ],
     facts: [
       { ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' },
       { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' },
-      { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' }
+      { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' },
+      { ch: 'ch09', pages: '395–400', text: 'Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.', sec: 's9-a2d' }
     ]
   },
   {
@@ -2624,16 +2739,18 @@ SP.drugs = [
     short: 'Binds the α2δ subunit of presynaptic calcium channels.',
     mechanism: 'Binds the **α2δ** protein of voltage-sensitive calcium channels, like pregabalin. Details in Chapters 8–10.',
     targets: [{ t: 'a2d', action: 'modulator', note: 'Binds α2δ' }],
-    uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)', '**Anxiety**: shown in social anxiety and panic disorder; approved for anxiety in Europe and other countries, not the US; off-label add-on or alternative to benzodiazepines'],
+    uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)', '**Anxiety**: shown in social anxiety and panic disorder; approved for anxiety in Europe and other countries, not the US; off-label add-on or alternative to benzodiazepines', '**Neuropathic pain**: diabetic peripheral neuropathy, fibromyalgia, shingles; painful physical symptoms of depression/anxiety'],
     chapters: [
       { ch: 'ch03', pages: '71' },
       { ch: 'ch07', pages: '347, 352' },
-      { ch: 'ch08', pages: '366–368, 377' }
+      { ch: 'ch08', pages: '366–368, 377' },
+      { ch: 'ch09', pages: '395–400' }
     ],
     facts: [
       { ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' },
       { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' },
-      { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' }
+      { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' },
+      { ch: 'ch09', pages: '395–400', text: 'Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.', sec: 's9-a2d' }
     ]
   }
 ];
