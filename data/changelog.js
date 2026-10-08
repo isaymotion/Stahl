@@ -4,6 +4,15 @@
  */
 SP.changelog = [
   {
+    id: 10,
+    date: "2026-10-08",
+    title: "Backup progress",
+    summary: "Move your study progress between devices with a backup file.",
+    items: [
+      { type: "feature", text: "Backup progress, in the footer of every page: Export backup saves your card reviews, bookmarks, mistakes, exam history and settings to a file; Import backup restores it on another phone, tablet or computer. An import can be undone.", href: "#backup", link: "Backup progress" }
+    ]
+  },
+  {
     id: 9,
     date: "2026-10-08",
     title: "Chapter 9: Chronic Pain and Its Treatment",

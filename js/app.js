@@ -220,6 +220,10 @@
     var p = parts();
     if (!p.length) return renderHome();
     switch (p[0]) {
+      case 'backup':
+        renderHome();
+        setTimeout(function () { var el = document.getElementById('backup'); if (el) el.scrollIntoView({ block: 'center' }); }, 60);
+        return;
       case 'search': var q = p.slice(1).join('/'); qInput.value = q; return renderSearch(q);
       case 'library': return renderLibrary();
       case 'drugs': return p[1] ? renderDrug(p[1]) : renderDrugs();
@@ -501,7 +505,7 @@
       '<section class="wrap home-section"><h2>How to study a chapter</h2><div class="howto">' +
         '<div><h3>Read the study guide</h3><p>Work through it once, end to end. Tap any dotted term for its definition, and follow drug and receptor links into the library.</p></div>' +
         '<div><h3>Test yourself on high yield</h3><p>Switch on “Hide key facts” and recall each blank before you tap it. Print the one-page summary for the night before.</p></div>' +
-        '<div><h3>Review a little every day</h3><p>Do the day’s due cards, sit a timed exam each week, and clear your mistakes pile. Progress stays on this device.</p></div>' +
+        '<div><h3>Review a little every day</h3><p>Do the day’s due cards, sit a timed exam each week, and clear your mistakes pile. Progress stays on this device; use <a href="#backup" class="js-backup-link">Backup progress</a> in the footer to move it to another one.</p></div>' +
       '</div></section>';
     setView('home', html);
     document.title = APP;
@@ -2444,6 +2448,129 @@
     labelTheme();
   });
   labelTheme();
+
+  /* ---------- backup progress (footer) ----------
+     Everything the app remembers lives in localStorage under PREFIX. Export writes those entries,
+     unchanged, to a JSON file; import validates a file, keeps a copy of the current progress so the
+     import can be undone, replaces the entries and reloads so every view picks up the new state. */
+  var BK_APP = 'stahl-study-companion', BK_UNDO = 'sp:undo-import';
+  function bkCollect() {
+    var data = {};
+    try {
+      for (var i = 0; i < localStorage.length; i++) {
+        var k = localStorage.key(i);
+        if (k && k.indexOf(PREFIX) === 0) data[k.slice(PREFIX.length)] = localStorage.getItem(k);
+      }
+    } catch (e) {}
+    return data;
+  }
+  function bkCount(raw) {
+    try { var v = JSON.parse(raw); return Array.isArray(v) ? v.length : (v && typeof v === 'object') ? Object.keys(v).length : 0; } catch (e) { return 0; }
+  }
+  function bkSummary(data) {
+    var parts = [], n;
+    if ((n = bkCount(data.srs))) parts.push(n + ' card' + (n === 1 ? '' : 's') + ' reviewed');
+    if ((n = bkCount(data.bookmarks))) parts.push(n + ' bookmark' + (n === 1 ? '' : 's'));
+    if ((n = bkCount(data.mistakes))) parts.push(n + ' saved mistake' + (n === 1 ? '' : 's'));
+    if ((n = bkCount(data.examHistory))) parts.push(n + ' exam' + (n === 1 ? '' : 's') + ' taken');
+    return parts.length ? parts.join(' · ') : 'no study progress yet';
+  }
+  function bkDate(iso) {
+    var d = new Date(iso);
+    return isNaN(d) ? '' : d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) + ', ' + d.toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' });
+  }
+  function bkStatus(msg, isErr) {
+    var el = document.getElementById('bk-status'); if (!el) return;
+    el.textContent = msg || ''; el.classList.toggle('is-error', !!isErr);
+  }
+  function bkPaint() {
+    var meta = document.getElementById('bk-meta'), undo = document.getElementById('bk-undo');
+    if (!meta) return;
+    var last = store.get('lastBackup', null);
+    meta.textContent = 'On this device: ' + bkSummary(bkCollect()) + '. ' + (last ? 'Last exported ' + bkDate(last) + '.' : 'Not exported yet.');
+    var hasUndo = false; try { hasUndo = !!localStorage.getItem(BK_UNDO); } catch (e) {}
+    if (undo) undo.hidden = !hasUndo;
+  }
+  function bkReplace(data) {
+    var keys = [];
+    for (var i = 0; i < localStorage.length; i++) { var k = localStorage.key(i); if (k && k.indexOf(PREFIX) === 0) keys.push(k); }
+    keys.forEach(function (k) { localStorage.removeItem(k); });
+    Object.keys(data).forEach(function (k) { localStorage.setItem(PREFIX + k, data[k]); });
+  }
+  function bkExport() {
+    var now = new Date();
+    store.set('lastBackup', now.toISOString());
+    var data = bkCollect();
+    var payload = { app: BK_APP, format: 1, exported: now.toISOString(), attribution: ATTRIBUTION, summary: bkSummary(data), data: data };
+    var name = 'stahl-progress-' + now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0') + '.json';
+    var json = JSON.stringify(payload, null, 1);
+    var standalone = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
+    var file = null;
+    try { file = new File([json], name, { type: 'application/json' }); } catch (e) {}
+    if (standalone && file && navigator.canShare && navigator.canShare({ files: [file] })) {
+      // Installed apps on phones cannot always download files; the share sheet can save to Files or send it on.
+      navigator.share({ files: [file], title: 'Stahl progress backup' }).then(function () {
+        bkStatus('Backup ready: save it somewhere you can reach from your other device.'); bkPaint();
+      }).catch(function () { bkStatus('Export cancelled.'); });
+      return;
+    }
+    var url = URL.createObjectURL(new Blob([json], { type: 'application/json' }));
+    var a = document.createElement('a');
+    a.href = url; a.download = name; a.rel = 'noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 4000);
+    bkStatus('Saved ' + name + '. Move it to your other device and choose Import backup there.');
+    bkPaint();
+  }
+  function bkImport(file) {
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onerror = function () { bkStatus('That file could not be read.', true); };
+    reader.onload = function () {
+      var p;
+      try { p = JSON.parse(reader.result); } catch (e) { bkStatus('That is not a Stahl Study Companion backup file.', true); return; }
+      var ok = p && p.app === BK_APP && p.data && typeof p.data === 'object' &&
+        Object.keys(p.data).every(function (k) { return typeof p.data[k] === 'string' && k.length < 80; });
+      if (ok) Object.keys(p.data).forEach(function (k) { try { JSON.parse(p.data[k]); } catch (e) { ok = false; } });
+      if (!ok) { bkStatus('That is not a Stahl Study Companion backup file.', true); return; }
+      var msg = 'Import the backup from ' + (bkDate(p.exported) || 'an unknown date') + '?\n\n' +
+        'Backup: ' + bkSummary(p.data) + '.\nThis device now: ' + bkSummary(bkCollect()) + '.\n\n' +
+        'Progress on this device will be replaced. You can undo this from the footer.';
+      if (!window.confirm(msg)) { bkStatus('Import cancelled.'); return; }
+      try {
+        localStorage.setItem(BK_UNDO, JSON.stringify({ saved: new Date().toISOString(), data: bkCollect() }));
+        bkReplace(p.data);
+      } catch (e) { bkStatus('Import failed: this browser would not save the data.', true); return; }
+      bkStatus('Progress imported. Reloading…');
+      setTimeout(function () { location.reload(); }, 700);
+    };
+    reader.readAsText(file);
+  }
+  function bkUndo() {
+    var snap; try { snap = JSON.parse(localStorage.getItem(BK_UNDO)); } catch (e) {}
+    if (!snap || !snap.data) { bkPaint(); return; }
+    if (!window.confirm('Restore the progress this device had before the last import (' + bkSummary(snap.data) + ')?')) return;
+    try { bkReplace(snap.data); localStorage.removeItem(BK_UNDO); } catch (e) { bkStatus('Undo failed.', true); return; }
+    bkStatus('Previous progress restored. Reloading…');
+    setTimeout(function () { location.reload(); }, 700);
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href="#backup"]');
+    if (!a) return;
+    e.preventDefault();
+    var el = document.getElementById('backup');
+    if (el) { el.scrollIntoView({ behavior: 'smooth', block: 'center' }); var b = document.getElementById('bk-export'); if (b) b.focus({ preventScroll: true }); }
+  });
+  (function initBackup() {
+    var ex = document.getElementById('bk-export'), fi = document.getElementById('bk-file'), un = document.getElementById('bk-undo');
+    if (!ex || !fi) return;
+    ex.addEventListener('click', bkExport);
+    fi.addEventListener('change', function () { bkImport(fi.files && fi.files[0]); fi.value = ''; });
+    if (un) un.addEventListener('click', bkUndo);
+    bkPaint();
+    window.addEventListener('hashchange', bkPaint);
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) bkPaint(); });
+  })();
 
 
   /* ---------- boot ---------- */

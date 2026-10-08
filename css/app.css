@@ -553,6 +553,29 @@ tbody th { font-weight: 700; }
 .attribution { margin: 0 0 6px; color: var(--night-ink); font-weight: 600; }
 .attribution a { color: var(--night-ink); text-underline-offset: 3px; }
 .disclaimer { margin: 0; font-size: .84rem; max-width: 90ch; }
+.backup { margin: 4px 0 22px; padding: 18px 20px; border: 1px solid color-mix(in srgb, var(--night-ink-2) 30%, transparent); border-radius: 14px; background: color-mix(in srgb, var(--night-ink) 5%, transparent); max-width: 760px; }
+.backup__head { display: flex; gap: 14px; align-items: flex-start; }
+.backup__icon { flex: none; width: 26px; height: 26px; color: var(--night-ink); margin-top: 2px; }
+.backup__title { margin: 0 0 4px; font: 700 1.02rem/1.3 var(--sans); color: var(--night-ink); }
+.backup__text { margin: 0; font-size: .9rem; line-height: 1.5; }
+.backup__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin: 14px 0 0 40px; }
+.backup .backup__btn { background: transparent; color: var(--night-ink); border-color: color-mix(in srgb, var(--night-ink-2) 55%, transparent); }
+.backup .backup__btn:hover { border-color: var(--night-ink); background: color-mix(in srgb, var(--night-ink) 8%, transparent); }
+.backup #bk-export { background: var(--night-ink); color: var(--night-deep); border-color: var(--night-ink); }
+.backup #bk-export:hover { opacity: .92; }
+#bk-file:focus-visible + #bk-import-label { outline: 3px solid var(--focus); outline-offset: 2px; }
+.backup .backup__undo { color: var(--night-ink-2); }
+.backup .backup__undo:hover { color: var(--night-ink); }
+.backup__meta { margin: 10px 0 0 40px; font-size: .82rem; }
+.backup__status { margin: 6px 0 0 40px; font-size: .88rem; font-weight: 600; color: var(--night-ink); min-height: 0; }
+.backup__status:empty { display: none; }
+.backup__status.is-error { color: #FFB4A8; }
+@media (max-width: 560px) {
+  .backup { padding: 16px; }
+  .backup__actions, .backup__meta, .backup__status { margin-left: 0; }
+  .backup__actions .backup__btn { flex: 1 1 140px; }
+}
+@media print { .backup { display: none; } }
 
 /* ---------- responsive ---------- */
 @media (max-width: 980px) {

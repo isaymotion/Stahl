@@ -78,6 +78,23 @@
       <footer class="site-foot">
         <div class="wrap site-foot__inner">
           <p class="foot-links"><a href="#/whats-new">What’s new <span class="badge" data-badge="news" hidden></span></a><a href="#/updates">Post-publication updates</a><a href="#/teach">Teaching mode</a><a href="#/glossary">Glossary</a></p>
+          <section class="backup" id="backup" aria-labelledby="backup-title">
+            <div class="backup__head">
+              <svg class="backup__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0l-4-4m4 4l4-4M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div>
+                <h2 class="backup__title" id="backup-title">Backup progress</h2>
+                <p class="backup__text">Your progress lives only in this browser. Export a backup file to keep it safe, then import it on another phone, tablet or computer to pick up where you left off.</p>
+              </div>
+            </div>
+            <div class="backup__actions">
+              <button type="button" class="btn backup__btn" id="bk-export">Export backup</button>
+              <input type="file" id="bk-file" class="sr-only" accept=".json,application/json">
+              <label class="btn backup__btn" for="bk-file" id="bk-import-label">Import backup</label>
+              <button type="button" class="link-btn backup__undo" id="bk-undo" hidden>Undo last import</button>
+            </div>
+            <p class="backup__meta" id="bk-meta"></p>
+            <p class="backup__status" id="bk-status" role="status" aria-live="polite"></p>
+          </section>
           <p class="attribution">App created by Isabella Navarro, MD. Latest version October 2026. <a href="mailto:isaymotion@gmail.com">isaymotion@gmail.com</a></p>
           <p class="disclaimer">An independent study aid for psychiatry residents built from Stahl’s Essential Psychopharmacology, 5th edition (2021). Not affiliated with or endorsed by the author or publisher. Boxes marked “Post-publication update” come from outside the book. Always confirm doses and prescribing details against current product labeling.</p>
         </div>
