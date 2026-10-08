@@ -17,7 +17,8 @@ SP.targets = [
       { ch: 'ch04', pages: '114–115', text: 'All 5HT neurons are thought to contain SERT; functional **polymorphisms** of its gene may predict response and side effects with SERT blockers.', sec: 's4-5ht-synth' },
       { ch: 'ch05', pages: '237', text: '**Lumateperone** binds SERT about as potently as D2; ziprasidone binds it weakly.', sec: 's5-dones' },
       { ch: 'ch07', pages: '289–292', text: 'SSRIs must occupy perhaps **80–90%** of SERTs to work. Blocking SERT raises 5HT first at the **somatodendritic** area; delayed 5HT1A autoreceptor desensitization then disinhibits release at terminals.', sec: 's7-ssri' },
-      { ch: 'ch07', pages: '292–296', text: 'All six SSRIs share selective SERT inhibition; their **secondary properties** differ (Figures 7-16 to 7-21).', sec: 's7-ssri-agents' }
+      { ch: 'ch07', pages: '292–296', text: 'All six SSRIs share selective SERT inhibition; their **secondary properties** differ (Figures 7-16 to 7-21).', sec: 's7-ssri-agents' },
+      { ch: 'ch08', pages: '368', text: 'Most SERT-blocking drugs (SSRIs, SNRIs) reduce fear and anxiety in GAD, panic disorder, social anxiety disorder, PTSD and OCD.', sec: 's8-serotonin' }
     ]
   },
   {
@@ -32,7 +33,8 @@ SP.targets = [
       { ch: 'ch05', pages: '227–229', text: '**Norquetiapine** inhibits NET, a key part of quetiapine’s antidepressant action; ziprasidone and zotepine weakly inhibit NET.', sec: 's5-pines' },
       { ch: 'ch06', pages: '253–254', text: 'The NE “vacuum cleaner” that removes NE from the synapse without destroying it.', sec: 's6-ne' },
       { ch: 'ch07', pages: '299–301', text: 'The PFC has few DATs, so DA is cleared there by **NET** (which has higher affinity for DA than NE) or COMT. NET inhibition therefore raises **NE and DA in the PFC**: the “half” of SNRIs’ two-and-a-half actions.', sec: 's7-snri' },
-      { ch: 'ch07', pages: '305', text: 'Therapeutic and NE-mediated side effects may appear with perhaps as little as **50%** NET occupancy.', sec: 's7-ndri' }
+      { ch: 'ch07', pages: '305', text: 'Therapeutic and NE-mediated side effects may appear with perhaps as little as **50%** NET occupancy.', sec: 's7-ndri' },
+      { ch: 'ch08', pages: '370', text: 'NET inhibitors can **transiently worsen** anxiety, then reduce fear and worry as β1 receptors downregulate.', sec: 's8-ne' }
     ]
   },
   {
@@ -209,7 +211,8 @@ SP.targets = [
       { ch: 'ch04', pages: '122–125', text: 'Always inhibitory, but often on **prefrontal GABA interneurons**, so stimulation **increases NE, DA and ACh** release. Many drugs for psychosis, mood and anxiety are 5HT1A agonists or partial agonists.', sec: 's4-5ht-post' },
       { ch: 'ch05', pages: '193–195', text: 'The **brake** on cortical glutamate neurons (5HT2A is the accelerator): partial agonism releases dopamine in motor striatum and prefrontal cortex, reducing motor effects and helping negative and affective symptoms. Brexpiprazole’s most potent property.', sec: 's5-5ht1a' },
       { ch: 'ch07', pages: '289–292', text: 'Desensitization of **somatodendritic 5HT1A autoreceptors** times the onset of SSRI action.', sec: 's7-ssri' },
-      { ch: 'ch07', pages: '296–298', text: 'Adding 5HT1A partial agonism to SERT inhibition (SPARI) speeds autoreceptor desensitization; downstream DA release may reduce sexual dysfunction.', sec: 's7-spari' }
+      { ch: 'ch07', pages: '296–298', text: 'Adding 5HT1A partial agonism to SERT inhibition (SPARI) speeds autoreceptor desensitization; downstream DA release may reduce sexual dysfunction.', sec: 's7-spari' },
+      { ch: 'ch08', pages: '368–370', text: '**Buspirone**’s partial agonism at pre- and postsynaptic 5HT1A receptors may enhance serotonergic input to the amygdala and CSTC circuits; its onset is **delayed**, implying receptor adaptation.', sec: 's8-serotonin' }
     ]
   },
   {
@@ -310,15 +313,20 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '39', text: '**Antagonist** actions: improved sleep (nightmares), improved agitation in Alzheimer disease; side effects of orthostatic hypotension and possibly sedation (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch05', pages: '181, 236', text: 'α1 blockade adds **sedation** and **orthostatic hypotension** (iloperidone, paliperidone, clozapine, quetiapine); it may also lower DIP risk (iloperidone) and help agitation (brexpiprazole).', sec: 's5-fga' },
-      { ch: 'ch07', pages: '327–328', text: 'α1 receptors are **colocalized** with 5HT2A on pyramidal neurons; blocking both releases DA in the striatum (less DIP) and PFC (antidepressant). Bladder α1 stimulation causes urinary hesitancy (milnacipran), relieved by an α1 antagonist.', sec: 's7-augment-sda' }
+      { ch: 'ch07', pages: '327–328', text: 'α1 receptors are **colocalized** with 5HT2A on pyramidal neurons; blocking both releases DA in the striatum (less DIP) and PFC (antidepressant). Bladder α1 stimulation causes urinary hesitancy (milnacipran), relieved by an α1 antagonist.', sec: 's7-augment-sda' },
+      { ch: 'ch08', pages: '370', text: 'Excess NE at postsynaptic α1 receptors in the amygdala may cause **nightmares and hyperarousal**; α1 antagonists (prazosin) at night reduce them in PTSD.', sec: 's8-ne' }
     ]
   },
   {
     id: 'beta-ar', name: 'β-adrenergic receptors (β1, β2, β3)', short: 'β1–β3', family: 'G-protein-linked receptor', nt: 'norepinephrine',
     summary: 'Postsynaptic norepinephrine receptors (β1, β2, β3). β-blockers are among the treatments for akathisia (Chapter 5).',
     location: 'Postsynaptic only (never presynaptic autoreceptors)',
-    block: ['β-adrenergic blockers: treat **akathisia** (Chapter 5)'],
-    facts: [{ ch: 'ch06', pages: '254', text: 'Postsynaptic NE receptors that convert NE occupancy into signal transduction and gene expression changes.', sec: 's6-ne' }]
+    block: ['β-adrenergic blockers: treat **akathisia** (Chapter 5)', 'β blockers: **performance anxiety**; investigational prevention of fear consolidation/reconsolidation (Chapter 8)'],
+    facts: [
+      { ch: 'ch06', pages: '254', text: 'Postsynaptic NE receptors that convert NE occupancy into signal transduction and gene expression changes.', sec: 's6-ne' },
+      { ch: 'ch08', pages: '370', text: 'Excess NE at **β1** receptors in the amygdala and PFC may drive fear, panic and worry; sustained NET inhibition **downregulates β1** receptors.', sec: 's8-ne' },
+      { ch: 'ch08', pages: '375–376', text: '**β blockers** given soon after trauma may block **consolidation** of fear memories (reducing PTSD risk) and may disrupt **reconsolidation**; also used for **performance anxiety**.', sec: 's8-novel' }
+    ]
   },
   {
     id: 'gabab', name: 'GABA-B receptor', short: 'GABA-B', family: 'G-protein-linked receptor', nt: 'gaba',
@@ -417,7 +425,10 @@ SP.targets = [
     id: 'crf', name: 'Corticotropin-releasing factor (CRF) receptors', short: 'CRF-R', family: 'G-protein-linked receptor', ntLabel: 'Neuropeptide (CRF)',
     summary: 'Receptors for hypothalamic CRF, which starts the HPA stress response; antagonists are in testing for depression and stress-related illness.',
     block: ['Antagonists in testing to halt or reverse **HPA-axis hyperactivity** in depression'],
-    facts: [{ ch: 'ch06', pages: '270–271', text: 'Hypothalamic CRF → pituitary ACTH → adrenal glucocorticoid; in depression the axis is overactive and insensitive to feedback.', sec: 's6-hpa' }]
+    facts: [
+      { ch: 'ch06', pages: '270–271', text: 'Hypothalamic CRF → pituitary ACTH → adrenal glucocorticoid; in depression the axis is overactive and insensitive to feedback.', sec: 's6-hpa' },
+      { ch: 'ch08', pages: '365–367', text: '**CRF/HPA** is one of the regulators of the amygdala fear circuit; the amygdala–hypothalamus connection drives the endocrine output of fear.', sec: 's8-amygdala' }
+    ]
   },
   {
     id: 'v1b', name: 'Vasopressin 1B receptor', short: 'V1B', family: 'G-protein-linked receptor', ntLabel: 'Neuropeptide (vasopressin)',
@@ -444,7 +455,8 @@ SP.targets = [
     block: ['**Samidorphan** with olanzapine: reduces olanzapine-induced **weight gain** (Chapter 5)'],
     facts: [
       { ch: 'ch05', pages: '201', text: 'The μ-opioid antagonist **samidorphan** combined with olanzapine was a new agent on the horizon to reduce olanzapine-induced weight gain.', sec: 's5-metabolic' },
-      { ch: 'ch07', pages: '328, 355', text: 'Possible μ-opioid contributions to the antidepressant effects of **ketamine** and **dextromethadone** are debated.', sec: 's7-dxm' }
+      { ch: 'ch07', pages: '328, 355', text: 'Possible μ-opioid contributions to the antidepressant effects of **ketamine** and **dextromethadone** are debated.', sec: 's7-dxm' },
+      { ch: 'ch08', pages: '375', text: '**Opioids** given soon after trauma may mitigate consolidation of the traumatic memory and reduce the chance of PTSD.', sec: 's8-novel' }
     ]
   },
   /* ---------------- ligand-gated ion channels ---------------- */
@@ -461,7 +473,8 @@ SP.targets = [
       { ch: 'ch04', pages: '105–108', text: '**α2-subunit** GABA-A receptors on the pyramidal neuron’s **axon initial segment** receive interneuron GABA; they are compensatorily **increased** in schizophrenia.', sec: 's4-nmda-hypo' },
       { ch: 'ch06', pages: '259–262', text: 'Benzodiazepine-sensitive receptors need **two β, γ2 or γ3, and two α1–3**; one benzodiazepine binds between γ and α, two GABA molecules between α and β. **α1** subunits relate to **sleep**, **α2/α3** to **anxiety**; current benzodiazepines are nonselective.', sec: 's6-gabaa' },
       { ch: 'ch06', pages: '262–264', text: 'Benzodiazepine-insensitive receptors (α4, α6, γ1 or δ) are **extrasynaptic** and mediate **tonic** inhibition; **neuroactive steroids** bind between α and δ. Abnormal γ2, α2 or δ expression is linked to **epilepsy**.', sec: 's6-neurosteroids' },
-      { ch: 'ch07', pages: '320–322', text: 'Neuroactive steroids (brexanolone) act at both benzodiazepine-sensitive and **benzodiazepine-insensitive** GABA-A receptors; the latter (extrasynaptic, tonic) are thought to carry the antidepressant effect.', sec: 's7-neurosteroids' }
+      { ch: 'ch07', pages: '320–322', text: 'Neuroactive steroids (brexanolone) act at both benzodiazepine-sensitive and **benzodiazepine-insensitive** GABA-A receptors; the latter (extrasynaptic, tonic) are thought to carry the antidepressant effect.', sec: 's7-neurosteroids' },
+      { ch: 'ch08', pages: '366–367', text: 'Benzodiazepines enhance **phasic** inhibition at postsynaptic GABA-A receptors **in the amygdala** (less fear) and on CSTC **inhibitory interneurons** (less worry); they act **immediately**.', sec: 's8-bzd' }
     ],
     updates: [{ year: '2023', title: 'Oral neurosteroid approved', text: '**Zuranolone**, an oral GABA-A positive allosteric modulator, was approved in August 2023 for postpartum depression.', source: 'FDA, August 2023' }]
   },
@@ -509,7 +522,8 @@ SP.targets = [
       { ch: 'ch04', pages: '100–101', text: 'A **coincidence detector**: opens only with glutamate bound, **glycine or D-serine** bound, and depolarization removing the **Mg²⁺** plug (Mg²⁺ acts as a NAM). Calcium entry drives **long-term potentiation**.', sec: 's4-glu-receptors' },
       { ch: 'ch04', pages: '105–110', text: '**Hypofunction** at prefrontal **GABA interneurons** (from neurodevelopment, ketamine/PCP or neurodegeneration) is a leading hypothesis of psychosis.', sec: 's4-nmda-hypo' },
       { ch: 'ch05', pages: '169, 237', text: '**Amantadine**’s weak NMDA antagonism may explain its benefit in DIP; NRX101 pairs the glycine-site agent **D-cycloserine** with lurasidone.', sec: 's5-motor' },
-      { ch: 'ch07', pages: '328–332', text: 'Ketamine blocks NMDA at the open-channel **PCP site**: NMDA block on GABA interneurons → glutamate burst → **AMPA** → mTOR or BDNF/VEGF → rapid synaptogenesis.', sec: 's7-ketamine' }
+      { ch: 'ch07', pages: '328–332', text: 'Ketamine blocks NMDA at the open-channel **PCP site**: NMDA block on GABA interneurons → glutamate burst → **AMPA** → mTOR or BDNF/VEGF → rapid synaptogenesis.', sec: 's7-ketamine' },
+      { ch: 'ch08', pages: '372–375', text: 'NMDA receptors embed **fear conditioning** via LTP in the lateral and central amygdala; boosting NMDA action during **exposure therapy** might strengthen **fear extinction** instead.', sec: 's8-novel' }
     ],
     updates: [
       { year: '2022', title: 'Dextromethorphan–bupropion approved', text: 'Approved for major depressive disorder in August 2022 (Auvelity).', source: 'FDA, August 2022' },
@@ -538,8 +552,11 @@ SP.targets = [
     id: 'a2d', name: 'α2δ subunit of voltage-sensitive calcium channels', short: 'α2δ', family: 'Voltage-sensitive ion channel',
     summary: 'A protein flanking the α1 pore of VSCCs, with a transmembrane δ part and an extracellular α2 part. Target of pregabalin and gabapentin.',
     location: 'Presynaptic **N and P/Q** VSCCs (flanking the α1 pore)',
-    block: ['Reduced neurotransmitter release in states of excess: **pain, seizures**, possibly **anxiety and sleep**'],
-    facts: [{ ch: 'ch03', pages: '71', text: 'Has a **δ** part in the membrane and an **α2** part outside the cell; it is the target of **pregabalin and gabapentin** and may regulate how the channel opens and closes.', sec: 's3-vscc' }]
+    block: ['Reduced neurotransmitter release in states of excess: **pain, seizures**, possibly **anxiety and sleep**', '**Anxiolytic** actions (social anxiety, panic; approved for anxiety outside the US) (Chapter 8)'],
+    facts: [
+      { ch: 'ch03', pages: '71', text: 'Has a **δ** part in the membrane and an **α2** part outside the cell; it is the target of **pregabalin and gabapentin** and may regulate how the channel opens and closes.', sec: 's3-vscc' },
+      { ch: 'ch08', pages: '366–368', text: 'α2δ ligands bind **open, overly active** N and P/Q channels in the amygdala and CSTC loops, cutting excess **glutamate** release to reduce fear and worry; anxiolytic in social anxiety and panic disorder.', sec: 's8-a2d' }
+    ]
   },
   {
     id: 'vssc', name: 'Voltage-sensitive sodium channel (VSSC)', short: 'VSSC', family: 'Voltage-sensitive ion channel',
@@ -578,7 +595,8 @@ SP.targets = [
       { ch: 'ch04', pages: '80, 114', text: '**MAO-A and MAO-B** destroy unstored dopamine; serotonergic **MAO-B** has low affinity for 5HT and degrades it only at high intracellular levels.', sec: 's4-5ht-synth' },
       { ch: 'ch06', pages: '253', text: 'MAO-A or MAO-B in mitochondria destroys norepinephrine in the presynaptic neuron and elsewhere.', sec: 's6-ne' },
       { ch: 'ch07', pages: '336–338', text: '**MAO-A** prefers 5HT and NE (major form outside the brain); **MAO-B** prefers trace amines (serotonin neurons, platelets, lymphocytes); both destroy DA and **tyramine**. Brain MAO-A must be inhibited for antidepressant action; inhibiting both raises DA too.', sec: 's7-maoi' },
-      { ch: 'ch07', pages: '336', text: 'Phenelzine, tranylcypromine, isocarboxazid and selegiline inhibit MAO **irreversibly**: activity returns only after new enzyme is made, about **2–3 weeks**.', sec: 's7-maoi' }
+      { ch: 'ch07', pages: '336', text: 'Phenelzine, tranylcypromine, isocarboxazid and selegiline inhibit MAO **irreversibly**: activity returns only after new enzyme is made, about **2–3 weeks**.', sec: 's7-maoi' },
+      { ch: 'ch08', pages: '377', text: 'MAOIs are much neglected but can be **powerful in treatment-resistant panic disorder**.', sec: 's8-panic' }
     ]
   },
   {

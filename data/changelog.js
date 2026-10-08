@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 8,
+    date: "2026-10-08",
+    title: "Chapter 8: Anxiety, Trauma, and Treatment",
+    summary: "Chapter 8 adds the fear and worry circuits behind anxiety disorders and PTSD, fear conditioning and extinction, and treatment by disorder.",
+    items: [
+      { type: "chapter", ch: "ch08", text: "Chapter 8: study guide (16 sections), high-yield summary, mechanism, drug and clinical cards, and 35 board-style questions.", href: "#/c/ch08/guide", link: "Open Chapter 8" },
+      { type: "feature", text: "Symptoms & circuits: nine maps for fear, worry, the amygdala’s outputs, PTSD re-experiencing and nightmares.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Library: prazosin and hydroxyzine added; anxiety uses and mechanisms added to benzodiazepines, pregabalin, gabapentin, buspirone and others; fear-learning facts for NMDA, β-adrenergic and α1 receptors.", href: "#/drugs/prazosin", link: "Prazosin" },
+      { type: "update", text: "Post-publication update boxes: MDMA (2024) and brexpiprazole–sertraline (2025) not approved for PTSD, an LSD formulation for GAD (2024), and fasedienol for social anxiety (2025).", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 7,
     date: "2026-10-08",
     title: "Chapter 7: Treatments for Mood Disorders",

@@ -21,7 +21,8 @@ SP.nts = [
       { ch: 'ch04', pages: '131–141', text: 'The **serotonin hyperfunction** hypothesis: 5HT2A excess or imbalance on cortical glutamate neurons drives VTA dopamine (delusions, auditory hallucinations) and visual cortex (visual hallucinations).', sec: 's4-5ht-hyper' },
       { ch: 'ch05', pages: '184–195', text: '5HT2A antagonism and 5HT1A partial agonism at cortical glutamate neurons reshape downstream dopamine release: the basis of the so-called atypical drugs.', sec: 's5-three-pathways' },
       { ch: 'ch06', pages: '277–278', text: 'Diffuse serotonin dysfunction is linked mainly to **increased negative affect**: guilt, disgust, fear, anxiety, hostility, irritability, loneliness. Ascending raphe projections regulate mood, anxiety and sleep; descending ones regulate pain.', sec: 's6-circuits' },
-      { ch: 'ch07', pages: '289–292', text: 'SSRIs act through delayed **disinhibition** of serotonin release after somatodendritic 5HT1A autoreceptors desensitize.', sec: 's7-ssri' }
+      { ch: 'ch07', pages: '289–292', text: 'SSRIs act through delayed **disinhibition** of serotonin release after somatodendritic 5HT1A autoreceptors desensitize.', sec: 's7-ssri' },
+      { ch: 'ch08', pages: '368', text: 'Serotonin innervates the **amygdala** and the whole **CSTC** loop, so serotonergic drugs can reduce both fear and worry.', sec: 's8-serotonin' }
     ],
     synthesis: [['Tryptophan', 'Transported from plasma into the brain'], ['5HTP', '**Tryptophan hydroxylase (TRY-OH)**'], ['5HT', '**Aromatic amino acid decarboxylase (AAADC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -43,7 +44,8 @@ SP.nts = [
       { ch: 'ch04', pages: '80–81', text: 'Where DATs are absent (e.g., prefrontal cortex), **NET** takes up dopamine as a “false” substrate.', sec: 's4-da-synth' },
       { ch: 'ch06', pages: '253–256', text: 'Receptors: **NET**, **VMAT2**, **α1, α2A/B/C, β1/β2/β3**. Only **α2** can be presynaptic autoreceptors (terminal and somatodendritic): the neuron’s **brake**.', sec: 's6-ne' },
       { ch: 'ch06', pages: '277–281', text: 'Boosting NE (with DA) targets residual **fatigue** and **problems concentrating** in depression.', sec: 's6-algorithm' },
-      { ch: 'ch07', pages: '309', text: 'α2 antagonism “cuts the brake cable” on NE and, via heteroreceptors, 5HT release.', sec: 's7-mirtazapine' }
+      { ch: 'ch07', pages: '309', text: 'α2 antagonism “cuts the brake cable” on NE and, via heteroreceptors, 5HT release.', sec: 's7-mirtazapine' },
+      { ch: 'ch08', pages: '370', text: 'Locus coeruleus overactivity drives autonomic overdrive, **nightmares, hyperarousal, flashbacks and panic**, via α1 and β1 receptors.', sec: 's8-ne' }
     ],
     synthesis: [['Tyrosine', 'Actively transported from blood into the neuron'], ['DOPA', '**Tyrosine hydroxylase (TOH)**, rate-limiting'], ['Dopamine', '**DOPA decarboxylase (DDC)**; only a precursor here'], ['Norepinephrine', '**Dopamine β-hydroxylase (DBH)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -113,7 +115,8 @@ SP.nts = [
       { ch: 'ch04', pages: '97–99', text: 'NMDA receptors need a **cotransmitter**: glycine or D-serine, both mainly supplied by glia.', sec: 's4-cotransmitters' },
       { ch: 'ch04', pages: '99–102', text: 'Receptors (Table 4-2): metabotropic groups I (mGluR1, 5), II (mGluR2, 3) and III (mGluR4, 6, 7, 8); ionotropic **AMPA** (GluR1–4), **kainate** (GluR5–7, KA1–2) and **NMDA** (NR1, NR2A–D).', sec: 's4-glu-receptors' },
       { ch: 'ch04', pages: '105–110', text: 'The **NMDA hypofunction** hypothesis: faulty NMDA signaling on prefrontal GABA interneurons disinhibits pyramidal neurons, leading downstream to dopamine excess (positive) and deficit (negative).', sec: 's4-nmda-hypo' },
-      { ch: 'ch07', pages: '328–331', text: 'Ketamine’s rapid antidepressant effect is thought to come from a **burst of glutamate** acting at AMPA receptors; lamotrigine and riluzole may reduce glutamate release.', sec: 's7-ketamine' }
+      { ch: 'ch07', pages: '328–331', text: 'Ketamine’s rapid antidepressant effect is thought to come from a **burst of glutamate** acting at AMPA receptors; lamotrigine and riluzole may reduce glutamate release.', sec: 's7-ketamine' },
+      { ch: 'ch08', pages: '372–373', text: 'Fear conditioning strengthens **glutamate** synapses in the lateral and central amygdala; α2δ ligands reduce excess glutamate release in fear and worry circuits.', sec: 's8-conditioning' }
     ],
     synthesis: [['Glutamine (glia)', 'Recaptured glutamate is converted by **glutamine synthetase**'], ['Export', 'Glutamine leaves glia on a reversed **SNAT** (or ASC-T)'], ['Neuronal uptake', 'A neuronal **SNAT** imports glutamine'], ['Glutamate', 'Mitochondrial **glutaminase**'], ['Vesicle', 'Packaged by **vGluT**']],
     pathways: [
@@ -132,7 +135,7 @@ SP.nts = [
     id: 'gaba', name: 'γ-Aminobutyric acid', abbr: 'GABA', family: 'Amino acid', key6: true,
     summary: 'The ubiquitous inhibitory neurotransmitter and one of the six key systems. Recaptured by GAT1–4 (GAT1 blocked by tiagabine), packaged by VIAAT; GABA-B is its G-protein-linked receptor.',
     termination: ['Reuptake by **GABA transporters GAT1–4** (SLC6); **GAT1** is a key presynaptic transporter', 'Packaged into vesicles by **VIAAT** (SLC32)', 'Converted to an inactive substance by **GABA transaminase (GABA-T)** (Chapter 6)'],
-    clinical: ['Tiagabine blocks GAT1: anticonvulsant, possibly anxiety, sleep and pain', 'GABA-B agonism treats cataplexy and sleepiness in narcolepsy', 'Loss of **tonic inhibition** may underlie some depression, e.g., after the postpartum fall in neuroactive steroids', 'Insomnia as a residual depressive symptom: boost GABA (Chapter 6)'],
+    clinical: ['Tiagabine blocks GAT1: anticonvulsant, possibly anxiety, sleep and pain', 'GABA-B agonism treats cataplexy and sleepiness in narcolepsy', 'Loss of **tonic inhibition** may underlie some depression, e.g., after the postpartum fall in neuroactive steroids', 'Insomnia as a residual depressive symptom: boost GABA (Chapter 6)', '**Anxiety**: benzodiazepines boost GABA in amygdala and CSTC circuits (Chapter 8)'],
     facts: [
       { ch: 'ch01', pages: '5', text: 'One of the **six key neurotransmitter systems** targeted by psychotropic drugs.' },
       { ch: 'ch01', pages: '6', text: 'Valium (diazepam) and Xanax (alprazolam) were prescribed **before benzodiazepine receptors were discovered**; the brain may even make “its own Xanax.”' },
@@ -143,7 +146,8 @@ SP.nts = [
       { ch: 'ch04', pages: '122–131', text: 'Many serotonin receptors (5HT1A, 2A, 2C, 3, 7) sit on GABA interneurons, so serotonin’s downstream effect depends on whether it excites or inhibits these cells.', sec: 's4-5ht-post' },
       { ch: 'ch06', pages: '258–259', text: 'Three receptor types: **GABA-A** and **GABA-C** (ligand-gated chloride channels) and **GABA-B** (G-protein-linked).', sec: 's6-gaba' },
       { ch: 'ch06', pages: '259–263', text: 'GABA-A subunits α1–6, β1–3, γ1–3, δ, ε, π, θ, ρ1–3. Benzodiazepine-sensitive (γ2/3 + α1–3) receptors are synaptic and **phasic**; δ-containing receptors with α4/α6 are extrasynaptic, **tonic** and bind **neuroactive steroids**.', sec: 's6-gabaa' },
-      { ch: 'ch07', pages: '320–322', text: 'GABA is low in plasma, CSF and brain in depression; GABA interneurons are reduced. Neuroactive steroids boost GABA-A function for rapid antidepressant effects.', sec: 's7-neurosteroids' }
+      { ch: 'ch07', pages: '320–322', text: 'GABA is low in plasma, CSF and brain in depression; GABA interneurons are reduced. Neuroactive steroids boost GABA-A function for rapid antidepressant effects.', sec: 's7-neurosteroids' },
+      { ch: 'ch08', pages: '366–367, 373', text: 'GABA regulates both fear and worry circuits; GABA interneurons of the **intercalated cell mass** gate fear output during **extinction**.', sec: 's8-extinction' }
     ],
     synthesis: [['Glutamate', 'The amino acid precursor'], ['GABA', '**Glutamic acid decarboxylase (GAD)**'], ['Vesicle', 'Packaged by **VIAAT**']],
     roles: ['The principal **inhibitory** neurotransmitter, reducing the activity of many neurons', '**Phasic** inhibition at synaptic benzodiazepine-sensitive GABA-A receptors', '**Tonic** inhibition at extrasynaptic δ-containing GABA-A receptors sets neuronal excitability']

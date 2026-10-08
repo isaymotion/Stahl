@@ -10,8 +10,14 @@ SP.drugs = [
     short: 'Mimics the brain’s own morphine, β-endorphin.',
     mechanism: 'Mimics the endogenous opioid **β-endorphin**, the brain’s own morphine. Its receptor pharmacology is covered in later chapters.',
     nts: ['endorphin'],
-    chapters: [{ ch: 'ch01', pages: '5–6' }],
-    facts: [{ ch: 'ch01', pages: '5–6', text: 'Used clinically **before β-endorphin was discovered**: an example of a drug preceding knowledge of its natural counterpart (“God’s pharmacopeia”).', sec: 's1-nts' }]
+    chapters: [
+      { ch: 'ch01', pages: '5–6' },
+      { ch: 'ch08', pages: '375' }
+    ],
+    facts: [
+      { ch: 'ch01', pages: '5–6', text: 'Used clinically **before β-endorphin was discovered**: an example of a drug preceding knowledge of its natural counterpart (“God’s pharmacopeia”).', sec: 's1-nts' },
+      { ch: 'ch08', pages: '375', text: 'Opioids given soon after trauma may mitigate consolidation of the traumatic memory and reduce PTSD risk (investigational).', sec: 's8-novel' }
+    ]
   },
   {
     id: 'diazepam', name: 'Diazepam', brand: 'Valium', group: 'Benzodiazepine', cls: 'Benzodiazepine',
@@ -27,12 +33,14 @@ SP.drugs = [
     ],
     chapters: [
       { ch: 'ch01', pages: '6' },
-      { ch: 'ch03', pages: '55, 65' }
+      { ch: 'ch03', pages: '55, 65' },
+      { ch: 'ch08', pages: '366–367, 377' }
     ],
     facts: [
       { ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' },
       { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' },
-      { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1, α2 and α3** benzodiazepine-sensitive GABA-A receptors (phasic inhibition); reversed by **flumazenil**.', sec: 's6-gabaa' }
+      { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1, α2 and α3** benzodiazepine-sensitive GABA-A receptors (phasic inhibition); reversed by **flumazenil**.', sec: 's6-gabaa' },
+      { ch: 'ch08', pages: '366–367, 377', text: 'Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.', sec: 's8-gad' }
     ]
   },
   {
@@ -42,19 +50,21 @@ SP.drugs = [
     nbn: 'GABA-A positive allosteric modulator (benzodiazepine site)',
     nts: ['gaba'],
     targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Benzodiazepine site; phasic inhibition' }],
-    uses: ['**Anxiolytic**', 'Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)'],
+    uses: ['**Anxiolytic**', 'Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)', 'GAD and panic disorder (Chapter 8)'],
     sideEffects: [
       { e: 'Blocks short-term memory', via: 'GABA-A PAM action' },
       { e: 'Sedation (sleep induction)', via: 'GABA-A PAM action' }
     ],
     chapters: [
       { ch: 'ch01', pages: '5–6' },
-      { ch: 'ch03', pages: '55, 65' }
+      { ch: 'ch03', pages: '55, 65' },
+      { ch: 'ch08', pages: '366–367, 377' }
     ],
     facts: [
       { ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' },
       { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' },
-      { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1–3** GABA-A receptors; α2/α3 actions are thought anxiolytic, α1 actions sedating.', sec: 's6-gabaa' }
+      { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1–3** GABA-A receptors; α2/α3 actions are thought anxiolytic, α1 actions sedating.', sec: 's6-gabaa' },
+      { ch: 'ch08', pages: '366–367, 377', text: 'Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.', sec: 's8-gad' }
     ]
   },
   {
@@ -363,7 +373,10 @@ SP.drugs = [
   },
   {
     id: 'phenelzine', name: 'Phenelzine', brand: 'Nardil', group: 'MAO inhibitor', cls: 'Irreversible MAO inhibitor',
-    chapters: [{ ch: 'ch07', pages: '336–338' }],
+    chapters: [
+      { ch: 'ch07', pages: '336–338' },
+      { ch: 'ch08', pages: '377' }
+    ],
     nbn: 'Monoamine oxidase inhibitor (MAO-A and MAO-B, irreversible)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
     targets: [{ t: 'mao', action: 'inhibitor', note: 'Irreversible; MAO-A and MAO-B' }],
@@ -374,7 +387,8 @@ SP.drugs = [
       { e: 'Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors', via: 'Drug interaction' }
     ],
     short: 'Classic irreversible MAOI.',
-    mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; enzyme activity returns only after new enzyme is synthesized (about 2–3 weeks). Inhibiting both raises 5HT, NE **and DA**.'
+    mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; enzyme activity returns only after new enzyme is synthesized (about 2–3 weeks). Inhibiting both raises 5HT, NE **and DA**.',
+    facts: [{ ch: 'ch08', pages: '377', text: 'MAOIs are much neglected but powerful in **treatment-resistant panic disorder**.', sec: 's8-panic' }]
   },
   {
     id: 'tranylcypromine', name: 'Tranylcypromine', brand: 'Parnate', group: 'MAO inhibitor', cls: 'Irreversible MAO inhibitor',
@@ -478,7 +492,10 @@ SP.drugs = [
   },
   {
     id: 'sertraline', name: 'Sertraline', brand: 'Zoloft', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
-    chapters: [{ ch: 'ch07', pages: '292–295' }],
+    chapters: [
+      { ch: 'ch07', pages: '292–295' },
+      { ch: 'ch08', pages: '377–378' }
+    ],
     nbn: 'Serotonin transport (SERT) inhibitor',
     nts: ['serotonin', 'dopamine'],
     short: 'SSRI with weak DAT inhibition and σ1 binding.',
@@ -495,7 +512,10 @@ SP.drugs = [
       { e: 'Nausea, GI effects', via: 'Peripheral 5HT3 stimulation' },
       { e: 'Overactivation of some **panic** patients (titrate slowly)', via: 'Weak DAT inhibition' }
     ],
-    facts: [{ ch: 'ch07', pages: '294–295', text: 'σ1 actions may contribute to anxiolytic effects and benefit in psychotic and delusional depression.', sec: 's7-ssri-agents' }]
+    facts: [
+      { ch: 'ch07', pages: '294–295', text: 'σ1 actions may contribute to anxiolytic effects and benefit in psychotic and delusional depression.', sec: 's7-ssri-agents' },
+      { ch: 'ch08', pages: '377–378', text: 'Combined with **brexpiprazole** for PTSD in testing at publication.', sec: 's8-ptsd' }
+    ]
   },
   {
     id: 'paroxetine', name: 'Paroxetine', brand: 'Paxil', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
@@ -577,7 +597,10 @@ SP.drugs = [
   },
   {
     id: 'vilazodone', name: 'Vilazodone', brand: 'Viibryd', group: 'Antidepressant', cls: 'Serotonin partial agonist reuptake inhibitor (SPARI)',
-    chapters: [{ ch: 'ch07', pages: '296–298' }],
+    chapters: [
+      { ch: 'ch07', pages: '296–298' },
+      { ch: 'ch08', pages: '368–370, 377' }
+    ],
     nbn: 'Serotonin reuptake inhibitor and 5HT1A partial agonist',
     nts: ['serotonin', 'dopamine'],
     short: 'SPARI: SERT inhibition plus 5HT1A partial agonism in one molecule.',
@@ -588,7 +611,10 @@ SP.drugs = [
     ],
     uses: ['Unipolar depression'],
     sideEffects: [{ e: 'Less sexual dysfunction and weight gain (observed)', via: 'Downstream DA release from 5HT1A partial agonism' }],
-    facts: [{ ch: 'ch07', pages: '296', text: 'Recreates in one drug the long-used strategy of adding a 5HT1A partial agonist (buspirone, aripiprazole, brexpiprazole, cariprazine, quetiapine) to an SSRI, avoiding drug interactions and off-target effects.', sec: 's7-spari' }]
+    facts: [
+      { ch: 'ch07', pages: '296', text: 'Recreates in one drug the long-used strategy of adding a 5HT1A partial agonist (buspirone, aripiprazole, brexpiprazole, cariprazine, quetiapine) to an SSRI, avoiding drug interactions and off-target effects.', sec: 's7-spari' },
+      { ch: 'ch08', pages: '368–370, 377', text: 'Should theoretically be **anxiolytic** (SERT inhibition + 5HT1A partial agonism); an off-label option for anxiety.', sec: 's8-gad' }
+    ]
   },
   {
     id: 'venlafaxine', name: 'Venlafaxine', brand: 'Effexor XR', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
@@ -813,13 +839,15 @@ SP.drugs = [
     uses: ['“Empathogen”: experimental treatment of PTSD, especially with psychotherapy (at publication)'],
     chapters: [
       { ch: 'ch02', pages: '31–33, 40' },
-      { ch: 'ch07', pages: '355–358' }
+      { ch: 'ch07', pages: '355–358' },
+      { ch: 'ch08', pages: '376–378' }
     ],
     facts: [
       { ch: 'ch02', pages: '31–33', text: 'SERT has high affinity for transporting **Ecstasy (MDMA)** as well as serotonin (Table 2-1).', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '40', text: 'Serotonin release by MDMA produces **indirect 5HT2A/2C agonism**: “empathogen,” experimental for PTSD with psychotherapy (Table 2-5).', sec: 's2-receptor-tables' },
       { ch: 'ch05', pages: '174', text: 'Like amphetamine, carried by VMAT2 as a **false substrate**.', sec: 's5-vmat2' },
-      { ch: 'ch07', pages: '356–357', text: 'In hallucinogen-assisted psychotherapy it may promote **trust, closeness**, energy and emotional warmth. Tested for PTSD, existential distress in terminal illness, social anxiety in autism, refractory depression and substance abuse. Street MDMA is often contaminated.', sec: 's7-psychedelics' }
+      { ch: 'ch07', pages: '356–357', text: 'In hallucinogen-assisted psychotherapy it may promote **trust, closeness**, energy and emotional warmth. Tested for PTSD, existential distress in terminal illness, social anxiety in autism, refractory depression and substance abuse. Street MDMA is often contaminated.', sec: 's7-psychedelics' },
+      { ch: 'ch08', pages: '376–377', text: 'Studied to **disrupt reconsolidation** of reactivated fear memories during psychotherapy (PTSD, anxiety, existential distress in terminal illness).', sec: 's8-novel' }
     ],
     updates: [{ year: '2024', title: 'Not approved for PTSD', text: 'In August 2024 the FDA issued a **complete response letter** declining approval of MDMA-assisted therapy (midomafetamine) for PTSD and requested another phase III trial.', source: 'FDA complete response letter to Lykos Therapeutics, August 9, 2024' }],
     sideEffects: [
@@ -1210,14 +1238,18 @@ SP.drugs = [
   },
   {
     id: 'buspirone', name: 'Buspirone', brand: 'BuSpar', group: '5HT1A partial agonist', cls: 'Anxiolytic (5HT1A partial agonist)',
-    chapters: [{ ch: 'ch07', pages: '296, 333' }],
+    chapters: [
+      { ch: 'ch07', pages: '296, 333' },
+      { ch: 'ch08', pages: '368–370, 377' }
+    ],
     nbn: 'Serotonin 5HT1A receptor partial agonist',
     nts: ['serotonin'],
     short: '5HT1A partial agonist sometimes added to SSRIs/SNRIs.',
     mechanism: 'A **5HT1A partial agonist** (anxiolytic, Chapter 8). Adding it to an SSRI/SNRI resembles giving vilazodone or vortioxetine.',
     targets: [{ t: '5ht1a', action: 'partial agonist' }],
-    uses: ['Anxiety (Chapter 8)', 'Augmentation of SSRIs/SNRIs in unipolar depression (not approved; less used than other 5HT1A agents)'],
-    updates: [{ year: '2023', title: 'A buspirone analogue approved for depression', text: 'Extended-release **gepirone** (Exxua), a pharmacologic analogue of buspirone and selective 5HT1A agonist, was approved for major depressive disorder in adults in September 2023.', source: 'FDA approval announced September 2023 (Psychiatric Times, September 29, 2023)' }]
+    uses: ['**Generalized anxiety disorder** (not the other anxiety/trauma disorders)', 'Augmentation of SSRIs/SNRIs in unipolar depression (not approved; less used than other 5HT1A agents)'],
+    updates: [{ year: '2023', title: 'A buspirone analogue approved for depression', text: 'Extended-release **gepirone** (Exxua), a pharmacologic analogue of buspirone and selective 5HT1A agonist, was approved for major depressive disorder in adults in September 2023.', source: 'FDA approval announced September 2023 (Psychiatric Times, September 29, 2023)' }],
+    facts: [{ ch: 'ch08', pages: '368–370', text: 'Anxiolytic onset is **delayed**, like SSRIs, implying adaptive receptor changes rather than acute occupancy.', sec: 's8-serotonin' }]
   },
   {
     id: 'thyroid-hormone', name: 'Thyroid hormones', group: 'Hormone', cls: 'Augmenting agent',
@@ -1238,6 +1270,28 @@ SP.drugs = [
     mechanism: 'Described in Chapter 7 as **another DAT inhibitor**; fuller pharmacology appears in the sleep chapter.',
     targets: [{ t: 'dat', action: 'inhibitor' }],
     uses: ['With an SNRI for residual **fatigue, low energy and poor concentration/alertness** in depression (arousal combo)']
+  },
+  {
+    id: 'prazosin', name: 'Prazosin', brand: 'Minipress', group: 'α1 antagonist', cls: 'α1-adrenergic antagonist',
+    nbn: 'Norepinephrine α1 receptor antagonist',
+    nts: ['norepinephrine'],
+    chapters: [{ ch: 'ch08', pages: '370, 378' }],
+    short: 'α1 blocker given at night for PTSD nightmares.',
+    mechanism: 'Blocks postsynaptic **α1-adrenergic** receptors, through which excess norepinephrine in the amygdala may cause **nightmares** and hyperarousal.',
+    targets: [{ t: 'alpha1', action: 'antagonist' }],
+    uses: ['**PTSD nightmares** and hyperarousal (given at night)'],
+    facts: [{ ch: 'ch08', pages: '370', text: 'The book spells it “prazocin.” A unique PTSD treatment: an α1 antagonist at night to prevent nightmares (p. 378).', sec: 's8-ne' }]
+  },
+  {
+    id: 'hydroxyzine', name: 'Hydroxyzine', brand: 'Atarax; Vistaril', group: 'Antihistamine', cls: 'Sedating antihistamine',
+    nbn: 'Histamine H1 receptor antagonist',
+    nts: ['histamine'],
+    chapters: [{ ch: 'ch08', pages: '377' }],
+    short: 'Sedating antihistamine used off-label for anxiety.',
+    mechanism: 'A **sedating antihistamine** (H1 antagonist).',
+    targets: [{ t: 'h1', action: 'antagonist' }],
+    uses: ['Off-label treatment of **anxiety** (GAD)'],
+    sideEffects: [{ e: 'Sedation', via: 'H1 antagonism' }]
   },
   {
     id: 'memantine', name: 'Memantine', group: 'Dementia treatment', cls: 'NMDA glutamate antagonist',
@@ -1303,12 +1357,14 @@ SP.drugs = [
     ],
     chapters: [
       { ch: 'ch04', pages: '78, 111, 131–133' },
-      { ch: 'ch07', pages: '355–358' }
+      { ch: 'ch07', pages: '355–358' },
+      { ch: 'ch08', pages: '376–378' }
     ],
     facts: [
       { ch: 'ch04', pages: '78, 131–133', text: 'Listed with LSD as a psychedelic model of psychosis (Table 4-1) and as a 5HT2A agonist whose effects are blocked by 5HT2A antagonists.', sec: 's4-5ht-hyper' },
       { ch: 'ch07', pages: '357', text: 'Bars follow psilocybin’s strip in **Figure 7-88** (5HT1E omitted). Psilocin’s strip differs: **5HT7 +++, 5HT2B +++, 5HT2A ++**, and + at 5HT1D, 5HT1E, 5HT2C, 5HT6, 5HT5, 5HT1B and 5HT1A.', sec: 's7-psychedelics' },
-      { ch: 'ch07', pages: '358', text: 'FDA **breakthrough therapy** designation for depression; studied for existential distress in terminal illness, substance abuse and PTSD.', sec: 's7-psychedelics' }
+      { ch: 'ch07', pages: '358', text: 'FDA **breakthrough therapy** designation for depression; studied for existential distress in terminal illness, substance abuse and PTSD.', sec: 's7-psychedelics' },
+      { ch: 'ch08', pages: '376–377', text: 'Studied to **disrupt reconsolidation** of reactivated fear memories during psychotherapy (PTSD, anxiety, existential distress in terminal illness).', sec: 's8-novel' }
     ],
     updates: [{ year: '2026', title: 'Phase 3 program and filing', text: 'Compass Pathways reported positive phase 3 results for psilocybin (COMP360) in treatment-resistant depression; as of May 2026 a rolling new drug application was under way, with completion planned for late 2026. Not yet approved at that time.', source: 'Compass Pathways first-quarter 2026 report, May 13, 2026' }]
   },
@@ -1352,12 +1408,14 @@ SP.drugs = [
     chapters: [
       { ch: 'ch03', pages: '55, 66' },
       { ch: 'ch04', pages: '78, 105–110' },
-      { ch: 'ch07', pages: '328–331, 353' }
+      { ch: 'ch07', pages: '328–331, 353' },
+      { ch: 'ch08', pages: '376–378' }
     ],
     facts: [
       { ch: 'ch03', pages: '66', text: 'Used as a treatment for **resistant depression and suicidal thoughts**.', sec: 's3-pam' },
       { ch: 'ch04', pages: '78, 105–110', text: 'A model of NMDA-hypofunction psychosis (Table 4-1: **visual** hallucinations, paranoid delusions, no insight). Blocking NMDA receptors on prefrontal GABA interneurons is **acute and reversible**, unlike the neurodevelopmental defect of schizophrenia.', sec: 's4-nmda-hypo' },
-      { ch: 'ch07', pages: '328–331', text: 'Rapid, sometimes **anti-suicidal**, effects in patients failing many monoamine drugs; benefit usually fades over **a few days** but can be re-triggered by repeated infusions or extended by monoamine drugs. Used **off-label** after multiple failures.', sec: 's7-ketamine' }
+      { ch: 'ch07', pages: '328–331', text: 'Rapid, sometimes **anti-suicidal**, effects in patients failing many monoamine drugs; benefit usually fades over **a few days** but can be re-triggered by repeated infusions or extended by monoamine drugs. Used **off-label** after multiple failures.', sec: 's7-ketamine' },
+      { ch: 'ch08', pages: '376–377', text: 'Studied to **disrupt reconsolidation** of reactivated fear memories during psychotherapy (PTSD, anxiety, existential distress in terminal illness).', sec: 's8-novel' }
     ],
     updates: [{ year: '2025', title: 'Esketamine monotherapy', text: 'Esketamine (the S-enantiomer of ketamine) nasal spray, approved in 2019 as add-on treatment, was approved in January 2025 as **monotherapy** for treatment-resistant depression.', source: 'FDA, January 2025' }],
     sideEffects: [{ e: 'Psychosis (visual hallucinations, paranoia)', via: 'NMDA blockade on prefrontal GABA interneurons → glutamate and dopamine excess' }]
@@ -1450,12 +1508,14 @@ SP.drugs = [
     chapters: [
       { ch: 'ch03', pages: '55' },
       { ch: 'ch05', pages: '199, 232' },
-      { ch: 'ch07', pages: '308–311, 333–334' }
+      { ch: 'ch07', pages: '308–311, 333–334' },
+      { ch: 'ch08', pages: '377' }
     ],
     facts: [
       { ch: 'ch03', pages: '55', text: 'A **5HT3 antagonist** with pro-cognitive and antidepressant actions (Table 3-2).', sec: 's3-drugs' },
       { ch: 'ch05', pages: '199, 232', text: 'Combined **H1 + 5HT2C** antagonism links it to weight gain; asenapine is structurally related and shares several of its binding properties.', sec: 's5-metabolic' },
-      { ch: 'ch07', pages: '308–311', text: 'Five principal actions: **α2, 5HT2A, 5HT2C, 5HT3 and H1** antagonism. α2 antagonism gives a dual 5HT–NE action like an SNRI’s by a different mechanism, synergistic with reuptake blockade.', sec: 's7-mirtazapine' }
+      { ch: 'ch07', pages: '308–311', text: 'Five principal actions: **α2, 5HT2A, 5HT2C, 5HT3 and H1** antagonism. α2 antagonism gives a dual 5HT–NE action like an SNRI’s by a different mechanism, synergistic with reuptake blockade.', sec: 's7-mirtazapine' },
+      { ch: 'ch08', pages: '377', text: 'Off-label option for **GAD** and for **panic attacks**.', sec: 's8-gad' }
     ],
     nbn: 'Norepinephrine and serotonin receptor antagonist (α2, 5HT2A, 5HT2C, 5HT3, H1)',
     nts: ['norepinephrine', 'serotonin', 'histamine'],
@@ -1481,7 +1541,10 @@ SP.drugs = [
   },
   {
     id: 'trazodone', name: 'Trazodone', brand: 'Desyrel; Oleptro', group: 'Antidepressant', cls: 'Serotonin antagonist/reuptake inhibitor (SARI)',
-    chapters: [{ ch: 'ch07', pages: '311–315, 327' }],
+    chapters: [
+      { ch: 'ch07', pages: '311–315, 327' },
+      { ch: 'ch08', pages: '377' }
+    ],
     nbn: 'Serotonin receptor antagonist (5HT2A/2C) and reuptake inhibitor',
     nts: ['serotonin', 'norepinephrine', 'histamine'],
     short: 'SARI: a hypnotic at low doses and an antidepressant at high doses.',
@@ -1510,7 +1573,8 @@ SP.drugs = [
     ],
     facts: [
       { ch: 'ch07', pages: '314', text: 'Bars follow the affinity (Ki) ranking in **Figure 7-45**, highest to lowest; actions beyond those named in the text are shown as “binds.”', sec: 's7-sari' },
-      { ch: 'ch07', pages: '312–313', text: '300 mg **XR** once nightly gives levels that never fall below the antidepressant minimum, with a peak similar to 100 mg IR (Figure 7-47).', sec: 's7-sari' }
+      { ch: 'ch07', pages: '312–313', text: '300 mg **XR** once nightly gives levels that never fall below the antidepressant minimum, with a peak similar to 100 mg IR (Figure 7-47).', sec: 's7-sari' },
+      { ch: 'ch08', pages: '377', text: 'Off-label option for **GAD** and for **panic attacks**.', sec: 's8-gad' }
     ]
   },
   {
@@ -2466,12 +2530,14 @@ SP.drugs = [
     chapters: [
       { ch: 'ch04', pages: '146' },
       { ch: 'ch05', pages: '197, 239–240' },
-      { ch: 'ch07', pages: '327–328' }
+      { ch: 'ch07', pages: '327–328' },
+      { ch: 'ch08', pages: '377–378' }
     ],
     facts: [
       { ch: 'ch04', pages: '146', text: 'Chapter 4 notes that **treatments for agitation in dementia are evolving separately** from those for psychosis in dementia and in schizophrenia.', sec: 's4-aggression' },
       { ch: 'ch05', pages: '197, 239–240', text: 'Positive results for agitation in dementia suggest it may have a satisfactory risk:benefit profile; a positive study with sertraline in PTSD was a promising exception among anxiety/PTSD uses.', sec: 's5-pips' },
-      { ch: 'ch07', pages: '327–328', text: 'Table 7-1: approved as an **adjunct for MDD** only. Stronger 5HT2A, 5HT1A and **α1** binding than aripiprazole (possibly less akathisia); α1 + 5HT2A synergy may aid antidepressant action and evidence in Alzheimer agitation and PTSD.', sec: 's7-augment-sda' }
+      { ch: 'ch07', pages: '327–328', text: 'Table 7-1: approved as an **adjunct for MDD** only. Stronger 5HT2A, 5HT1A and **α1** binding than aripiprazole (possibly less akathisia); α1 + 5HT2A synergy may aid antidepressant action and evidence in Alzheimer agitation and PTSD.', sec: 's7-augment-sda' },
+      { ch: 'ch08', pages: '377–378', text: 'In testing with **sertraline** for PTSD at publication, with promising initial findings.', sec: 's8-ptsd' }
     ],
     updates: [
       { year: '2023', title: 'Approved for Alzheimer agitation', text: 'Approved by the FDA for **agitation associated with dementia due to Alzheimer disease**, the first drug approved for this indication in the US.', source: 'FDA, May 10, 2023' },
@@ -2540,14 +2606,16 @@ SP.drugs = [
     short: 'Binds the α2δ subunit of presynaptic calcium channels.',
     mechanism: 'Binds the **α2δ** protein of voltage-sensitive calcium channels, which may regulate how the channel opens and closes. Reducing calcium entry at presynaptic N and P/Q channels can keep vesicles tethered and reduce release in states of excessive neurotransmission. Details in Chapters 8–10.',
     targets: [{ t: 'a2d', action: 'modulator', note: 'Binds α2δ' }],
-    uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)'],
+    uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)', '**Anxiety**: shown in social anxiety and panic disorder; approved for anxiety in Europe and other countries, not the US; off-label add-on or alternative to benzodiazepines'],
     chapters: [
       { ch: 'ch03', pages: '71' },
-      { ch: 'ch07', pages: '347, 352' }
+      { ch: 'ch07', pages: '347, 352' },
+      { ch: 'ch08', pages: '366–368, 377' }
     ],
     facts: [
       { ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' },
-      { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' }
+      { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' },
+      { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' }
     ]
   },
   {
@@ -2556,14 +2624,16 @@ SP.drugs = [
     short: 'Binds the α2δ subunit of presynaptic calcium channels.',
     mechanism: 'Binds the **α2δ** protein of voltage-sensitive calcium channels, like pregabalin. Details in Chapters 8–10.',
     targets: [{ t: 'a2d', action: 'modulator', note: 'Binds α2δ' }],
-    uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)'],
+    uses: ['Anticonvulsant', 'Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)', '**Anxiety**: shown in social anxiety and panic disorder; approved for anxiety in Europe and other countries, not the US; off-label add-on or alternative to benzodiazepines'],
     chapters: [
       { ch: 'ch03', pages: '71' },
-      { ch: 'ch07', pages: '347, 352' }
+      { ch: 'ch07', pages: '347, 352' },
+      { ch: 'ch08', pages: '366–368, 377' }
     ],
     facts: [
       { ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' },
-      { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' }
+      { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' },
+      { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' }
     ]
   }
 ];

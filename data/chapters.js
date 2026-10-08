@@ -61,7 +61,13 @@ SP.manifest = [
     summary: 'Response versus remission and why relapse grows with each step; treating and stabilizing from above and below; SSRIs and their delayed 5HT1A cascade, SPARIs, SNRIs and their prefrontal dopamine boost, bupropion, agomelatine, mirtazapine, trazodone and vortioxetine; neuroactive steroids, ketamine and esketamine; augmentation, combinations, TCAs and MAOIs; serotonin/dopamine agents, lithium and anticonvulsants across the bipolar spectrum; and dextromethorphan, dextromethadone and hallucinogen-assisted psychotherapy.',
     files: SP.CHAPTER_FILES
   },
-  { id: 'ch08', number: 8, ready: false, pages: '359–378', title: 'Anxiety, Trauma, and Treatment', short: 'Anxiety and trauma', summary: 'Fear circuits, anxiety and trauma-related disorders, and their treatments.' },
+  {
+    id: 'ch08', number: 8, ready: true, pages: '359–378',
+    title: 'Anxiety, Trauma, and Treatment',
+    short: 'Anxiety and trauma',
+    summary: 'Fear and worry as the two core symptoms of GAD, panic, social anxiety and PTSD; the amygdala and its six fear outputs; CSTC worry loops; how benzodiazepines, α2δ ligands, serotonergic agents, buspirone, NET inhibitors and α1 antagonists act; fear conditioning, extinction, renewal and reconsolidation; and treatment choices for each disorder.',
+    files: SP.CHAPTER_FILES
+  },
   { id: 'ch09', number: 9, ready: false, pages: '379–400', title: 'Chronic Pain and Its Treatment', short: 'Chronic pain', summary: 'Pain pathways, central sensitization, and treatments that target them.' },
   { id: 'ch10', number: 10, ready: false, pages: '401–448', title: 'Disorders of Sleep and Wakefulness and Their Treatment: Neurotransmitter Networks for Histamine and Orexin', short: 'Sleep and wakefulness', summary: 'The sleep–wake circuitry, histamine and orexin, insomnia and excessive sleepiness, and their treatments.' },
   { id: 'ch11', number: 11, ready: false, pages: '449–485', title: 'Attention Deficit Hyperactivity Disorder and Its Treatment', short: 'ADHD', summary: 'Prefrontal circuits in ADHD and how stimulants and nonstimulants act on them.' },
