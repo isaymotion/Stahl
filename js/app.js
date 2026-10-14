@@ -429,7 +429,7 @@
     var chs = allChapters();
     var last = store.get('last', null);
     var lastCh = last && chapter(last.ch);
-    var focus = lastCh || chs[chs.length - 1];
+    var focus = lastCh || chs[0];
     var lastMode = last && modeBy(last.mode);
     var cont = lastCh
       ? '<a class="btn btn--solid" href="' + esc(last.hash) + '">Continue Chapter ' + lastCh.number + ' ' + esc(lastMode ? lastMode.label.toLowerCase() : 'study') + '</a>'
@@ -515,7 +515,7 @@
   function renderLibrary() {
     var counts = { drugs: (SP.drugs || []).length, nt: (SP.nts || []).length, targets: (SP.targets || []).length, circuits: (SP.circuits || []).length, glossary: (SP.glossary || []).length, updates: collectUpdates().length, nbn: (SP.drugs || []).filter(function (d) { return d.nbn; }).length, compare: (SP.drugs || []).length };
     var unit = { drugs: 'agent', nt: 'messenger', targets: 'target', circuits: 'symptom map', glossary: 'term', updates: 'update', nbn: 'mapped agent', compare: 'agent' };
-    var html = '<div class="wrap page"><header class="page__head"><h1>Reference library</h1><p>Cross-linked databases that grow as each chapter is added. Every entry cites the chapter and book pages it comes from; anything from outside the book is boxed as a post-publication update.</p></header>' +
+    var html = '<div class="wrap page"><header class="page__head"><h1>Reference library</h1><p>Cross-linked databases built from all 13 chapters. Every entry cites the chapter and book pages it comes from; anything from outside the book is boxed as a post-publication update.</p></header>' +
       '<div class="tools tools--lib">' + LIBRARY.map(function (l) {
         return '<a class="tool tool--lib c-' + l.css + '" href="' + l.href + '"><span class="tool__name">' + esc(l.label) + '</span><span class="tool__meta">' + esc(l.blurb) + '</span><span class="tool__ch">' + plural(counts[l.key] || 0, unit[l.key]) + (l.key === 'compare' ? ' to compare' : '') + '</span></a>';
       }).join('') + '</div></div>';

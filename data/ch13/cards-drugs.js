@@ -1,0 +1,28 @@
+/* Chapter 13 drug flashcards. */
+SP.add("ch13", "drugs", [
+  { id: "d13-01", tag: "Nicotine", q: "Varenicline: mechanism?", a: "Selective **α4β2 nicotinic partial agonist**." },
+  { id: "d13-02", tag: "Nicotine", q: "Varenicline’s effect on quit rates?", a: "**3–4×** placebo, but only ~**10%** abstinent at 1 year." },
+  { id: "d13-03", tag: "Nicotine", q: "Nicotine replacement forms?", a: "**Gum, lozenge, nasal spray, inhaler, patch**." },
+  { id: "d13-04", tag: "Alcohol", q: "Naltrexone for alcohol: mechanism and effect?", a: "**μ-opioid antagonist**; fewer heavy drinking days, more abstinence." },
+  { id: "d13-05", tag: "Alcohol", q: "How often is injectable naltrexone given?", a: "Every **30 days** (380 mg IM)." },
+  { id: "d13-06", tag: "Alcohol", q: "Nalmefene: status for alcohol?", a: "μ-opioid antagonist approved **outside the US**." },
+  { id: "d13-07", tag: "Alcohol", q: "Acamprosate: mechanism?", a: "Taurine derivative; blocks **mGluRs** (mGlu5, perhaps mGlu2); “artificial alcohol.”" },
+  { id: "d13-08", tag: "Alcohol", q: "Disulfiram: mechanism and reaction?", a: "Irreversible **aldehyde dehydrogenase** inhibitor → acetaldehyde: flushing, nausea, vomiting, hypotension." },
+  { id: "d13-09", tag: "Alcohol", q: "Unapproved drugs that may help alcoholism?", a: "**Topiramate** and **ondansetron**." },
+  { id: "d13-10", tag: "Opioids", q: "Methadone: mechanism and setting?", a: "**Full μ agonist**; oral, usually daily at a clinic." },
+  { id: "d13-11", tag: "Opioids", q: "Buprenorphine: mechanism and route?", a: "**μ partial agonist**; sublingual (with naloxone); also implant and depot." },
+  { id: "d13-12", tag: "Opioids", q: "When should buprenorphine be started?", a: "When **mild withdrawal** has begun." },
+  { id: "d13-13", tag: "Opioids", q: "Lofexidine and clonidine in opioid withdrawal?", a: "**α2 agonists** that reduce autonomic symptoms (intensity, not duration)." },
+  { id: "d13-14", tag: "Opioids", q: "Potency of fentanyl and carfentanil vs morphine?", a: "Fentanyl ~**100×**; carfentanil ~**10,000×**." },
+  { id: "d13-15", tag: "Opioids", q: "Naloxone: mechanism and caution?", a: "Competitive **μ antagonist**; reverses overdose; can **precipitate withdrawal**." },
+  { id: "d13-16", tag: "Cannabis", q: "Dronabinol: what and for what?", a: "Synthetic **THC**; chemo nausea, AIDS wasting appetite." },
+  { id: "d13-17", tag: "Cannabis", q: "Nabilone: schedule?", a: "**Schedule II** (potency); chemo nausea." },
+  { id: "d13-18", tag: "Cannabis", q: "Epidiolex: what and for what?", a: "Purified **CBD**; **Lennox–Gastaut** and **Dravet** seizures from age 2; not controlled." },
+  { id: "d13-19", tag: "Cannabis", q: "Nabiximols: what?", a: "~1:1 **THC:CBD** spray for MS spasticity/pain (outside US)." },
+  { id: "d13-20", tag: "Hallucinogens", q: "Three hallucinogen chemical classes with examples?", a: "**Tryptamines** (psilocybin), **ergolines** (LSD), **phenethylamines** (mescaline)." },
+  { id: "d13-21", tag: "Stimulants", q: "Active ingredients of “bath salts”?", a: "**MDPV**, mephedrone, methylone." },
+  { id: "d13-22", tag: "BED", q: "Only approved drug for binge eating disorder?", a: "**Lisdexamfetamine**." },
+  { id: "d13-23", tag: "OCD", q: "Second-line drugs for OCD?", a: "**Clomipramine**, SNRIs, MAOIs; or high-dose SSRI / **serotonin–dopamine blocker** augmentation." },
+  { id: "d13-24", tag: "Sedatives", q: "Why are barbiturates rarely prescribed?", a: "Lethal in **overdose**, more dependence and abuse, **dangerous withdrawal**." },
+  { id: "d13-25", tag: "Updates", q: "Brixadi: what is it?", a: "Extended-release **buprenorphine** injection, **weekly or monthly** (2023)." }
+]);

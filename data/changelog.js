@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 14,
+    date: "2026-10-14",
+    title: "Chapter 13: Impulsivity, compulsivity and addiction (all 13 chapters complete)",
+    summary: "The final chapter is here: reward circuits, every class of abused substance and its treatment, behavioral addictions, OCD and violence. The whole book is now covered.",
+    items: [
+      { type: "chapter", ch: "ch13", text: "Chapter 13: study guide (17 sections), high-yield summary, mechanism, drug and clinical cards, and 55 board-style questions.", href: "#/c/ch13/guide", link: "Open Chapter 13" },
+      { type: "update", text: "Library: 17 new agents (alcohol, naltrexone, nalmefene, acamprosate, disulfiram, ondansetron, methadone, buprenorphine, fentanyl, lofexidine, dronabinol, nabilone, nabiximols, cannabidiol, MDPV and more); β-endorphin and endocannabinoids expanded; new targets CB2 and aldehyde dehydrogenase.", href: "#/drugs/buprenorphine", link: "Buprenorphine" },
+      { type: "feature", text: "Symptoms & circuits: six maps for impulsivity, compulsivity, drug reward, opioid withdrawal, OCD and binge eating.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Post-publication update boxes: OTC naloxone and nalmefene spray (2023), the end of the X-waiver and weekly/monthly buprenorphine (2023), falling overdose deaths (2025), marijuana rescheduling (2026), cytisinicline (2026), ADAPT-2, and the MDMA and psilocybin decisions.", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 13,
     date: "2026-10-14",
     title: "Chapter 12: Dementia and acetylcholine",

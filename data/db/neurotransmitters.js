@@ -85,7 +85,9 @@ SP.nts = [
       { ch: 'ch10', pages: '440–444', text: 'Most wake-promoting drugs raise **dopamine** (stimulants, modafinil, solriamfetol; caffeine indirectly via adenosine–D2 coupling).', sec: 's10-caffeine-stimulants' },
       { ch: 'ch11', pages: '454–457', text: 'Receptor sensitivity **D3 > D2 > D1**; **D1** predominates in the PFC, so low tonic DA leaves it under-stimulated. **Phasic** bursts in the accumbens drive reward learning and are hijacked by drugs.', sec: 's11-tonic-phasic' },
       { ch: 'ch11', pages: '457–463', text: 'DA at D1 (Gs, ↑cAMP) opens HCN channels: moderate stimulation **reduces noise**, excess loses the signal; input arrives from the **VTA**.', sec: 's11-hcn' },
-      { ch: 'ch11', pages: '480', text: 'In the PFC, DA is cleared largely by **NET**, so NET inhibitors raise prefrontal DA.', sec: 's11-nri' }
+      { ch: 'ch11', pages: '480', text: 'In the PFC, DA is cleared largely by **NET**, so NET inhibitors raise prefrontal DA.', sec: 's11-nri' },
+      { ch: 'ch13', pages: '542–544', text: 'The **mesolimbic** pathway (VTA → nucleus accumbens) is the proposed final common pathway of reward; in addiction, dorsal striatal DA neurons come to fire to **cues** rather than the drug.', sec: 's13-dopamine' },
+      { ch: 'ch13', pages: '573–574', text: '“**Wanting**” (anticipation of reward) is dopamine-dependent; “liking” is opioid-dependent.', sec: 's13-extinction' }
     ],
     synthesis: [['Tyrosine', 'Taken into the terminal by a **tyrosine transporter**'], ['DOPA', '**Tyrosine hydroxylase (TOH)**, the rate-limiting enzyme'], ['Dopamine', '**DOPA decarboxylase (DDC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -113,7 +115,8 @@ SP.nts = [
       { ch: 'ch10', pages: '410–414', text: 'Orexin releases ACh from the **basal forebrain** (cortex) and **PPT/LDT** (thalamus); ACh is lowest in stage 4 and peaks in **REM**.', sec: 's10-ultradian' },
       { ch: 'ch12', pages: '505–507', text: '**M1, M3, M5** are stimulatory and postsynaptic; **M2 and M4** are inhibitory presynaptic autoreceptors (M4 also postsynaptic) and heteroreceptors that brake GABA and glutamate release.', sec: 's12-ach' },
       { ch: 'ch12', pages: '507–509', text: '**α4β2** nicotinic receptors drive accumbens DA (nicotine’s target); **α7** receptors mediate PFC cognition, feed-forward ACh release and heteroreceptor release of DA and glutamate. Nicotinic receptors have **PAM** sites.', sec: 's12-ach' },
-      { ch: 'ch12', pages: '509–510', text: 'Early loss of **nucleus basalis** cholinergic neurons with surviving postsynaptic targets is why cholinesterase inhibitors help early AD.', sec: 's12-ache' }
+      { ch: 'ch12', pages: '509–510', text: 'Early loss of **nucleus basalis** cholinergic neurons with surviving postsynaptic targets is why cholinesterase inhibitors help early AD.', sec: 's12-ache' },
+      { ch: 'ch13', pages: '548', text: 'The “brain’s own nicotine”: ACh at **α4β2** receptors on VTA dopamine neurons is the target nicotine hijacks.', sec: 's13-nicotine' }
     ],
     pathways: [
       { name: 'Brainstem cholinergic', route: 'Brainstem → PFC, **basal forebrain**, thalamus, hypothalamus, amygdala, hippocampus', role: 'Arousal and widespread modulation' },
@@ -137,7 +140,8 @@ SP.nts = [
       { ch: 'ch07', pages: '328–331', text: 'Ketamine’s rapid antidepressant effect is thought to come from a **burst of glutamate** acting at AMPA receptors; lamotrigine and riluzole may reduce glutamate release.', sec: 's7-ketamine' },
       { ch: 'ch08', pages: '372–373', text: 'Fear conditioning strengthens **glutamate** synapses in the lateral and central amygdala; α2δ ligands reduce excess glutamate release in fear and worry circuits.', sec: 's8-conditioning' },
       { ch: 'ch09', pages: '395', text: 'The main transmitter released in **suprasegmental** central sensitization (thalamus, cortex).', sec: 's9-a2d' },
-      { ch: 'ch12', pages: '515–518', text: 'In AD, plaques and tangles may cause a steady glutamate **leak** (partly through loss of GABA interneurons): tonic NMDA activation blurs memory signaling and, at higher levels, kills neurons by **excitotoxicity**.', sec: 's12-memantine' }
+      { ch: 'ch12', pages: '515–518', text: 'In AD, plaques and tangles may cause a steady glutamate **leak** (partly through loss of GABA interneurons): tonic NMDA activation blurs memory signaling and, at higher levels, kills neurons by **excitotoxicity**.', sec: 's12-memantine' },
+      { ch: 'ch13', pages: '554–556', text: 'Alcohol reduces glutamate release (mGluRs, VSCCs) and NMDA actions; withdrawal leaves **glutamate excess**, which acamprosate counters.', sec: 's13-alcohol' }
     ],
     synthesis: [['Glutamine (glia)', 'Recaptured glutamate is converted by **glutamine synthetase**'], ['Export', 'Glutamine leaves glia on a reversed **SNAT** (or ASC-T)'], ['Neuronal uptake', 'A neuronal **SNAT** imports glutamine'], ['Glutamate', 'Mitochondrial **glutaminase**'], ['Vesicle', 'Packaged by **vGluT**']],
     pathways: [
@@ -169,7 +173,8 @@ SP.nts = [
       { ch: 'ch06', pages: '259–263', text: 'GABA-A subunits α1–6, β1–3, γ1–3, δ, ε, π, θ, ρ1–3. Benzodiazepine-sensitive (γ2/3 + α1–3) receptors are synaptic and **phasic**; δ-containing receptors with α4/α6 are extrasynaptic, **tonic** and bind **neuroactive steroids**.', sec: 's6-gabaa' },
       { ch: 'ch07', pages: '320–322', text: 'GABA is low in plasma, CSF and brain in depression; GABA interneurons are reduced. Neuroactive steroids boost GABA-A function for rapid antidepressant effects.', sec: 's7-neurosteroids' },
       { ch: 'ch08', pages: '366–367, 373', text: 'GABA regulates both fear and worry circuits; GABA interneurons of the **intercalated cell mass** gate fear output during **extinction**.', sec: 's8-extinction' },
-      { ch: 'ch10', pages: '408–414', text: 'GABA from the **VLPO** is the sleep switch; GABA rises through the first hours of sleep and declines before waking.', sec: 's10-sleepwake' }
+      { ch: 'ch10', pages: '408–414', text: 'GABA from the **VLPO** is the sleep switch; GABA rises through the first hours of sleep and declines before waking.', sec: 's10-sleepwake' },
+      { ch: 'ch13', pages: '554–558', text: 'Alcohol and sedative hypnotics enhance GABA: alcohol blocks presynaptic GABA-B and modulates **δ-subunit** GABA-A receptors; barbiturates and benzodiazepines are GABA-A PAMs at separate sites.', sec: 's13-sedatives' }
     ],
     synthesis: [['Glutamate', 'The amino acid precursor'], ['GABA', '**Glutamic acid decarboxylase (GAD)**'], ['Vesicle', 'Packaged by **VIAAT**']],
     roles: ['The principal **inhibitory** neurotransmitter, reducing the activity of many neurons', '**Phasic** inhibition at synaptic benzodiazepine-sensitive GABA-A receptors', '**Tonic** inhibition at extrasynaptic δ-containing GABA-A receptors sets neuronal excitability']
@@ -237,16 +242,24 @@ SP.nts = [
     summary: 'The brain’s own morphine: a prime example of “God’s pharmacopeia.”',
     facts: [
       { ch: 'ch01', pages: '5–6', text: 'The brain makes **its own morphine (β-endorphin)**. Morphine was used clinically **before β-endorphin was discovered**.', sec: 's1-nts' },
-      { ch: 'ch09', pages: '390–392', text: 'Descending PAG-driven pathways release **endorphins** at μ receptors in the dorsal horn; placebo analgesia is reversed by naloxone.', sec: 's9-descending' }
-    ]
+      { ch: 'ch09', pages: '390–392', text: 'Descending PAG-driven pathways release **endorphins** at μ receptors in the dorsal horn; placebo analgesia is reversed by naloxone.', sec: 's9-descending' },
+      { ch: 'ch13', pages: '559', text: 'Three parallel opioid systems: **POMC → β-endorphin → μ**; proenkephalin → **enkephalin → δ**; prodynorphin → **dynorphin → κ**.', sec: 's13-opioids' },
+      { ch: 'ch13', pages: '554–556', text: 'Alcohol may release β-endorphin (or act at μ directly) in the VTA, driving dopamine release: the rationale for **naltrexone**.', sec: 's13-alcohol' }
+    ],
+    synthesis: [['POMC (pro-opiomelanocortin)', 'Precursor protein in opioid neurons (e.g., arcuate nucleus)'], ['β-Endorphin', 'Cleaved from POMC; acts at **μ** receptors']],
+    pathways: [{ name: 'Arcuate → VTA', route: '**Arcuate nucleus** opioid neurons → VTA glutamate and GABA neurons', role: 'Reward: drives mesolimbic dopamine release; alcohol reward' }],
+    roles: ['Reward and reinforcement (“liking”)', 'Analgesia (descending pathways, Chapter 9)']
   },
   {
     id: 'endocannabinoids', name: 'Endocannabinoids', abbr: 'EC', family: 'Lipid (endocannabinoid)', key6: false,
     summary: 'The brain’s own marijuana and the classic retrograde neurotransmitters: made in the postsynaptic neuron, they diffuse back to presynaptic CB1 receptors.',
     facts: [
       { ch: 'ch01', pages: '5–6', text: 'The brain makes **its own marijuana (endocannabinoids)**. Marijuana was smoked **before cannabinoid receptors and endocannabinoids were discovered**.', sec: 's1-nts' },
-      { ch: 'ch01', pages: '6–7', text: 'A **retrograde neurotransmitter** (“endogenous marijuana”): **synthesized in the postsynaptic neuron**, released, and **diffuses to presynaptic cannabinoid receptors such as CB1**.', sec: 's1-classic' }
-    ]
+      { ch: 'ch01', pages: '6–7', text: 'A **retrograde neurotransmitter** (“endogenous marijuana”): **synthesized in the postsynaptic neuron**, released, and **diffuses to presynaptic cannabinoid receptors such as CB1**.', sec: 's1-classic' },
+      { ch: 'ch13', pages: '563', text: '**2-AG** is a high-efficacy agonist at CB1 and CB2; **anandamide** is low-efficacy at CB1 and very low at CB2. CB1 is the dominant brain receptor; CB2 is mainly on immune cells.', sec: 's13-cannabis' }
+    ],
+    synthesis: [['Membrane lipid precursors', 'Stored in the **postsynaptic** membrane'], ['Anandamide and 2-AG', 'Made **on demand** when the postsynaptic neuron is activated']],
+    roles: ['**Retrograde** inhibition of presynaptic transmitter release via CB1', 'Modulate mesolimbic reward (“the brain’s own marijuana”)', 'Immune modulation via CB2']
   },
   {
     id: 'nitric-oxide', name: 'Nitric oxide', abbr: 'NO', family: 'Gas', key6: false,

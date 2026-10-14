@@ -96,7 +96,13 @@ SP.manifest = [
     summary: 'MCI versus dementia; Alzheimer, vascular, Lewy body and frontotemporal dementias and mixed pathology; the amyloid cascade, APOE and the three biomarker-defined stages of AD; acetylcholine synthesis, receptors and pathways; cholinesterase inhibitors and memantine; and the networks and treatments of psychosis, agitation, depression, pseudobulbar affect and apathy in dementia, with the post-2021 anti-amyloid antibodies.',
     files: SP.CHAPTER_FILES
   },
-  { id: 'ch13', number: 13, ready: false, pages: '538–578', title: 'Impulsivity, Compulsivity, and Addiction', short: 'Impulsivity, compulsivity and addiction', summary: 'Reward circuits, impulsive–compulsive disorders, substances of abuse and their treatments.' }
+  {
+    id: 'ch13', number: 13, ready: true, pages: '538–578',
+    title: 'Impulsivity, Compulsivity, and Addiction',
+    short: 'Impulsivity, compulsivity and addiction',
+    summary: 'Impulsivity and compulsivity as ventral and dorsal cortico-striatal loops; the dopamine theory of addiction; stimulants, nicotine, alcohol, sedative hypnotics, GHB, opioids, cannabis, hallucinogens, empathogens and dissociatives with their treatments; habit extinction and psychedelic-assisted psychotherapy; binge eating disorder, OCD, impulse control disorders and violence.',
+    files: SP.CHAPTER_FILES
+  }
 ];
 
 /* Shared data loaded with the chapters: databases and release notes. */

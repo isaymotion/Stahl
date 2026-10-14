@@ -18,7 +18,8 @@ SP.targets = [
       { ch: 'ch05', pages: '237', text: '**Lumateperone** binds SERT about as potently as D2; ziprasidone binds it weakly.', sec: 's5-dones' },
       { ch: 'ch07', pages: '289–292', text: 'SSRIs must occupy perhaps **80–90%** of SERTs to work. Blocking SERT raises 5HT first at the **somatodendritic** area; delayed 5HT1A autoreceptor desensitization then disinhibits release at terminals.', sec: 's7-ssri' },
       { ch: 'ch07', pages: '292–296', text: 'All six SSRIs share selective SERT inhibition; their **secondary properties** differ (Figures 7-16 to 7-21).', sec: 's7-ssri-agents' },
-      { ch: 'ch08', pages: '368', text: 'Most SERT-blocking drugs (SSRIs, SNRIs) reduce fear and anxiety in GAD, panic disorder, social anxiety disorder, PTSD and OCD.', sec: 's8-serotonin' }
+      { ch: 'ch08', pages: '368', text: 'Most SERT-blocking drugs (SSRIs, SNRIs) reduce fear and anxiety in GAD, panic disorder, social anxiety disorder, PTSD and OCD.', sec: 's8-serotonin' },
+      { ch: 'ch13', pages: '569', text: '**MDMA** is a SERT competitive inhibitor and pseudosubstrate that reverses SERT to release serotonin; SSRIs block its effects. Cocaine also inhibits SERT.', sec: 's13-hallucinogens' }
     ]
   },
   {
@@ -54,7 +55,8 @@ SP.targets = [
       { ch: 'ch10', pages: '442–444', text: 'Modafinil/armodafinil: weak affinity but high levels give slow, sustained, **incomplete** DAT occupancy that raises **tonic** DA for wakefulness.', sec: 's10-modafinil' },
       { ch: 'ch11', pages: '469–473', text: '**Methylphenidate** binds DAT **allosterically** and is not transported; **amphetamine** is a **competitive pseudosubstrate**, transported in, and at high doses reverses DAT.', sec: 's11-amph' },
       { ch: 'ch11', pages: '473–477', text: 'The “**mysterious DAT**”: continuous occupancy for weeks (antidepressant), **≥ 50–60%** occupancy for immediate ADHD/wake effects, rapid high occupancy for euphoria, repeated pulses for addiction.', sec: 's11-dat' },
-      { ch: 'ch11', pages: '476–479', text: 'The faster and more complete the DAT blockade (oral < intranasal < IV < smoked), the more **reinforcing** the drug.', sec: 's11-slowfast' }
+      { ch: 'ch11', pages: '476–479', text: 'The faster and more complete the DAT blockade (oral < intranasal < IV < smoked), the more **reinforcing** the drug.', sec: 's11-slowfast' },
+      { ch: 'ch13', pages: '544–546', text: 'Stimulant abuse = sudden, massive **mesolimbic DAT** blockade; the faster the entry (smoked, IV), the bigger the high.', sec: 's13-stimulants' }
     ]
   },
   {
@@ -256,7 +258,8 @@ SP.targets = [
       { ch: 'ch05', pages: '204–222', text: 'Almost all drugs for psychosis bind **5HT2A more potently than D2**, except the D2 partial agonists.', sec: 's5-binding' },
       { ch: 'ch07', pages: '311–314', text: 'SSRI-raised 5HT at 5HT2A (and 5HT2C) receptors may cause **sexual dysfunction, insomnia and anxiety**; SARIs block it. 5HT2A antagonism increases **slow-wave sleep**.', sec: 's7-sari' },
       { ch: 'ch10', pages: '424–425', text: '5HT2A antagonism (trazodone) specifically enhances **slow-wave** sleep.', sec: 's10-arousal-blockers' },
-      { ch: 'ch12', pages: '526–528', text: 'Blocking 5HT2A on glutamate neurons that lost GABA inhibition reduces dementia psychosis (**pimavanserin**); 5HT2A antagonism also part of **brexpiprazole** for agitation.', sec: 's12-psychosis' }
+      { ch: 'ch12', pages: '526–528', text: 'Blocking 5HT2A on glutamate neurons that lost GABA inhibition reduces dementia psychosis (**pimavanserin**); 5HT2A antagonism also part of **brexpiprazole** for agitation.', sec: 's12-psychosis' },
+      { ch: 'ch13', pages: '567–568', text: 'The main target of **hallucinogens** (psilocybin, LSD, mescaline) as agonists; 5HT2A antagonists reverse hallucinogen effects; desensitization explains rapid tolerance.', sec: 's13-hallucinogens' }
     ]
   },
   {
@@ -324,7 +327,8 @@ SP.targets = [
       { ch: 'ch11', pages: '458–463', text: 'Postsynaptic **α2A** on PFC pyramidal spines is coupled to **Gi**: ↓cAMP closes HCN channels and **strengthens the signal**.', sec: 's11-hcn' },
       { ch: 'ch11', pages: '481–482', text: 'Subtypes: **α2A** (cortex and LC; main PFC mediator), **α2B** (thalamus; sedation), **α2C** (densest in striatum in the text; LC in Figure 11-42). Dense in the PFC, sparse in the accumbens.', sec: 's11-alpha2' },
       { ch: 'ch11', pages: '482', text: '**Guanfacine** is 15–60× α2A-selective; **clonidine** hits α2A, α2B, α2C plus imidazoline receptors. Only ER forms are approved for ADHD.', sec: 's11-alpha2' },
-      { ch: 'ch12', pages: '531–533', text: 'Brexpiprazole blocks postsynaptic **α2C** on pyramidal dendrites as part of its anti-agitation action.', sec: 's12-agitation' }
+      { ch: 'ch12', pages: '531–533', text: 'Brexpiprazole blocks postsynaptic **α2C** on pyramidal dendrites as part of its anti-agitation action.', sec: 's12-agitation' },
+      { ch: 'ch13', pages: '561', text: '**Lofexidine** and clonidine reduce the autonomic intensity of opioid withdrawal.', sec: 's13-oud-tx' }
     ]
   },
   {
@@ -359,7 +363,8 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '39', text: '**Agonist** actions listed in Table 2-4 (cataplexy, sleepiness in narcolepsy, slow-wave sleep, pain, alcohol).', sec: 's2-receptor-tables' },
       { ch: 'ch06', pages: '258', text: 'The G-protein-linked GABA receptor, possibly coupled to calcium or potassium channels.', sec: 's6-gaba' },
-      { ch: 'ch10', pages: '446–447', text: '**Sodium oxybate** is a GABA-B **partial agonist** (antagonist when GABA is high, agonist when low), improving slow-wave sleep and cataplexy.', sec: 's10-oxybate' }
+      { ch: 'ch10', pages: '446–447', text: '**Sodium oxybate** is a GABA-B **partial agonist** (antagonist when GABA is high, agonist when low), improving slow-wave sleep and cataplexy.', sec: 's10-oxybate' },
+      { ch: 'ch13', pages: '554, 559', text: 'Alcohol **blocks** presynaptic GABA-B (increasing GABA release); **GHB** acts at GABA-B as well as GHB receptors.', sec: 's13-alcohol' }
     ]
   },
   {
@@ -442,7 +447,10 @@ SP.targets = [
   {
     id: 'mglur-g1', name: 'Group I metabotropic glutamate receptors (mGluR1, mGluR5)', short: 'mGluR I', family: 'G-protein-linked receptor', nt: 'glutamate',
     summary: 'G-protein-linked glutamate receptors located mainly postsynaptically, where they hypothetically facilitate responses mediated by ionotropic glutamate receptors.',
-    facts: [{ ch: 'ch04', pages: '99–102', text: 'Group I (mGluR1, 5) are mainly **postsynaptic**, hypothetically strengthening ionotropic glutamate responses.', sec: 's4-glu-receptors' }],
+    facts: [
+      { ch: 'ch04', pages: '99–102', text: 'Group I (mGluR1, 5) are mainly **postsynaptic**, hypothetically strengthening ionotropic glutamate responses.', sec: 's4-glu-receptors' },
+      { ch: 'ch13', pages: '556', text: '**Acamprosate** blocks mGlu5 (and perhaps mGlu2) to reduce glutamate release in alcohol withdrawal.', sec: 's13-alcohol' }
+    ],
     location: 'Mainly **postsynaptic**'
   },
   {
@@ -503,9 +511,17 @@ SP.targets = [
   },
   {
     id: 'cb1', name: 'Cannabinoid 1 receptor (CB1)', short: 'CB1', family: 'G-protein-linked receptor', nt: 'endocannabinoids',
-    summary: 'The presynaptic receptor reached by retrograde endocannabinoid signaling.',
+    summary: 'The main brain cannabinoid receptor, presynaptic at neuron terminals throughout the CNS and PNS; endocannabinoids reach it by retrograde signaling to inhibit transmitter release. THC is a partial agonist.',
     location: '**Presynaptic** terminals',
-    facts: [{ ch: 'ch01', pages: '6–7', text: 'Endocannabinoids made in the postsynaptic neuron diffuse back to **presynaptic cannabinoid receptors such as CB1**: the classic example of **retrograde neurotransmission**.', sec: 's1-classic' }]
+    facts: [
+      { ch: 'ch01', pages: '6–7', text: 'Endocannabinoids made in the postsynaptic neuron diffuse back to **presynaptic cannabinoid receptors such as CB1**: the classic example of **retrograde neurotransmission**.', sec: 's1-classic' },
+      { ch: 'ch13', pages: '563–564', text: '**2-AG** high efficacy, **anandamide** low efficacy; **THC** partial agonist (psychoactive, anxiogenic); CBD has little activity here.', sec: 's13-cannabis' }
+    ]
+  },
+  {
+    id: 'cb2', name: 'Cannabinoid 2 receptor (CB2)', short: 'CB2', family: 'G-protein-linked receptor', nt: 'endocannabinoids',
+    summary: 'A cannabinoid receptor found mainly on immune cells (and some glia and brainstem), modulating cell migration and cytokine release.',
+    facts: [{ ch: 'ch13', pages: '563', text: 'Binds **2-AG** (high efficacy) and **anandamide** (very low efficacy); THC is a partial agonist.', sec: 's13-cannabis' }]
   },
   {
     id: 'mor', name: 'μ-Opioid receptor', short: 'μ-opioid', family: 'G-protein-linked receptor', nt: 'endorphin',
@@ -515,19 +531,27 @@ SP.targets = [
       { ch: 'ch05', pages: '201', text: 'The μ-opioid antagonist **samidorphan** combined with olanzapine was a new agent on the horizon to reduce olanzapine-induced weight gain.', sec: 's5-metabolic' },
       { ch: 'ch07', pages: '328, 355', text: 'Possible μ-opioid contributions to the antidepressant effects of **ketamine** and **dextromethadone** are debated.', sec: 's7-dxm' },
       { ch: 'ch08', pages: '375', text: '**Opioids** given soon after trauma may mitigate consolidation of the traumatic memory and reduce the chance of PTSD.', sec: 's8-novel' },
-      { ch: 'ch09', pages: '390', text: 'Descending pathways release **endorphins** acting at mostly **presynaptic** μ receptors on nociceptive afferents; opioid analgesics act there and in the **PAG**. **Aβ fibers lack μ receptors**, so opioids spare touch.', sec: 's9-descending' }
+      { ch: 'ch09', pages: '390', text: 'Descending pathways release **endorphins** acting at mostly **presynaptic** μ receptors on nociceptive afferents; opioid analgesics act there and in the **PAG**. **Aβ fibers lack μ receptors**, so opioids spare touch.', sec: 's9-descending' },
+      { ch: 'ch13', pages: '554–556', text: 'Alcohol acts at μ receptors or releases β-endorphin in the VTA → dopamine: blocked by **naltrexone/nalmefene**.', sec: 's13-alcohol' },
+      { ch: 'ch13', pages: '560–563', text: '**Methadone** (full agonist) and **buprenorphine** (partial agonist) substitute for abused opioids; **naloxone** and **naltrexone** are antagonists.', sec: 's13-oud-tx' }
     ],
     stim: ['**Analgesia** via spinal and periaqueductal gray μ receptors (Chapter 9)']
   },
   {
     id: 'dor', name: 'δ-Opioid receptor', short: 'δ-opioid', family: 'G-protein-linked receptor', nt: 'endorphin',
     summary: 'Opioid receptor for enkephalins, which are antinociceptive.',
-    facts: [{ ch: 'ch09', pages: '390', text: '**Enkephalins** acting via δ-opioid receptors are antinociceptive. Dextromethadone also binds δ (Figure 7-86).', sec: 's9-descending' }]
+    facts: [
+      { ch: 'ch09', pages: '390', text: '**Enkephalins** acting via δ-opioid receptors are antinociceptive. Dextromethadone also binds δ (Figure 7-86).', sec: 's9-descending' },
+      { ch: 'ch13', pages: '559', text: 'Receptor for **enkephalin** (from proenkephalin).', sec: 's13-opioids' }
+    ]
   },
   {
     id: 'kor', name: 'κ-Opioid receptor', short: 'κ-opioid', family: 'G-protein-linked receptor', nt: 'endorphin',
     summary: 'Opioid receptor for dynorphins, which can be either anti- or pronociceptive.',
-    facts: [{ ch: 'ch09', pages: '390', text: '**Dynorphins** acting at κ-opioid receptors can be anti- or **pronociceptive**.', sec: 's9-descending' }]
+    facts: [
+      { ch: 'ch09', pages: '390', text: '**Dynorphins** acting at κ-opioid receptors can be anti- or **pronociceptive**.', sec: 's9-descending' },
+      { ch: 'ch13', pages: '559', text: 'Receptor for **dynorphin** (from prodynorphin).', sec: 's13-opioids' }
+    ]
   },
   /* ---------------- ligand-gated ion channels ---------------- */
   {
@@ -545,7 +569,8 @@ SP.targets = [
       { ch: 'ch06', pages: '262–264', text: 'Benzodiazepine-insensitive receptors (α4, α6, γ1 or δ) are **extrasynaptic** and mediate **tonic** inhibition; **neuroactive steroids** bind between α and δ. Abnormal γ2, α2 or δ expression is linked to **epilepsy**.', sec: 's6-neurosteroids' },
       { ch: 'ch07', pages: '320–322', text: 'Neuroactive steroids (brexanolone) act at both benzodiazepine-sensitive and **benzodiazepine-insensitive** GABA-A receptors; the latter (extrasynaptic, tonic) are thought to carry the antidepressant effect.', sec: 's7-neurosteroids' },
       { ch: 'ch08', pages: '366–367', text: 'Benzodiazepines enhance **phasic** inhibition at postsynaptic GABA-A receptors **in the amygdala** (less fear) and on CSTC **inhibitory interneurons** (less worry); they act **immediately**.', sec: 's8-bzd' },
-      { ch: 'ch10', pages: '421–423', text: 'Hypnotic GABA-A PAMs need about **25–30%** occupancy. **α1** = sedation, amnesia, tolerance; α2/α3 = anxiolysis, muscle relaxation; α5 = cognition. Zolpidem and zaleplon are α1-selective.', sec: 's10-gaba-hypnotics' }
+      { ch: 'ch10', pages: '421–423', text: 'Hypnotic GABA-A PAMs need about **25–30%** occupancy. **α1** = sedation, amnesia, tolerance; α2/α3 = anxiolysis, muscle relaxation; α5 = cognition. Zolpidem and zaleplon are α1-selective.', sec: 's10-gaba-hypnotics' },
+      { ch: 'ch13', pages: '556–558', text: 'Benzodiazepine-sensitive receptors: **α1, 2, 3, 5 + γ**. Benzodiazepine-insensitive **α4/α6 + δ** receptors respond to **alcohol**, neurosteroids and anesthetics. Barbiturates bind a separate PAM site.', sec: 's13-sedatives' }
     ],
     updates: [{ year: '2023', title: 'Oral neurosteroid approved', text: '**Zuranolone**, an oral GABA-A positive allosteric modulator, was approved in August 2023 for postpartum depression.', source: 'FDA, August 2023' }]
   },
@@ -562,7 +587,9 @@ SP.targets = [
     facts: [
       { ch: 'ch03', pages: '53', text: 'Pentameric (Table 3-1), with subtypes such as **α7** and **α4β2**.', sec: 's3-structure' },
       { ch: 'ch03', pages: '63–64', text: 'Inactivation is **best characterized** for nicotinic receptors. Acetylcholine is hydrolyzed too fast to desensitize them, but **nicotine** is not hydrolyzed by acetylcholinesterase: it desensitizes them in about the time of one cigarette and inactivates them for about the time between cigarettes.', sec: 's3-states' },
-      { ch: 'ch12', pages: '507–509', text: '**α4β2**: postsynaptic, accumbens DA release (nicotine). **α7**: postsynaptic PFC cognition; presynaptic feed-forward ACh release and heteroreceptors boosting DA and glutamate. **Galantamine** is a nicotinic PAM.', sec: 's12-ach' }
+      { ch: 'ch12', pages: '507–509', text: '**α4β2**: postsynaptic, accumbens DA release (nicotine). **α7**: postsynaptic PFC cognition; presynaptic feed-forward ACh release and heteroreceptors boosting DA and glutamate. **Galantamine** is a nicotinic PAM.', sec: 's12-ach' },
+      { ch: 'ch13', pages: '548', text: 'Nicotine’s addictive action is at postsynaptic **α4β2** on VTA DA neurons; it also releases glutamate (presynaptic α7) and **desensitizes** α4β2 on GABA interneurons.', sec: 's13-nicotine' },
+      { ch: 'ch13', pages: '548–551', text: 'α4β2 receptors desensitize over about one cigarette, resensitize in ~45 min (craving) and **upregulate** with chronic smoking. **Varenicline** holds them in an intermediate, non-desensitized state.', sec: 's13-nicotine' }
     ]
   },
   {
@@ -581,7 +608,8 @@ SP.targets = [
       { ch: 'ch04', pages: '127–130', text: 'In the **chemoreceptor trigger zone** (outside the blood–brain barrier) it mediates nausea and vomiting; in cortex it sits on **non-parvalbumin GABA interneurons**, so serotonin here **inhibits ACh and NE** release and glutamate output. Antagonists should enhance ACh and NE release.', sec: 's4-5ht-post' },
       { ch: 'ch05', pages: '212', text: 'The pines bind 5HT3 weakly; the dones not at all; aripiprazole weakly. 5HT3 antagonism is a candidate antidepressant property.', sec: 's5-binding' },
       { ch: 'ch07', pages: '309–311', text: 'Peripheral 5HT3 receptors (chemoreceptor trigger zone, gut) mediate nausea, vomiting and diarrhea; brain 5HT3 receptors on **GABA interneurons** are excitatory, so antagonists (mirtazapine, **vortioxetine**) release glutamate, ACh and NE.', sec: 's7-mirtazapine' },
-      { ch: 'ch09', pages: '390–391', text: 'Serotonin **facilitates** pain via excitatory 5HT3 receptors on some primary afferent terminals; this dual role makes SSRIs inconsistent for pain.', sec: 's9-descending' }
+      { ch: 'ch09', pages: '390–391', text: 'Serotonin **facilitates** pain via excitatory 5HT3 receptors on some primary afferent terminals; this dual role makes SSRIs inconsistent for pain.', sec: 's9-descending' },
+      { ch: 'ch13', pages: '556', text: '**Ondansetron** (5HT3 antagonist) may help alcoholism (unapproved).', sec: 's13-alcohol' }
     ],
     stim: ['Nausea and vomiting (CTZ); in cortex **less ACh, NE and glutamate** release (Chapter 4)']
   },
@@ -606,7 +634,8 @@ SP.targets = [
       { ch: 'ch09', pages: '382–383', text: 'Glutamate acts at NMDA and AMPA receptors in the dorsal horn; glycine acts at the NMDA glycine site (Figure 9-2).', sec: 's9-ascending' },
       { ch: 'ch10', pages: '404–406', text: 'Histamine can act at the NMDA **polyamine** allosteric site; OX2 stimulation increases NMDA receptor expression.', sec: 's10-histamine' },
       { ch: 'ch12', pages: '515–516', text: 'A **coincidence detector**: opens with depolarization (removing Mg²⁺), glutamate and glycine. Tonic glutamate leak in AD may cause excitotoxicity.', sec: 's12-memantine' },
-      { ch: 'ch12', pages: '516–518', text: '**Memantine** plugs the open channel at the Mg²⁺ site with low affinity and fast kinetics; **dextromethorphan** is a more robust blocker used for AD agitation.', sec: 's12-memantine' }
+      { ch: 'ch12', pages: '516–518', text: '**Memantine** plugs the open channel at the Mg²⁺ site with low affinity and fast kinetics; **dextromethorphan** is a more robust blocker used for AD agitation.', sec: 's12-memantine' },
+      { ch: 'ch13', pages: '569–571', text: '**Dissociatives** PCP and ketamine block the NMDA channel at the same site; alcohol may also reduce NMDA actions.', sec: 's13-hallucinogens' }
     ],
     updates: [
       { year: '2022', title: 'Dextromethorphan–bupropion approved', text: 'Approved for major depressive disorder in August 2022 (Auvelity).', source: 'FDA, August 2022' },
@@ -755,6 +784,12 @@ SP.targets = [
     id: 'gabat', name: 'GABA transaminase (GABA-T)', short: 'GABA-T', family: 'Enzyme', nt: 'gaba',
     summary: 'The enzyme that converts GABA into an inactive substance, terminating its action after reuptake.',
     facts: [{ ch: 'ch06', pages: '258', text: 'One of two ways GABA action ends, with reuptake by GAT.', sec: 's6-gaba' }]
+  },
+  {
+    id: 'aldh', name: 'Aldehyde dehydrogenase (ALDH)', short: 'ALDH', family: 'Enzyme', ntLabel: 'Alcohol metabolism (liver)',
+    summary: 'The liver enzyme that clears acetaldehyde formed from alcohol. Disulfiram irreversibly inhibits it.',
+    block: ['**Disulfiram**: acetaldehyde builds up if alcohol is drunk (flushing, nausea, vomiting, hypotension)'],
+    facts: [{ ch: 'ch13', pages: '556', text: 'Irreversibly inhibited by **disulfiram**, producing an aversive acetaldehyde reaction.', sec: 's13-alcohol' }]
   },
   {
     id: 'secretase', name: 'β- and γ-secretase', short: 'Secretases', family: 'Enzyme', ntLabel: 'Amyloid precursor protein processing',
