@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 17,
+    date: "2026-10-14",
+    title: "Teaching mode: Name that drug, two teams, flags and an end-of-session review",
+    summary: "A clue game built from the drug library, team scoring, flags, three text sizes for projectors, and a final slide listing what the group missed, which you can present again or save as a PDF.",
+    items: [
+      { type: "feature", text: "Name that drug: clues appear one at a time (mechanism, binding profile, a side effect, a use) with the drug’s own names hidden, until someone names it. Works across the 171 library drugs with enough clues, or within one drug type.", href: "#/teach", link: "Teaching mode" },
+      { type: "feature", text: "Two-team scoring: after each reveal, award the point to Team A, Team B or nobody (keys 1, 2, 0); the score sits in the top bar and the final slide names the winner.", href: "#/teach", link: "Teaching mode" },
+      { type: "feature", text: "Flag any slide to revisit (R), and switch text size between Normal, Large and Huge (+) for projectors.", href: "#/teach", link: "Teaching mode" },
+      { type: "feature", text: "End-of-session review: a final slide lists what the group missed and what you flagged, with answers. Present just those slides again, or save the review as a two-column PDF.", href: "#/teach", link: "Teaching mode" }
+    ]
+  },
+  {
     id: 16,
     date: "2026-10-14",
     title: "Teaching mode: high-yield slides, flashcards, lightning rounds and a session builder",

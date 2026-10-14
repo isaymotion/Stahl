@@ -1651,15 +1651,17 @@
   /* ---------- teaching mode ----------
      A full-screen slide presenter for group teaching. A session is built from any mix of high-yield points
      (bold facts become blanks revealed one by one), mechanism, drug and clinical flashcards, board-style
-     questions and clinical vignettes, from any chapters, with an optional countdown per slide.
-     Nothing here touches the review schedule or the mistakes pile. */
+     questions, clinical vignettes and "Name that drug" clue slides, from any chapters, with an optional
+     countdown per slide, a room or two-team score, flags, and an end-of-session review that can be saved
+     as a PDF. Nothing here touches the review schedule or the mistakes pile. */
   var TEACH_TYPES = [
     { k: 'hy', label: 'High-yield points', unit: 'point', css: 'hy', hint: 'Each point appears with its bold facts blanked; tap a blank, or press Space, to reveal them one at a time. In book order, each topic gets a title slide.' },
     { k: 'mech', label: 'Mechanism cards', unit: 'card', css: 'mech', hint: 'Question on screen; reveal shows the answer.' },
     { k: 'drugs', label: 'Drug cards', unit: 'card', css: 'drug', hint: 'Question on screen; reveal shows the answer.' },
     { k: 'clinical', label: 'Clinical cards', unit: 'card', css: 'clin', hint: 'Question on screen; reveal shows the answer.' },
     { k: 'mcq', label: 'Board questions', unit: 'question', css: 'case', hint: 'Single best answer; mark the group’s choice, then reveal the answer and explanation.' },
-    { k: 'case', label: 'Clinical vignettes', unit: 'vignette', css: 'guide', hint: 'Short vignettes from the study guides; reveal shows the teaching point.' }
+    { k: 'case', label: 'Clinical vignettes', unit: 'vignette', css: 'guide', hint: 'Short vignettes from the study guides; reveal shows the teaching point.' },
+    { k: 'drug', label: 'Name that drug', unit: 'mystery drug', css: 'drug', hint: 'Clues from the drug library appear one at a time (mechanism, binding profile, a side effect, a use) until someone names the drug. Narrow it to one drug type below.' }
   ];
   var TEACH_COUNTS = [[0, 'Off'], [3, '3'], [5, '5'], [10, '10'], [20, '20'], ['all', 'All']];
   var TEACH_TIMERS = [[0, 'Off'], [10, '10 s'], [20, '20 s'], [30, '30 s'], [60, '60 s']];
@@ -1668,9 +1670,36 @@
     { id: 'case', label: 'Clinical vignettes', counts: { 'case': 'all' }, order: 'order', timer: 0 },
     { id: 'hy', label: 'High-yield lecture', counts: { hy: 'all' }, order: 'order', timer: 0 },
     { id: 'cards', label: 'Flashcards', counts: { mech: 'all', drugs: 'all', clinical: 'all' }, order: 'shuffle', timer: 0 },
+    { id: 'drug', label: 'Name that drug', counts: { drug: 10 }, order: 'shuffle', timer: 0 },
     { id: 'warm', label: 'Lightning warm-up', counts: { hy: 5, drugs: 5, clinical: 5, mcq: 3 }, order: 'mix', timer: 20 }
   ];
+  var TEACH_SIZES = ['Normal', 'Large', 'Huge'];
   function teachTypeBy(k) { for (var i = 0; i < TEACH_TYPES.length; i++) if (TEACH_TYPES[i].k === k) return TEACH_TYPES[i]; return null; }
+  function drugChapterIds(d) { return (d.chapters || []).map(function (c) { return typeof c === 'string' ? c : c.ch; }); }
+  function strHash(s) { var h = 0; for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0; return Math.abs(h); }
+
+  /* "Name that drug": clues from the library, with the drug's own names hidden */
+  function drugClues(d, seed) {
+    var names = [d.name, d.id.replace(/-/g, ' ')].concat(d.aka || []);
+    String(d.brand || '').split(/[,;\/]| or /).forEach(function (b) { if (b.trim()) names.push(b.trim()); });
+    String(d.name).replace(/\(([^)]+)\)/g, function (m, inner) { names.push(inner); return m; });
+    names.push(String(d.name).replace(/\s*\([^)]*\)/g, ''));
+    names = names.map(function (n) { return n.trim(); }).filter(function (n) { return n.length > 2; }).sort(function (a, b) { return b.length - a.length; });
+    function hide(s) {
+      s = richText(s);
+      names.forEach(function (n) { s = s.replace(new RegExp('(^|[^A-Za-z])' + escRe(n) + '(?=[^A-Za-z]|$)', 'gi'), '$1▢▢▢'); });
+      return s;
+    }
+    function pick(arr) { return arr[strHash(d.id + ':' + seed) % arr.length]; }
+    var clues = [];
+    var mech = d.short || d.mechanism;
+    if (mech) clues.push({ label: 'Mechanism', text: hide(mech) });
+    var ts = (d.targets || []).slice().sort(function (a, b) { return (b.s || 0) - (a.s || 0); }).slice(0, 4);
+    if (ts.length) clues.push({ label: 'Binding profile', text: ts.map(function (x) { return targetName(x.t) + ' ' + actionOf(x.action).label.toLowerCase(); }).join('; ') });
+    if ((d.sideEffects || []).length) { var se = pick(d.sideEffects); clues.push({ label: 'A side effect', text: hide(typeof se === 'string' ? se : se.e + (se.via ? ' (via ' + se.via + ')' : '')) }); }
+    if ((d.uses || []).length) clues.push({ label: 'A use', text: hide(pick(d.uses)) });
+    return clues;
+  }
 
   function teachCatalog(chIds) {
     var cat = { byId: {} };
@@ -1694,6 +1723,13 @@
         });
       });
     });
+    (SP.drugs || []).slice().sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (d) {
+      var chs = drugChapterIds(d).filter(function (id) { return chapter(id); });
+      if (chIds !== 'all') chs = chs.filter(function (id) { return chIds.indexOf(id) >= 0; });
+      if (!chs.length) return;
+      if (drugClues(d, 0).length < 3) return;
+      add(cat.drug, { id: 'drug:' + d.id, kind: 'drug', ch: chapter(chs[0]), d: d, fam: familyOf(d).id });
+    });
     return cat;
   }
   function teachPrefs() {
@@ -1706,13 +1742,18 @@
     if (Array.isArray(p.chs)) { p.chs = p.chs.filter(function (id) { return chapter(id); }); if (!p.chs.length) p.chs = 'all'; }
     if (['order', 'shuffle', 'mix'].indexOf(p.order) < 0) p.order = 'order';
     p.timer = p.timer || 0;
+    p.teams = !!p.teams;
+    p.fam = p.fam || 'all';
     return p;
   }
-  function teachBuild(p) {
-    var cat = teachCatalog(p.chs), out = [];
+  function teachBuild(p, cat) {
+    cat = cat || teachCatalog(p.chs);
+    var out = [];
     TEACH_TYPES.forEach(function (t) {
       var n = p.counts[t.k]; if (!n) return;
-      var list = cat[t.k].map(function (it, i) { return { it: it, i: i }; });
+      var src = cat[t.k];
+      if (t.k === 'drug' && p.fam !== 'all') src = src.filter(function (it) { return it.fam === p.fam; });
+      var list = src.map(function (it, i) { return { it: it, i: i }; });
       if (n !== 'all' && n < list.length) {
         list = shuffle(list).slice(0, n);
         if (p.order === 'order') list.sort(function (a, b) { return a.i - b.i; });
@@ -1731,12 +1772,24 @@
     if (it.kind === 'hyt') return 'Topic: ' + it.topic;
     if (it.kind === 'hy') return plain(it.text);
     if (it.kind === 'case') return it.title;
+    if (it.kind === 'drug') return 'Mystery drug (' + familyOf(it.d).label + ')';
     return plain(it.c.q);
   }
   function teachMeta(it) {
+    if (it.kind === 'drug') return 'Ch ' + it.ch.number + ' · Name that drug';
     var ty = it.kind === 'hyt' ? 'High yield' : teachTypeBy(it.kind).label.replace(/s$/, '');
     var extra = it.kind === 'hy' || it.kind === 'hyt' ? it.topic : it.kind === 'case' ? it.sec.title : (it.c.tag || '');
     return 'Ch ' + it.ch.number + ' · ' + ty + (extra && it.kind !== 'hyt' ? ' · ' + extra : '');
+  }
+  /* one line per slide for the end-of-session review and its PDF (keeps **bold** markup) */
+  function teachReviewText(it) {
+    switch (it.kind) {
+      case 'hy': return richText(it.text);
+      case 'mcq': return richText(it.c.q) + ' → **' + LETTERS[it.c.answer] + '. ' + plain(it.c.choices[it.c.answer]) + '**';
+      case 'case': return '**' + it.title + ':** ' + richText(it.point || '');
+      case 'drug': return 'Name that drug → **' + it.d.name + '**' + (it.d.nbn ? ' (' + plain(it.d.nbn) + ')' : '');
+      default: return richText(it.c.q) + ' → ' + richText(it.c.a);
+    }
   }
 
   function renderTeachSetup() {
@@ -1747,17 +1800,20 @@
         return '<label><input type="radio" name="' + name + '" value="' + o[0] + '"' + (String(o[0]) === String(cur) ? ' checked' : '') + '><span>' + o[1] + '</span></label>';
       }).join('') + '</div>';
     }
+    var famOpts = (SP.drugFamilies || []).filter(function (f) { return familyCounts()[f.id]; });
     var html = '<div class="wrap page teach-setup">' +
-      '<header class="page__head"><h1>Teaching mode</h1><p>Present slides full screen for ward rounds, journal club or a group session. Build a session from high-yield points, flashcards, board questions and vignettes from any chapters; add a countdown for a lightning round. Nothing here affects anyone’s review schedule or mistakes.</p></header>' +
+      '<header class="page__head"><h1>Teaching mode</h1><p>Present slides full screen for ward rounds, journal club or a group session. Build a session from high-yield points, flashcards, board questions, vignettes and “Name that drug” from any chapters; add a countdown for a lightning round, or split the room into two teams. Nothing here affects anyone’s review schedule or mistakes.</p></header>' +
       '<div class="tb">' +
         '<section class="tb__sec"><h2 class="tb__h">Quick start</h2><div class="fam-chips tb-presets">' + TEACH_PRESETS.map(function (pr) { return '<button type="button" class="filter" data-preset="' + pr.id + '">' + esc(pr.label) + '</button>'; }).join('') + '</div></section>' +
         '<section class="tb__sec"><h2 class="tb__h">Chapters</h2><div class="fam-chips tb-chs"><button type="button" class="filter" data-ch="all">All chapters</button>' +
           chs.map(function (ch) { return '<button type="button" class="filter" data-ch="' + ch.id + '" title="' + esc(ch.title) + '">Ch ' + ch.number + '</button>'; }).join('') + '</div></section>' +
         '<section class="tb__sec"><h2 class="tb__h">What to include</h2><div class="tb-rows">' + TEACH_TYPES.map(function (t) {
-          return '<div class="tb-row c-' + t.css + '"><div class="tb-row__txt"><span class="tb-row__name">' + esc(t.label) + '</span><span class="tb-row__avail" id="tb-av-' + t.k + '"></span></div>' + seg('n-' + t.k, TEACH_COUNTS, prefs.counts[t.k] || 0) + '</div>';
+          return '<div class="tb-row c-' + t.css + '"><div class="tb-row__txt"><span class="tb-row__name">' + esc(t.label) + '</span><span class="tb-row__avail" id="tb-av-' + t.k + '"></span></div>' + seg('n-' + t.k, TEACH_COUNTS, prefs.counts[t.k] || 0) +
+            (t.k === 'drug' ? '<label class="select tb-row__fam" id="tb-fam-wrap"><span>Drug type</span><select id="tb-fam"><option value="all">All types</option>' + famOpts.map(function (f) { return '<option value="' + f.id + '"' + (prefs.fam === f.id ? ' selected' : '') + '>' + esc(f.label) + '</option>'; }).join('') + '</select></label>' : '') + '</div>';
         }).join('') + '</div><p class="muted tb__note" id="tb-hint"></p></section>' +
         '<section class="tb__sec tb__two"><div><h2 class="tb__h">Order</h2>' + seg('order', [['order', 'Book order'], ['shuffle', 'Shuffled'], ['mix', 'Mixed together']], prefs.order) + '</div>' +
-          '<div><h2 class="tb__h">Countdown per slide</h2>' + seg('timer', TEACH_TIMERS, prefs.timer) + '</div></section>' +
+          '<div><h2 class="tb__h">Countdown per slide</h2>' + seg('timer', TEACH_TIMERS, prefs.timer) + '</div>' +
+          '<div><h2 class="tb__h">Scoring</h2>' + seg('teams', [['0', 'Whole room'], ['1', 'Two teams']], prefs.teams ? '1' : '0') + '</div></section>' +
         '<div class="tb__go"><button class="btn btn--solid" type="button" id="t-start">Start presenting</button><button class="btn" type="button" id="t-reroll" hidden>Reshuffle</button><p class="tb__sum" id="t-count" aria-live="polite"></p></div>' +
       '</div>' +
       '<section class="teach-list"><h2>Slides in this session</h2><p class="muted">Tap any slide to start from it.</p><ol id="t-list"></ol></section></div>';
@@ -1777,15 +1833,22 @@
       });
       prefs.order = main.querySelector('input[name=order]:checked').value;
       prefs.timer = parseInt(main.querySelector('input[name=timer]:checked').value, 10);
+      prefs.teams = main.querySelector('input[name=teams]:checked').value === '1';
+      prefs.fam = main.querySelector('#tb-fam').value;
       store.set('teachPrefs', prefs);
     }
     function rebuild() {
       read(); paintChips();
       cat = teachCatalog(prefs.chs);
-      TEACH_TYPES.forEach(function (t) { main.querySelector('#tb-av-' + t.k).textContent = plural(cat[t.k].length, t.unit) + ' available'; });
+      TEACH_TYPES.forEach(function (t) {
+        var n = cat[t.k].length;
+        if (t.k === 'drug' && prefs.fam !== 'all') n = cat.drug.filter(function (it) { return it.fam === prefs.fam; }).length;
+        main.querySelector('#tb-av-' + t.k).textContent = plural(n, t.unit) + ' available';
+      });
+      main.querySelector('#tb-fam-wrap').hidden = !prefs.counts.drug;
       var on = TEACH_TYPES.filter(function (t) { return prefs.counts[t.k]; });
       main.querySelector('#tb-hint').textContent = on.length === 1 ? on[0].hint : on.length ? 'Slides are grouped by type in the order listed above, unless you choose “Mixed together.”' : '';
-      pending = teachBuild(prefs);
+      pending = teachBuild(prefs, cat);
       var byType = {}; pending.forEach(function (id) { var k = id.split(':')[0]; byType[k] = (byType[k] || 0) + 1; });
       var parts = TEACH_TYPES.filter(function (t) { return byType[t.k]; }).map(function (t) { return t.unit === 'card' ? byType[t.k] + ' ' + t.label.toLowerCase().replace(/s$/, byType[t.k] === 1 ? '' : 's') : plural(byType[t.k], t.unit); });
       if (byType.hyt) parts.push(plural(byType.hyt, 'topic slide'));
@@ -1802,7 +1865,7 @@
     }
     function start(from) {
       if (!pending.length) return;
-      store.set('teach', { chs: prefs.chs, order: pending.slice(), pos: from || 0, timer: prefs.timer, res: {} });
+      store.set('teach', { chs: prefs.chs, order: pending.slice(), pos: from || 0, timer: prefs.timer, teams: prefs.teams, res: {}, team: {}, flags: {}, seed: Math.floor(Math.random() * 1e6) });
       enterFullscreen();
       location.hash = '#/teach/run';
     }
@@ -1828,6 +1891,7 @@
       });
     });
     main.querySelectorAll('.tb input[type=radio]').forEach(function (i) { i.addEventListener('change', rebuild); });
+    main.querySelector('#tb-fam').addEventListener('change', rebuild);
     main.querySelector('#t-start').addEventListener('click', function () { start(0); });
     main.querySelector('#t-reroll').addEventListener('click', rebuild);
     rebuild();
@@ -1848,20 +1912,29 @@
     var cat = teachCatalog(S.chs || 'all');
     S.order = S.order.filter(function (id) { return cat.byId[id]; });
     if (!S.order.length) { location.hash = '#/teach'; return; }
-    S.res = S.res || {};
-    S.pos = Math.max(0, Math.min(S.pos || 0, S.order.length - 1));
+    S.res = S.res || {}; S.team = S.team || {}; S.flags = S.flags || {}; S.seed = S.seed || 1;
+    S.pos = Math.max(0, Math.min(S.pos || 0, S.order.length));   // order.length = the end-of-session review
+    var size = Math.max(0, Math.min(2, store.get('teachSize', 0) || 0));
     var st, timer = { left: 0, end: 0, paused: false, iv: null, out: false };
     setView('teach-run', '<div class="teach" id="teach" role="region" aria-label="Teaching mode"></div>');
     document.title = 'Teaching mode — Stahl Study Companion';
     document.body.classList.add('is-teaching');
     var box = main.querySelector('#teach');
 
-    function cur() { return cat.byId[S.order[S.pos]]; }
+    function atEnd() { return S.pos >= S.order.length; }
+    function cur() { return atEnd() ? null : cat.byId[S.order[S.pos]]; }
+    function save() { store.set('teach', S); }
     function blanksOf(it) { var m = String(it.text).match(/\*\*(.+?)\*\*/g); return m ? m.length : 0; }
+    function cluesOf(it) { if (!it._clues) it._clues = drugClues(it.d, S.seed); return it._clues; }
     function fresh() { st = { revealed: false, picked: null, shown: 0 }; }
-    function revealable(it) { return it.kind !== 'hyt' && !(it.kind === 'hy' && !blanksOf(it)); }
-    function isDone(it) { return it.kind === 'hy' ? st.shown >= blanksOf(it) : st.revealed; }
-    function tally() {
+    function revealable(it) { return !!it && it.kind !== 'hyt' && !(it.kind === 'hy' && !blanksOf(it)); }
+    function isDone(it) {
+      if (it.kind === 'hy') return st.shown >= blanksOf(it);
+      if (it.kind === 'drug') return st.revealed;
+      return st.revealed;
+    }
+    function scoreText() {
+      if (S.teams) { var a = 0, b = 0; Object.keys(S.team).forEach(function (k) { if (S.team[k] === 'a') a++; if (S.team[k] === 'b') b++; }); return { a: a, b: b }; }
       var n = 0, ok = 0; Object.keys(S.res).forEach(function (k) { if (cat.byId[k]) { n++; if (S.res[k]) ok++; } });
       return n ? 'Room ' + ok + '/' + n : '';
     }
@@ -1872,8 +1945,21 @@
         return '<button type="button" class="tblank' + (open ? ' is-open' : '') + '" data-blank="' + k + '" aria-label="' + (open ? '' : 'Hidden fact ' + (k + 1) + ', tap to reveal') + '">' + inner + '</button>';
       });
     }
+    function barHTMLs(it) {
+      var sc = scoreText(), score = '';
+      if (S.teams) score = '<span class="teach__teams"><span class="tteam tteam--a">Team A <b>' + sc.a + '</b></span><span class="tteam tteam--b">Team B <b>' + sc.b + '</b></span></span>';
+      else if (sc) score = '<span class="teach__score">' + sc + '</span>';
+      return '<div class="teach__bar"><span class="teach__meta">' + esc(it ? teachMeta(it) : 'End of session') + '</span><span class="teach__pos">' + (it ? (S.pos + 1) + ' of ' + S.order.length : S.order.length + ' slides') + '</span>' + score +
+        '<span class="teach__spacer"></span>' +
+        (it && S.timer && revealable(it) ? '<button class="tbtn teach__timer" type="button" id="t-timer" aria-label="Countdown, tap to pause"></button>' : '') +
+        (it && it.kind !== 'hyt' ? '<button class="tbtn tbtn--icon' + (S.flags[it.id] ? ' is-flag' : '') + '" type="button" id="t-flag" aria-pressed="' + !!S.flags[it.id] + '" title="Flag to revisit (R)">' + (S.flags[it.id] ? '⚑ Flagged' : '⚐ Flag') + '</button>' : '') +
+        '<button class="tbtn tbtn--icon" type="button" id="t-size" title="Text size (+)">Aa ' + TEACH_SIZES[size] + '</button>' +
+        '<button class="tbtn" type="button" id="t-fs">' + (isFullscreen() ? 'Exit full screen' : 'Full screen') + '</button><button class="tbtn" type="button" id="t-exit">Close</button></div>' +
+        '<div class="teach__progress"><span style="width:' + (Math.min(S.pos + 1, S.order.length) / S.order.length * 100) + '%"></span></div>';
+    }
 
     function draw() {
+      if (atEnd()) return drawEnd();
       var it = cur(), k = it.kind, body = '', done = isDone(it);
       if (k === 'mcq') {
         var c = it.c;
@@ -1891,31 +1977,41 @@
         var nb = blanksOf(it);
         body = '<p class="teach__kicker">' + esc(it.topic) + '</p><p class="teach__stem teach__stem--hy">' + hyHTML(it) + '</p>' +
           (nb ? '<p class="teach__prompt">' + (st.shown >= nb ? 'All facts revealed.' : plural(nb - st.shown, 'hidden fact') + ' left. Tap a blank or press Space.') + '</p>' : '');
+      } else if (k === 'drug') {
+        var cl = cluesOf(it), shown = st.revealed ? cl.length : Math.max(1, st.shown);
+        body = '<p class="teach__kicker">Name that drug</p><ol class="tclues">' + cl.slice(0, shown).map(function (x, i) {
+          return '<li class="tclue"><span class="tclue__n">' + (i + 1) + '</span><div><p class="tclue__label">' + esc(x.label) + '</p><p class="tclue__text">' + fmt(x.text) + '</p></div></li>';
+        }).join('') + '</ol>' +
+          (st.revealed ? '<div class="teach__answer"><p class="teach__label">The drug</p><p class="tdrug"><a href="#/drugs/' + it.d.id + '" target="_blank" rel="noopener">' + esc(it.d.name) + '</a>' + (it.d.brand ? ' <span class="tdrug__brand">' + esc(it.d.brand) + '</span>' : '') + '</p><p>' + fmt(it.d.nbn || it.d.cls || '') + '</p></div>'
+            : '<p class="teach__prompt">' + (shown < cl.length ? 'Clue ' + shown + ' of ' + cl.length + '. Who can name it?' : 'All clues shown. Final guesses?') + '</p>');
       } else {
         body = '<p class="teach__kicker">' + esc(teachTypeBy(k).label) + (it.c.tag ? ' · ' + esc(it.c.tag) : '') + '</p><p class="teach__stem">' + fmt(it.c.q) + '</p>' +
           (st.revealed ? '<div class="teach__answer"><p class="teach__label">Answer</p><p>' + fmt(it.c.a) + '</p></div>' : '');
       }
-      var canTally = done && revealable(it) && k !== 'mcq';
-      var res = S.res[it.id];
-      var tallyHTML = canTally ? '<div class="teach__tally" role="group" aria-label="How did the room do?"><span>Did the room get it?</span>' +
-        '<button type="button" class="tbtn tbtn--small' + (res === 1 ? ' is-on' : '') + '" data-res="1">Got it</button><button type="button" class="tbtn tbtn--small' + (res === 0 ? ' is-on is-miss' : '') + '" data-res="0">Missed</button></div>' : '';
+      var scoreable = done && revealable(it) && (S.teams || k !== 'mcq');
+      var scoreHTML = '';
+      if (scoreable && S.teams) {
+        var w = S.team[it.id];
+        scoreHTML = '<div class="teach__tally" role="group" aria-label="Who gets the point?"><span>Point to:</span>' +
+          '<button type="button" class="tbtn tbtn--small tteam-btn--a' + (w === 'a' ? ' is-on' : '') + '" data-team="a">Team A</button><button type="button" class="tbtn tbtn--small tteam-btn--b' + (w === 'b' ? ' is-on' : '') + '" data-team="b">Team B</button><button type="button" class="tbtn tbtn--small' + (w === 'none' ? ' is-on is-miss' : '') + '" data-team="none">Nobody</button></div>';
+      } else if (scoreable) {
+        var res = S.res[it.id];
+        scoreHTML = '<div class="teach__tally" role="group" aria-label="How did the room do?"><span>Did the room get it?</span>' +
+          '<button type="button" class="tbtn tbtn--small' + (res === 1 ? ' is-on' : '') + '" data-res="1">Got it</button><button type="button" class="tbtn tbtn--small' + (res === 0 ? ' is-on is-miss' : '') + '" data-res="0">Missed</button></div>';
+      }
       var revealLabel = k === 'hy' ? (st.shown >= blanksOf(it) ? 'Hide facts' : st.shown ? 'Reveal next fact' : 'Reveal first fact')
+        : k === 'drug' ? (st.revealed ? 'Hide the drug' : Math.max(1, st.shown) < cluesOf(it).length ? 'Next clue' : 'Reveal the drug')
         : st.revealed ? 'Hide answer' : k === 'case' ? 'Reveal teaching point' : 'Reveal answer';
-      var t = tally();
-      box.innerHTML =
-        '<div class="teach__bar"><span class="teach__meta">' + esc(teachMeta(it)) + '</span><span class="teach__pos">' + (S.pos + 1) + ' of ' + S.order.length + '</span>' +
-          (t ? '<span class="teach__score">' + t + '</span>' : '') +
-          '<span class="teach__spacer"></span>' + (S.timer && revealable(it) ? '<button class="tbtn teach__timer" type="button" id="t-timer" aria-label="Countdown, tap to pause"></button>' : '') +
-          '<button class="tbtn" type="button" id="t-fs">' + (isFullscreen() ? 'Exit full screen' : 'Full screen') + '</button><button class="tbtn" type="button" id="t-exit">Close</button></div>' +
-        '<div class="teach__progress"><span style="width:' + ((S.pos + 1) / S.order.length * 100) + '%"></span></div>' +
+      var last = S.pos === S.order.length - 1;
+      box.innerHTML = barHTMLs(it) +
         (S.timer && revealable(it) ? '<div class="teach__clock"><span id="t-clockbar"></span></div>' : '') +
-        '<div class="teach__stage"><div class="teach__inner' + (st.revealed || (k === 'hy' && st.shown) ? ' is-revealed' : '') + (k === 'hy' ? ' is-hy' : '') + (['mech', 'drugs', 'clinical'].indexOf(k) >= 0 ? ' is-card' : '') + '">' + body + tallyHTML + '</div></div>' +
+        '<div class="teach__stage"><div class="teach__inner teach__inner--s' + size + (st.revealed || (k === 'hy' && st.shown) ? ' is-revealed' : '') + (k === 'hy' ? ' is-hy' : '') + (['mech', 'drugs', 'clinical'].indexOf(k) >= 0 ? ' is-card' : '') + '">' + body + scoreHTML + '</div></div>' +
         '<div class="teach__nav"><button class="tbtn" type="button" id="t-prev"' + (S.pos ? '' : ' disabled') + '>Previous</button>' +
           (revealable(it) ? '<button class="tbtn tbtn--solid" type="button" id="t-reveal">' + revealLabel + '</button>' : '') +
-          (k === 'hy' && blanksOf(it) > 1 && st.shown < blanksOf(it) ? '<button class="tbtn" type="button" id="t-all">Reveal all</button>' : '') +
-          '<button class="tbtn' + (revealable(it) ? '' : ' tbtn--solid') + '" type="button" id="t-next"' + (S.pos < S.order.length - 1 ? '' : ' disabled') + '>Next</button></div>' +
-        '<p class="teach__keys" aria-hidden="true">Space reveal · ← → move · ' + (k === 'mcq' ? 'A–E mark the group’s answer · ' : canTally ? 'Y got it · N missed · ' : '') + (S.timer ? 'P pause · ' : '') + 'F full screen · Esc close</p>';
-      if (k !== 'hy') linkTerms(box.querySelector('.teach__inner'), { skip: '.tchoice__key, .teach__label, .teach__kicker, .teach__tally' });
+          ((k === 'hy' && blanksOf(it) > 1 && st.shown < blanksOf(it)) || (k === 'drug' && !st.revealed && Math.max(1, st.shown) < cluesOf(it).length) ? '<button class="tbtn" type="button" id="t-all">' + (k === 'drug' ? 'Reveal the drug' : 'Reveal all') + '</button>' : '') +
+          '<button class="tbtn' + (revealable(it) ? '' : ' tbtn--solid') + '" type="button" id="t-next">' + (last ? 'Finish' : 'Next') + '</button></div>' +
+        '<p class="teach__keys" aria-hidden="true">Space reveal · ← → move · ' + (k === 'mcq' && !S.teams ? 'A–E mark the group’s answer · ' : S.teams ? '1 / 2 / 0 award the point · ' : 'Y got it · N missed · ') + 'R flag · + text size · ' + (S.timer ? 'P pause · ' : '') + 'F full screen · Esc close</p>';
+      if (k !== 'hy' && k !== 'drug') linkTerms(box.querySelector('.teach__inner'), { skip: '.tchoice__key, .teach__label, .teach__kicker, .teach__tally' });
       box.querySelectorAll('[data-pick]').forEach(function (b) {
         b.addEventListener('click', function () { var i = parseInt(b.getAttribute('data-pick'), 10); st.picked = st.picked === i ? null : i; draw(); });
       });
@@ -1923,38 +2019,111 @@
         b.addEventListener('click', function () { var i = parseInt(b.getAttribute('data-blank'), 10); if (i >= st.shown) { st.shown = i + 1; afterReveal(); } });
       });
       box.querySelectorAll('[data-res]').forEach(function (b) { b.addEventListener('click', function () { mark(parseInt(b.getAttribute('data-res'), 10)); }); });
+      box.querySelectorAll('[data-team]').forEach(function (b) { b.addEventListener('click', function () { award(b.getAttribute('data-team')); }); });
       var rv = box.querySelector('#t-reveal'); if (rv) rv.addEventListener('click', toggle);
-      var ra = box.querySelector('#t-all'); if (ra) ra.addEventListener('click', function () { st.shown = blanksOf(cur()); afterReveal(); });
+      var ra = box.querySelector('#t-all'); if (ra) ra.addEventListener('click', revealAll);
+      wireBar();
       box.querySelector('#t-prev').addEventListener('click', function () { go(-1); });
       box.querySelector('#t-next').addEventListener('click', function () { go(1); });
-      box.querySelector('#t-exit').addEventListener('click', close);
-      box.querySelector('#t-fs').addEventListener('click', function () { if (isFullscreen()) exitFullscreen(); else enterFullscreen(); });
       var tb = box.querySelector('#t-timer'); if (tb) tb.addEventListener('click', pause);
       paintTimer();
     }
-    function mark(v) { var id = cur().id; if (S.res[id] === v) delete S.res[id]; else S.res[id] = v; store.set('teach', S); draw(); }
+    function wireBar() {
+      box.querySelector('#t-exit').addEventListener('click', close);
+      box.querySelector('#t-fs').addEventListener('click', function () { if (isFullscreen()) exitFullscreen(); else enterFullscreen(); });
+      box.querySelector('#t-size').addEventListener('click', bump);
+      var fl = box.querySelector('#t-flag'); if (fl) fl.addEventListener('click', flag);
+    }
+
+    /* end-of-session review */
+    function missedIds() {
+      return S.order.filter(function (id) {
+        if (!cat.byId[id] || cat.byId[id].kind === 'hyt') return false;
+        return S.teams ? S.team[id] === 'none' : S.res[id] === 0;
+      });
+    }
+    function flaggedIds() { return S.order.filter(function (id) { return S.flags[id] && cat.byId[id]; }); }
+    function drawEnd() {
+      stopTimer();
+      var miss = missedIds(), flg = flaggedIds().filter(function (id) { return miss.indexOf(id) < 0; });
+      var marked = S.order.filter(function (id) { return S.teams ? S.team[id] : S.res[id] !== undefined; }).length;
+      var sc = scoreText(), headline;
+      if (S.teams) headline = sc.a === sc.b ? 'It’s a tie, ' + sc.a + '–' + sc.b : (sc.a > sc.b ? 'Team A' : 'Team B') + ' wins, ' + Math.max(sc.a, sc.b) + '–' + Math.min(sc.a, sc.b);
+      else { var ok = 0; S.order.forEach(function (id) { if (S.res[id] === 1) ok++; }); headline = marked ? 'The room got ' + ok + ' of ' + marked : 'Session complete'; }
+      function list(ids) {
+        return '<ol class="tend__list">' + ids.map(function (id) { var it = cat.byId[id]; return '<li><span class="tend__meta">' + esc(teachMeta(it)) + '</span><span>' + fmt(teachReviewText(it)) + '</span></li>'; }).join('') + '</ol>';
+      }
+      var again = miss.concat(flg);
+      box.innerHTML = barHTMLs(null) +
+        '<div class="teach__stage"><div class="teach__inner teach__inner--s' + size + ' tend">' +
+          '<p class="teach__kicker">End of session</p><h2 class="teach__topic">' + esc(headline) + '</h2>' +
+          '<p class="teach__prompt">' + plural(S.order.length, 'slide') + (marked ? ', ' + marked + ' scored' : '') + (Object.keys(S.flags).length ? ', ' + plural(flaggedIds().length, 'flag') : '') + '.</p>' +
+          (miss.length ? '<h3 class="tend__h">What the group missed</h3>' + list(miss) : marked ? '<p class="tend__none">Nothing missed. Well done.</p>' : '') +
+          (flg.length ? '<h3 class="tend__h">Flagged to revisit</h3>' + list(flg) : '') +
+          (!marked && !flg.length ? '<p class="tend__none">Mark slides with “Got it” or “Missed” (or award team points), or flag them, and they will be listed here to review.</p>' : '') +
+          '<p class="tend__msg" id="t-msg" aria-live="polite"></p>' +
+        '</div></div>' +
+        '<div class="teach__nav"><button class="tbtn" type="button" id="t-prev">Previous</button>' +
+          (again.length ? '<button class="tbtn tbtn--solid" type="button" id="t-again">' + (again.length === 1 ? 'Present it again' : 'Present these ' + again.length + ' again') + '</button><button class="tbtn" type="button" id="t-pdf">Save review as PDF</button>' : '') +
+          '<button class="tbtn' + (again.length ? '' : ' tbtn--solid') + '" type="button" id="t-setup">New session</button></div>';
+      wireBar();
+      box.querySelector('#t-prev').addEventListener('click', function () { go(-1); });
+      box.querySelector('#t-setup').addEventListener('click', close);
+      var ag = box.querySelector('#t-again');
+      if (ag) ag.addEventListener('click', function () {
+        S.order = again.slice(); S.pos = 0; S.res = {}; S.team = {}; S.flags = {}; save(); fresh(); draw(); startTimer();
+      });
+      var pdfB = box.querySelector('#t-pdf');
+      if (pdfB) pdfB.addEventListener('click', function () {
+        var msg = box.querySelector('#t-msg'); pdfB.disabled = true; pdfB.textContent = 'Creating…';
+        var topics = [];
+        if (miss.length) topics.push({ topic: 'What the group missed', items: miss.map(function (id) { return teachReviewText(cat.byId[id]); }) });
+        if (flg.length) topics.push({ topic: 'Flagged to revisit', items: flg.map(function (id) { return teachReviewText(cat.byId[id]); }) });
+        var chNums = {}; S.order.forEach(function (id) { var it = cat.byId[id]; if (it) chNums[it.ch.number] = 1; });
+        var chList = Object.keys(chNums).map(Number).sort(function (a, b) { return a - b; });
+        loadPdf().then(function (P) {
+          var spec = { paper: (store.get('handoutPrefs', {}) || {}).paper || 'a4', footer: ATTRIBUTION, title: 'Teaching session review', fontSize: 10,
+            chapters: [{ kicker: 'Teaching session review', title: headline, source: [BOOK, 'Chapter' + (chList.length > 1 ? 's ' : ' ') + chList.join(', ') + ' · ' + new Date().toLocaleDateString()], running: 'Teaching session review', topics: topics }] };
+          return P.generate(spec).then(function (r) { P.save(r.blob, 'Teaching-session-review.pdf'); msg.textContent = 'PDF created. Check your downloads or share sheet.'; });
+        }).catch(function (e) { msg.textContent = pdfErrorMsg(e); })
+          .then(function () { pdfB.disabled = false; pdfB.textContent = 'Save review as PDF'; });
+      });
+      box.querySelector('.teach__stage').scrollTop = 0;
+    }
+
+    function mark(v) { var id = cur().id; if (S.res[id] === v) delete S.res[id]; else S.res[id] = v; save(); draw(); }
+    function award(t) { var id = cur().id; if (S.team[id] === t) delete S.team[id]; else S.team[id] = t; save(); draw(); }
+    function flag() { var it = cur(); if (!it) return; if (S.flags[it.id]) delete S.flags[it.id]; else S.flags[it.id] = 1; save(); draw(); }
+    function bump() { size = (size + 1) % TEACH_SIZES.length; store.set('teachSize', size); draw(); }
     function afterReveal() {
       var it = cur();
       if (isDone(it)) stopTimer();
-      if (it.kind === 'mcq' && st.revealed && st.picked != null) { S.res[it.id] = st.picked === it.c.answer ? 1 : 0; store.set('teach', S); }
+      if (it.kind === 'mcq' && st.revealed && st.picked != null && !S.teams) { S.res[it.id] = st.picked === it.c.answer ? 1 : 0; save(); }
       draw();
-      var a = box.querySelector('.teach__answer, .teach__tally'); if (a) a.scrollIntoView({ block: 'nearest', behavior: reduceMotion() ? 'auto' : 'smooth' });
+      var a = box.querySelector('.teach__tally') || box.querySelector('.teach__answer'); if (a) a.scrollIntoView({ block: 'nearest', behavior: reduceMotion() ? 'auto' : 'smooth' });
     }
     function toggle() {
       var it = cur();
       if (!revealable(it)) return go(1);
       if (it.kind === 'hy') { if (st.shown >= blanksOf(it)) { st.shown = 0; draw(); return; } st.shown++; }
+      else if (it.kind === 'drug') {
+        if (st.revealed) { st.revealed = false; draw(); return; }
+        var n = Math.max(1, st.shown);
+        if (n < cluesOf(it).length) { st.shown = n + 1; draw(); var lc = box.querySelector('.tclue:last-child'); if (lc) lc.scrollIntoView({ block: 'nearest' }); return; }
+        st.revealed = true;
+      }
       else { st.revealed = !st.revealed; if (!st.revealed) { draw(); return; } }
       afterReveal();
     }
-    function revealAll() { var it = cur(); if (it.kind === 'hy') st.shown = blanksOf(it); else st.revealed = true; afterReveal(); }
+    function revealAll() { var it = cur(); if (it.kind === 'hy') st.shown = blanksOf(it); else { if (it.kind === 'drug') st.shown = cluesOf(it).length; st.revealed = true; } afterReveal(); }
 
     /* countdown */
     function stopTimer() { if (timer.iv) clearInterval(timer.iv); timer.iv = null; timer.left = 0; timer.paused = false; paintTimer(); }
     function startTimer() {
-      stopTimer();
-      if (!S.timer || !revealable(cur()) || isDone(cur())) return;
-      timer.left = S.timer; timer.end = Date.now() + S.timer * 1000; timer.paused = false; timer.out = false;
+      stopTimer(); timer.out = false;
+      var it = cur();
+      if (!S.timer || !revealable(it) || isDone(it)) return;
+      timer.left = S.timer; timer.end = Date.now() + S.timer * 1000; timer.paused = false;
       timer.iv = setInterval(tick, 200); paintTimer();
     }
     function tick() {
@@ -1979,9 +2148,9 @@
     }
 
     function go(d) {
-      var np = S.pos + d; if (np < 0 || np >= S.order.length) return;
-      S.pos = np; store.set('teach', S); fresh(); draw(); startTimer();
-      box.querySelector('.teach__stage').scrollTop = 0;
+      var np = S.pos + d; if (np < 0 || np > S.order.length) return;
+      S.pos = np; save(); fresh(); draw(); startTimer();
+      var stg = box.querySelector('.teach__stage'); if (stg) stg.scrollTop = 0;
     }
     function close() { stopTimer(); exitFullscreen(); location.hash = '#/teach'; }
     function onKey(e) {
@@ -1989,17 +2158,21 @@
       if (e.target.closest && e.target.closest('.glpop')) return;
       var onBtn = e.target.closest && e.target.closest('button, a, .gl');
       var it = cur();
-      if ((e.key === ' ' || e.key === 'Enter') && !onBtn) { e.preventDefault(); toggle(); }
-      else if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); go(1); }
+      if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); go(1); }
       else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(-1); }
       else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); if (isFullscreen()) exitFullscreen(); else enterFullscreen(); }
-      else if (e.key === 'p' || e.key === 'P') { e.preventDefault(); pause(); }
+      else if (e.key === '+' || e.key === '=') { e.preventDefault(); bump(); }
       else if (e.key === 'Escape' && !isFullscreen() && !(glPop && !glPop.hidden)) { e.preventDefault(); close(); }
+      else if (!it) return;
+      else if ((e.key === ' ' || e.key === 'Enter') && !onBtn) { e.preventDefault(); toggle(); }
+      else if (e.key === 'p' || e.key === 'P') { e.preventDefault(); pause(); }
+      else if ((e.key === 'r' || e.key === 'R') && it.kind !== 'hyt') { e.preventDefault(); flag(); }
       else if (it.kind === 'mcq' && !st.revealed && /^[a-e]$/i.test(e.key)) {
         var i = 'abcde'.indexOf(e.key.toLowerCase());
         if (i < it.c.choices.length) { e.preventDefault(); st.picked = st.picked === i ? null : i; draw(); }
       }
-      else if (it.kind !== 'mcq' && isDone(it) && revealable(it) && /^[yn]$/i.test(e.key)) { e.preventDefault(); mark(e.key.toLowerCase() === 'y' ? 1 : 0); }
+      else if (S.teams && isDone(it) && revealable(it) && /^[120]$/.test(e.key)) { e.preventDefault(); award({ '1': 'a', '2': 'b', '0': 'none' }[e.key]); }
+      else if (!S.teams && it.kind !== 'mcq' && isDone(it) && revealable(it) && /^[yn]$/i.test(e.key)) { e.preventDefault(); mark(e.key.toLowerCase() === 'y' ? 1 : 0); }
     }
     function onFs() { var b = box.querySelector('#t-fs'); if (b) b.textContent = isFullscreen() ? 'Exit full screen' : 'Full screen'; }
     document.addEventListener('keydown', onKey);
