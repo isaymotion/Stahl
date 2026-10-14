@@ -78,7 +78,8 @@ SP.nts = [
       { ch: 'ch05', pages: '161–170', text: 'D2 blockade in each pathway: mesolimbic → antipsychotic and **secondary negative symptoms**; mesocortical → worse negative/cognitive symptoms; tuberoinfundibular → **hyperprolactinemia**; nigrostriatal → **DIP, dystonia, akathisia, NMS, TD**.', sec: 's5-negative' },
       { ch: 'ch05', pages: '166–167', text: 'In the motor striatum dopamine and **acetylcholine** are reciprocal: dopamine at D2 suppresses ACh release from cholinergic interneurons.', sec: 's5-motor' },
       { ch: 'ch06', pages: '277–278', text: 'Diffuse dopamine dysfunction is linked mainly to **reduced positive affect**: loss of joy, interest, pleasure, energy, alertness and self-confidence.', sec: 's6-circuits' },
-      { ch: 'ch07', pages: '299–301', text: 'In the PFC, DA is cleared by **NET**, so NET inhibitors raise prefrontal DA; only MAO-A + MAO-B inhibition or DA-acting drugs raise DA elsewhere in depression.', sec: 's7-snri' }
+      { ch: 'ch07', pages: '299–301', text: 'In the PFC, DA is cleared by **NET**, so NET inhibitors raise prefrontal DA; only MAO-A + MAO-B inhibition or DA-acting drugs raise DA elsewhere in depression.', sec: 's7-snri' },
+      { ch: 'ch10', pages: '440–444', text: 'Most wake-promoting drugs raise **dopamine** (stimulants, modafinil, solriamfetol; caffeine indirectly via adenosine–D2 coupling).', sec: 's10-caffeine-stimulants' }
     ],
     synthesis: [['Tyrosine', 'Taken into the terminal by a **tyrosine transporter**'], ['DOPA', '**Tyrosine hydroxylase (TOH)**, the rate-limiting enzyme'], ['Dopamine', '**DOPA decarboxylase (DDC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -102,7 +103,8 @@ SP.nts = [
       { ch: 'ch02', pages: '34–35', text: 'Its precursor **choline** has a presynaptic transporter, and acetylcholine is packaged by **VAChT** (SLC18); no drugs target either.', sec: 's2-other' },
       { ch: 'ch02', pages: '40', text: 'Muscarinic receptors **M1, M4, M2/M3** are drug targets (Table 2-4); **acetylcholinesterase inhibition** boosts acetylcholine at all its receptors (Table 2-5).', sec: 's2-receptor-tables' },
       { ch: 'ch03', pages: '53, 63–64', text: '**Nicotinic** receptors (α7, α4β2) are pentameric ligand-gated channels. Acetylcholine is hydrolyzed so quickly by abundant acetylcholinesterase that it rarely desensitizes them; nicotine is not, and does.', sec: 's3-states' },
-      { ch: 'ch05', pages: '166–169', text: 'D2 blockade **disinhibits** striatal ACh release, contributing to DIP; anticholinergics restore the balance. Xanomeline’s M4/M1 agonism is a new antipsychotic mechanism.', sec: 's5-motor' }
+      { ch: 'ch05', pages: '166–169', text: 'D2 blockade **disinhibits** striatal ACh release, contributing to DIP; anticholinergics restore the balance. Xanomeline’s M4/M1 agonism is a new antipsychotic mechanism.', sec: 's5-motor' },
+      { ch: 'ch10', pages: '410–414', text: 'Orexin releases ACh from the **basal forebrain** (cortex) and **PPT/LDT** (thalamus); ACh is lowest in stage 4 and peaks in **REM**.', sec: 's10-ultradian' }
     ]
   },
   {
@@ -151,7 +153,8 @@ SP.nts = [
       { ch: 'ch06', pages: '258–259', text: 'Three receptor types: **GABA-A** and **GABA-C** (ligand-gated chloride channels) and **GABA-B** (G-protein-linked).', sec: 's6-gaba' },
       { ch: 'ch06', pages: '259–263', text: 'GABA-A subunits α1–6, β1–3, γ1–3, δ, ε, π, θ, ρ1–3. Benzodiazepine-sensitive (γ2/3 + α1–3) receptors are synaptic and **phasic**; δ-containing receptors with α4/α6 are extrasynaptic, **tonic** and bind **neuroactive steroids**.', sec: 's6-gabaa' },
       { ch: 'ch07', pages: '320–322', text: 'GABA is low in plasma, CSF and brain in depression; GABA interneurons are reduced. Neuroactive steroids boost GABA-A function for rapid antidepressant effects.', sec: 's7-neurosteroids' },
-      { ch: 'ch08', pages: '366–367, 373', text: 'GABA regulates both fear and worry circuits; GABA interneurons of the **intercalated cell mass** gate fear output during **extinction**.', sec: 's8-extinction' }
+      { ch: 'ch08', pages: '366–367, 373', text: 'GABA regulates both fear and worry circuits; GABA interneurons of the **intercalated cell mass** gate fear output during **extinction**.', sec: 's8-extinction' },
+      { ch: 'ch10', pages: '408–414', text: 'GABA from the **VLPO** is the sleep switch; GABA rises through the first hours of sleep and declines before waking.', sec: 's10-sleepwake' }
     ],
     synthesis: [['Glutamate', 'The amino acid precursor'], ['GABA', '**Glutamic acid decarboxylase (GAD)**'], ['Vesicle', 'Packaged by **VIAAT**']],
     roles: ['The principal **inhibitory** neurotransmitter, reducing the activity of many neurons', '**Phasic** inhibition at synaptic benzodiazepine-sensitive GABA-A receptors', '**Tonic** inhibition at extrasynaptic δ-containing GABA-A receptors sets neuronal excitability']
@@ -177,14 +180,18 @@ SP.nts = [
   {
     id: 'histamine', name: 'Histamine', abbr: 'HA', family: 'Monoamine', key6: false,
     summary: 'An important neurotransmitter and neuromodulator outside the key six. It has no presynaptic reuptake transporter and is inactivated enzymatically; H1 and H3 receptors are drug targets.',
-    termination: ['**No presynaptic transporter**: inactivation thought to be **entirely enzymatic**', 'Packaged into vesicles by **VMAT2**, like the monoamines'],
+    termination: ['**No presynaptic transporter**: inactivation thought to be **entirely enzymatic**', 'Packaged into vesicles by **VMAT2**, like the monoamines', '**Histamine N-methyltransferase** → N-methylhistamine, then **MAO-B** → inactive **N-MIAA**; diamine oxidase outside the brain (Chapter 10)', 'With no reuptake pump, histamine **diffuses widely**, like dopamine in the PFC'],
     clinical: ['H1 antagonism: therapeutic for anxiety and insomnia; side effects of sedation and weight gain', 'H3 antagonism/inverse agonism: improves daytime sleepiness'],
     facts: [
       { ch: 'ch01', pages: '5', text: 'Listed with neuropeptides and hormones as **other important neurotransmitters and neuromodulators**, mentioned in the relevant clinical chapters.' },
       { ch: 'ch02', pages: '35', text: 'Apparently has **no presynaptic transporter**, though it is packaged by **VMAT2**; inactivation is thought to be **entirely enzymatic**.', sec: 's2-missing' },
       { ch: 'ch02', pages: '40', text: '**H1** antagonism and **H3** antagonism/inverse agonism are drug actions in Table 2-4.', sec: 's2-receptor-tables' },
-      { ch: 'ch05', pages: '181–182', text: 'With ACh and NE, histamine drives **cortical arousal**; H1 blockade by drugs for psychosis causes sedation and weight gain.', sec: 's5-fga' }
-    ]
+      { ch: 'ch05', pages: '181–182', text: 'With ACh and NE, histamine drives **cortical arousal**; H1 blockade by drugs for psychosis causes sedation and weight gain.', sec: 's5-fga' },
+      { ch: 'ch10', pages: '402–406', text: 'Receptors: **H1** (postsynaptic, PI/cFOS, wakefulness), **H2** (cAMP/PKA/CREB, brain role unclear), **H3** (presynaptic autoreceptor), H4 (not in brain), and the **NMDA polyamine site**.', sec: 's10-histamine' }
+    ],
+    synthesis: [['Histidine', 'Taken up by a **histidine transporter**'], ['Histamine', '**Histidine decarboxylase (HDC)**; packaged into vesicles']],
+    pathways: [{ name: 'Tuberomammillary', route: '**TMN** (hypothalamus) → prefrontal cortex, basal forebrain, thalamus, brainstem centers, VLPO, lateral hypothalamus, spinal cord', role: '**Arousal** and wakefulness; inhibits VLPO GABA by day' }],
+    roles: ['A key **wake-promoting** neurotransmitter of the ascending arousal system', 'Ultimate target of many wake-promoting drugs (↑ release) and hypnotics (H1 blockade)']
   },
   {
     id: 'melatonin', name: 'Melatonin', abbr: 'MT', family: 'Hormone', key6: false,
@@ -193,14 +200,22 @@ SP.nts = [
     facts: [
       { ch: 'ch02', pages: '39', text: '**MT1 and MT2** agonist actions improve insomnia and circadian rhythms (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch06', pages: '271–275', text: 'In depression the nighttime **melatonin peak is lost**; early-evening melatonin can help reset a **phase-delayed** clock.', sec: 's6-circadian' },
-      { ch: 'ch07', pages: '306–308', text: 'Agomelatine acts as “substitute melatonin” at SCN MT1/MT2 receptors to resynchronize circadian rhythms.', sec: 's7-agomelatine' }
+      { ch: 'ch07', pages: '306–308', text: 'Agomelatine acts as “substitute melatonin” at SCN MT1/MT2 receptors to resynchronize circadian rhythms.', sec: 's7-agomelatine' },
+      { ch: 'ch10', pages: '438–440', text: 'Melatonin acts at MT1 (SCN inhibition, sleep), MT2 (**phase shifting**) and the “MT3” enzyme site; evening melatonin corrects delayed phase, morning melatonin advanced phase.', sec: 's10-circadian' }
     ]
   },
   {
     id: 'orexin', name: 'Orexin', abbr: 'OX', family: 'Neuropeptide', key6: false,
-    summary: 'Orexin A and B act at OX1 and OX2 receptors; antagonists are hypnotics for insomnia (Chapter 10).',
-    clinical: ['OX1/OX2 antagonism is hypnotic for insomnia'],
-    facts: [{ ch: 'ch02', pages: '40', text: '**Orexin A and B** act at **OX1 and OX2**; antagonists are hypnotics for insomnia (Table 2-4).', sec: 's2-receptor-tables' }]
+    summary: 'Orexin A and B (hypocretins) are excitatory hypothalamic peptides that stabilize wakefulness by driving every arousal neurotransmitter; their loss causes narcolepsy with cataplexy.',
+    clinical: ['OX1/OX2 antagonism is hypnotic for insomnia', '**Narcolepsy with cataplexy**: loss of orexin neurons', 'DORAs block orexin receptors to treat insomnia'],
+    facts: [
+      { ch: 'ch02', pages: '40', text: '**Orexin A and B** act at **OX1 and OX2**; antagonists are hypnotics for insomnia (Table 2-4).', sec: 's2-receptor-tables' },
+      { ch: 'ch10', pages: '406–413', text: 'Orexin A binds **OX1 and OX2**; orexin B only **OX2**. OX1 is high in the locus coeruleus, OX2 in the TMN. Levels fall early in sleep, plateau, then rise before waking.', sec: 's10-orexin' }
+    ],
+    aka: ['Hypocretin'],
+    synthesis: [['Prepro-orexin', 'One precursor protein (gene **HCRT**)'], ['Orexin A (33 aa) and orexin B (28 aa)', 'Cleaved peptides with ~50% sequence identity']],
+    pathways: [{ name: 'Lateral hypothalamic', route: 'Lateral, perifornical and posterior **hypothalamus** → TMN, basal forebrain, thalamus, LC, raphe, VTA, PPT/LDT and widely', role: '**Stabilizes wakefulness**; feeding, motivation, reward' }],
+    roles: ['Stabilizes wakefulness through histamine, ACh, DA, NE and 5HT release', '**Tonic** firing maintains arousal; **phasic** bursts drive adaptive behavior (feeding, thermogenesis, breathing, HPA activation, drug seeking)', 'Stabilizes **motor tone** by day']
   },
   {
     id: 'endorphin', name: 'β-Endorphin', abbr: 'β-END', family: 'Neuropeptide', key6: false,

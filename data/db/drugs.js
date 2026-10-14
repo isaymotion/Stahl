@@ -42,7 +42,8 @@ SP.drugs = [
       { ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' },
       { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' },
       { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1, α2 and α3** benzodiazepine-sensitive GABA-A receptors (phasic inhibition); reversed by **flumazenil**.', sec: 's6-gabaa' },
-      { ch: 'ch08', pages: '366–367, 377', text: 'Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.', sec: 's8-gad' }
+      { ch: 'ch08', pages: '366–367, 377', text: 'Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.', sec: 's8-gad' },
+      { ch: 'ch10', pages: '421–422', text: 'Benzodiazepines approved for anxiety are often used for insomnia; as hypnotics they are second line (tolerance, withdrawal, **rebound insomnia**).', sec: 's10-gaba-hypnotics' }
     ]
   },
   {
@@ -66,8 +67,84 @@ SP.drugs = [
       { ch: 'ch01', pages: '6', text: 'Prescribed **before benzodiazepine receptors were discovered**.', sec: 's1-nts' },
       { ch: 'ch03', pages: '65', text: 'The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.', sec: 's3-pam' },
       { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1–3** GABA-A receptors; α2/α3 actions are thought anxiolytic, α1 actions sedating.', sec: 's6-gabaa' },
-      { ch: 'ch08', pages: '366–367, 377', text: 'Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.', sec: 's8-gad' }
+      { ch: 'ch08', pages: '366–367, 377', text: 'Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.', sec: 's8-gad' },
+      { ch: 'ch10', pages: '421–422', text: 'Benzodiazepines approved for anxiety are often used for insomnia; as hypnotics they are second line (tolerance, withdrawal, **rebound insomnia**).', sec: 's10-gaba-hypnotics' }
     ]
+  },
+  {
+    id: 'flurazepam', name: 'Flurazepam', brand: 'Dalmane', group: 'Benzodiazepine', cls: 'Benzodiazepine hypnotic',
+    nbn: 'GABA-A positive allosteric modulator (benzodiazepine site)',
+    nts: ['gaba'],
+    chapters: [{ ch: 'ch10', pages: '421–423, 427–428' }],
+    short: 'Benzodiazepine approved for insomnia; half-life 2–6 days.',
+    mechanism: 'A nonselective **GABA-A PAM** (α1, α2, α3, α5) at benzodiazepine-sensitive receptors, facilitating GABA in VLPO sleep circuits. Half-life in Figure 10-33: **2–6 days**.',
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Nonselective α1, α2, α3, α5' }],
+    uses: ['**Insomnia** (second line; severe or resistant cases)'],
+    sideEffects: [
+      { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+    ],
+    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**way too hot**”: accumulation and falls.', sec: 's10-pk' }]
+  },
+  {
+    id: 'quazepam', name: 'Quazepam', brand: 'Doral', group: 'Benzodiazepine', cls: 'Benzodiazepine hypnotic',
+    nbn: 'GABA-A positive allosteric modulator (benzodiazepine site)',
+    nts: ['gaba'],
+    chapters: [{ ch: 'ch10', pages: '421–423, 427–428' }],
+    short: 'Benzodiazepine approved for insomnia; half-life 2–5 days.',
+    mechanism: 'A nonselective **GABA-A PAM** (α1, α2, α3, α5) at benzodiazepine-sensitive receptors, facilitating GABA in VLPO sleep circuits. Half-life in Figure 10-33: **2–5 days**.',
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Nonselective α1, α2, α3, α5' }],
+    uses: ['**Insomnia** (second line; severe or resistant cases)'],
+    sideEffects: [
+      { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+    ],
+    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**way too hot**”: accumulation and falls.', sec: 's10-pk' }]
+  },
+  {
+    id: 'triazolam', name: 'Triazolam', brand: 'Halcion', group: 'Benzodiazepine', cls: 'Benzodiazepine hypnotic',
+    nbn: 'GABA-A positive allosteric modulator (benzodiazepine site)',
+    nts: ['gaba'],
+    chapters: [{ ch: 'ch10', pages: '421–423, 427–428' }],
+    short: 'Benzodiazepine approved for insomnia; half-life 1–2 hours.',
+    mechanism: 'A nonselective **GABA-A PAM** (α1, α2, α3, α5) at benzodiazepine-sensitive receptors, facilitating GABA in VLPO sleep circuits. Half-life in Figure 10-33: **1–2 hours**.',
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Nonselective α1, α2, α3, α5' }],
+    uses: ['**Insomnia** (second line; severe or resistant cases)'],
+    sideEffects: [
+      { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+    ],
+    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**too cold**”: may lose sleep maintenance.', sec: 's10-pk' }]
+  },
+  {
+    id: 'estazolam', name: 'Estazolam', brand: 'ProSom', group: 'Benzodiazepine', cls: 'Benzodiazepine hypnotic',
+    nbn: 'GABA-A positive allosteric modulator (benzodiazepine site)',
+    nts: ['gaba'],
+    chapters: [{ ch: 'ch10', pages: '421–423, 427–428' }],
+    short: 'Benzodiazepine approved for insomnia; half-life 12–30 hours.',
+    mechanism: 'A nonselective **GABA-A PAM** (α1, α2, α3, α5) at benzodiazepine-sensitive receptors, facilitating GABA in VLPO sleep circuits. Half-life in Figure 10-33: **12–30 hours**.',
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Nonselective α1, α2, α3, α5' }],
+    uses: ['**Insomnia** (second line; severe or resistant cases)'],
+    sideEffects: [
+      { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+    ],
+    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**still too hot**”: possible hangover.', sec: 's10-pk' }]
+  },
+  {
+    id: 'temazepam', name: 'Temazepam', brand: 'Restoril', group: 'Benzodiazepine', cls: 'Benzodiazepine hypnotic',
+    nbn: 'GABA-A positive allosteric modulator (benzodiazepine site)',
+    nts: ['gaba'],
+    chapters: [{ ch: 'ch10', pages: '421–423, 427–428' }],
+    short: 'Benzodiazepine approved for insomnia; half-life 4–20 hours.',
+    mechanism: 'A nonselective **GABA-A PAM** (α1, α2, α3, α5) at benzodiazepine-sensitive receptors, facilitating GABA in VLPO sleep circuits. Half-life in Figure 10-33: **4–20 hours**.',
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Nonselective α1, α2, α3, α5' }],
+    uses: ['**Insomnia** (second line; severe or resistant cases)'],
+    sideEffects: [
+      { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+    ],
+    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**still too hot**”: possible hangover.', sec: 's10-pk' }]
   },
   {
     id: 'flumazenil', name: 'Flumazenil', group: 'Benzodiazepine antagonist', cls: 'Benzodiazepine receptor antagonist',
@@ -274,17 +351,23 @@ SP.drugs = [
   },
   {
     id: 'doxepin', name: 'Doxepin', brand: 'Sinequan; Adapin', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
-    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    chapters: [
+      { ch: 'ch07', pages: '333–336' },
+      { ch: 'ch10', pages: '425–427' }
+    ],
     nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
     nts: ['norepinephrine', 'serotonin', 'histamine', 'acetylcholine'],
-    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
+    uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)', '**Insomnia** at low doses (1–6 mg)'],
     sideEffects: [
       { e: 'Sedation, weight gain', via: 'H1 antagonism' },
       { e: 'Dry mouth, blurred vision, urinary retention, constipation', via: 'Muscarinic antagonism' },
       { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
       { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
     ],
-    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Sinequan; Adapin.', sec: 's7-tca' }],
+    facts: [
+      { ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Sinequan; Adapin.', sec: 's7-tca' },
+      { ch: 'ch10', pages: '425–427', text: 'At **1–6 mg** a relatively **selective H1 antagonist** hypnotic without anticholinergic or reuptake actions (antidepressant dose 150–300 mg); used in trace doses as an H1 PET ligand.', sec: 's10-arousal-blockers' }
+    ],
     short: 'Tricyclic listed in Table 7-2.',
     mechanism: 'Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.',
     targets: [
@@ -773,7 +856,10 @@ SP.drugs = [
   },
   {
     id: 'agomelatine', name: 'Agomelatine', brand: 'Valdoxan', group: 'Antidepressant', cls: 'Melatonergic agonist and 5HT2C antagonist',
-    chapters: [{ ch: 'ch07', pages: '306–308' }],
+    chapters: [
+      { ch: 'ch07', pages: '306–308' },
+      { ch: 'ch10', pages: '439–440' }
+    ],
     nbn: 'Melatonin MT1/MT2 receptor agonist and serotonin 5HT2C receptor antagonist',
     nts: ['melatonin', 'serotonin', 'norepinephrine', 'dopamine'],
     short: 'MT1/MT2 agonist and 5HT2C/5HT2B antagonist that may reset circadian rhythms.',
@@ -784,7 +870,10 @@ SP.drugs = [
       { t: '5ht2b', action: 'antagonist' }
     ],
     uses: ['Unipolar depression (many countries **outside the US**)'],
-    facts: [{ ch: 'ch07', pages: '307–308', text: 'Melatonin and 5HT2C receptors in the SCN are expressed most at night; agomelatine acts on both to reset rhythms (Figure 7-39).', sec: 's7-agomelatine' }]
+    facts: [
+      { ch: 'ch07', pages: '307–308', text: 'Melatonin and 5HT2C receptors in the SCN are expressed most at night; agomelatine acts on both to reset rhythms (Figure 7-39).', sec: 's7-agomelatine' },
+      { ch: 'ch10', pages: '439–440', text: 'Also an MT1/MT2 agonist acting on circadian rhythms (Figure 10-57).', sec: 's10-circadian' }
+    ]
   },
   {
     id: 'methylphenidate', name: 'Methylphenidate', group: 'Stimulant', cls: 'Stimulant (ADHD)',
@@ -796,10 +885,14 @@ SP.drugs = [
       { t: 'net', action: 'inhibitor' }
     ],
     uses: ['ADHD', 'Indirect dopamine agonism also improves depression and wakefulness (Table 2-5)'],
-    chapters: [{ ch: 'ch02', pages: '34–35, 40' }],
+    chapters: [
+      { ch: 'ch02', pages: '34–35, 40' },
+      { ch: 'ch10', pages: '441–442' }
+    ],
     facts: [
       { ch: 'ch02', pages: '34', text: 'A “stimulant” for ADHD that acts on **DAT and NET**.', sec: 's2-monoamine' },
-      { ch: 'ch02', pages: '35', text: 'Targets **only the monoamine transporters** (not VMATs), in contrast to amphetamine.', sec: 's2-vesicular' }
+      { ch: 'ch02', pages: '35', text: 'Targets **only the monoamine transporters** (not VMATs), in contrast to amphetamine.', sec: 's2-vesicular' },
+      { ch: 'ch10', pages: '441–442', text: 'Approved for sleepiness in **narcolepsy** (not OSA or shift work, used off-label); highly effective but controlled (abuse, diversion, psychosis, mania, hypertension).', sec: 's10-caffeine-stimulants' }
     ]
   },
   {
@@ -816,14 +909,16 @@ SP.drugs = [
     chapters: [
       { ch: 'ch02', pages: '31–35, 40' },
       { ch: 'ch04', pages: '78–79' },
-      { ch: 'ch07', pages: '337, 356' }
+      { ch: 'ch07', pages: '337, 356' },
+      { ch: 'ch10', pages: '441–442' }
     ],
     facts: [
       { ch: 'ch02', pages: '31', text: 'Listed in Table 2-1 as a false substrate of both **NET and DAT**.', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '35', text: '**Amphetamine has two targets**: monoamine transporters and VMATs (as a transported substrate).', sec: 's2-vesicular' },
       { ch: 'ch04', pages: '79', text: 'Dopamine release by amphetamine causes a **paranoid psychosis** much like schizophrenia: a cornerstone of the dopamine hypothesis. Table 4-1 lists psychostimulants as **D2 agonist** models with auditory hallucinations, paranoid delusions and no insight.', sec: 's4-three' },
       { ch: 'ch05', pages: '174', text: 'A false substrate of **VMAT2** that competes with natural transmitters; dopamine or amphetamine are the “too hot” end of the Goldilocks analogy.', sec: 's5-vmat2' },
-      { ch: 'ch07', pages: '337', text: 'Amphetamine is also a **weak, reversible MAO inhibitor**; some MAOIs (tranylcypromine, selegiline via metabolites) are closely linked to amphetamine.', sec: 's7-maoi' }
+      { ch: 'ch07', pages: '337', text: 'Amphetamine is also a **weak, reversible MAO inhibitor**; some MAOIs (tranylcypromine, selegiline via metabolites) are closely linked to amphetamine.', sec: 's7-maoi' },
+      { ch: 'ch10', pages: '441–442', text: 'Approved for sleepiness in **narcolepsy** (not OSA or shift work, used off-label); highly effective but controlled (abuse, diversion, psychosis, mania, hypertension).', sec: 's10-caffeine-stimulants' }
     ]
   },
   {
@@ -1193,44 +1288,107 @@ SP.drugs = [
     facts: [{ ch: 'ch03', pages: '64', text: 'Explains why most smokers smoke about **a pack a day (20 cigarettes) over about 16 waking hours**: dosing is matched to receptor desensitization and inactivation.', sec: 's3-states' }]
   },
   {
-    id: 'zolpidem', name: 'Zolpidem', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
+    id: 'zolpidem', name: 'Zolpidem', brand: 'Ambien; Ambien CR', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
     nbn: 'GABA-A positive allosteric modulator',
     short: 'PAM at nonbenzodiazepine sites on GABA-A receptors.',
     mechanism: 'A **full agonist at nonbenzodiazepine PAM sites** on GABA-A receptors, enhancing **phasic** inhibition. Details in Chapter 10.',
-    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Nonbenzodiazepine PAM site' }],
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'α1-selective; benzodiazepine-sensitive receptors' }],
     uses: ['**Insomnia**'],
-    chapters: [{ ch: 'ch03', pages: '55' }],
-    facts: [{ ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2 that improve insomnia.', sec: 's3-drugs' }]
+    chapters: [
+      { ch: 'ch03', pages: '55' },
+      { ch: 'ch10', pages: '422–423, 427–428' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2 that improve insomnia.', sec: 's3-drugs' },
+      { ch: 'ch10', pages: '422–423, 427–428', text: '**α1-selective**. IR lasts ~2–4 h (too cold: early waking); **CR** extends to 6–8 h (just right); low-dose **sublingual** form for middle-of-the-night waking.', sec: 's10-gaba-hypnotics' }
+    ]
   },
   {
-    id: 'zaleplon', name: 'Zaleplon', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
+    id: 'zaleplon', name: 'Zaleplon', brand: 'Sonata', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
     nbn: 'GABA-A positive allosteric modulator',
     short: 'PAM at nonbenzodiazepine sites on GABA-A receptors.',
     mechanism: 'A **full agonist at nonbenzodiazepine PAM sites** on GABA-A receptors (phasic inhibition). Details in Chapter 10.',
-    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Nonbenzodiazepine PAM site' }],
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'α1-selective' }],
     uses: ['**Insomnia**'],
-    chapters: [{ ch: 'ch03', pages: '55' }],
-    facts: [{ ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2.', sec: 's3-drugs' }]
+    chapters: [
+      { ch: 'ch03', pages: '55' },
+      { ch: 'ch10', pages: '422, 428' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2.', sec: 's3-drugs' },
+      { ch: 'ch10', pages: '422, 428', text: '**α1-selective**, ultra-short (1–3 h): good for onset, may lose maintenance.', sec: 's10-gaba-hypnotics' }
+    ]
+  },
+  {
+    id: 'suvorexant', name: 'Suvorexant', brand: 'Belsomra', group: 'Orexin antagonist', cls: 'Dual orexin receptor antagonist (DORA)',
+    nbn: 'Orexin OX1/OX2 receptor antagonist',
+    nts: ['orexin'],
+    chapters: [{ ch: 'ch10', pages: '423–424, 427–430' }],
+    short: 'DORA with comparable OX1 and OX2 affinity.',
+    mechanism: 'A reversible, competitive antagonist with **comparable affinity for OX1 and OX2**; blocks orexin’s stabilization of wakefulness so the patient sleeps. Orexin rising in the morning reverses the block.',
+    targets: [{ t: 'ox', action: 'antagonist', note: 'OX1 = OX2' }],
+    uses: ['**Insomnia**: sleep onset and maintenance'],
+    sideEffects: [
+      { e: 'No dependence, withdrawal, rebound, falls, amnesia or respiratory depression (compared with GABA-A PAMs)', via: 'Reduces arousal rather than enhancing GABA' },
+      { e: 'Morning carryover in some patients (lower the dose)', via: 'Residual orexin blockade' }
+    ]
+  },
+  {
+    id: 'lemborexant', name: 'Lemborexant', brand: 'Dayvigo', group: 'Orexin antagonist', cls: 'Dual orexin receptor antagonist (DORA)',
+    nbn: 'Orexin OX1/OX2 receptor antagonist',
+    nts: ['orexin'],
+    chapters: [{ ch: 'ch10', pages: '423–424, 427–430' }],
+    short: 'DORA with higher OX2 affinity and fast kinetics.',
+    mechanism: 'A reversible DORA with **higher affinity for OX2 than OX1** and much **faster association/dissociation** at OX2, perhaps reversing faster as morning orexin rises.',
+    targets: [{ t: 'ox', action: 'antagonist', note: 'OX2 > OX1' }],
+    uses: ['**Insomnia**: sleep onset and maintenance'],
+    sideEffects: [
+      { e: 'No dependence, withdrawal, rebound, falls, amnesia or respiratory depression (compared with GABA-A PAMs)', via: 'Reduces arousal rather than enhancing GABA' },
+      { e: 'Morning carryover in some patients (lower the dose)', via: 'Residual orexin blockade' }
+    ]
+  },
+  {
+    id: 'daridorexant', name: 'Daridorexant', brand: 'Quviviq', group: 'Orexin antagonist', cls: 'Dual orexin receptor antagonist (DORA)',
+    nbn: 'Orexin OX1/OX2 receptor antagonist',
+    nts: ['orexin'],
+    chapters: [{ ch: 'ch10', pages: '424' }],
+    short: 'DORA in development at publication; later approved for insomnia.',
+    mechanism: 'A dual orexin receptor antagonist mentioned in the book as in development.',
+    targets: [{ t: 'ox', action: 'antagonist' }],
+    uses: ['Insomnia'],
+    updates: [{ year: '2022', title: 'Approved for insomnia', text: 'Approved by the FDA in January 2022 (25 and 50 mg) for adults with insomnia with difficulty in sleep onset and/or maintenance.', source: 'Idorsia, January 10, 2022' }]
   },
   {
     id: 'zopiclone', name: 'Zopiclone', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
     nbn: 'GABA-A positive allosteric modulator',
     short: 'PAM at nonbenzodiazepine sites on GABA-A receptors.',
     mechanism: 'A **full agonist at nonbenzodiazepine PAM sites** on GABA-A receptors (phasic inhibition). Details in Chapter 10.',
-    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Nonbenzodiazepine PAM site' }],
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'α1, α2, α3, α5 (not α1-selective)' }],
     uses: ['**Insomnia**'],
-    chapters: [{ ch: 'ch03', pages: '55' }],
-    facts: [{ ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2.', sec: 's3-drugs' }]
+    chapters: [
+      { ch: 'ch03', pages: '55' },
+      { ch: 'ch10', pages: '422–423' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2.', sec: 's3-drugs' },
+      { ch: 'ch10', pages: '422–423', text: 'Racemic R + S zopiclone, available outside the US; binds α1, α2, α3 and α5 like benzodiazepines. (Figure 10-34 labels it “Stilnox,” a zolpidem brand.)', sec: 's10-gaba-hypnotics' }
+    ]
   },
   {
-    id: 'eszopiclone', name: 'Eszopiclone', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
+    id: 'eszopiclone', name: 'Eszopiclone', brand: 'Lunesta', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
     nbn: 'GABA-A positive allosteric modulator',
     short: 'PAM at nonbenzodiazepine sites on GABA-A receptors.',
     mechanism: 'A **full agonist at nonbenzodiazepine PAM sites** on GABA-A receptors (phasic inhibition). Details in Chapter 10.',
-    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Nonbenzodiazepine PAM site' }],
+    targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'α1, α2, α3, α5' }],
     uses: ['**Insomnia**'],
-    chapters: [{ ch: 'ch03', pages: '55' }],
-    facts: [{ ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2.', sec: 's3-drugs' }]
+    chapters: [
+      { ch: 'ch03', pages: '55' },
+      { ch: 'ch10', pages: '422–423, 427' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2.', sec: 's3-drugs' },
+      { ch: 'ch10', pages: '422–423, 427', text: 'The **S enantiomer** of zopiclone, available in the US; about 8 h above threshold (“just right”).', sec: 's10-gaba-hypnotics' }
+    ]
   },
   {
     id: 'allopregnanolone', name: 'Allopregnanolone', aka: ['brexanolone'], group: 'Neuroactive steroid', cls: 'Neuroactive steroid',
@@ -1303,23 +1461,81 @@ SP.drugs = [
     id: 'modafinil', name: 'Modafinil', brand: 'Provigil', group: 'Wake-promoting agent', cls: 'Wake-promoting agent (DAT inhibitor)',
     chapters: [
       { ch: 'ch07', pages: '333, 335' },
-      { ch: 'ch09', pages: '399–400' }
+      { ch: 'ch09', pages: '399–400' },
+      { ch: 'ch10', pages: '442–444' }
     ],
     nbn: 'Dopamine reuptake inhibitor (DAT)',
     nts: ['dopamine'],
     short: 'A DAT inhibitor used with an SNRI as an “arousal combo.”',
-    mechanism: 'Described in Chapter 7 as **another DAT inhibitor**; fuller pharmacology appears in the sleep chapter.',
+    mechanism: 'Racemic wake-promoting agent acting mainly as a **DAT inhibitor**: weak affinity but high plasma levels give slow, sustained (6–8 h), incomplete DAT occupancy that raises **tonic** dopamine, then downstream **histamine** (TMN) and **orexin** release. Works even without orexin neurons.',
     targets: [{ t: 'dat', action: 'inhibitor' }],
-    uses: ['With an SNRI for residual **fatigue, low energy and poor concentration/alertness** in depression (arousal combo)'],
-    facts: [{ ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' }]
+    uses: ['With an SNRI for residual **fatigue, low energy and poor concentration/alertness** in depression (arousal combo)', '**Narcolepsy**; adjunct for **OSA**; **shift work disorder** (approved)'],
+    facts: [
+      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' },
+      { ch: 'ch10', pages: '442–444', text: 'Possibly less powerful than stimulants in narcolepsy but with much lower abuse potential; often needs a second daily dose.', sec: 's10-modafinil' }
+    ]
   },
   {
     id: 'armodafinil', name: 'Armodafinil', brand: 'Nuvigil', group: 'Wake-promoting agent', cls: 'Wake-promoting agent',
     nts: ['dopamine'],
-    chapters: [{ ch: 'ch09', pages: '399' }],
+    chapters: [
+      { ch: 'ch09', pages: '399' },
+      { ch: 'ch10', pages: '442–444' }
+    ],
     short: 'Wake-promoting agent used for fibro-fog and fatigue.',
-    mechanism: 'Related to modafinil; pharmacology covered in the sleep chapter.',
-    uses: ['**Fibro-fog** and fatigue in fibromyalgia (as for cognitive dysfunction in depression)']
+    mechanism: 'The **R enantiomer** of modafinil: a DAT inhibitor with later peak, longer half-life and higher plasma levels 6–14 h after dosing, possibly avoiding a second daily dose.',
+    uses: ['**Fibro-fog** and fatigue in fibromyalgia (as for cognitive dysfunction in depression)', '**Narcolepsy**; adjunct for **OSA**; **shift work disorder** (approved)'],
+    targets: [{ t: 'dat', action: 'inhibitor' }]
+  },
+  {
+    id: 'caffeine', name: 'Caffeine', group: 'Wake-promoting agent', cls: 'Adenosine receptor antagonist',
+    nbn: 'Adenosine receptor antagonist',
+    nts: ['dopamine'],
+    chapters: [{ ch: 'ch10', pages: '440–441' }],
+    short: 'The world’s most used psychoactive drug: an adenosine antagonist.',
+    mechanism: 'Blocks **adenosine** receptors. Adenosine (the “accountant” of fatigue) heterodimerizes its receptors with **D2** receptors and lowers their dopamine affinity; caffeine restores it, enhancing DA action.',
+    targets: [{ t: 'adenosine', action: 'antagonist' }],
+    uses: ['Wake promotion; reduces fatigue']
+  },
+  {
+    id: 'solriamfetol', name: 'Solriamfetol', brand: 'Sunosi', group: 'Wake-promoting agent', cls: 'Wake-promoting NDRI',
+    nbn: 'Norepinephrine and dopamine reuptake inhibitor (NET/DAT)',
+    nts: ['norepinephrine', 'dopamine'],
+    chapters: [{ ch: 'ch10', pages: '444' }],
+    short: 'Wake-promoting NDRI for narcolepsy and OSA.',
+    mechanism: 'An **NE and DA reuptake inhibitor**: more potent than bupropion, less potent but more tolerable and **less abusable** than stimulants; short half-life wears off by bedtime.',
+    targets: [
+      { t: 'dat', action: 'inhibitor' },
+      { t: 'net', action: 'inhibitor' }
+    ],
+    uses: ['Sleepiness in **narcolepsy**', 'Adjunct for sleepiness in **OSA**']
+  },
+  {
+    id: 'pitolisant', name: 'Pitolisant', brand: 'Wakix', group: 'Wake-promoting agent', cls: 'H3 antagonist',
+    nbn: 'Histamine H3 receptor antagonist',
+    nts: ['histamine'],
+    chapters: [{ ch: 'ch10', pages: '444–446' }],
+    short: 'H3 autoreceptor antagonist for narcolepsy; not controlled.',
+    mechanism: 'Blocks presynaptic **H3 autoreceptors**, disinhibiting **histamine release** to promote wakefulness.',
+    targets: [{ t: 'h3', action: 'antagonist' }],
+    uses: ['Sleepiness in **narcolepsy**; anecdotally cataplexy', 'In testing for OSA sleepiness (at publication)'],
+    sideEffects: [
+      { e: 'Overactivation: anxiety, insomnia', via: 'Histamine release' },
+      { e: 'No known abuse potential; not a controlled substance', via: '—' }
+    ],
+    facts: [{ ch: 'ch10', pages: '446', text: 'About as effective as modafinil, perhaps less than stimulants.', sec: 's10-newer' }],
+    updates: [{ year: '2024', title: 'Pediatric approval', text: 'Approved in June 2024 for excessive daytime sleepiness in children aged 6 and older with narcolepsy.', source: 'Harmony Biosciences, June 24, 2024' }]
+  },
+  {
+    id: 'oveporexton', name: 'Oveporexton', brand: 'Orzeyful', group: 'Wake-promoting agent', cls: 'Orexin 2 receptor agonist',
+    nbn: 'Orexin OX2 receptor agonist',
+    nts: ['orexin'],
+    chapters: [{ ch: 'ch10', pages: '444–446' }],
+    short: 'First orexin receptor agonist (post-publication), for narcolepsy type 1.',
+    mechanism: 'Not in the book: an oral **OX2 agonist** that replaces the missing orexin signal in narcolepsy type 1. Listed here because Chapter 10 explains why orexin loss causes narcolepsy.',
+    targets: [{ t: 'ox', action: 'agonist', note: 'OX2-selective' }],
+    uses: ['Narcolepsy type 1 (adults)'],
+    updates: [{ year: '2026', title: 'Approved for narcolepsy type 1', text: 'Approved by the FDA on August 5, 2026 for adults with narcolepsy type 1; phase 3 trials improved sleepiness, cataplexy and quality of life; insomnia and urinary frequency were common.', source: 'Takeda, August 5, 2026 (AJMC)' }]
   },
   {
     id: 'atomoxetine', name: 'Atomoxetine', brand: 'Strattera', group: 'NRI', cls: 'Selective norepinephrine reuptake inhibitor (NRI)',
@@ -1352,6 +1568,53 @@ SP.drugs = [
     targets: [{ t: 'h1', action: 'antagonist' }],
     uses: ['Off-label treatment of **anxiety** (GAD)'],
     sideEffects: [{ e: 'Sedation', via: 'H1 antagonism' }]
+  },
+  {
+    id: 'diphenhydramine', name: 'Diphenhydramine', brand: 'Benadryl', group: 'Antihistamine', cls: 'Sedating antihistamine',
+    nbn: 'Histamine H1 and muscarinic M1 receptor antagonist',
+    nts: ['histamine', 'acetylcholine'],
+    chapters: [{ ch: 'ch10', pages: '425–426' }],
+    short: 'OTC antihistamine sleep aid that also blocks M1.',
+    mechanism: 'Blocks **H1** (sedation) and also **M1** receptors.',
+    targets: [
+      { t: 'h1', action: 'antagonist' },
+      { t: 'm1', action: 'antagonist' }
+    ],
+    uses: ['Over-the-counter **sleep aid**; allergies'],
+    sideEffects: [
+      { e: 'Blurred vision, constipation, memory problems, dry mouth', via: 'M1 antagonism' },
+      { e: 'Sedation', via: 'H1 antagonism' }
+    ]
+  },
+  {
+    id: 'doxylamine', name: 'Doxylamine', group: 'Antihistamine', cls: 'Sedating antihistamine',
+    nbn: 'Histamine H1 receptor antagonist',
+    nts: ['histamine'],
+    chapters: [{ ch: 'ch10', pages: '425' }],
+    short: 'OTC antihistamine sleep aid.',
+    mechanism: 'A sedating **H1 antagonist** used in over-the-counter sleep aids.',
+    targets: [{ t: 'h1', action: 'antagonist' }],
+    uses: ['Over-the-counter **sleep aid**']
+  },
+  {
+    id: 'ramelteon', name: 'Ramelteon', brand: 'Rozerem', group: 'Melatonergic agent', cls: 'Melatonin MT1/MT2 agonist',
+    nbn: 'Melatonin MT1/MT2 receptor agonist',
+    nts: ['melatonin'],
+    chapters: [{ ch: 'ch10', pages: '428, 439–440' }],
+    short: 'MT1/MT2 agonist for sleep-onset insomnia.',
+    mechanism: '**MT1/MT2 agonist**; improves **sleep onset** (sometimes better after several days), not maintenance; short time above threshold.',
+    targets: [{ t: 'mt1mt2', action: 'agonist' }],
+    uses: ['**Insomnia** (sleep onset)']
+  },
+  {
+    id: 'tasimelteon', name: 'Tasimelteon', brand: 'Hetlioz', group: 'Melatonergic agent', cls: 'Melatonin MT1/MT2 agonist',
+    nbn: 'Melatonin MT1/MT2 receptor agonist',
+    nts: ['melatonin'],
+    chapters: [{ ch: 'ch10', pages: '439–440' }],
+    short: 'MT1/MT2 agonist for non-24-hour sleep–wake disorder.',
+    mechanism: 'A powerful **MT1/MT2 agonist**; MT2 action retrains the circadian clock.',
+    targets: [{ t: 'mt1mt2', action: 'agonist' }],
+    uses: ['**Non-24-hour sleep–wake disorder** (mostly in the blind)']
   },
   {
     id: 'lidocaine', name: 'Lidocaine', brand: 'Xylocaine', group: 'Local anesthetic', cls: 'Local anesthetic',
@@ -1396,11 +1659,22 @@ SP.drugs = [
   {
     id: 'sodium-oxybate', name: 'Sodium oxybate (GHB)', brand: 'Xyrem', aka: ['γ-Hydroxybutyrate', 'GHB'], group: 'Hypnotic', cls: 'Slow-wave sleep enhancer',
     nts: ['gaba'],
-    chapters: [{ ch: 'ch09', pages: '399' }],
+    chapters: [
+      { ch: 'ch09', pages: '399' },
+      { ch: 'ch10', pages: '446–448' }
+    ],
     short: 'Narcolepsy drug that enhances slow-wave sleep; abuse and diversion risk.',
-    mechanism: 'Enhances **slow-wave sleep**; mechanism covered in Chapter 10.',
-    uses: ['**Narcolepsy** (approved)', 'Severe, treatment-resistant **fibromyalgia** in expert hands (heroic cases)'],
-    sideEffects: [{ e: '**Diversion and abuse** potential', via: 'GHB' }]
+    mechanism: '**Full agonist at GHB receptors** and **partial agonist at GABA-B** receptors (antagonist when GABA is high, agonist when low). Increases **slow-wave sleep** and reduces cataplexy via GABA-B, so patients sleep so well at night they are less sleepy by day.',
+    uses: ['**Cataplexy** and **excessive sleepiness** in narcolepsy (approved); reduces hypnagogic hallucinations and sleep paralysis', 'Alcoholism (some European countries)', 'Severe, treatment-resistant **fibromyalgia** in expert hands (heroic cases)'],
+    sideEffects: [
+      { e: '**Diversion and abuse** potential', via: 'GHB' },
+      { e: '“Date rape” misuse with alcohol (sedation, amnesia); abuse by athletes for growth hormone surge', via: 'Profound sedation; slow-wave sleep' }
+    ],
+    targets: [
+      { t: 'ghb', action: 'full agonist' },
+      { t: 'gabab', action: 'partial agonist' }
+    ],
+    updates: [{ year: '2023', title: 'Once-nightly formulation', text: 'Lumryz, an extended-release sodium oxybate taken once at bedtime, was approved in May 2023 for cataplexy or excessive daytime sleepiness in adults with narcolepsy.', source: 'FDA approval reported May 1, 2023 (NeurologyLive)' }]
   },
   {
     id: 'memantine', name: 'Memantine', group: 'Dementia treatment', cls: 'NMDA glutamate antagonist',
@@ -1619,14 +1893,16 @@ SP.drugs = [
       { ch: 'ch05', pages: '199, 232' },
       { ch: 'ch07', pages: '308–311, 333–334' },
       { ch: 'ch08', pages: '377' },
-      { ch: 'ch09', pages: '399–400' }
+      { ch: 'ch09', pages: '399–400' },
+      { ch: 'ch10', pages: '425, 428' }
     ],
     facts: [
       { ch: 'ch03', pages: '55', text: 'A **5HT3 antagonist** with pro-cognitive and antidepressant actions (Table 3-2).', sec: 's3-drugs' },
       { ch: 'ch05', pages: '199, 232', text: 'Combined **H1 + 5HT2C** antagonism links it to weight gain; asenapine is structurally related and shares several of its binding properties.', sec: 's5-metabolic' },
       { ch: 'ch07', pages: '308–311', text: 'Five principal actions: **α2, 5HT2A, 5HT2C, 5HT3 and H1** antagonism. α2 antagonism gives a dual 5HT–NE action like an SNRI’s by a different mechanism, synergistic with reuptake blockade.', sec: 's7-mirtazapine' },
       { ch: 'ch08', pages: '377', text: 'Off-label option for **GAD** and for **panic attacks**.', sec: 's8-gad' },
-      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' }
+      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' },
+      { ch: 'ch10', pages: '425, 428', text: 'Sedating via H1 (with other) blockade; mirtazapine and chlorpromazine fall in the “still too hot” (hangover) category of Figure 10-41C.', sec: 's10-pk' }
     ],
     nbn: 'Norepinephrine and serotonin receptor antagonist (α2, 5HT2A, 5HT2C, 5HT3, H1)',
     nts: ['norepinephrine', 'serotonin', 'histamine'],
@@ -1655,7 +1931,8 @@ SP.drugs = [
     chapters: [
       { ch: 'ch07', pages: '311–315, 327' },
       { ch: 'ch08', pages: '377' },
-      { ch: 'ch09', pages: '399–400' }
+      { ch: 'ch09', pages: '399–400' },
+      { ch: 'ch10', pages: '424–425, 427' }
     ],
     nbn: 'Serotonin receptor antagonist (5HT2A/2C) and reuptake inhibitor',
     nts: ['serotonin', 'norepinephrine', 'histamine'],
@@ -1687,7 +1964,8 @@ SP.drugs = [
       { ch: 'ch07', pages: '314', text: 'Bars follow the affinity (Ki) ranking in **Figure 7-45**, highest to lowest; actions beyond those named in the text are shown as “binds.”', sec: 's7-sari' },
       { ch: 'ch07', pages: '312–313', text: '300 mg **XR** once nightly gives levels that never fall below the antidepressant minimum, with a peak similar to 100 mg IR (Figure 7-47).', sec: 's7-sari' },
       { ch: 'ch08', pages: '377', text: 'Off-label option for **GAD** and for **panic attacks**.', sec: 's8-gad' },
-      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' }
+      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' },
+      { ch: 'ch10', pages: '424–425', text: 'The **most commonly prescribed** sleep agent worldwide (not approved for insomnia); reduces arousal by blocking 5HT2A, α1 and H1; no tolerance, withdrawal, dependence or rebound.', sec: 's10-arousal-blockers' }
     ]
   },
   {
@@ -1742,11 +2020,15 @@ SP.drugs = [
       { e: 'Weight gain', via: 'H1 antagonism' },
       { e: 'Orthostatic hypotension', via: 'α1 antagonism' }
     ],
-    chapters: [{ ch: 'ch05', pages: '161, 180–182, 201–202' }],
+    chapters: [
+      { ch: 'ch05', pages: '161, 180–182, 201–202' },
+      { ch: 'ch10', pages: '425, 428' }
+    ],
     facts: [
       { ch: 'ch05', pages: '161', text: 'Its observed improvement of psychosis out of proportion to sedation led to the discovery of **D2 antagonism** as the antipsychotic mechanism.', sec: 's5-history' },
       { ch: 'ch05', pages: '180', text: 'Table 5-1: low potency.', sec: 's5-fga' },
-      { ch: 'ch05', pages: '201–202', text: 'Often prescribed to exploit its **sedation**, short term orally or IM for agitation.', sec: 's5-first-agents' }
+      { ch: 'ch05', pages: '201–202', text: 'Often prescribed to exploit its **sedation**, short term orally or IM for agitation.', sec: 's5-first-agents' },
+      { ch: 'ch10', pages: '425, 428', text: 'Sedating via H1 (with other) blockade; mirtazapine and chlorpromazine fall in the “still too hot” (hangover) category of Figure 10-41C.', sec: 's10-pk' }
     ]
   },
   {
@@ -2175,11 +2457,13 @@ SP.drugs = [
     pearls: ['**Baby Bear 50 mg**: H1 only; **Mama Bear 300 mg**: antidepressant mix; **Papa Bear 800 mg**: saturates H1 and 5HT2A, inconsistent >60% D2 occupancy'],
     chapters: [
       { ch: 'ch05', pages: '219–220, 226–231' },
-      { ch: 'ch07', pages: '326, 343' }
+      { ch: 'ch07', pages: '326, 343' },
+      { ch: 'ch10', pages: '425, 428' }
     ],
     facts: [
       { ch: 'ch05', pages: '227–231', text: 'Goldilocks and the three bears: different pharmacology at 50, 300 and 800 mg (Figure 5-46). Low D2 occupancy (< 60%) at antipsychotic doses.', sec: 's5-pines' },
-      { ch: 'ch07', pages: '326, 343', text: 'Table 7-1: mania, maintenance, **bipolar depression** and **adjunct for MDD**; antidepressant action may come from norquetiapine at NET and 5HT2C plus 5HT2A, 5HT7, α2A antagonism and 5HT1A agonism.', sec: 's7-augment-sda' }
+      { ch: 'ch07', pages: '326, 343', text: 'Table 7-1: mania, maintenance, **bipolar depression** and **adjunct for MDD**; antidepressant action may come from norquetiapine at NET and 5HT2C plus 5HT2A, 5HT7, α2A antagonism and 5HT1A agonism.', sec: 's7-augment-sda' },
+      { ch: 'ch10', pages: '425, 428', text: 'Sedating via H1 (with other) blockade; mirtazapine and chlorpromazine fall in the “still too hot” (hangover) category of Figure 10-41C.', sec: 's10-pk' }
     ]
   },
   {
@@ -2724,13 +3008,15 @@ SP.drugs = [
       { ch: 'ch03', pages: '71' },
       { ch: 'ch07', pages: '347, 352' },
       { ch: 'ch08', pages: '366–368, 377' },
-      { ch: 'ch09', pages: '395–400' }
+      { ch: 'ch09', pages: '395–400' },
+      { ch: 'ch10', pages: '426' }
     ],
     facts: [
       { ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' },
       { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' },
       { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' },
-      { ch: 'ch09', pages: '395–400', text: 'Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.', sec: 's9-a2d' }
+      { ch: 'ch09', pages: '395–400', text: 'Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.', sec: 's9-a2d' },
+      { ch: 'ch10', pages: '426', text: 'Used off-label for sleep: not very sedating, but enhances **slow-wave**, restorative sleep and helps pain.', sec: 's10-arousal-blockers' }
     ]
   },
   {
@@ -2744,13 +3030,15 @@ SP.drugs = [
       { ch: 'ch03', pages: '71' },
       { ch: 'ch07', pages: '347, 352' },
       { ch: 'ch08', pages: '366–368, 377' },
-      { ch: 'ch09', pages: '395–400' }
+      { ch: 'ch09', pages: '395–400' },
+      { ch: 'ch10', pages: '426' }
     ],
     facts: [
       { ch: 'ch03', pages: '71', text: 'The α2δ protein is **the target of pregabalin and gabapentin**.', sec: 's3-vscc' },
       { ch: 'ch07', pages: '347, 352', text: 'Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.', sec: 's7-lamotrigine' },
       { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' },
-      { ch: 'ch09', pages: '395–400', text: 'Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.', sec: 's9-a2d' }
+      { ch: 'ch09', pages: '395–400', text: 'Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.', sec: 's9-a2d' },
+      { ch: 'ch10', pages: '426', text: 'Used off-label for sleep: not very sedating, but enhances **slow-wave**, restorative sleep and helps pain.', sec: 's10-arousal-blockers' }
     ]
   }
 ];

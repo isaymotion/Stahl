@@ -49,7 +49,8 @@ SP.targets = [
       { ch: 'ch02', pages: '31–32', text: 'Carries **norepinephrine, epinephrine and amphetamine** as well as dopamine; DAT has **high affinity for amphetamines**.', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '34', text: 'Methylphenidate, amphetamine and cocaine all act on **DAT and NET**.', sec: 's2-monoamine' },
       { ch: 'ch04', pages: '80–81', text: 'The **principal** route of dopamine inactivation where present (striatum), with COMT secondary. Some dopamine neurons lack DAT, unlike serotonin neurons, which are all thought to have SERT.', sec: 's4-da-synth' },
-      { ch: 'ch07', pages: '304–306', text: 'Rapid, brief **≥ 50%** DAT occupancy causes euphoria and reinforcement (cocaine); slow, long-lasting occupancy is less abusable. Bupropion occupies only about **10–30%** of striatal DATs.', sec: 's7-ndri' }
+      { ch: 'ch07', pages: '304–306', text: 'Rapid, brief **≥ 50%** DAT occupancy causes euphoria and reinforcement (cocaine); slow, long-lasting occupancy is less abusable. Bupropion occupies only about **10–30%** of striatal DATs.', sec: 's7-ndri' },
+      { ch: 'ch10', pages: '442–444', text: 'Modafinil/armodafinil: weak affinity but high levels give slow, sustained, **incomplete** DAT occupancy that raises **tonic** DA for wakefulness.', sec: 's10-modafinil' }
     ]
   },
   {
@@ -242,7 +243,8 @@ SP.targets = [
       { ch: 'ch05', pages: '184–187', text: 'On three populations of cortical glutamate neurons: blocking them **lowers** mesostriatal dopamine (antipsychotic), but **raises** nigrostriatal (fewer motor effects) and mesocortical dopamine (negative/cognitive/affective benefit).', sec: 's5-three-pathways' },
       { ch: 'ch05', pages: '187–189', text: 'On pituitary **lactotrophs**, serotonin at 5HT2A stimulates prolactin, so 5HT2A antagonism offsets D2-blocker hyperprolactinemia.', sec: 's5-5ht2a-prolactin' },
       { ch: 'ch05', pages: '204–222', text: 'Almost all drugs for psychosis bind **5HT2A more potently than D2**, except the D2 partial agonists.', sec: 's5-binding' },
-      { ch: 'ch07', pages: '311–314', text: 'SSRI-raised 5HT at 5HT2A (and 5HT2C) receptors may cause **sexual dysfunction, insomnia and anxiety**; SARIs block it. 5HT2A antagonism increases **slow-wave sleep**.', sec: 's7-sari' }
+      { ch: 'ch07', pages: '311–314', text: 'SSRI-raised 5HT at 5HT2A (and 5HT2C) receptors may cause **sexual dysfunction, insomnia and anxiety**; SARIs block it. 5HT2A antagonism increases **slow-wave sleep**.', sec: 's7-sari' },
+      { ch: 'ch10', pages: '424–425', text: '5HT2A antagonism (trazodone) specifically enhances **slow-wave** sleep.', sec: 's10-arousal-blockers' }
     ]
   },
   {
@@ -337,7 +339,8 @@ SP.targets = [
     stim: ['**Cataplexy** and **sleepiness in narcolepsy**', 'Possibly enhanced slow-wave sleep', 'Pain reduction in chronic pain and fibromyalgia', 'Possible use in alcohol use disorder and withdrawal'],
     facts: [
       { ch: 'ch02', pages: '39', text: '**Agonist** actions listed in Table 2-4 (cataplexy, sleepiness in narcolepsy, slow-wave sleep, pain, alcohol).', sec: 's2-receptor-tables' },
-      { ch: 'ch06', pages: '258', text: 'The G-protein-linked GABA receptor, possibly coupled to calcium or potassium channels.', sec: 's6-gaba' }
+      { ch: 'ch06', pages: '258', text: 'The G-protein-linked GABA receptor, possibly coupled to calcium or potassium channels.', sec: 's6-gaba' },
+      { ch: 'ch10', pages: '446–447', text: '**Sodium oxybate** is a GABA-B **partial agonist** (antagonist when GABA is high, agonist when low), improving slow-wave sleep and cataplexy.', sec: 's10-oxybate' }
     ]
   },
   {
@@ -347,7 +350,8 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '39', text: '**Agonist** actions at both MT1 and MT2 improve insomnia and circadian rhythms (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch06', pages: '274–275', text: 'Melatonin acting on the **SCN** resets circadian rhythms; early-evening melatonin may correct the phase delay of depression.', sec: 's6-circadian' },
-      { ch: 'ch07', pages: '306–308', text: '**Agomelatine** is an MT1/MT2 agonist; the so-called MT3 receptor is really the enzyme **NRH–quinone oxidoreductase 2**.', sec: 's7-agomelatine' }
+      { ch: 'ch07', pages: '306–308', text: '**Agomelatine** is an MT1/MT2 agonist; the so-called MT3 receptor is really the enzyme **NRH–quinone oxidoreductase 2**.', sec: 's7-agomelatine' },
+      { ch: 'ch10', pages: '439–440', text: '**MT1** inhibition of SCN neurons may promote sleep; **MT2** mediates phase shifting. Ramelteon (insomnia) and tasimelteon (non-24) are MT1/MT2 agonists.', sec: 's10-circadian' }
     ]
   },
   {
@@ -358,14 +362,29 @@ SP.targets = [
       { ch: 'ch02', pages: '40', text: '**Antagonist** actions: therapeutic for anxiety and insomnia; side effects of sedation and weight gain (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch02', pages: '45', text: '**H1 antagonists/antihistamines** may turn out to be **inverse agonists** in some brain areas.', sec: 's2-spectrum' },
       { ch: 'ch05', pages: '181, 198', text: 'Blocking H1 adds **weight gain and sedation**; with 5HT2C blockade it drives appetite on the metabolic highway. Quetiapine at 50 mg acts almost only here.', sec: 's5-fga' },
-      { ch: 'ch07', pages: '308–312, 335', text: 'H1 antagonism causes sedation and weight gain with mirtazapine and TCAs, and contributes to low-dose **trazodone**’s hypnotic action.', sec: 's7-sari' }
+      { ch: 'ch07', pages: '308–312, 335', text: 'H1 antagonism causes sedation and weight gain with mirtazapine and TCAs, and contributes to low-dose **trazodone**’s hypnotic action.', sec: 's7-sari' },
+      { ch: 'ch10', pages: '402–404, 425–426', text: 'H1 → PI → **cFOS**: wakefulness and alertness. **Diphenhydramine** (with M1 block) and low-dose **doxepin** (selective) are H1-antagonist hypnotics; ~80% occupancy may be needed for sleep.', sec: 's10-arousal-blockers' }
     ]
+  },
+  {
+    id: 'h2', name: 'Histamine H2 receptor', short: 'H2', family: 'G-protein-linked receptor', nt: 'histamine',
+    summary: 'Postsynaptic receptor (cAMP/PKA/CREB) best known for gastric acid secretion; its brain role is unclear and not directly linked to wakefulness.',
+    facts: [{ ch: 'ch10', pages: '402–404', text: 'Target of anti-ulcer drugs; present in brain but **not directly** linked to wakefulness.', sec: 's10-histamine' }]
   },
   {
     id: 'h3', name: 'Histamine H3 receptor', short: 'H3', family: 'G-protein-linked receptor', nt: 'histamine',
     summary: 'Antagonism or inverse agonism at H3 improves daytime sleepiness.',
-    block: ['Antagonism/inverse agonism: improvement of **daytime sleepiness**'],
-    facts: [{ ch: 'ch02', pages: '40', text: 'Antagonist/inverse agonist actions improve daytime sleepiness (Table 2-4).', sec: 's2-receptor-tables' }]
+    block: ['Antagonism/inverse agonism: improvement of **daytime sleepiness**', '**Pitolisant**: approved for narcolepsy (Chapter 10)'],
+    facts: [
+      { ch: 'ch02', pages: '40', text: 'Antagonist/inverse agonist actions improve daytime sleepiness (Table 2-4).', sec: 's2-receptor-tables' },
+      { ch: 'ch10', pages: '404, 444–446', text: 'Presynaptic **autoreceptor** gatekeeper: histamine binding turns off release. **Pitolisant** blocks it to release histamine for narcolepsy.', sec: 's10-newer' }
+    ]
+  },
+  {
+    id: 'adenosine', name: 'Adenosine receptors', short: 'Adenosine-R', family: 'G-protein-linked receptor', ntLabel: 'Adenosine (purine)',
+    summary: 'Receptors for adenosine, which accumulates with wakefulness (homeostatic sleep drive) and heterodimerizes with D2 receptors to reduce their dopamine affinity. Caffeine blocks them.',
+    block: ['**Wake promotion** and less fatigue (caffeine)'],
+    facts: [{ ch: 'ch10', pages: '408, 440–441', text: 'Adenosine is the “**accountant**” of fatigue; adenosine–D2 heterodimers lower D2 affinity for DA, and **caffeine** restores it.', sec: 's10-caffeine-stimulants' }]
   },
   {
     id: 'm1', name: 'Muscarinic M1 receptor', short: 'M1', family: 'G-protein-linked receptor', nt: 'acetylcholine',
@@ -420,9 +439,13 @@ SP.targets = [
   },
   {
     id: 'ox', name: 'Orexin receptors (OX1, OX2)', short: 'OX1/OX2', family: 'G-protein-linked receptor', nt: 'orexin',
-    summary: 'Receptors for orexin A and B; antagonists are hypnotics for insomnia.',
+    summary: 'Receptors for orexin A and B. OX1 (orexin A only) is high in the locus coeruleus; OX2 (orexin A and B) is high in the TMN and carries most of orexin’s wake effect. Antagonists (DORAs) are hypnotics.',
     block: ['**Hypnotic** for insomnia'],
-    facts: [{ ch: 'ch02', pages: '40', text: '**Antagonist** actions at OX1 and OX2 are hypnotic for insomnia (Table 2-4); detailed in Chapter 10.', sec: 's2-receptor-tables' }]
+    facts: [
+      { ch: 'ch02', pages: '40', text: '**Antagonist** actions at OX1 and OX2 are hypnotic for insomnia (Table 2-4); detailed in Chapter 10.', sec: 's2-receptor-tables' },
+      { ch: 'ch10', pages: '407–408', text: '**OX1**: ↑ calcium, Na/Ca exchanger. **OX2**: ↑ NMDA expression, GIRK inactivation.', sec: 's10-orexin' },
+      { ch: 'ch10', pages: '423–424, 428–430', text: '**DORAs** (suvorexant: OX1 = OX2; lemborexant: OX2 > OX1) need about **65%** occupancy; endogenous orexin competes with them.', sec: 's10-dora' }
+    ]
   },
   {
     id: 'crf', name: 'Corticotropin-releasing factor (CRF) receptors', short: 'CRF-R', family: 'G-protein-linked receptor', ntLabel: 'Neuropeptide (CRF)',
@@ -499,7 +522,8 @@ SP.targets = [
       { ch: 'ch06', pages: '259–262', text: 'Benzodiazepine-sensitive receptors need **two β, γ2 or γ3, and two α1–3**; one benzodiazepine binds between γ and α, two GABA molecules between α and β. **α1** subunits relate to **sleep**, **α2/α3** to **anxiety**; current benzodiazepines are nonselective.', sec: 's6-gabaa' },
       { ch: 'ch06', pages: '262–264', text: 'Benzodiazepine-insensitive receptors (α4, α6, γ1 or δ) are **extrasynaptic** and mediate **tonic** inhibition; **neuroactive steroids** bind between α and δ. Abnormal γ2, α2 or δ expression is linked to **epilepsy**.', sec: 's6-neurosteroids' },
       { ch: 'ch07', pages: '320–322', text: 'Neuroactive steroids (brexanolone) act at both benzodiazepine-sensitive and **benzodiazepine-insensitive** GABA-A receptors; the latter (extrasynaptic, tonic) are thought to carry the antidepressant effect.', sec: 's7-neurosteroids' },
-      { ch: 'ch08', pages: '366–367', text: 'Benzodiazepines enhance **phasic** inhibition at postsynaptic GABA-A receptors **in the amygdala** (less fear) and on CSTC **inhibitory interneurons** (less worry); they act **immediately**.', sec: 's8-bzd' }
+      { ch: 'ch08', pages: '366–367', text: 'Benzodiazepines enhance **phasic** inhibition at postsynaptic GABA-A receptors **in the amygdala** (less fear) and on CSTC **inhibitory interneurons** (less worry); they act **immediately**.', sec: 's8-bzd' },
+      { ch: 'ch10', pages: '421–423', text: 'Hypnotic GABA-A PAMs need about **25–30%** occupancy. **α1** = sedation, amnesia, tolerance; α2/α3 = anxiolysis, muscle relaxation; α5 = cognition. Zolpidem and zaleplon are α1-selective.', sec: 's10-gaba-hypnotics' }
     ],
     updates: [{ year: '2023', title: 'Oral neurosteroid approved', text: '**Zuranolone**, an oral GABA-A positive allosteric modulator, was approved in August 2023 for postpartum depression.', source: 'FDA, August 2023' }]
   },
@@ -556,7 +580,8 @@ SP.targets = [
       { ch: 'ch05', pages: '169, 237', text: '**Amantadine**’s weak NMDA antagonism may explain its benefit in DIP; NRX101 pairs the glycine-site agent **D-cycloserine** with lurasidone.', sec: 's5-motor' },
       { ch: 'ch07', pages: '328–332', text: 'Ketamine blocks NMDA at the open-channel **PCP site**: NMDA block on GABA interneurons → glutamate burst → **AMPA** → mTOR or BDNF/VEGF → rapid synaptogenesis.', sec: 's7-ketamine' },
       { ch: 'ch08', pages: '372–375', text: 'NMDA receptors embed **fear conditioning** via LTP in the lateral and central amygdala; boosting NMDA action during **exposure therapy** might strengthen **fear extinction** instead.', sec: 's8-novel' },
-      { ch: 'ch09', pages: '382–383', text: 'Glutamate acts at NMDA and AMPA receptors in the dorsal horn; glycine acts at the NMDA glycine site (Figure 9-2).', sec: 's9-ascending' }
+      { ch: 'ch09', pages: '382–383', text: 'Glutamate acts at NMDA and AMPA receptors in the dorsal horn; glycine acts at the NMDA glycine site (Figure 9-2).', sec: 's9-ascending' },
+      { ch: 'ch10', pages: '404–406', text: 'Histamine can act at the NMDA **polyamine** allosteric site; OX2 stimulation increases NMDA receptor expression.', sec: 's10-histamine' }
     ],
     updates: [
       { year: '2022', title: 'Dextromethorphan–bupropion approved', text: 'Approved for major depressive disorder in August 2022 (Auvelity).', source: 'FDA, August 2022' },
@@ -632,7 +657,8 @@ SP.targets = [
       { ch: 'ch06', pages: '253', text: 'MAO-A or MAO-B in mitochondria destroys norepinephrine in the presynaptic neuron and elsewhere.', sec: 's6-ne' },
       { ch: 'ch07', pages: '336–338', text: '**MAO-A** prefers 5HT and NE (major form outside the brain); **MAO-B** prefers trace amines (serotonin neurons, platelets, lymphocytes); both destroy DA and **tyramine**. Brain MAO-A must be inhibited for antidepressant action; inhibiting both raises DA too.', sec: 's7-maoi' },
       { ch: 'ch07', pages: '336', text: 'Phenelzine, tranylcypromine, isocarboxazid and selegiline inhibit MAO **irreversibly**: activity returns only after new enzyme is made, about **2–3 weeks**.', sec: 's7-maoi' },
-      { ch: 'ch08', pages: '377', text: 'MAOIs are much neglected but can be **powerful in treatment-resistant panic disorder**.', sec: 's8-panic' }
+      { ch: 'ch08', pages: '377', text: 'MAOIs are much neglected but can be **powerful in treatment-resistant panic disorder**.', sec: 's8-panic' },
+      { ch: 'ch10', pages: '403', text: '**MAO-B** converts N-methylhistamine to inactive N-MIAA.', sec: 's10-histamine' }
     ]
   },
   {
@@ -682,6 +708,11 @@ SP.targets = [
       { ch: 'ch04', pages: '105–108', text: 'Decreased **GAD67** activity in schizophrenia GABA interneurons, with compensatory increases in postsynaptic α2 GABA-A receptors.', sec: 's4-nmda-hypo' },
       { ch: 'ch06', pages: '256', text: 'Makes GABA from glutamate in GABA neurons.', sec: 's6-gaba' }
     ]
+  },
+  {
+    id: 'hdc', name: 'Histidine decarboxylase (HDC)', short: 'HDC', family: 'Enzyme', nt: 'histamine',
+    summary: 'The enzyme that makes histamine from histidine.',
+    facts: [{ ch: 'ch10', pages: '402–404', text: 'Converts histidine to histamine in TMN neurons.', sec: 's10-histamine' }]
   },
   {
     id: 'gabat', name: 'GABA transaminase (GABA-T)', short: 'GABA-T', family: 'Enzyme', nt: 'gaba',
@@ -825,5 +856,10 @@ SP.targets = [
       { ch: 'ch05', pages: '204, 241', text: 'Haloperidol binds a site labelled **σ** in Figure 5-29 (the caption calls it “omega”); **roluperidone** combines 5HT2A antagonism with **σ2** antagonism.', sec: 's5-first-agents' },
       { ch: 'ch07', pages: '294–295', text: '**Sertraline** and, more potently, **fluvoxamine** (possibly an agonist) bind σ1; the function of σ1 sites is the “sigma enigma.” Ketamine, dextromethorphan and dextromethadone also bind σ.', sec: 's7-ssri-agents' }
     ]
+  },
+  {
+    id: 'ghb', name: 'GHB receptor', short: 'GHB-R', family: 'Other', ntLabel: 'γ-Hydroxybutyrate (formed from GABA)',
+    summary: 'The receptor for naturally occurring γ-hydroxybutyrate; sodium oxybate is a full agonist here.',
+    facts: [{ ch: 'ch10', pages: '446–447', text: 'GHB is a natural brain product formed from GABA with its own receptors; sodium oxybate is a **full agonist** at them.', sec: 's10-oxybate' }]
   }
 ];

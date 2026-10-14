@@ -1,0 +1,41 @@
+/* Chapter 10 glossary terms: [term, definition in the app's own words, source chapter]. */
+SP.glossary = (SP.glossary || []).concat([
+  ["arousal spectrum", "Stahl’s dimmer-switch model running from sleep through alert wakefulness to hypervigilance, insomnia and psychosis.", "Ch 10"],
+  ["ascending reticular activating system", "Brainstem and hypothalamic arousal systems (histamine, dopamine, norepinephrine, serotonin, acetylcholine) that keep the cortex awake.", "Ch 10"],
+  ["tuberomammillary nucleus", "TMN: the hypothalamic nucleus containing all brain histamine neurons; the wake side of the sleep/wake switch.", "Ch 10"],
+  ["histidine decarboxylase", "The enzyme that converts histidine into histamine.", "Ch 10"],
+  ["orexin", "Orexin A and B (hypocretins): hypothalamic peptides that stabilize wakefulness by driving all arousal neurotransmitters.", "Ch 10"],
+  ["ventrolateral preoptic nucleus", "VLPO: the hypothalamic sleep center whose GABA neurons switch off arousal centers.", "Ch 10"],
+  ["homeostatic sleep drive", "The pressure to sleep that builds with time awake, tracked by accumulating adenosine.", "Ch 10"],
+  ["circadian wake drive", "The light-driven, SCN-controlled drive that stabilizes wakefulness through orexin during the day.", "Ch 10"],
+  ["adenosine", "A purine that accumulates with wakefulness, mediating the homeostatic sleep drive; caffeine blocks its receptors.", "Ch 10"],
+  ["ultradian cycle", "The roughly 90-minute non-REM/REM sleep cycle repeated 4–5 times a night.", "Ch 10"],
+  ["REM sleep", "Rapid eye movement sleep: wake-like EEG, muscle atonia and dreaming; acetylcholine peaks and monoamines are lowest.", "Ch 10"],
+  ["slow-wave sleep", "Deep non-REM sleep (stages 3–4), enhanced by 5HT2A antagonists, α2δ ligands and sodium oxybate.", "Ch 10"],
+  ["insomnia", "Difficulty initiating or maintaining sleep or poor-quality sleep, conceptualized as nighttime hyperarousal.", "Ch 10"],
+  ["sleep latency", "Time taken to fall asleep; over 30 minutes suggests insomnia, 8 minutes or less on MSLT suggests narcolepsy.", "Ch 10"],
+  ["WASO", "Wakefulness after sleep onset; over 30 minutes is a suggested insomnia criterion.", "Ch 10"],
+  ["sleep efficiency", "The percentage of time in bed spent asleep; below 85% suggests insomnia.", "Ch 10"],
+  ["DORA", "Dual orexin receptor antagonist: a hypnotic that blocks OX1 and OX2 receptors (suvorexant, lemborexant).", "Ch 10"],
+  ["rebound insomnia", "Insomnia worse than the original after stopping a hypnotic, especially benzodiazepines.", "Ch 10"],
+  ["sleep hygiene", "Habits that support sleep: bed only for sleep, regular schedule, no evening stimulants, a dark, cool, quiet room.", "Ch 10"],
+  ["excessive daytime sleepiness", "Deficient daytime arousal, most often from sleep deprivation but also OSA, narcolepsy and circadian disorders.", "Ch 10"],
+  ["obstructive sleep apnea", "OSA: repeated complete or partial upper-airway collapse in sleep with oxygen drops and arousals; first-line treatment is CPAP.", "Ch 10"],
+  ["narcolepsy", "A central hypersomnia with sleep intrusions and abnormal REM; with cataplexy it reflects loss of orexin neurons.", "Ch 10"],
+  ["cataplexy", "Sudden loss of muscle tone triggered by emotion, from REM-type motor inhibition intruding into waking.", "Ch 10"],
+  ["idiopathic hypersomnia", "A central hypersomnia with long or normal non-refreshing sleep, constant sleepiness and fewer than two SOREMPs.", "Ch 10"],
+  ["SOREMP", "Sleep-onset REM period; two or more on the MSLT support narcolepsy.", "Ch 10"],
+  ["multiple sleep latency test", "MSLT: daytime nap test measuring sleep latency and SOREMPs, used to diagnose narcolepsy.", "Ch 10"],
+  ["hypnagogic hallucinations", "Vivid perceptions at the transition between sleep and waking, common in narcolepsy.", "Ch 10"],
+  ["shift work disorder", "Insomnia or sleepiness for at least a month linked to work schedules overlapping usual sleep time.", "Ch 10"],
+  ["advanced sleep phase disorder", "Falling asleep and waking much earlier than desired, with normal sleep; linked to PER2.", "Ch 10"],
+  ["delayed sleep phase disorder", "Inability to fall asleep until early morning and to wake until late morning; the most common circadian disorder.", "Ch 10"],
+  ["non-24-hour sleep–wake disorder", "A free-running sleep/wake rhythm, mainly in the blind, treated with tasimelteon.", "Ch 10"],
+  ["bright light therapy", "Timed exposure to bright light (e.g., 10,000 lux) to shift circadian rhythms; also used for depression.", "Ch 10"]
+]);
+SP.glossaryAliases = Object.assign(SP.glossaryAliases || {}, {
+  "tmn": "tuberomammillary nucleus", "tuberomamillary nucleus": "tuberomammillary nucleus", "orexins": "orexin", "hypocretin": "orexin", "hypocretins": "orexin",
+  "vlpo": "ventrolateral preoptic nucleus", "ventrolateral preoptic area": "ventrolateral preoptic nucleus", "dual orexin receptor antagonist": "dora", "dual orexin receptor antagonists": "dora", "doras": "dora",
+  "osa": "obstructive sleep apnea", "sorem": "soremp", "soremps": "soremp", "mslt": "multiple sleep latency test",
+  "aspd": "advanced sleep phase disorder", "dspd": "delayed sleep phase disorder", "rem": "rem sleep", "eds": "excessive daytime sleepiness"
+});

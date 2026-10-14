@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 11,
+    date: "2026-10-14",
+    title: "Chapter 10: Sleep and Wakefulness",
+    summary: "Chapter 10 adds the histamine and orexin networks, every class of hypnotic and wake-promoting agent, and the disorders of insomnia and sleepiness.",
+    items: [
+      { type: "chapter", ch: "ch10", text: "Chapter 10: study guide (19 sections), high-yield summary, mechanism, drug and clinical cards, and 42 board-style questions.", href: "#/c/ch10/guide", link: "Open Chapter 10" },
+      { type: "update", text: "Library: histamine and orexin now have synthesis, termination and pathway entries; 16 new drugs (the five benzodiazepine hypnotics, suvorexant, lemborexant, daridorexant, diphenhydramine, doxylamine, ramelteon, tasimelteon, caffeine, solriamfetol, pitolisant, oveporexton); new targets H2, adenosine receptors, GHB receptor and histidine decarboxylase.", href: "#/nt/orexin", link: "Orexin" },
+      { type: "feature", text: "Symptoms & circuits: seven maps for insomnia onset and maintenance, daytime sleepiness, cataplexy and the circadian rhythm disorders.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Post-publication update boxes: daridorexant (2022), once-nightly sodium oxybate (2023), tirzepatide for OSA (2024), pitolisant for children (2024) and oveporexton, the first orexin agonist (2026).", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 10,
     date: "2026-10-08",
     title: "Backup progress",

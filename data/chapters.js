@@ -75,7 +75,13 @@ SP.manifest = [
     summary: 'Pain as a psychiatric vital sign; the nociceptive pathway from Aβ, Aδ and C fibers through the dorsal horn to the brain; peripheral and central (segmental and suprasegmental) sensitization; the spectrum from mood and anxiety disorders to fibromyalgia and neuropathic pain; descending opioid, noradrenergic and serotonergic inhibition and why SNRIs work; α2δ ligands and open-channel block; and treating the ancillary symptoms of fibromyalgia.',
     files: SP.CHAPTER_FILES
   },
-  { id: 'ch10', number: 10, ready: false, pages: '401–448', title: 'Disorders of Sleep and Wakefulness and Their Treatment: Neurotransmitter Networks for Histamine and Orexin', short: 'Sleep and wakefulness', summary: 'The sleep–wake circuitry, histamine and orexin, insomnia and excessive sleepiness, and their treatments.' },
+  {
+    id: 'ch10', number: 10, ready: true, pages: '401–448',
+    title: 'Disorders of Sleep and Wakefulness and Their Treatment: Neurotransmitter Networks for Histamine and Orexin',
+    short: 'Sleep and wakefulness',
+    summary: 'The arousal spectrum; histamine and orexin networks; homeostatic and circadian drives, the VLPO switch and ultradian cycles; insomnia as hyperarousal and every hypnotic class (benzodiazepines, Z drugs, DORAs, trazodone, antihistamines, melatonergic agents) with occupancy thresholds; and sleepiness from OSA, narcolepsy, idiopathic hypersomnia and circadian disorders, treated with caffeine, stimulants, modafinil, solriamfetol, pitolisant and sodium oxybate.',
+    files: SP.CHAPTER_FILES
+  },
   { id: 'ch11', number: 11, ready: false, pages: '449–485', title: 'Attention Deficit Hyperactivity Disorder and Its Treatment', short: 'ADHD', summary: 'Prefrontal circuits in ADHD and how stimulants and nonstimulants act on them.' },
   { id: 'ch12', number: 12, ready: false, pages: '486–537', title: 'Dementia: Causes, Symptomatic Treatments, and the Neurotransmitter Network Acetylcholine', short: 'Dementia and acetylcholine', summary: 'Causes of dementia, acetylcholine, and treatments for cognitive and behavioral symptoms.' },
   { id: 'ch13', number: 13, ready: false, pages: '538–578', title: 'Impulsivity, Compulsivity, and Addiction', short: 'Impulsivity, compulsivity and addiction', summary: 'Reward circuits, impulsive–compulsive disorders, substances of abuse and their treatments.' }
