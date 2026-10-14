@@ -110,6 +110,7 @@ SP.extraFiles = [
   'data/db/neurotransmitters.js',
   'data/db/targets.js',
   'data/db/drugs.js',
+  'data/db/families.js',
   'data/db/circuits.js',
   'data/changelog.js'
 ];

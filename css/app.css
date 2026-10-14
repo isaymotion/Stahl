@@ -1436,3 +1436,56 @@ a.ref-chip:hover { background: color-mix(in srgb, var(--m-clin) 12%, transparent
 .lib-sec .profile__key { font: 400 .78rem/1.7 var(--sans); color: var(--ink-3); }
 .lib-sec .profile__a small { font-family: var(--sans); }
 @media (max-width: 1299px) { .g-sec { scroll-margin-top: calc(var(--top) + 80px); } }
+
+/* ---------- phone / narrow layout fixes (loaded last so they win) ---------- */
+@media (max-width: 980px) {
+  .hero__grid { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .hero h1 { max-width: none; }
+}
+@media (max-width: 640px) {
+  .hero__grid { padding-top: 24px; padding-bottom: 26px; gap: 18px; }
+  .hero h1 { font-size: clamp(1.9rem, 9vw, 2.4rem); }
+  .hero__lede { font-size: .98rem; line-height: 1.5; }
+  .hero__actions { display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .hero__actions .btn { width: 100%; justify-content: center; text-align: center; }
+  .bloom { display: block; }
+  .bloom__for { margin-bottom: 6px; }
+  .bloom .spectrum { display: grid; grid-template-columns: minmax(0, 1fr); grid-auto-rows: auto; }
+  .bloom .spectrum a { padding: 9px 0 9px 24px; border-top: 1px solid var(--rule); }
+  .bloom .spectrum li:first-child a { border-top: 0; }
+  .bloom .spectrum__blurb { font-size: .82rem; }
+  .today, .tools { grid-template-columns: minmax(0, 1fr) !important; }
+  .today__chapters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .chapter-row { grid-template-columns: 40px minmax(0, 1fr); }
+  .chapter-row .meter { grid-column: 1 / -1; }
+  .chapter-row__stats { gap: 4px 12px; }
+}
+
+/* ---------- drug type chips (compare, nomenclature) ---------- */
+.fam-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.fam-chips .filter { text-decoration: none; }
+.fam-chips .muted { font-weight: 500; opacity: .75; margin-left: 2px; }
+.cmp-filter { margin: 0 0 6px; }
+.cmp-filter__label { font: 700 .78rem/1 var(--sans); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); margin: 0 0 8px; }
+.cmp-pick { align-items: end; }
+.cmp-pick .gloss__search { flex: 1 1 100%; }
+.nbn-jump { position: sticky; top: var(--top, 0px); z-index: 5; background: var(--paper); padding: 10px 0 6px; margin-bottom: 6px; max-height: 38vh; overflow: auto; }
+.nbn-fam { margin: 0 0 26px; scroll-margin-top: 90px; }
+.nbn-fam h2 { font-size: 1.15rem; margin: 0 0 8px; }
+@media (max-width: 640px) {
+  .fam-chips { flex-wrap: nowrap; overflow-x: auto; margin-left: -16px; margin-right: -16px; padding: 2px 16px 8px; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+  .fam-chips::-webkit-scrollbar { display: none; }
+  .fam-chips .filter { flex: 0 0 auto; white-space: nowrap; }
+  .nbn-jump { position: static; max-height: none; }
+}
+@media (max-width: 640px) {
+  .nbn-fam .table-wrap { overflow: visible; border: 0; background: none; }
+  .nbn-fam table, .nbn-fam tbody { display: block; }
+  .nbn-fam thead { display: none; }
+  .nbn-fam tr { display: block; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r-md); padding: 10px 14px; margin: 0 0 10px; }
+  .nbn-fam tr.table-group { background: none; border: 0; padding: 8px 2px 0; margin: 4px 0 6px; }
+  .nbn-fam tr.table-group td { display: block; padding: 0; font: 700 .78rem/1.2 var(--sans); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); }
+  .nbn-fam th[scope="row"] { display: block; padding: 0 0 4px; border: 0; background: none; font-size: 1.02rem; }
+  .nbn-fam td[data-label] { display: block; padding: 3px 0; border: 0; }
+  .nbn-fam td[data-label]::before { content: attr(data-label); display: block; font: 700 .72rem/1.4 var(--sans); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); }
+}

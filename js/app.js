@@ -22,7 +22,7 @@
   /* ---------- modes ---------- */
   var MODES = [
     { key: 'guide', label: 'Study guide', short: 'Study guide', css: 'guide', blurb: 'The whole chapter, explained and organized for learning.' },
-    { key: 'high-yield', label: 'High yield', short: 'High yield', css: 'hy', blurb: 'The must-know facts, with a printable summary.' },
+    { key: 'high-yield', label: 'High yield', short: 'High yield', css: 'hy', blurb: 'The must-know facts, with a printable PDF summary.' },
     { key: 'mech', label: 'Mechanism cards', short: 'Mechanisms', css: 'mech', deck: true, blurb: 'Neuroscience, receptors and how drugs act.' },
     { key: 'drugs', label: 'Drug cards', short: 'Drugs', css: 'drug', deck: true, blurb: 'Agents, binding profiles and side effects.' },
     { key: 'clinical', label: 'Clinical cards', short: 'Clinical', css: 'clin', deck: true, blurb: 'Symptoms, circuits and treatment strategy.' },
@@ -319,7 +319,7 @@
         var active = cur[2] === 'cards' ? cur[3] : (cur[2] || 'guide');
         sub = '<ul class="nav-modes">' + chapterModes(ch).map(function (md) {
           return '<li><a class="nav-mode c-' + md.css + (md.key === active ? ' is-active' : '') + '" href="' + modeHref(ch, md) + '"' + (md.key === active ? ' aria-current="page"' : '') + '>' + esc(md.short) + '</a></li>';
-        }).join('') + '<li><a class="nav-mode c-hy' + (active === 'handout' ? ' is-active' : '') + '" href="#/c/' + ch.id + '/handout">Printable summary</a></li></ul>';
+        }).join('') + '<li><a class="nav-mode c-hy' + (active === 'handout' ? ' is-active' : '') + '" href="#/c/' + ch.id + '/handout">High-yield PDF</a></li></ul>';
       }
       var href = m.ready ? '#/c/' + m.id + '/guide' : '#/soon/' + m.id;
       return '<li class="nav-ch' + (m.ready ? '' : ' is-soon') + (open ? ' is-open' : '') + (curCh === m.id ? ' is-current' : '') + '">' +
@@ -342,7 +342,7 @@
       '</ul></div>' +
       '<div class="nav-group"><p class="nav-label">For educators</p><ul>' +
         item('#/teach', 'teach', 'Teaching mode', 'teach') +
-        item('#/print-all', 'print-all', 'Print all high-yield', 'print') +
+        item('#/print-all', 'print-all', 'All high-yield (PDF)', 'print') +
         item('#/whats-new', 'whats-new', 'What’s new', 'news', 'news-nav') +
       '</ul></div>';
     markNav();
@@ -504,7 +504,7 @@
       '</div></section>' +
       '<section class="wrap home-section"><h2>How to study a chapter</h2><div class="howto">' +
         '<div><h3>Read the study guide</h3><p>Work through it once, end to end. Tap any dotted term for its definition, and follow drug and receptor links into the library.</p></div>' +
-        '<div><h3>Test yourself on high yield</h3><p>Switch on “Hide key facts” and recall each blank before you tap it. Print the one-page summary for the night before.</p></div>' +
+        '<div><h3>Test yourself on high yield</h3><p>Switch on “Hide key facts” and recall each blank before you tap it. Make a one-page PDF summary for the night before.</p></div>' +
         '<div><h3>Review a little every day</h3><p>Do the day’s due cards, sit a timed exam each week, and clear your mistakes pile. Progress stays on this device; use <a href="#backup" class="js-backup-link">Backup progress</a> in the footer to move it to another one.</p></div>' +
       '</div></section>';
     setView('home', html);
@@ -715,7 +715,7 @@
       '<div class="wrap hy-page' + (quiz ? ' quiz-on' : '') + '">' +
         '<div class="hy-tools"><label class="switch"><input type="checkbox" id="hy-quiz"' + (quiz ? ' checked' : '') + '> Hide key facts</label>' +
         '<p>With key facts hidden, each bold fact becomes a blank. Say the answer, then tap the blank to check.</p>' +
-        '<a class="btn hy-tools__print" href="#/c/' + ch.id + '/handout">Printable summary</a></div>' +
+        '<a class="btn hy-tools__print" href="#/c/' + ch.id + '/handout">Create PDF</a></div>' +
         '<div class="hy-grid">' + topics + '</div>' +
       '</div>';
     setView(key, html, focusTarget);
@@ -1529,21 +1529,50 @@
     draw();
   }
 
-  /* ---------- printable handout ----------
-     One sheet per chapter built from the high-yield list. The font size is fitted automatically
-     so the chosen topics fill exactly one page; "Fill-in worksheet" turns every bold fact into a blank. */
-  var PAPER = { a4: { label: 'A4', w: '210mm', h: '296.5mm', page: 'A4' }, letter: { label: 'Letter', w: '8.5in', h: '10.97in', page: 'letter' } };
+  /* ---------- high-yield PDF ----------
+     Builds a real PDF (two columns, page numbers, no browser header or footer) from the high-yield list.
+     The type size is fitted automatically to the number of pages chosen. */
+  var PAPER = { a4: { label: 'A4' }, letter: { label: 'Letter' } };
   var ATTRIBUTION = 'App created by Isabella Navarro, MD. Latest version October 2026. isaymotion@gmail.com';
+  var pdfLoading = null;
+  function loadPdf() {
+    if (window.SP_PDF && window.SP_PDF_FONTS) return Promise.resolve(window.SP_PDF);
+    if (pdfLoading) return pdfLoading;
+    function add(src) {
+      return new Promise(function (res, rej) {
+        var s = document.createElement('script'); s.src = src; s.onload = res; s.onerror = function () { rej(new Error('Could not load ' + src)); };
+        document.head.appendChild(s);
+      });
+    }
+    pdfLoading = add('js/pdf-fonts.js').then(function () { return add('js/pdf.js'); }).then(function () { return window.SP_PDF; });
+    pdfLoading.catch(function () { pdfLoading = null; });
+    return pdfLoading;
+  }
+  function richText(s) { return String(s == null ? '' : s).replace(XREF_RE, function (m, type, id, label) { return xrefLabel(type, id, label); }); }
+  function chapterPdfSpec(ch, topics, prefs) {
+    return {
+      paper: prefs.paper, blank: prefs.mode === 'blank', footer: ATTRIBUTION, title: 'Chapter ' + ch.number + ': ' + ch.title + ' (high-yield)',
+      chapters: [{
+        kicker: 'High-yield ' + (prefs.mode === 'blank' ? 'worksheet' : 'handout'),
+        title: 'Chapter ' + ch.number + ': ' + ch.title,
+        source: [BOOK + (ch.pages ? ', pp. ' + ch.pages : '')],
+        running: 'Chapter ' + ch.number + ': ' + ch.title + ' (high yield)',
+        topics: topics.map(function (t) { return { topic: t.topic, items: t.items.map(richText) }; })
+      }]
+    };
+  }
+  function pdfErrorMsg(e) { return 'Could not create the PDF (' + ((e && e.message) || 'unknown error') + '). Please try again.'; }
 
   function renderHandout(ch) {
     if (!(ch.highYield || []).length) return renderMissing();
     var prefs = store.get('handoutPrefs', { paper: 'a4', mode: 'key', pages: 1 });
     if (!PAPER[prefs.paper]) prefs.paper = 'a4';
+    if (prefs.mode !== 'blank') prefs.mode = 'key';
     var hyCount = 0; ch.highYield.forEach(function (t) { hyCount += t.items.length; });
-    var MAX_PAGES = Math.min(ch.highYield.length, hyCount > 150 ? 4 : 2);
+    var MAX_PAGES = Math.min(ch.highYield.length, hyCount > 150 ? 4 : 3);
     if (!(prefs.pages >= 1 && prefs.pages <= MAX_PAGES)) prefs.pages = 1;
     prefs.pages = Math.round(prefs.pages);
-    var MIN_PT = 6.5, autoTwo = false;
+    var autoMore = false;
     var PAGE_WORDS = ['', 'one page', 'two pages', 'three pages', 'four pages'];
     var on = {};
     ch.highYield.forEach(function (t) { on[t.id] = true; });
@@ -1553,127 +1582,69 @@
       }).join('') + '</div>';
     }
     var html = '<div class="wrap page handout-page">' +
-      '<header class="page__head no-print"><p class="crumb"><a href="#/c/' + ch.id + '/high-yield">Chapter ' + ch.number + ' high yield</a></p><h1>Printable summary</h1>' +
-        '<p>A print-ready sheet from the Chapter ' + ch.number + ' high-yield list. The type size adjusts automatically to fill the page; untick topics to make room or to focus a session.</p></header>' +
-      '<div class="handout-tools no-print">' +
+      '<header class="page__head"><p class="crumb"><a href="#/c/' + ch.id + '/high-yield">Chapter ' + ch.number + ' high yield</a></p><h1>High-yield PDF</h1>' +
+        '<p>Make a clean two-column PDF of the Chapter ' + ch.number + ' high-yield list to save, print or share. The type size adjusts to the number of pages you choose; untick topics to focus a session.</p></header>' +
+      '<div class="handout-tools">' +
         '<div class="handout-tools__row"><span class="handout-tools__label">Paper</span>' + seg('paper', [['a4', 'A4'], ['letter', 'Letter']], prefs.paper) + '</div>' +
         '<div class="handout-tools__row"><span class="handout-tools__label">Version</span>' + seg('mode', [['key', 'Answer key'], ['blank', 'Fill-in worksheet']], prefs.mode) + '</div>' +
-        '<div class="handout-tools__row"><span class="handout-tools__label">Length</span>' + seg('pages', [[1, 'One page'], [2, MAX_PAGES > 2 ? 'Two pages' : 'Two pages (front and back)'], [3, 'Three pages'], [4, 'Four pages']].slice(0, MAX_PAGES), prefs.pages) + '</div>' +
+        '<div class="handout-tools__row"><span class="handout-tools__label">Length</span>' + seg('pages', [[1, 'One page'], [2, 'Two pages'], [3, 'Three pages'], [4, 'Four pages']].slice(0, MAX_PAGES), prefs.pages) + '</div>' +
         '<details class="handout-topics"><summary id="ho-sum"></summary><div class="handout-topics__list">' + ch.highYield.map(function (t) {
           return '<label class="check"><input type="checkbox" data-topic="' + t.id + '" checked> ' + esc(t.topic) + ' <span class="muted">(' + t.items.length + ')</span></label>';
         }).join('') + '</div></details>' +
-        '<div class="handout-tools__go"><button class="btn btn--solid" type="button" id="ho-print">Print or save as PDF</button><p class="handout-fit" id="ho-fit" aria-live="polite"></p></div>' +
-      '</div>' +
-      '<div class="sheet-frame" id="ho-frame"><div class="sheets" id="ho-sheets"></div></div>' +
-      '</div>';
+        '<div class="handout-tools__go"><button class="btn btn--solid" type="button" id="ho-print">Create PDF</button><p class="handout-fit" id="ho-fit" aria-live="polite"></p></div>' +
+      '</div></div>';
     setView('handout:' + ch.id, html);
-    document.title = 'Ch ' + ch.number + ' handout — Stahl Study Companion';
-    document.body.classList.add('print-handout');
-    var pageStyle = document.createElement('style');
-    pageStyle.id = 'page-size';
-    document.head.appendChild(pageStyle);
-    var frame = main.querySelector('#ho-frame'), wrap = main.querySelector('#ho-sheets'), fitMsg = main.querySelector('#ho-fit'), printBtn = main.querySelector('#ho-print');
+    document.title = 'Ch ' + ch.number + ' high-yield PDF — Stahl Study Companion';
+    var fitMsg = main.querySelector('#ho-fit'), printBtn = main.querySelector('#ho-print'), sum = main.querySelector('#ho-sum');
+    var alive = true, lastPlan = null;
 
-    function weight(t) { var n = 0; t.items.forEach(function (it) { n += plain(it).length + 40; }); return n + 60; }
-    function split(topics, k) {
-      // keep topic order; start a new sheet once the running total passes each equal share of the text
-      k = Math.min(k, topics.length);
-      if (k <= 1) return [topics];
-      var total = 0; topics.forEach(function (t) { total += weight(t); });
-      var groups = [[]], acc = 0;
-      topics.forEach(function (t, i) {
-        var w = weight(t), g = groups.length;
-        var left = topics.length - i;           // topics still to place, including this one
-        var need = k - g;                       // sheets still to open after the current one
-        var cur = groups[g - 1];
-        if (cur.length && g < k && (acc + w / 2 > total * g / k || left <= need)) { groups.push([t]); }
-        else cur.push(t);
-        acc += w;
-      });
-      return groups;
-    }
-    function sheetHTML(topics, idx, count) {
-      var paper = PAPER[prefs.paper], blank = prefs.mode === 'blank';
-      return '<div class="sheet' + (blank ? ' sheet--blank' : '') + '" style="width:' + paper.w + ';height:' + paper.h + '">' +
-        '<header class="sheet__head"><div><p class="sheet__kicker">High-yield ' + (blank ? 'worksheet' : 'handout') + (count > 1 ? ', page ' + (idx + 1) + ' of ' + count : '') + '</p><h1>Chapter ' + ch.number + ': ' + esc(ch.title) + '</h1></div>' +
-          '<p class="sheet__src">' + esc(BOOK) + (ch.pages ? ', pp. ' + esc(ch.pages) : '') + (blank && idx === 0 ? '<br>Name ____________________ Date __________' : '') + '</p></header>' +
-        '<div class="sheet__body">' + (topics.length ? topics.map(function (t) {
-          return '<section class="sheet__topic"><h2>' + esc(t.topic) + '</h2><ul>' + t.items.map(function (it) { return '<li>' + fmt(it) + '</li>'; }).join('') + '</ul></section>';
-        }).join('') : '<p class="sheet__none">Choose at least one topic.</p>') + '</div>' +
-        '<footer class="sheet__foot">' + esc(ATTRIBUTION) + '</footer></div>';
-    }
-    function build() {
-      var paper = PAPER[prefs.paper];
-      pageStyle.textContent = '@media print { @page { size: ' + paper.page + '; margin: 0; } }';
-      var topics = ch.highYield.filter(function (t) { return on[t.id]; });
-      var pages = Math.max(1, Math.min(prefs.pages, topics.length || 1));
-      var groups = split(topics, pages);
-      wrap.innerHTML = groups.map(function (g, i) { return sheetHTML(g, i, groups.length); }).join('');
-      main.querySelector('#ho-sum').textContent = 'Topics: ' + topics.length + ' of ' + ch.highYield.length + ' included';
-      fit(topics.length, pages);
-      scale();
-    }
-    function overflows(body) { return body.scrollWidth > body.clientWidth + 1 || body.scrollHeight > body.clientHeight + 1; }
-    function fitOne(body) {
-      var lo = 4.5, hi = 11, best = lo;
-      body.style.fontSize = hi + 'pt';
-      if (!overflows(body)) return hi;
-      for (var k = 0; k < 14; k++) {
-        var mid = (lo + hi) / 2;
-        body.style.fontSize = mid + 'pt';
-        if (overflows(body)) hi = mid; else { best = mid; lo = mid; }
-      }
-      return best;
-    }
-    function fit(n, pages) {
-      var bodies = wrap.querySelectorAll('.sheet__body');
-      if (!n) { fitMsg.textContent = ''; printBtn.disabled = true; return; }
-      var best = 11;
-      bodies.forEach(function (b) { best = Math.min(best, fitOne(b)); });
-      var size = Math.floor(best * 0.97 * 10) / 10;   // a little slack for printer rendering
-      var bad = false;
-      bodies.forEach(function (b) { b.style.fontSize = size + 'pt'; if (overflows(b)) bad = true; });
-      var tooSmall = bad || size < MIN_PT;
-      printBtn.disabled = tooSmall;
-      fitMsg.className = 'handout-fit' + (tooSmall ? ' is-warn' : '');
-      fitMsg.textContent = tooSmall
-        ? 'Too long for ' + PAGE_WORDS[pages] + ' at a readable size. ' + (pages < MAX_PAGES ? 'Choose more pages, or untick a topic or two.' : 'Untick a topic or two.')
-        : (autoTwo && pages > 1 ? 'This chapter is too long for one page at a readable size, so ' + PAGE_WORDS[pages] + ' are selected. ' : '') +
-          'Fits on ' + PAGE_WORDS[pages] + ' at ' + size + ' pt.' + (autoTwo && pages > 1 ? ' Untick topics to use fewer pages.' : '');
-    }
-    function scale() {
-      var sheets = wrap.querySelectorAll('.sheet');
-      var avail = frame.clientWidth;
-      if (!sheets.length) return;
-      var w = sheets[0].offsetWidth, h = sheets[0].offsetHeight, gap = 24;
-      var s = Math.min(1, avail / w);
-      wrap.style.transform = s < 1 ? 'scale(' + s + ')' : '';
-      frame.style.height = ((h + gap) * sheets.length - gap) * s + 'px';
+    function topics() { return ch.highYield.filter(function (t) { return on[t.id]; }); }
+    function refresh() {
+      var ts = topics();
+      sum.textContent = 'Topics: ' + ts.length + ' of ' + ch.highYield.length + ' included';
+      if (!ts.length) { printBtn.disabled = true; fitMsg.className = 'handout-fit is-warn'; fitMsg.textContent = 'Choose at least one topic.'; return Promise.resolve(); }
+      printBtn.disabled = true; fitMsg.className = 'handout-fit'; fitMsg.textContent = 'Checking the fit…';
+      return loadPdf().then(function (P) {
+        if (!alive) return;
+        var spec = chapterPdfSpec(ch, ts, prefs); spec.maxPages = Math.min(prefs.pages, ts.length ? 99 : 1);
+        var pl = P.plan(spec); lastPlan = pl;
+        var bad = !pl.ok;
+        printBtn.disabled = bad;
+        fitMsg.className = 'handout-fit' + (bad ? ' is-warn' : '');
+        fitMsg.textContent = bad
+          ? 'Too long for ' + PAGE_WORDS[prefs.pages] + ' at a readable size. ' + (prefs.pages < MAX_PAGES ? 'Choose more pages, or untick a topic or two.' : 'Untick a topic or two.')
+          : (autoMore && prefs.pages > 1 ? 'This chapter is too long for one page at a readable size, so ' + PAGE_WORDS[prefs.pages] + ' are selected. ' : '') + 'Fits on ' + PAGE_WORDS[pl.count] + ' at ' + (Math.round(pl.size * 10) / 10) + ' pt.';
+      }).catch(function (e) { fitMsg.className = 'handout-fit is-warn'; fitMsg.textContent = pdfErrorMsg(e); });
     }
     main.querySelectorAll('input[name=paper], input[name=mode], input[name=pages]').forEach(function (i) {
-      i.addEventListener('change', function () { if (i.name === 'pages') autoTwo = false; prefs[i.name] = i.name === 'pages' ? parseInt(i.value, 10) : i.value; store.set('handoutPrefs', prefs); build(); });
+      i.addEventListener('change', function () { if (i.name === 'pages') autoMore = false; prefs[i.name] = i.name === 'pages' ? parseInt(i.value, 10) : i.value; store.set('handoutPrefs', prefs); refresh(); });
     });
     main.querySelectorAll('[data-topic]').forEach(function (i) {
-      i.addEventListener('change', function () { on[i.getAttribute('data-topic')] = i.checked; build(); });
+      i.addEventListener('change', function () { on[i.getAttribute('data-topic')] = i.checked; refresh(); });
     });
-    printBtn.addEventListener('click', function () { if (!printBtn.disabled) window.print(); });
-    var onResize = function () { scale(); };
-    window.addEventListener('resize', onResize);
+    printBtn.addEventListener('click', function () {
+      if (printBtn.disabled) return;
+      var label = printBtn.textContent; printBtn.disabled = true; printBtn.textContent = 'Creating…';
+      loadPdf().then(function (P) {
+        var spec = chapterPdfSpec(ch, topics(), prefs); spec.maxPages = prefs.pages;
+        return P.generate(spec).then(function (r) {
+          P.save(r.blob, 'Stahl-Ch' + ch.number + '-high-yield' + (prefs.mode === 'blank' ? '-worksheet' : '') + '.pdf');
+          fitMsg.className = 'handout-fit'; fitMsg.textContent = 'PDF created (' + PAGE_WORDS[r.pages] + '). Check your downloads or share sheet.';
+        });
+      }).catch(function (e) { fitMsg.className = 'handout-fit is-warn'; fitMsg.textContent = pdfErrorMsg(e); })
+        .then(function () { printBtn.textContent = label; printBtn.disabled = false; });
+    });
     function initial() {
-      build();
-      while (printBtn.disabled && prefs.pages < MAX_PAGES) {
-        prefs.pages += 1; autoTwo = true;
-        var r = main.querySelector('input[name=pages][value="' + prefs.pages + '"]'); if (r) r.checked = true;
-        build();
-      }
+      refresh().then(function () {
+        if (printBtn.disabled && lastPlan && !lastPlan.ok && prefs.pages < MAX_PAGES) {
+          prefs.pages += 1; autoMore = true;
+          var r = main.querySelector('input[name=pages][value="' + prefs.pages + '"]'); if (r) r.checked = true;
+          initial();
+        }
+      });
     }
     initial();
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { if (main.contains(wrap)) build(); });
-    view.cleanup = function () {
-      window.removeEventListener('resize', onResize);
-      document.body.classList.remove('print-handout');
-      if (pageStyle.parentNode) pageStyle.parentNode.removeChild(pageStyle);
-    };
+    view.cleanup = function () { alive = false; };
   }
 
   /* ---------- teaching mode ----------
@@ -1934,16 +1905,39 @@
     }).join('') + '<p class="profile__key"><span class="pkey pkey--block"></span>Blocks or inhibits <span class="pkey pkey--stim"></span>Stimulates <span class="pkey pkey--partial"></span>Partial agonist <span class="pkey pkey--mod"></span>Modulates. Bar length shows relative strength as the book describes it (longest = most potent action; for drugs for psychosis it follows the plus signs on the book’s binding strips, from + to ++++). Striped bars mean the strength has not been described yet.</p></div>';
   }
 
+  /* ---------- drug families (the "type of drug" filter) ---------- */
+  var FAM_MAP = null;
+  function famIndex() {
+    if (FAM_MAP) return FAM_MAP;
+    FAM_MAP = { groups: {}, order: {} };
+    (SP.drugFamilies || []).forEach(function (f, fi) { f.groups.forEach(function (g, gi) { FAM_MAP.groups[g] = f; FAM_MAP.order[g] = gi; }); FAM_MAP.order[f.id] = fi; });
+    return FAM_MAP;
+  }
+  var FAM_OTHER = { id: 'other', label: 'Adjuncts and other agents', groups: [] };
+  function familyOf(d) { return famIndex().groups[d.group] || (SP.drugFamilies || []).filter(function (f) { return f.id === 'other'; })[0] || FAM_OTHER; }
+  function familyCounts() {
+    var c = {}; (SP.drugs || []).forEach(function (d) { var f = familyOf(d); c[f.id] = (c[f.id] || 0) + 1; }); return c;
+  }
+  function familyChips(active, counts, attr) {
+    var total = (SP.drugs || []).length;
+    return '<div class="fam-chips" role="group" aria-label="Drug type">' +
+      '<button type="button" class="filter" ' + attr + '="all" aria-pressed="' + (active === 'all') + '">All <span class="muted">' + total + '</span></button>' +
+      (SP.drugFamilies || []).filter(function (f) { return counts[f.id]; }).map(function (f) {
+        return '<button type="button" class="filter" ' + attr + '="' + f.id + '" aria-pressed="' + (active === f.id) + '">' + esc(f.label) + ' <span class="muted">' + counts[f.id] + '</span></button>';
+      }).join('') + '</div>';
+  }
+
   /* ---------- drugs ---------- */
   function drugGroups() { var g = {}; (SP.drugs || []).forEach(function (d) { g[d.group || 'Other'] = 1; }); return Object.keys(g).sort(); }
   function renderDrugs() {
     var drugs = (SP.drugs || []).slice().sort(function (a, b) { return a.name.localeCompare(b.name); });
     var prefs = store.get('drugFilter', { g: 'all', t: 'all', q: '' });
-    var groups = drugGroups();
+    var fams = (SP.drugFamilies || []).filter(function (f) { return f.groups.some(function (g) { return drugs.some(function (d) { return d.group === g; }); }); });
+    if (prefs.g !== 'all' && !fams.some(function (f) { return f.id === prefs.g; })) prefs.g = 'all';
     var tUsed = {}; drugs.forEach(function (d) { (d.targets || []).forEach(function (t) { tUsed[t.t] = 1; }); });
     var html = '<div class="wrap page">' + libHead(null, null, 'Drug database', plural(drugs.length, 'agent') + ' so far, each with mechanism, binding profile, uses, side effects and pearls, linked to the chapters that discuss it. Entries grow as chapters are added.') +
       (drugs.length ? '<div class="lib-tools"><label class="gloss__search"><span class="sr-only">Filter drugs</span><input type="search" id="dq" placeholder="Filter by name, brand or class" value="' + esc(prefs.q) + '" autocomplete="off"></label>' +
-        '<label class="select"><span>Class</span><select id="dg"><option value="all">All classes</option>' + groups.map(function (g) { return '<option' + (prefs.g === g ? ' selected' : '') + '>' + esc(g) + '</option>'; }).join('') + '</select></label>' +
+        '<label class="select"><span>Drug type</span><select id="dg"><option value="all">All types</option>' + fams.map(function (f) { return '<option value="' + f.id + '"' + (prefs.g === f.id ? ' selected' : '') + '>' + esc(f.label) + '</option>'; }).join('') + '</select></label>' +
         '<label class="select"><span>Acts at</span><select id="dt"><option value="all">Any target</option>' + Object.keys(tUsed).sort(function (a, b) { return targetName(a).localeCompare(targetName(b)); }).map(function (t) { return '<option value="' + esc(t) + '"' + (prefs.t === t ? ' selected' : '') + '>' + esc(targetName(t)) + '</option>'; }).join('') + '</select></label>' +
         '<a class="btn btn--small" href="#/compare">Compare drugs</a></div>' +
         '<p class="gloss__count" id="dcount"></p><ul class="drug-grid" id="dlist"></ul>'
@@ -1956,9 +1950,9 @@
       var q = main.querySelector('#dq').value.trim().toLowerCase(), g = main.querySelector('#dg').value, t = main.querySelector('#dt').value;
       store.set('drugFilter', { g: g, t: t, q: q });
       var shown = drugs.filter(function (d) {
-        if (g !== 'all' && (d.group || 'Other') !== g) return false;
+        if (g !== 'all' && familyOf(d).id !== g) return false;
         if (t !== 'all' && !(d.targets || []).some(function (x) { return x.t === t; })) return false;
-        if (q && [d.name, d.brand, d.cls, d.group, (d.aka || []).join(' ')].join(' ').toLowerCase().indexOf(q) < 0) return false;
+        if (q && [d.name, d.brand, d.cls, d.group, familyOf(d).label, (d.aka || []).join(' ')].join(' ').toLowerCase().indexOf(q) < 0) return false;
         return true;
       });
       list.innerHTML = shown.map(function (d) {
@@ -2089,14 +2083,36 @@
   /* ---------- compare ---------- */
   function renderCompare(arg) {
     var drugs = (SP.drugs || []).slice().sort(function (a, b) { return a.name.localeCompare(b.name); });
-    var ids = (arg || '').split(',').filter(function (x) { return byId(SP.drugs, x); }).slice(0, 3);
+    // route: #/compare/<ids> or #/compare/<family>/<ids>
+    var parts = (arg || '').split('/'), famArg = null, idArg = parts[parts.length - 1];
+    if (parts.length > 1) famArg = parts[0];
+    var ids = idArg.split(',').filter(function (x) { return byId(SP.drugs, x); }).slice(0, 3);
+    var famList = (SP.drugFamilies || []).filter(function (f) { return familyCounts()[f.id]; });
+    var fam = 'all';
+    if (famArg && (famArg === 'all' || famList.some(function (f) { return f.id === famArg; }))) fam = famArg;
+    else if (ids.length) fam = familyOf(byId(SP.drugs, ids[0])).id;
     if (!drugs.length) {
       setView('compare', '<div class="wrap page">' + libHead(null, null, 'Compare drugs', 'Put two or three agents side by side.') + emptyLib('drugs to compare', 'Drug entries begin with Chapter 2.') + '</div>');
       document.title = 'Compare drugs — ' + APP; return;
     }
-    function sel(i) {
-      return '<label class="select"><span>Drug ' + (i + 1) + '</span><select data-slot="' + i + '"><option value="">— choose —</option>' + drugs.map(function (d) { return '<option value="' + d.id + '"' + (ids[i] === d.id ? ' selected' : '') + '>' + esc(d.name) + '</option>'; }).join('') + '</select></label>';
+    function slotOptions(i, q) {
+      var cur = ids[i], seen = {}, groups = {}, order = [];
+      drugs.forEach(function (d) {
+        var inFam = fam === 'all' || familyOf(d).id === fam;
+        var hit = !q || [d.name, d.brand, d.cls, d.group, (d.aka || []).join(' ')].join(' ').toLowerCase().indexOf(q) >= 0;
+        if (!(d.id === cur || (inFam && hit))) return;
+        var lab = fam === 'all' ? familyOf(d).label : (d.group || 'Other');
+        if (!groups[lab]) { groups[lab] = []; order.push(lab); }
+        groups[lab].push(d);
+      });
+      var out = '<option value="">' + (order.length ? '— choose —' : 'No match') + '</option>';
+      order.forEach(function (lab) {
+        out += '<optgroup label="' + esc(lab) + '">' + groups[lab].map(function (d) { return '<option value="' + d.id + '"' + (cur === d.id ? ' selected' : '') + '>' + esc(d.name) + '</option>'; }).join('') + '</optgroup>';
+      });
+      return out;
     }
+    function sel(i) { return '<label class="select"><span>Drug ' + (i + 1) + '</span><select data-slot="' + i + '"></select></label>'; }
+    function famHash(f, list) { return '#/compare/' + (f === 'all' ? (list.length ? '' : '') : f + '/') + list.join(','); }
     var chosen = ids.map(function (x) { return byId(SP.drugs, x); });
     var table = '';
     if (chosen.length) {
@@ -2123,16 +2139,32 @@
         '</tbody></table></div>';
     }
     var html = '<div class="wrap page">' + libHead(null, null, 'Compare drugs', 'Choose up to three agents. Rows line up so differences in mechanism, binding and side effects stand out.') +
-      '<div class="lib-tools cmp-pick">' + sel(0) + sel(1) + sel(2) + '</div>' +
+      '<div class="cmp-filter"><p class="cmp-filter__label">Filter by drug type</p>' + familyChips(fam, familyCounts(), 'data-fam') + '</div>' +
+      '<div class="lib-tools cmp-pick"><label class="gloss__search"><span class="sr-only">Search drugs</span><input type="search" id="cmp-q" placeholder="Type to narrow the lists" autocomplete="off"></label>' + sel(0) + sel(1) + sel(2) + '</div>' +
       (table || '<div class="empty"><h2>Pick a drug to start</h2><p>Comparisons work best within a class, for example two SSRIs or two partial agonists.</p></div>') + '</div>';
-    setView('compare:' + ids.join(','), html);
+    setView('compare:' + fam + ':' + ids.join(','), html);
     document.title = 'Compare drugs — ' + APP;
+    var qBox = main.querySelector('#cmp-q');
+    function fill() {
+      var q = qBox.value.trim().toLowerCase();
+      main.querySelectorAll('[data-slot]').forEach(function (s) {
+        var i = parseInt(s.getAttribute('data-slot'), 10);
+        s.innerHTML = slotOptions(i, q);
+      });
+    }
+    fill();
+    qBox.addEventListener('input', fill);
     main.querySelectorAll('[data-slot]').forEach(function (s) {
       s.addEventListener('change', function () {
         var v = [0, 1, 2].map(function (i) { return main.querySelector('[data-slot="' + i + '"]').value; }).filter(Boolean);
-        location.hash = '#/compare/' + v.join(',');
+        location.hash = famHash(fam, v);
       });
     });
+    main.querySelectorAll('[data-fam]').forEach(function (b) {
+      b.addEventListener('click', function () { location.hash = famHash(b.getAttribute('data-fam'), ids); });
+    });
+    var act = main.querySelector('.fam-chips [aria-pressed="true"]');
+    if (act && act.parentNode.scrollWidth > act.parentNode.clientWidth) act.parentNode.scrollLeft = Math.max(0, act.offsetLeft - 16);
   }
 
   /* ---------- symptoms and circuits ---------- */
@@ -2153,13 +2185,36 @@
 
   /* ---------- nomenclature ---------- */
   function renderNbN() {
-    var ds = (SP.drugs || []).filter(function (d) { return d.nbn; }).sort(function (a, b) { return (a.group || '').localeCompare(b.group || '') || a.name.localeCompare(b.name); });
-    var html = '<div class="wrap page">' + libHead(null, null, 'Nomenclature: traditional class vs mechanism', 'The 5th edition moves toward naming drugs by their pharmacology rather than the disorder they were first approved for, which is why the book says “so-called antipsychotics” and “so-called antidepressants.” A drug named for one use is often used for several others. This table pairs each agent’s traditional class with its mechanism-based name as entries are added.') +
-      (ds.length ? '<div class="table-wrap"><table><thead><tr><th scope="col">Drug</th><th scope="col">Traditional class</th><th scope="col">Mechanism-based name</th></tr></thead><tbody>' +
-        ds.map(function (d) { return '<tr><th scope="row"><a href="#/drugs/' + d.id + '">' + esc(d.name) + '</a></th><td>' + fmt(d.cls || d.group || '') + '</td><td>' + fmt(d.nbn) + '</td></tr>'; }).join('') + '</tbody></table></div>'
+    var ds = (SP.drugs || []).filter(function (d) { return d.nbn; });
+    var idx = famIndex();
+    var fams = (SP.drugFamilies || []).map(function (f) {
+      var mine = ds.filter(function (d) { return familyOf(d).id === f.id; }).sort(function (a, b) {
+        return (idx.order[a.group] || 0) - (idx.order[b.group] || 0) || a.name.localeCompare(b.name);
+      });
+      return { f: f, drugs: mine };
+    }).filter(function (x) { return x.drugs.length; });
+    function table(x) {
+      var multi = {}; x.drugs.forEach(function (d) { multi[d.group] = 1; });
+      var showGroups = Object.keys(multi).length > 1, last = null, rows = '';
+      x.drugs.forEach(function (d) {
+        if (showGroups && d.group !== last) { rows += '<tr class="table-group"><td colspan="3">' + esc(d.group || 'Other') + '</td></tr>'; last = d.group; }
+        rows += '<tr><th scope="row"><a href="#/drugs/' + d.id + '">' + esc(d.name) + '</a></th><td data-label="Traditional class">' + fmt(d.cls || d.group || '') + '</td><td data-label="Mechanism-based name">' + fmt(d.nbn) + '</td></tr>';
+      });
+      return '<section class="nbn-fam" id="nbn-' + x.f.id + '"><h2>' + esc(x.f.label) + ' <span class="muted">' + x.drugs.length + '</span></h2><div class="table-wrap"><table><thead><tr><th scope="col">Drug</th><th scope="col">Traditional class</th><th scope="col">Mechanism-based name</th></tr></thead><tbody>' + rows + '</tbody></table></div></section>';
+    }
+    var html = '<div class="wrap page">' + libHead(null, null, 'Nomenclature: traditional class vs mechanism', 'The 5th edition moves toward naming drugs by their pharmacology rather than the disorder they were first approved for, which is why the book says “so-called antipsychotics” and “so-called antidepressants.” A drug named for one use is often used for several others. Each agent below is listed under its drug type with its traditional class and its mechanism-based name.') +
+      (ds.length ? '<nav class="fam-chips nbn-jump" aria-label="Jump to a drug type">' + fams.map(function (x) { return '<a class="filter" href="#/nbn" data-jump="nbn-' + x.f.id + '">' + esc(x.f.label) + ' <span class="muted">' + x.drugs.length + '</span></a>'; }).join('') + '</nav>' +
+        fams.map(table).join('')
         : emptyLib('mapped agents', 'Mechanism-based names are added with each drug entry, mainly from Chapter 2 onward.')) + '</div>';
     setView('nbn', html);
     document.title = 'Nomenclature — ' + APP;
+    main.querySelectorAll('[data-jump]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var el = document.getElementById(a.getAttribute('data-jump'));
+        if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset - headerH() - 16, behavior: 'smooth' });
+      });
+    });
   }
 
   /* ---------- post-publication updates ---------- */
@@ -2186,22 +2241,35 @@
     document.title = 'Post-publication updates — ' + APP;
   }
 
-  /* ---------- print all high-yield ---------- */
+  /* ---------- all high-yield summaries as one PDF ---------- */
   function renderPrintAll() {
-    var chs = allChapters();
+    var chs = allChapters().filter(function (c) { return (c.highYield || []).length; });
+    var prefs = store.get('printAllPrefs', { paper: 'a4' });
+    if (!PAPER[prefs.paper]) prefs.paper = 'a4';
     var html = '<div class="wrap page print-all">' +
-      '<header class="page__head no-print"><h1>Print all high-yield summaries</h1><p>Every chapter’s high-yield list in one continuous printout, each chapter starting on a new page. For a one-page sheet per chapter, use the printable summary on each chapter’s high-yield page.</p>' +
-      '<div class="empty__actions" style="justify-content:flex-start;margin-top:14px"><button class="btn btn--solid" type="button" id="pa-print">Print or save as PDF</button>' + chs.map(function (c) { return '<a class="btn btn--small" href="#/c/' + c.id + '/handout">Ch ' + c.number + ' one-pager</a>'; }).join('') + '</div></header>' +
-      chs.map(function (ch) {
-        return '<section class="pa-ch"><header class="pa-ch__head"><p>' + esc(BOOK) + ', pp. ' + esc(ch.pages) + '</p><h2>Chapter ' + ch.number + ': ' + esc(ch.title) + '</h2></header><div class="pa-ch__body">' +
-          (ch.highYield || []).map(function (t) { return '<section class="sheet__topic"><h3>' + esc(t.topic) + '</h3><ul>' + t.items.map(function (it) { return '<li>' + fmt(it) + '</li>'; }).join('') + '</ul></section>'; }).join('') +
-          '</div><p class="pa-ch__foot">App created by Isabella Navarro, MD. Latest version October 2026. isaymotion@gmail.com</p></section>';
-      }).join('') + '</div>';
+      '<header class="page__head"><h1>All high-yield summaries (PDF)</h1><p>Every chapter’s high-yield list in one two-column PDF, each chapter starting on a new page, with page numbers. For a one-page sheet or a fill-in worksheet of a single chapter, use the high-yield PDF on each chapter’s high-yield page.</p>' +
+      '<div class="handout-tools" style="margin-top:14px"><div class="handout-tools__row"><span class="handout-tools__label">Paper</span><div class="seg" role="radiogroup">' +
+        [['a4', 'A4'], ['letter', 'Letter']].map(function (o) { return '<label><input type="radio" name="pa-paper" value="' + o[0] + '"' + (prefs.paper === o[0] ? ' checked' : '') + '><span>' + o[1] + '</span></label>'; }).join('') + '</div></div>' +
+      '<div class="handout-tools__go"><button class="btn btn--solid" type="button" id="pa-print">Create PDF of all ' + chs.length + ' chapters</button><p class="handout-fit" id="pa-msg" aria-live="polite"></p></div></div>' +
+      '<div class="empty__actions" style="justify-content:flex-start;margin-top:14px">' + chs.map(function (c) { return '<a class="btn btn--small" href="#/c/' + c.id + '/handout">Ch ' + c.number + ' PDF</a>'; }).join('') + '</div></header></div>';
     setView('print-all', html);
-    document.body.classList.add('print-all-on');
-    view.cleanup = function () { document.body.classList.remove('print-all-on'); };
-    main.querySelector('#pa-print').addEventListener('click', function () { window.print(); });
-    document.title = 'Print all high-yield — ' + APP;
+    var btn = main.querySelector('#pa-print'), msg = main.querySelector('#pa-msg');
+    main.querySelectorAll('input[name=pa-paper]').forEach(function (i) { i.addEventListener('change', function () { prefs.paper = i.value; store.set('printAllPrefs', prefs); }); });
+    btn.addEventListener('click', function () {
+      var label = btn.textContent; btn.disabled = true; btn.textContent = 'Creating…'; msg.className = 'handout-fit'; msg.textContent = '';
+      loadPdf().then(function (P) {
+        var spec = {
+          paper: prefs.paper, footer: ATTRIBUTION, title: 'Stahl high-yield summaries, all chapters', fontSize: 8.6,
+          chapters: chs.map(function (ch) {
+            return { kicker: 'High-yield summary', title: 'Chapter ' + ch.number + ': ' + ch.title, source: [BOOK + (ch.pages ? ', pp. ' + ch.pages : '')], running: 'Chapter ' + ch.number + ': ' + ch.title + ' (high yield)',
+              topics: ch.highYield.map(function (t) { return { topic: t.topic, items: t.items.map(richText) }; }) };
+          })
+        };
+        return P.generate(spec).then(function (r) { P.save(r.blob, 'Stahl-high-yield-all-chapters.pdf'); msg.textContent = 'PDF created (' + r.pages + ' pages). Check your downloads or share sheet.'; });
+      }).catch(function (e) { msg.className = 'handout-fit is-warn'; msg.textContent = pdfErrorMsg(e); })
+        .then(function () { btn.textContent = label; btn.disabled = false; });
+    });
+    document.title = 'All high-yield PDF — ' + APP;
   }
 
   /* ---------- what's new ---------- */
