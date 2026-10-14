@@ -13,6 +13,7 @@ SP.changelog = [
       { type: "feature", text: "High-yield PDF replaces the print dialog: a two-column PDF with page numbers and no browser header or footer. Choose A4 or Letter, answer key or fill-in worksheet, and one to four pages; Greek letters and symbols are embedded.", href: "#/c/ch01/handout", link: "Make a PDF" },
       { type: "feature", text: "All 13 chapters’ high-yield lists now download as one PDF, each chapter starting on a new page.", href: "#/print-all", link: "All high-yield (PDF)" },
       { type: "feature", text: "Compare drugs: filter by drug type (17 types, such as SSRIs and SNRIs or benzodiazepines and Z-drugs), type to narrow the lists, and the Compare button on a drug page opens that drug’s own class.", href: "#/compare", link: "Compare drugs" },
+      { type: "correction", text: "Fixed: the drug-type filter buttons in Compare drugs did not respond on first release.", href: "#/compare", link: "Compare drugs" },
       { type: "feature", text: "Drug database: the Class dropdown is now a Drug type filter using the same 17 types.", href: "#/drugs", link: "Drug database" },
       { type: "feature", text: "Nomenclature page: organized by drug type with a jump bar, sub-headings by class, and stacked cards on phones.", href: "#/nbn", link: "Nomenclature" }
     ]

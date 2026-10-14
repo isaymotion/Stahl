@@ -2084,8 +2084,10 @@
   function renderCompare(arg) {
     var drugs = (SP.drugs || []).slice().sort(function (a, b) { return a.name.localeCompare(b.name); });
     // route: #/compare/<ids> or #/compare/<family>/<ids>
-    var parts = (arg || '').split('/'), famArg = null, idArg = parts[parts.length - 1];
-    if (parts.length > 1) famArg = parts[0];
+    var parts = (arg || '').split('/').filter(Boolean), famArg = null, idArg = '';
+    var isFam = function (x) { return x === 'all' || (SP.drugFamilies || []).some(function (f) { return f.id === x; }); };
+    if (parts.length && isFam(parts[0])) { famArg = parts[0]; idArg = parts[1] || ''; }
+    else idArg = parts[0] || '';
     var ids = idArg.split(',').filter(function (x) { return byId(SP.drugs, x); }).slice(0, 3);
     var famList = (SP.drugFamilies || []).filter(function (f) { return familyCounts()[f.id]; });
     var fam = 'all';
@@ -2112,7 +2114,7 @@
       return out;
     }
     function sel(i) { return '<label class="select"><span>Drug ' + (i + 1) + '</span><select data-slot="' + i + '"></select></label>'; }
-    function famHash(f, list) { return '#/compare/' + (f === 'all' ? (list.length ? '' : '') : f + '/') + list.join(','); }
+    function famHash(f, list) { return '#/compare/' + f + (list.length ? '/' + list.join(',') : ''); }
     var chosen = ids.map(function (x) { return byId(SP.drugs, x); });
     var table = '';
     if (chosen.length) {
