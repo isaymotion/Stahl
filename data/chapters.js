@@ -89,7 +89,13 @@ SP.manifest = [
     summary: 'ADHD symptoms mapped to prefrontal circuits (DLPFC, dACC, OFC, motor cortex, VMPFC); NE and DA tuning of pyramidal neurons through α2A, D1 and HCN channels; neurodevelopment and the lifespan; treatment priorities in comorbid ADHD; methylphenidate and amphetamine, the DAT occupancy threshold and slow-dose versus pulsatile stimulants; atomoxetine and other NET inhibitors; guanfacine and clonidine; and the pipeline.',
     files: SP.CHAPTER_FILES
   },
-  { id: 'ch12', number: 12, ready: false, pages: '486–537', title: 'Dementia: Causes, Symptomatic Treatments, and the Neurotransmitter Network Acetylcholine', short: 'Dementia and acetylcholine', summary: 'Causes of dementia, acetylcholine, and treatments for cognitive and behavioral symptoms.' },
+  {
+    id: 'ch12', number: 12, ready: true, pages: '486–537',
+    title: 'Dementia: Causes, Symptomatic Treatments, and the Neurotransmitter Network Acetylcholine',
+    short: 'Dementia and acetylcholine',
+    summary: 'MCI versus dementia; Alzheimer, vascular, Lewy body and frontotemporal dementias and mixed pathology; the amyloid cascade, APOE and the three biomarker-defined stages of AD; acetylcholine synthesis, receptors and pathways; cholinesterase inhibitors and memantine; and the networks and treatments of psychosis, agitation, depression, pseudobulbar affect and apathy in dementia, with the post-2021 anti-amyloid antibodies.',
+    files: SP.CHAPTER_FILES
+  },
   { id: 'ch13', number: 13, ready: false, pages: '538–578', title: 'Impulsivity, Compulsivity, and Addiction', short: 'Impulsivity, compulsivity and addiction', summary: 'Reward circuits, impulsive–compulsive disorders, substances of abuse and their treatments.' }
 ];
 

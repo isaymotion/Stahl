@@ -103,7 +103,10 @@ SP.targets = [
   {
     id: 'cht', name: 'Choline transporter', short: 'Choline transporter', family: 'Transporter', nt: 'acetylcholine',
     summary: 'The presynaptic transporter for choline, the precursor of acetylcholine (SLC6 family). No known drug targets it.',
-    facts: [{ ch: 'ch02', pages: '34', text: 'A presynaptic transporter for **choline**, the precursor to acetylcholine; **no known drugs** target it.', sec: 's2-other' }]
+    facts: [
+      { ch: 'ch02', pages: '34', text: 'A presynaptic transporter for **choline**, the precursor to acetylcholine; **no known drugs** target it.', sec: 's2-other' },
+      { ch: 'ch12', pages: '505', text: 'Recycles **choline** produced by ACh breakdown back into the cholinergic terminal for resynthesis.', sec: 's12-ach' }
+    ]
   },
   {
     id: 'vmat2', name: 'Vesicular monoamine transporters (VMAT1, VMAT2)', short: 'VMAT2', family: 'Transporter', nt: 'dopamine', ntLabel: 'Monoamines and histamine',
@@ -252,7 +255,8 @@ SP.targets = [
       { ch: 'ch05', pages: '187–189', text: 'On pituitary **lactotrophs**, serotonin at 5HT2A stimulates prolactin, so 5HT2A antagonism offsets D2-blocker hyperprolactinemia.', sec: 's5-5ht2a-prolactin' },
       { ch: 'ch05', pages: '204–222', text: 'Almost all drugs for psychosis bind **5HT2A more potently than D2**, except the D2 partial agonists.', sec: 's5-binding' },
       { ch: 'ch07', pages: '311–314', text: 'SSRI-raised 5HT at 5HT2A (and 5HT2C) receptors may cause **sexual dysfunction, insomnia and anxiety**; SARIs block it. 5HT2A antagonism increases **slow-wave sleep**.', sec: 's7-sari' },
-      { ch: 'ch10', pages: '424–425', text: '5HT2A antagonism (trazodone) specifically enhances **slow-wave** sleep.', sec: 's10-arousal-blockers' }
+      { ch: 'ch10', pages: '424–425', text: '5HT2A antagonism (trazodone) specifically enhances **slow-wave** sleep.', sec: 's10-arousal-blockers' },
+      { ch: 'ch12', pages: '526–528', text: 'Blocking 5HT2A on glutamate neurons that lost GABA inhibition reduces dementia psychosis (**pimavanserin**); 5HT2A antagonism also part of **brexpiprazole** for agitation.', sec: 's12-psychosis' }
     ]
   },
   {
@@ -319,7 +323,8 @@ SP.targets = [
       { ch: 'ch09', pages: '390–391', text: 'Descending NE from the **locus coeruleus** inhibits pain via presynaptic α2 on primary afferents and postsynaptic α2 on dorsal horn neurons; direct α2 agonists (clonidine) can relieve pain.', sec: 's9-descending' },
       { ch: 'ch11', pages: '458–463', text: 'Postsynaptic **α2A** on PFC pyramidal spines is coupled to **Gi**: ↓cAMP closes HCN channels and **strengthens the signal**.', sec: 's11-hcn' },
       { ch: 'ch11', pages: '481–482', text: 'Subtypes: **α2A** (cortex and LC; main PFC mediator), **α2B** (thalamus; sedation), **α2C** (densest in striatum in the text; LC in Figure 11-42). Dense in the PFC, sparse in the accumbens.', sec: 's11-alpha2' },
-      { ch: 'ch11', pages: '482', text: '**Guanfacine** is 15–60× α2A-selective; **clonidine** hits α2A, α2B, α2C plus imidazoline receptors. Only ER forms are approved for ADHD.', sec: 's11-alpha2' }
+      { ch: 'ch11', pages: '482', text: '**Guanfacine** is 15–60× α2A-selective; **clonidine** hits α2A, α2B, α2C plus imidazoline receptors. Only ER forms are approved for ADHD.', sec: 's11-alpha2' },
+      { ch: 'ch12', pages: '531–533', text: 'Brexpiprazole blocks postsynaptic **α2C** on pyramidal dendrites as part of its anti-agitation action.', sec: 's12-agitation' }
     ]
   },
   {
@@ -331,7 +336,8 @@ SP.targets = [
       { ch: 'ch05', pages: '181, 236', text: 'α1 blockade adds **sedation** and **orthostatic hypotension** (iloperidone, paliperidone, clozapine, quetiapine); it may also lower DIP risk (iloperidone) and help agitation (brexpiprazole).', sec: 's5-fga' },
       { ch: 'ch07', pages: '327–328', text: 'α1 receptors are **colocalized** with 5HT2A on pyramidal neurons; blocking both releases DA in the striatum (less DIP) and PFC (antidepressant). Bladder α1 stimulation causes urinary hesitancy (milnacipran), relieved by an α1 antagonist.', sec: 's7-augment-sda' },
       { ch: 'ch08', pages: '370', text: 'Excess NE at postsynaptic α1 receptors in the amygdala may cause **nightmares and hyperarousal**; α1 antagonists (prazosin) at night reduce them in PTSD.', sec: 's8-ne' },
-      { ch: 'ch11', pages: '455–457, 481', text: 'Recruited when NE release is **high** (stress, comorbidity, high-dose NRIs): opposes α2 and **impairs working memory**.', sec: 's11-invertedu' }
+      { ch: 'ch11', pages: '455–457, 481', text: 'Recruited when NE release is **high** (stress, comorbidity, high-dose NRIs): opposes α2 and **impairs working memory**.', sec: 's11-invertedu' },
+      { ch: 'ch12', pages: '531–533', text: 'Brexpiprazole’s α1 (and α2C) antagonism on pyramidal dendrites blocks locus coeruleus NE, reducing arousal in **AD agitation**.', sec: 's12-agitation' }
     ]
   },
   {
@@ -407,7 +413,8 @@ SP.targets = [
     facts: [
       { ch: 'ch02', pages: '40', text: 'Agonist: pro-cognitive and antipsychotic. Antagonist: sedation and memory disturbance (Table 2-4). Stimulated indirectly by acetylcholinesterase inhibitors (Table 2-5).', sec: 's2-receptor-tables' },
       { ch: 'ch05', pages: '166–169', text: 'Blocking **M1** relieves **drug-induced parkinsonism** by restoring the striatal dopamine–acetylcholine balance, at the cost of anticholinergic burden; an IM anticholinergic relieves **acute dystonia**.', sec: 's5-motor' },
-      { ch: 'ch07', pages: '294–295, 335', text: '**Paroxetine** has mild M1 antagonism (calming; withdrawal rebound); all **TCAs** block muscarinic receptors.', sec: 's7-tca' }
+      { ch: 'ch07', pages: '294–295, 335', text: '**Paroxetine** has mild M1 antagonism (calming; withdrawal rebound); all **TCAs** block muscarinic receptors.', sec: 's7-tca' },
+      { ch: 'ch12', pages: '507', text: 'Key to **memory** in hippocampus and neocortex, where it may facilitate DA release; M1 agonism could help cognition in AD.', sec: 's12-ach' }
     ],
     updates: [{ year: '2024', title: 'First M1/M4 agonist approved', text: '**Xanomeline–trospium** (Cobenfy), with the M1/M4-preferring agonist xanomeline, was approved for schizophrenia in September 2024.', source: 'FDA, September 2024' }]
   },
@@ -417,7 +424,8 @@ SP.targets = [
     stim: ['**Antipsychotic**'],
     facts: [
       { ch: 'ch02', pages: '40', text: '**Agonist** actions are antipsychotic (Table 2-4).', sec: 's2-receptor-tables' },
-      { ch: 'ch05', pages: '242', text: '**Xanomeline** (M4/M1 agonist) lowers VTA dopamine firing and raises prefrontal dopamine; combined with peripheral **trospium**.', sec: 's5-future' }
+      { ch: 'ch05', pages: '242', text: '**Xanomeline** (M4/M1 agonist) lowers VTA dopamine firing and raises prefrontal dopamine; combined with peripheral **trospium**.', sec: 's5-future' },
+      { ch: 'ch12', pages: '506–507', text: 'Presynaptic inhibitory autoreceptor (also postsynaptic); regulates **VTA** dopamine to reduce psychosis. Xanomeline (M4/M1) could in theory help psychosis and cognition in AD.', sec: 's12-ach' }
     ],
     updates: [{ year: '2024', title: 'First M1/M4 agonist approved', text: '**Xanomeline–trospium** (Cobenfy) was approved for schizophrenia in September 2024.', source: 'FDA, September 2024' }]
   },
@@ -427,7 +435,8 @@ SP.targets = [
     block: ['**Dry mouth, blurred vision, constipation, urinary retention**', 'May contribute to **metabolic dysregulation** (dyslipidemia and diabetes)'],
     facts: [
       { ch: 'ch02', pages: '40', text: '**Antagonist** actions cause dry mouth, blurred vision, constipation and urinary retention, and may contribute to metabolic dysregulation (Table 2-4). M5 actions are marked unknown.', sec: 's2-receptor-tables' },
-      { ch: 'ch05', pages: '242', text: '**Trospium**, which does not enter the brain, blocks peripheral M2/M3 effects of xanomeline.', sec: 's5-future' }
+      { ch: 'ch05', pages: '242', text: '**Trospium**, which does not enter the brain, blocks peripheral M2/M3 effects of xanomeline.', sec: 's5-future' },
+      { ch: 'ch12', pages: '506–507', text: '**M2** is an inhibitory presynaptic autoreceptor and heteroreceptor (brakes GABA and glutamate release); **M3** is stimulatory and postsynaptic.', sec: 's12-ach' }
     ]
   },
   {
@@ -552,7 +561,8 @@ SP.targets = [
     stim: ['α4β2 **partial agonism** (varenicline): **smoking cessation**', 'Prolonged agonism (nicotine): **desensitization** within about one cigarette, then **inactivation** for hours'],
     facts: [
       { ch: 'ch03', pages: '53', text: 'Pentameric (Table 3-1), with subtypes such as **α7** and **α4β2**.', sec: 's3-structure' },
-      { ch: 'ch03', pages: '63–64', text: 'Inactivation is **best characterized** for nicotinic receptors. Acetylcholine is hydrolyzed too fast to desensitize them, but **nicotine** is not hydrolyzed by acetylcholinesterase: it desensitizes them in about the time of one cigarette and inactivates them for about the time between cigarettes.', sec: 's3-states' }
+      { ch: 'ch03', pages: '63–64', text: 'Inactivation is **best characterized** for nicotinic receptors. Acetylcholine is hydrolyzed too fast to desensitize them, but **nicotine** is not hydrolyzed by acetylcholinesterase: it desensitizes them in about the time of one cigarette and inactivates them for about the time between cigarettes.', sec: 's3-states' },
+      { ch: 'ch12', pages: '507–509', text: '**α4β2**: postsynaptic, accumbens DA release (nicotine). **α7**: postsynaptic PFC cognition; presynaptic feed-forward ACh release and heteroreceptors boosting DA and glutamate. **Galantamine** is a nicotinic PAM.', sec: 's12-ach' }
     ]
   },
   {
@@ -594,7 +604,9 @@ SP.targets = [
       { ch: 'ch07', pages: '328–332', text: 'Ketamine blocks NMDA at the open-channel **PCP site**: NMDA block on GABA interneurons → glutamate burst → **AMPA** → mTOR or BDNF/VEGF → rapid synaptogenesis.', sec: 's7-ketamine' },
       { ch: 'ch08', pages: '372–375', text: 'NMDA receptors embed **fear conditioning** via LTP in the lateral and central amygdala; boosting NMDA action during **exposure therapy** might strengthen **fear extinction** instead.', sec: 's8-novel' },
       { ch: 'ch09', pages: '382–383', text: 'Glutamate acts at NMDA and AMPA receptors in the dorsal horn; glycine acts at the NMDA glycine site (Figure 9-2).', sec: 's9-ascending' },
-      { ch: 'ch10', pages: '404–406', text: 'Histamine can act at the NMDA **polyamine** allosteric site; OX2 stimulation increases NMDA receptor expression.', sec: 's10-histamine' }
+      { ch: 'ch10', pages: '404–406', text: 'Histamine can act at the NMDA **polyamine** allosteric site; OX2 stimulation increases NMDA receptor expression.', sec: 's10-histamine' },
+      { ch: 'ch12', pages: '515–516', text: 'A **coincidence detector**: opens with depolarization (removing Mg²⁺), glutamate and glycine. Tonic glutamate leak in AD may cause excitotoxicity.', sec: 's12-memantine' },
+      { ch: 'ch12', pages: '516–518', text: '**Memantine** plugs the open channel at the Mg²⁺ site with low affinity and fast kinetics; **dextromethorphan** is a more robust blocker used for AD agitation.', sec: 's12-memantine' }
     ],
     updates: [
       { year: '2022', title: 'Dextromethorphan–bupropion approved', text: 'Approved for major depressive disorder in August 2022 (Auvelity).', source: 'FDA, August 2022' },
@@ -735,9 +747,20 @@ SP.targets = [
     facts: [{ ch: 'ch10', pages: '402–404', text: 'Converts histidine to histamine in TMN neurons.', sec: 's10-histamine' }]
   },
   {
+    id: 'chat', name: 'Choline acetyltransferase (ChAT)', short: 'ChAT', family: 'Enzyme', nt: 'acetylcholine',
+    summary: 'The enzyme that synthesizes acetylcholine from choline and acetyl coenzyme A in cholinergic neurons.',
+    facts: [{ ch: 'ch12', pages: '505', text: 'Joins **choline** and **acetyl-CoA** (from glucose in mitochondria) to make ACh.', sec: 's12-ach' }]
+  },
+  {
     id: 'gabat', name: 'GABA transaminase (GABA-T)', short: 'GABA-T', family: 'Enzyme', nt: 'gaba',
     summary: 'The enzyme that converts GABA into an inactive substance, terminating its action after reuptake.',
     facts: [{ ch: 'ch06', pages: '258', text: 'One of two ways GABA action ends, with reuptake by GAT.', sec: 's6-gaba' }]
+  },
+  {
+    id: 'secretase', name: 'β- and γ-secretase', short: 'Secretases', family: 'Enzyme', ntLabel: 'Amyloid precursor protein processing',
+    summary: 'Enzymes that cut amyloid precursor protein: β-secretase then γ-secretase produce Aβ; α-secretase cuts within Aβ and prevents it. Inhibitors have failed in trials.',
+    block: ['β- and γ-secretase inhibitors: tested for AD, **ineffective or unsafe**'],
+    facts: [{ ch: 'ch12', pages: '496–497', text: 'β-secretase cuts at the amino border of Aβ; γ-secretase then releases Aβ38–43. α-secretase promoters were also tried (Table 12-6).', sec: 's12-amyloid' }]
   },
   {
     id: 'gs', name: 'Glutamine synthetase', short: 'Gln synthetase', family: 'Enzyme', nt: 'glutamate',
@@ -777,7 +800,20 @@ SP.targets = [
     id: 'ache', name: 'Acetylcholinesterase', short: 'AChE', family: 'Enzyme', nt: 'acetylcholine',
     summary: 'The enzyme that destroys acetylcholine. Its inhibitors increase acetylcholine at all its receptors and improve cognition in Alzheimer disease.',
     block: ['Raises acetylcholine at all acetylcholine receptors (indirect M1, possibly M2–M5, agonism)', 'Improves **cognition in Alzheimer disease** (Chapter 12)'],
-    facts: [{ ch: 'ch02', pages: '40–41, 48', text: 'Acetylcholinesterase inhibition is an **indirect agonist** mechanism (Table 2-5) and one of the three enzyme targets of psychotropic drugs.', sec: 's2-enzymes' }]
+    facts: [
+      { ch: 'ch02', pages: '40–41, 48', text: 'Acetylcholinesterase inhibition is an **indirect agonist** mechanism (Table 2-5) and one of the three enzyme targets of psychotropic drugs.', sec: 's2-enzymes' },
+      { ch: 'ch12', pages: '505–506', text: 'The **key** enzyme at cholinergic synapses, high in neurons receiving ACh; also in gut, muscle, red cells, lymphocytes and platelets.', sec: 's12-ach' },
+      { ch: 'ch12', pages: '509–514', text: 'Inhibitors (**donepezil**, rivastigmine, galantamine) raise ACh at surviving postsynaptic receptors in early AD, usually **slowing decline**; benefit fades as targets die. Peripheral inhibition causes **GI** effects.', sec: 's12-ache' }
+    ]
+  },
+  {
+    id: 'buche', name: 'Butyrylcholinesterase (BuChE)', short: 'BuChE', family: 'Enzyme', nt: 'acetylcholine',
+    summary: 'A second enzyme that hydrolyzes acetylcholine (“pseudocholinesterase”), found mainly in glia in the brain and in plasma, liver and gut. Rivastigmine inhibits it; donepezil does not.',
+    block: ['Raises ACh, especially as **gliosis** increases BuChE activity in advancing AD (rivastigmine)'],
+    facts: [
+      { ch: 'ch12', pages: '505–506', text: 'Encoded by a separate gene from AChE with different tissue distribution; in brain mainly **glial**, possibly in **plaques**; takes over ACh breakdown when ACh diffuses to glia.', sec: 's12-ach' },
+      { ch: 'ch12', pages: '510–511', text: '**Rivastigmine** inhibits BuChE as well as AChE; donepezil spares it.', sec: 's12-ache' }
+    ]
   },
   {
     id: 'gsk3', name: 'Glycogen synthase kinase-3 (GSK-3)', short: 'GSK-3', family: 'Enzyme', nt: 'neurotrophins', ntLabel: 'Neurotrophin signaling',
@@ -881,6 +917,16 @@ SP.targets = [
     id: 'ghb', name: 'GHB receptor', short: 'GHB-R', family: 'Other', ntLabel: 'γ-Hydroxybutyrate (formed from GABA)',
     summary: 'The receptor for naturally occurring γ-hydroxybutyrate; sodium oxybate is a full agonist here.',
     facts: [{ ch: 'ch10', pages: '446–447', text: 'GHB is a natural brain product formed from GABA with its own receptors; sodium oxybate is a **full agonist** at them.', sec: 's10-oxybate' }]
+  },
+  {
+    id: 'abeta', name: 'Amyloid-β (Aβ)', short: 'Aβ', family: 'Other', ntLabel: 'Pathological protein (Alzheimer disease)',
+    summary: 'Peptides of 38–43 amino acids cut from amyloid precursor protein by β- then γ-secretase; Aβ42 aggregates into toxic oligomers and plaques. The target of anti-amyloid antibodies.',
+    block: ['Antibody-mediated removal of plaque **modestly slows** decline in early AD (post-2021 approvals); risk of **ARIA**'],
+    facts: [
+      { ch: 'ch12', pages: '496–497', text: '**α-secretase** cuts within Aβ (non-amyloidogenic); **β- then γ-secretase** release Aβ. **Aβ40** is most common; **Aβ42** more aggregation-prone and toxic; Aβ43 rarest and most prone.', sec: 's12-amyloid' },
+      { ch: 'ch12', pages: '497–499', text: 'Table 12-6 strategies: antibodies, active immunization, β- and γ-secretase inhibitors, α-secretase promoters, aggregation inhibitors: all **ineffective or unsafe** as of the book.', sec: 's12-amyloid' },
+      { ch: 'ch12', pages: '499–502', text: 'Amyloid PET positive and **CSF Aβ low** in presymptomatic AD; about a quarter of cognitively normal elderly are Aβ-positive.', sec: 's12-stages' }
+    ]
   },
   {
     id: 'imidazoline', name: 'Imidazoline receptor', short: 'I-receptor', family: 'Other', ntLabel: 'No classic monoamine ligand',

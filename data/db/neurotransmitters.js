@@ -23,7 +23,8 @@ SP.nts = [
       { ch: 'ch06', pages: '277–278', text: 'Diffuse serotonin dysfunction is linked mainly to **increased negative affect**: guilt, disgust, fear, anxiety, hostility, irritability, loneliness. Ascending raphe projections regulate mood, anxiety and sleep; descending ones regulate pain.', sec: 's6-circuits' },
       { ch: 'ch07', pages: '289–292', text: 'SSRIs act through delayed **disinhibition** of serotonin release after somatodendritic 5HT1A autoreceptors desensitize.', sec: 's7-ssri' },
       { ch: 'ch08', pages: '368', text: 'Serotonin innervates the **amygdala** and the whole **CSTC** loop, so serotonergic drugs can reduce both fear and worry.', sec: 's8-serotonin' },
-      { ch: 'ch09', pages: '390–393', text: 'The descending spinal 5HT pathway from the **raphe magnus** inhibits pain via 5HT1B/D but facilitates it via 5HT3.', sec: 's9-descending' }
+      { ch: 'ch09', pages: '390–393', text: 'The descending spinal 5HT pathway from the **raphe magnus** inhibits pain via 5HT1B/D but facilitates it via 5HT3.', sec: 's9-descending' },
+      { ch: 'ch12', pages: '524–528', text: 'In dementia psychosis, excitatory **5HT2A** input to glutamate neurons that have lost GABA inhibition drives hallucinations and delusions; pimavanserin blocks it.', sec: 's12-psychosis' }
     ],
     synthesis: [['Tryptophan', 'Transported from plasma into the brain'], ['5HTP', '**Tryptophan hydroxylase (TRY-OH)**'], ['5HT', '**Aromatic amino acid decarboxylase (AAADC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -100,8 +101,8 @@ SP.nts = [
   {
     id: 'acetylcholine', name: 'Acetylcholine', abbr: 'ACh', family: 'Acetylcholine', key6: true,
     summary: 'One of the six key neurotransmitter systems targeted by psychotropic drugs. Made from choline, packaged by VAChT, destroyed by acetylcholinesterase; muscarinic receptors (M1–M5) are drug targets.',
-    synthesis: [['Choline', 'Taken up by the presynaptic **choline transporter**'], ['Acetylcholine', 'Packaged into vesicles by **VAChT**']],
-    termination: ['Destroyed by **acetylcholinesterase**', 'No drug targets the choline transporter or VAChT'],
+    synthesis: [['Choline + acetyl coenzyme A', 'Choline from diet and neuronal sources (recycled by the **choline transporter**); acetyl-CoA from glucose in mitochondria'], ['Acetylcholine', '**Choline acetyltransferase (ChAT)**; packaged into vesicles by **VAChT**']],
+    termination: ['Destroyed by **acetylcholinesterase**', 'No drug targets the choline transporter or VAChT', '**Butyrylcholinesterase** (mainly glial) also hydrolyzes ACh; ACh is destroyed too fast to be taken back up intact, so **choline** is recycled (Chapter 12)'],
     clinical: ['Acetylcholinesterase inhibitors raise acetylcholine and improve cognition in Alzheimer disease', 'M1 agonism pro-cognitive and antipsychotic; M4 agonism antipsychotic', 'M1 antagonism: sedation, memory disturbance; M2/M3 antagonism: dry mouth, blurred vision, constipation, urinary retention'],
     facts: [
       { ch: 'ch01', pages: '5', text: 'One of the **six key neurotransmitter systems** targeted by psychotropic drugs.' },
@@ -109,8 +110,16 @@ SP.nts = [
       { ch: 'ch02', pages: '40', text: 'Muscarinic receptors **M1, M4, M2/M3** are drug targets (Table 2-4); **acetylcholinesterase inhibition** boosts acetylcholine at all its receptors (Table 2-5).', sec: 's2-receptor-tables' },
       { ch: 'ch03', pages: '53, 63–64', text: '**Nicotinic** receptors (α7, α4β2) are pentameric ligand-gated channels. Acetylcholine is hydrolyzed so quickly by abundant acetylcholinesterase that it rarely desensitizes them; nicotine is not, and does.', sec: 's3-states' },
       { ch: 'ch05', pages: '166–169', text: 'D2 blockade **disinhibits** striatal ACh release, contributing to DIP; anticholinergics restore the balance. Xanomeline’s M4/M1 agonism is a new antipsychotic mechanism.', sec: 's5-motor' },
-      { ch: 'ch10', pages: '410–414', text: 'Orexin releases ACh from the **basal forebrain** (cortex) and **PPT/LDT** (thalamus); ACh is lowest in stage 4 and peaks in **REM**.', sec: 's10-ultradian' }
-    ]
+      { ch: 'ch10', pages: '410–414', text: 'Orexin releases ACh from the **basal forebrain** (cortex) and **PPT/LDT** (thalamus); ACh is lowest in stage 4 and peaks in **REM**.', sec: 's10-ultradian' },
+      { ch: 'ch12', pages: '505–507', text: '**M1, M3, M5** are stimulatory and postsynaptic; **M2 and M4** are inhibitory presynaptic autoreceptors (M4 also postsynaptic) and heteroreceptors that brake GABA and glutamate release.', sec: 's12-ach' },
+      { ch: 'ch12', pages: '507–509', text: '**α4β2** nicotinic receptors drive accumbens DA (nicotine’s target); **α7** receptors mediate PFC cognition, feed-forward ACh release and heteroreceptor release of DA and glutamate. Nicotinic receptors have **PAM** sites.', sec: 's12-ach' },
+      { ch: 'ch12', pages: '509–510', text: 'Early loss of **nucleus basalis** cholinergic neurons with surviving postsynaptic targets is why cholinesterase inhibitors help early AD.', sec: 's12-ache' }
+    ],
+    pathways: [
+      { name: 'Brainstem cholinergic', route: 'Brainstem → PFC, **basal forebrain**, thalamus, hypothalamus, amygdala, hippocampus', role: 'Arousal and widespread modulation' },
+      { name: 'Basal forebrain cholinergic', route: '**Basal forebrain (nucleus basalis)** → PFC, amygdala, hippocampus', role: '**Memory**; lost early in Alzheimer disease' }
+    ],
+    roles: ['**Memory** and cognition (M1, α7 nicotinic)', 'Regulates VTA dopamine (M4 reduces it; α4β2 increases accumbens DA)', 'Arousal across the sleep/wake cycle (Chapter 10)']
   },
   {
     id: 'glutamate', name: 'Glutamate', abbr: 'Glu', family: 'Amino acid', key6: true,
@@ -127,7 +136,8 @@ SP.nts = [
       { ch: 'ch04', pages: '105–110', text: 'The **NMDA hypofunction** hypothesis: faulty NMDA signaling on prefrontal GABA interneurons disinhibits pyramidal neurons, leading downstream to dopamine excess (positive) and deficit (negative).', sec: 's4-nmda-hypo' },
       { ch: 'ch07', pages: '328–331', text: 'Ketamine’s rapid antidepressant effect is thought to come from a **burst of glutamate** acting at AMPA receptors; lamotrigine and riluzole may reduce glutamate release.', sec: 's7-ketamine' },
       { ch: 'ch08', pages: '372–373', text: 'Fear conditioning strengthens **glutamate** synapses in the lateral and central amygdala; α2δ ligands reduce excess glutamate release in fear and worry circuits.', sec: 's8-conditioning' },
-      { ch: 'ch09', pages: '395', text: 'The main transmitter released in **suprasegmental** central sensitization (thalamus, cortex).', sec: 's9-a2d' }
+      { ch: 'ch09', pages: '395', text: 'The main transmitter released in **suprasegmental** central sensitization (thalamus, cortex).', sec: 's9-a2d' },
+      { ch: 'ch12', pages: '515–518', text: 'In AD, plaques and tangles may cause a steady glutamate **leak** (partly through loss of GABA interneurons): tonic NMDA activation blurs memory signaling and, at higher levels, kills neurons by **excitotoxicity**.', sec: 's12-memantine' }
     ],
     synthesis: [['Glutamine (glia)', 'Recaptured glutamate is converted by **glutamine synthetase**'], ['Export', 'Glutamine leaves glia on a reversed **SNAT** (or ASC-T)'], ['Neuronal uptake', 'A neuronal **SNAT** imports glutamine'], ['Glutamate', 'Mitochondrial **glutaminase**'], ['Vesicle', 'Packaged by **vGluT**']],
     pathways: [

@@ -658,7 +658,10 @@ SP.drugs = [
   },
   {
     id: 'citalopram', name: 'Citalopram', brand: 'Celexa', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
-    chapters: [{ ch: 'ch07', pages: '295–296' }],
+    chapters: [
+      { ch: 'ch07', pages: '295–296' },
+      { ch: 'ch12', pages: '534–535' }
+    ],
     nbn: 'Serotonin transport (SERT) inhibitor',
     nts: ['serotonin'],
     short: 'Racemic SSRI; the R enantiomer adds antihistamine action and may hinder SERT inhibition.',
@@ -674,11 +677,17 @@ SP.drugs = [
       { e: 'Nausea, GI effects', via: 'Peripheral 5HT3 stimulation' },
       { e: '**QTc prolongation** at higher doses (limits dose increases)', via: 'Dose-related' }
     ],
-    facts: [{ ch: 'ch07', pages: '295–296', text: 'Generally well tolerated but somewhat **inconsistent** at the lowest dose, often needing a dose increase that QTc concerns limit.', sec: 's7-ssri-agents' }]
+    facts: [
+      { ch: 'ch07', pages: '295–296', text: 'Generally well tolerated but somewhat **inconsistent** at the lowest dose, often needing a dose increase that QTc concerns limit.', sec: 's7-ssri-agents' },
+      { ch: 'ch12', pages: '534–535', text: 'Limited efficacy for depression in dementia; may help **agitation**, but prolongs **QT**.', sec: 's12-depression' }
+    ]
   },
   {
     id: 'escitalopram', name: 'Escitalopram', brand: 'Lexapro', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
-    chapters: [{ ch: 'ch07', pages: '296' }],
+    chapters: [
+      { ch: 'ch07', pages: '296' },
+      { ch: 'ch12', pages: '534–537' }
+    ],
     nbn: 'Serotonin transport (SERT) inhibitor',
     nts: ['serotonin'],
     short: 'The pure S enantiomer of citalopram: the “quintessential SSRI.”',
@@ -690,7 +699,10 @@ SP.drugs = [
       { e: 'Sexual dysfunction, insomnia, activation/anxiety', via: '5HT at 5HT2A and 5HT2C receptors' },
       { e: 'Nausea, GI effects', via: 'Peripheral 5HT3 stimulation' }
     ],
-    facts: [{ ch: 'ch07', pages: '296', text: 'No antihistamine action, no higher-dose **QTc** restriction, lowest dose predictably effective; perhaps the **best-tolerated** SSRI with the **fewest CYP450 interactions**.', sec: 's7-ssri-agents' }]
+    facts: [
+      { ch: 'ch07', pages: '296', text: 'No antihistamine action, no higher-dose **QTc** restriction, lowest dose predictably effective; perhaps the **best-tolerated** SSRI with the **fewest CYP450 interactions**.', sec: 's7-ssri-agents' },
+      { ch: 'ch12', pages: '534–535', text: 'May match citalopram in dementia without **QT** prolongation; SSRIs/SNRIs may help apathy in FTD.', sec: 's12-depression' }
+    ]
   },
   {
     id: 'vilazodone', name: 'Vilazodone', brand: 'Viibryd', group: 'Antidepressant', cls: 'Serotonin partial agonist reuptake inhibitor (SPARI)',
@@ -851,7 +863,8 @@ SP.drugs = [
     chapters: [
       { ch: 'ch07', pages: '303–306, 333, 353–354' },
       { ch: 'ch09', pages: '399–400' },
-      { ch: 'ch11', pages: '480' }
+      { ch: 'ch11', pages: '480' },
+      { ch: 'ch12', pages: '533–537' }
     ],
     nbn: 'Norepinephrine and dopamine reuptake inhibitor (NET/DAT)',
     nts: ['norepinephrine', 'dopamine'],
@@ -873,7 +886,8 @@ SP.drugs = [
       { ch: 'ch07', pages: '333–334', text: 'SSRI or SNRI + bupropion = **triple-action** combination, among the most popular in the US.', sec: 's7-combos' },
       { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' },
       { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' },
-      { ch: 'ch11', pages: '480', text: 'An **NDRI**: weak NET plus weak DAT inhibition, so unlike atomoxetine it also reaches accumbens DATs (Figure 11-37).', sec: 's11-nri' }
+      { ch: 'ch11', pages: '480', text: 'An **NDRI**: weak NET plus weak DAT inhibition, so unlike atomoxetine it also reaches accumbens DATs (Figure 11-37).', sec: 's11-nri' },
+      { ch: 'ch12', pages: '533–537', text: 'Boosts dextromethorphan via **CYP2D6** inhibition for AD agitation; also suggested for **apathy** as a pro-dopaminergic agent.', sec: 's12-agitation' }
     ],
     updates: [{ year: '2022', title: 'Combined with dextromethorphan for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022, and for agitation associated with Alzheimer dementia in April 2026.', source: 'FDA, August 2022; Axsome Therapeutics, April 30, 2026' }]
   },
@@ -1048,7 +1062,8 @@ SP.drugs = [
     ],
     facts: [
       { ch: 'ch04', pages: '88–89', text: 'Chronic D2 stimulation by levodopa produces abnormal hyperkinetic movements (**LID**); chronic D2 **blockade** produces tardive dyskinesia.', sec: 's4-da-pathways' },
-      { ch: 'ch05', pages: '171', text: 'Chronic levodopa causes dyskinesias that look like TD, perhaps through the same aberrant striatal plasticity; amantadine has some evidence for LID.', sec: 's5-td' }
+      { ch: 'ch05', pages: '171', text: 'Chronic levodopa causes dyskinesias that look like TD, perhaps through the same aberrant striatal plasticity; amantadine has some evidence for LID.', sec: 's5-td' },
+      { ch: 'ch12', pages: '509, 537', text: 'Cholinesterase inhibitors are compared to levodopa in PD (boosting transmitter at surviving targets); levodopa is also suggested for **apathy**.', sec: 's12-ache' }
     ]
   },
   {
@@ -1274,7 +1289,10 @@ SP.drugs = [
   },
   {
     id: 'carbamazepine', name: 'Carbamazepine', brand: 'Tegretol; Equetro', group: 'Mood stabilizer', cls: 'Anticonvulsant; antimanic',
-    chapters: [{ ch: 'ch07', pages: '346–347, 350' }],
+    chapters: [
+      { ch: 'ch07', pages: '346–347, 350' },
+      { ch: 'ch12', pages: '530' }
+    ],
     nbn: 'Voltage-sensitive sodium channel blocker',
     nts: ['glutamate'],
     short: 'Mania-minded anticonvulsant blocking the VSSC α subunit; CYP3A4 inducer.',
@@ -1290,7 +1308,10 @@ SP.drugs = [
       { e: 'Sedation', via: 'Ion channel actions' },
       { e: '**Neural-tube defects**', via: 'Teratogenic' }
     ],
-    facts: [{ ch: 'ch07', pages: '347', text: 'Table 7-3: epilepsy ++++, treat from above ++++, stabilize from above ++, treat from below +, stabilize from below +/−.', sec: 's7-anticonvulsants' }]
+    facts: [
+      { ch: 'ch07', pages: '347', text: 'Table 7-3: epilepsy ++++, treat from above ++++, stabilize from above ++, treat from below +, stabilize from below +/−.', sec: 's7-anticonvulsants' },
+      { ch: 'ch12', pages: '530', text: 'Perhaps the most effective unapproved drug for neuropsychiatric symptoms of dementia, but side effects and **drug interactions** limit it in the elderly.', sec: 's12-agitation' }
+    ]
   },
   {
     id: 'lamotrigine', name: 'Lamotrigine', brand: 'Lamictal', group: 'Mood stabilizer', cls: 'Anticonvulsant; depression-minded mood stabilizer',
@@ -1860,14 +1881,116 @@ SP.drugs = [
     updates: [{ year: '2023', title: 'Once-nightly formulation', text: 'Lumryz, an extended-release sodium oxybate taken once at bedtime, was approved in May 2023 for cataplexy or excessive daytime sleepiness in adults with narcolepsy.', source: 'FDA approval reported May 1, 2023 (NeurologyLive)' }]
   },
   {
-    id: 'memantine', name: 'Memantine', group: 'Dementia treatment', cls: 'NMDA glutamate antagonist',
+    id: 'memantine', name: 'Memantine', brand: 'Namenda', group: 'Dementia treatment', cls: 'NMDA glutamate antagonist',
     nbn: 'Glutamate NMDA receptor antagonist',
     short: 'NMDA antagonist at NAM/Mg²⁺ sites; pro-cognitive in Alzheimer disease.',
     mechanism: 'An **antagonist** at the **NAM channel/Mg²⁺ sites** of NMDA glutamate receptors. Details in Chapter 12.',
-    targets: [{ t: 'nmda', action: 'antagonist', note: 'NAM channel / Mg²⁺ site' }],
+    targets: [
+      { t: 'nmda', action: 'antagonist', note: 'Uncompetitive open-channel block at the Mg²⁺ site; low affinity' },
+      { t: 'sigma', action: 'binds', note: 'Relevance unclear' },
+      { t: '5ht3', action: 'antagonist', note: 'Weak' }
+    ],
     uses: ['**Pro-cognitive in Alzheimer disease**'],
-    chapters: [{ ch: 'ch03', pages: '55' }],
-    facts: [{ ch: 'ch03', pages: '55', text: 'Listed in Table 3-2 as the NMDA glutamate antagonist that is pro-cognitive in Alzheimer disease.', sec: 's3-drugs' }]
+    chapters: [
+      { ch: 'ch03', pages: '55' },
+      { ch: 'ch12', pages: '515–521, 533' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '55', text: 'Listed in Table 3-2 as the NMDA glutamate antagonist that is pro-cognitive in Alzheimer disease.', sec: 's3-drugs' },
+      { ch: 'ch12', pages: '516–518', text: 'An **uncompetitive, open-channel** NMDA antagonist with low-to-moderate affinity, **voltage dependence** and fast on/off kinetics: blocks tonic excitotoxic glutamate but is expelled by phasic bursts, so learning continues and there are no psychotomimetic effects (“**artificial magnesium**”).', sec: 's12-memantine' },
+      { ch: 'ch12', pages: '518', text: 'Usually given **with** a cholinesterase inhibitor for additive benefit; not effective (or tested) for agitation.', sec: 's12-memantine' }
+    ]
+  },
+  {
+    id: 'donepezil', name: 'Donepezil', brand: 'Aricept', group: 'Dementia treatment', cls: 'Cholinesterase inhibitor',
+    nbn: 'Acetylcholine enzyme inhibitor (AChE)',
+    nts: ['acetylcholine'],
+    chapters: [{ ch: 'ch12', pages: '509–510' }],
+    short: 'Reversible, long-acting, AChE-selective cholinesterase inhibitor.',
+    mechanism: 'A **reversible, long-acting, selective AChE inhibitor** with no BuChE inhibition. Raises ACh at surviving postsynaptic cholinergic receptors in cortex and hippocampus.',
+    targets: [{ t: 'ache', action: 'inhibitor', note: 'Reversible; selective (no BuChE)' }],
+    uses: ['Cognitive symptoms of **Alzheimer disease**'],
+    sideEffects: [{ e: 'Nausea, vomiting, diarrhea (usually transient)', via: 'Peripheral AChE inhibition in the gut' }],
+    facts: [{ ch: 'ch12', pages: '510', text: 'Easy to dose; side effects mostly **GI** and transient.', sec: 's12-ache' }],
+    updates: [{ year: '2022', title: 'A weekly donepezil patch', text: '**Adlarity** (donepezil transdermal system, once weekly) was approved in March 2022; it was later listed as discontinued.', source: 'Drugs.com approval history' }]
+  },
+  {
+    id: 'rivastigmine', name: 'Rivastigmine', brand: 'Exelon', group: 'Dementia treatment', cls: 'Cholinesterase inhibitor',
+    nbn: 'Acetylcholine enzyme inhibitor (AChE, BuChE)',
+    nts: ['acetylcholine'],
+    chapters: [{ ch: 'ch12', pages: '510–513' }],
+    short: 'Pseudoirreversible AChE and BuChE inhibitor; patch available.',
+    mechanism: 'A **pseudoirreversible** (reverses over hours), intermediate-acting inhibitor of **AChE and BuChE**, possibly selective for cortical and hippocampal AChE. Glial BuChE inhibition may matter more as gliosis advances.',
+    targets: [
+      { t: 'ache', action: 'inhibitor', note: 'Pseudoirreversible' },
+      { t: 'buche', action: 'inhibitor', note: 'Glial BuChE' }
+    ],
+    uses: ['Cognitive symptoms of **Alzheimer disease**'],
+    sideEffects: [{ e: 'More GI effects orally than donepezil', via: 'PK profile; peripheral AChE and BuChE inhibition' }],
+    facts: [{ ch: 'ch12', pages: '510–511', text: 'Comparable efficacy and safety to donepezil; the **transdermal patch** greatly reduces GI effects by lowering peaks. (The book also calls it “selective for AChE over BuChE”; it is a dual inhibitor.)', sec: 's12-ache' }]
+  },
+  {
+    id: 'galantamine', name: 'Galantamine', brand: 'Razadyne', group: 'Dementia treatment', cls: 'Cholinesterase inhibitor',
+    nbn: 'Acetylcholine enzyme inhibitor (AChE); nicotinic PAM',
+    nts: ['acetylcholine'],
+    chapters: [{ ch: 'ch12', pages: '514' }],
+    short: 'AChE inhibitor and nicotinic positive allosteric modulator.',
+    mechanism: 'Inhibits **AChE** and is a **positive allosteric modulator** of nicotinic receptors, theoretically amplifying the extra ACh at nicotinic sites; clinical advantage unproven.',
+    targets: [
+      { t: 'ache', action: 'inhibitor' },
+      { t: 'nicotinic', action: 'positive allosteric modulator' }
+    ],
+    uses: ['Cognitive symptoms of **Alzheimer disease**'],
+    sideEffects: [{ e: 'Nausea, vomiting, diarrhea (usually transient)', via: 'Peripheral AChE inhibition in the gut' }],
+    facts: [{ ch: 'ch12', pages: '514', text: 'Found in **snowdrops and daffodils**.', sec: 's12-ache' }]
+  },
+  {
+    id: 'aducanumab', name: 'Aducanumab', brand: 'Aduhelm', group: 'Anti-amyloid antibody', cls: 'Anti-amyloid monoclonal antibody',
+    nbn: 'Amyloid-β antibody',
+    nts: [],
+    chapters: [{ ch: 'ch12', pages: '497–499' }],
+    short: 'First anti-amyloid antibody approved (2021); discontinued 2024.',
+    mechanism: 'Monoclonal antibody that binds aggregated **Aβ** and removes plaque.',
+    targets: [{ t: 'abeta', action: 'binds', note: 'Aggregated Aβ' }],
+    uses: ['Early Alzheimer disease (accelerated approval; discontinued)'],
+    sideEffects: [
+      { e: 'ARIA-E (brain edema) and ARIA-H (microbleeds), rarely fatal', via: 'Amyloid removal from vessel walls; higher risk in APOE4 carriers' },
+      { e: 'Infusion reactions', via: 'Antibody infusion' }
+    ],
+    facts: [{ ch: 'ch12', pages: '497–499', text: 'Anti-amyloid antibodies are listed in Table 12-6 among disease-modifying strategies that had not shown clinical benefit when the book was written.', sec: 's12-status' }],
+    updates: [{ year: '2021', title: 'Approved, then discontinued', text: 'Accelerated approval on June 7, 2021 based on plaque reduction; Biogen discontinued it on January 31, 2024, citing reasons unrelated to safety or efficacy.', source: 'Drugs.com approval history; Biogen, January 2024' }]
+  },
+  {
+    id: 'lecanemab', name: 'Lecanemab', brand: 'Leqembi; Leqembi Iqlik', group: 'Anti-amyloid antibody', cls: 'Anti-amyloid monoclonal antibody',
+    nbn: 'Amyloid-β antibody',
+    nts: [],
+    chapters: [{ ch: 'ch12', pages: '497–499' }],
+    short: 'Anti-Aβ protofibril antibody for early AD; IV or subcutaneous.',
+    mechanism: 'Monoclonal antibody against soluble Aβ **protofibrils** and plaque; clears amyloid and modestly slows decline in early AD.',
+    targets: [{ t: 'abeta', action: 'binds', note: 'Protofibrils' }],
+    uses: ['**Early Alzheimer disease** (MCI or mild dementia with confirmed amyloid)'],
+    sideEffects: [
+      { e: 'ARIA-E (brain edema) and ARIA-H (microbleeds), rarely fatal', via: 'Amyloid removal from vessel walls; higher risk in APOE4 carriers' },
+      { e: 'Infusion reactions', via: 'Antibody infusion' }
+    ],
+    facts: [{ ch: 'ch12', pages: '497–499', text: 'Anti-amyloid antibodies are listed in Table 12-6 among disease-modifying strategies that had not shown clinical benefit when the book was written.', sec: 's12-status' }],
+    updates: [{ year: '2023', title: 'Traditional approval and new forms', text: 'Accelerated approval January 6, 2023; traditional approval July 2023; IV maintenance dosing January 2025; subcutaneous autoinjector (Leqembi Iqlik) for maintenance August 2025 and for starting treatment July 2026. Boxed warning for ARIA; test APOE4 before treatment.', source: 'Drugs.com approval history; Eisai/Biogen, July 2026' }]
+  },
+  {
+    id: 'donanemab', name: 'Donanemab', brand: 'Kisunla', group: 'Anti-amyloid antibody', cls: 'Anti-amyloid monoclonal antibody',
+    nbn: 'Amyloid-β antibody',
+    nts: [],
+    chapters: [{ ch: 'ch12', pages: '497–499' }],
+    short: 'Anti-plaque antibody for early AD; can stop after plaque clearance.',
+    mechanism: 'Monoclonal antibody against a modified form of Aβ in **deposited plaque**; treatment can stop once plaque is cleared.',
+    targets: [{ t: 'abeta', action: 'binds', note: 'Plaque-deposited Aβ' }],
+    uses: ['**Early symptomatic Alzheimer disease**'],
+    sideEffects: [
+      { e: 'ARIA-E (brain edema) and ARIA-H (microbleeds), rarely fatal', via: 'Amyloid removal from vessel walls; higher risk in APOE4 carriers' },
+      { e: 'Infusion reactions', via: 'Antibody infusion' }
+    ],
+    facts: [{ ch: 'ch12', pages: '497–499', text: 'Anti-amyloid antibodies are listed in Table 12-6 among disease-modifying strategies that had not shown clinical benefit when the book was written.', sec: 's12-status' }],
+    updates: [{ year: '2024', title: 'Donanemab approved', text: 'Approved July 2, 2024 for early symptomatic AD, IV every 4 weeks; boxed warning for ARIA; label updated with modified titration in July 2025.', source: 'Drugs.com approval history; Eli Lilly' }]
   },
   {
     id: 'pcp', name: 'Phencyclidine (PCP)', aka: ['angel dust'], group: 'Drug of abuse', cls: 'Dissociative hallucinogen',
@@ -2017,11 +2140,14 @@ SP.drugs = [
     uses: ['**Pseudobulbar affect**', 'Agitation in Alzheimer disease', 'Rapid-acting antidepressant (Table 3-2 class actions)'],
     chapters: [
       { ch: 'ch03', pages: '55' },
-      { ch: 'ch07', pages: '353–355' }
+      { ch: 'ch07', pages: '353–355' },
+      { ch: 'ch12', pages: '533–536' }
     ],
     facts: [
       { ch: 'ch03', pages: '55', text: 'Listed with PCP, ketamine and dextromethadone at NMDA open-channel sites (Table 3-2).', sec: 's3-drugs' },
-      { ch: 'ch07', pages: '353–354', text: 'With **quinidine**: approved for **pseudobulbar affect**. With **bupropion** (AXS-05): FDA breakthrough therapy for MDD and fast track for TRD and Alzheimer agitation (at publication). Bars follow the plus signs in **Figure 7-84**.', sec: 's7-dxm' }
+      { ch: 'ch07', pages: '353–354', text: 'With **quinidine**: approved for **pseudobulbar affect**. With **bupropion** (AXS-05): FDA breakthrough therapy for MDD and fast track for TRD and Alzheimer agitation (at publication). Bars follow the plus signs in **Figure 7-84**.', sec: 's7-dxm' },
+      { ch: 'ch12', pages: '533–534', text: 'A more robust NMDA antagonist than memantine; with **bupropion** (CYP2D6 inhibitor) it blocks NMDA receptors across the agitation network (cortex, thalamus, amygdala, VTA, LC) for **AD agitation**.', sec: 's12-agitation' },
+      { ch: 'ch12', pages: '535–536', text: 'With **quinidine**, approved for **pseudobulbar affect** (NMDA and σ actions).', sec: 's12-pba-apathy' }
     ],
     updates: [
       { year: '2022', title: 'Approved for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022.', source: 'FDA, August 2022' },
@@ -2031,12 +2157,16 @@ SP.drugs = [
   },
   {
     id: 'quinidine', name: 'Quinidine', group: 'CYP2D6 inhibitor', cls: 'CYP2D6 inhibitor (antiarrhythmic)',
-    chapters: [{ ch: 'ch07', pages: '353–354' }],
+    chapters: [
+      { ch: 'ch07', pages: '353–354' },
+      { ch: 'ch12', pages: '534–536' }
+    ],
     nts: [],
     short: 'CYP2D6 inhibitor that boosts dextromethorphan levels.',
     mechanism: 'Inhibits **CYP2D6** at doses below those with cardiovascular actions, preventing rapid breakdown of dextromethorphan.',
     targets: [{ t: 'cyp2d6', action: 'inhibitor' }],
-    uses: ['With dextromethorphan: **pseudobulbar affect** (approved); depression and Alzheimer agitation (in trials at publication)']
+    uses: ['With dextromethorphan: **pseudobulbar affect** (approved); depression and Alzheimer agitation (in trials at publication)'],
+    facts: [{ ch: 'ch12', pages: '534–536', text: 'Combined with dextromethorphan for **pseudobulbar affect**, by inhibiting CYP2D6.', sec: 's12-pba-apathy' }]
   },
   {
     id: 'dextromethadone', name: 'Dextromethadone', aka: ['Esmethadone', 'REL-1017'], group: 'NMDA antagonist', cls: 'NMDA antagonist (investigational at publication)',
@@ -2115,7 +2245,8 @@ SP.drugs = [
       { ch: 'ch07', pages: '311–315, 327' },
       { ch: 'ch08', pages: '377' },
       { ch: 'ch09', pages: '399–400' },
-      { ch: 'ch10', pages: '424–425, 427' }
+      { ch: 'ch10', pages: '424–425, 427' },
+      { ch: 'ch12', pages: '535' }
     ],
     nbn: 'Serotonin receptor antagonist (5HT2A/2C) and reuptake inhibitor',
     nts: ['serotonin', 'norepinephrine', 'histamine'],
@@ -2148,7 +2279,8 @@ SP.drugs = [
       { ch: 'ch07', pages: '312–313', text: '300 mg **XR** once nightly gives levels that never fall below the antidepressant minimum, with a peak similar to 100 mg IR (Figure 7-47).', sec: 's7-sari' },
       { ch: 'ch08', pages: '377', text: 'Off-label option for **GAD** and for **panic attacks**.', sec: 's8-gad' },
       { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' },
-      { ch: 'ch10', pages: '424–425', text: 'The **most commonly prescribed** sleep agent worldwide (not approved for insomnia); reduces arousal by blocking 5HT2A, α1 and H1; no tolerance, withdrawal, dependence or rebound.', sec: 's10-arousal-blockers' }
+      { ch: 'ch10', pages: '424–425', text: 'The **most commonly prescribed** sleep agent worldwide (not approved for insomnia); reduces arousal by blocking 5HT2A, α1 and H1; no tolerance, withdrawal, dependence or rebound.', sec: 's10-arousal-blockers' },
+      { ch: 'ch12', pages: '535', text: 'In dementia, low-dose nightly trazodone (half-life **6–8 h**) improves sleep without daytime effects; may help behavior in **FTD** more than AD.', sec: 's12-depression' }
     ]
   },
   {
@@ -2304,11 +2436,15 @@ SP.drugs = [
       { e: 'Acute dystonia, akathisia; TD with chronic use', via: 'Nigrostriatal D2 blockade' },
       { e: 'Hyperprolactinemia', via: 'Tuberoinfundibular D2 blockade' }
     ],
-    chapters: [{ ch: 'ch05', pages: '180–181, 202–204' }],
+    chapters: [
+      { ch: 'ch05', pages: '180–181, 202–204' },
+      { ch: 'ch12', pages: '524' }
+    ],
     facts: [
       { ch: 'ch05', pages: '180', text: 'Table 5-1: high potency; depot.', sec: 's5-fga' },
       { ch: 'ch05', pages: '181', text: 'Has relatively little anticholinergic or antihistaminic binding, illustrating why D2 antagonists differ in side effects more than in efficacy.', sec: 's5-fga' },
-      { ch: 'ch05', pages: '202', text: 'Less sedating than some others; plasma levels may be useful.', sec: 's5-first-agents' }
+      { ch: 'ch05', pages: '202', text: 'Less sedating than some others; plasma levels may be useful.', sec: 's5-first-agents' },
+      { ch: 'ch12', pages: '524', text: 'Used cautiously **off-label** for agitation/psychosis in dementia despite the boxed warning for stroke and death.', sec: 's12-d2' }
     ]
   },
   {
@@ -2596,11 +2732,13 @@ SP.drugs = [
     pearls: ['Often used at **higher** doses than approved, guided by plasma levels', 'Forms: orally disintegrating, acute IM, **4-week depot**; inhaled form in development', 'Combination with **samidorphan** to limit weight gain'],
     chapters: [
       { ch: 'ch05', pages: '198, 225–226' },
-      { ch: 'ch07', pages: '325–326, 343' }
+      { ch: 'ch07', pages: '325–326, 343' },
+      { ch: 'ch12', pages: '524' }
     ],
     facts: [
       { ch: 'ch05', pages: '225–226', text: 'Widely considered, by clinical experience rather than definitive trials, the **next most effective** after clozapine; 5HT2C plus weaker α2 antagonism, especially with fluoxetine’s 5HT2C antagonism, may explain efficacy in depression.', sec: 's5-pines' },
-      { ch: 'ch07', pages: '325–326, 343', text: 'Table 7-1: mania, maintenance; with **fluoxetine** for bipolar depression and treatment-resistant MDD; post hoc evidence in mania with mixed features. The combination acts as a potent SERT/5HT2C inhibitor but causes weight gain.', sec: 's7-augment-sda' }
+      { ch: 'ch07', pages: '325–326, 343', text: 'Table 7-1: mania, maintenance; with **fluoxetine** for bipolar depression and treatment-resistant MDD; post hoc evidence in mania with mixed features. The combination acts as a potent SERT/5HT2C inhibitor but causes weight gain.', sec: 's7-augment-sda' },
+      { ch: 'ch12', pages: '524', text: 'Used cautiously **off-label** for agitation/psychosis in dementia despite the boxed warning for stroke and death.', sec: 's12-d2' }
     ],
     updates: [{ year: '2021', title: 'Olanzapine–samidorphan approved', text: 'Olanzapine combined with the μ-opioid antagonist samidorphan (Lybalvi) was approved for schizophrenia and bipolar I disorder in May 2021.', source: 'FDA, May 28, 2021' }]
   },
@@ -2646,7 +2784,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch05', pages: '227–231', text: 'Goldilocks and the three bears: different pharmacology at 50, 300 and 800 mg (Figure 5-46). Low D2 occupancy (< 60%) at antipsychotic doses.', sec: 's5-pines' },
       { ch: 'ch07', pages: '326, 343', text: 'Table 7-1: mania, maintenance, **bipolar depression** and **adjunct for MDD**; antidepressant action may come from norquetiapine at NET and 5HT2C plus 5HT2A, 5HT7, α2A antagonism and 5HT1A agonism.', sec: 's7-augment-sda' },
-      { ch: 'ch10', pages: '425, 428', text: 'Sedating via H1 (with other) blockade; mirtazapine and chlorpromazine fall in the “still too hot” (hangover) category of Figure 10-41C.', sec: 's10-pk' }
+      { ch: 'ch10', pages: '425, 428', text: 'Sedating via H1 (with other) blockade; mirtazapine and chlorpromazine fall in the “still too hot” (hangover) category of Figure 10-41C.', sec: 's10-pk' },
+      { ch: 'ch12', pages: '524', text: 'The book does **not** list quetiapine among the D2 blockers used off-label in dementia.', sec: 's12-d2' }
     ]
   },
   {
@@ -2757,11 +2896,13 @@ SP.drugs = [
     pearls: ['Depot injections lasting **2 or 4 weeks**; monitor plasma levels of risperidone + paliperidone', 'Orally disintegrating tablet and liquid'],
     chapters: [
       { ch: 'ch05', pages: '198, 234–235' },
-      { ch: 'ch07', pages: '326' }
+      { ch: 'ch07', pages: '326' },
+      { ch: 'ch12', pages: '524' }
     ],
     facts: [
       { ch: 'ch05', pages: '234–235', text: 'Some prefer it for children and adolescents; it may need twice-daily dosing at initiation (especially in children or the elderly) to avoid sedation and orthostasis.', sec: 's5-dones' },
-      { ch: 'ch07', pages: '326', text: 'Table 7-1: approved for **bipolar mania** and **maintenance**.', sec: 's7-sda-mania' }
+      { ch: 'ch07', pages: '326', text: 'Table 7-1: approved for **bipolar mania** and **maintenance**.', sec: 's7-sda-mania' },
+      { ch: 'ch12', pages: '524', text: 'Used cautiously **off-label** for agitation/psychosis in dementia despite the boxed warning for stroke and death.', sec: 's12-d2' }
     ]
   },
   {
@@ -2947,8 +3088,14 @@ SP.drugs = [
       { t: 'd3', action: 'binds', s: 1 }
     ],
     uses: ['Schizophrenia (in advanced trials at publication; approved 2024)'],
-    chapters: [{ ch: 'ch05', pages: '242' }],
-    facts: [{ ch: 'ch05', pages: '242', text: 'With trospium, showed promising efficacy and tolerability for psychotic symptoms of schizophrenia and was progressing as a potential breakthrough.', sec: 's5-future' }],
+    chapters: [
+      { ch: 'ch05', pages: '242' },
+      { ch: 'ch12', pages: '507' }
+    ],
+    facts: [
+      { ch: 'ch05', pages: '242', text: 'With trospium, showed promising efficacy and tolerability for psychotic symptoms of schizophrenia and was progressing as a potential breakthrough.', sec: 's5-future' },
+      { ch: 'ch12', pages: '507', text: 'As an M4/M1 agonist it could theoretically reduce both psychotic and cognitive symptoms in AD.', sec: 's12-ach' }
+    ],
     updates: [{ year: '2024', title: 'Approved for schizophrenia', text: 'Xanomeline–trospium (Cobenfy) was approved for schizophrenia in adults in September 2024. As an add-on to other antipsychotics it missed its primary endpoint in the phase III ARISE trial (April 2025).', source: 'FDA, September 26, 2024; Bristol Myers Squibb, April 2025' }]
   },
   {
@@ -3073,12 +3220,14 @@ SP.drugs = [
     pearls: ['Oral, liquid, orally disintegrating; **4-week** and **4- to 8-week** long-acting injections (the latter with a day-1 loading injection)'],
     chapters: [
       { ch: 'ch05', pages: '193, 239' },
-      { ch: 'ch07', pages: '325–327' }
+      { ch: 'ch07', pages: '325–327' },
+      { ch: 'ch12', pages: '524' }
     ],
     facts: [
       { ch: 'ch05', pages: '193', text: 'The result of “throwing a dart” closer to the antagonist end after OPC4392 and bifeprunox were too agonistic; some question its efficacy in the most severe psychosis (never proven).', sec: 's5-pa' },
       { ch: 'ch05', pages: '239', text: '5HT1A partial agonism and 5HT2C/5HT7 antagonism at low doses are theoretical antidepressant mechanisms.', sec: 's5-pips' },
-      { ch: 'ch07', pages: '325–327', text: 'Table 7-1: approved for **bipolar mania** and **maintenance** and as an **adjunct for MDD**; one of the most prescribed augmenters in the US; **5HT1A partial agonism** (plus D3, 5HT7, 5HT2C, α2) may explain antidepressant action; some **akathisia**; not approved for bipolar depression.', sec: 's7-augment-sda' }
+      { ch: 'ch07', pages: '325–327', text: 'Table 7-1: approved for **bipolar mania** and **maintenance** and as an **adjunct for MDD**; one of the most prescribed augmenters in the US; **5HT1A partial agonism** (plus D3, 5HT7, 5HT2C, α2) may explain antidepressant action; some **akathisia**; not approved for bipolar depression.', sec: 's7-augment-sda' },
+      { ch: 'ch12', pages: '524', text: 'Used cautiously **off-label** for agitation/psychosis in dementia despite the boxed warning for stroke and death.', sec: 's12-d2' }
     ]
   },
   {
@@ -3094,11 +3243,13 @@ SP.drugs = [
     uses: ['**Psychosis in Parkinson’s disease**', 'Dementia-related psychosis (late-stage testing at publication; see updates)', 'Early positive adjunctive results in major depression and negative symptoms'],
     chapters: [
       { ch: 'ch04', pages: '131–141, 157' },
-      { ch: 'ch05', pages: '198, 240' }
+      { ch: 'ch05', pages: '198, 240' },
+      { ch: 'ch12', pages: '524–528' }
     ],
     facts: [
       { ch: 'ch04', pages: '131–141', text: 'The 5HT2A mechanism avoids the D2 blockade that **worsens movement** in Parkinson’s disease and raises **stroke and death** risk in dementia.', sec: 's4-5ht-hyper' },
-      { ch: 'ch05', pages: '240', text: 'The **only** known drug with proven antipsychotic efficacy that lacks D2 antagonist/partial agonist actions; in the low metabolic risk tier.', sec: 's5-others' }
+      { ch: 'ch05', pages: '240', text: 'The **only** known drug with proven antipsychotic efficacy that lacks D2 antagonist/partial agonist actions; in the low metabolic risk tier.', sec: 's5-others' },
+      { ch: 'ch12', pages: '526–528', text: 'In dementia psychosis it blocks excitatory **5HT2A** input to surviving glutamate neurons that lost GABA inhibition, normalizing visual cortex (hallucinations) and VTA dopamine (delusions) output. Approved for PD psychosis.', sec: 's12-psychosis' }
     ],
     updates: [{ year: '2022', title: 'Not approved for dementia-related psychosis', text: 'The FDA issued complete response letters for dementia-related psychosis (April 2021) and for hallucinations and delusions of Alzheimer disease psychosis (August 2022, after a 9–3 advisory committee vote against efficacy). Its US approval remains for Parkinson’s disease psychosis.', source: 'FDA actions reported April 2021 and August 4, 2022' }]
   },
@@ -3111,13 +3262,15 @@ SP.drugs = [
       { ch: 'ch04', pages: '146' },
       { ch: 'ch05', pages: '197, 239–240' },
       { ch: 'ch07', pages: '327–328' },
-      { ch: 'ch08', pages: '377–378' }
+      { ch: 'ch08', pages: '377–378' },
+      { ch: 'ch12', pages: '530–533' }
     ],
     facts: [
       { ch: 'ch04', pages: '146', text: 'Chapter 4 notes that **treatments for agitation in dementia are evolving separately** from those for psychosis in dementia and in schizophrenia.', sec: 's4-aggression' },
       { ch: 'ch05', pages: '197, 239–240', text: 'Positive results for agitation in dementia suggest it may have a satisfactory risk:benefit profile; a positive study with sertraline in PTSD was a promising exception among anxiety/PTSD uses.', sec: 's5-pips' },
       { ch: 'ch07', pages: '327–328', text: 'Table 7-1: approved as an **adjunct for MDD** only. Stronger 5HT2A, 5HT1A and **α1** binding than aripiprazole (possibly less akathisia); α1 + 5HT2A synergy may aid antidepressant action and evidence in Alzheimer agitation and PTSD.', sec: 's7-augment-sda' },
-      { ch: 'ch08', pages: '377–378', text: 'In testing with **sertraline** for PTSD at publication, with promising initial findings.', sec: 's8-ptsd' }
+      { ch: 'ch08', pages: '377–378', text: 'In testing with **sertraline** for PTSD at publication, with promising initial findings.', sec: 's8-ptsd' },
+      { ch: 'ch12', pages: '530–533', text: 'For AD agitation: **D2 and 5HT1A partial agonism**, **5HT2A** antagonism and **α1/α2C** antagonism act synergistically on the agitation network; lower doses than for schizophrenia.', sec: 's12-agitation' }
     ],
     updates: [
       { year: '2023', title: 'Approved for Alzheimer agitation', text: 'Approved by the FDA for **agitation associated with dementia due to Alzheimer disease**, the first drug approved for this indication in the US.', source: 'FDA, May 10, 2023' },

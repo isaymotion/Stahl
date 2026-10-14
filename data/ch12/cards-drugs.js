@@ -1,0 +1,27 @@
+/* Chapter 12 drug flashcards. */
+SP.add("ch12", "drugs", [
+  { id: "d12-01", tag: "Cholinesterase inhibitors", q: "Donepezil: mechanism?", a: "**Reversible, long-acting, selective AChE** inhibitor; no BuChE inhibition." },
+  { id: "d12-02", tag: "Cholinesterase inhibitors", q: "Donepezil: main side effects?", a: "Mostly **transient GI** effects (peripheral AChE)." },
+  { id: "d12-03", tag: "Cholinesterase inhibitors", q: "Rivastigmine: mechanism?", a: "**Pseudoirreversible**, intermediate-acting inhibitor of **AChE and BuChE**." },
+  { id: "d12-04", tag: "Cholinesterase inhibitors", q: "How is rivastigmine’s GI burden reduced?", a: "The **transdermal patch** (lower peaks)." },
+  { id: "d12-05", tag: "Cholinesterase inhibitors", q: "Why might rivastigmine’s BuChE inhibition matter in later AD?", a: "**Gliosis** raises glial BuChE activity." },
+  { id: "d12-06", tag: "Cholinesterase inhibitors", q: "Galantamine’s second mechanism?", a: "**Positive allosteric modulator** of nicotinic receptors." },
+  { id: "d12-07", tag: "Cholinesterase inhibitors", q: "Natural source of galantamine?", a: "**Snowdrops and daffodils**." },
+  { id: "d12-08", tag: "Memantine", q: "Memantine: mechanism?", a: "**Uncompetitive, low-affinity, voltage-dependent open-channel** NMDA antagonist at the Mg²⁺ site." },
+  { id: "d12-09", tag: "Memantine", q: "Memantine’s other binding actions?", a: "**σ** binding; weak **5HT3** antagonism." },
+  { id: "d12-10", tag: "Memantine", q: "Why combine memantine with a cholinesterase inhibitor?", a: "Different mechanisms: **additive** benefit." },
+  { id: "d12-11", tag: "Psychosis", q: "Pimavanserin: mechanism and approval?", a: "Selective **5HT2A antagonist/inverse agonist**; approved for **Parkinson’s disease psychosis**." },
+  { id: "d12-12", tag: "Psychosis", q: "Which D2 blockers are used off-label in dementia (book)?", a: "**Risperidone, olanzapine, aripiprazole, haloperidol** (not quetiapine)." },
+  { id: "d12-13", tag: "Psychosis", q: "Why do D2 blockers carry a boxed warning in dementia?", a: "Increased **stroke and death**." },
+  { id: "d12-14", tag: "Agitation", q: "Brexpiprazole for AD agitation: status?", a: "Book: late-stage testing. Update: **approved May 2023**." },
+  { id: "d12-15", tag: "Agitation", q: "Dextromethorphan–bupropion (AXS-05) for AD agitation: status?", a: "Book: promising trials. Update: **approved April 2026**." },
+  { id: "d12-16", tag: "Agitation", q: "Which unapproved drug showed perhaps the most efficacy for neuropsychiatric symptoms?", a: "**Carbamazepine** (but side effects and interactions)." },
+  { id: "d12-17", tag: "Agitation", q: "Which drugs does the book advise against for agitation?", a: "**Valproate, topiramate, oxcarbazepine, benzodiazepines**." },
+  { id: "d12-18", tag: "PBA", q: "Approved treatment for pseudobulbar affect?", a: "**Dextromethorphan–quinidine** (NMDA, σ; quinidine blocks CYP2D6)." },
+  { id: "d12-19", tag: "Depression", q: "Which SSRI prolongs QT, and which may not?", a: "**Citalopram** prolongs QT; **escitalopram** may not." },
+  { id: "d12-20", tag: "Depression", q: "Why low-dose trazodone at night in dementia?", a: "Short half-life (**6–8 h**): improves **sleep** without daytime effects." },
+  { id: "d12-21", tag: "Apathy", q: "Possible drugs for apathy?", a: "**Bupropion, levodopa, stimulants, cholinesterase inhibitors**; SSRIs/SNRIs in FTD. None approved." },
+  { id: "d12-22", tag: "Antibodies", q: "Name the anti-amyloid antibodies approved after the book.", a: "**Aducanumab** (2021, discontinued 2024), **lecanemab** (2023), **donanemab** (2024)." },
+  { id: "d12-23", tag: "Antibodies", q: "Key safety risk of anti-amyloid antibodies?", a: "**ARIA** (edema, microbleeds); higher in **APOE4** carriers." },
+  { id: "d12-24", tag: "Muscarinic", q: "Why might xanomeline help AD?", a: "**M4/M1 agonist**: M4 lowers VTA DA (psychosis), M1 aids cognition." }
+]);

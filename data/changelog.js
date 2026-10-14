@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 13,
+    date: "2026-10-14",
+    title: "Chapter 12: Dementia and acetylcholine",
+    summary: "Chapter 12 covers the four major dementias, the amyloid cascade and AD staging, the acetylcholine network and every symptomatic treatment for memory, psychosis and agitation.",
+    items: [
+      { type: "chapter", ch: "ch12", text: "Chapter 12: study guide (19 sections), high-yield summary, mechanism, drug and clinical cards, and 53 board-style questions.", href: "#/c/ch12/guide", link: "Open Chapter 12" },
+      { type: "update", text: "Library: acetylcholine now has pathways and full synthesis; 6 new drugs (donepezil, rivastigmine, galantamine, aducanumab, lecanemab, donanemab); memantine, pimavanserin, brexpiprazole and dextromethorphan expanded; new targets butyrylcholinesterase, ChAT, amyloid-β and secretases.", href: "#/nt/acetylcholine", link: "Acetylcholine" },
+      { type: "feature", text: "Symptoms & circuits: five dementia maps for memory, psychosis, agitation, apathy and pseudobulbar affect.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Post-publication update boxes: aducanumab (2021–2024), lecanemab (2023–2026), donanemab (2024), the first amyloid blood test (2025), revised AD criteria (2024), the donepezil patch (2022), and the pimavanserin, brexpiprazole, AVP-786 and dextromethorphan–bupropion decisions.", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 12,
     date: "2026-10-14",
     title: "Chapter 11: ADHD",
