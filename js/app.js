@@ -1787,7 +1787,7 @@
       main.querySelector('#tb-hint').textContent = on.length === 1 ? on[0].hint : on.length ? 'Slides are grouped by type in the order listed above, unless you choose “Mixed together.”' : '';
       pending = teachBuild(prefs);
       var byType = {}; pending.forEach(function (id) { var k = id.split(':')[0]; byType[k] = (byType[k] || 0) + 1; });
-      var parts = TEACH_TYPES.filter(function (t) { return byType[t.k]; }).map(function (t) { return plural(byType[t.k], t.unit); });
+      var parts = TEACH_TYPES.filter(function (t) { return byType[t.k]; }).map(function (t) { return t.unit === 'card' ? byType[t.k] + ' ' + t.label.toLowerCase().replace(/s$/, byType[t.k] === 1 ? '' : 's') : plural(byType[t.k], t.unit); });
       if (byType.hyt) parts.push(plural(byType.hyt, 'topic slide'));
       var count = main.querySelector('#t-count');
       count.textContent = pending.length ? plural(pending.length, 'slide') + ': ' + parts.join(', ') + (prefs.timer ? '. About ' + Math.max(1, Math.round(pending.length * (prefs.timer + 8) / 60)) + ' min with the countdown.' : '.') : 'Choose at least one type of slide.';
