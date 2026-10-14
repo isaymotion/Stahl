@@ -1,0 +1,41 @@
+/* Chapter 11 glossary terms: [term, definition in the app's own words, source chapter]. */
+SP.glossary = (SP.glossary || []).concat([
+  ["attention deficit hyperactivity disorder", "ADHD: a neurodevelopmental disorder of inattention, impulsivity and/or hyperactivity, with onset by age 12, linked to inefficient prefrontal tuning by NE and DA.", "Ch 11"],
+  ["executive dysfunction", "Difficulty sustaining attention, organizing and solving problems; linked to an inefficient DLPFC and shared by many psychiatric disorders.", "Ch 11"],
+  ["selective attention", "The ability to focus on one thing while ignoring distractors; linked to the dorsal anterior cingulate cortex.", "Ch 11"],
+  ["sustained attention", "The ability to keep attention on a task long enough to finish it; linked to the dorsolateral prefrontal cortex.", "Ch 11"],
+  ["dorsolateral prefrontal cortex", "DLPFC: prefrontal region for sustained attention, working memory and problem solving; activated by the n-back test.", "Ch 11"],
+  ["dorsal anterior cingulate cortex", "dACC: prefrontal region for selective attention; activated by the Stroop task.", "Ch 11"],
+  ["orbitofrontal cortex", "OFC: prefrontal region linked to impulsivity in ADHD and other disorders, including suicidality, violence and addiction.", "Ch 11"],
+  ["ventromedial prefrontal cortex", "VMPFC: prefrontal region linked to emotional regulation; mistuning is tied to oppositional, conduct, mood and anxiety symptoms.", "Ch 11"],
+  ["supplementary motor area", "Prefrontal motor region whose loop through the putamen modulates motor activity and hyperactivity.", "Ch 11"],
+  ["n-back test", "A working-memory test in which the participant reports the number shown n items earlier; it activates the DLPFC.", "Ch 11"],
+  ["Stroop task", "A selective-attention test: name the ink color of a color word rather than the word itself; it activates the dACC.", "Ch 11"],
+  ["tonic firing", "Steady baseline neuronal firing that sets the background “tone” of NE or DA release.", "Ch 11"],
+  ["phasic firing", "Bursts of DA neuron firing that release a flurry of dopamine, reinforcing learning and reward; hijacked by drugs of abuse.", "Ch 11"],
+  ["inverted U", "The curve relating NE/DA stimulation to prefrontal performance: both too little and too much impair function.", "Ch 11"],
+  ["signal-to-noise ratio", "In prefrontal tuning, NE at α2A boosts the signal and DA at D1 reduces the noise; ADHD lowers the ratio.", "Ch 11"],
+  ["HCN channel", "Hyperpolarization-activated cyclic nucleotide-gated cation channel on dendritic spines: open channels leak the signal, closed channels let it pass.", "Ch 11"],
+  ["synaptic pruning", "The elimination of up to half of prefrontal synapses between childhood and adolescence; errors may contribute to ADHD.", "Ch 11"],
+  ["late-onset ADHD", "ADHD-like symptoms first starting after age 12 (even up to 45); whether it is true ADHD or comorbid executive dysfunction is debated.", "Ch 11"],
+  ["pseudosubstrate", "A drug that binds a transporter’s substrate site and is carried in like the natural substrate, as amphetamine is at DAT, NET and VMAT2.", "Ch 11"],
+  ["enantiomer", "One of two mirror-image forms of a molecule (D and L); D-methylphenidate and D-amphetamine are the more potent DAT forms.", "Ch 11"],
+  ["prodrug", "An inactive compound converted in the body into an active drug, as lisdexamfetamine becomes D-amphetamine.", "Ch 11"],
+  ["DAT occupancy threshold", "The roughly 50–60% DAT occupancy above which stimulants act in ADHD; benefit stops when occupancy falls below it.", "Ch 11"],
+  ["slow-dose stimulant", "A controlled-release, transdermal or prodrug stimulant that occupies transporters slowly and steadily, boosting tonic NE/DA with less abuse risk.", "Ch 11"],
+  ["pulsatile stimulant", "An immediate-release, intranasal, intravenous or smoked stimulant that rapidly boosts phasic DA, causing euphoria and abuse.", "Ch 11"],
+  ["stimulant rebound", "Hyperactivity and insomnia that appear when stimulant levels fall too early in the evening.", "Ch 11"],
+  ["NRI", "Selective norepinephrine reuptake inhibitor (NET inhibitor), such as atomoxetine or reboxetine.", "Ch 11"],
+  ["imidazoline receptor", "A non-adrenergic receptor bound by clonidine, thought to add sedation and hypotension.", "Ch 11"],
+  ["oppositional defiant disorder", "A disruptive behavior disorder of anger, argumentativeness and defiance, often comorbid with ADHD and linked to the VMPFC.", "Ch 11"],
+  ["conduct disorder", "A disruptive behavior disorder of serious rule violation, aggression and cruelty, often comorbid with ADHD.", "Ch 11"],
+  ["Tourette syndrome", "A tic disorder with motor and vocal tics, hypothetically from excess striatal dopamine; α2 agonists are used off-label.", "Ch 11"],
+  ["abuse-deterrent formulation", "A controlled-release matrix that resists crushing for snorting, smoking or injection.", "Ch 11"]
+]);
+SP.glossaryAliases = Object.assign(SP.glossaryAliases || {}, {
+  "adhd": "attention deficit hyperactivity disorder", "attention-deficit/hyperactivity disorder": "attention deficit hyperactivity disorder", "attention-deficit hyperactivity disorder": "attention deficit hyperactivity disorder",
+  "dlpfc": "dorsolateral prefrontal cortex", "dacc": "dorsal anterior cingulate cortex", "ofc": "orbitofrontal cortex", "orbital frontal cortex": "orbitofrontal cortex", "vmpfc": "ventromedial prefrontal cortex",
+  "n-back": "n-back test", "stroop test": "stroop task", "hcn channels": "hcn channel", "hyperpolarization-activated cyclic nucleotide-gated channel": "hcn channel",
+  "enantiomers": "enantiomer", "prodrugs": "prodrug", "nris": "nri", "selective nri": "nri", "imidazoline receptors": "imidazoline receptor",
+  "slow-dose stimulants": "slow-dose stimulant", "pulsatile stimulants": "pulsatile stimulant", "tourette's syndrome": "tourette syndrome", "tourette disorder": "tourette syndrome"
+});

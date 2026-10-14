@@ -1,0 +1,28 @@
+/* Chapter 11 drug flashcards. */
+SP.add("ch11", "drugs", [
+  { id: "d11-01", tag: "Methylphenidate", q: "What is the single-enantiomer form of methylphenidate?", a: "**D-methylphenidate** (dexmethylphenidate: Focalin, Focalin XR)." },
+  { id: "d11-02", tag: "Methylphenidate", q: "How long does IR methylphenidate (Ritalin) last?", a: "About **3–4 h**: second dose at lunch." },
+  { id: "d11-03", tag: "Methylphenidate", q: "Which methylphenidate is an osmotic 12-hour tablet?", a: "**Concerta** (OROS)." },
+  { id: "d11-04", tag: "Methylphenidate", q: "Which methylphenidate capsule gives two strong peaks?", a: "**Ritalin LA** (early and at ~4 h)." },
+  { id: "d11-05", tag: "Methylphenidate", q: "Which methylphenidate is dosed in the evening?", a: "**Jornay PM**: absorption delayed ~10 h, peak at 14 h." },
+  { id: "d11-06", tag: "Methylphenidate", q: "Which methylphenidate is a skin patch?", a: "**Daytrana** (peak 7–10 h, ~12 h)." },
+  { id: "d11-07", tag: "Methylphenidate", q: "Name two liquid or chewable ER methylphenidates.", a: "**Quillivant XR** (suspension) and **QuilliChew ER** (chewable)." },
+  { id: "d11-08", tag: "Amphetamine", q: "What is lisdexamfetamine?", a: "A prodrug: **D-amphetamine linked to lysine** (Vyvanse), slowly activated." },
+  { id: "d11-09", tag: "Amphetamine", q: "Which amphetamine lasts up to 16 h?", a: "**Mydayis** (mixed salts, age 13+)." },
+  { id: "d11-10", tag: "Amphetamine", q: "Name the D-amphetamine products in Table 11-4.", a: "**Zenzedi**, **ProCentra**, **Dexedrine** spansule, **Vyvanse**." },
+  { id: "d11-11", tag: "Amphetamine", q: "Name the D,L-amphetamine products in Table 11-3.", a: "**Adderall, Evekeo, Adzenys XR-ODT, Dyanavel XR, Adderall XR, Mydayis, Adzenys ER**." },
+  { id: "d11-12", tag: "Amphetamine", q: "From what age are IR Adderall and Evekeo approved?", a: "**Age 3** and older." },
+  { id: "d11-13", tag: "Slow-dose", q: "Name slow-dose stimulants.", a: "OROS/LA methylphenidate, XR D-methylphenidate, **transdermal** methylphenidate, D-amphetamine spansules, XR mixed salts, **lisdexamfetamine**." },
+  { id: "d11-14", tag: "Pulsatile", q: "Name pulsatile stimulants.", a: "**Immediate-release** oral stimulants and any **IV, intranasal or smoked** stimulant (cocaine, methamphetamine)." },
+  { id: "d11-15", tag: "NRI", q: "Which NRI is approved for ADHD in children and adults?", a: "**Atomoxetine** (Strattera)." },
+  { id: "d11-16", tag: "NRI", q: "List NET inhibitors in Figure 11-38.", a: "Atomoxetine, **reboxetine**, bupropion, venlafaxine, duloxetine, desvenlafaxine, milnacipran, **desipramine**, **nortriptyline**." },
+  { id: "d11-17", tag: "NRI", q: "How does bupropion differ from atomoxetine?", a: "**NDRI**: weak NET **and DAT** inhibitor; atomoxetine blocks NET only." },
+  { id: "d11-18", tag: "α2 agonists", q: "How selective is guanfacine for α2A?", a: "**15–60×** over α2B and α2C." },
+  { id: "d11-19", tag: "α2 agonists", q: "Guanfacine vs clonidine potency comparison?", a: "Guanfacine is **10× weaker** at sedation/hypotension but **25× more potent** at enhancing PFC function." },
+  { id: "d11-20", tag: "α2 agonists", q: "Which forms of guanfacine and clonidine are approved for ADHD?", a: "Only the **extended/controlled-release** forms." },
+  { id: "d11-21", tag: "α2 agonists", q: "Which α2 agonist is approved to augment stimulants?", a: "**Guanfacine ER**." },
+  { id: "d11-22", tag: "α2 agonists", q: "Off-label uses of guanfacine and clonidine?", a: "**Conduct disorder, ODD, Tourette syndrome**." },
+  { id: "d11-23", tag: "Future", q: "What is viloxazine?", a: "A **NET inhibitor** with **5HT2B/5HT2C** actions; formerly an antidepressant abroad; ER form developed for ADHD (now Qelbree)." },
+  { id: "d11-24", tag: "Future", q: "What is mazindol?", a: "A **DAT inhibitor**, once approved for appetite suppression, in testing for ADHD." },
+  { id: "d11-25", tag: "Future", q: "What is centanafadine?", a: "A **triple (5HT–NE–DA) reuptake inhibitor** (approved 2026 as Simtriyo)." }
+]);

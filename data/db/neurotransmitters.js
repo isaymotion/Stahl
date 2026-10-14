@@ -47,7 +47,9 @@ SP.nts = [
       { ch: 'ch06', pages: '277–281', text: 'Boosting NE (with DA) targets residual **fatigue** and **problems concentrating** in depression.', sec: 's6-algorithm' },
       { ch: 'ch07', pages: '309', text: 'α2 antagonism “cuts the brake cable” on NE and, via heteroreceptors, 5HT release.', sec: 's7-mirtazapine' },
       { ch: 'ch08', pages: '370', text: 'Locus coeruleus overactivity drives autonomic overdrive, **nightmares, hyperarousal, flashbacks and panic**, via α1 and β1 receptors.', sec: 's8-ne' },
-      { ch: 'ch09', pages: '390–393', text: 'The descending spinal NE pathway from the locus coeruleus (caudal lateral tegmental cells) inhibits pain via **α2** receptors in the dorsal horn.', sec: 's9-descending' }
+      { ch: 'ch09', pages: '390–393', text: 'The descending spinal NE pathway from the locus coeruleus (caudal lateral tegmental cells) inhibits pain via **α2** receptors in the dorsal horn.', sec: 's9-descending' },
+      { ch: 'ch11', pages: '454–457', text: 'In the PFC, modest NE stimulates the most sensitive postsynaptic **α2A** receptors and improves function; high NE (stress, comorbidity) recruits **α1 and β1** and impairs working memory.', sec: 's11-tonic-phasic' },
+      { ch: 'ch11', pages: '457–463', text: 'NE at α2A (Gi, ↓cAMP) **closes HCN channels** on pyramidal spines, **strengthening the signal**; input arrives from the **locus coeruleus**.', sec: 's11-hcn' }
     ],
     synthesis: [['Tyrosine', 'Actively transported from blood into the neuron'], ['DOPA', '**Tyrosine hydroxylase (TOH)**, rate-limiting'], ['Dopamine', '**DOPA decarboxylase (DDC)**; only a precursor here'], ['Norepinephrine', '**Dopamine β-hydroxylase (DBH)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [
@@ -79,7 +81,10 @@ SP.nts = [
       { ch: 'ch05', pages: '166–167', text: 'In the motor striatum dopamine and **acetylcholine** are reciprocal: dopamine at D2 suppresses ACh release from cholinergic interneurons.', sec: 's5-motor' },
       { ch: 'ch06', pages: '277–278', text: 'Diffuse dopamine dysfunction is linked mainly to **reduced positive affect**: loss of joy, interest, pleasure, energy, alertness and self-confidence.', sec: 's6-circuits' },
       { ch: 'ch07', pages: '299–301', text: 'In the PFC, DA is cleared by **NET**, so NET inhibitors raise prefrontal DA; only MAO-A + MAO-B inhibition or DA-acting drugs raise DA elsewhere in depression.', sec: 's7-snri' },
-      { ch: 'ch10', pages: '440–444', text: 'Most wake-promoting drugs raise **dopamine** (stimulants, modafinil, solriamfetol; caffeine indirectly via adenosine–D2 coupling).', sec: 's10-caffeine-stimulants' }
+      { ch: 'ch10', pages: '440–444', text: 'Most wake-promoting drugs raise **dopamine** (stimulants, modafinil, solriamfetol; caffeine indirectly via adenosine–D2 coupling).', sec: 's10-caffeine-stimulants' },
+      { ch: 'ch11', pages: '454–457', text: 'Receptor sensitivity **D3 > D2 > D1**; **D1** predominates in the PFC, so low tonic DA leaves it under-stimulated. **Phasic** bursts in the accumbens drive reward learning and are hijacked by drugs.', sec: 's11-tonic-phasic' },
+      { ch: 'ch11', pages: '457–463', text: 'DA at D1 (Gs, ↑cAMP) opens HCN channels: moderate stimulation **reduces noise**, excess loses the signal; input arrives from the **VTA**.', sec: 's11-hcn' },
+      { ch: 'ch11', pages: '480', text: 'In the PFC, DA is cleared largely by **NET**, so NET inhibitors raise prefrontal DA.', sec: 's11-nri' }
     ],
     synthesis: [['Tyrosine', 'Taken into the terminal by a **tyrosine transporter**'], ['DOPA', '**Tyrosine hydroxylase (TOH)**, the rate-limiting enzyme'], ['Dopamine', '**DOPA decarboxylase (DDC)**'], ['Vesicle', 'Packaged by **VMAT2**']],
     pathways: [

@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 12,
+    date: "2026-10-14",
+    title: "Chapter 11: ADHD",
+    summary: "Chapter 11 maps ADHD symptoms to prefrontal circuits, explains NE/DA tuning and the DAT threshold, and covers every stimulant and nonstimulant class.",
+    items: [
+      { type: "chapter", ch: "ch11", text: "Chapter 11: study guide (14 sections), high-yield summary, mechanism, drug and clinical cards, and 50 board-style questions.", href: "#/c/ch11/guide", link: "Open Chapter 11" },
+      { type: "update", text: "Library: 7 new drugs (dexmethylphenidate, lisdexamfetamine, guanfacine, reboxetine, viloxazine, mazindol, centanafadine); methylphenidate, amphetamine, atomoxetine and clonidine expanded; new targets HCN channel and imidazoline receptor.", href: "#/drugs/guanfacine", link: "Guanfacine" },
+      { type: "feature", text: "Symptoms & circuits: five ADHD maps for sustained and selective attention, impulsivity, hyperactivity and comorbid oppositional symptoms.", href: "#/circuits", link: "Symptoms & circuits" },
+      { type: "update", text: "Post-publication update boxes: Azstarys and viloxazine (2021), Xelstrym and adult viloxazine (2022), stimulant boxed warnings and generic lisdexamfetamine (2023), Onyda XR (2024) and centanafadine (2026).", href: "#/updates", link: "See updates" }
+    ]
+  },
+  {
     id: 11,
     date: "2026-10-14",
     title: "Chapter 10: Sleep and Wakefulness",

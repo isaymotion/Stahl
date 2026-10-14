@@ -236,7 +236,10 @@ SP.drugs = [
   },
   {
     id: 'desipramine', name: 'Desipramine', brand: 'Norpramin; Pertofran', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
-    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    chapters: [
+      { ch: 'ch07', pages: '333–336' },
+      { ch: 'ch11', pages: '480' }
+    ],
     nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
     nts: ['norepinephrine', 'histamine', 'acetylcholine'],
     uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
@@ -246,7 +249,10 @@ SP.drugs = [
       { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
       { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
     ],
-    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Norpramin; Pertofran.', sec: 's7-tca' }],
+    facts: [
+      { ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Norpramin; Pertofran.', sec: 's7-tca' },
+      { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' }
+    ],
     short: 'Relatively NET-selective TCA.',
     mechanism: 'A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.',
     targets: [
@@ -259,7 +265,10 @@ SP.drugs = [
   },
   {
     id: 'nortriptyline', name: 'Nortriptyline', brand: 'Pamelor; Aventyl', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
-    chapters: [{ ch: 'ch07', pages: '333–336' }],
+    chapters: [
+      { ch: 'ch07', pages: '333–336' },
+      { ch: 'ch11', pages: '480' }
+    ],
     nbn: 'Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism',
     nts: ['norepinephrine', 'histamine', 'acetylcholine'],
     uses: ['Unipolar depression (second line, for treatment resistance)', 'Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)'],
@@ -269,7 +278,10 @@ SP.drugs = [
       { e: 'Orthostatic hypotension, dizziness', via: 'α1 antagonism' },
       { e: 'Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)', via: 'Voltage-sensitive sodium channel blockade' }
     ],
-    facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Pamelor; Aventyl.', sec: 's7-tca' }],
+    facts: [
+      { ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (TCAs still in use); trade names: Pamelor; Aventyl.', sec: 's7-tca' },
+      { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' }
+    ],
     short: 'Relatively NET-selective TCA.',
     mechanism: 'A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.',
     targets: [
@@ -705,7 +717,8 @@ SP.drugs = [
     id: 'venlafaxine', name: 'Venlafaxine', brand: 'Effexor XR', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
     chapters: [
       { ch: 'ch07', pages: '298–302' },
-      { ch: 'ch09', pages: '390–400' }
+      { ch: 'ch09', pages: '390–400' },
+      { ch: 'ch11', pages: '480' }
     ],
     nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
@@ -725,14 +738,16 @@ SP.drugs = [
     ],
     facts: [
       { ch: 'ch07', pages: '302', text: '2D6 inhibitors and **poor metabolizers** shift the ratio toward parent venlafaxine, reducing NET inhibition: how much NET inhibition a dose gives is **unpredictable**. The XR form is a considerable improvement over IR.', sec: 's7-snri-agents' },
-      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' }
+      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' },
+      { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' }
     ]
   },
   {
     id: 'desvenlafaxine', name: 'Desvenlafaxine', brand: 'Pristiq', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
     chapters: [
       { ch: 'ch07', pages: '302' },
-      { ch: 'ch09', pages: '390–400' }
+      { ch: 'ch09', pages: '390–400' },
+      { ch: 'ch11', pages: '480' }
     ],
     nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
@@ -749,14 +764,16 @@ SP.drugs = [
     ],
     facts: [
       { ch: 'ch07', pages: '302', text: 'Less need for dose titration than venlafaxine because NET inhibition does not depend on CYP2D6 conversion.', sec: 's7-snri-agents' },
-      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' }
+      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' },
+      { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' }
     ]
   },
   {
     id: 'duloxetine', name: 'Duloxetine', brand: 'Cymbalta', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
     chapters: [
       { ch: 'ch07', pages: '299, 302–303' },
-      { ch: 'ch09', pages: '390–400' }
+      { ch: 'ch09', pages: '390–400' },
+      { ch: 'ch11', pages: '480' }
     ],
     nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
@@ -773,14 +790,16 @@ SP.drugs = [
     ],
     facts: [
       { ch: 'ch07', pages: '302–303', text: 'Showed that somatic pain is a legitimate symptom of depression. Usually started **twice daily**; once daily after tolerance. Less hypertension and milder withdrawal than venlafaxine.', sec: 's7-snri-agents' },
-      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' }
+      { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' },
+      { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' }
     ]
   },
   {
     id: 'milnacipran', name: 'Milnacipran', brand: 'Savella; Ixel', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
     chapters: [
       { ch: 'ch07', pages: '300, 303' },
-      { ch: 'ch09', pages: '390–400' }
+      { ch: 'ch09', pages: '390–400' },
+      { ch: 'ch11', pages: '480' }
     ],
     nbn: 'Serotonin and norepinephrine reuptake inhibitor (SERT/NET)',
     nts: ['serotonin', 'norepinephrine', 'dopamine'],
@@ -798,7 +817,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '303', text: 'The first SNRI in Japan and many European countries. Needs **twice-daily** dosing (short half-life). An α1 antagonist relieves urinary hesitancy.', sec: 's7-snri-agents' },
       { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' },
-      { ch: 'ch09', pages: '399', text: 'Potent NET binding at **all** clinically effective doses may make it especially useful for **fibro-fog**.', sec: 's9-ancillary' }
+      { ch: 'ch09', pages: '399', text: 'Potent NET binding at **all** clinically effective doses may make it especially useful for **fibro-fog**.', sec: 's9-ancillary' },
+      { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' }
     ]
   },
   {
@@ -830,7 +850,8 @@ SP.drugs = [
     id: 'bupropion', name: 'Bupropion', brand: 'Wellbutrin', group: 'Antidepressant', cls: 'Norepinephrine–dopamine reuptake inhibitor (NDRI)',
     chapters: [
       { ch: 'ch07', pages: '303–306, 333, 353–354' },
-      { ch: 'ch09', pages: '399–400' }
+      { ch: 'ch09', pages: '399–400' },
+      { ch: 'ch11', pages: '480' }
     ],
     nbn: 'Norepinephrine and dopamine reuptake inhibitor (NET/DAT)',
     nts: ['norepinephrine', 'dopamine'],
@@ -850,7 +871,9 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '306', text: 'IR (three times daily) → SR (twice daily) → **XL** (once daily); IR is all but abandoned.', sec: 's7-ndri' },
       { ch: 'ch07', pages: '333–334', text: 'SSRI or SNRI + bupropion = **triple-action** combination, among the most popular in the US.', sec: 's7-combos' },
-      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' }
+      { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' },
+      { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' },
+      { ch: 'ch11', pages: '480', text: 'An **NDRI**: weak NET plus weak DAT inhibition, so unlike atomoxetine it also reaches accumbens DATs (Figure 11-37).', sec: 's11-nri' }
     ],
     updates: [{ year: '2022', title: 'Combined with dextromethorphan for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022, and for agitation associated with Alzheimer dementia in April 2026.', source: 'FDA, August 2022; Axsome Therapeutics, April 30, 2026' }]
   },
@@ -876,41 +899,66 @@ SP.drugs = [
     ]
   },
   {
-    id: 'methylphenidate', name: 'Methylphenidate', group: 'Stimulant', cls: 'Stimulant (ADHD)',
+    id: 'methylphenidate', name: 'Methylphenidate', brand: 'Ritalin; Concerta; others', group: 'Stimulant', cls: 'Stimulant (ADHD)',
     nbn: 'Dopamine and norepinephrine transport (DAT/NET) inhibitor',
     short: 'Blocks DAT and NET; acts only at the transporters.',
     mechanism: 'Blocks the **dopamine (DAT)** and **norepinephrine (NET)** transporters, enhancing synaptic dopamine and norepinephrine. Unlike amphetamine it targets **only the monoamine transporters**, much as SSRIs act at SERT.',
     targets: [
-      { t: 'dat', action: 'inhibitor', note: 'Strength added with Chapter 11' },
-      { t: 'net', action: 'inhibitor' }
+      { t: 'dat', action: 'inhibitor', note: 'Allosteric (non-competitive); D >> L isomer' },
+      { t: 'net', action: 'inhibitor', note: 'Allosteric; D >> L isomer' }
     ],
     uses: ['ADHD', 'Indirect dopamine agonism also improves depression and wakefulness (Table 2-5)'],
     chapters: [
       { ch: 'ch02', pages: '34–35, 40' },
-      { ch: 'ch10', pages: '441–442' }
+      { ch: 'ch10', pages: '441–442' },
+      { ch: 'ch11', pages: '469–479' }
     ],
     facts: [
       { ch: 'ch02', pages: '34', text: 'A “stimulant” for ADHD that acts on **DAT and NET**.', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '35', text: 'Targets **only the monoamine transporters** (not VMATs), in contrast to amphetamine.', sec: 's2-vesicular' },
-      { ch: 'ch10', pages: '441–442', text: 'Approved for sleepiness in **narcolepsy** (not OSA or shift work, used off-label); highly effective but controlled (abuse, diversion, psychosis, mania, hypertension).', sec: 's10-caffeine-stimulants' }
-    ]
+      { ch: 'ch10', pages: '441–442', text: 'Approved for sleepiness in **narcolepsy** (not OSA or shift work, used off-label); highly effective but controlled (abuse, diversion, psychosis, mania, hypertension).', sec: 's10-caffeine-stimulants' },
+      { ch: 'ch11', pages: '469–470', text: 'Blocks NET and DAT **allosterically** (a site distinct from the monoamine site), like antidepressant reuptake inhibitors: stops the pump, is **not transported** and has **no VMAT2** action.', sec: 's11-mph' },
+      { ch: 'ch11', pages: '470', text: 'Racemic: the **D-isomer** is much more potent than L at both NET and DAT; single-enantiomer **dexmethylphenidate** also available.', sec: 's11-mph' },
+      { ch: 'ch11', pages: '470–471', text: 'Table 11-1 formulations: IR Ritalin/Methylin (3–4 h), Concerta (12 h), Ritalin LA (two peaks), Metadate CD, Aptensio XR, Quillivant XR, QuilliChew ER, Daytrana patch, Cotempla XR-ODT, **Jornay PM** (evening dose, delayed 10 h), Adhansia XR.', sec: 's11-mph' },
+      { ch: 'ch11', pages: '477–479', text: 'OROS, LA and transdermal forms are **slow-dose** stimulants (tonic signaling, lower abuse); IR is **pulsatile**.', sec: 's11-slowfast' }
+    ],
+    updates: [{ year: '2023', title: 'Stronger stimulant warnings', text: 'In May 2023 the FDA required the boxed warning of all prescription stimulants to describe the risks of **misuse, abuse, addiction and overdose** consistently and to tell patients never to share them.', source: 'FDA Drug Safety Communication, May 2023' }]
   },
   {
-    id: 'amphetamine', name: 'Amphetamine', group: 'Stimulant', cls: 'Stimulant (ADHD)',
+    id: 'dexmethylphenidate', name: 'Dexmethylphenidate (D-methylphenidate)', brand: 'Focalin; Focalin XR', group: 'Stimulant', cls: 'Stimulant (ADHD)',
+    nbn: 'Dopamine and norepinephrine transport (DAT/NET) inhibitor',
+    nts: ['dopamine', 'norepinephrine'],
+    chapters: [{ ch: 'ch11', pages: '469–471' }],
+    short: 'The more potent D-enantiomer of methylphenidate.',
+    mechanism: 'The single **D-enantiomer** of methylphenidate, much more potent than the L form at both **NET and DAT**; blocks them allosterically without VMAT2 action.',
+    targets: [
+      { t: 'dat', action: 'inhibitor', note: 'Allosteric' },
+      { t: 'net', action: 'inhibitor', note: 'Allosteric' }
+    ],
+    uses: ['**ADHD**'],
+    facts: [
+      { ch: 'ch11', pages: '471', text: 'Table 11-2: **Focalin** IR (early peak, 4–6 h; ages 6–17) and **Focalin XR** (peaks at 1.5 and 6.5 h, 8–10 h; ages 6–17 and adults).', sec: 's11-mph' },
+      { ch: 'ch11', pages: '477', text: 'XR D-methylphenidate is a **slow-dose** stimulant.', sec: 's11-slowfast' }
+    ],
+    updates: [{ year: '2021', title: 'A prodrug combination', text: '**Azstarys** (serdexmethylphenidate, a dexmethylphenidate prodrug, plus IR dexmethylphenidate) was approved on March 2, 2021 for ADHD from age 6.', source: 'Drugs.com approval history; KemPharm, March 2021' }]
+  },
+  {
+    id: 'amphetamine', name: 'Amphetamine', brand: 'Adderall; Dexedrine; others', group: 'Stimulant', cls: 'Stimulant (ADHD)',
     nbn: 'Dopamine and norepinephrine releaser (DAT/NET and VMAT2 substrate)',
     short: 'A transported substrate of DAT, NET and VMAT2: two targets.',
     mechanism: 'A **false substrate** carried into the neuron by **DAT and NET** (DAT has high affinity for amphetamines), and also a **transported substrate of VMAT2** in synaptic vesicles. Amphetamine therefore has **two targets**: the monoamine transporters and VMATs. Reuptake inhibition and release of dopamine stimulate D1–D5 receptors indirectly.',
     targets: [
-      { t: 'dat', action: 'substrate', note: 'Transported (“false substrate”)' },
-      { t: 'net', action: 'substrate' },
-      { t: 'vmat2', action: 'substrate', note: 'Transported into vesicles' }
+      { t: 'dat', action: 'substrate', note: 'Competitive pseudosubstrate; transported; D > L' },
+      { t: 'net', action: 'substrate', note: 'Competitive pseudosubstrate; D ≈ L' },
+      { t: 'vmat2', action: 'substrate', note: 'Competitive inhibitor/substrate at high doses; displaces DA' }
     ],
     uses: ['ADHD', 'Indirect dopamine agonism improves depression and wakefulness (Table 2-5)'],
     chapters: [
       { ch: 'ch02', pages: '31–35, 40' },
       { ch: 'ch04', pages: '78–79' },
       { ch: 'ch07', pages: '337, 356' },
-      { ch: 'ch10', pages: '441–442' }
+      { ch: 'ch10', pages: '441–442' },
+      { ch: 'ch11', pages: '472–479' }
     ],
     facts: [
       { ch: 'ch02', pages: '31', text: 'Listed in Table 2-1 as a false substrate of both **NET and DAT**.', sec: 's2-monoamine' },
@@ -918,7 +966,38 @@ SP.drugs = [
       { ch: 'ch04', pages: '79', text: 'Dopamine release by amphetamine causes a **paranoid psychosis** much like schizophrenia: a cornerstone of the dopamine hypothesis. Table 4-1 lists psychostimulants as **D2 agonist** models with auditory hallucinations, paranoid delusions and no insight.', sec: 's4-three' },
       { ch: 'ch05', pages: '174', text: 'A false substrate of **VMAT2** that competes with natural transmitters; dopamine or amphetamine are the “too hot” end of the Goldilocks analogy.', sec: 's5-vmat2' },
       { ch: 'ch07', pages: '337', text: 'Amphetamine is also a **weak, reversible MAO inhibitor**; some MAOIs (tranylcypromine, selegiline via metabolites) are closely linked to amphetamine.', sec: 's7-maoi' },
-      { ch: 'ch10', pages: '441–442', text: 'Approved for sleepiness in **narcolepsy** (not OSA or shift work, used off-label); highly effective but controlled (abuse, diversion, psychosis, mania, hypertension).', sec: 's10-caffeine-stimulants' }
+      { ch: 'ch10', pages: '441–442', text: 'Approved for sleepiness in **narcolepsy** (not OSA or shift work, used off-label); highly effective but controlled (abuse, diversion, psychosis, mania, hypertension).', sec: 's10-caffeine-stimulants' },
+      { ch: 'ch11', pages: '472', text: 'A **competitive inhibitor and pseudosubstrate** at NET and DAT. At ADHD doses the difference from methylphenidate is small; at abused doses it enters vesicles via VMAT2, displaces DA, opens channels and **reverses DAT**, causing euphoria.', sec: 's11-amph' },
+      { ch: 'ch11', pages: '472–473', text: '**D-amphetamine**: D > L at DAT, so relatively more DAT action. **Mixed D,L salts**: D ≈ L at NET, so more NET action than D-amphetamine, but still DAT > NET.', sec: 's11-amph' },
+      { ch: 'ch11', pages: '474–475', text: 'Tables 11-3/11-4: Adderall and Evekeo IR (from age 3), Adderall XR, **Mydayis** (up to 16 h), Adzenys XR-ODT/ER, Dyanavel XR; D-amphetamine Zenzedi, ProCentra, Dexedrine spansule.', sec: 's11-amph' },
+      { ch: 'ch11', pages: '477–479', text: 'Spansules and XR mixed salts are **slow-dose**; IR forms are **pulsatile**, with more abuse potential.', sec: 's11-slowfast' }
+    ],
+    updates: [
+      { year: '2022', title: 'An amphetamine patch', text: '**Xelstrym** (dextroamphetamine transdermal system), worn 9 hours once daily, was approved on March 22, 2022 for ADHD in adults and children aged 6 and older.', source: 'Drugs.com approval history; Noven, March 2022' },
+      { year: '2023', title: 'Stronger stimulant warnings', text: 'In May 2023 the FDA required the boxed warning of all prescription stimulants to describe the risks of **misuse, abuse, addiction and overdose** consistently and to tell patients never to share them.', source: 'FDA Drug Safety Communication, May 2023' }
+    ]
+  },
+  {
+    id: 'lisdexamfetamine', name: 'Lisdexamfetamine', brand: 'Vyvanse', group: 'Stimulant', cls: 'Stimulant prodrug (ADHD)',
+    nbn: 'Dopamine and norepinephrine releaser (DAT/NET and VMAT2 substrate)',
+    nts: ['dopamine', 'norepinephrine'],
+    chapters: [{ ch: 'ch11', pages: '473–479' }],
+    short: 'Lysine-linked prodrug of D-amphetamine: a slow-dose stimulant.',
+    mechanism: '**D-amphetamine linked to lysine**: inactive until the lysine is cleaved, releasing D-amphetamine slowly for gradual, sustained transporter occupancy. (The book says cleavage occurs in the stomach; it actually occurs mainly in **red blood cells**.)',
+    targets: [
+      { t: 'dat', action: 'substrate', note: 'As D-amphetamine' },
+      { t: 'net', action: 'substrate', note: 'As D-amphetamine' },
+      { t: 'vmat2', action: 'substrate', note: 'As D-amphetamine' }
+    ],
+    uses: ['**ADHD** (ages 6–17 and adults)'],
+    facts: [
+      { ch: 'ch11', pages: '473', text: 'Not absorbed as active drug until slowly converted to D-amphetamine plus L-lysine, so it rises **slowly rather than rapidly**.', sec: 's11-amph' },
+      { ch: 'ch11', pages: '475', text: 'Table 11-4: lasts up to **12 h**, peak 3.5 h, once in the morning.', sec: 's11-amph' },
+      { ch: 'ch11', pages: '477', text: 'A **slow-dose** stimulant: enhances tonic NE/DA with hypothetically lower abuse potential.', sec: 's11-slowfast' }
+    ],
+    updates: [
+      { year: '2023', title: 'Generic lisdexamfetamine', text: 'The FDA approved the first **generic** versions of Vyvanse in late August 2023, amid ADHD stimulant shortages.', source: 'Psychiatric Times, August 29, 2023' },
+      { year: '2023', title: 'Stronger stimulant warnings', text: 'In May 2023 the FDA required the boxed warning of all prescription stimulants to describe the risks of **misuse, abuse, addiction and overdose** consistently and to tell patients never to share them.', source: 'FDA Drug Safety Communication, May 2023' }
     ]
   },
   {
@@ -931,11 +1010,13 @@ SP.drugs = [
     ],
     chapters: [
       { ch: 'ch02', pages: '34–35' },
-      { ch: 'ch04', pages: '78, 90' }
+      { ch: 'ch04', pages: '78, 90' },
+      { ch: 'ch11', pages: '476–478' }
     ],
     facts: [
       { ch: 'ch02', pages: '34–35', text: 'The “stimulant” drug of abuse cocaine acts on **DAT and NET** in much the same manner as SSRIs at SERT.', sec: 's2-vesicular' },
-      { ch: 'ch04', pages: '78, 90', text: 'A psychostimulant model of psychosis (Table 4-1: auditory hallucinations, paranoid delusions, no insight) that causes mesolimbic dopamine hyperactivity **directly**.', sec: 's4-mesolimbic' }
+      { ch: 'ch04', pages: '78, 90', text: 'A psychostimulant model of psychosis (Table 4-1: auditory hallucinations, paranoid delusions, no insight) that causes mesolimbic dopamine hyperactivity **directly**.', sec: 's4-mesolimbic' },
+      { ch: 'ch11', pages: '476–478', text: 'A DAT blocker whose **rapid, complete** occupancy (especially intranasal, IV or smoked) gives a pulsatile phasic DA surge: euphoria and abuse.', sec: 's11-slowfast' }
     ]
   },
   {
@@ -944,8 +1025,14 @@ SP.drugs = [
     mechanism: 'A psychostimulant whose mesolimbic dopamine hyperactivity is a **direct** pharmacological effect; its abuse is covered in Chapter 13.',
     nts: ['dopamine'],
     sideEffects: [{ e: 'Paranoid psychosis', via: 'Mesolimbic dopamine excess' }],
-    chapters: [{ ch: 'ch04', pages: '90' }],
-    facts: [{ ch: 'ch04', pages: '90', text: 'With cocaine, the book’s example of a drug that produces mesolimbic hyperdopaminergia **directly**, unlike the indirect mechanisms of schizophrenia and other psychoses.', sec: 's4-mesolimbic' }]
+    chapters: [
+      { ch: 'ch04', pages: '90' },
+      { ch: 'ch11', pages: '476–478' }
+    ],
+    facts: [
+      { ch: 'ch04', pages: '90', text: 'With cocaine, the book’s example of a drug that produces mesolimbic hyperdopaminergia **directly**, unlike the indirect mechanisms of schizophrenia and other psychoses.', sec: 's4-mesolimbic' },
+      { ch: 'ch11', pages: '476–478', text: 'A DAT blocker whose **rapid, complete** occupancy (especially intranasal, IV or smoked) gives a pulsatile phasic DA surge: euphoria and abuse.', sec: 's11-slowfast' }
+    ]
   },
   {
     id: 'levodopa', name: 'Levodopa', aka: ['L-DOPA'], group: 'Parkinson’s disease treatment', cls: 'Dopamine precursor',
@@ -1284,8 +1371,14 @@ SP.drugs = [
     short: 'Nicotinic agonist that desensitizes and inactivates its receptors.',
     mechanism: 'Stimulates **nicotinic** acetylcholine receptors. Unlike acetylcholine it is **not hydrolyzed by acetylcholinesterase**, so it stimulates the receptors so profoundly and enduringly that they are **desensitized** within about one cigarette and **inactivated** for about the time between cigarettes.',
     targets: [{ t: 'nicotinic', action: 'agonist' }],
-    chapters: [{ ch: 'ch03', pages: '63–64' }],
-    facts: [{ ch: 'ch03', pages: '64', text: 'Explains why most smokers smoke about **a pack a day (20 cigarettes) over about 16 waking hours**: dosing is matched to receptor desensitization and inactivation.', sec: 's3-states' }]
+    chapters: [
+      { ch: 'ch03', pages: '63–64' },
+      { ch: 'ch11', pages: '467' }
+    ],
+    facts: [
+      { ch: 'ch03', pages: '64', text: 'Explains why most smokers smoke about **a pack a day (20 cigarettes) over about 16 waking hours**: dosing is matched to receptor desensitization and inactivation.', sec: 's3-states' },
+      { ch: 'ch11', pages: '467', text: 'ADHD patients smoke at about **twice** the general rate; nicotine releases DA and raises arousal, subjectively easing ADHD symptoms.', sec: 's11-priorities' }
+    ]
   },
   {
     id: 'zolpidem', name: 'Zolpidem', brand: 'Ambien; Ambien CR', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
@@ -1472,7 +1565,8 @@ SP.drugs = [
     uses: ['With an SNRI for residual **fatigue, low energy and poor concentration/alertness** in depression (arousal combo)', '**Narcolepsy**; adjunct for **OSA**; **shift work disorder** (approved)'],
     facts: [
       { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' },
-      { ch: 'ch10', pages: '442–444', text: 'Possibly less powerful than stimulants in narcolepsy but with much lower abuse potential; often needs a second daily dose.', sec: 's10-modafinil' }
+      { ch: 'ch10', pages: '442–444', text: 'Possibly less powerful than stimulants in narcolepsy but with much lower abuse potential; often needs a second daily dose.', sec: 's10-modafinil' },
+      { ch: 'ch11', pages: '476', text: 'Also a DAT blocker: the more rapidly and completely the DAT is blocked, the more reinforcing a drug becomes.', sec: 's11-dat' }
     ]
   },
   {
@@ -1541,11 +1635,73 @@ SP.drugs = [
     id: 'atomoxetine', name: 'Atomoxetine', brand: 'Strattera', group: 'NRI', cls: 'Selective norepinephrine reuptake inhibitor (NRI)',
     nbn: 'Norepinephrine reuptake inhibitor (NET)',
     nts: ['norepinephrine', 'dopamine'],
-    chapters: [{ ch: 'ch09', pages: '399' }],
-    short: 'Selective NET inhibitor used for fibro-fog (and ADHD, Chapter 11).',
-    mechanism: 'A **selective NET inhibitor**, which also raises **dopamine in the prefrontal cortex**.',
+    chapters: [
+      { ch: 'ch09', pages: '399' },
+      { ch: 'ch11', pages: '480–481' }
+    ],
+    short: 'Selective NET inhibitor approved for ADHD in children and adults; no abuse potential.',
+    mechanism: 'A **selective NET inhibitor (NRI)**. Blocking prefrontal NET raises **both NE and DA** there (NET clears DA in the PFC); few NETs in the **nucleus accumbens** means no rise in DA there and **no abuse potential**. Continuous blockade restores tonic α2A/D1 signaling and dampens phasic NE/DA.',
     targets: [{ t: 'net', action: 'inhibitor' }],
-    uses: ['**Fibro-fog** in fibromyalgia', 'ADHD (Chapter 11)']
+    uses: ['**ADHD** in children and adults (the only well-studied, approved NRI)', '**Fibro-fog** in fibromyalgia (Chapter 9)'],
+    facts: [
+      { ch: 'ch11', pages: '480', text: 'Raises prefrontal NE and DA but **not** accumbens DA: hence no reinforcing, abuse or addiction potential.', sec: 's11-nri' },
+      { ch: 'ch11', pages: '480–481', text: 'In stressed, comorbid ADHD, chronic use may restore tonic signaling, downregulate phasic NE/DA and desensitize receptors, possibly easing **anxiety, depression and heavy drinking**.', sec: 's11-nri' },
+      { ch: 'ch11', pages: '481', text: '24-hour relief; smaller short-term effect sizes than stimulants, but not necessarily inferior in **stimulant-naïve** patients or after 8–11 weeks. High doses may cause **sedation or cognitive impairment** (α1): lower the dose.', sec: 's11-nri' }
+    ]
+  },
+  {
+    id: 'reboxetine', name: 'Reboxetine', group: 'NRI', cls: 'Selective norepinephrine reuptake inhibitor (NRI)',
+    nbn: 'Norepinephrine reuptake inhibitor (NET)',
+    nts: ['norepinephrine', 'dopamine'],
+    chapters: [{ ch: 'ch11', pages: '480–481' }],
+    short: 'Selective NRI listed among NET inhibitors used for ADHD.',
+    mechanism: 'A **selective NET inhibitor**: like atomoxetine, raises NE and DA in the PFC but not in the nucleus accumbens.',
+    targets: [{ t: 'net', action: 'inhibitor' }],
+    uses: ['Listed among NET inhibitors used for ADHD with variable success (Figure 11-38); not approved for ADHD'],
+    facts: [{ ch: 'ch11', pages: '480–481', text: 'One of several NRI-acting drugs used for ADHD with varying success; only atomoxetine is well investigated and approved.', sec: 's11-nri' }]
+  },
+  {
+    id: 'viloxazine', name: 'Viloxazine ER', brand: 'Qelbree', group: 'NRI', cls: 'NET inhibitor with 5HT2B/5HT2C actions',
+    nbn: 'Norepinephrine reuptake inhibitor; serotonin receptor actions',
+    nts: ['norepinephrine', 'serotonin'],
+    chapters: [{ ch: 'ch11', pages: '485' }],
+    short: 'NET inhibitor with 5HT2B/2C actions; a nonstimulant for ADHD.',
+    mechanism: 'Inhibits the **norepinephrine transporter** and also acts at **5HT2B and 5HT2C** receptors. Once marketed abroad for depression but never in the US; repurposed as a controlled-release form for ADHD.',
+    targets: [
+      { t: 'net', action: 'inhibitor' },
+      { t: '5ht2b', action: 'binds', note: 'Action noted in Figure 11-45' },
+      { t: '5ht2c', action: 'binds', note: 'Action noted in Figure 11-45' }
+    ],
+    uses: ['**ADHD** (book: late-stage development)'],
+    facts: [{ ch: 'ch11', pages: '485', text: 'A selective NRI in late-stage development for ADHD as a controlled-release formulation (Figure 11-45).', sec: 's11-future' }],
+    updates: [{ year: '2021–2022', title: 'Viloxazine approved', text: '**Qelbree** was approved on April 2, 2021 for ADHD in ages 6–17 and on April 29, 2022 for adults. Nonstimulant, not controlled; the label calls it a serotonin norepinephrine modulating agent and warns of suicidal thoughts and behaviors.', source: 'Drugs.com approval history; Supernus, April 2022' }]
+  },
+  {
+    id: 'mazindol', name: 'Mazindol', group: 'Investigational drug for ADHD', cls: 'DAT inhibitor',
+    nbn: 'Dopamine reuptake inhibitor (DAT)',
+    nts: ['dopamine'],
+    chapters: [{ ch: 'ch11', pages: '485' }],
+    short: 'DAT inhibitor once approved for appetite suppression; tested in ADHD.',
+    mechanism: 'A **DAT inhibitor**, formerly approved as an appetite suppressant.',
+    targets: [{ t: 'dat', action: 'inhibitor' }],
+    uses: ['In testing for **ADHD** (book)'],
+    facts: [{ ch: 'ch11', pages: '485', text: 'Listed as a future ADHD treatment in testing.', sec: 's11-future' }]
+  },
+  {
+    id: 'centanafadine', name: 'Centanafadine', brand: 'Simtriyo', group: 'Investigational drug for ADHD', cls: 'Triple (5HT–NE–DA) reuptake inhibitor',
+    nbn: 'Serotonin, norepinephrine and dopamine reuptake inhibitor (SERT/NET/DAT)',
+    nts: ['serotonin', 'norepinephrine', 'dopamine'],
+    chapters: [{ ch: 'ch11', pages: '485' }],
+    short: 'Triple reuptake inhibitor for ADHD (approved 2026).',
+    mechanism: 'Inhibits the **serotonin, norepinephrine and dopamine** transporters.',
+    targets: [
+      { t: 'net', action: 'inhibitor' },
+      { t: 'dat', action: 'inhibitor' },
+      { t: 'sert', action: 'inhibitor' }
+    ],
+    uses: ['**ADHD** (book: in testing)'],
+    facts: [{ ch: 'ch11', pages: '485', text: 'A triple (5HT–NE–DA) reuptake inhibitor in testing for ADHD.', sec: 's11-future' }],
+    updates: [{ year: '2026', title: 'Centanafadine approved', text: '**Simtriyo** was approved on July 24, 2026 for ADHD in adults and children aged 6 and older (once-daily ER capsule), after four positive phase 3 trials; launch awaited DEA scheduling.', source: 'Otsuka, July 24, 2026; Psychiatric Times; ADDitude' }]
   },
   {
     id: 'prazosin', name: 'Prazosin', brand: 'Minipress', group: 'α1 antagonist', cls: 'α1-adrenergic antagonist',
@@ -1630,11 +1786,38 @@ SP.drugs = [
     id: 'clonidine', name: 'Clonidine', brand: 'Catapres', group: 'α2 agonist', cls: 'α2-adrenergic agonist',
     nbn: 'Norepinephrine α2 receptor agonist',
     nts: ['norepinephrine'],
-    chapters: [{ ch: 'ch09', pages: '390' }],
-    short: 'Direct α2 agonist that can relieve pain by mimicking descending NE inhibition.',
-    mechanism: 'A **direct-acting α2 agonist**: mimics descending noradrenergic inhibition at α2 receptors in the dorsal horn.',
-    targets: [{ t: 'alpha2', action: 'agonist' }],
-    uses: ['Pain relief in some patients (Chapter 9); other uses in later chapters']
+    chapters: [
+      { ch: 'ch09', pages: '390' },
+      { ch: 'ch11', pages: '481–484' }
+    ],
+    short: 'Nonselective α2 agonist (plus imidazoline); ER form approved for ADHD.',
+    mechanism: 'A **direct-acting, nonselective α2 agonist** (α2A, α2B, α2C) that also binds **imidazoline** receptors. Postsynaptic α2A stimulation in the PFC strengthens the signal; α2B, α2C and imidazoline actions add **sedation and hypotension**. In the spinal cord it mimics descending noradrenergic pain inhibition.',
+    targets: [
+      { t: 'alpha2', action: 'agonist', note: 'α2A, α2B and α2C' },
+      { t: 'imidazoline', action: 'agonist', note: 'Sedation, hypotension' }
+    ],
+    uses: ['**ADHD** (controlled-release form only)', 'Hypertension', 'Off-label: conduct disorder, ODD, **Tourette syndrome**', 'Pain relief in some patients (Chapter 9)'],
+    facts: [{ ch: 'ch11', pages: '482', text: 'Approved for hypertension; only **controlled-release** clonidine is approved for ADHD. Guanfacine is 10× weaker at sedation/hypotension and 25× more potent on PFC function.', sec: 's11-alpha2' }],
+    updates: [{ year: '2024', title: 'A liquid clonidine for ADHD', text: '**Onyda XR** (clonidine ER oral suspension) was approved in May 2024 for ADHD from age 6, alone or with stimulants, dosed once daily at bedtime.', source: 'Drugs.com approval history; Tris Pharma, May 29, 2024' }]
+  },
+  {
+    id: 'guanfacine', name: 'Guanfacine', brand: 'Intuniv (ER); Tenex (IR)', group: 'α2 agonist', cls: 'Selective α2A-adrenergic agonist',
+    nbn: 'Norepinephrine α2A receptor agonist',
+    nts: ['norepinephrine'],
+    chapters: [{ ch: 'ch11', pages: '481–484' }],
+    short: 'α2A-selective agonist; ER form approved for ADHD alone or with stimulants.',
+    mechanism: 'A **direct α2A agonist**, **15–60×** more selective for α2A than α2B/α2C. Stimulates postsynaptic α2A receptors on PFC pyramidal spines (Gi, ↓cAMP, HCN closed), **strengthening the signal**. No DA receptor action, hence no abuse potential.',
+    targets: [{ t: 'alpha2', action: 'agonist', note: 'α2A-selective (15–60×)' }],
+    uses: ['**ADHD** (ER form), alone or as **augmentation** of stimulants', 'Off-label: conduct disorder, ODD, **Tourette syndrome**'],
+    sideEffects: [
+      { e: 'Sedation (less than clonidine)', via: 'α2B/α2C' },
+      { e: 'Hypotension (less than clonidine)', via: 'α2' }
+    ],
+    facts: [
+      { ch: 'ch11', pages: '482', text: '**10× weaker** than clonidine at sedation and lowering blood pressure, yet **25× more potent** at enhancing PFC function. ER form allows once-daily dosing with fewer peak-dose effects; only the ER form is approved for ADHD.', sec: 's11-alpha2' },
+      { ch: 'ch11', pages: '482–484', text: 'Best monotherapy candidates may have low prefrontal **NE** with normal DA; no predictor beyond an **empiric trial**.', sec: 's11-alpha2' },
+      { ch: 'ch11', pages: '484', text: 'Approved as an **augmenting agent** after inadequate stimulant response; may especially help **oppositional** symptoms (low VMPFC NE).', sec: 's11-alpha2' }
+    ]
   },
   {
     id: 'naloxone', name: 'Naloxone', brand: 'Narcan', group: 'Opioid antagonist', cls: 'μ-opioid antagonist',

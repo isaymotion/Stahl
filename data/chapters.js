@@ -82,7 +82,13 @@ SP.manifest = [
     summary: 'The arousal spectrum; histamine and orexin networks; homeostatic and circadian drives, the VLPO switch and ultradian cycles; insomnia as hyperarousal and every hypnotic class (benzodiazepines, Z drugs, DORAs, trazodone, antihistamines, melatonergic agents) with occupancy thresholds; and sleepiness from OSA, narcolepsy, idiopathic hypersomnia and circadian disorders, treated with caffeine, stimulants, modafinil, solriamfetol, pitolisant and sodium oxybate.',
     files: SP.CHAPTER_FILES
   },
-  { id: 'ch11', number: 11, ready: false, pages: '449–485', title: 'Attention Deficit Hyperactivity Disorder and Its Treatment', short: 'ADHD', summary: 'Prefrontal circuits in ADHD and how stimulants and nonstimulants act on them.' },
+  {
+    id: 'ch11', number: 11, ready: true, pages: '449–485',
+    title: 'Attention Deficit Hyperactivity Disorder and Its Treatment',
+    short: 'ADHD',
+    summary: 'ADHD symptoms mapped to prefrontal circuits (DLPFC, dACC, OFC, motor cortex, VMPFC); NE and DA tuning of pyramidal neurons through α2A, D1 and HCN channels; neurodevelopment and the lifespan; treatment priorities in comorbid ADHD; methylphenidate and amphetamine, the DAT occupancy threshold and slow-dose versus pulsatile stimulants; atomoxetine and other NET inhibitors; guanfacine and clonidine; and the pipeline.',
+    files: SP.CHAPTER_FILES
+  },
   { id: 'ch12', number: 12, ready: false, pages: '486–537', title: 'Dementia: Causes, Symptomatic Treatments, and the Neurotransmitter Network Acetylcholine', short: 'Dementia and acetylcholine', summary: 'Causes of dementia, acetylcholine, and treatments for cognitive and behavioral symptoms.' },
   { id: 'ch13', number: 13, ready: false, pages: '538–578', title: 'Impulsivity, Compulsivity, and Addiction', short: 'Impulsivity, compulsivity and addiction', summary: 'Reward circuits, impulsive–compulsive disorders, substances of abuse and their treatments.' }
 ];

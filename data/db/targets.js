@@ -35,7 +35,8 @@ SP.targets = [
       { ch: 'ch07', pages: '299–301', text: 'The PFC has few DATs, so DA is cleared there by **NET** (which has higher affinity for DA than NE) or COMT. NET inhibition therefore raises **NE and DA in the PFC**: the “half” of SNRIs’ two-and-a-half actions.', sec: 's7-snri' },
       { ch: 'ch07', pages: '305', text: 'Therapeutic and NE-mediated side effects may appear with perhaps as little as **50%** NET occupancy.', sec: 's7-ndri' },
       { ch: 'ch08', pages: '370', text: 'NET inhibitors can **transiently worsen** anxiety, then reduce fear and worry as β1 receptors downregulate.', sec: 's8-ne' },
-      { ch: 'ch09', pages: '390–393', text: 'Boosting descending **NE** with SNRIs restores masking of irrelevant bodily input; the noradrenergic action may matter more than the serotonergic one for pain.', sec: 's9-descending' }
+      { ch: 'ch09', pages: '390–393', text: 'Boosting descending **NE** with SNRIs restores masking of irrelevant bodily input; the noradrenergic action may matter more than the serotonergic one for pain.', sec: 's9-descending' },
+      { ch: 'ch11', pages: '478–481', text: 'NET inhibition in the PFC raises **NE (α2A) and DA (D1)**; few NETs in the **nucleus accumbens**, so NET inhibitors lack abuse potential.', sec: 's11-nri' }
     ]
   },
   {
@@ -50,7 +51,10 @@ SP.targets = [
       { ch: 'ch02', pages: '34', text: 'Methylphenidate, amphetamine and cocaine all act on **DAT and NET**.', sec: 's2-monoamine' },
       { ch: 'ch04', pages: '80–81', text: 'The **principal** route of dopamine inactivation where present (striatum), with COMT secondary. Some dopamine neurons lack DAT, unlike serotonin neurons, which are all thought to have SERT.', sec: 's4-da-synth' },
       { ch: 'ch07', pages: '304–306', text: 'Rapid, brief **≥ 50%** DAT occupancy causes euphoria and reinforcement (cocaine); slow, long-lasting occupancy is less abusable. Bupropion occupies only about **10–30%** of striatal DATs.', sec: 's7-ndri' },
-      { ch: 'ch10', pages: '442–444', text: 'Modafinil/armodafinil: weak affinity but high levels give slow, sustained, **incomplete** DAT occupancy that raises **tonic** DA for wakefulness.', sec: 's10-modafinil' }
+      { ch: 'ch10', pages: '442–444', text: 'Modafinil/armodafinil: weak affinity but high levels give slow, sustained, **incomplete** DAT occupancy that raises **tonic** DA for wakefulness.', sec: 's10-modafinil' },
+      { ch: 'ch11', pages: '469–473', text: '**Methylphenidate** binds DAT **allosterically** and is not transported; **amphetamine** is a **competitive pseudosubstrate**, transported in, and at high doses reverses DAT.', sec: 's11-amph' },
+      { ch: 'ch11', pages: '473–477', text: 'The “**mysterious DAT**”: continuous occupancy for weeks (antidepressant), **≥ 50–60%** occupancy for immediate ADHD/wake effects, rapid high occupancy for euphoria, repeated pulses for addiction.', sec: 's11-dat' },
+      { ch: 'ch11', pages: '476–479', text: 'The faster and more complete the DAT blockade (oral < intranasal < IV < smoked), the more **reinforcing** the drug.', sec: 's11-slowfast' }
     ]
   },
   {
@@ -111,7 +115,8 @@ SP.targets = [
       { ch: 'ch02', pages: '31', text: 'All three monoamine neurons share **the same vesicular transporter, VMAT2**, which also packages **histamine**.', sec: 's2-monoamine' },
       { ch: 'ch02', pages: '35', text: 'Targeted especially in **dopamine neurons**: **amphetamine** as a transported substrate; **tetrabenazine, deutetrabenazine and valbenazine** as inhibitors.', sec: 's2-vesicular' },
       { ch: 'ch04', pages: '79–80, 114', text: 'Packages newly made **dopamine** and **serotonin** into vesicles.', sec: 's4-da-synth' },
-      { ch: 'ch05', pages: '174–179', text: 'Only in **CNS** neurons (VMAT1 is also peripheral). **Reserpine** irreversibly blocks both; tetrabenazine-type drugs reversibly block only VMAT2 and preferentially deplete **dopamine**. Perhaps **> 90%** inhibition is needed to treat TD.', sec: 's5-vmat2' }
+      { ch: 'ch05', pages: '174–179', text: 'Only in **CNS** neurons (VMAT1 is also peripheral). **Reserpine** irreversibly blocks both; tetrabenazine-type drugs reversibly block only VMAT2 and preferentially deplete **dopamine**. Perhaps **> 90%** inhibition is needed to treat TD.', sec: 's5-vmat2' },
+      { ch: 'ch11', pages: '472–473', text: 'Amphetamine at high (abused) doses competitively inhibits VMAT2, enters vesicles and **displaces DA**; methylphenidate has **no VMAT2 action**.', sec: 's11-amph' }
     ]
   },
   {
@@ -152,7 +157,9 @@ SP.targets = [
     facts: [
       { ch: 'ch01', pages: '8', text: 'In Figure 1-7, prefrontal dopamine diffuses from its synapse to reach **D1 receptors** outside the synapse on the same neuron and on a neighboring neuron.', sec: 's1-volume' },
       { ch: 'ch02', pages: '40', text: 'Stimulated **indirectly** (with D2–D5) when methylphenidate or amphetamine block reuptake or release dopamine (Table 2-5).', sec: 's2-receptor-tables' },
-      { ch: 'ch04', pages: '81–85', text: '**D1-like** (with D5): excitatory, positively linked to adenylate cyclase. The **least sensitive** dopamine receptor and the predominant postsynaptic one in **prefrontal cortex**; populates the striatal **direct (“go”)** pathway.', sec: 's4-da-receptors' }
+      { ch: 'ch04', pages: '81–85', text: '**D1-like** (with D5): excitatory, positively linked to adenylate cyclase. The **least sensitive** dopamine receptor and the predominant postsynaptic one in **prefrontal cortex**; populates the striatal **direct (“go”)** pathway.', sec: 's4-da-receptors' },
+      { ch: 'ch11', pages: '455–457', text: 'The **least sensitive** DA receptor (D3 > D2 > D1) and the main postsynaptic DA receptor in the PFC: best function at **moderate** stimulation.', sec: 's11-tonic-phasic' },
+      { ch: 'ch11', pages: '458–463', text: 'Coupled to **Gs**: ↑cAMP opens HCN channels; moderate D1 stimulation **reduces noise**, excess dissipates the signal.', sec: 's11-hcn' }
     ],
     location: 'Postsynaptic; predominant in **prefrontal cortex**; striatal **direct pathway** neurons'
   },
@@ -182,7 +189,8 @@ SP.targets = [
     facts: [
       { ch: 'ch04', pages: '81–85', text: '**More sensitive** to dopamine than D2, so a lower synaptic concentration turns off further release; mesolimbic neurons carry D3 autoreceptors.', sec: 's4-da-receptors' },
       { ch: 'ch05', pages: '202–203, 239–241', text: '**Cariprazine** and **blonanserin** have higher affinity for D3 than dopamine itself; sulpiride and amisulpride add D3 antagonist actions. D3 antagonism/partial agonism may improve **negative, affective and cognitive** symptoms by raising prefrontal dopamine.', sec: 's5-pips' },
-      { ch: 'ch07', pages: '343–345', text: 'Only **cariprazine** and **blonanserin** bind D3 with affinity orders of magnitude above dopamine’s. Blocking presynaptic D3 autoreceptors in the **VTA** releases DA onto prefrontal **D1** receptors: a proposed antidepressant mechanism (Figures 7-72, 7-73).', sec: 's7-bipolar-depression' }
+      { ch: 'ch07', pages: '343–345', text: 'Only **cariprazine** and **blonanserin** bind D3 with affinity orders of magnitude above dopamine’s. Blocking presynaptic D3 autoreceptors in the **VTA** releases DA onto prefrontal **D1** receptors: a proposed antidepressant mechanism (Figures 7-72, 7-73).', sec: 's7-bipolar-depression' },
+      { ch: 'ch11', pages: '455', text: 'The **most sensitive** DA receptor: low tonic DA stimulates D3 before D2 and D1.', sec: 's11-tonic-phasic' }
     ],
     stim: ['**Partial agonism** (cariprazine): may improve **negative symptoms**, mood, cognition and reward/substance use (preclinical)'],
     block: ['Antagonism of limbic D3: may reduce emotional-striatum overactivity; at somatodendritic D3: more **prefrontal dopamine**', 'Candidate **antidepressant** mechanism (sulpiride, amisulpride; Chapter 7)']
@@ -308,7 +316,10 @@ SP.targets = [
       { ch: 'ch05', pages: '195, 208', text: 'α2 antagonism is a candidate **antidepressant** property of several drugs for psychosis (risperidone, quetiapine via norquetiapine, brexpiprazole), though α1 blockade can cancel it.', sec: 's5-mania-dep' },
       { ch: 'ch06', pages: '254–255', text: 'The only NE receptor that can be a **presynaptic autoreceptor**: on axon terminals (gatekeepers that halt release) and somatodendritic (shut off firing). Agonists step on the brake; antagonists **cut the brake cable**.', sec: 's6-ne' },
       { ch: 'ch07', pages: '309', text: 'α2 **heteroreceptors** on serotonin neurons let NE brake 5HT release; α2 antagonists (mirtazapine, mianserin) therefore release **both NE and 5HT**, synergizing with reuptake inhibitors.', sec: 's7-mirtazapine' },
-      { ch: 'ch09', pages: '390–391', text: 'Descending NE from the **locus coeruleus** inhibits pain via presynaptic α2 on primary afferents and postsynaptic α2 on dorsal horn neurons; direct α2 agonists (clonidine) can relieve pain.', sec: 's9-descending' }
+      { ch: 'ch09', pages: '390–391', text: 'Descending NE from the **locus coeruleus** inhibits pain via presynaptic α2 on primary afferents and postsynaptic α2 on dorsal horn neurons; direct α2 agonists (clonidine) can relieve pain.', sec: 's9-descending' },
+      { ch: 'ch11', pages: '458–463', text: 'Postsynaptic **α2A** on PFC pyramidal spines is coupled to **Gi**: ↓cAMP closes HCN channels and **strengthens the signal**.', sec: 's11-hcn' },
+      { ch: 'ch11', pages: '481–482', text: 'Subtypes: **α2A** (cortex and LC; main PFC mediator), **α2B** (thalamus; sedation), **α2C** (densest in striatum in the text; LC in Figure 11-42). Dense in the PFC, sparse in the accumbens.', sec: 's11-alpha2' },
+      { ch: 'ch11', pages: '482', text: '**Guanfacine** is 15–60× α2A-selective; **clonidine** hits α2A, α2B, α2C plus imidazoline receptors. Only ER forms are approved for ADHD.', sec: 's11-alpha2' }
     ]
   },
   {
@@ -319,7 +330,8 @@ SP.targets = [
       { ch: 'ch02', pages: '39', text: '**Antagonist** actions: improved sleep (nightmares), improved agitation in Alzheimer disease; side effects of orthostatic hypotension and possibly sedation (Table 2-4).', sec: 's2-receptor-tables' },
       { ch: 'ch05', pages: '181, 236', text: 'α1 blockade adds **sedation** and **orthostatic hypotension** (iloperidone, paliperidone, clozapine, quetiapine); it may also lower DIP risk (iloperidone) and help agitation (brexpiprazole).', sec: 's5-fga' },
       { ch: 'ch07', pages: '327–328', text: 'α1 receptors are **colocalized** with 5HT2A on pyramidal neurons; blocking both releases DA in the striatum (less DIP) and PFC (antidepressant). Bladder α1 stimulation causes urinary hesitancy (milnacipran), relieved by an α1 antagonist.', sec: 's7-augment-sda' },
-      { ch: 'ch08', pages: '370', text: 'Excess NE at postsynaptic α1 receptors in the amygdala may cause **nightmares and hyperarousal**; α1 antagonists (prazosin) at night reduce them in PTSD.', sec: 's8-ne' }
+      { ch: 'ch08', pages: '370', text: 'Excess NE at postsynaptic α1 receptors in the amygdala may cause **nightmares and hyperarousal**; α1 antagonists (prazosin) at night reduce them in PTSD.', sec: 's8-ne' },
+      { ch: 'ch11', pages: '455–457, 481', text: 'Recruited when NE release is **high** (stress, comorbidity, high-dose NRIs): opposes α2 and **impairs working memory**.', sec: 's11-invertedu' }
     ]
   },
   {
@@ -330,7 +342,8 @@ SP.targets = [
     facts: [
       { ch: 'ch06', pages: '254', text: 'Postsynaptic NE receptors that convert NE occupancy into signal transduction and gene expression changes.', sec: 's6-ne' },
       { ch: 'ch08', pages: '370', text: 'Excess NE at **β1** receptors in the amygdala and PFC may drive fear, panic and worry; sustained NET inhibition **downregulates β1** receptors.', sec: 's8-ne' },
-      { ch: 'ch08', pages: '375–376', text: '**β blockers** given soon after trauma may block **consolidation** of fear memories (reducing PTSD risk) and may disrupt **reconsolidation**; also used for **performance anxiety**.', sec: 's8-novel' }
+      { ch: 'ch08', pages: '375–376', text: '**β blockers** given soon after trauma may block **consolidation** of fear memories (reducing PTSD risk) and may disrupt **reconsolidation**; also used for **performance anxiety**.', sec: 's8-novel' },
+      { ch: 'ch11', pages: '455–457', text: '**β1** receptors join α1 at high NE levels, impairing working memory.', sec: 's11-invertedu' }
     ]
   },
   {
@@ -646,6 +659,13 @@ SP.targets = [
       { ch: 'ch09', pages: '395–399', text: 'Pain transmitter release (glutamate, aspartate, substance P, CGRP) requires **N- and P/Q-type** VSCCs in the dorsal horn, thalamus and cortex; excessive release drives central sensitization.', sec: 's9-a2d' }
     ]
   },
+  {
+    id: 'hcn', name: 'HCN channel (hyperpolarization-activated cyclic nucleotide-gated cation channel)', short: 'HCN', family: 'Voltage-sensitive ion channel',
+    summary: 'Cation channels on the dendritic spines of prefrontal pyramidal neurons, gated by cAMP. Open channels shunt incoming signals out of the spine; closed channels let the signal pass. α2A (Gi) closes them and D1 (Gs) opens them.',
+    location: '**Dendritic spines** of prefrontal pyramidal neurons, alongside α2A and D1 receptors',
+    coupling: 'Gated by **cAMP**: ↓cAMP (α2A/Gi) closes, ↑cAMP (D1/Gs) opens',
+    facts: [{ ch: 'ch11', pages: '457–463', text: 'Open HCN → low membrane resistance → **signal leaks out**. NE at α2A closes them (signal up); DA at D1 opens them (noise down, signal lost if excessive).', sec: 's11-hcn' }]
+  },
   /* ---------------- enzymes ---------------- */
   {
     id: 'mao', name: 'Monoamine oxidase (MAO)', short: 'MAO', family: 'Enzyme', ntLabel: 'Monoamines',
@@ -861,5 +881,11 @@ SP.targets = [
     id: 'ghb', name: 'GHB receptor', short: 'GHB-R', family: 'Other', ntLabel: 'γ-Hydroxybutyrate (formed from GABA)',
     summary: 'The receptor for naturally occurring γ-hydroxybutyrate; sodium oxybate is a full agonist here.',
     facts: [{ ch: 'ch10', pages: '446–447', text: 'GHB is a natural brain product formed from GABA with its own receptors; sodium oxybate is a **full agonist** at them.', sec: 's10-oxybate' }]
+  },
+  {
+    id: 'imidazoline', name: 'Imidazoline receptor', short: 'I-receptor', family: 'Other', ntLabel: 'No classic monoamine ligand',
+    summary: 'A non-adrenergic receptor bound by clonidine (not guanfacine), thought to contribute to clonidine’s sedation and hypotension.',
+    stim: ['**Sedation** and **hypotension** (clonidine)'],
+    facts: [{ ch: 'ch11', pages: '482', text: 'Clonidine’s imidazoline actions add **sedating and hypotensive** effects that guanfacine lacks.', sec: 's11-alpha2' }]
   }
 ];
