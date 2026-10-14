@@ -1489,3 +1489,52 @@ a.ref-chip:hover { background: color-mix(in srgb, var(--m-clin) 12%, transparent
   .nbn-fam td[data-label] { display: block; padding: 3px 0; border: 0; }
   .nbn-fam td[data-label]::before { content: attr(data-label); display: block; font: 700 .72rem/1.4 var(--sans); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); }
 }
+
+/* ---------- teaching mode: session builder ---------- */
+.tb { display: grid; gap: 22px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r-lg); padding: 20px 22px; max-width: 980px; }
+.tb__sec { min-width: 0; }
+.tb__h { font: 700 .78rem/1 var(--sans); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); margin: 0 0 10px; }
+.tb .fam-chips { margin: 0; }
+.tb-rows { display: grid; gap: 8px; }
+.tb-row { display: flex; align-items: center; justify-content: space-between; gap: 8px 16px; flex-wrap: wrap; padding: 10px 12px; border: 1px solid var(--rule); border-left: 4px solid var(--c, var(--rule)); border-radius: var(--r-md); }
+.tb-row__txt { display: grid; gap: 2px; min-width: 150px; }
+.tb-row__name { font-weight: 700; }
+.tb-row__avail { font-size: .82rem; color: var(--ink-3); }
+.tb__note { margin: 10px 0 0; font-size: .9rem; }
+.tb__two { display: flex; flex-wrap: wrap; gap: 18px 40px; }
+.tb__go { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 14px; }
+.tb__sum { margin: 0; flex-basis: 100%; color: var(--ink-2); font-size: .95rem; }
+.teach-item--topic { background: transparent; border-style: dashed; }
+.teach-item--topic .teach-item__q { font-family: var(--sans); font-weight: 700; }
+@media (max-width: 640px) {
+  .tb { padding: 16px 14px; }
+  .tb .fam-chips { margin-left: -14px; margin-right: -14px; padding-left: 14px; padding-right: 14px; }
+  .tb-row .seg { width: 100%; display: flex; }
+  .tb-row .seg label { flex: 1; }
+  .tb-row .seg span { width: 100%; justify-content: center; padding-left: 4px; padding-right: 4px; }
+}
+
+/* ---------- teaching mode: new slide types ---------- */
+.teach__kicker { font: 700 clamp(.85rem, 1.2vw, 1.05rem)/1.3 var(--sans); text-transform: uppercase; letter-spacing: .08em; color: #FFD23F; margin: 0 0 .9em; }
+.teach__cover { min-height: 50vh; display: flex; flex-direction: column; justify-content: center; }
+.teach__topic { font: 800 clamp(2.2rem, 5vw, 4.2rem)/1.08 var(--sans); color: #fff; margin: 0; letter-spacing: -0.02em; }
+.teach__stem--hy { font-size: clamp(1.5rem, 2.9vw, 2.6rem); line-height: 1.55; }
+.teach__inner.is-hy.is-revealed .teach__stem--hy { font-size: clamp(1.5rem, 2.9vw, 2.6rem); }
+.tblank { font: inherit; font-weight: 700; color: transparent; background: rgba(255,255,255,.1); border: 0; border-bottom: 3px solid #FFD23F; border-radius: 6px 6px 0 0; padding: 0 .15em; margin: 0 .05em; cursor: pointer; line-height: inherit; }
+.tblank:hover { background: rgba(255,210,63,.2); }
+.tblank.is-open { color: #FFD23F; background: rgba(255,210,63,.12); cursor: default; }
+.tblank:focus-visible { outline: 3px solid #FFD23F; outline-offset: 2px; }
+.teach__tally { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin-top: clamp(14px, 2.4vh, 26px); font: 600 clamp(.9rem, 1.3vw, 1.1rem)/1.3 var(--sans); color: #AEB4E8; }
+.tbtn--small { min-height: 36px; padding: 0 16px; font-size: .92rem; }
+.tbtn.is-on { background: #4CCB8A; border-color: #4CCB8A; color: #0B1A13; }
+.tbtn.is-on.is-miss { background: #FF7A7A; border-color: #FF7A7A; color: #2A0B0B; }
+.teach__score { font: 700 .95rem/1.2 var(--sans); color: #4CCB8A; font-variant-numeric: tabular-nums; }
+.teach__timer { font-variant-numeric: tabular-nums; min-width: 84px; }
+.teach__timer.is-low { border-color: #FF7A7A; color: #FF7A7A; }
+.teach__progress { height: 3px; background: rgba(255,255,255,.08); }
+.teach__progress span { display: block; height: 100%; background: #AEB4E8; transition: width .25s; }
+.teach__clock { height: 5px; background: rgba(255,255,255,.06); }
+.teach__clock span { display: block; height: 100%; width: 0; background: #FFD23F; transition: width .2s linear; }
+.teach__clock span.is-low { background: #FF7A7A; }
+@media (prefers-reduced-motion: reduce) { .teach__progress span, .teach__clock span { transition: none; } }
+.teach__inner.is-card.is-revealed .teach__stem { font-size: clamp(1.25rem, 2.2vw, 2rem); }

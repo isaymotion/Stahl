@@ -715,7 +715,7 @@
       '<div class="wrap hy-page' + (quiz ? ' quiz-on' : '') + '">' +
         '<div class="hy-tools"><label class="switch"><input type="checkbox" id="hy-quiz"' + (quiz ? ' checked' : '') + '> Hide key facts</label>' +
         '<p>With key facts hidden, each bold fact becomes a blank. Say the answer, then tap the blank to check.</p>' +
-        '<a class="btn hy-tools__print" href="#/c/' + ch.id + '/handout">Create PDF</a></div>' +
+        '<a class="btn hy-tools__print" href="#/c/' + ch.id + '/handout">Create PDF</a><a class="btn" href="#/teach" id="hy-teach">Present</a></div>' +
         '<div class="hy-grid">' + topics + '</div>' +
       '</div>';
     setView(key, html, focusTarget);
@@ -733,6 +733,7 @@
     }
     applyQuiz(quiz);
     toggle.addEventListener('change', function () { store.set('hyQuiz', toggle.checked); applyQuiz(toggle.checked); });
+    var hyT = main.querySelector('#hy-teach'); if (hyT) hyT.addEventListener('click', function () { var tp = teachPrefs(); tp.chs = [ch.id]; tp.counts = { hy: 'all' }; tp.order = 'order'; tp.timer = 0; store.set('teachPrefs', tp); });
     function reveal(s) { s.classList.toggle('is-revealed'); if (s.classList.contains('is-revealed')) s.removeAttribute('aria-label'); }
     page.addEventListener('click', function (e) {
       var s = e.target.closest('strong');
@@ -947,7 +948,7 @@
             '<option value="order"' + (S.mode === 'order' ? ' selected' : '') + '>All cards in order</option>' +
             '<option value="shuffle"' + (S.mode === 'shuffle' ? ' selected' : '') + '>All cards, shuffled</option>' +
           '</select></label>' +
-        '</div><div class="deck-bar__right">' + (deck.key === 'cases' ? '<a class="btn btn--small" href="#/teach" id="opt-teach">Present in teaching mode</a>' : '') + '<button class="link-btn" type="button" id="opt-reset">Reset this deck</button></div></div>' +
+        '</div><div class="deck-bar__right">' + '<a class="btn btn--small" href="#/teach" id="opt-teach">Present in teaching mode</a>' + '<button class="link-btn" type="button" id="opt-reset">Reset this deck</button></div></div>' +
         '<div class="tally" id="tally"></div>' +
         '<div id="card-area" aria-live="polite"></div>' + kbdHelp(deck.key === 'cases') +
       '</div>';
@@ -976,7 +977,7 @@
       S.mode = e.target.value; store.set('deckPrefs', { mode: S.mode }); build(); start();
     });
     var tl = main.querySelector('#opt-teach');
-    if (tl) tl.addEventListener('click', function () { var tp = teachPrefs(); tp.scope = ch.id; tp.kind = 'mcq'; store.set('teachPrefs', tp); });
+    if (tl) tl.addEventListener('click', function () { var tp = teachPrefs(); tp.chs = [ch.id]; tp.counts = {}; tp.counts[deck.key === 'cases' ? 'mcq' : deck.key] = 'all'; tp.order = 'order'; tp.timer = 0; store.set('teachPrefs', tp); });
     main.querySelector('#opt-reset').addEventListener('click', function () {
       if (!window.confirm('Clear the review schedule for every card in this deck? They will all become new cards again.')) return;
       keys.forEach(function (k) { delete SRS[k]; }); saveSRS(); updateNavBadges(); build(); start();
@@ -1648,82 +1649,188 @@
   }
 
   /* ---------- teaching mode ----------
-     A full-screen presentation of one case at a time for group discussion. Nothing here touches
-     the review schedule or the mistakes pile. */
-  function teachItems(scope, kind) {
-    var out = [];
+     A full-screen slide presenter for group teaching. A session is built from any mix of high-yield points
+     (bold facts become blanks revealed one by one), mechanism, drug and clinical flashcards, board-style
+     questions and clinical vignettes, from any chapters, with an optional countdown per slide.
+     Nothing here touches the review schedule or the mistakes pile. */
+  var TEACH_TYPES = [
+    { k: 'hy', label: 'High-yield points', unit: 'point', css: 'hy', hint: 'Each point appears with its bold facts blanked; tap a blank, or press Space, to reveal them one at a time. In book order, each topic gets a title slide.' },
+    { k: 'mech', label: 'Mechanism cards', unit: 'card', css: 'mech', hint: 'Question on screen; reveal shows the answer.' },
+    { k: 'drugs', label: 'Drug cards', unit: 'card', css: 'drug', hint: 'Question on screen; reveal shows the answer.' },
+    { k: 'clinical', label: 'Clinical cards', unit: 'card', css: 'clin', hint: 'Question on screen; reveal shows the answer.' },
+    { k: 'mcq', label: 'Board questions', unit: 'question', css: 'case', hint: 'Single best answer; mark the group’s choice, then reveal the answer and explanation.' },
+    { k: 'case', label: 'Clinical vignettes', unit: 'vignette', css: 'guide', hint: 'Short vignettes from the study guides; reveal shows the teaching point.' }
+  ];
+  var TEACH_COUNTS = [[0, 'Off'], [3, '3'], [5, '5'], [10, '10'], [20, '20'], ['all', 'All']];
+  var TEACH_TIMERS = [[0, 'Off'], [10, '10 s'], [20, '20 s'], [30, '30 s'], [60, '60 s']];
+  var TEACH_PRESETS = [
+    { id: 'mcq', label: 'Board questions', counts: { mcq: 'all' }, order: 'order', timer: 0 },
+    { id: 'case', label: 'Clinical vignettes', counts: { 'case': 'all' }, order: 'order', timer: 0 },
+    { id: 'hy', label: 'High-yield lecture', counts: { hy: 'all' }, order: 'order', timer: 0 },
+    { id: 'cards', label: 'Flashcards', counts: { mech: 'all', drugs: 'all', clinical: 'all' }, order: 'shuffle', timer: 0 },
+    { id: 'warm', label: 'Lightning warm-up', counts: { hy: 5, drugs: 5, clinical: 5, mcq: 3 }, order: 'mix', timer: 20 }
+  ];
+  function teachTypeBy(k) { for (var i = 0; i < TEACH_TYPES.length; i++) if (TEACH_TYPES[i].k === k) return TEACH_TYPES[i]; return null; }
+
+  function teachCatalog(chIds) {
+    var cat = { byId: {} };
+    TEACH_TYPES.forEach(function (t) { cat[t.k] = []; });
+    function add(list, it) { list.push(it); cat.byId[it.id] = it; }
     allChapters().forEach(function (ch) {
-      if (scope !== 'all' && ch.id !== scope) return;
-      if (kind === 'mcq') {
-        (ch.cases || []).forEach(function (c) { out.push({ id: ch.id + '/' + c.id, ch: ch, c: c }); });
-      } else if (ch.guide) {
-        ch.guide.parts.forEach(function (pt) {
-          pt.sections.forEach(function (s) {
-            s.blocks.forEach(function (b, i) {
-              if (b.type === 'case') out.push({ id: ch.id + '/' + s.id + '--' + i, ch: ch, sec: s, title: String(b.title || 'Case').replace(/^(Chapter case|Clinical vignette):\s*/i, ''), text: b.text, point: b.point });
-            });
+      if (chIds !== 'all' && chIds.indexOf(ch.id) < 0) return;
+      (ch.highYield || []).forEach(function (t) {
+        cat.byId['hyt:' + ch.id + '/' + t.id] = { id: 'hyt:' + ch.id + '/' + t.id, kind: 'hyt', ch: ch, topic: t.topic, n: t.items.length };
+        t.items.forEach(function (txt, i) { add(cat.hy, { id: 'hy:' + ch.id + '/' + t.id + '/' + i, kind: 'hy', ch: ch, topic: t.topic, topicId: 'hyt:' + ch.id + '/' + t.id, text: txt }); });
+      });
+      ['mech', 'drugs', 'clinical'].forEach(function (k) {
+        (ch[k] || []).forEach(function (c) { add(cat[k], { id: k + ':' + ch.id + '/' + c.id, kind: k, ch: ch, c: c }); });
+      });
+      (ch.cases || []).forEach(function (c) { add(cat.mcq, { id: 'mcq:' + ch.id + '/' + c.id, kind: 'mcq', ch: ch, c: c }); });
+      if (ch.guide) ch.guide.parts.forEach(function (pt) {
+        pt.sections.forEach(function (s) {
+          s.blocks.forEach(function (b, i) {
+            if (b.type === 'case') add(cat['case'], { id: 'case:' + ch.id + '/' + s.id + '--' + i, kind: 'case', ch: ch, sec: s, title: String(b.title || 'Case').replace(/^(Chapter case|Clinical vignette):\s*/i, ''), text: b.text, point: b.point });
           });
         });
-      }
+      });
     });
+    return cat;
+  }
+  function teachPrefs() {
+    var p = store.get('teachPrefs', null) || {};
+    if (!p.counts) {   // older saved settings: { scope, kind, order }
+      var counts = {}; counts[p.kind === 'chapter' ? 'case' : 'mcq'] = 'all';
+      p = { chs: p.scope && p.scope !== 'all' ? [p.scope] : 'all', counts: counts, order: p.order === 'shuffle' ? 'shuffle' : 'order', timer: 0 };
+    }
+    if (p.chs !== 'all' && !Array.isArray(p.chs)) p.chs = 'all';
+    if (Array.isArray(p.chs)) { p.chs = p.chs.filter(function (id) { return chapter(id); }); if (!p.chs.length) p.chs = 'all'; }
+    if (['order', 'shuffle', 'mix'].indexOf(p.order) < 0) p.order = 'order';
+    p.timer = p.timer || 0;
+    return p;
+  }
+  function teachBuild(p) {
+    var cat = teachCatalog(p.chs), out = [];
+    TEACH_TYPES.forEach(function (t) {
+      var n = p.counts[t.k]; if (!n) return;
+      var list = cat[t.k].map(function (it, i) { return { it: it, i: i }; });
+      if (n !== 'all' && n < list.length) {
+        list = shuffle(list).slice(0, n);
+        if (p.order === 'order') list.sort(function (a, b) { return a.i - b.i; });
+      } else if (p.order !== 'order') shuffle(list);
+      var ids = [], lastTopic = null;
+      list.forEach(function (x) {
+        if (t.k === 'hy' && p.order === 'order' && x.it.topicId !== lastTopic) { ids.push(x.it.topicId); lastTopic = x.it.topicId; }
+        ids.push(x.it.id);
+      });
+      out = out.concat(ids);
+    });
+    if (p.order === 'mix') shuffle(out);
     return out;
   }
-  function teachPrefs() { return store.get('teachPrefs', { scope: 'all', kind: 'mcq', order: 'order' }); }
+  function teachLabel(it) {
+    if (it.kind === 'hyt') return 'Topic: ' + it.topic;
+    if (it.kind === 'hy') return plain(it.text);
+    if (it.kind === 'case') return it.title;
+    return plain(it.c.q);
+  }
+  function teachMeta(it) {
+    var ty = it.kind === 'hyt' ? 'High yield' : teachTypeBy(it.kind).label.replace(/s$/, '');
+    var extra = it.kind === 'hy' || it.kind === 'hyt' ? it.topic : it.kind === 'case' ? it.sec.title : (it.c.tag || '');
+    return 'Ch ' + it.ch.number + ' · ' + ty + (extra && it.kind !== 'hyt' ? ' · ' + extra : '');
+  }
 
   function renderTeachSetup() {
-    var prefs = teachPrefs();
-    if (prefs.scope !== 'all' && !chapter(prefs.scope)) prefs.scope = 'all';
+    var prefs = teachPrefs(), pending = [], cat = null;
+    var chs = allChapters();
+    function seg(name, opts, cur) {
+      return '<div class="seg" role="radiogroup">' + opts.map(function (o) {
+        return '<label><input type="radio" name="' + name + '" value="' + o[0] + '"' + (String(o[0]) === String(cur) ? ' checked' : '') + '><span>' + o[1] + '</span></label>';
+      }).join('') + '</div>';
+    }
     var html = '<div class="wrap page teach-setup">' +
-      '<header class="page__head"><h1>Teaching mode</h1><p>Present one case at a time, full screen, for ward rounds, journal club or a group session. Choices can be marked as the group votes; the answer stays hidden until you reveal it. Nothing here affects anyone’s review schedule or mistakes.</p></header>' +
-      '<div class="exam-form">' +
-        '<fieldset><legend>Chapter</legend><label class="select"><select id="t-scope"><option value="all"' + (prefs.scope === 'all' ? ' selected' : '') + '>All chapters</option>' +
-          allChapters().map(function (ch) { return '<option value="' + ch.id + '"' + (prefs.scope === ch.id ? ' selected' : '') + '>Chapter ' + ch.number + ': ' + esc(ch.short || ch.title) + '</option>'; }).join('') + '</select></label></fieldset>' +
-        '<fieldset><legend>Cases</legend><div class="seg">' +
-          '<label><input type="radio" name="kind" value="mcq"' + (prefs.kind === 'mcq' ? ' checked' : '') + '><span>Board-style questions</span></label>' +
-          '<label><input type="radio" name="kind" value="chapter"' + (prefs.kind === 'chapter' ? ' checked' : '') + '><span>Clinical vignettes</span></label></div>' +
-          '<p class="muted teach-setup__hint" id="t-hint"></p></fieldset>' +
-        '<fieldset><legend>Order</legend><div class="seg">' +
-          '<label><input type="radio" name="order" value="order"' + (prefs.order === 'order' ? ' checked' : '') + '><span>In order</span></label>' +
-          '<label><input type="radio" name="order" value="shuffle"' + (prefs.order === 'shuffle' ? ' checked' : '') + '><span>Shuffled</span></label></div></fieldset>' +
-        '<button class="btn btn--solid" type="button" id="t-start">Start presenting</button>' +
+      '<header class="page__head"><h1>Teaching mode</h1><p>Present slides full screen for ward rounds, journal club or a group session. Build a session from high-yield points, flashcards, board questions and vignettes from any chapters; add a countdown for a lightning round. Nothing here affects anyone’s review schedule or mistakes.</p></header>' +
+      '<div class="tb">' +
+        '<section class="tb__sec"><h2 class="tb__h">Quick start</h2><div class="fam-chips tb-presets">' + TEACH_PRESETS.map(function (pr) { return '<button type="button" class="filter" data-preset="' + pr.id + '">' + esc(pr.label) + '</button>'; }).join('') + '</div></section>' +
+        '<section class="tb__sec"><h2 class="tb__h">Chapters</h2><div class="fam-chips tb-chs"><button type="button" class="filter" data-ch="all">All chapters</button>' +
+          chs.map(function (ch) { return '<button type="button" class="filter" data-ch="' + ch.id + '" title="' + esc(ch.title) + '">Ch ' + ch.number + '</button>'; }).join('') + '</div></section>' +
+        '<section class="tb__sec"><h2 class="tb__h">What to include</h2><div class="tb-rows">' + TEACH_TYPES.map(function (t) {
+          return '<div class="tb-row c-' + t.css + '"><div class="tb-row__txt"><span class="tb-row__name">' + esc(t.label) + '</span><span class="tb-row__avail" id="tb-av-' + t.k + '"></span></div>' + seg('n-' + t.k, TEACH_COUNTS, prefs.counts[t.k] || 0) + '</div>';
+        }).join('') + '</div><p class="muted tb__note" id="tb-hint"></p></section>' +
+        '<section class="tb__sec tb__two"><div><h2 class="tb__h">Order</h2>' + seg('order', [['order', 'Book order'], ['shuffle', 'Shuffled'], ['mix', 'Mixed together']], prefs.order) + '</div>' +
+          '<div><h2 class="tb__h">Countdown per slide</h2>' + seg('timer', TEACH_TIMERS, prefs.timer) + '</div></section>' +
+        '<div class="tb__go"><button class="btn btn--solid" type="button" id="t-start">Start presenting</button><button class="btn" type="button" id="t-reroll" hidden>Reshuffle</button><p class="tb__sum" id="t-count" aria-live="polite"></p></div>' +
       '</div>' +
-      '<section class="teach-list"><h2 id="t-count"></h2><ol id="t-list"></ol></section></div>';
+      '<section class="teach-list"><h2>Slides in this session</h2><p class="muted">Tap any slide to start from it.</p><ol id="t-list"></ol></section></div>';
     setView('teach', html);
     document.title = 'Teaching mode — Stahl Study Companion';
+
+    function paintChips() {
+      main.querySelectorAll('[data-ch]').forEach(function (b) {
+        var id = b.getAttribute('data-ch');
+        b.setAttribute('aria-pressed', String(id === 'all' ? prefs.chs === 'all' : prefs.chs !== 'all' && prefs.chs.indexOf(id) >= 0));
+      });
+    }
     function read() {
-      prefs.scope = main.querySelector('#t-scope').value;
-      prefs.kind = main.querySelector('input[name=kind]:checked').value;
+      TEACH_TYPES.forEach(function (t) {
+        var r = main.querySelector('input[name="n-' + t.k + '"]:checked');
+        prefs.counts[t.k] = !r ? 0 : r.value === 'all' ? 'all' : parseInt(r.value, 10);
+      });
       prefs.order = main.querySelector('input[name=order]:checked').value;
+      prefs.timer = parseInt(main.querySelector('input[name=timer]:checked').value, 10);
       store.set('teachPrefs', prefs);
     }
-    function list() {
-      read();
-      var items = teachItems(prefs.scope, prefs.kind);
-      main.querySelector('#t-hint').textContent = prefs.kind === 'mcq'
-        ? 'Board-style single-best-answer questions. Reveal shows the answer and its explanation.'
-        : 'Short clinical vignettes from each study guide that apply the chapter\u2019s mechanisms. Reveal shows the teaching point.';
-      main.querySelector('#t-count').textContent = plural(items.length, prefs.kind === 'mcq' ? 'question' : 'vignette');
-      main.querySelector('#t-list').innerHTML = items.map(function (it, i) {
-        var label = prefs.kind === 'mcq' ? plain(it.c.q) : it.title;
-        var meta = 'Ch ' + it.ch.number + ', ' + (prefs.kind === 'mcq' ? (it.c.tag || 'Case') : it.sec.title);
-        return '<li><button type="button" class="teach-item" data-start="' + i + '"><span class="teach-item__meta">' + esc(meta) + '</span><span class="teach-item__q">' + esc(label.length > 170 ? label.slice(0, 170) + '\u2026' : label) + '</span></button></li>';
+    function rebuild() {
+      read(); paintChips();
+      cat = teachCatalog(prefs.chs);
+      TEACH_TYPES.forEach(function (t) { main.querySelector('#tb-av-' + t.k).textContent = plural(cat[t.k].length, t.unit) + ' available'; });
+      var on = TEACH_TYPES.filter(function (t) { return prefs.counts[t.k]; });
+      main.querySelector('#tb-hint').textContent = on.length === 1 ? on[0].hint : on.length ? 'Slides are grouped by type in the order listed above, unless you choose “Mixed together.”' : '';
+      pending = teachBuild(prefs);
+      var byType = {}; pending.forEach(function (id) { var k = id.split(':')[0]; byType[k] = (byType[k] || 0) + 1; });
+      var parts = TEACH_TYPES.filter(function (t) { return byType[t.k]; }).map(function (t) { return plural(byType[t.k], t.unit); });
+      if (byType.hyt) parts.push(plural(byType.hyt, 'topic slide'));
+      var count = main.querySelector('#t-count');
+      count.textContent = pending.length ? plural(pending.length, 'slide') + ': ' + parts.join(', ') + (prefs.timer ? '. About ' + Math.max(1, Math.round(pending.length * (prefs.timer + 8) / 60)) + ' min with the countdown.' : '.') : 'Choose at least one type of slide.';
+      main.querySelector('#t-start').disabled = !pending.length;
+      var random = prefs.order !== 'order' || TEACH_TYPES.some(function (t) { var n = prefs.counts[t.k]; return n && n !== 'all' && n < cat[t.k].length; });
+      main.querySelector('#t-reroll').hidden = !random || !pending.length;
+      main.querySelector('#t-list').innerHTML = pending.map(function (id, i) {
+        var it = cat.byId[id], label = teachLabel(it);
+        return '<li><button type="button" class="teach-item' + (it.kind === 'hyt' ? ' teach-item--topic' : '') + '" data-start="' + i + '"><span class="teach-item__meta">' + (i + 1) + '. ' + esc(teachMeta(it)) + '</span><span class="teach-item__q">' + esc(label.length > 170 ? label.slice(0, 170) + '…' : label) + '</span></button></li>';
       }).join('');
       main.querySelectorAll('[data-start]').forEach(function (b) { b.addEventListener('click', function () { start(parseInt(b.getAttribute('data-start'), 10)); }); });
     }
     function start(from) {
-      read();
-      var ids = teachItems(prefs.scope, prefs.kind).map(function (it) { return it.id; });
-      if (!ids.length) return;
-      var first = typeof from === 'number' ? ids[from] : null;
-      if (prefs.order === 'shuffle') { shuffle(ids); if (first) { ids.splice(ids.indexOf(first), 1); ids.unshift(first); } }
-      store.set('teach', { scope: prefs.scope, kind: prefs.kind, order: ids, pos: prefs.order === 'shuffle' || first === null ? 0 : from });
+      if (!pending.length) return;
+      store.set('teach', { chs: prefs.chs, order: pending.slice(), pos: from || 0, timer: prefs.timer, res: {} });
       enterFullscreen();
       location.hash = '#/teach/run';
     }
-    main.querySelector('#t-scope').addEventListener('change', list);
-    main.querySelectorAll('input[name=kind], input[name=order]').forEach(function (i) { i.addEventListener('change', list); });
-    main.querySelector('#t-start').addEventListener('click', function () { start(null); });
-    list();
+    main.querySelectorAll('[data-ch]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var id = b.getAttribute('data-ch');
+        if (id === 'all') prefs.chs = 'all';
+        else {
+          var cur = prefs.chs === 'all' ? [] : prefs.chs.slice(), at = cur.indexOf(id);
+          if (at >= 0) cur.splice(at, 1); else cur.push(id);
+          prefs.chs = cur.length ? cur : 'all';
+        }
+        rebuild();
+      });
+    });
+    main.querySelectorAll('[data-preset]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var pr = TEACH_PRESETS.filter(function (x) { return x.id === b.getAttribute('data-preset'); })[0];
+        TEACH_TYPES.forEach(function (t) { var r = main.querySelector('input[name="n-' + t.k + '"][value="' + (pr.counts[t.k] || 0) + '"]'); if (r) r.checked = true; });
+        main.querySelector('input[name=order][value="' + pr.order + '"]').checked = true;
+        main.querySelector('input[name=timer][value="' + pr.timer + '"]').checked = true;
+        rebuild();
+      });
+    });
+    main.querySelectorAll('.tb input[type=radio]').forEach(function (i) { i.addEventListener('change', rebuild); });
+    main.querySelector('#t-start').addEventListener('click', function () { start(0); });
+    main.querySelector('#t-reroll').addEventListener('click', rebuild);
+    rebuild();
   }
 
   function isFullscreen() { return !!(document.fullscreenElement || document.webkitFullscreenElement); }
@@ -1737,79 +1844,170 @@
 
   function renderTeachRun() {
     var S = store.get('teach', null);
-    if (!S) { location.hash = '#/teach'; return; }
-    var byId = {};
-    teachItems(S.scope, S.kind).forEach(function (it) { byId[it.id] = it; });
-    S.order = S.order.filter(function (id) { return byId[id]; });
+    if (!S || !S.order) { location.hash = '#/teach'; return; }
+    var cat = teachCatalog(S.chs || 'all');
+    S.order = S.order.filter(function (id) { return cat.byId[id]; });
     if (!S.order.length) { location.hash = '#/teach'; return; }
+    S.res = S.res || {};
     S.pos = Math.max(0, Math.min(S.pos || 0, S.order.length - 1));
-    var st = { revealed: false, picked: null };
+    var st, timer = { left: 0, end: 0, paused: false, iv: null, out: false };
     setView('teach-run', '<div class="teach" id="teach" role="region" aria-label="Teaching mode"></div>');
     document.title = 'Teaching mode — Stahl Study Companion';
     document.body.classList.add('is-teaching');
     var box = main.querySelector('#teach');
 
+    function cur() { return cat.byId[S.order[S.pos]]; }
+    function blanksOf(it) { var m = String(it.text).match(/\*\*(.+?)\*\*/g); return m ? m.length : 0; }
+    function fresh() { st = { revealed: false, picked: null, shown: 0 }; }
+    function revealable(it) { return it.kind !== 'hyt' && !(it.kind === 'hy' && !blanksOf(it)); }
+    function isDone(it) { return it.kind === 'hy' ? st.shown >= blanksOf(it) : st.revealed; }
+    function tally() {
+      var n = 0, ok = 0; Object.keys(S.res).forEach(function (k) { if (cat.byId[k]) { n++; if (S.res[k]) ok++; } });
+      return n ? 'Room ' + ok + '/' + n : '';
+    }
+    function hyHTML(it) {
+      var i = 0;
+      return fmt(it.text).replace(/<strong>([\s\S]*?)<\/strong>/g, function (m, inner) {
+        var k = i++, open = k < st.shown;
+        return '<button type="button" class="tblank' + (open ? ' is-open' : '') + '" data-blank="' + k + '" aria-label="' + (open ? '' : 'Hidden fact ' + (k + 1) + ', tap to reveal') + '">' + inner + '</button>';
+      });
+    }
+
     function draw() {
-      var it = byId[S.order[S.pos]];
-      var mcq = S.kind === 'mcq';
-      var meta = 'Chapter ' + it.ch.number + ', ' + (mcq ? (it.c.tag || 'Case') : it.sec.title);
-      var body;
-      if (mcq) {
+      var it = cur(), k = it.kind, body = '', done = isDone(it);
+      if (k === 'mcq') {
         var c = it.c;
         body = '<p class="teach__stem">' + fmt(c.q) + '</p><ul class="teach__choices">' + c.choices.map(function (ch2, i) {
           var cls = st.revealed ? (i === c.answer ? ' is-correct' : (i === st.picked ? ' is-wrong' : ' is-dim')) : (i === st.picked ? ' is-picked' : '');
           return '<li><button type="button" class="tchoice' + cls + '" data-pick="' + i + '"' + (st.revealed ? ' disabled' : '') + ' aria-pressed="' + (i === st.picked) + '"><span class="tchoice__key">' + LETTERS[i] + '</span><span>' + fmt(ch2) + '</span></button></li>';
         }).join('') + '</ul>' +
         (st.revealed ? '<div class="teach__answer"><p class="teach__label">Answer: ' + LETTERS[c.answer] + (st.picked == null ? '' : st.picked === c.answer ? ', the group got it' : ', the group chose ' + LETTERS[st.picked]) + '</p><p>' + fmt(c.why) + '</p></div>' : '');
-      } else {
+      } else if (k === 'case') {
         body = '<h2 class="teach__title">' + esc(it.title) + '</h2><p class="teach__stem">' + fmt(it.text) + '</p>' +
           (st.revealed ? '<div class="teach__answer"><p class="teach__label">Teaching point</p><p>' + fmt(it.point || '') + '</p></div>' : '<p class="teach__prompt">What mechanism is at work, and what does this vignette teach?</p>');
+      } else if (k === 'hyt') {
+        body = '<div class="teach__cover"><p class="teach__kicker">High yield · Chapter ' + it.ch.number + '</p><h2 class="teach__topic">' + esc(it.topic) + '</h2><p class="teach__prompt">' + plural(it.n, 'point') + ' in this topic. What do you already know?</p></div>';
+      } else if (k === 'hy') {
+        var nb = blanksOf(it);
+        body = '<p class="teach__kicker">' + esc(it.topic) + '</p><p class="teach__stem teach__stem--hy">' + hyHTML(it) + '</p>' +
+          (nb ? '<p class="teach__prompt">' + (st.shown >= nb ? 'All facts revealed.' : plural(nb - st.shown, 'hidden fact') + ' left. Tap a blank or press Space.') + '</p>' : '');
+      } else {
+        body = '<p class="teach__kicker">' + esc(teachTypeBy(k).label) + (it.c.tag ? ' · ' + esc(it.c.tag) : '') + '</p><p class="teach__stem">' + fmt(it.c.q) + '</p>' +
+          (st.revealed ? '<div class="teach__answer"><p class="teach__label">Answer</p><p>' + fmt(it.c.a) + '</p></div>' : '');
       }
+      var canTally = done && revealable(it) && k !== 'mcq';
+      var res = S.res[it.id];
+      var tallyHTML = canTally ? '<div class="teach__tally" role="group" aria-label="How did the room do?"><span>Did the room get it?</span>' +
+        '<button type="button" class="tbtn tbtn--small' + (res === 1 ? ' is-on' : '') + '" data-res="1">Got it</button><button type="button" class="tbtn tbtn--small' + (res === 0 ? ' is-on is-miss' : '') + '" data-res="0">Missed</button></div>' : '';
+      var revealLabel = k === 'hy' ? (st.shown >= blanksOf(it) ? 'Hide facts' : st.shown ? 'Reveal next fact' : 'Reveal first fact')
+        : st.revealed ? 'Hide answer' : k === 'case' ? 'Reveal teaching point' : 'Reveal answer';
+      var t = tally();
       box.innerHTML =
-        '<div class="teach__bar"><span class="teach__meta">' + esc(meta) + '</span><span class="teach__pos">' + (mcq ? 'Question ' : 'Case ') + (S.pos + 1) + ' of ' + S.order.length + '</span>' +
-          '<span class="teach__spacer"></span><button class="tbtn" type="button" id="t-fs">' + (isFullscreen() ? 'Exit full screen' : 'Full screen') + '</button><button class="tbtn" type="button" id="t-exit">Close</button></div>' +
-        '<div class="teach__stage"><div class="teach__inner' + (st.revealed ? ' is-revealed' : '') + '">' + body + '</div></div>' +
+        '<div class="teach__bar"><span class="teach__meta">' + esc(teachMeta(it)) + '</span><span class="teach__pos">' + (S.pos + 1) + ' of ' + S.order.length + '</span>' +
+          (t ? '<span class="teach__score">' + t + '</span>' : '') +
+          '<span class="teach__spacer"></span>' + (S.timer && revealable(it) ? '<button class="tbtn teach__timer" type="button" id="t-timer" aria-label="Countdown, tap to pause"></button>' : '') +
+          '<button class="tbtn" type="button" id="t-fs">' + (isFullscreen() ? 'Exit full screen' : 'Full screen') + '</button><button class="tbtn" type="button" id="t-exit">Close</button></div>' +
+        '<div class="teach__progress"><span style="width:' + ((S.pos + 1) / S.order.length * 100) + '%"></span></div>' +
+        (S.timer && revealable(it) ? '<div class="teach__clock"><span id="t-clockbar"></span></div>' : '') +
+        '<div class="teach__stage"><div class="teach__inner' + (st.revealed || (k === 'hy' && st.shown) ? ' is-revealed' : '') + (k === 'hy' ? ' is-hy' : '') + (['mech', 'drugs', 'clinical'].indexOf(k) >= 0 ? ' is-card' : '') + '">' + body + tallyHTML + '</div></div>' +
         '<div class="teach__nav"><button class="tbtn" type="button" id="t-prev"' + (S.pos ? '' : ' disabled') + '>Previous</button>' +
-          '<button class="tbtn tbtn--solid" type="button" id="t-reveal">' + (st.revealed ? 'Hide answer' : mcq ? 'Reveal answer' : 'Reveal teaching point') + '</button>' +
-          '<button class="tbtn" type="button" id="t-next"' + (S.pos < S.order.length - 1 ? '' : ' disabled') + '>Next</button></div>' +
-        '<p class="teach__keys" aria-hidden="true">Space reveal \u00b7 \u2190 \u2192 move \u00b7 ' + (mcq ? 'A\u2013E mark the group\u2019s answer \u00b7 ' : '') + 'F full screen \u00b7 Esc close</p>';
-      linkTerms(box.querySelector('.teach__inner'), { skip: '.tchoice__key, .teach__label' });
+          (revealable(it) ? '<button class="tbtn tbtn--solid" type="button" id="t-reveal">' + revealLabel + '</button>' : '') +
+          (k === 'hy' && blanksOf(it) > 1 && st.shown < blanksOf(it) ? '<button class="tbtn" type="button" id="t-all">Reveal all</button>' : '') +
+          '<button class="tbtn' + (revealable(it) ? '' : ' tbtn--solid') + '" type="button" id="t-next"' + (S.pos < S.order.length - 1 ? '' : ' disabled') + '>Next</button></div>' +
+        '<p class="teach__keys" aria-hidden="true">Space reveal · ← → move · ' + (k === 'mcq' ? 'A–E mark the group’s answer · ' : canTally ? 'Y got it · N missed · ' : '') + (S.timer ? 'P pause · ' : '') + 'F full screen · Esc close</p>';
+      if (k !== 'hy') linkTerms(box.querySelector('.teach__inner'), { skip: '.tchoice__key, .teach__label, .teach__kicker, .teach__tally' });
       box.querySelectorAll('[data-pick]').forEach(function (b) {
         b.addEventListener('click', function () { var i = parseInt(b.getAttribute('data-pick'), 10); st.picked = st.picked === i ? null : i; draw(); });
       });
-      box.querySelector('#t-reveal').addEventListener('click', toggle);
+      box.querySelectorAll('[data-blank]').forEach(function (b) {
+        b.addEventListener('click', function () { var i = parseInt(b.getAttribute('data-blank'), 10); if (i >= st.shown) { st.shown = i + 1; afterReveal(); } });
+      });
+      box.querySelectorAll('[data-res]').forEach(function (b) { b.addEventListener('click', function () { mark(parseInt(b.getAttribute('data-res'), 10)); }); });
+      var rv = box.querySelector('#t-reveal'); if (rv) rv.addEventListener('click', toggle);
+      var ra = box.querySelector('#t-all'); if (ra) ra.addEventListener('click', function () { st.shown = blanksOf(cur()); afterReveal(); });
       box.querySelector('#t-prev').addEventListener('click', function () { go(-1); });
       box.querySelector('#t-next').addEventListener('click', function () { go(1); });
       box.querySelector('#t-exit').addEventListener('click', close);
       box.querySelector('#t-fs').addEventListener('click', function () { if (isFullscreen()) exitFullscreen(); else enterFullscreen(); });
-      box.querySelector('.teach__stage').scrollTop = 0;
+      var tb = box.querySelector('#t-timer'); if (tb) tb.addEventListener('click', pause);
+      paintTimer();
     }
-    function toggle() { st.revealed = !st.revealed; draw(); var a = box.querySelector('.teach__answer'); if (a) a.scrollIntoView({ block: 'nearest', behavior: reduceMotion() ? 'auto' : 'smooth' }); }
+    function mark(v) { var id = cur().id; if (S.res[id] === v) delete S.res[id]; else S.res[id] = v; store.set('teach', S); draw(); }
+    function afterReveal() {
+      var it = cur();
+      if (isDone(it)) stopTimer();
+      if (it.kind === 'mcq' && st.revealed && st.picked != null) { S.res[it.id] = st.picked === it.c.answer ? 1 : 0; store.set('teach', S); }
+      draw();
+      var a = box.querySelector('.teach__answer, .teach__tally'); if (a) a.scrollIntoView({ block: 'nearest', behavior: reduceMotion() ? 'auto' : 'smooth' });
+    }
+    function toggle() {
+      var it = cur();
+      if (!revealable(it)) return go(1);
+      if (it.kind === 'hy') { if (st.shown >= blanksOf(it)) { st.shown = 0; draw(); return; } st.shown++; }
+      else { st.revealed = !st.revealed; if (!st.revealed) { draw(); return; } }
+      afterReveal();
+    }
+    function revealAll() { var it = cur(); if (it.kind === 'hy') st.shown = blanksOf(it); else st.revealed = true; afterReveal(); }
+
+    /* countdown */
+    function stopTimer() { if (timer.iv) clearInterval(timer.iv); timer.iv = null; timer.left = 0; timer.paused = false; paintTimer(); }
+    function startTimer() {
+      stopTimer();
+      if (!S.timer || !revealable(cur()) || isDone(cur())) return;
+      timer.left = S.timer; timer.end = Date.now() + S.timer * 1000; timer.paused = false; timer.out = false;
+      timer.iv = setInterval(tick, 200); paintTimer();
+    }
+    function tick() {
+      if (timer.paused) return;
+      timer.left = Math.max(0, (timer.end - Date.now()) / 1000);
+      paintTimer();
+      if (timer.left <= 0) { clearInterval(timer.iv); timer.iv = null; timer.out = true; revealAll(); }
+    }
+    function pause() {
+      if (!timer.iv) return;
+      if (timer.paused) { timer.paused = false; timer.end = Date.now() + timer.left * 1000; }
+      else timer.paused = true;
+      paintTimer();
+    }
+    function paintTimer() {
+      var b = box.querySelector('#t-timer'), bar = box.querySelector('#t-clockbar');
+      if (!b) return;
+      var running = !!timer.iv;
+      b.textContent = running ? (timer.paused ? 'Paused ' : '') + Math.ceil(timer.left) + ' s' : timer.out ? 'Time’s up' : 'Done';
+      b.classList.toggle('is-low', running && timer.left <= 5);
+      if (bar) { bar.style.width = (running ? timer.left / S.timer * 100 : 0) + '%'; bar.classList.toggle('is-low', running && timer.left <= 5); }
+    }
+
     function go(d) {
       var np = S.pos + d; if (np < 0 || np >= S.order.length) return;
-      S.pos = np; store.set('teach', S); st = { revealed: false, picked: null }; draw();
+      S.pos = np; store.set('teach', S); fresh(); draw(); startTimer();
+      box.querySelector('.teach__stage').scrollTop = 0;
     }
-    function close() { exitFullscreen(); location.hash = '#/teach'; }
+    function close() { stopTimer(); exitFullscreen(); location.hash = '#/teach'; }
     function onKey(e) {
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       if (e.target.closest && e.target.closest('.glpop')) return;
       var onBtn = e.target.closest && e.target.closest('button, a, .gl');
+      var it = cur();
       if ((e.key === ' ' || e.key === 'Enter') && !onBtn) { e.preventDefault(); toggle(); }
       else if (e.key === 'ArrowRight' || e.key === 'PageDown') { e.preventDefault(); go(1); }
       else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(-1); }
       else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); if (isFullscreen()) exitFullscreen(); else enterFullscreen(); }
+      else if (e.key === 'p' || e.key === 'P') { e.preventDefault(); pause(); }
       else if (e.key === 'Escape' && !isFullscreen() && !(glPop && !glPop.hidden)) { e.preventDefault(); close(); }
-      else if (S.kind === 'mcq' && !st.revealed && /^[a-e]$/i.test(e.key)) {
-        var i = 'abcde'.indexOf(e.key.toLowerCase()), c = byId[S.order[S.pos]].c;
-        if (i < c.choices.length) { e.preventDefault(); st.picked = st.picked === i ? null : i; draw(); }
+      else if (it.kind === 'mcq' && !st.revealed && /^[a-e]$/i.test(e.key)) {
+        var i = 'abcde'.indexOf(e.key.toLowerCase());
+        if (i < it.c.choices.length) { e.preventDefault(); st.picked = st.picked === i ? null : i; draw(); }
       }
+      else if (it.kind !== 'mcq' && isDone(it) && revealable(it) && /^[yn]$/i.test(e.key)) { e.preventDefault(); mark(e.key.toLowerCase() === 'y' ? 1 : 0); }
     }
     function onFs() { var b = box.querySelector('#t-fs'); if (b) b.textContent = isFullscreen() ? 'Exit full screen' : 'Full screen'; }
     document.addEventListener('keydown', onKey);
     document.addEventListener('fullscreenchange', onFs);
     document.addEventListener('webkitfullscreenchange', onFs);
-    draw();
+    fresh(); draw(); startTimer();
     view.cleanup = function () {
+      stopTimer();
       document.removeEventListener('keydown', onKey);
       document.removeEventListener('fullscreenchange', onFs);
       document.removeEventListener('webkitfullscreenchange', onFs);

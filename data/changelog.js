@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 16,
+    date: "2026-10-14",
+    title: "Teaching mode: high-yield slides, flashcards, lightning rounds and a session builder",
+    summary: "Teaching mode is now a full slide presenter. Build a session from any chapters and any mix of high-yield points, flashcards, board questions and vignettes, with an optional countdown per slide.",
+    items: [
+      { type: "feature", text: "High-yield slides: each point appears with its bold facts blanked; tap a blank or press Space to reveal them one at a time. In book order every topic gets a title slide.", href: "#/teach", link: "Teaching mode" },
+      { type: "feature", text: "Flashcard slides: mechanism, drug and clinical cards, question on screen and answer on reveal, with a “Did the room get it?” tally shown as a running room score.", href: "#/teach", link: "Teaching mode" },
+      { type: "feature", text: "Lightning rounds: a 10, 20, 30 or 60-second countdown per slide that reveals the answer when time runs out (P pauses).", href: "#/teach", link: "Teaching mode" },
+      { type: "feature", text: "Session builder: pick several chapters and how many of each type (3, 5, 10, 20 or all), in book order, shuffled, or mixed together; quick-start presets include a High-yield lecture and a Lightning warm-up. “Present” buttons on high-yield pages and every card deck open it pre-set to that chapter.", href: "#/teach", link: "Build a session" }
+    ]
+  },
+  {
     id: 15,
     date: "2026-10-14",
     title: "Quality-of-life update: phone layout, PDF handouts, drug-type filters",
