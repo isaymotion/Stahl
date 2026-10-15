@@ -4,6 +4,15 @@
  */
 SP.changelog = [
   {
+    id: 18,
+    date: "2026-10-15",
+    title: "Offline storage fix",
+    summary: "Updating this app no longer wipes the offline copies of the other study apps on the same site.",
+    items: [
+      { type: "correction", text: "Offline storage no longer clears the other study apps’ offline copies." }
+    ]
+  },
+  {
     id: 17,
     date: "2026-10-14",
     title: "Teaching mode: Name that drug, two teams, flags and an end-of-session review",

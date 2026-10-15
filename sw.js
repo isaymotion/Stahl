@@ -1,5 +1,6 @@
 /* Offline support: network first, cached copy when offline. Bump VERSION when you publish a new chapter. */
-const VERSION = 'stahl-companion-2026-10-14-teach2';
+const PREFIX = 'stahl-companion-';
+const VERSION = PREFIX + '2026-10-15-swfix';
 const CORE = [
   './', './index.html', './css/app.css', './js/app.js', './js/pdf.js', './js/pdf-fonts.js', './data/chapters.js',
   './manifest.webmanifest', './icons/favicon-64.png', './icons/home-brain.png', './icons/icon-192.png', './icons/icon-512.png'
@@ -12,7 +13,8 @@ self.addEventListener('install', (event) => {
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.filter((k) => k !== VERSION).map((k) => caches.delete(k))))
+      // Only delete this app's own old caches: other study apps on isaymotion.github.io share this cache storage.
+      .then((keys) => Promise.all(keys.filter((k) => k.indexOf(PREFIX) === 0 && k !== VERSION).map((k) => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
