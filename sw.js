@@ -1,6 +1,6 @@
 /* Offline support: network first, cached copy when offline. Bump VERSION when you publish a new chapter. */
 const PREFIX = 'stahl-companion-';
-const VERSION = PREFIX + '2026-10-15-swfix';
+const VERSION = PREFIX + '2026-10-15-tabbar';
 const CORE = [
   './', './index.html', './css/app.css', './js/app.js', './js/pdf.js', './js/pdf-fonts.js', './data/chapters.js',
   './manifest.webmanifest', './icons/favicon-64.png', './icons/home-brain.png', './icons/icon-192.png', './icons/icon-512.png'

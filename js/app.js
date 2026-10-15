@@ -3062,6 +3062,35 @@
     main.innerHTML = '<div class="wrap empty" style="margin-top:48px"><h2>Chapter data did not load</h2><p>' + esc(err.message) + '. Check that every file listed in data/chapters.js exists in the repository.</p></div>';
   });
 
+  /* Auto-hiding bottom tab bar (phones and tablets): slides away while reading down, returns on any scroll up. */
+  (function initTabbarAutoHide() {
+    var bar = document.querySelector('.tabbar');
+    if (!bar) return;
+    var body = document.body, lastY = 0, down = 0, up = 0, ticking = false, fieldFocus = false, holdUntil = 0;
+    function barShown() { return window.getComputedStyle(bar).display !== 'none'; }
+    function show() { if (body.classList.contains('tabbar-hidden')) body.classList.remove('tabbar-hidden'); }
+    function hide() { if (barShown() && !body.classList.contains('tabbar-hidden')) body.classList.add('tabbar-hidden'); }
+    function isField(el) { return !!(el && el.matches && el.matches('input, textarea, select, [contenteditable="true"]')); }
+    function mustShow(y) {
+      var doc = document.documentElement, h = Math.max(doc.scrollHeight, body.scrollHeight);
+      return y < 80 || y + window.innerHeight >= h - 80 || body.classList.contains('drawer-open') || body.classList.contains('is-teaching') || fieldFocus;
+    }
+    function update() {
+      ticking = false;
+      var y = Math.max(0, window.pageYOffset || document.documentElement.scrollTop || 0), dy = y - lastY;
+      lastY = y;
+      if (mustShow(y)) { show(); down = up = 0; return; }
+      if (Date.now() < holdUntil) return;      // route changes may scroll the page themselves
+      if (dy > 0) { down += dy; up = 0; if (down > 10) hide(); }
+      else if (dy < 0) { up -= dy; down = 0; if (up > 6) show(); }
+    }
+    window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+    window.addEventListener('hashchange', function () { lastY = 0; down = up = 0; holdUntil = Date.now() + 700; show(); });
+    document.addEventListener('focusin', function (e) { if (isField(e.target)) { fieldFocus = true; show(); } else if (bar.contains(e.target)) show(); });
+    document.addEventListener('focusout', function (e) { if (isField(e.target)) fieldFocus = false; });
+    new MutationObserver(function () { if (mustShow(window.pageYOffset || 0)) show(); }).observe(body, { attributes: true, attributeFilter: ['class'] });
+  })();
+
   if ('serviceWorker' in navigator && /^https?:$/.test(location.protocol)) {
     window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });
   }

@@ -4,6 +4,16 @@
  */
 SP.changelog = [
   {
+    id: 19,
+    date: "2026-10-15",
+    title: "Auto-hiding tab bar and phone layout fixes",
+    summary: "On phones and tablets the bottom tab bar now slides away while you read down the page and returns as soon as you scroll up.",
+    items: [
+      { type: "feature", text: "Auto-hiding tab bar (phones and tablets): it hides as you scroll down for more reading room and comes back on any scroll up, near the top or bottom of a page, when the menu is open, when you tap a search or form field, and when you change pages." },
+      { type: "correction", text: "Fixed pages that were wider than the screen on iPhone (Teaching mode setup, Compare drugs and the Drug database), which made them wobble sideways." }
+    ]
+  },
+  {
     id: 18,
     date: "2026-10-15",
     title: "Offline storage fix",
