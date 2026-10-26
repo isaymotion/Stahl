@@ -233,6 +233,7 @@
       case 'circuits': return renderCircuits(p[1]);
       case 'nbn': return renderNbN();
       case 'updates': return renderUpdates();
+      case 'monitoring': return p[1] ? renderMonitor(p[1]) : renderMonitoring();
       case 'bookmarks': return renderBookmarks();
       case 'print-all': return renderPrintAll();
       case 'soon': return renderSoon(p[1]);
@@ -291,7 +292,8 @@
     { key: 'circuits', href: '#/circuits', label: 'Symptoms & circuits', blurb: 'Symptom → malfunctioning circuit → targeted mechanism.', css: 'clin' },
     { key: 'nbn', href: '#/nbn', label: 'Nomenclature (NbN)', blurb: 'Traditional class names mapped to mechanism-based names.', css: 'hy' },
     { key: 'glossary', href: '#/glossary', label: 'Glossary', blurb: 'Terms defined in the chapters, tap-to-define everywhere.', css: 'gloss' },
-    { key: 'updates', href: '#/updates', label: 'Post-publication updates', blurb: 'Every labeled update box: what changed after the 2021 edition.', css: 'upd' }
+    { key: 'updates', href: '#/updates', label: 'Post-publication updates', blurb: 'Every labeled update box: what changed after the 2021 edition.', css: 'upd' },
+    { key: 'monitoring', href: '#/monitoring', label: 'Monitoring checklists', blurb: 'What to check, when, and why — lithium, valproate, clozapine, antipsychotics.', css: 'upd' }
   ];
   function navIcon(name) {
     var p = {
@@ -513,8 +515,8 @@
 
   /* ---------- library hub ---------- */
   function renderLibrary() {
-    var counts = { drugs: (SP.drugs || []).length, nt: (SP.nts || []).length, targets: (SP.targets || []).length, circuits: (SP.circuits || []).length, glossary: (SP.glossary || []).length, updates: collectUpdates().length, nbn: (SP.drugs || []).filter(function (d) { return d.nbn; }).length, compare: (SP.drugs || []).length };
-    var unit = { drugs: 'agent', nt: 'messenger', targets: 'target', circuits: 'symptom map', glossary: 'term', updates: 'update', nbn: 'mapped agent', compare: 'agent' };
+    var counts = { drugs: (SP.drugs || []).length, nt: (SP.nts || []).length, targets: (SP.targets || []).length, circuits: (SP.circuits || []).length, glossary: (SP.glossary || []).length, updates: collectUpdates().length, nbn: (SP.drugs || []).filter(function (d) { return d.nbn; }).length, compare: (SP.drugs || []).length, monitoring: (SP.monitoring || []).length };
+    var unit = { drugs: 'agent', nt: 'messenger', targets: 'target', circuits: 'symptom map', glossary: 'term', updates: 'update', nbn: 'mapped agent', compare: 'agent', monitoring: 'checklist' };
     var html = '<div class="wrap page"><header class="page__head"><h1>Reference library</h1><p>Cross-linked databases built from all 13 chapters. Every entry cites the chapter and book pages it comes from; anything from outside the book is boxed as a post-publication update.</p></header>' +
       '<div class="tools tools--lib">' + LIBRARY.map(function (l) {
         return '<a class="tool tool--lib c-' + l.css + '" href="' + l.href + '"><span class="tool__name">' + esc(l.label) + '</span><span class="tool__meta">' + esc(l.blurb) + '</span><span class="tool__ch">' + plural(counts[l.key] || 0, unit[l.key]) + (l.key === 'compare' ? ' to compare' : '') + '</span></a>';
@@ -2341,7 +2343,7 @@
     var se = (d.sideEffects || []).map(function (x) { return '<tr><th scope="row">' + fmt(x.e) + '</th><td>' + fmt(x.via || '') + '</td></tr>'; }).join('');
     var html = '<div class="wrap page lib-page c-drug">' +
       libHead('#/drugs', 'Drugs', esc(d.name) + (d.brand ? ' <span class="lib-head__brand">' + esc(d.brand) + '</span>' : ''), null,
-        bookmarkBtn('d:' + d.id, '#/drugs/' + d.id, d.name, 'Drug') + '<a class="btn btn--small" href="#/compare/' + d.id + '">Compare</a>') +
+        bookmarkBtn('d:' + d.id, '#/drugs/' + d.id, d.name, 'Drug') + '<a class="btn btn--small" href="#/compare/' + d.id + '">Compare</a>' + monButtons(d)) +
       '<div class="lib-grid"><div class="lib-main">' +
         '<dl class="kv">' + (d.cls ? '<dt>Class</dt><dd>' + fmt(d.cls) + '</dd>' : '') + (d.nbn ? '<dt>Mechanism-based name</dt><dd>' + fmt(d.nbn) + '</dd>' : '') + (d.aka && d.aka.length ? '<dt>Also known as</dt><dd>' + esc(d.aka.join(', ')) + '</dd>' : '') + '</dl>' +
         (d.mechanism ? '<section class="lib-sec"><h2>Mechanism of action</h2><p>' + fmt(d.mechanism) + '</p></section>' : '') +
@@ -2357,6 +2359,10 @@
     bindBookmarks(main);
     linkTerms(main.querySelector('.lib-main'));
     document.title = d.name + ' — ' + APP;
+  }
+  function monButtons(d) {
+    var ms = monFor(d);
+    return ms.map(function (e) { return '<a class="btn btn--small btn--mon" href="#/monitoring/' + encodeURIComponent(e.id) + '">' + (ms.length > 1 ? 'Monitoring: ' + esc(e.name) : 'Monitoring') + '</a>'; }).join('');
   }
   function relatedDrugsHTML(d) {
     var same = (SP.drugs || []).filter(function (x) { return x.id !== d.id && x.group && x.group === d.group; }).slice(0, 10);
@@ -2614,6 +2620,146 @@
     document.title = 'Post-publication updates — ' + APP;
   }
 
+  /* ---------- monitoring checklists ----------
+     Two layers, kept visibly apart: what the book says (with pages) and the standard schedule
+     (baseline, early, ongoing, act on), which comes from product labeling and consensus guidelines,
+     not from the book. Tick boxes are a self-check only: kept in the page, never saved. */
+  var MON_SCHED_KEY = 'monSchedules';
+  function monList() { return SP.monitoring || []; }
+  function monDrugs(e) {
+    var seen = {}, out = [];
+    function add(d) { if (d && !seen[d.id]) { seen[d.id] = 1; out.push(d); } }
+    (e.drugs || []).forEach(function (id) { add(byId(SP.drugs, id)); });
+    if (e.groups && e.groups.length) (SP.drugs || []).forEach(function (d) { if (d.group && e.groups.indexOf(d.group) > -1) add(d); });
+    return out;
+  }
+  function monFor(d) {
+    return monList().filter(function (e) {
+      return (e.drugs || []).indexOf(d.id) > -1 || (e.scope === 'class' && d.group && (e.groups || []).indexOf(d.group) > -1);
+    }).sort(function (a, b) { return (a.scope === 'class') - (b.scope === 'class'); });
+  }
+  function monPages(pages) { return pages ? (String(pages).match(/[–-]/) ? 'pp. ' : 'p. ') + pages : ''; }
+  function monChip(r) {
+    if (!r || !r.ch) return '';
+    var m = planned(r.ch);
+    var label = (m ? 'Ch ' + m.number : r.ch) + (r.pages ? ' · ' + monPages(r.pages) : '');
+    return m && m.ready ? '<a class="ref-chip" href="#/c/' + m.id + '/guide">' + esc(label) + '</a>' : '<span class="ref-chip">' + esc(label) + '</span>';
+  }
+  function monRef(r) { var m = r && planned(r.ch); return r ? '(' + (m ? 'Ch ' + m.number : r.ch) + (r.pages ? ', ' + monPages(r.pages) : '') + ')' : ''; }
+  function monCell(v) {
+    var s = String(v == null ? '' : v).trim();
+    if (!s) return '<span class="muted">—</span>';
+    if (s === 'Yes') return '<span class="mon-yes">Yes</span>';
+    if (s === 'No') return '<span class="mon-no">No</span>';
+    return fmt(s);
+  }
+  function monLayers() {
+    return '<div class="mon-layers">' +
+      '<div class="mon-layer mon-layer--book"><p class="mon-layer__tag">From the book</p><p>What Stahl says about why each check matters, with the chapter and book pages. Tap a page chip to open that chapter’s study guide.</p></div>' +
+      '<div class="mon-layer mon-layer--sched"><p class="mon-layer__tag">Standard schedule</p><p><b>Not from the book.</b> Baseline, early, ongoing and act-on columns summarize product labeling and published consensus guidelines, with the source named on each row. Confirm against your hospital’s protocol.</p></div>' +
+      '</div>';
+  }
+  function renderMonitoring() {
+    var list = monList();
+    var html = '<div class="wrap page mon c-upd">' + libHead(null, null, 'Monitoring checklists', 'What to check, when, and why, for the drugs that need laboratory or clinical monitoring.') +
+      monLayers() +
+      (list.length ? '<div class="mon-tools-row"><button class="btn btn--small" type="button" id="mon-print-all">Print all checklists (PDF)</button><p class="handout-fit" id="mon-msg" aria-live="polite"></p></div>' +
+        '<ul class="mon-cards">' + list.map(function (e) {
+          var ds = monDrugs(e);
+          return '<li class="mon-card"><h2><a href="#/monitoring/' + encodeURIComponent(e.id) + '">' + esc(e.name) + '</a></h2>' +
+            '<p class="mon-card__meta">' + plural((e.rows || []).length, 'item') + ' · ' + (e.scope === 'class' ? 'drug class' : 'single drug') + ((e.bookWhy || []).length ? ' · book pages cited' : '') + '</p>' +
+            (ds.length ? '<p class="mon-card__drugs"><span class="mon-card__lbl">Covers</span> ' + ds.map(function (d) { return '<a href="#/drugs/' + d.id + '">' + esc(d.name) + '</a>'; }).join(', ') + '</p>' : '') +
+            '<a class="btn btn--small mon-card__go" href="#/monitoring/' + encodeURIComponent(e.id) + '">Open checklist</a></li>';
+        }).join('') + '</ul>' +
+        '<p class="mon-caution">Schedules are a study aid summarizing published recommendations; follow your hospital’s protocol and current product labeling.</p>'
+        : emptyLib('monitoring checklists', 'Checklists are being written.')) + '</div>';
+    setView('monitoring', html);
+    document.title = 'Monitoring checklists — ' + APP;
+    var pa = main.querySelector('#mon-print-all');
+    if (pa) pa.addEventListener('click', function () { monPrint(list, store.get(MON_SCHED_KEY, true), pa, main.querySelector('#mon-msg'), 'Stahl-monitoring-checklists.pdf'); });
+  }
+  function renderMonitor(id) {
+    var e = byId(monList(), id);
+    if (!e) return renderMissing();
+    var sched = store.get(MON_SCHED_KEY, true) !== false;
+    var ds = monDrugs(e);
+    var rows = (e.rows || []).map(function (r, i) {
+      var b = r.book;
+      return '<tr>' +
+        '<td class="mon-chk"><input type="checkbox" id="mon-c-' + i + '" aria-label="Checked: ' + esc(plain(r.param)) + '"></td>' +
+        '<th scope="row" class="mon-param"><label for="mon-c-' + i + '">' + fmt(r.param) + '</label></th>' +
+        '<td class="mon-book" data-label="Why (from the book)">' + (b ? fmt(b.text) + ' ' + monChip(b) : '<span class="muted">Not covered in the book.</span>') + '</td>' +
+        '<td class="mon-s mon-s--first" data-label="Baseline">' + monCell(r.baseline) + '</td>' +
+        '<td class="mon-s" data-label="Early">' + monCell(r.early) + '</td>' +
+        '<td class="mon-s" data-label="Ongoing">' + monCell(r.ongoing) + (r.source ? '<span class="mon-src">' + esc(r.source) + '</span>' : '') + '</td>' +
+        '<td class="mon-s mon-s--last" data-label="Act on">' + monCell(r.act) + '</td></tr>';
+    }).join('');
+    var html = '<div class="wrap page mon c-upd">' +
+      libHead('#/monitoring', 'Monitoring checklists', esc(e.name) + ' <span class="lib-head__brand">monitoring</span>', null, '<button class="btn btn--small" type="button" id="mon-print">Print checklist</button>') +
+      (e.intro ? '<p class="lib-lede">' + fmt(e.intro) + '</p>' : '') +
+      (ds.length ? '<p class="mon-card__drugs mon-applies"><span class="mon-card__lbl">Applies to</span> ' + ds.map(function (d) { return '<a href="#/drugs/' + d.id + '">' + esc(d.name) + '</a>'; }).join(', ') + '</p>' : '') +
+      ((e.bookWhy || []).length ? '<section class="lib-sec mon-why"><h2>Why (from the book)</h2><ul>' + e.bookWhy.map(function (w) { return '<li>' + fmt(w.text) + ' ' + monChip(w) + '</li>'; }).join('') + '</ul></section>' : '') +
+      '<section class="lib-sec"><h2>Checklist</h2>' +
+      '<div class="hy-tools mon-tools"><label class="switch"><input type="checkbox" id="mon-sched"' + (sched ? ' checked' : '') + '> Show standard schedules</label>' +
+        '<p class="mon-note">Self-check only; nothing is saved. Not a patient record.</p><p class="handout-fit" id="mon-msg" aria-live="polite"></p></div>' +
+      '<div class="mon-key" aria-hidden="true"><span class="mon-key__book">From the book (with pages)</span><span class="mon-key__sched">Standard schedule: not from the book</span></div>' +
+      '<div class="table-wrap mon-wrap"><table class="mon-table mon-sched' + (sched ? '' : ' is-book-only') + '">' +
+        '<caption class="sr-only">' + esc(e.name) + ' monitoring checklist. The Baseline, Early, Ongoing and Act on columns are standard schedules from product labeling and consensus guidelines, not from the book.</caption>' +
+        '<thead><tr class="mon-legend"><th colspan="3" scope="colgroup" class="mon-legend__book">From the book</th><th colspan="4" scope="colgroup" class="mon-s mon-legend__sched">Standard schedule, not from the book (source under Ongoing)</th></tr>' +
+        '<tr><th scope="col" class="mon-chk"><span class="sr-only">Checked</span></th><th scope="col">Parameter</th><th scope="col">Why (book, pages)</th><th scope="col" class="mon-s mon-s--first">Baseline</th><th scope="col" class="mon-s">Early</th><th scope="col" class="mon-s">Ongoing</th><th scope="col" class="mon-s mon-s--last">Act on</th></tr></thead>' +
+        '<tbody>' + rows + '</tbody></table></div></section>' +
+      ((e.sources || []).length ? '<section class="lib-sec mon-sources"><h2>Sources for the schedules</h2><ul>' + e.sources.map(function (s) { return '<li><b>' + esc(s.label) + '</b>' + (s.detail ? ': ' + fmt(s.detail) : '') + '</li>'; }).join('') + '</ul></section>' : '') +
+      (e.reviewNote ? '<p class="mon-review muted">' + fmt(e.reviewNote) + '</p>' : '') +
+      '<p class="mon-caution">Schedules are a study aid summarizing published recommendations; follow your hospital’s protocol and current product labeling.</p>' +
+      '</div>';
+    setView('monitoring:' + id, html);
+    document.title = e.name + ' monitoring — ' + APP;
+    linkTerms(main.querySelector('.lib-lede') || main);
+    var tbl = main.querySelector('.mon-table'), tg = main.querySelector('#mon-sched');
+    tg.addEventListener('change', function () { store.set(MON_SCHED_KEY, tg.checked); tbl.classList.toggle('is-book-only', !tg.checked); main.querySelector('.mon-key').classList.toggle('is-book-only', !tg.checked); });
+    if (!sched) main.querySelector('.mon-key').classList.add('is-book-only');
+    var pb = main.querySelector('#mon-print');
+    pb.addEventListener('click', function () { monPrint([e], tg.checked, pb, main.querySelector('#mon-msg'), 'Stahl-monitoring-' + e.id + '.pdf'); });
+  }
+  /* Printable version: the app's PDF generator, one checklist per page (A4), with tick boxes. */
+  function monPdfSpec(list, sched) {
+    return {
+      paper: 'a4', footer: ATTRIBUTION, title: list.length === 1 ? list[0].name + ' monitoring checklist' : 'Monitoring checklists', maxPages: list.length, maxPt: 9.5, minPt: 6.5,
+      chapters: list.map(function (e) {
+        var topics = [];
+        var about = [];
+        if (e.intro) about.push(richText(e.intro));
+        about.push(sched ? '**From the book** items cite chapter and pages. **Baseline, Early, Ongoing, Act on** are standard schedules from product labeling and consensus guidelines, *not from the book*; confirm against your hospital’s protocol.' : 'Book layer only (standard schedules hidden).');
+        about.push('Self-check study aid. Not a patient record.');
+        topics.push({ topic: 'About this checklist', items: about });
+        if ((e.bookWhy || []).length) topics.push({ topic: 'Why (from the book)', items: e.bookWhy.map(function (w) { return richText(w.text) + ' ' + monRef(w); }) });
+        (e.rows || []).forEach(function (r) {
+          var items = [r.book ? '**Book** ' + monRef(r.book) + ': ' + richText(r.book.text) : '**Book:** not covered in the book.'];
+          if (sched) {
+            items.push('**Baseline:** ' + richText(r.baseline || '—'));
+            items.push('**Early:** ' + richText(r.early || '—'));
+            items.push('**Ongoing:** ' + richText(r.ongoing || '—'));
+            items.push('**Act on:** ' + richText(r.act || '—'));
+            if (r.source) items.push('*Schedule source: ' + plain(r.source) + '*');
+          }
+          topics.push({ topic: plain(r.param), box: true, items: items });
+        });
+        var src = (e.sources || []).map(function (s) { return '**' + plain(s.label) + '**' + (s.detail ? ': ' + richText(s.detail) : ''); });
+        src.push('Schedules are a study aid summarizing published recommendations; follow your hospital’s protocol and current product labeling.');
+        topics.push({ topic: 'Sources', items: src });
+        return { kicker: 'Monitoring checklist', title: e.name, source: [BOOK, sched ? 'Schedules: labeling and guidelines (not from the book)' : 'Book layer only'], running: e.name + ' (monitoring checklist)', topics: topics };
+      })
+    };
+  }
+  function monPrint(list, sched, btn, msg, filename) {
+    var label = btn.textContent; btn.disabled = true; btn.textContent = 'Creating…';
+    if (msg) { msg.className = 'handout-fit'; msg.textContent = ''; }
+    loadPdf().then(function (P) {
+      return P.generate(monPdfSpec(list, sched !== false)).then(function (r) { P.save(r.blob, filename); if (msg) msg.textContent = 'PDF created (' + plural(r.pages, 'page') + '). Check your downloads or share sheet.'; });
+    }).catch(function (err) { if (msg) { msg.className = 'handout-fit is-warn'; msg.textContent = pdfErrorMsg(err); } })
+      .then(function () { btn.textContent = label; btn.disabled = false; });
+  }
+
   /* ---------- all high-yield summaries as one PDF ---------- */
   function renderPrintAll() {
     var chs = allChapters().filter(function (c) { return (c.highYield || []).length; });
@@ -2703,7 +2849,8 @@
     drug: { label: 'Drug', css: 'drug' },
     nt: { label: 'Neurotransmitter', css: 'mech' },
     target: { label: 'Target', css: 'guide' },
-    circuit: { label: 'Symptom & circuit', css: 'clin' }
+    circuit: { label: 'Symptom & circuit', css: 'clin' },
+    monitoring: { label: 'Monitoring', css: 'upd' }
   };
   function buildIndex() {
     INDEX = [];
@@ -2734,6 +2881,7 @@
     (SP.nts || []).forEach(function (n) { INDEX.push({ ch: null, kind: 'nt', title: n.name + (n.abbr ? ' (' + n.abbr + ')' : ''), text: plain([n.summary, n.family, (n.facts || []).map(function (f) { return f.text; }).join(' ')].join(' ')), href: '#/nt/' + n.id }); });
     (SP.targets || []).forEach(function (t) { INDEX.push({ ch: null, kind: 'target', title: t.name, text: plain([t.family, t.summary, (t.facts || []).map(function (f) { return f.text; }).join(' ')].join(' ')), href: '#/targets/' + t.id }); });
     (SP.circuits || []).forEach(function (c) { INDEX.push({ ch: null, kind: 'circuit', title: c.symptom + ' (' + c.disorder + ')', text: plain([c.circuit, (c.nts || []).join(' '), (c.treat || []).join(' ')].join(' ')), href: '#/circuits/' + c.id }); });
+    (SP.monitoring || []).forEach(function (m) { INDEX.push({ ch: null, kind: 'monitoring', title: m.name + ' monitoring', text: plain([m.intro || '', (m.rows || []).map(function (r) { return r.param; }).join(', '), (m.bookWhy || []).map(function (w) { return w.text; }).join(' ')].join(' ')), href: '#/monitoring/' + m.id }); });
     INDEX.forEach(function (e) { e.lc = e.text.toLowerCase(); e.lt = e.title.toLowerCase(); });
   }
   function terms(q) { return q.toLowerCase().replace(/[^\p{L}\p{N}\-\s.]/gu, ' ').split(/\s+/).filter(function (t) { return t.length > 0; }); }
@@ -2777,7 +2925,7 @@
     while ((m = re.exec(s))) { outp += esc(s.slice(last, m.index)) + '<mark>' + esc(m[0]) + '</mark>'; last = m.index + m[0].length; if (m[0].length === 0) re.lastIndex++; }
     return outp + esc(s.slice(last));
   }
-  function kindGroup(k) { return k === 'guide' ? 'guide' : k === 'hy' ? 'hy' : k === 'glossary' ? 'glossary' : (k === 'drug' || k === 'nt' || k === 'target' || k === 'circuit') ? 'library' : 'cards'; }
+  function kindGroup(k) { return k === 'guide' ? 'guide' : k === 'hy' ? 'hy' : k === 'glossary' ? 'glossary' : (k === 'drug' || k === 'nt' || k === 'target' || k === 'circuit' || k === 'monitoring') ? 'library' : 'cards'; }
   function whereLabel(e, short) { return e.ch ? (short ? 'Ch ' : 'Chapter ') + e.ch.number : (e.src ? 'From ' + e.src : (e.kind === 'glossary' ? 'Glossary' : 'Library')); }
 
   function renderSearch(q) {

@@ -1590,3 +1590,79 @@ a.ref-chip:hover { background: color-mix(in srgb, var(--m-clin) 12%, transparent
   .lib-tools .select select, .cmp-pick .select select { width: 100%; max-width: 100%; min-width: 0; text-overflow: ellipsis; }
   .tb-row__fam, .tb-row__fam select { min-width: 0; max-width: 100%; width: 100%; }
 }
+
+/* ---------- monitoring checklists ---------- */
+.mon-layers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin: 0 0 22px; }
+.mon-layer { border-radius: var(--r-md); padding: 14px 18px; background: var(--surface); border: 1px solid var(--rule); }
+.mon-layer p { margin: 0; font-size: .95rem; line-height: 1.55; color: var(--ink-2); }
+.mon-layer p b { color: var(--ink); }
+.mon-layer .mon-layer__tag { margin: 0 0 6px; font: 800 .72rem/1 var(--sans); letter-spacing: .08em; text-transform: uppercase; color: var(--m-clin); }
+.mon-layer--book { border-left: 4px solid var(--m-clin); }
+.mon-layer--sched { background: var(--upd-bg); border: 1.5px dashed color-mix(in srgb, var(--m-upd) 70%, transparent); }
+.mon-layer--sched .mon-layer__tag { color: var(--m-upd); }
+.mon-tools-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 0 0 14px; }
+.mon-cards { list-style: none; padding: 0; margin: 0 0 22px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; }
+.mon-card { display: flex; flex-direction: column; gap: 8px; background: var(--surface); border: 1px solid var(--rule); border-top: 4px solid var(--m-upd); border-radius: var(--r-md); padding: 14px 18px 16px; min-width: 0; }
+.mon-card h2 { margin: 0; font: 700 1.15rem/1.3 var(--sans); }
+.mon-card h2 a { text-decoration: none; color: var(--ink); }
+.mon-card h2 a:hover { text-decoration: underline; }
+.mon-card__meta { margin: 0; font: 600 .8rem/1.3 var(--sans); color: var(--ink-3); }
+.mon-card__drugs { margin: 0; font-size: .9rem; line-height: 1.6; overflow-wrap: anywhere; }
+.mon-card__lbl { font: 700 .7rem/1 var(--sans); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); margin-right: 4px; }
+.mon-card__go { align-self: flex-start; margin-top: auto; }
+.mon-applies { margin: -6px 0 20px; }
+.mon-why ul { list-style: disc; }
+.mon-why .ref-chip { margin-left: 4px; }
+.mon-tools { margin-bottom: 12px; }
+.mon-tools .mon-note { font: 500 .86rem/1.4 var(--sans); color: var(--ink-3); }
+.mon-tools .handout-fit:empty { display: none; }
+.mon-key { display: flex; flex-wrap: wrap; gap: 8px 16px; margin: 0 0 8px; font: 600 .78rem/1.3 var(--sans); color: var(--ink-3); }
+.mon-key span { display: inline-flex; align-items: center; gap: 7px; }
+.mon-key span::before { content: ""; width: 16px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+.mon-key__book::before { background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--m-clin); }
+.mon-key__sched::before { background: var(--upd-bg); border: 1.5px dashed color-mix(in srgb, var(--m-upd) 70%, transparent); }
+.mon-key.is-book-only .mon-key__sched { display: none; }
+.mon-table { font-size: .88rem; }
+.mon-table .mon-chk { width: 36px; padding-right: 0; text-align: center; }
+.mon-table .mon-chk input { width: 18px; height: 18px; margin: 2px 0 0; accent-color: var(--m-clin); cursor: pointer; }
+.mon-table .mon-param { min-width: 130px; }
+.mon-table .mon-param label { cursor: pointer; }
+.mon-table .mon-book { min-width: 220px; }
+.mon-table .mon-book .ref-chip { margin-left: 2px; }
+.mon-table td.mon-s, .mon-table th.mon-s { background: var(--upd-bg); min-width: 110px; }
+.mon-sched .mon-s--first { border-left: 1.5px dashed color-mix(in srgb, var(--m-upd) 70%, transparent); }
+.mon-table thead th { white-space: normal; vertical-align: bottom; }
+.mon-table thead th.mon-s { background: color-mix(in srgb, var(--m-upd) 16%, var(--upd-bg)); }
+.mon-legend th { font: 800 .7rem/1.3 var(--sans); letter-spacing: .07em; text-transform: uppercase; padding-top: 8px; padding-bottom: 6px; }
+.mon-legend .mon-legend__book { color: var(--m-clin); background: var(--tint); }
+.mon-table .mon-legend .mon-legend__sched { color: var(--m-upd); background: var(--upd-bg); border-left: 1.5px dashed color-mix(in srgb, var(--m-upd) 70%, transparent); border-top: 1.5px dashed color-mix(in srgb, var(--m-upd) 70%, transparent); }
+.mon-table tbody tr:has(.mon-chk input:checked) .mon-param { text-decoration: line-through; text-decoration-color: color-mix(in srgb, var(--ink) 45%, transparent); color: var(--ink-2); }
+.mon-yes { font-weight: 700; color: var(--good); }
+.mon-no { font-weight: 600; color: var(--ink-3); }
+.mon-src { display: block; margin-top: 6px; font: 500 .74rem/1.35 var(--sans); color: var(--ink-3); }
+.mon-table.is-book-only .mon-s { display: none; }
+.mon-sources li { font-size: .95rem; }
+.mon-review { font-size: .86rem; margin: 0 0 10px; }
+.mon-caution { margin: 18px 0 0; padding: 10px 14px; border-left: 3px solid var(--m-upd); background: var(--upd-bg); border-radius: 0 var(--r-md) var(--r-md) 0; font: 600 .88rem/1.5 var(--sans); color: var(--ink-2); }
+.btn--mon { border-color: color-mix(in srgb, var(--m-upd) 60%, var(--rule)); }
+
+@media (max-width: 900px) {
+  .mon-wrap { overflow: visible; border: 0; background: none; }
+  .mon-table, .mon-table tbody { display: block; }
+  .mon-table thead { display: none; }
+  .mon-table tr { display: grid; grid-template-columns: 30px minmax(0, 1fr); column-gap: 8px; background: var(--surface); border: 1px solid var(--rule); border-radius: var(--r-md); padding: 12px 14px; margin: 0 0 12px; }
+  .mon-table td, .mon-table th { border: 0; padding: 0; min-width: 0; }
+  .mon-table .mon-chk { width: auto; text-align: left; }
+  .mon-table .mon-param { font-size: 1.02rem; align-self: center; }
+  .mon-table td[data-label] { grid-column: 1 / -1; display: block; padding: 6px 0; }
+  .mon-table td[data-label]::before { content: attr(data-label); display: block; font: 700 .7rem/1.4 var(--sans); text-transform: uppercase; letter-spacing: .05em; color: var(--ink-3); }
+  .mon-table .mon-book { margin-top: 6px; }
+  .mon-table td.mon-s { padding: 6px 12px; border-left: 1.5px dashed color-mix(in srgb, var(--m-upd) 70%, transparent); border-right: 1.5px dashed color-mix(in srgb, var(--m-upd) 70%, transparent); }
+  .mon-table td.mon-s--first { margin-top: 8px; padding-top: 10px; border-top: 1.5px dashed color-mix(in srgb, var(--m-upd) 70%, transparent); border-radius: var(--r-md) var(--r-md) 0 0; }
+  .mon-table td.mon-s--first::before { content: "Standard schedule · not from the book\A Baseline"; white-space: pre-line; }
+  .mon-table td.mon-s--first::first-line { color: var(--m-upd); }
+  .mon-table td.mon-s--last { padding-bottom: 10px; border-bottom: 1.5px dashed color-mix(in srgb, var(--m-upd) 70%, transparent); border-radius: 0 0 var(--r-md) var(--r-md); }
+}
+@media (max-width: 640px) {
+  .mon-layers { grid-template-columns: minmax(0, 1fr); }
+}

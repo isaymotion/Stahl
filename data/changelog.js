@@ -4,6 +4,18 @@
  */
 SP.changelog = [
   {
+    id: 20,
+    date: "2026-10-26",
+    title: "Monitoring checklists",
+    summary: "A new library page of monitoring checklists: what to check, when, and why, for lithium, valproate, clozapine and the antipsychotics.",
+    items: [
+      { type: "feature", text: "Monitoring checklists: one checklist per drug or drug class, with a tick box, the parameter, why it matters, and when to check it (baseline, early, ongoing) and what to act on. Tick boxes are a self-check only; nothing is saved.", href: "#/monitoring", link: "Monitoring checklists" },
+      { type: "feature", text: "Two clearly separated layers: **From the book** (what Stahl says, with chapter and page chips that open the study guide) and **Standard schedule** (dashed boxes; not from the book, summarized from product labeling and published consensus guidelines, with the source named on each row). Switch *Show standard schedules* off to see the book layer alone." },
+      { type: "feature", text: "Drug pages now have a **Monitoring** button when a checklist covers that drug or its class, and checklists appear in search." },
+      { type: "feature", text: "Print checklist: creates an A4 PDF with tick boxes, one checklist per page; the overview page can print all checklists at once." }
+    ]
+  },
+  {
     id: 19,
     date: "2026-10-15",
     title: "Auto-hiding tab bar and phone layout fixes",

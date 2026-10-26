@@ -114,13 +114,23 @@
       ch.idx = ci;
       newPage(ch, true);
       ch.topics.forEach(function (tp) {
-        var hSize = size * 1.06, hH = hSize * 1.25 + 4;
+        var hSize = size * 1.06, boxW = tp.box ? hSize * 1.27 : 0;
+        // long headings wrap within the column (one line, as before, for short ones)
+        var hl = wrap2(tp.topic, 'h', hSize, colW - boxW), hLead = hSize * 1.15, hExtra = (hl.length - 1) * hLead;
+        var hH = hSize * 1.25 + 4 + hExtra;
         var itemLines = tp.items.map(function (it) { return wrap(it, size, colW - indent); });
         var first = itemLines[0] ? itemLines[0].length * bodyLH : 0;
         if (!room(hH + Math.min(first, bodyLH * 2) + 2)) advance(ch);
         // heading
-        page.ops.push({ k: 't', f: 'h', s: hSize, x: colX(), y: y + hSize, c: COL.green, str: clean(tp.topic) });
-        page.ops.push({ k: 'r', x: colX(), y: y + hSize + 2.6, w: colW, h: 0.6, c: COL.amber });
+        var hx = colX();
+        if (tp.box) {
+          // an empty tick box before the heading (checklists): four thin rules
+          var bs = hSize * 0.82, bx = hx, byy = y + hSize * 0.2, t = 0.6;
+          [[bx, byy, bs, t], [bx, byy + bs - t, bs, t], [bx, byy, t, bs], [bx + bs - t, byy, t, bs]].forEach(function (r) { page.ops.push({ k: 'r', x: r[0], y: r[1], w: r[2], h: r[3], c: COL.ink }); });
+          hx += boxW;
+        }
+        hl.forEach(function (ln, li) { page.ops.push({ k: 't', f: 'h', s: hSize, x: hx, y: y + hSize + li * hLead, c: COL.green, str: ln }); });
+        page.ops.push({ k: 'r', x: colX(), y: y + hSize + hExtra + 2.6, w: colW, h: 0.6, c: COL.amber });
         y += hH + 1;
         itemLines.forEach(function (lines, ii) {
           var h = lines.length * bodyLH + size * 0.2;

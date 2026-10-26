@@ -21,6 +21,7 @@ A chapter-by-chapter study app for psychiatry residents, built from *Stahl's Ess
   - **Neurotransmitters**: synthesis, termination, receptors, pathways, roles, and every chapter's facts with page numbers.
   - **Receptors and targets**: receptors, transporters, enzymes and ion channels, with a **side-effect mapper** (what stimulating or blocking each target does) and the drugs that act there.
   - **Compare drugs** (two or three side by side), **Symptoms and circuits** (Stahl's symptom-based approach), **Nomenclature (NbN)**, **Glossary** (tap any dotted term anywhere), and **Post-publication updates**.
+  - **Monitoring checklists**: what to check, when, and why for lithium, valproate, clozapine and the antipsychotics. Two labeled layers: *From the book* (with page references) and *Standard schedule* (baseline, early, ongoing, act on; not from the book, from product labeling and consensus guidelines, with the source on each row). Self-check tick boxes (not saved), a book-only toggle, a Monitoring button on matching drug pages, and an A4 PDF with one checklist per page.
 - **Post-publication updates**: the book is from 2021. Anything newer appears only in clearly labeled update boxes, never mixed into the book-based content.
 - **For educators**: teaching mode (full-screen questions or vignettes for group sessions), printable summaries, print-all high yield, and a *What's new* page.
 - Dark theme by default, with a light theme on the theme button.
@@ -52,6 +53,7 @@ data/chNN/              Chapter content
   cards-cases.js        Board questions
   glossary.js           Terms defined in the chapter
 data/db/                Reference library: drugs.js, neurotransmitters.js, targets.js, circuits.js
+  monitoring.js         Monitoring checklists (book layer with pages + standard schedule layer with sources)
 data/changelog.js       What's new entries
 icons/                  App icons
 manifest.webmanifest    Install metadata
