@@ -1,0 +1,37 @@
+import os
+BASE=os.environ.get('STAHL_BASE','http://localhost:8766').rstrip('/')
+OUT=os.environ.get('OUT','out'); os.makedirs(OUT, exist_ok=True)
+import asyncio
+from playwright.async_api import async_playwright
+async def main():
+    async with async_playwright() as p:
+        b = await p.chromium.launch(); pg = await b.new_page(viewport={'width':1280,'height':800}, accept_downloads=True)
+        pg.on('pageerror', lambda e: print('PAGEERR', e))
+        await pg.goto(BASE+"/#/teach"); await pg.wait_for_timeout(1200)
+        await pg.locator('[data-preset=drug]').click(); await pg.locator('[data-ch=all]').click()
+        await pg.select_option('#tb-fam', 'ssri-snri'); await pg.wait_for_timeout(300)
+        await pg.evaluate("document.querySelector('input[name=teams][value=\"1\"]').click()"); await pg.wait_for_timeout(200)
+        print(await pg.locator('#t-count').inner_text()); print((await pg.locator('#t-list').inner_text())[:200])
+        await pg.screenshot(path=OUT+'/t2_setup.png', full_page=True)
+        await pg.locator('#t-start').click(); await pg.wait_for_timeout(600)
+        await pg.screenshot(path=OUT+'/t2_drug1.png')
+        for i in range(3): await pg.keyboard.press('Space'); await pg.wait_for_timeout(250)
+        await pg.screenshot(path=OUT+'/t2_drug4.png')
+        await pg.keyboard.press('Space'); await pg.wait_for_timeout(300); await pg.keyboard.press('1'); await pg.wait_for_timeout(200)
+        await pg.screenshot(path=OUT+'/t2_drugans.png')
+        # next ones: award B, nobody, flag
+        await pg.keyboard.press('ArrowRight'); await pg.locator('#t-all').click(); await pg.keyboard.press('0'); await pg.keyboard.press('r')
+        await pg.keyboard.press('ArrowRight'); await pg.locator('#t-all').click(); await pg.keyboard.press('2')
+        await pg.keyboard.press('+'); await pg.wait_for_timeout(200)
+        await pg.screenshot(path=OUT+'/t2_big.png')
+        await pg.keyboard.press('+'); await pg.keyboard.press('+')
+        n = await pg.evaluate("JSON.parse(localStorage.getItem(Object.keys(localStorage).find(k=>k.endsWith('teach')))).order.length")
+        for i in range(n): await pg.keyboard.press('ArrowRight'); await pg.wait_for_timeout(40)
+        await pg.wait_for_timeout(300)
+        await pg.screenshot(path=OUT+'/t2_end.png')
+        async with pg.expect_download() as d: await pg.locator('#t-pdf').click()
+        await (await d.value).save_as(OUT+'/review.pdf')
+        await pg.locator('#t-again').click(); await pg.wait_for_timeout(300)
+        print('again:', await pg.locator('.teach__pos').inner_text())
+        await b.close()
+asyncio.run(main())
