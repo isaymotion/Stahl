@@ -3038,6 +3038,37 @@
   });
   labelTheme();
 
+  /* ---------- text size ---------- */
+  var TEXT_SIZES = [['90', 'Smaller'], ['100', 'Default'], ['112.5', 'Larger'], ['125', 'Largest']];
+  function applyTextSize(v) {
+    var ok = TEXT_SIZES.some(function (t) { return t[0] === v; });
+    document.documentElement.style.fontSize = ok && v !== '100' ? v + '%' : '';
+    setTopVar();
+  }
+  (function () {
+    var btn = document.getElementById('textSizeBtn');
+    if (!btn) return;
+    var panel = document.createElement('div');
+    panel.className = 'text-size-panel'; panel.id = 'textSizePanel'; panel.hidden = true;
+    panel.setAttribute('role', 'dialog'); panel.setAttribute('aria-label', 'Text size');
+    document.body.appendChild(panel);
+    function build() {
+      var cur = String(store.get('textSize', '100'));
+      panel.innerHTML = '<p class="text-size-panel__title">Text size</p><div class="seg">' + TEXT_SIZES.map(function (t, i) {
+        return '<label><input type="radio" name="textSize" value="' + t[0] + '"' + (cur === t[0] ? ' checked' : '') + '><span style="font-size:' + (0.82 + i * 0.1).toFixed(2) + 'rem">' + t[1] + '</span></label>';
+      }).join('') + '</div>';
+    }
+    function open() { build(); panel.hidden = false; btn.setAttribute('aria-expanded', 'true'); var f = panel.querySelector('input:checked'); if (f) f.focus(); }
+    function close() { if (panel.hidden) return; panel.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+    btn.addEventListener('click', function (e) { e.stopPropagation(); if (panel.hidden) open(); else close(); });
+    panel.addEventListener('change', function (e) {
+      if (e.target.name === 'textSize') { store.set('textSize', e.target.value); applyTextSize(e.target.value); }
+    });
+    document.addEventListener('click', function (e) { if (!panel.hidden && !panel.contains(e.target) && e.target !== btn && !btn.contains(e.target)) close(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) { close(); btn.focus(); } });
+    window.addEventListener('hashchange', close);
+  })();
+
   /* ---------- backup progress (footer) ----------
      Everything the app remembers lives in localStorage under PREFIX. Export writes those entries,
      unchanged, to a JSON file; import validates a file, keeps a copy of the current progress so the
