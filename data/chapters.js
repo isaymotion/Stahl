@@ -105,13 +105,13 @@ SP.manifest = [
   }
 ];
 
-/* Shared data loaded with the chapters: databases and release notes. */
+/* Shared data loaded with the chapters: databases. */
 SP.extraFiles = [
   'data/db/neurotransmitters.js',
   'data/db/targets.js',
   'data/db/drugs.js',
   'data/db/families.js',
   'data/db/circuits.js',
-  'data/db/monitoring.js',
-  'data/changelog.js'
+  'data/db/monitoring.js'
 ];
+/* Release notes (data/changelog.js) are loaded by index.html, before the app starts. */

@@ -14,7 +14,7 @@ A chapter-by-chapter study app for psychiatry residents, built from *Stahl's Ess
 ## Across the app
 
 - **Menu**: a sidebar listing every chapter (current chapter expanded to its study modes) and the reference library on wide screens; a slide-in menu plus bottom tabs (Home, Chapters, Review, Exam, Library) on phones and tablets. Every chapter page has previous/next chapter buttons and an *All chapters* menu.
-- **Back and forward buttons** in the top bar (also Alt+Left and Alt+Right) and **search** across chapters, cards, questions, library entries and glossary (press `/`).
+- **Back and forward buttons** in the top bar (also Alt+Left and Alt+Right; going back returns you to where you were on the page) and **search** across chapters, cards, questions, library entries and glossary (press `/`).
 - **Daily review**, **board-style exam** (timed or untimed, scored by topic and chapter), **mistakes**, **bookmarks**.
 - **Reference library**, cross-linked and growing with each chapter:
   - **Drugs**: mechanism, binding profile (relative strength bars), uses, side effects with the receptor behind each, pearls, chapter references.
@@ -25,9 +25,18 @@ A chapter-by-chapter study app for psychiatry residents, built from *Stahl's Ess
 - **Post-publication updates**: the book is from 2021. Anything newer appears only in clearly labeled update boxes, never mixed into the book-based content.
 - **For educators**: teaching mode (full-screen questions or vignettes for group sessions), printable summaries, print-all high yield, and a *What's new* page.
 - **Text size**: tap Aa in the top bar for smaller, larger or largest text (saved on the device).
-- Dark theme by default, with a light theme on the theme button.
+- **Theme**: the theme button cycles match device, light and dark (also on the About page, with language and text size). The app follows the phone's setting until you choose.
+- **About** page (menu > App > About): version, settings (language, theme, text size) and tips. The Tagalog interface strings are a draft.
 
 Progress (review schedule, mistakes, exams, bookmarks, settings) is saved in the browser on each device.
+
+## Versions
+
+Every release has a version `x.0.0` (22.0.0 is the design refresh of November 2026). The same number goes in three places: the newest entry of `data/changelog.js`, `version` in `data/app-meta.js`, and `VERSION` in `sw.js`. Change "Latest version <Month YYYY>" in `index.html`, `data/app-meta.js` and this README when the month changes.
+
+## Upgrading from version 21
+
+Nothing to do: progress is kept. Review schedules, mistakes, exams, bookmarks, theme and text size stay where they were (same `sp:v1:` storage), and backup files made with earlier versions still import. If you never chose a theme, the app now follows your device instead of always starting dark.
 
 ## Publish on GitHub Pages
 
@@ -55,7 +64,10 @@ data/chNN/              Chapter content
   glossary.js           Terms defined in the chapter
 data/db/                Reference library: drugs.js, neurotransmitters.js, targets.js, circuits.js
   monitoring.js         Monitoring checklists (book layer with pages + standard schedule layer with sources)
-data/changelog.js       What's new entries
+data/app-meta.js        App name, tagline, version and attribution (APP_META); Other apps list (hidden for now)
+data/strings.js         Menu and settings text in English and Tagalog (draft)
+data/hospital.js        Shared hospital and program details (same file in every app)
+data/changelog.js       What's new entries (semver versions, newest first)
 icons/                  App icons
 manifest.webmanifest    Install metadata
 sw.js                   Offline cache
@@ -66,7 +78,7 @@ sw.js                   Offline cache
 1. Create `data/chNN/` with the same seven files as `data/ch01/`.
 2. In `data/chapters.js`, set the chapter's `ready: true` and add `files: SP.CHAPTER_FILES`.
 3. Add or enrich entries in `data/db/` (each fact carries its chapter and book pages).
-4. Add an entry to the top of `data/changelog.js`, and change `VERSION` in `sw.js` so returning users get the new content.
+4. Add an entry to the top of `data/changelog.js` with the next version, and use the same version in `data/app-meta.js` and `VERSION` in `sw.js` so returning users get the new content.
 
 ### Content conventions
 
@@ -78,6 +90,6 @@ sw.js                   Offline cache
 
 ## Attribution
 
-App created by Isabella Navarro, MD. Latest version October 2026. isaymotion@gmail.com
+App created by Isabella Navarro, MD. Latest version November 2026. isaymotion@gmail.com
 
 An independent study aid built from *Stahl's Essential Psychopharmacology*, 5th edition. Not affiliated with or endorsed by the author or publisher. Study content is written in the app's own words with page references; no figures or passages from the book are reproduced. Always confirm doses and prescribing details against current product labeling.
