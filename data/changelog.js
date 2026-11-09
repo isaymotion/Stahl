@@ -9,6 +9,36 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "26.0.0",
+    "date": "2026-11-09",
+    "title": "Drug library: antidepressants and mood stabilizers in more depth",
+    "summary": "78 new pearls across 37 drugs from Chapters 6 and 7, each checked against the book.",
+    "items": [
+      {
+        "type": "content",
+        "text": "Antidepressant pearls: what sets each SSRI apart (fluoxetine's long half-life, escitalopram's tolerability and dosing versus citalopram's QTc ceiling, fluvoxamine in delusional depression), SNRIs, bupropion, mirtazapine and trazodone (including trazodone as a hypnotic), agomelatine, vilazodone and vortioxetine, and the MAOIs (interactions versus diet, MAO-A versus MAO-B).",
+        "ch": "ch07",
+        "href": "#/drugs",
+        "link": "Drug database"
+      },
+      {
+        "type": "content",
+        "text": "Mood-stabilizer pearls: lithium's place in mania combinations, valproate and carbamazepine compared (migraine versus neuropathic pain, dosing trade-offs, blood counts), lamotrigine's role and rash, oxcarbazepine and eslicarbazepine. Rapid-acting agents: ketamine, esketamine, dextromethorphan with its boosters (quinidine or bupropion), dextromethadone and allopregnanolone.",
+        "ch": "ch07"
+      },
+      {
+        "type": "correction",
+        "text": "Tianeptine: the book only lists it among tricyclics still in use (Table 7-2); the unsupported \"outside the US\" wording is removed.",
+        "href": "#/drugs/tianeptine",
+        "link": "Tianeptine"
+      },
+      {
+        "type": "content",
+        "text": "Most tricyclics, desvenlafaxine, milnacipran, levomilnacipran, nefazodone and the neurosteroid products are unchanged: Chapters 6 and 7 add nothing beyond what their entries already say."
+      }
+    ]
+  },
+  {
     "version": "25.0.0",
     "date": "2026-11-09",
     "title": "Drug library: antipsychotics and movement-disorder drugs in more depth",

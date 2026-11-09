@@ -17,7 +17,7 @@ A chapter-by-chapter study app for psychiatry residents, built from *Stahl's Ess
 - **Back and forward buttons** in the top bar (also Alt+Left and Alt+Right; going back returns you to where you were on the page) and **search** across chapters, cards, questions, library entries and glossary (press `/`).
 - **Daily review**, **board-style exam** (timed or untimed, scored by topic and chapter), **mistakes**, **bookmarks**.
 - **Reference library**, cross-linked and growing with each chapter:
-  - **Drugs**: mechanism, binding profile (relative strength bars), uses, side effects with the receptor behind each, pearls, chapter references. Antipsychotics and the movement-disorder drugs of Chapters 4–5 have full pearls (25.0.0); the other classes follow.
+  - **Drugs**: mechanism, binding profile (relative strength bars), uses, side effects with the receptor behind each, pearls, chapter references. Antipsychotics and movement-disorder drugs (Chapters 4–5, 25.0.0) and antidepressants, mood stabilizers and rapid-acting agents (Chapters 6–7, 26.0.0) have full pearls; the remaining classes follow.
   - **Neurotransmitters**: synthesis, termination, receptors, pathways, roles, and every chapter's facts with page numbers.
   - **Receptors and targets**: receptors, transporters, enzymes and ion channels, with a **side-effect mapper** (what stimulating or blocking each target does) and the drugs that act there.
   - **Compare drugs** (two or three side by side), **Symptoms and circuits** (Stahl's symptom-based approach), **Nomenclature (NbN)**, **Glossary** (tap any dotted term anywhere), and **Post-publication updates**.

@@ -258,7 +258,8 @@ SP.drugs = [
       { t: 'alpha1', action: 'antagonist' },
       { t: 'm1', action: 'antagonist', note: 'Muscarinic cholinergic receptors' },
       { t: 'vssc', action: 'blocker', note: 'Weak at therapeutic doses; lethal in overdose' }
-    ]
+    ],
+    pearls: ['The book’s example of a TCA whose **SERT inhibition is as potent as, or more potent than, its NET inhibition**']
   },
   {
     id: 'imipramine', name: 'Imipramine', brand: 'Tofranil', group: 'Tricyclic antidepressant', cls: 'Tricyclic antidepressant (TCA)',
@@ -515,7 +516,7 @@ SP.drugs = [
     nts: [],
     short: 'Listed in Table 7-2 among tricyclics still in use; pharmacology not described.',
     mechanism: 'Appears in the book’s table of tricyclics still in use; Chapter 7 does not describe its pharmacology.',
-    uses: ['Depression (outside the US)'],
+    uses: ['Depression (listed among tricyclic antidepressants still in use, **Table 7-2**)'],
     facts: [{ ch: 'ch07', pages: '335', text: 'Listed in **Table 7-2** (Coaxil; Stablon).', sec: 's7-tca' }]
   },
   {
@@ -535,7 +536,8 @@ SP.drugs = [
     ],
     short: 'Classic irreversible MAOI.',
     mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; enzyme activity returns only after new enzyme is synthesized (about 2–3 weeks). Inhibiting both raises 5HT, NE **and DA**.',
-    facts: [{ ch: 'ch08', pages: '377', text: 'MAOIs are much neglected but powerful in **treatment-resistant panic disorder**.', sec: 's8-panic' }]
+    facts: [{ ch: 'ch08', pages: '377', text: 'MAOIs are much neglected but powerful in **treatment-resistant panic disorder**.', sec: 's8-panic' }],
+    pearls: ['**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs', 'Antidepressant action needs **substantial MAO-A inhibition**; also blocking MAO-B raises **dopamine**, a strategy for refractory loss of positive affect']
   },
   {
     id: 'tranylcypromine', name: 'Tranylcypromine', brand: 'Parnate', group: 'MAO inhibitor', cls: 'Irreversible MAO inhibitor',
@@ -550,7 +552,8 @@ SP.drugs = [
       { e: 'Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors', via: 'Drug interaction' }
     ],
     short: 'Irreversible MAOI modeled on amphetamine.',
-    mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; its structure is modeled on **amphetamine**, so it also has amphetamine-like **dopamine-releasing** properties.'
+    mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; its structure is modeled on **amphetamine**, so it also has amphetamine-like **dopamine-releasing** properties.',
+    pearls: ['**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs', 'Antidepressant action needs **substantial MAO-A inhibition**; also blocking MAO-B raises **dopamine**, a strategy for refractory loss of positive affect']
   },
   {
     id: 'isocarboxazid', name: 'Isocarboxazid', brand: 'Marplan', group: 'MAO inhibitor', cls: 'Irreversible MAO inhibitor',
@@ -565,7 +568,8 @@ SP.drugs = [
       { e: 'Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors', via: 'Drug interaction' }
     ],
     short: 'Classic irreversible MAOI.',
-    mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; activity returns after about 2–3 weeks.'
+    mechanism: 'Irreversibly inhibits **MAO-A and MAO-B**; activity returns after about 2–3 weeks.',
+    pearls: ['**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs', 'Antidepressant action needs **substantial MAO-A inhibition**; also blocking MAO-B raises **dopamine**, a strategy for refractory loss of positive affect']
   },
   {
     id: 'selegiline', name: 'Selegiline', brand: 'Emsam; Eldepryl', group: 'MAO inhibitor', cls: 'Irreversible MAO inhibitor (MAO-B selective at low doses)',
@@ -580,7 +584,8 @@ SP.drugs = [
       { e: 'Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors', via: 'Drug interaction' }
     ],
     short: 'MAOI metabolized to l-amphetamine and l-methamphetamine; MAO-B selective at low doses.',
-    mechanism: 'An irreversible MAOI. At **selective MAO-B** doses it boosts levodopa in Parkinson’s disease but is not antidepressant; inhibiting both forms is needed for depression. Has no amphetamine-like action itself but is metabolized to **l-amphetamine and l-methamphetamine**.'
+    mechanism: 'An irreversible MAOI. At **selective MAO-B** doses it boosts levodopa in Parkinson’s disease but is not antidepressant; inhibiting both forms is needed for depression. Has no amphetamine-like action itself but is metabolized to **l-amphetamine and l-methamphetamine**.',
+    pearls: ['**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs', 'One of **three MAO-B inhibitors** approved for Parkinson\'s (with rasagiline, safinamide); selective doses do not treat depression']
   },
   {
     id: 'rasagiline', name: 'Rasagiline', brand: 'Azilect', group: 'Parkinson’s disease treatment', cls: 'MAO-B inhibitor',
@@ -590,7 +595,8 @@ SP.drugs = [
     short: 'Selective MAO-B inhibitor for Parkinson’s disease; not antidepressant.',
     mechanism: 'Selectively inhibits **MAO-B**, boosting concomitant **levodopa** and reducing on/off fluctuations; at selective doses it does not treat depression.',
     targets: [{ t: 'mao', action: 'inhibitor', note: 'MAO-B selective' }],
-    uses: ['**Parkinson’s disease**']
+    uses: ['**Parkinson’s disease**'],
+    pearls: ['One of **three MAO-B inhibitors** approved for Parkinson\'s (with selegiline and safinamide)']
   },
   {
     id: 'safinamide', name: 'Safinamide', brand: 'Xadago', group: 'Parkinson’s disease treatment', cls: 'MAO-B inhibitor',
@@ -600,7 +606,8 @@ SP.drugs = [
     short: 'Selective MAO-B inhibitor for Parkinson’s disease; not antidepressant.',
     mechanism: 'Selectively inhibits **MAO-B**; approved for Parkinson’s disease, not effective for depression at selective doses.',
     targets: [{ t: 'mao', action: 'inhibitor', note: 'MAO-B selective' }],
-    uses: ['**Parkinson’s disease**']
+    uses: ['**Parkinson’s disease**'],
+    pearls: ['One of **three MAO-B inhibitors** approved for Parkinson\'s (with selegiline and rasagiline)']
   },
   {
     id: 'iproniazid', name: 'Iproniazid', group: 'MAO inhibitor', cls: 'MAO inhibitor (historical)',
@@ -635,7 +642,8 @@ SP.drugs = [
       { ch: 'ch05', pages: '226', text: 'Combined with **olanzapine** for bipolar depression and treatment-resistant unipolar depression; 5HT2C antagonism of both may contribute.', sec: 's5-pines' },
       { ch: 'ch07', pages: '293–294', text: 'Long half-life reduces **withdrawal** reactions but means slow washout before starting drugs such as an **MAOI**; available once daily and **once weekly**.', sec: 's7-ssri-agents' }
     ],
-    sideEffects: [{ e: 'Unwanted activation, even panic, in agitated, anxious or insomniac patients', via: '5HT2C antagonism' }]
+    sideEffects: [{ e: 'Unwanted activation, even panic, in agitated, anxious or insomniac patients', via: '5HT2C antagonism' }],
+    pearls: ['In the **olanzapine–fluoxetine** combination both drugs block 5HT2C, so net 5HT2C antagonism exceeds either alone (a potent SERT/5HT2C inhibitor)', '**Long half-life** softens discontinuation reactions but means slow washout; allow for it before switching to an MAOI; **weekly** oral form exists']
   },
   {
     id: 'sertraline', name: 'Sertraline', brand: 'Zoloft', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
@@ -662,7 +670,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '294–295', text: 'σ1 actions may contribute to anxiolytic effects and benefit in psychotic and delusional depression.', sec: 's7-ssri-agents' },
       { ch: 'ch08', pages: '377–378', text: 'Combined with **brexpiprazole** for PTSD in testing at publication.', sec: 's8-ptsd' }
-    ]
+    ],
+    pearls: ['Its **σ1** binding is weaker than fluvoxamine’s; what σ1 does clinically is still unclear (the “sigma enigma”)', 'Combination with bupropion adds up each drug\'s **weak DAT** action']
   },
   {
     id: 'paroxetine', name: 'Paroxetine', brand: 'Paxil', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
@@ -685,7 +694,8 @@ SP.drugs = [
       { e: 'Sexual dysfunction, especially in men', via: 'NOS inhibition plus 5HT2A/2C stimulation' },
       { e: 'Notorious **withdrawal**: akathisia, restlessness, GI upset, dizziness, tingling', via: 'SERT inhibition plus **anticholinergic rebound**' }
     ],
-    facts: [{ ch: 'ch07', pages: '295', text: 'A **controlled-release** form may reduce side effects including discontinuation reactions.', sec: 's7-ssri-agents' }]
+    facts: [{ ch: 'ch07', pages: '295', text: 'A **controlled-release** form may reduce side effects including discontinuation reactions.', sec: 's7-ssri-agents' }],
+    pearls: ['Worst discontinuation risk after abrupt stop from **long-term high-dose** use; **controlled-release** form may mitigate']
   },
   {
     id: 'fluvoxamine', name: 'Fluvoxamine', brand: 'Luvox', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
@@ -704,7 +714,8 @@ SP.drugs = [
       { e: 'Sexual dysfunction, insomnia, activation/anxiety', via: '5HT at 5HT2A and 5HT2C receptors' },
       { e: 'Nausea, GI effects', via: 'Peripheral 5HT3 stimulation' }
     ],
-    facts: [{ ch: 'ch07', pages: '295', text: 'The **controlled-release** form allows once-daily dosing (IR often twice daily) and may cause less peak-dose sedation.', sec: 's7-ssri-agents' }]
+    facts: [{ ch: 'ch07', pages: '295', text: 'The **controlled-release** form allows once-daily dosing (IR often twice daily) and may cause less peak-dose sedation.', sec: 's7-ssri-agents' }],
+    pearls: ['Like sertraline, shown to help **psychotic/delusional depression**', 'Immediate-release has a short half-life needing **twice-daily** dosing; CR allows once daily']
   },
   {
     id: 'citalopram', name: 'Citalopram', brand: 'Celexa', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
@@ -730,7 +741,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '295–296', text: 'Generally well tolerated but somewhat **inconsistent** at the lowest dose, often needing a dose increase that QTc concerns limit.', sec: 's7-ssri-agents' },
       { ch: 'ch12', pages: '534–535', text: 'Limited efficacy for depression in dementia; may help **agitation**, but prolongs **QT**.', sec: 's12-depression' }
-    ]
+    ],
+    pearls: ['Among the **better-tolerated** SSRIs, with favorable findings in the **elderly**', '**Inconsistent at the lowest dose**, so dose often rises, but **QTc** prolongation caps the dose']
   },
   {
     id: 'escitalopram', name: 'Escitalopram', brand: 'Lexapro', group: 'SSRI', cls: 'Selective serotonin reuptake inhibitor (SSRI)',
@@ -752,7 +764,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '296', text: 'No antihistamine action, no higher-dose **QTc** restriction, lowest dose predictably effective; perhaps the **best-tolerated** SSRI with the **fewest CYP450 interactions**.', sec: 's7-ssri-agents' },
       { ch: 'ch12', pages: '534–535', text: 'May match citalopram in dementia without **QT** prolongation; SSRIs/SNRIs may help apathy in FTD.', sec: 's12-depression' }
-    ]
+    ],
+    pearls: ['Lowest dose is **predictably effective** and there is no higher-dose **QTc** restriction (unlike citalopram)', 'Possibly the **best tolerated** of the SSRIs, with the **fewest CYP450** interaction problems', 'Dropping the R enantiomer also removes citalopram\'s **antihistamine** action']
   },
   {
     id: 'vilazodone', name: 'Vilazodone', brand: 'Viibryd', group: 'Antidepressant', cls: 'Serotonin partial agonist reuptake inhibitor (SPARI)',
@@ -773,7 +786,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '296', text: 'Recreates in one drug the long-used strategy of adding a 5HT1A partial agonist (buspirone, aripiprazole, brexpiprazole, cariprazine, quetiapine) to an SSRI, avoiding drug interactions and off-target effects.', sec: 's7-spari' },
       { ch: 'ch08', pages: '368–370, 377', text: 'Should theoretically be **anxiolytic** (SERT inhibition + 5HT1A partial agonism); an off-label option for anxiety.', sec: 's8-gad' }
-    ]
+    ],
+    pearls: ['One drug replaces the SSRI plus **5HT1A partial agonist** (buspirone, aripiprazole, etc.) strategy, avoiding extra interactions and off-target effects', '5HT1A downstream **dopamine release** hypothesized to aid mood and cognition and to explain less sexual dysfunction and weight gain']
   },
   {
     id: 'venlafaxine', name: 'Venlafaxine', brand: 'Effexor XR', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
@@ -802,7 +816,8 @@ SP.drugs = [
       { ch: 'ch07', pages: '302', text: '2D6 inhibitors and **poor metabolizers** shift the ratio toward parent venlafaxine, reducing NET inhibition: how much NET inhibition a dose gives is **unpredictable**. The XR form is a considerable improvement over IR.', sec: 's7-snri-agents' },
       { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' },
       { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' }
-    ]
+    ],
+    pearls: ['Dose-titrate skillfully: experienced prescribers use **titration** to cope with the unpredictable NET effect', 'Whether SNRIs truly beat SSRIs for remission or resistant depression is still **debated**, though the dual mechanism makes it plausible']
   },
   {
     id: 'desvenlafaxine', name: 'Desvenlafaxine', brand: 'Pristiq', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
@@ -854,7 +869,8 @@ SP.drugs = [
       { ch: 'ch07', pages: '302–303', text: 'Showed that somatic pain is a legitimate symptom of depression. Usually started **twice daily**; once daily after tolerance. Less hypertension and milder withdrawal than venlafaxine.', sec: 's7-snri-agents' },
       { ch: 'ch09', pages: '390–399', text: 'Boosts descending **NE and 5HT** inhibition in the dorsal horn, so irrelevant input from joints, muscles and gut is ignored again; treats pain across the spectrum from depression to fibromyalgia, diabetic neuropathy, low back pain and osteoarthritis.', sec: 's9-descending' },
       { ch: 'ch11', pages: '480', text: 'Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.', sec: 's11-nri' }
-    ]
+    ],
+    pearls: ['Relieves **pain without depression** as well as depression without pain']
   },
   {
     id: 'milnacipran', name: 'Milnacipran', brand: 'Savella; Ixel', group: 'SNRI', cls: 'Serotonin–norepinephrine reuptake inhibitor (SNRI)',
@@ -941,7 +957,8 @@ SP.drugs = [
       { ch: 'ch12', pages: '533–537', text: 'Boosts dextromethorphan via **CYP2D6** inhibition for AD agitation; also suggested for **apathy** as a pro-dopaminergic agent.', sec: 's12-agitation' },
       { ch: 'ch13', pages: '551–553', text: 'For smoking cessation, returns a little dopamine to craving accumbens D2 receptors; quit rate about **half** that of varenicline.', sec: 's13-nicotine' }
     ],
-    updates: [{ year: '2022', title: 'Combined with dextromethorphan for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022, and for agitation associated with Alzheimer dementia in April 2026.', source: 'FDA, August 2022; Axsome Therapeutics, April 30, 2026' }]
+    updates: [{ year: '2022', title: 'Combined with dextromethorphan for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022, and for agitation associated with Alzheimer dementia in April 2026.', source: 'FDA, August 2022; Axsome Therapeutics, April 30, 2026' }],
+    pearls: ['Not scheduled and not known to be **abusable**, yet effective for nicotine addiction', 'PFC has no DAT, so **NET blockade** there raises DA as well as NE', 'Added to sertraline, nicknamed “**Well-oft**” (Wellbutrin plus Zoloft)']
   },
   {
     id: 'agomelatine', name: 'Agomelatine', brand: 'Valdoxan', group: 'Antidepressant', cls: 'Melatonergic agonist and 5HT2C antagonist',
@@ -962,7 +979,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '307–308', text: 'Melatonin and 5HT2C receptors in the SCN are expressed most at night; agomelatine acts on both to reset rhythms (Figure 7-39).', sec: 's7-agomelatine' },
       { ch: 'ch10', pages: '439–440', text: 'Also an MT1/MT2 agonist acting on circadian rhythms (Figure 10-57).', sec: 's10-circadian' }
-    ]
+    ],
+    pearls: ['Rationale: some depressed patients have **out-of-sync rhythms** and low nocturnal melatonin', 'Shares **5HT2C antagonism** with fluoxetine, trazodone, mirtazapine and some TCAs; olanzapine and quetiapine too, for bipolar depression']
   },
   {
     id: 'methylphenidate', name: 'Methylphenidate', brand: 'Ritalin; Concerta; others', group: 'Stimulant', cls: 'Stimulant (ADHD)',
@@ -1364,7 +1382,8 @@ SP.drugs = [
       { e: 'Weight gain, hair loss, acne, tremor, sedation, decreased cognition, incoordination', via: 'Lithium' },
       { e: 'Long-term **thyroid** and **kidney** effects', via: 'Lithium' },
       { e: 'Toxicity risk: **narrow therapeutic window**; monitor plasma levels', via: 'Pharmacokinetics' }
-    ]
+    ],
+    pearls: ['Use has **declined**: newer options, side effects and the monitoring burden all contribute', 'Best-evidenced mania combination: **lithium plus a serotonin/dopamine blocker**', '**Rapid cycling and mixed** episodes are hard to treat; combinations such as lithium + valproate + a 5HT/DA blocker are usual', 'Pairing with a 5HT/DA blocker is for mania, **not schizophrenia** (no clear added benefit there)', 'Older practice: **augmenting tricyclics** in unipolar depression, at lower than antimanic doses']
   },
   {
     id: 'valproate', name: 'Valproate', aka: ['Valproic acid', 'Sodium valproate'], group: 'Mood stabilizer', cls: 'Anticonvulsant; antimanic',
@@ -1391,7 +1410,8 @@ SP.drugs = [
       { e: 'Bone marrow, liver and pancreatic toxicity; monitor counts and platelets', via: 'Chronic exposure' },
       { e: '**Neural-tube defects** and other fetal toxicity', via: 'Teratogenic' },
       { e: 'Amenorrhea, **polycystic ovaries**, hyperandrogenism, obesity, insulin resistance in women', via: 'Valproate exposure' }
-    ]
+    ],
+    pearls: ['Distinctive proven use is **migraine** (carbamazepine\'s is neuropathic pain)', '**Pushing the dose** helps efficacy but side effects often cost adherence; lower doses usually need a second mood stabilizer', 'Some toxicities track **duration of exposure**, not dose, so dose reduction may not prevent them', 'Weak evidence for **depression**: no convincing protection against depressive recurrence', 'Blood counts **including platelets** need periodic monitoring']
   },
   {
     id: 'carbamazepine', name: 'Carbamazepine', brand: 'Tegretol; Equetro', group: 'Mood stabilizer', cls: 'Anticonvulsant; antimanic',
@@ -1417,7 +1437,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '347', text: 'Table 7-3: epilepsy ++++, treat from above ++++, stabilize from above ++, treat from below +, stabilize from below +/−.', sec: 's7-anticonvulsants' },
       { ch: 'ch12', pages: '530', text: 'Perhaps the most effective unapproved drug for neuropsychiatric symptoms of dementia, but side effects and **drug interactions** limit it in the elderly.', sec: 's12-agitation' }
-    ]
+    ],
+    pearls: ['Distinctive proven use is **neuropathic pain** (valproate\'s is migraine)', 'Bone marrow suppression is more profound **early on**: check blood counts at the start', 'Like valproate, treats mania **from above**; both are sedating']
   },
   {
     id: 'lamotrigine', name: 'Lamotrigine', brand: 'Lamictal', group: 'Mood stabilizer', cls: 'Anticonvulsant; depression-minded mood stabilizer',
@@ -1432,7 +1453,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch07', pages: '347', text: 'Table 7-3: epilepsy ++++, treat from above +/−, stabilize from above ++++, treat from below +++, stabilize from below ++++.', sec: 's7-anticonvulsants' },
       { ch: 'ch07', pages: '351–352', text: 'Not approved for mania, perhaps because its sodium channel action is too weak or its long **titration** prevents the quick action mania needs.', sec: 's7-lamotrigine' }
-    ]
+    ],
+    pearls: ['Approved to **prevent** recurrence of both poles, but not to treat acute mania or depression', 'Generally **well tolerated** apart from rash', 'Learn to tell **benign from serious rash** (see Prescriber\'s Guide)', 'Practice-based **bipolar depression** combo: add to a serotonin/dopamine blocker']
   },
   {
     id: 'oxcarbazepine', name: 'Oxcarbazepine', brand: 'Trileptal', group: 'Anticonvulsant', cls: 'Anticonvulsant (prodrug of licarbazepine)',
@@ -1444,7 +1466,8 @@ SP.drugs = [
     targets: [{ t: 'vssc', action: 'blocker', note: 'Via licarbazepine; α subunit' }],
     uses: ['Epilepsy', 'Used **off-label**, especially for mania, despite never being proven in acute mania or depression'],
     sideEffects: [{ e: 'Less sedation, bone marrow toxicity and CYP3A4 interaction than carbamazepine', via: 'Different metabolism' }],
-    facts: [{ ch: 'ch07', pages: '347', text: 'Table 7-3 (oxcarbazepine/licarbazepine): epilepsy ++++, treat from above ++, stabilize from above +, treat and stabilize from below +/−.', sec: 's7-anticonvulsants' }]
+    facts: [{ ch: 'ch07', pages: '347', text: 'Table 7-3 (oxcarbazepine/licarbazepine): epilepsy ++++, treat from above ++, stabilize from above +, treat and stabilize from below +/−.', sec: 's7-anticonvulsants' }],
+    pearls: ['Same presumed mechanism as carbamazepine but **easier to dose** and better tolerated']
   },
   {
     id: 'eslicarbazepine', name: 'Eslicarbazepine', brand: 'Aptiom', group: 'Anticonvulsant', cls: 'Anticonvulsant (active S-licarbazepine)',
@@ -1454,7 +1477,8 @@ SP.drugs = [
     short: 'The active S enantiomer of licarbazepine, oxcarbazepine’s active form.',
     mechanism: 'The active **S enantiomer of licarbazepine**, through which oxcarbazepine works; presumed VSSC α-subunit binding like carbamazepine.',
     targets: [{ t: 'vssc', action: 'blocker', note: 'α subunit' }],
-    uses: ['Anticonvulsant; used off-label, especially for mania']
+    uses: ['Anticonvulsant; used off-label, especially for mania'],
+    pearls: ['Used off-label for mania only **more recently** than oxcarbazepine']
   },
   {
     id: 'topiramate', name: 'Topiramate', brand: 'Topamax', group: 'Anticonvulsant', cls: 'Anticonvulsant',
@@ -1643,7 +1667,8 @@ SP.drugs = [
       { ch: 'ch06', pages: '263–264', text: 'A neuroactive steroid acting mainly at **extrasynaptic δ** GABA-A sites (tonic inhibition). Postpartum depression may follow the **fall** in neurosteroids after delivery; a **60-hour IV infusion** may reverse it.', sec: 's6-neurosteroids' },
       { ch: 'ch07', pages: '320–322', text: 'Given IV as **brexanolone** for postpartum depression; neuroactive steroids act at both benzodiazepine-sensitive and **benzodiazepine-insensitive** GABA-A receptors.', sec: 's7-neurosteroids' }
     ],
-    updates: [{ year: '2023', title: 'An oral neurosteroid', text: '**Zuranolone**, an oral neuroactive steroid GABA-A PAM, was approved in August 2023 as the first oral treatment for postpartum depression.', source: 'FDA, August 4, 2023' }]
+    updates: [{ year: '2023', title: 'An oral neurosteroid', text: '**Zuranolone**, an oral neuroactive steroid GABA-A PAM, was approved in August 2023 as the first oral treatment for postpartum depression.', source: 'FDA, August 4, 2023' }],
+    pearls: ['Binds the **same sites** as general anesthetics (propofol, etomidate, alphaxolone, alfadalone), which are dosed far higher.', '**Benzodiazepines lack antidepressant action**, so the **benzodiazepine-insensitive** (extrasynaptic) receptors are thought to be the key target.', 'Made and released by **glia** and captured by extrasynaptic δ-containing receptors; may also have **anxiolytic** potential.']
   },
   {
     id: 'brexanolone', name: 'Brexanolone', brand: 'Zulresso', group: 'Neuroactive steroid', cls: 'Neuroactive steroid (IV allopregnanolone)',
@@ -1681,7 +1706,8 @@ SP.drugs = [
     targets: [{ t: '5ht1a', action: 'partial agonist' }],
     uses: ['**Generalized anxiety disorder** (not the other anxiety/trauma disorders)', 'Augmentation of SSRIs/SNRIs in unipolar depression (not approved; less used than other 5HT1A agents)'],
     updates: [{ year: '2023', title: 'A buspirone analogue approved for depression', text: 'Extended-release **gepirone** (Exxua), a pharmacologic analogue of buspirone and selective 5HT1A agonist, was approved for major depressive disorder in adults in September 2023.', source: 'FDA approval announced September 2023 (Psychiatric Times, September 29, 2023)' }],
-    facts: [{ ch: 'ch08', pages: '368–370', text: 'Anxiolytic onset is **delayed**, like SSRIs, implying adaptive receptor changes rather than acute occupancy.', sec: 's8-serotonin' }]
+    facts: [{ ch: 'ch08', pages: '368–370', text: 'Anxiolytic onset is **delayed**, like SSRIs, implying adaptive receptor changes rather than acute occupancy.', sec: 's8-serotonin' }],
+    pearls: ['Grouped with **lithium and thyroid** as agents lacking robust antidepressant action alone but able to improve monoamine drugs', '5HT1A partial agonists act at once on **somatodendritic autoreceptors**, theoretically synergizing with SERT blockade']
   },
   {
     id: 'thyroid-hormone', name: 'Thyroid hormones', group: 'Hormone', cls: 'Augmenting agent',
@@ -1691,7 +1717,8 @@ SP.drugs = [
     short: 'Nuclear-receptor hormones once used to augment drugs for depression.',
     mechanism: 'Bind **nuclear receptors** to form ligand-activated **transcription factors**; regulation of neuronal organization, arborization and synapse formation may boost monoamine transmission.',
     targets: [{ t: 'thr', action: 'agonist' }],
-    uses: ['Augmentation of unipolar or bipolar depression treatment, to boost efficacy or speed onset (**out of favor**)']
+    uses: ['Augmentation of unipolar or bipolar depression treatment, to boost efficacy or speed onset (**out of favor**)'],
+    pearls: ['Thyroid abnormalities have long been linked to **depression**', 'Not a robust antidepressant alone, and **not approved** as an augmenting agent (like lithium and buspirone)']
   },
   {
     id: 'modafinil', name: 'Modafinil', brand: 'Provigil', group: 'Wake-promoting agent', cls: 'Wake-promoting agent (DAT inhibitor)',
@@ -2396,7 +2423,8 @@ SP.drugs = [
       { ch: 'ch13', pages: '574', text: 'Ketamine-assisted psychotherapy explored for craving and use of cocaine, nicotine and alcohol, perhaps by promoting prefrontal plasticity.', sec: 's13-assisted' }
     ],
     updates: [{ year: '2025', title: 'Esketamine monotherapy', text: 'Esketamine (the S-enantiomer of ketamine) nasal spray, approved in 2019 as add-on treatment, was approved in January 2025 as **monotherapy** for treatment-resistant depression.', source: 'FDA, January 2025' }],
-    sideEffects: [{ e: 'Psychosis (visual hallucinations, paranoia)', via: 'NMDA blockade on prefrontal GABA interneurons → glutamate and dopamine excess' }]
+    sideEffects: [{ e: 'Psychosis (visual hallucinations, paranoia)', via: 'NMDA blockade on prefrontal GABA interneurons → glutamate and dopamine excess' }],
+    pearls: ['Reserved for patients with **multiple failures** of monoamine drugs, whereas 5HT/dopamine blockers are added after only one or two failures.', 'Works in apparently **nonmonoaminergic** depression; onset is almost immediate (minutes to hours), sometimes with a direct **anti-suicidal** effect.', 'Psychosis-like syndrome is mainly a feature of **high, acute** doses; slow **subanesthetic** infusions for depression are not thought to cause it.', 'Also raises **BDNF and VEGF**, so it may reverse synaptic atrophy within minutes, unlike monoamine drugs, whose growth-factor effect takes weeks.']
   },
   {
     id: 'esketamine', name: 'Esketamine', brand: 'Spravato', group: 'NMDA antagonist', cls: 'Rapid-acting antidepressant (S-ketamine)',
@@ -2417,7 +2445,8 @@ SP.drugs = [
       { ch: 'ch07', pages: '332', text: 'A study of up to a year of esketamine plus a switch to an untried oral monoamine drug showed sustained improvement and acceptable safety.', sec: 's7-ketamine' },
       { ch: 'ch13', pages: '571', text: 'Subanesthetic nasal esketamine for resistant depression; dissociative effects may be harnessed in psychotherapy.', sec: 's13-hallucinogens' }
     ],
-    updates: [{ year: '2025', title: 'Monotherapy approval', text: 'Approved in 2019 as add-on treatment, esketamine nasal spray was approved in January 2025 as **monotherapy** for treatment-resistant depression.', source: 'FDA, January 2025' }]
+    updates: [{ year: '2025', title: 'Monotherapy approval', text: 'Approved in 2019 as add-on treatment, esketamine nasal spray was approved in January 2025 as **monotherapy** for treatment-resistant depression.', source: 'FDA, January 2025' }],
+    pearls: ['The exact **R versus S** pharmacology, and that of their active metabolites, is still being worked out, though esketamine is clearly active as a rapid antidepressant.']
   },
   {
     id: 'dextromethorphan', name: 'Dextromethorphan', group: 'NMDA antagonist', cls: 'NMDA antagonist',
@@ -2448,7 +2477,8 @@ SP.drugs = [
       { year: '2022', title: 'Approved for depression', text: '**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022.', source: 'FDA, August 2022' },
       { year: '2026', title: 'Approved for Alzheimer agitation', text: 'Axsome announced FDA approval of dextromethorphan–bupropion (Auvelity) for agitation associated with dementia due to Alzheimer disease on April 30, 2026.', source: 'Axsome Therapeutics, April 30, 2026' },
       { year: '2024', title: 'Deuterated dextromethorphan–quinidine trial failed', text: 'AVP-786 (deuterated dextromethorphan with quinidine) missed its primary agitation endpoint in a phase 3 Alzheimer dementia trial reported in February 2024.', source: 'Otsuka, February 12, 2024' }
-    ]
+    ],
+    pearls: ['**Deuteration** lengthens half-life and so changes the **quinidine dose** needed in the deuterated combination.']
   },
   {
     id: 'quinidine', name: 'Quinidine', group: 'CYP2D6 inhibitor', cls: 'CYP2D6 inhibitor (antiarrhythmic)',
@@ -2461,7 +2491,8 @@ SP.drugs = [
     mechanism: 'Inhibits **CYP2D6** at doses below those with cardiovascular actions, preventing rapid breakdown of dextromethorphan.',
     targets: [{ t: 'cyp2d6', action: 'inhibitor' }],
     uses: ['With dextromethorphan: **pseudobulbar affect** (approved); depression and Alzheimer agitation (in trials at publication)'],
-    facts: [{ ch: 'ch12', pages: '534–536', text: 'Combined with dextromethorphan for **pseudobulbar affect**, by inhibiting CYP2D6.', sec: 's12-pba-apathy' }]
+    facts: [{ ch: 'ch12', pages: '534–536', text: 'Combined with dextromethorphan for **pseudobulbar affect**, by inhibiting CYP2D6.', sec: 's12-pba-apathy' }],
+    pearls: ['Paired with dextromethorphan only as a **2D6 booster**; its dose changes when the partner is **deuterated** dextromethorphan', '**Bupropion** is the alternative booster in the other combination, adding its own NDRI antidepressant action']
   },
   {
     id: 'dextromethadone', name: 'Dextromethadone', aka: ['Esmethadone', 'REL-1017'], group: 'NMDA antagonist', cls: 'NMDA antagonist (investigational at publication)',
@@ -2472,7 +2503,8 @@ SP.drugs = [
       { t: '5ht2a', action: 'binds', s: 1 },
       { t: 'nmda', action: 'antagonist', s: 1 },
       { t: 'sert', action: 'inhibitor', s: 1 },
-      { t: 'sigma', action: 'binds', s: 1 }
+      { t: 'sigma', action: 'binds', s: 1 },
+      { t: 'dor', action: 'binds', s: 1, note: 'δ-opioid' }
     ],
     chapters: [
       { ch: 'ch03', pages: '55' },
@@ -2482,7 +2514,8 @@ SP.drugs = [
       { ch: 'ch03', pages: '55', text: 'Listed among the NMDA open-channel antagonists in Table 3-2.', sec: 's3-drugs' },
       { ch: 'ch07', pages: '355', text: 'In clinical development (at publication) as a **rapid-onset** treatment for major depression with promising early results. Bars follow **Figure 7-86**; δ-opioid binding (+) has no separate target entry.', sec: 's7-dxm' }
     ],
-    updates: [{ year: '2024', title: 'Development halted', text: 'Relmada stopped its phase III trials of esmethadone (REL-1017) for adjunctive treatment of major depression in December 2024 after interim results showed little chance of success.', source: 'Relmada Therapeutics, December 2024' }]
+    updates: [{ year: '2024', title: 'Development halted', text: 'Relmada stopped its phase III trials of esmethadone (REL-1017) for adjunctive treatment of major depression in December 2024 after interim results showed little chance of success.', source: 'Relmada Therapeutics, December 2024' }],
+    pearls: ['Racemic **methadone** is an oral μ-agonist for opioid use disorder; the opioid activity sits mostly in the **levo** form.']
   },
   {
     id: 'mirtazapine', name: 'Mirtazapine', brand: 'Remeron', group: 'Antidepressant', cls: 'α2 antagonist (NaSSA)',
@@ -2514,7 +2547,8 @@ SP.drugs = [
     ],
     nbn: 'Norepinephrine and serotonin receptor antagonist (α2, 5HT2A, 5HT2C, 5HT3, H1)',
     nts: ['norepinephrine', 'serotonin', 'histamine'],
-    sideEffects: [{ e: 'Sedation, weight gain', via: 'H1 antagonism' }]
+    sideEffects: [{ e: 'Sedation, weight gain', via: 'H1 antagonism' }],
+    pearls: ['**5HT3 blockade** may protect against serotonin-driven GI side effects such as nausea', '**5HT2A blockade** improves slow-wave sleep, helpful in many depressed patients', 'SNRI plus mirtazapine gives a theoretical **quadruple boost** of 5HT and NE (reuptake, α2, 5HT2A, 5HT2C blockade) and possibly extra DA', 'Reuptake blockade and **α2 antagonism are synergistic**, so combining them disinhibits 5HT and NE much more']
   },
   {
     id: 'mianserin', name: 'Mianserin', group: 'Antidepressant', cls: 'α2 antagonist',
@@ -2532,7 +2566,8 @@ SP.drugs = [
       { t: 'h1', action: 'antagonist' }
     ],
     uses: ['Depression (worldwide **except the US**)'],
-    facts: [{ ch: 'ch07', pages: '308–309', text: 'Another α2 antagonist, **setiptiline**, is marketed in Japan.', sec: 's7-mirtazapine' }]
+    facts: [{ ch: 'ch07', pages: '308–309', text: 'Another α2 antagonist, **setiptiline**, is marketed in Japan.', sec: 's7-mirtazapine' }],
+    sideEffects: [{ e: 'Sedation, weight gain', via: 'H1 antagonism (as with mirtazapine)' }]
   },
   {
     id: 'trazodone', name: 'Trazodone', brand: 'Desyrel; Oleptro', group: 'Antidepressant', cls: 'Serotonin antagonist/reuptake inhibitor (SARI)',
@@ -2576,7 +2611,8 @@ SP.drugs = [
       { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' },
       { ch: 'ch10', pages: '424–425', text: 'The **most commonly prescribed** sleep agent worldwide (not approved for insomnia); reduces arousal by blocking 5HT2A, α1 and H1; no tolerance, withdrawal, dependence or rebound.', sec: 's10-arousal-blockers' },
       { ch: 'ch12', pages: '535', text: 'In dementia, low-dose nightly trazodone (half-life **6–8 h**) improves sleep without daytime effects; may help behavior in **FTD** more than AD.', sec: 's12-depression' }
-    ]
+    ],
+    pearls: ['Best hypnotic delivery is a **standard immediate-release** oral form: quick onset, gone by morning', 'Hypnotic action from the first dose gives **rapid onset** and better tolerability than SSRIs/SNRIs', 'Treating residual insomnia may also lift **remission rates** by improving energy and mood', 'Combined **α1 + 5HT2A blockade** is thought to boost PFC dopamine release']
   },
   {
     id: 'nefazodone', name: 'Nefazodone', group: 'Antidepressant', cls: 'Serotonin antagonist/reuptake inhibitor (SARI)',
@@ -2948,7 +2984,8 @@ SP.drugs = [
       { ch: 'ch07', pages: '315–320', text: 'The DSST samples attention, executive function, memory and mostly **processing speed** (the “Fab Four”); vortioxetine improves it more than other antidepressants.', sec: 's7-vortioxetine' }
     ],
     nbn: 'Serotonin reuptake inhibitor and receptor modulator (multimodal)',
-    nts: ['serotonin', 'norepinephrine', 'dopamine', 'acetylcholine', 'histamine']
+    nts: ['serotonin', 'norepinephrine', 'dopamine', 'acetylcholine', 'histamine'],
+    pearls: ['**5HT3 blockade** (brain: excitatory on GABA interneurons) disinhibits glutamate, ACh and NE; peripherally it may protect against serotonin-induced **GI side effects**', '**5HT1B/D** antagonism and **5HT7** blockade remove brakes on 5HT release, boosting it beyond SERT inhibition alone']
   },
   {
     id: 'clozapine', name: 'Clozapine', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic (a “pine”)',
