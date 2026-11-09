@@ -43,26 +43,28 @@ node tools/check_xrefs.js ../stahl                      # expect: glossary terms
 timeout 600 python3 tools/routes.py http://localhost:8766 /tmp/shots | grep '!!'   # expect nothing
 python3 -u tests/overflow.py ; python3 -u tests/tabbar.py   # expect widths 390, ERRORS: []
 python3 -u tests/r1_home.py                             # progress panel, report links, iOS hint; ERRORS: []
+python3 -u tests/r2_practice.py                         # confidence, topics, exam by topic/mistakes, phone 390; ERRORS: []
 (cd ../stahl && node ../stahl-dev/tests/audit.js)       # content-depth table
 ```
 Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.email="isaymotion@gmail.com" commit -m "…" && git push origin main`.
 
-## 6. Status (as of 2026-11-09, main = 56e18c3, version 23.0.0)
+## 6. Status (as of 2026-11-09, main = 5f2c5ca, version 24.0.0)
 | Area | State |
 |---|---|
 | Chapters 1–13 | Done: 247 guide sections, 1,102 high-yield points, 726 mech / 268 drug / 200 clinical cards, 608 board questions, 469 glossary terms |
 | Library | 183 drugs, 105 targets, 16 NTs, 83 circuits, 17 drug types |
 | QoL pass | Done: phone home layout, two-column PDF generator (chapter + all chapters), Compare drug-type filters, NbN by class, auto-hiding tab bar, phone overflow fixes, SW cache-prefix fix |
 | Teaching mode | Done: session builder (6 presets, multi-chapter, counts, order), high-yield blanks, flashcards, board Qs, vignettes, Name that drug, countdown, room/two-team scoring, flags, text size, end-of-session review + PDF |
-| Since 10-26 | 20.0.0 Monitoring checklists (`#/monitoring`), 21.0.0 Text size (Aa), 22.0.0 Design refresh (semver changelog, About page, match-device theme, Tagalog draft strings), 23.0.0 = R1 |
+| Since 10-26 | 20.0.0 Monitoring checklists (`#/monitoring`), 21.0.0 Text size (Aa), 22.0.0 Design refresh (semver changelog, About page, match-device theme, Tagalog draft strings), 23.0.0 = R1, 24.0.0 = R2 |
+| Practice engine (R2) | `data/topics.js`: 28 topics (`SP.topics`), all 1,802 items mapped (`SP.topicMap`, key `chNN/deck/id`); edit `work/r2/topics_vocab.json` + `topic_map.json`, then `node tools/build_topics.js ../stahl`. localStorage `att` = per-item last 8 outcomes (upper = right; S/U/G = sure/unsure/guess, R/W = no rating); `confAsk` pref; `MISTAKES[k].sure`. Routes `#/topics`, `#/topics/<id>`, `#/topics/<id>/cards`, `#/exam/topic/<id>`, `#/exam/mistakes`. Topic strength needs ≥5 practised items. |
 
 ## 7. Next steps: agreed release plan (owner approved all A + B, order B1 → B4, 2026-11-09)
-Next version **24.0.0** (R2). One release = one changelog id + SW bump + full test run + push + update this table.
+Next version **25.0.0** (R3). One release = one changelog id + SW bump + full test run + push + update this table.
 
 | # | Release | Items | Book PDF? | Status |
 |---|---|---|---|---|
 | R1 | Quick wins | A1 report-error mailto, A2 text size (already in 21.0.0), A4 iPhone hint, A3 home progress overview | no | **done 23.0.0** |
-| R2 | Practice engine | B3a confidence rating + cross-chapter topic tags on all cards/questions, then A6 quiz from mistakes, A7 exam by topic, weak-spot map | no | pending |
+| R2 | Practice engine | B3a confidence rating + cross-chapter topic tags on all cards/questions, then A6 quiz from mistakes, A7 exam by topic, weak-spot map | no | **done 24.0.0** |
 | R3 | Library depth 1 | B1: Ch 4–5 drugs (antipsychotics) | yes | pending |
 | R4 | Library depth 2 | B1: Ch 6–7 drugs (mood, antidepressants) | yes | pending |
 | R5 | Library depth 3 | B1: Ch 8–13 + remaining drugs | yes | pending |
@@ -91,6 +93,9 @@ Reference (original wording of the items):
 - Steps/list blocks don't support `note`; put the note in a `p` block.
 - Glossary aliases: avoid common words (they auto-link everywhere).
 - Python output via `| tail` buffers; use `python3 -u`.
+- Segmented radios (`.seg`): the hidden input sits over its label, so Playwright clicks on `input + span` time out; click `label:has(input[...])`.
+- `store` caches prefs in memory: after setting localStorage in a test, `reload()` (a hash change is not enough).
+- New cards/questions need a topic: add keys to `work/r2/topic_map.json` and rebuild `data/topics.js`, or they drop out of topics and exam-by-topic.
 
 ## 9. Files to re-attach
 - `Stahls_Essential_Psychopharmacology_5th_ed.pdf`: needed for any content work (B1, B2, Ch 8/9 depth, cheat-sheet facts). Not needed for pure feature work (A1–A4, A6, A7, B3 mechanics, B4).

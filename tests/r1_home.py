@@ -24,7 +24,7 @@ async def main():
         print('empty:', await pg.locator('.prog__empty').count(), 'ios hint on desktop:', await pg.locator('.ios-hint').count())
         await pg.evaluate(SEED); await pg.reload(); await pg.wait_for_selector('.prog__tiles')
         print('tiles:', await pg.locator('.prog__tile').all_inner_texts())
-        print('weak:', await pg.locator('.prog__ch.is-weak').get_attribute('aria-label'), '|', await pg.locator('.prog__tip').inner_text())
+        print('weak:', await pg.locator('.prog__ch.is-weak').get_attribute('aria-label'), '|', await pg.locator('.prog__tip').first.inner_text())
         for theme in ['light','dark']:
             await pg.evaluate(f"document.documentElement.setAttribute('data-theme','{theme}')")
             await pg.locator('.prog').screenshot(path=f'/tmp/r1_prog_desk_{theme}.png')
