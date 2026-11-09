@@ -24,6 +24,7 @@ A chapter-by-chapter study app for psychiatry residents, built from *Stahl's Ess
   - **Monitoring checklists**: what to check, when, and why for lithium, valproate, clozapine and the antipsychotics. Two labeled layers: *From the book* (with page references) and *Standard schedule* (baseline, early, ongoing, act on; not from the book, from product labeling and consensus guidelines, with the source on each row). Self-check tick boxes (not saved), a book-only toggle, a Monitoring button on matching drug pages, and an A4 PDF with one checklist per page.
 - **Post-publication updates**: the book is from 2021. Anything newer appears only in clearly labeled update boxes, never mixed into the book-based content.
 - **For educators**: teaching mode (full-screen questions or vignettes for group sessions), printable summaries, print-all high yield, and a *What's new* page.
+- **Your progress** on the home page (mastery, exam accuracy by chapter, weakest chapter), a **Report an error** link on guide sections, cards, exam review, drug pages and the footer (opens a pre-filled email), and a one-time **Add to Home Screen** tip on iPhone and iPad.
 - **Text size**: tap Aa in the top bar for smaller, larger or largest text (saved on the device).
 - **Theme**: the theme button cycles match device, light and dark (also on the About page, with language and text size). The app follows the phone's setting until you choose.
 - **About** page (menu > App > About): version, settings (language, theme, text size) and tips. The Tagalog interface strings are a draft.

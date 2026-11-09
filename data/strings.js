@@ -131,7 +131,12 @@ window.STRINGS = {
     'nav.backup': 'Backup progress',
     'nav.soon': 'Soon',
     'nav.chapterN': 'Chapter {n}',
-    'about.tip6': 'On a chapter page, the previous and next buttons move between chapters; tap any dotted term for its definition.'
+    'about.tip6': 'On a chapter page, the previous and next buttons move between chapters; tap any dotted term for its definition.',
+    'report.link': 'Report an error',
+    'report.foot': 'Report an error',
+    'ios.title': 'Install on your {device}',
+    'ios.text': 'Tap **Share** in the browser, then **Add to Home Screen**. The app then opens full screen and works offline.',
+    'ios.dismiss': 'Got it'
   },
 
   // Tagalog draft — Dr. Navarro reviews before release
@@ -264,6 +269,12 @@ window.STRINGS = {
     'nav.backup': 'I-back up ang progreso',
     'nav.soon': 'Malapit na',
     'nav.chapterN': 'Kabanata {n}',
-    'about.tip6': 'Sa pahina ng kabanata, ang mga button na nakaraan at susunod ay lumilipat sa pagitan ng mga kabanata; i-tap ang anumang may tuldok na termino para sa kahulugan nito.'
+    'about.tip6': 'Sa pahina ng kabanata, ang mga button na nakaraan at susunod ay lumilipat sa pagitan ng mga kabanata; i-tap ang anumang may tuldok na termino para sa kahulugan nito.',
+    /* Draft Tagalog, for review */
+    'report.link': 'Iulat ang mali',
+    'report.foot': 'Iulat ang mali',
+    'ios.title': 'I-install sa iyong {device}',
+    'ios.text': 'I-tap ang **Share** sa browser, saka ang **Add to Home Screen**. Bubukas na ito nang buong screen at gagana kahit offline.',
+    'ios.dismiss': 'Sige'
   }
 };

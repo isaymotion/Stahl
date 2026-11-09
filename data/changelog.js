@@ -9,6 +9,28 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "23.0.0",
+    "date": "2026-11-09",
+    "title": "Your progress, error reports, iPhone install hint",
+    "summary": "A progress overview on the home page, a quick way to report a mistake, and a one-time install tip on iPhone and iPad.",
+    "items": [
+      {
+        "type": "feature",
+        "text": "Your progress on the home page: cards mastered and in progress, exam accuracy over your last five exams, the mistakes pile, and a bar for every chapter with its exam accuracy. The chapter you score lowest on (at least five exam questions) is outlined so you know where to go next.",
+        "href": "#/",
+        "link": "Home"
+      },
+      {
+        "type": "feature",
+        "text": "Report an error: a small link at the end of every study-guide section, under every flashcard answer, in exam review and on every drug page (plus one in the footer). It opens an email already filled in with where you were, so you only need to say what looks wrong."
+      },
+      {
+        "type": "feature",
+        "text": "On iPhone and iPad, the home page shows once how to add the app to your Home Screen so it opens full screen and works offline. Tap Got it to hide it."
+      }
+    ]
+  },
+  {
     "version": "22.0.0",
     "date": "2026-11-05",
     "title": "Design refresh",

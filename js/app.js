@@ -212,6 +212,17 @@
     MISTAKES[key] = m; saveMistakes();
   }
   function clearMistake(key) { if (MISTAKES[key]) { delete MISTAKES[key]; saveMistakes(); } }
+  /* ---------- report an error (opens the user's mail app; nothing is sent by the app) ---------- */
+  var REPORT_TO = 'isaymotion@gmail.com';
+  function reportHref(where, hash) {
+    var url = location.origin + location.pathname + (hash || location.hash || '#/');
+    var body = 'What looks wrong:\n\n\nWhat it should say (with the book page, if you have it):\n\n\n---\n' +
+      'Where: ' + where + '\nLink: ' + url + '\nApp: ' + APP + ' ' + (META.version || '');
+    return 'mailto:' + REPORT_TO + '?subject=' + encodeURIComponent(APP + ' error report: ' + where) + '&body=' + encodeURIComponent(body);
+  }
+  function reportLink(where, hash) {
+    return '<a class="report-link" href="' + esc(reportHref(where, hash)) + '">' + esc(t('report.link')) + '</a>';
+  }
   function mistakeKeys() { return Object.keys(MISTAKES).filter(function (k) { return CARDS[k]; }).sort(function (a, b) { return MISTAKES[b].t - MISTAKES[a].t; }); }
 
   /* ---------- router ---------- */
@@ -483,6 +494,72 @@
   }
 
 
+  /* Home: overall progress (cards, exams, mistakes) and a per-chapter strip. Exam accuracy counts every
+     answered question in the saved exam history (the last 20 exams), grouped by the question's chapter. */
+  function examStats() {
+    var hist = store.get('examHistory', []), byCh = {}, all = { right: 0, n: 0 }, recent = { right: 0, n: 0 };
+    hist.forEach(function (rec, hi) {
+      (rec.items || []).forEach(function (x) {
+        var r = CARDS[x.k]; if (!r || x.a == null) return;
+        var ok = x.a === r.c.answer ? 1 : 0;
+        var b = byCh[r.ch.id] || (byCh[r.ch.id] = { right: 0, n: 0 });
+        b.n++; b.right += ok; all.n++; all.right += ok;
+        if (hi < 5) { recent.n++; recent.right += ok; }
+      });
+    });
+    return { exams: hist.length, byCh: byCh, all: all, recent: recent };
+  }
+  function progressHTML(chs) {
+    var tAll = tallyKeys(CARD_LIST.map(function (r) { return r.key; }));
+    var ex = examStats(), mk = mistakeKeys().length;
+    if (tAll.total === tAll.fresh && !ex.exams) {
+      return '<section class="wrap home-section prog" aria-labelledby="prog-h"><h2 id="prog-h">Your progress</h2>' +
+        '<p class="prog__empty">Nothing yet. Rate a few flashcards or sit a short exam and your progress across all ' + chs.length + ' chapters shows up here.</p></section>';
+    }
+    var started = tAll.total - tAll.fresh;
+    var tile = function (n, label, sub, href) {
+      return '<a class="prog__tile" href="' + href + '"><span class="prog__n">' + n + '</span><span class="prog__label">' + label + '</span><span class="prog__sub">' + sub + '</span></a>';
+    };
+    var tiles =
+      tile(tAll.mastered, 'mastered', pct(tAll.mastered, tAll.total) + '% of ' + tAll.total.toLocaleString('en-US') + ' cards and questions', '#/review') +
+      tile(started - tAll.mastered, 'in progress', plural(started, 'card') + ' started in all', '#/review') +
+      tile(ex.recent.n ? pct(ex.recent.right, ex.recent.n) + '%' : '–', 'exam accuracy', ex.recent.n ? 'Last ' + plural(Math.min(ex.exams, 5), 'exam') + ', ' + plural(ex.recent.n, 'question') : 'No exams yet', '#/exam') +
+      tile(mk, 'to revisit', mk ? 'Missed questions in your mistakes pile' : 'Mistakes pile is clear', '#/mistakes');
+    var weak = null;
+    chs.forEach(function (ch) { var b = ex.byCh[ch.id]; if (b && b.n >= 5 && (!weak || b.right / b.n < weak.right / weak.n)) weak = { ch: ch, right: b.right, n: b.n }; });
+    var cells = chs.map(function (ch) {
+      var keys = []; DECKS.forEach(function (d) { keys = keys.concat(deckKeys(ch, d.key)); });
+      var t = tallyKeys(keys), b = ex.byCh[ch.id];
+      var mPct = pct(t.mastered, t.total), lPct = pct(t.learning, t.total);
+      var exTxt = b ? pct(b.right, b.n) + '% on exams' : 'no exam yet';
+      return '<li><a class="prog__ch' + (weak && weak.ch.id === ch.id ? ' is-weak' : '') + '" href="#/review/' + ch.id + '" aria-label="Chapter ' + ch.number + ': ' + mPct + '% mastered, ' + lPct + '% in progress, ' + exTxt + '">' +
+        '<span class="prog__chn">' + ch.number + '</span>' +
+        '<span class="prog__col" aria-hidden="true"><span class="prog__mast" style="height:' + mPct + '%"></span><span class="prog__learn" style="height:' + lPct + '%"></span></span>' +
+        '<span class="prog__pct">' + mPct + '%</span>' +
+        '<span class="prog__ex">' + (b ? pct(b.right, b.n) + '%' : '–') + '</span></a></li>';
+    }).join('');
+    var tip = weak
+      ? '<p class="prog__tip">Weakest on exams: <a href="#/c/' + weak.ch.id + '/guide">Chapter ' + weak.ch.number + ', ' + esc(weak.ch.short || weak.ch.title) + '</a> (' + weak.right + ' of ' + weak.n + ' right). Reread its high-yield page, then sit a short exam on it.</p>'
+      : '';
+    return '<section class="wrap home-section prog" aria-labelledby="prog-h"><h2 id="prog-h">Your progress</h2>' +
+      '<div class="prog__tiles">' + tiles + '</div>' + tip +
+      '<div class="prog__chart"><p class="prog__legend"><span class="prog__key prog__key--mast"></span>Mastered <span class="prog__key prog__key--learn"></span>In progress <span class="prog__key prog__key--ex">%</span>Exam accuracy</p>' +
+      '<ul class="prog__chs">' + cells + '</ul></div></section>';
+  }
+
+  /* iPhone / iPad in the browser (not installed): one dismissible hint on the home page. */
+  function iosHintHTML() {
+    var ua = navigator.userAgent || '';
+    var ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    var installed = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || navigator.standalone;
+    if (!ios || installed || store.get('iosHintDone', false)) return '';
+    var device = /iPad/.test(ua) || /Macintosh/.test(ua) ? 'iPad' : 'iPhone';
+    return '<div class="wrap ios-hint-wrap"><div class="ios-hint" role="note">' +
+      '<svg class="ios-hint__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m0 0L8 7m4-4l4 4M7 10H6a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7a2 2 0 0 0-2-2h-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+      '<div><p class="ios-hint__title">' + esc(tf('ios.title', { device: device })) + '</p><p class="ios-hint__text">' + rich(t('ios.text')) + '</p></div>' +
+      '<button type="button" class="btn btn--small" id="ios-hint-ok">' + esc(t('ios.dismiss')) + '</button></div></div>';
+  }
+
   function renderHome() {
     var chs = allChapters();
     var last = store.get('last', null);
@@ -555,7 +632,7 @@
           '<div class="bloom__art">' + budSVG() + branchSVG(chapterModes(focus).length) + '</div><ul class="spectrum">' + spectrum + '</ul>' +
         '</nav>' +
       '</div></section>' +
-      newsStrip + todayPanel +
+      iosHintHTML() + newsStrip + todayPanel + progressHTML(chs) +
       '<section class="wrap home-section"><h2>Chapters</h2><ul class="chapter-list">' + rows + '</ul></section>' +
       '<section class="wrap home-section"><h2>Reference library</h2><div class="tools tools--lib">' +
         LIBRARY.map(function (l) { return '<a class="tool tool--lib c-' + l.css + '" href="' + l.href + '"><span class="tool__name">' + esc(l.label) + '</span><span class="tool__meta">' + esc(l.blurb) + '</span></a>'; }).join('') +
@@ -566,6 +643,8 @@
         '<div><h3>Review a little every day</h3><p>Do the day’s due cards, sit a timed exam each week, and clear your mistakes pile. Progress stays on this device; use <a href="#backup" class="js-backup-link">Backup progress</a> in the footer to move it to another one.</p></div>' +
       '</div></section>';
     setView('home', html);
+    var iosOk = main.querySelector('#ios-hint-ok');
+    if (iosOk) iosOk.addEventListener('click', function () { store.set('iosHintDone', true); var w = main.querySelector('.ios-hint-wrap'); if (w) w.remove(); });
     document.title = APP;
   }
 
@@ -703,7 +782,8 @@
           return '<section class="g-sec" id="' + s.id + '" aria-labelledby="' + s.id + '-h"><div class="g-sec__head"><h3 id="' + s.id + '-h"><span class="g-n">' + ch.number + '.' + n + '</span><span>' + esc(s.title) + '</span></h3>' +
             bookmarkBtn(bk, '#/c/' + ch.id + '/guide/' + s.id, s.title, 'Chapter ' + ch.number + ' study guide') + '</div>' +
             (s.pages ? '<p class="g-pages">Book p' + (String(s.pages).match(/[–-]/) ? 'p' : '') + '. ' + esc(s.pages) + '</p>' : '') +
-            s.blocks.map(function (b, i) { return blockHTML(b, s.id + '--' + i); }).join('') + '</section>';
+            s.blocks.map(function (b, i) { return blockHTML(b, s.id + '--' + i); }).join('') +
+            '<p class="report-row">' + reportLink('Chapter ' + ch.number + ' study guide, ' + ch.number + '.' + n + ' ' + s.title, '#/c/' + ch.id + '/guide/' + s.id) + '</p></section>';
         }).join('');
     }).join('');
     var g = ch.guide;
@@ -877,7 +957,8 @@
             '<button class="btn" type="button" id="prev"' + (canPrev ? '' : ' disabled') + '>Previous</button><span class="card-nav__pos">Card ' + (st.pos + 1) + ' of ' + o.queue.length + '</span>') +
           '<div class="card-nav__main">' + controls + '</div>' +
           (o.consume ? '' : '<button class="btn" type="button" id="next"' + (canNext ? '' : ' disabled') + '>Next</button>') +
-        '</div>';
+        '</div>' +
+        (st.flipped ? '<p class="report-row">' + reportLink('Chapter ' + r.ch.number + ' ' + r.deck.short + ' card ' + c.id + (c.tag ? ' (' + c.tag + ')' : ''), '#/c/' + r.ch.id + '/cards/' + r.deck.key + '/' + c.id) + '</p>' : '');
       area.querySelectorAll('.face').forEach(function (f) { linkTerms(f, { skip: '.choice, .face__top, .verdict' }); });
 
       var fc = area.querySelector('#fc');
@@ -1344,6 +1425,7 @@
       '<div class="exam-q review-q"><p class="exam-q__meta">Question ' + (n + 1) + ' of ' + list.length + ', Chapter ' + r.ch.number + ', ' + esc(c.tag || '') + '</p>' +
         '<p class="verdict ' + (ok ? 'is-right">Correct' : x.a == null ? 'is-wrong">Not answered' : 'is-wrong">Incorrect') + '</p>' +
         '<p class="exam-q__stem">' + fmt(c.q) + '</p><ul class="choices choices--static">' + choices + '</ul><p class="face__why">' + fmt(c.why) + '</p>' +
+        '<p class="report-row">' + reportLink('Chapter ' + r.ch.number + ' board question ' + c.id + (c.tag ? ' (' + c.tag + ')' : '')) + '</p>' +
         '<div class="card-nav"><a class="btn' + (n ? '' : ' is-disabled') + '" ' + (n ? 'href="' + base + (n - 1) + '"' : 'aria-disabled="true"') + '>Previous</a>' +
         '<a class="btn btn--solid" href="' + (n < list.length - 1 ? base + (n + 1) : '#/exam/results/' + id) + '">' + (n < list.length - 1 ? 'Next' : 'Back to results') + '</a></div></div>' +
       '</div>';
@@ -2410,7 +2492,7 @@
         (d.facts && d.facts.length ? '<section class="lib-sec"><h2>From the chapters</h2>' + factsHTML(d.facts) + '</section>' : '') +
         updatesHTML(d.updates) +
       '</div><aside class="lib-side"><h2>Discussed in</h2><div class="ref-chips">' + (d.chapters || []).map(chRef).join('') + '</div>' +
-        relatedDrugsHTML(d) + '</aside></div></div>';
+        relatedDrugsHTML(d) + '<p class="report-row report-row--side">' + reportLink('Drug database, ' + d.name, '#/drugs/' + d.id) + '</p></aside></div></div>';
     setView('drug:' + id, html);
     bindBookmarks(main);
     linkTerms(main.querySelector('.lib-main'));
@@ -3358,6 +3440,12 @@
       return '<label><input type="radio" name="' + esc(name) + '" value="' + esc(o[0]) + '"' + (cur === o[0] ? ' checked' : '') + '><span>' + esc(o[1]) + '</span></label>';
     }).join('') + '</div></fieldset>';
   }
+  var reportFoot = document.getElementById('report-foot');
+  if (reportFoot) reportFoot.addEventListener('click', function () {
+    var where = (document.title || APP).replace(new RegExp('\\s*—\\s*' + APP.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '$'), '') || 'Home';
+    reportFoot.setAttribute('href', reportHref(where === APP ? 'Home' : where));
+  });
+
   function renderAbout() {
     var sizes = TEXT_SIZES.map(function (z) { return [z[0], t(z[1])]; });
     var html = '<div class="wrap page about-page"><header class="page__head"><h1>' + esc(t('nav.about')) + '</h1><p>' + esc(META.tagline || '') + '</p></header>' +
