@@ -48,7 +48,7 @@ python3 -u tests/r2_practice.py                         # confidence, topics, ex
 ```
 Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.email="isaymotion@gmail.com" commit -m "…" && git push origin main`.
 
-## 6. Status (as of 2026-11-09, main = ba73af3, version 27.0.0)
+## 6. Status (as of 2026-11-10, main = ba73af3, version 27.0.0)
 | Area | State |
 |---|---|
 | Chapters 1–13 | Done: 247 guide sections, 1,102 high-yield points, 726 mech / 268 drug / 200 clinical cards, 608 board questions, 469 glossary terms |
