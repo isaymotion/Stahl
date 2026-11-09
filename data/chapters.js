@@ -112,6 +112,7 @@ SP.extraFiles = [
   'data/db/drugs.js',
   'data/db/families.js',
   'data/db/circuits.js',
-  'data/db/monitoring.js'
+  'data/db/monitoring.js',
+  'data/topics.js'
 ];
 /* Release notes (data/changelog.js) are loaded by index.html, before the app starts. */

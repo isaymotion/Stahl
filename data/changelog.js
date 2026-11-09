@@ -9,6 +9,34 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "24.0.0",
+    "date": "2026-11-09",
+    "title": "Practice engine: confidence, topics and weak spots",
+    "summary": "Mark how sure you are, see your strength by topic across all chapters, and build exams from topics or from your own mistakes.",
+    "items": [
+      {
+        "type": "feature",
+        "text": "How sure are you? On every board question, in the decks and in exams, you can mark Sure, Unsure or Guessing before you answer (keys S, U, G). A wrong answer you were sure of is flagged as a confident miss: a misconception, not a slip. Confident misses come first in your mistakes pile and get their own row in exam results. Turn the question off on the exam page if you prefer."
+      },
+      {
+        "type": "feature",
+        "text": "Topics and weak spots: every flashcard and board question now belongs to one of 28 topics that run across chapters (for example, GABA pulls questions from seven chapters, from anxiety to sleep to addiction). The map shows your strength in each topic from your last few tries, with your weakest topics on the home page.",
+        "href": "#/topics",
+        "link": "Open the map"
+      },
+      {
+        "type": "feature",
+        "text": "Practise a topic: cards and questions from every chapter that covers it, mixed together, weak and due items first. Mixing chapters this way makes review stick better than one chapter at a time."
+      },
+      {
+        "type": "feature",
+        "text": "Exam by topic or from your mistakes: the exam page can now build an exam from the topics you choose (or your weakest three in one tap) or from your mistakes pile, optionally with fresh questions on the same topics. A correct answer clears the question from the pile.",
+        "href": "#/exam",
+        "link": "Exam"
+      }
+    ]
+  },
+  {
     "version": "23.0.0",
     "date": "2026-11-09",
     "title": "Your progress, error reports, iPhone install hint",

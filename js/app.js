@@ -206,9 +206,10 @@
   /* ---------- mistakes ---------- */
   var MISTAKES = store.get('mistakes', {});
   function saveMistakes() { store.set('mistakes', MISTAKES); updateNavBadges(); }
-  function addMistake(key, src) {
+  function addMistake(key, src, conf) {
     var m = MISTAKES[key] || { n: 0 };
     m.n++; m.t = Date.now(); m.src = src;
+    if (conf === 'sure') m.sure = 1; else if (conf) delete m.sure;
     MISTAKES[key] = m; saveMistakes();
   }
   function clearMistake(key) { if (MISTAKES[key]) { delete MISTAKES[key]; saveMistakes(); } }
@@ -224,6 +225,73 @@
     return '<a class="report-link" href="' + esc(reportHref(where, hash)) + '">' + esc(t('report.link')) + '</a>';
   }
   function mistakeKeys() { return Object.keys(MISTAKES).filter(function (k) { return CARDS[k]; }).sort(function (a, b) { return MISTAKES[b].t - MISTAKES[a].t; }); }
+
+  /* ---------- topics, attempts and confidence (practice engine, 24.0.0) ----------
+     SP.topics (data/topics.js) is a fixed list of cross-chapter topics; SP.topicMap maps every card and
+     board question ("chNN/deck/id") to one of them. ATT keeps the last few outcomes of every item as a short
+     string, newest last: upper case = right, lower case = wrong; S/s sure, U/u unsure, G/g guess, R/w no
+     confidence given. Flashcard ratings count too: Again = w, Hard = U, Good/Easy = S. */
+  var TOPICS = [], TOPIC = {}, TOPIC_GROUPS = [];
+  function indexTopics() {               // after data/topics.js has loaded (SP.extraFiles)
+    TOPICS = SP.topics || []; TOPIC = {}; TOPIC_GROUPS = [];
+    TOPICS.forEach(function (tp, i) { tp.i = i; TOPIC[tp.id] = tp; if (TOPIC_GROUPS.indexOf(tp.group) < 0) TOPIC_GROUPS.push(tp.group); });
+  }
+  function topicOf(key) { var id = (SP.topicMap || {})[key]; return id && TOPIC[id] ? id : null; }
+  function topicKeys(id, deckFilter) {
+    return CARD_LIST.filter(function (r) { return topicOf(r.key) === id && (!deckFilter || deckFilter(r.deck.key)); }).map(function (r) { return r.key; });
+  }
+  var ATT = store.get('att', {});
+  var CONF = { S: 'sure', U: 'unsure', G: 'guess' };
+  function confAsk() { return store.get('confAsk', true); }
+  function recordAttempt(key, ok, conf) {
+    var ch = conf === 'sure' ? 'S' : conf === 'unsure' ? 'U' : conf === 'guess' ? 'G' : (ok ? 'R' : 'W');
+    if (!ok) ch = ch.toLowerCase();
+    var a = ATT[key] || { h: '' };
+    a.h = (a.h + ch).slice(-8); a.t = Date.now();
+    ATT[key] = a; store.set('att', ATT);
+  }
+  function lastOutcome(key) { var a = ATT[key]; return a && a.h ? a.h.charAt(a.h.length - 1) : ''; }
+  function isConfidentMiss(key) { return lastOutcome(key) === 's'; }
+  /* Item score: share right over its last 3 attempts. Topic strength: mean item score over attempted items. */
+  function itemScore(key) {
+    var a = ATT[key]; if (!a || !a.h) return null;
+    var h = a.h.slice(-3), ok = 0;
+    for (var i = 0; i < h.length; i++) if (h.charAt(i) === h.charAt(i).toUpperCase()) ok++;
+    return ok / h.length;
+  }
+  var MIN_TOPIC_DATA = 5;
+  function topicStats(id) {
+    var keys = topicKeys(id), s = { id: id, total: keys.length, q: 0, tried: 0, sum: 0, mastered: 0, started: 0, sureMiss: 0, due: 0, chs: {} };
+    keys.forEach(function (k) {
+      var r = CARDS[k]; s.chs[r.ch.number] = 1;
+      if (r.deck.key === 'cases') s.q++;
+      var sc = itemScore(k); if (sc != null) { s.tried++; s.sum += sc; }
+      var st = cardStatus(k); if (st !== 'new') s.started++; if (st === 'mastered') s.mastered++;
+      if (isConfidentMiss(k)) s.sureMiss++;
+      if (isDue(k)) s.due++;
+    });
+    s.chapters = Object.keys(s.chs).map(Number).sort(function (a, b) { return a - b; });
+    s.strength = s.tried >= MIN_TOPIC_DATA ? s.sum / s.tried : null;
+    return s;
+  }
+  function strengthBand(v) { return v == null ? 'none' : v >= 0.8 ? 'good' : v >= 0.6 ? 'mid' : 'low'; }
+  function weakestTopics(n) {
+    return TOPICS.map(function (tp) { return topicStats(tp.id); }).filter(function (s) { return s.strength != null; })
+      .sort(function (a, b) { return a.strength - b.strength || b.tried - a.tried; }).slice(0, n || 3);
+  }
+  /* Confidence chips for a board question (Player front and exam). */
+  function confChips(cur, compact) {
+    return '<div class="conf' + (compact ? ' conf--compact' : '') + '" role="group" aria-label="How sure are you?"><span class="conf__label">How sure are you?</span>' +
+      [['sure', 'Sure', 'S'], ['unsure', 'Unsure', 'U'], ['guess', 'Guessing', 'G']].map(function (c) {
+        return '<button class="conf__b conf__b--' + c[0] + '" type="button" data-conf="' + c[0] + '" aria-pressed="' + (cur === c[0]) + '" aria-keyshortcuts="' + c[2] + '">' + c[1] + '</button>';
+      }).join('') + '</div>';
+  }
+  function confNote(conf, ok) {
+    if (!conf) return '';
+    if (conf === 'sure' && !ok) return '<p class="conf-note is-warn"><b>Confident miss.</b> You were sure, so this is a misconception worth fixing: reread the explanation and the book page.</p>';
+    if (conf !== 'sure' && ok) return '<p class="conf-note">Right, but you were ' + (conf === 'guess' ? 'guessing' : 'unsure') + '. It stays in your weak spots until you get it right with confidence.</p>';
+    return '';
+  }
 
   /* ---------- router ---------- */
   var view = { key: null, focus: null, cleanup: null };
@@ -280,10 +348,13 @@
       case 'soon': return renderSoon(p[1]);
       case 'review': return renderReview(p[1]);
       case 'mistakes': return renderMistakes();
+      case 'topics': return p[1] ? (p[2] === 'cards' ? renderTopicCards(p[1]) : renderTopic(p[1])) : renderTopics();
       case 'exam':
         if (p[1] === 'run') return renderExamRun();
         if (p[1] === 'results') return renderExamResults(p[2]);
         if (p[1] === 'review') return renderExamReview(p[2], p[3] || 'missed', parseInt(p[4] || '0', 10));
+        if (p[1] === 'topic') return presetExam('topics', p[2]);
+        if (p[1] === 'mistakes') return presetExam('mistakes');
         return renderExamSetup();
       case 'glossary': return renderGlossary(p[1]);
       case 'helpers': return p[1] ? renderHelper(p[1]) : renderHelpers();
@@ -344,6 +415,7 @@
       exam: 'M12 6a7 7 0 1 0 0 14a7 7 0 1 0 0-14z M12 10v3.5l2.5 2 M10 3h4',
       mistakes: 'M12 4l9 16H3z M12 10v4 M12 17v.5',
       bookmarks: 'M7 4h10v16l-5-4-5 4z',
+      topics: 'M4 4h7v7H4z M13 4h7v7h-7z M4 13h7v7H4z M13 13h7v7h-7z',
       teach: 'M4 5h16v11H4z M9 20h6 M12 16v4',
       print: 'M7 9V4h10v5 M6 17H4V9h16v8h-2 M7 14h10v6H7z',
       news: 'M5 5h11v14H7a2 2 0 0 1-2-2z M16 9h3v8a2 2 0 0 1-2 2',
@@ -381,6 +453,7 @@
         item('#/review', 'review', 'nav.review', 'review', 'review') +
         item('#/exam', 'exam', 'nav.exam', 'exam') +
         item('#/mistakes', 'mistakes', 'nav.mistakes', 'mistakes', 'mistakes') +
+        item('#/topics', 'topics', 'nav.topics', 'topics') +
         item('#/bookmarks', 'bookmarks', 'nav.bookmarks', 'bookmarks') +
       '</ul></div>' +
       '<div class="nav-group"><p class="nav-label">' + esc(t('nav.chapters')) + '</p><ol class="nav-chapters">' + chList + '</ol></div>' +
@@ -512,7 +585,7 @@
   function progressHTML(chs) {
     var tAll = tallyKeys(CARD_LIST.map(function (r) { return r.key; }));
     var ex = examStats(), mk = mistakeKeys().length;
-    if (tAll.total === tAll.fresh && !ex.exams) {
+    if (tAll.total === tAll.fresh && !ex.exams && !Object.keys(ATT).length) {
       return '<section class="wrap home-section prog" aria-labelledby="prog-h"><h2 id="prog-h">Your progress</h2>' +
         '<p class="prog__empty">Nothing yet. Rate a few flashcards or sit a short exam and your progress across all ' + chs.length + ' chapters shows up here.</p></section>';
     }
@@ -538,11 +611,15 @@
         '<span class="prog__pct">' + mPct + '%</span>' +
         '<span class="prog__ex">' + (b ? pct(b.right, b.n) + '%' : '–') + '</span></a></li>';
     }).join('');
+    var wt = weakestTopics(3);
+    var tTip = wt.length
+      ? '<p class="prog__tip">Weakest topics: ' + wt.map(function (w) { return '<a href="#/topics/' + w.id + '">' + esc(TOPIC[w.id].label) + '</a> (' + Math.round(w.strength * 100) + '%)'; }).join(', ') + '. <a href="#/topics">Open the weak-spot map</a>.</p>'
+      : '<p class="prog__tip"><a href="#/topics">Topics and weak spots</a>: your strength by topic, across chapters, fills in as you practise.</p>';
     var tip = weak
       ? '<p class="prog__tip">Weakest on exams: <a href="#/c/' + weak.ch.id + '/guide">Chapter ' + weak.ch.number + ', ' + esc(weak.ch.short || weak.ch.title) + '</a> (' + weak.right + ' of ' + weak.n + ' right). Reread its high-yield page, then sit a short exam on it.</p>'
       : '';
     return '<section class="wrap home-section prog" aria-labelledby="prog-h"><h2 id="prog-h">Your progress</h2>' +
-      '<div class="prog__tiles">' + tiles + '</div>' + tip +
+      '<div class="prog__tiles">' + tiles + '</div>' + tip + tTip +
       '<div class="prog__chart"><p class="prog__legend"><span class="prog__key prog__key--mast"></span>Mastered <span class="prog__key prog__key--learn"></span>In progress <span class="prog__key prog__key--ex">%</span>Exam accuracy</p>' +
       '<ul class="prog__chs">' + cells + '</ul></div></section>';
   }
@@ -894,7 +971,7 @@
      o.after    called after every change (to refresh tallies) */
   var LETTERS = 'ABCDE';
   function Player(area, o) {
-    var st = { pos: o.pos || 0, flipped: false, chosen: null };
+    var st = { pos: o.pos || 0, flipped: false, chosen: null, conf: null };
     var stats = { rated: 0, again: 0, right: 0, wrong: 0, cleared: 0 };
 
     function cur() { return CARDS[o.queue[st.pos]]; }
@@ -910,7 +987,7 @@
       if (!o.queue.length || st.pos >= o.queue.length) {
         area.innerHTML = o.done(stats);
         var again = area.querySelector('[data-restart]');
-        if (again) again.addEventListener('click', function () { st.pos = 0; st.flipped = false; st.chosen = null; draw(); });
+        if (again) again.addEventListener('click', function () { st.pos = 0; st.flipped = false; st.chosen = null; st.conf = null; draw(); });
         var rr = area.querySelector('[data-rerender]');
         if (rr) rr.addEventListener('click', function () { route(); });
         return;
@@ -918,19 +995,21 @@
       var r = cur(), c = r.c, key = r.key, isCase = !!c.choices;
       var front, back;
       if (isCase) {
-        front = '<p class="face__q">' + fmt(c.q) + '</p><ul class="choices">' + c.choices.map(function (ch2, i) {
+        front = '<p class="face__q">' + fmt(c.q) + '</p>' + (confAsk() ? confChips(st.conf) : '') + '<ul class="choices">' + c.choices.map(function (ch2, i) {
           return '<li><button class="choice" type="button" data-choice="' + i + '"><span class="choice__key">' + LETTERS[i] + '</span><span>' + fmt(ch2) + '</span></button></li>';
-        }).join('') + '</ul><p class="face__hint">Choose an answer to turn the card.</p>';
+        }).join('') + '</ul><p class="face__hint">' + (confAsk() ? 'Optional: mark how sure you are first, then choose an answer.' : 'Choose an answer to turn the card.') + '</p>';
         var right = st.chosen === c.answer;
         var verdict = st.chosen == null ? '<p class="verdict">Answer</p>' :
           '<p class="verdict ' + (right ? 'is-right">Correct' : 'is-wrong">Not quite. You chose ' + LETTERS[st.chosen]) + '</p>';
-        back = verdict + '<p class="face__recap">' + fmt(c.q) + '</p>' + choiceList(c.choices, c.answer, st.chosen) + '<p class="face__why">' + fmt(c.why) + '</p>';
+        back = verdict + (st.chosen != null ? confNote(st.conf, right) : '') + '<p class="face__recap">' + fmt(c.q) + '</p>' + choiceList(c.choices, c.answer, st.chosen) + '<p class="face__why">' + fmt(c.why) + '</p>';
       } else {
         front = '<p class="face__q">' + fmt(c.q) + '</p><p class="face__hint">Tap the card or press Space to see the answer.</p>';
         back = '<p class="face__q face__q--small">' + fmt(c.q) + '</p><p class="face__a">' + fmt(c.a) + '</p>' + (c.why ? '<p class="face__why">' + fmt(c.why) + '</p>' : '');
       }
       var src = o.source ? '<span class="face__src">Ch ' + r.ch.number + ', ' + esc(r.deck.short) + '</span>' : '';
-      var top = '<div class="face__top"><span class="face__tag c-' + r.deck.css + '">' + esc(c.tag || r.deck.short) + '</span>' + src + '<span class="face__status">' + esc(o.mode === 'mistakes' ? 'Missed ' + plural((MISTAKES[key] || { n: 1 }).n, 'time') : statusLabel(key)) + '</span></div>';
+      var tpId = topicOf(key), tpTag = o.topicTag !== false && tpId ? '<a class="face__topic" href="#/topics/' + tpId + '">' + esc(TOPIC[tpId].label) + '</a>' : '';
+      var mStat = o.mode === 'mistakes' ? 'Missed ' + plural((MISTAKES[key] || { n: 1 }).n, 'time') + ((MISTAKES[key] || {}).sure ? ', confident' : '') : statusLabel(key);
+      var top = '<div class="face__top"><span class="face__tag c-' + r.deck.css + '">' + esc(c.tag || r.deck.short) + '</span>' + src + tpTag + '<span class="face__status">' + esc(mStat) + '</span></div>';
 
       var controls;
       if (!st.flipped) {
@@ -940,7 +1019,7 @@
         controls = '<p class="cleared ' + (ok ? 'is-right' : 'is-wrong') + '">' + (ok ? 'Cleared from your mistakes.' : 'This question stays in your mistakes.') + '</p><button class="btn btn--solid" type="button" id="next-m">Next question</button>';
       } else {
         var s = SRS[key];
-        var suggest = isCase && st.chosen != null ? (st.chosen === c.answer ? 3 : 1) : 0;
+        var suggest = isCase && st.chosen != null ? (st.chosen === c.answer ? (st.conf && st.conf !== 'sure' ? 2 : 3) : 1) : 0;
         controls = '<div class="rate" role="group" aria-label="How well did you know this?">' + [[1, 'Again'], [2, 'Hard'], [3, 'Good'], [4, 'Easy']].map(function (g) {
           return '<button class="btn rate__b rate__b--' + g[0] + (suggest === g[0] ? ' is-suggested' : '') + '" type="button" data-rate="' + g[0] + '"><span>' + g[1] + '</span><small>' + ivLabel(srsNext(s, g[0]).i) + '</small></button>';
         }).join('') + '</div>';
@@ -963,7 +1042,9 @@
 
       var fc = area.querySelector('#fc');
       fc.addEventListener('click', function (e) {
-        if (e.target.closest('.gl')) return;
+        if (e.target.closest('.gl, .face__topic')) return;
+        var cb = e.target.closest('[data-conf]');
+        if (cb) { setConf(cb.getAttribute('data-conf')); return; }
         var b = e.target.closest('[data-choice]');
         if (b) { choose(parseInt(b.getAttribute('data-choice'), 10)); return; }
         if (isCase && !st.flipped) return;
@@ -984,27 +1065,34 @@
       }).join('') + '</ul>';
     }
     function bind(sel, fn) { var el = area.querySelector(sel); if (el) el.addEventListener('click', fn); }
+    function setConf(v) {
+      st.conf = st.conf === v ? null : v;
+      area.querySelectorAll('.face--front [data-conf]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-conf') === st.conf)); });
+    }
     function flip() { st.flipped = !st.flipped; draw(); refocus(); }
     function choose(i) {
       var r = cur(); st.chosen = i; st.flipped = true;
       var ok = i === r.c.answer;
       if (ok) stats.right++; else stats.wrong++;
+      if (!ok && st.conf === 'sure') stats.sureMiss = (stats.sureMiss || 0) + 1;
+      recordAttempt(r.key, ok, st.conf);
       if (o.mode === 'mistakes') {
-        if (ok) { clearMistake(r.key); stats.cleared++; rateCard(r.key, 3); }
-        else { addMistake(r.key, 'mistakes'); rateCard(r.key, 1); }
-      } else if (!ok) addMistake(r.key, 'cards');
+        if (ok) { clearMistake(r.key); stats.cleared++; rateCard(r.key, st.conf && st.conf !== 'sure' ? 2 : 3); }
+        else { addMistake(r.key, 'mistakes', st.conf); rateCard(r.key, 1); }
+      } else if (!ok) addMistake(r.key, 'cards', st.conf);
       draw(); refocus();
     }
     function go(d) {
       var np = st.pos + d;
       if (np < 0 || np >= o.queue.length) return;
-      st.pos = np; st.flipped = false; st.chosen = null; draw(); refocus();
+      st.pos = np; st.flipped = false; st.chosen = null; st.conf = null; draw(); refocus();
     }
     function rate(g) {
       var r = cur(); if (!r) return;
       rateCard(r.key, g);
+      if (!r.c.choices) recordAttempt(r.key, g > 1, g === 1 ? null : g === 2 ? 'unsure' : 'sure');
       stats.rated++; if (g === 1) stats.again++;
-      st.flipped = false; st.chosen = null;
+      st.flipped = false; st.chosen = null; st.conf = null;
       if (o.consume) {
         var k = o.queue.splice(st.pos, 1)[0];
         if (g === 1) o.queue.splice(Math.min(st.pos + 4, o.queue.length), 0, k);
@@ -1014,7 +1102,7 @@
       draw(); refocus();
     }
     function advanceMistake() {
-      st.flipped = false; st.chosen = null;
+      st.flipped = false; st.chosen = null; st.conf = null;
       o.queue.splice(st.pos, 1);
       draw(); refocus();
     }
@@ -1036,6 +1124,8 @@
       } else if (k === 'ArrowLeft' && !o.consume) { e.preventDefault(); go(-1); }
       else if (c.choices && !st.flipped && /^[a-e]$/i.test(k)) {
         var i = 'abcde'.indexOf(k.toLowerCase()); if (i < c.choices.length) { e.preventDefault(); choose(i); }
+      } else if (c.choices && !st.flipped && confAsk() && /^[sug]$/i.test(k)) {
+        e.preventDefault(); setConf({ s: 'sure', u: 'unsure', g: 'guess' }[k.toLowerCase()]);
       } else if (st.flipped && o.mode !== 'mistakes' && /^[1-4]$/.test(k)) { e.preventDefault(); rate(parseInt(k, 10)); }
     }
     document.addEventListener('keydown', onKey);
@@ -1050,7 +1140,7 @@
       '<span><b>' + t.due + '</b> due today</span>';
   }
   function kbdHelp(cases) {
-    return '<p class="kbd-help"><kbd>Space</kbd> flip' + (cases ? ' <kbd>A</kbd>\u2013<kbd>E</kbd> answer' : '') + ' <kbd>1</kbd>\u2013<kbd>4</kbd> rate Again, Hard, Good, Easy</p>';
+    return '<p class="kbd-help"><kbd>Space</kbd> flip' + (cases ? ' <kbd>A</kbd>\u2013<kbd>E</kbd> answer' + (confAsk() ? ' <kbd>S</kbd> <kbd>U</kbd> <kbd>G</kbd> sure, unsure, guessing' : '') : '') + ' <kbd>1</kbd>\u2013<kbd>4</kbd> rate Again, Hard, Good, Easy</p>';
   }
 
   /* ---------- deck view ---------- */
@@ -1184,21 +1274,23 @@
   /* ---------- mistakes ---------- */
   function renderMistakes() {
     var keys = mistakeKeys();
+    var sureN = keys.filter(function (k) { return MISTAKES[k].sure; }).length;
     var list = keys.map(function (k) {
       var r = CARDS[k];
-      return '<li class="mk"><div class="mk__meta"><span class="kind c-case">Ch ' + r.ch.number + ', ' + esc(r.c.tag || 'Case') + '</span><span>Missed ' + plural(MISTAKES[k].n, 'time') + '</span></div>' +
+      var tp = topicOf(k);
+      return '<li class="mk"><div class="mk__meta"><span class="kind c-case">Ch ' + r.ch.number + ', ' + esc(r.c.tag || 'Case') + '</span>' + (tp ? '<a href="#/topics/' + tp + '">' + esc(TOPIC[tp].label) + '</a>' : '') + '<span>Missed ' + plural(MISTAKES[k].n, 'time') + '</span>' + (MISTAKES[k].sure ? '<span class="tp__warn">Confident miss</span>' : '') + '</div>' +
         '<p class="mk__q">' + esc(plain(r.c.q)) + '</p><button class="link-btn" type="button" data-remove="' + esc(k) + '">Remove</button></li>';
     }).join('');
     var html = '<div class="wrap page">' +
-      '<header class="page__head"><h1>Mistakes</h1><p>Every board question you answer incorrectly, in the decks, daily review or an exam, lands here. Answer it correctly to clear it.</p></header>' +
-      (keys.length ? '<div class="deck-bar"><span class="deck-bar__count">' + plural(keys.length, 'question') + ' to revisit</span><button class="link-btn" type="button" id="mk-clear">Clear all mistakes</button></div><div id="card-area" aria-live="polite"></div>' +
+      '<header class="page__head"><h1>Mistakes</h1><p>Every board question you answer incorrectly, in the decks, daily review or an exam, lands here. Answer it correctly to clear it. Questions you got wrong while sure come first: those are misconceptions, not slips.</p></header>' +
+      (keys.length ? '<div class="deck-bar"><span class="deck-bar__count">' + plural(keys.length, 'question') + ' to revisit' + (sureN ? ', ' + plural(sureN, 'confident miss', 'confident misses') : '') + '</span><div class="deck-bar__right"><a class="btn btn--small" href="#/exam/mistakes">Quiz them as an exam</a><button class="link-btn" type="button" id="mk-clear">Clear all mistakes</button></div></div><div id="card-area" aria-live="polite"></div>' +
         '<details class="mk-list"><summary>See all ' + plural(keys.length, 'missed question') + '</summary><ul>' + list + '</ul></details>'
         : '<div class="empty"><h2>No mistakes yet</h2><p>Questions you get wrong will collect here so you can come back to them.</p><div class="empty__actions"><a class="btn btn--solid" href="#/exam">Take a practice exam</a><a class="btn" href="#/review">Daily review</a></div></div>') +
       '</div>';
     setView('mistakes', html);
     document.title = 'Mistakes — Stahl Study Companion';
     if (!keys.length) return;
-    var queue = shuffle(keys.slice());
+    var queue = shuffle(keys.slice()).sort(function (a, b) { return (MISTAKES[b].sure ? 1 : 0) - (MISTAKES[a].sure ? 1 : 0); });
     var player = Player(main.querySelector('#card-area'), {
       queue: queue, consume: true, mode: 'mistakes', source: true,
       done: function (stats) {
@@ -1217,6 +1309,148 @@
     });
   }
 
+  /* ---------- topics and weak-spot map (24.0.0) ---------- */
+  function confTableHTML(byConf, sureMiss) {
+    var order = [['sure', 'Sure'], ['unsure', 'Unsure'], ['guess', 'Guessing'], ['none', 'Not marked']];
+    var any = order.some(function (o) { return byConf[o[0]] && o[0] !== 'none'; });
+    if (!any) return '';
+    return '<section class="results-sec"><h2>Confidence</h2><p class="muted">When you are sure you should nearly always be right; guesses should be near chance. ' +
+      (sureMiss ? '<b>' + plural(sureMiss, 'confident miss', 'confident misses') + '</b>: these are the misconceptions to fix first.' : 'No confident misses this time.') + '</p>' +
+      '<div class="table-wrap"><table class="score-table"><thead><tr><th scope="col">You marked</th><th scope="col">Correct</th><th scope="col">Score</th></tr></thead><tbody>' +
+      order.filter(function (o) { return byConf[o[0]]; }).map(function (o) {
+        var v = byConf[o[0]], p = pct(v.ok, v.n);
+        return '<tr><th scope="row">' + o[1] + '</th><td>' + v.ok + ' of ' + v.n + '</td><td class="bar-cell"><span class="score-bar"><span style="width:' + p + '%" class="' + (p >= 70 ? 'is-good' : p >= 50 ? 'is-mid' : 'is-low') + '"></span></span><span class="score-pct">' + p + '%</span></td></tr>';
+      }).join('') + '</tbody></table></div></section>';
+  }
+  function chList(nums) { return nums.length ? 'Ch ' + nums.join(', ') : ''; }
+  function topicTileHTML(s) {
+    var tp = TOPIC[s.id], band = strengthBand(s.strength), v = s.strength == null ? null : Math.round(s.strength * 100);
+    return '<li><a class="tp tp--' + band + '" href="#/topics/' + s.id + '" aria-label="' + esc(tp.label) + ': ' + (v == null ? 'not enough practice yet' : 'strength ' + v + '%') + ', ' + s.tried + ' of ' + s.total + ' practised' + (s.sureMiss ? ', ' + s.sureMiss + ' confident misses' : '') + '">' +
+      '<span class="tp__name">' + esc(tp.label) + '</span>' +
+      '<span class="tp__bar" aria-hidden="true"><span style="width:' + (v == null ? 0 : v) + '%"></span></span>' +
+      '<span class="tp__meta"><b>' + (v == null ? '–' : v + '%') + '</b> · ' + s.tried + ' of ' + s.total + ' practised</span>' +
+      '<span class="tp__chs">' + chList(s.chapters) + (s.sureMiss ? ' <span class="tp__warn">' + s.sureMiss + ' confident ' + (s.sureMiss === 1 ? 'miss' : 'misses') + '</span>' : '') + '</span></a></li>';
+  }
+  function renderTopics() {
+    var sort = store.get('topicSort', 'book');
+    var all = TOPICS.map(function (tp) { return topicStats(tp.id); });
+    var weak = weakestTopics(3), tried = all.filter(function (s) { return s.tried; }).length;
+    var body;
+    if (sort === 'weak') {
+      var sorted = all.slice().sort(function (a, b) {
+        var x = a.strength == null ? 2 : a.strength, y = b.strength == null ? 2 : b.strength;
+        return x - y || b.tried - a.tried || TOPIC[a.id].i - TOPIC[b.id].i;
+      });
+      body = '<ul class="tp-grid">' + sorted.map(topicTileHTML).join('') + '</ul>';
+    } else {
+      body = TOPIC_GROUPS.map(function (g) {
+        return '<section class="tp-group"><h2>' + esc(g) + '</h2><ul class="tp-grid">' + all.filter(function (s) { return TOPIC[s.id].group === g; }).map(topicTileHTML).join('') + '</ul></section>';
+      }).join('');
+    }
+    var lead = weak.length
+      ? '<div class="banner tp-weak"><p><b>Weakest right now:</b> ' + weak.map(function (w) { return '<a href="#/topics/' + w.id + '">' + esc(TOPIC[w.id].label) + '</a> (' + Math.round(w.strength * 100) + '%)'; }).join(', ') + '.</p>' +
+        '<div class="empty__actions"><a class="btn btn--solid" href="#/topics/' + weak[0].id + '/cards">Practise the weakest</a><button class="btn" type="button" id="tp-exam-weak">Exam on these topics</button></div></div>'
+      : '<div class="banner tp-weak"><p>' + (tried ? 'Keep going: a topic gets a strength score once you have practised ' + MIN_TOPIC_DATA + ' of its items.' : 'Nothing practised yet. Rate flashcards or answer board questions anywhere in the app and this map fills in by topic, across all chapters.') + '</p></div>';
+    var html = '<div class="wrap page topics-page">' +
+      '<header class="page__head"><h1>Topics and weak spots</h1><p>The book teaches by chapter; boards and wards ask by topic. Every card and board question belongs to one of ' + TOPICS.length + ' topics that run across chapters. ' +
+        'Strength is the share you got right on your last three tries of each item you have practised (flashcard ratings count: Again is a miss). Practising a topic mixes its chapters together, which makes the review stick better.</p></header>' +
+      lead +
+      '<div class="deck-bar"><div class="deck-bar__opts"><label class="select"><span>Order</span><select id="tp-sort"><option value="book"' + (sort === 'book' ? ' selected' : '') + '>By group</option><option value="weak"' + (sort === 'weak' ? ' selected' : '') + '>Weakest first</option></select></label></div>' +
+        '<p class="tp-legend" aria-hidden="true"><span class="str-dot str-dot--low"></span>Below 60% <span class="str-dot str-dot--mid"></span>60–79% <span class="str-dot str-dot--good"></span>80% and up <span class="str-dot str-dot--none"></span>Not enough practice</p></div>' +
+      body + '</div>';
+    setView('topics', html);
+    document.title = 'Topics and weak spots — Stahl Study Companion';
+    main.querySelector('#tp-sort').addEventListener('change', function (e) { store.set('topicSort', e.target.value); renderTopics(); });
+    var we = main.querySelector('#tp-exam-weak');
+    if (we) we.addEventListener('click', function () {
+      var p = store.get('examPrefs', null) || {}; p.by = 'topics'; p.topics = weak.map(function (w) { return w.id; });
+      store.set('examPrefs', p); location.hash = '#/exam';
+    });
+  }
+  function renderTopic(id) {
+    var tp = TOPIC[id]; if (!tp) return renderMissing();
+    var s = topicStats(id), keys = topicKeys(id);
+    var v = s.strength == null ? null : Math.round(s.strength * 100);
+    var byCh = {};
+    keys.forEach(function (k) {
+      var r = CARDS[k], b = byCh[r.ch.id] || (byCh[r.ch.id] = { ch: r.ch, n: 0, tried: 0, sum: 0, decks: {} });
+      b.n++; b.decks[r.deck.short] = (b.decks[r.deck.short] || 0) + 1;
+      var sc = itemScore(k); if (sc != null) { b.tried++; b.sum += sc; }
+    });
+    var chRows = Object.keys(byCh).map(function (cid) { return byCh[cid]; }).sort(function (a, b) { return a.ch.number - b.ch.number; }).map(function (b) {
+      var p = b.tried ? Math.round(b.sum / b.tried * 100) : null;
+      return '<tr><th scope="row"><a href="#/c/' + b.ch.id + '/guide">Chapter ' + b.ch.number + ': ' + esc(b.ch.short || b.ch.title) + '</a></th><td>' + Object.keys(b.decks).map(function (d) { return b.decks[d] + ' ' + esc(d.toLowerCase()); }).join(', ') + '</td><td>' + b.tried + ' of ' + b.n + '</td>' +
+        '<td class="bar-cell">' + (p == null ? '<span class="muted">–</span>' : '<span class="score-bar"><span style="width:' + p + '%" class="' + (p >= 80 ? 'is-good' : p >= 60 ? 'is-mid' : 'is-low') + '"></span></span><span class="score-pct">' + p + '%</span>') + '</td></tr>';
+    }).join('');
+    var fix = keys.filter(function (k) { var sc = itemScore(k); return sc != null && sc < 1; }).sort(function (a, b) {
+      return (isConfidentMiss(b) - isConfidentMiss(a)) || itemScore(a) - itemScore(b) || ATT[b].t - ATT[a].t;
+    }).slice(0, 12);
+    var fixList = fix.map(function (k) {
+      var r = CARDS[k];
+      return '<li class="mk"><div class="mk__meta"><span class="kind c-' + r.deck.css + '">Ch ' + r.ch.number + ', ' + esc(r.deck.short) + '</span>' + (isConfidentMiss(k) ? '<span class="tp__warn">Confident miss</span>' : '<span>' + Math.round(itemScore(k) * 100) + '% on last tries</span>') + '</div>' +
+        '<p class="mk__q"><a href="#/c/' + r.ch.id + '/cards/' + r.deck.key + '/' + r.c.id + '">' + esc(plain(r.c.q)) + '</a></p></li>';
+    }).join('');
+    var mkHere = mistakeKeys().filter(function (k) { return topicOf(k) === id; }).length;
+    var html = '<div class="wrap page topic-page">' +
+      '<header class="page__head"><p class="crumb"><a href="#/topics">Topics and weak spots</a> · ' + esc(tp.group) + '</p><h1>' + esc(tp.label) + '</h1>' +
+        '<p>Covers ' + esc(tp.scope) + '. ' + plural(s.total, 'item') + ' from ' + (s.chapters.length === 1 ? 'Chapter ' + s.chapters[0] : 'Chapters ' + s.chapters.join(', ')) + ', including ' + plural(s.q, 'board question') + '.</p></header>' +
+      '<div class="prog__tiles tp-tiles">' +
+        '<div class="prog__tile tp--' + strengthBand(s.strength) + '"><span class="prog__n">' + (v == null ? '–' : v + '%') + '</span><span class="prog__label">strength</span><span class="prog__sub">' + (v == null ? 'Practise ' + MIN_TOPIC_DATA + ' items to see it' : 'Right on your last tries') + '</span></div>' +
+        '<div class="prog__tile"><span class="prog__n">' + s.tried + '</span><span class="prog__label">practised</span><span class="prog__sub">of ' + s.total + ' items</span></div>' +
+        '<div class="prog__tile"><span class="prog__n">' + s.mastered + '</span><span class="prog__label">mastered</span><span class="prog__sub">' + s.due + ' due today</span></div>' +
+        '<div class="prog__tile"><span class="prog__n">' + s.sureMiss + '</span><span class="prog__label">confident misses</span><span class="prog__sub">' + plural(mkHere, 'question') + ' in mistakes</span></div>' +
+      '</div>' +
+      '<div class="empty__actions tp-actions"><a class="btn btn--solid" href="#/topics/' + id + '/cards">Practise this topic</a>' +
+        (s.q ? '<a class="btn" href="#/exam/topic/' + id + '">Exam on this topic (' + s.q + ' questions)</a>' : '') + '</div>' +
+      (fix.length ? '<section class="results-sec"><h2>Items to fix</h2><p class="muted">Confident misses first, then the items you get wrong most. Open one to see it in its deck.</p><ul class="mk-list tp-fix">' + fixList + '</ul></section>' : '') +
+      '<section class="results-sec"><h2>Where it comes up</h2><div class="table-wrap"><table class="score-table"><thead><tr><th scope="col">Chapter</th><th scope="col">Items</th><th scope="col">Practised</th><th scope="col">Strength</th></tr></thead><tbody>' + chRows + '</tbody></table></div></section>' +
+      '</div>';
+    setView('topic:' + id, html);
+    document.title = tp.label + ' — Stahl Study Companion';
+  }
+  /* Topic practice: interleaved across chapters. Default session = weak items, then due, then new, shuffled
+     inside each band so the chapters mix; "All, shuffled" walks the whole topic. */
+  function renderTopicCards(id) {
+    var tp = TOPIC[id]; if (!tp) return renderMissing();
+    var prefs = store.get('topicPrefs', { mode: 'weak', size: 20 });
+    var keys = topicKeys(id);
+    var queue;
+    if (prefs.mode === 'all') queue = shuffle(keys.slice());
+    else {
+      var weakK = [], dueK = [], newK = [];
+      keys.forEach(function (k) { var sc = itemScore(k); if (sc != null && sc < 1) weakK.push(k); else if (isDue(k)) dueK.push(k); else if (!SRS[k]) newK.push(k); });
+      weakK.sort(function (a, b) { return (isConfidentMiss(b) - isConfidentMiss(a)) || itemScore(a) - itemScore(b); });
+      queue = weakK.concat(shuffle(dueK), shuffle(newK));
+      if (prefs.size) queue = queue.slice(0, prefs.size);
+      queue = shuffle(queue);
+    }
+    var sizeOpts = [10, 20, 40, 0].map(function (n) { return '<option value="' + n + '"' + (prefs.size === n ? ' selected' : '') + '>' + (n ? n + ' items' : 'No limit') + '</option>'; }).join('');
+    var html = '<div class="wrap page">' +
+      '<header class="page__head"><p class="crumb"><a href="#/topics">Topics and weak spots</a> · <a href="#/topics/' + id + '">' + esc(tp.label) + '</a></p><h1>Practise: ' + esc(tp.label) + '</h1>' +
+        '<p>Cards and board questions from ' + (topicStats(id).chapters.length > 1 ? 'every chapter that covers this topic, mixed together' : 'this topic') + '. Ratings update your daily-review schedule as usual.</p></header>' +
+      '<div class="deck-bar"><div class="deck-bar__opts">' +
+        '<label class="select"><span>Show</span><select id="tc-mode"><option value="weak"' + (prefs.mode !== 'all' ? ' selected' : '') + '>Weak, due and new first</option><option value="all"' + (prefs.mode === 'all' ? ' selected' : '') + '>All items, shuffled</option></select></label>' +
+        (prefs.mode !== 'all' ? '<label class="select"><span>Session</span><select id="tc-size">' + sizeOpts + '</select></label>' : '') +
+      '</div><span class="deck-bar__count">' + plural(queue.length, 'item') + '</span></div>' +
+      '<div id="card-area" aria-live="polite"></div>' + kbdHelp(true) + '</div>';
+    setView('topic-cards:' + id, html);
+    document.title = 'Practise ' + tp.label + ' — Stahl Study Companion';
+    var player = Player(main.querySelector('#card-area'), {
+      queue: queue, consume: prefs.mode !== 'all', mode: 'srs', source: true, topicTag: false,
+      done: function (stats) {
+        var s = topicStats(id);
+        return '<div class="empty"><h2>' + (stats.rated || stats.right || stats.wrong ? 'Session done' : 'Nothing to practise') + '</h2><p>' +
+          (s.strength != null ? 'Strength in ' + esc(tp.label) + ' is now ' + Math.round(s.strength * 100) + '%. ' : '') +
+          (stats.sureMiss ? plural(stats.sureMiss, 'confident miss', 'confident misses') + ' this round; they come back first next time. ' : '') + '</p>' +
+          '<div class="empty__actions"><button class="btn btn--solid" type="button" data-rerender>Another round</button>' + (s.q ? '<a class="btn" href="#/exam/topic/' + id + '">Exam on this topic</a>' : '') + '<a class="btn" href="#/topics">All topics</a></div></div>';
+      }
+    });
+    view.cleanup = function () { player.destroy(); };
+    main.querySelector('#tc-mode').addEventListener('change', function (e) { var p = store.get('topicPrefs', { mode: 'weak', size: 20 }); p.mode = e.target.value; store.set('topicPrefs', p); renderTopicCards(id); });
+    var sz = main.querySelector('#tc-size');
+    if (sz) sz.addEventListener('change', function (e) { var p = store.get('topicPrefs', { mode: 'weak', size: 20 }); p.size = parseInt(e.target.value, 10); store.set('topicPrefs', p); renderTopicCards(id); });
+  }
+
   /* ---------- exam mode ---------- */
   var SECS_PER_Q = 90;
   function caseKeys(chIds) {
@@ -1228,14 +1462,42 @@
     var chs = allChapters();
     var active = store.get('exam', null);
     var hist = store.get('examHistory', []);
-    var prefs = store.get('examPrefs', { chapters: chs.map(function (c) { return c.id; }), count: 20, timed: true });
+    var prefs = store.get('examPrefs', null) || {};
+    if (!prefs.chapters) prefs.chapters = chs.map(function (c) { return c.id; });
+    if (!prefs.topics) prefs.topics = [];
+    if (prefs.count == null) prefs.count = 20;
+    if (prefs.timed == null) prefs.timed = true;
+    if (['chapters', 'topics', 'mistakes'].indexOf(prefs.by) < 0) prefs.by = 'chapters';
+    var mkQ = mistakeKeys().filter(function (k) { return CARDS[k].deck.key === 'cases'; });
+    var mkSure = mkQ.filter(function (k) { return MISTAKES[k].sure; }).length;
+    var weak = weakestTopics(3);
+    var tStats = {}; TOPICS.forEach(function (tp) { tStats[tp.id] = topicStats(tp.id); });
+    var srcSeg = [['chapters', 'Chapters'], ['topics', 'Topics'], ['mistakes', 'My mistakes']].map(function (o) {
+      return '<label><input type="radio" name="by" value="' + o[0] + '"' + (prefs.by === o[0] ? ' checked' : '') + '><span>' + o[1] + '</span></label>';
+    }).join('');
+    var topicBoxes = TOPIC_GROUPS.map(function (g) {
+      return '<div class="topic-pick"><p class="topic-pick__g">' + esc(g) + '</p>' + TOPICS.filter(function (tp) { return tp.group === g; }).map(function (tp) {
+        var s = tStats[tp.id], band = strengthBand(s.strength);
+        return '<label class="check"><input type="checkbox" name="tp" value="' + tp.id + '"' + (prefs.topics.indexOf(tp.id) > -1 ? ' checked' : '') + (s.q ? '' : ' disabled') + '> ' + esc(tp.label) +
+          ' <span class="muted">(' + plural(s.q, 'question') + ')</span>' + (band !== 'none' ? ' <span class="str-dot str-dot--' + band + '" title="Your strength: ' + Math.round(s.strength * 100) + '%"><span class="sr-only">your strength ' + Math.round(s.strength * 100) + '%</span></span>' : '') + '</label>';
+      }).join('') + '</div>';
+    }).join('');
     var html = '<div class="wrap page exam-setup">' +
-      '<header class="page__head"><h1>Board-style exam</h1><p>Single-best-answer board questions drawn at random from the chapters you choose. Answer choices are shuffled. Timed exams allow ' + SECS_PER_Q + ' seconds per question, about board pace.</p></header>' +
+      '<header class="page__head"><h1>Board-style exam</h1><p>Single-best-answer board questions drawn at random from the chapters or topics you choose, or from your own mistakes. Answer choices are shuffled. Timed exams allow ' + SECS_PER_Q + ' seconds per question, about board pace.</p></header>' +
       (active ? '<div class="banner"><p>You have an exam in progress: ' + plural(active.items.length, 'question') + ', ' + active.items.filter(function (x) { return x.a != null; }).length + ' answered.</p><div class="empty__actions"><a class="btn btn--solid" href="#/exam/run">Resume exam</a><button class="btn" type="button" id="ex-discard">Discard it</button></div></div>' : '') +
       '<form class="exam-form" id="ex-form" onsubmit="return false">' +
-        '<fieldset><legend>Chapters</legend>' + chs.map(function (ch) {
+        '<fieldset><legend>Build the exam from</legend><div class="seg seg--src">' + srcSeg + '</div></fieldset>' +
+        '<fieldset data-src="chapters"><legend>Chapters</legend>' + chs.map(function (ch) {
           return '<label class="check"><input type="checkbox" name="ch" value="' + ch.id + '"' + (prefs.chapters.indexOf(ch.id) > -1 ? ' checked' : '') + '> Chapter ' + ch.number + ': ' + esc(ch.short || ch.title) + ' <span class="muted">(' + (ch.cases || []).length + ' questions)</span></label>';
         }).join('') + '</fieldset>' +
+        '<fieldset data-src="topics"><legend>Topics</legend><p class="muted fs-note">Each topic pulls questions from every chapter that covers it, so one exam mixes chapters.' +
+          (weak.length ? '' : ' Your strength per topic appears here once you have answered a few questions on it.') + '</p>' +
+          '<div class="topic-tools">' + (weak.length ? '<button class="btn btn--small" type="button" id="ex-weak">Pick my ' + plural(weak.length, 'weakest topic') + '</button>' : '') +
+          '<button class="link-btn" type="button" id="ex-tp-none">Clear</button><a class="link-btn" href="#/topics">See the weak-spot map</a></div>' + topicBoxes + '</fieldset>' +
+        '<fieldset data-src="mistakes"><legend>Mistakes</legend>' +
+          (mkQ.length ? '<p>' + plural(mkQ.length, 'missed question') + ' in your pile' + (mkSure ? ', ' + mkSure + ' of them confident misses' : '') + '. A correct answer in this exam clears the question from the pile.</p>' +
+            '<label class="check"><input type="checkbox" id="ex-related"' + (prefs.related !== false ? ' checked' : '') + '> Add new questions on the same topics, so you meet the idea again in a different question</label>'
+            : '<p>Your mistakes pile is empty. Questions you miss in the decks, daily review or an exam collect there.</p>') + '</fieldset>' +
         '<fieldset><legend>Questions</legend><div class="seg">' + [10, 20, 40, 0].map(function (n) {
           return '<label><input type="radio" name="count" value="' + n + '"' + (prefs.count === n ? ' checked' : '') + '><span>' + (n ? n : 'All') + '</span></label>';
         }).join('') + '</div></fieldset>' +
@@ -1243,38 +1505,66 @@
           '<label><input type="radio" name="timed" value="1"' + (prefs.timed ? ' checked' : '') + '><span>Timed</span></label>' +
           '<label><input type="radio" name="timed" value="0"' + (!prefs.timed ? ' checked' : '') + '><span>Untimed</span></label>' +
         '</div></fieldset>' +
+        '<label class="check"><input type="checkbox" id="ex-conf"' + (confAsk() ? ' checked' : '') + '> Ask how sure I am on each question (sure, unsure, guessing). Confident misses are flagged in the results.</label>' +
         '<p class="exam-form__sum" id="ex-sum"></p>' +
         '<button class="btn btn--solid" type="button" id="ex-start">Start exam</button>' +
       '</form>' +
-      (hist.length ? '<section class="exam-hist"><h2>Past exams</h2><div class="table-wrap"><table><thead><tr><th scope="col">Date</th><th scope="col">Chapters</th><th scope="col">Score</th><th scope="col">Time</th><th scope="col"><span class="sr-only">Results</span></th></tr></thead><tbody>' +
+      (hist.length ? '<section class="exam-hist"><h2>Past exams</h2><div class="table-wrap"><table><thead><tr><th scope="col">Date</th><th scope="col">From</th><th scope="col">Score</th><th scope="col">Time</th><th scope="col"><span class="sr-only">Results</span></th></tr></thead><tbody>' +
         hist.map(function (h) {
-          return '<tr><td>' + fmtDate(h.at) + '</td><td>' + h.chapters.map(function (id) { var c = chapter(id); return c ? c.number : id; }).join(', ') + '</td><td><b>' + pct(h.score, h.total) + '%</b> (' + h.score + '/' + h.total + ')</td><td>' + fmtClock(h.used) + '</td><td><a href="#/exam/results/' + h.id + '">Results</a></td></tr>';
+          return '<tr><td>' + fmtDate(h.at) + '</td><td>' + esc(examSourceLabel(h)) + '</td><td><b>' + pct(h.score, h.total) + '%</b> (' + h.score + '/' + h.total + ')</td><td>' + fmtClock(h.used) + '</td><td><a href="#/exam/results/' + h.id + '">Results</a></td></tr>';
         }).join('') + '</tbody></table></div></section>' : '') +
       '</div>';
     setView('exam', html);
     document.title = 'Exam — Stahl Study Companion';
     var form = main.querySelector('#ex-form');
+    function checked(name) { return Array.prototype.map.call(form.querySelectorAll('input[name=' + name + ']:checked'), function (i) { return i.value; }); }
     function read() {
-      var sel = Array.prototype.map.call(form.querySelectorAll('input[name=ch]:checked'), function (i) { return i.value; });
+      var by = form.querySelector('input[name=by]:checked').value;
       var count = parseInt(form.querySelector('input[name=count]:checked').value, 10);
       var timed = form.querySelector('input[name=timed]:checked').value === '1';
-      var pool = caseKeys(sel).length;
-      var n = count ? Math.min(count, pool) : pool;
-      return { chapters: sel, count: count, timed: timed, n: n, pool: pool };
+      var rel = form.querySelector('#ex-related');
+      var r = { by: by, chapters: checked('ch'), topics: checked('tp'), count: count, timed: timed, related: rel ? rel.checked : false, first: [], rest: [] };
+      if (by === 'chapters') r.rest = caseKeys(r.chapters);
+      else if (by === 'topics') r.topics.forEach(function (id) { r.rest = r.rest.concat(topicKeys(id, function (d) { return d === 'cases'; })); });
+      else {
+        r.first = mkQ.slice();
+        if (r.related) {
+          var seen = {}; mkQ.forEach(function (k) { seen[k] = 1; });
+          var tps = {}; mkQ.forEach(function (k) { var tp = topicOf(k); if (tp) tps[tp] = 1; });
+          Object.keys(tps).forEach(function (id) { topicKeys(id, function (d) { return d === 'cases'; }).forEach(function (k) { if (!seen[k]) { seen[k] = 1; r.rest.push(k); } }); });
+        }
+      }
+      r.pool = r.first.length + r.rest.length;
+      r.n = count ? Math.min(count, r.pool) : r.pool;
+      return r;
     }
     function summary() {
       var r = read();
-      main.querySelector('#ex-sum').textContent = r.pool ? plural(r.n, 'question') + ' from ' + plural(r.chapters.length, 'chapter') + (r.timed ? ', ' + fmtClock(r.n * SECS_PER_Q) + ' on the clock.' : ', no time limit.') : 'Choose at least one chapter.';
+      form.querySelectorAll('[data-src]').forEach(function (f) { f.hidden = f.getAttribute('data-src') !== r.by; });
+      var from = r.by === 'chapters' ? plural(r.chapters.length, 'chapter') : r.by === 'topics' ? plural(r.topics.length, 'topic') : 'your mistakes' + (r.related && r.rest.length ? ' and related questions' : '');
+      var none = r.by === 'chapters' ? 'Choose at least one chapter.' : r.by === 'topics' ? 'Choose at least one topic.' : 'No missed questions to quiz yet.';
+      main.querySelector('#ex-sum').textContent = r.pool ? plural(r.n, 'question') + ' from ' + from + (r.timed ? ', ' + fmtClock(r.n * SECS_PER_Q) + ' on the clock.' : ', no time limit.') : none;
       main.querySelector('#ex-start').disabled = !r.pool;
     }
     form.addEventListener('change', summary); summary();
+    var wk = main.querySelector('#ex-weak');
+    if (wk) wk.addEventListener('click', function () {
+      var ids = weak.map(function (w) { return w.id; });
+      form.querySelectorAll('input[name=tp]').forEach(function (i) { i.checked = ids.indexOf(i.value) > -1; });
+      summary();
+    });
+    main.querySelector('#ex-tp-none').addEventListener('click', function () { form.querySelectorAll('input[name=tp]').forEach(function (i) { i.checked = false; }); summary(); });
+    main.querySelector('#ex-conf').addEventListener('change', function (e) { store.set('confAsk', e.target.checked); });
     main.querySelector('#ex-start').addEventListener('click', function () {
       var r = read(); if (!r.pool) return;
       if (store.get('exam', null) && !window.confirm('Starting a new exam discards the one in progress. Continue?')) return;
-      store.set('examPrefs', { chapters: r.chapters, count: r.count, timed: r.timed });
-      var picks = shuffle(caseKeys(r.chapters)).slice(0, r.n);
+      store.set('examPrefs', { by: r.by, chapters: r.by === 'chapters' ? r.chapters : prefs.chapters, topics: r.by === 'topics' ? r.topics : prefs.topics, count: r.count, timed: r.timed, related: r.related });
+      var picks = shuffle(r.first.slice()).slice(0, r.n);
+      picks = shuffle(picks.concat(shuffle(r.rest.slice()).slice(0, r.n - picks.length)));
+      var chIds = r.by === 'chapters' ? r.chapters : chs.filter(function (ch) { return picks.some(function (k) { return CARDS[k].ch.id === ch.id; }); }).map(function (ch) { return ch.id; });
       var exam = {
-        id: 'e' + Date.now().toString(36), at: Date.now(), chapters: r.chapters, timed: r.timed,
+        id: 'e' + Date.now().toString(36), at: Date.now(), chapters: chIds, timed: r.timed,
+        src: { by: r.by, topics: r.by === 'topics' ? r.topics : undefined, related: r.by === 'mistakes' ? r.related : undefined }, conf: confAsk(),
         limit: r.timed ? r.n * SECS_PER_Q : 0, cur: 0,
         items: picks.map(function (k) { return { k: k, o: shuffle(CARDS[k].c.choices.map(function (_, i) { return i; })), a: null, f: false }; })
       };
@@ -1283,6 +1573,22 @@
     });
     var dis = main.querySelector('#ex-discard');
     if (dis) dis.addEventListener('click', function () { if (window.confirm('Discard the exam in progress?')) { store.del('exam'); renderExamSetup(); } });
+  }
+  function examSourceLabel(h) {
+    var src = h.src || { by: 'chapters' };
+    if (src.by === 'mistakes') return 'Mistakes' + (src.related ? ' and related questions' : '');
+    if (src.by === 'topics') {
+      var names = (src.topics || []).map(function (id) { return TOPIC[id] ? TOPIC[id].label : id; });
+      return names.length > 2 ? names.slice(0, 2).join('; ') + ' and ' + (names.length - 2) + ' more' : names.join('; ');
+    }
+    return 'Ch ' + h.chapters.map(function (id) { var c = chapter(id); return c ? c.number : id; }).join(', ');
+  }
+  /* Preset links: #/exam/topic/<id> (from a topic page) and #/exam/mistakes. */
+  function presetExam(by, id) {
+    var p = store.get('examPrefs', null) || {};
+    p.by = by; if (by === 'topics' && TOPIC[id]) p.topics = [id];
+    store.set('examPrefs', p);
+    location.replace('#/exam');
   }
 
   function renderExamRun() {
@@ -1309,7 +1615,7 @@
         '<ul class="choices" role="radiogroup" aria-label="Answer choices">' + it.o.map(function (orig, i) {
           var on = it.a === orig;
           return '<li><button class="choice' + (on ? ' is-picked' : '') + '" type="button" role="radio" aria-checked="' + on + '" data-pick="' + orig + '"><span class="choice__key">' + LETTERS[i] + '</span><span>' + fmt(c.choices[orig]) + '</span></button></li>';
-        }).join('') + '</ul>' +
+        }).join('') + '</ul>' + (ex.conf ? confChips(it.c || null, true) : '') +
         '<div class="card-nav"><button class="btn" type="button" id="ex-prev"' + (ex.cur ? '' : ' disabled') + '>Previous</button>' +
         '<button class="btn btn--solid" type="button" id="ex-next">' + (ex.cur < ex.items.length - 1 ? 'Next' : 'Review and submit') + '</button></div>';
       linkTerms(main.querySelector('.exam-q__stem'));
@@ -1320,9 +1626,11 @@
         b.addEventListener('click', function () { it.a = parseInt(b.getAttribute('data-pick'), 10); save(); draw(); });
       });
       main.querySelectorAll('[data-go]').forEach(function (b) { b.addEventListener('click', function () { ex.cur = parseInt(b.getAttribute('data-go'), 10); save(); draw(); }); });
+      main.querySelectorAll('#ex-q [data-conf]').forEach(function (b) { b.addEventListener('click', function () { setExConf(b.getAttribute('data-conf')); }); });
       main.querySelector('#ex-prev').addEventListener('click', function () { if (ex.cur) { ex.cur--; save(); draw(); } });
       main.querySelector('#ex-next').addEventListener('click', function () { if (ex.cur < ex.items.length - 1) { ex.cur++; save(); draw(); } else submit(false); });
     }
+    function setExConf(v) { var it = ex.items[ex.cur]; it.c = it.c === v ? null : v; save(); draw(); }
     function tick() {
       var el = main.querySelector('#ex-clock'); if (!el) return;
       if (!ex.limit) { el.textContent = 'Untimed, ' + fmtClock((Date.now() - ex.at) / 1000) + ' elapsed'; return; }
@@ -1340,10 +1648,15 @@
       }
       clearInterval(timer);
       var score = 0;
-      ex.items.forEach(function (x) { if (x.a === CARDS[x.k].c.answer) score++; else addMistake(x.k, 'exam'); });
+      var fromMistakes = ex.src && ex.src.by === 'mistakes';
+      ex.items.forEach(function (x) {
+        var ok = x.a === CARDS[x.k].c.answer;
+        if (x.a != null) recordAttempt(x.k, ok, x.c);
+        if (ok) { score++; if (fromMistakes && MISTAKES[x.k]) clearMistake(x.k); } else addMistake(x.k, 'exam', x.a != null ? x.c : null);
+      });
       var used = Math.round((Date.now() - ex.at) / 1000);
       if (ex.limit) used = Math.min(used, ex.limit);
-      var rec = { id: ex.id, at: ex.at, chapters: ex.chapters, timed: ex.timed, limit: ex.limit, used: used, expired: !!expired, score: score, total: ex.items.length, items: ex.items.map(function (x) { return { k: x.k, o: x.o, a: x.a, f: x.f }; }) };
+      var rec = { id: ex.id, at: ex.at, chapters: ex.chapters, src: ex.src, conf: ex.conf, timed: ex.timed, limit: ex.limit, used: used, expired: !!expired, score: score, total: ex.items.length, items: ex.items.map(function (x) { var o = { k: x.k, o: x.o, a: x.a, f: x.f }; if (x.c) o.c = x.c; return o; }) };
       var hist = store.get('examHistory', []);
       hist.unshift(rec); store.set('examHistory', hist.slice(0, 20));
       store.del('exam');
@@ -1359,6 +1672,7 @@
       else if (e.key === 'ArrowRight' && ex.cur < ex.items.length - 1) { e.preventDefault(); ex.cur++; save(); draw(); }
       else if (e.key === 'ArrowLeft' && ex.cur > 0) { e.preventDefault(); ex.cur--; save(); draw(); }
       else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); it.f = !it.f; save(); draw(); }
+      else if (ex.conf && /^[sug]$/i.test(e.key)) { e.preventDefault(); setExConf({ s: 'sure', u: 'unsure', g: 'guess' }[e.key.toLowerCase()]); }
     }
     document.addEventListener('keydown', onKey);
     draw(); tick();
@@ -1372,11 +1686,14 @@
     var ex = findExam(id);
     if (!ex) { renderMissing(); return; }
     var items = ex.items.filter(function (x) { return CARDS[x.k]; });
-    var byTopic = {}, byCh = {};
+    var byTopic = {}, byCh = {}, topicHref = {}, byConf = {}, sureMiss = 0;
     items.forEach(function (x) {
       var r = CARDS[x.k], ok = x.a === r.c.answer;
-      var t = 'Ch ' + r.ch.number + ', ' + (r.c.tag || 'General');
+      var tpId = topicOf(x.k), t = tpId ? TOPIC[tpId].label : 'Ch ' + r.ch.number + ', ' + (r.c.tag || 'General');
+      if (tpId) topicHref[t] = '#/topics/' + tpId;
       (byTopic[t] = byTopic[t] || { n: 0, ok: 0 }).n++; if (ok) byTopic[t].ok++;
+      if (x.a != null) { var cf = x.c || 'none'; (byConf[cf] = byConf[cf] || { n: 0, ok: 0 }).n++; if (ok) byConf[cf].ok++; }
+      if (x.c === 'sure' && x.a != null && !ok) sureMiss++;
       var cKey = 'Chapter ' + r.ch.number + ': ' + (r.ch.short || r.ch.title);
       (byCh[cKey] = byCh[cKey] || { n: 0, ok: 0 }).n++; if (ok) byCh[cKey].ok++;
     });
@@ -1385,7 +1702,8 @@
       if (sortWeak) ks.sort(function (a, b) { return obj[a].ok / obj[a].n - obj[b].ok / obj[b].n || obj[b].n - obj[a].n; });
       return ks.map(function (k) {
         var v = obj[k], p = pct(v.ok, v.n);
-        return '<tr><th scope="row">' + esc(k) + '</th><td>' + v.ok + ' of ' + v.n + '</td><td class="bar-cell"><span class="score-bar"><span style="width:' + p + '%" class="' + (p >= 70 ? 'is-good' : p >= 50 ? 'is-mid' : 'is-low') + '"></span></span><span class="score-pct">' + p + '%</span></td></tr>';
+        var label = topicHref[k] ? '<a href="' + topicHref[k] + '">' + esc(k) + '</a>' : esc(k);
+        return '<tr><th scope="row">' + label + '</th><td>' + v.ok + ' of ' + v.n + '</td><td class="bar-cell"><span class="score-bar"><span style="width:' + p + '%" class="' + (p >= 70 ? 'is-good' : p >= 50 ? 'is-mid' : 'is-low') + '"></span></span><span class="score-pct">' + p + '%</span></td></tr>';
       }).join('');
     }
     var missed = items.filter(function (x) { return x.a !== CARDS[x.k].c.answer; }).length;
@@ -1396,9 +1714,10 @@
       '<div class="empty__actions results-actions">' +
         (missed ? '<a class="btn btn--solid" href="#/exam/review/' + ex.id + '/missed">Review what I missed (' + missed + ')</a>' : '') +
         '<a class="btn' + (missed ? '' : ' btn--solid') + '" href="#/exam/review/' + ex.id + '/all">Review all questions</a>' +
-        (missed ? '<a class="btn" href="#/mistakes">Practice mistakes</a>' : '') +
-        '<a class="btn" href="#/exam">New exam</a></div>' +
-      '<section class="results-sec"><h2>Score by topic</h2><p class="muted">Weakest first.</p><div class="table-wrap"><table class="score-table"><thead><tr><th scope="col">Topic</th><th scope="col">Correct</th><th scope="col">Score</th></tr></thead><tbody>' + rows(byTopic, true) + '</tbody></table></div></section>' +
+        (sureMiss ? '<a class="btn" href="#/exam/review/' + ex.id + '/sure">Confident misses (' + sureMiss + ')</a>' : '') +
+        (missed ? '<a class="btn" href="#/exam/mistakes">Quiz my mistakes</a>' : '') +
+        '<a class="btn" href="#/exam">New exam</a></div>' + confTableHTML(byConf, sureMiss) +
+      '<section class="results-sec"><h2>Score by topic</h2><p class="muted">Weakest first. Topics run across chapters; open one to practise it.</p><div class="table-wrap"><table class="score-table"><thead><tr><th scope="col">Topic</th><th scope="col">Correct</th><th scope="col">Score</th></tr></thead><tbody>' + rows(byTopic, true) + '</tbody></table></div></section>' +
       '<section class="results-sec"><h2>Score by chapter</h2><div class="table-wrap"><table class="score-table"><thead><tr><th scope="col">Chapter</th><th scope="col">Correct</th><th scope="col">Score</th></tr></thead><tbody>' + rows(byCh, false) + '</tbody></table></div></section>' +
       '</div>';
     setView('exam-results:' + id, html);
@@ -1409,7 +1728,7 @@
     var ex = findExam(id);
     if (!ex) { renderMissing(); return; }
     var items = ex.items.filter(function (x) { return CARDS[x.k]; });
-    var list = which === 'all' ? items : items.filter(function (x) { return x.a !== CARDS[x.k].c.answer; });
+    var list = which === 'all' ? items : which === 'sure' ? items.filter(function (x) { return x.c === 'sure' && x.a != null && x.a !== CARDS[x.k].c.answer; }) : items.filter(function (x) { return x.a !== CARDS[x.k].c.answer; });
     if (!list.length) { location.hash = '#/exam/results/' + id; return; }
     n = Math.max(0, Math.min(n || 0, list.length - 1));
     var x = list[n], r = CARDS[x.k], c = r.c;
@@ -1421,9 +1740,9 @@
     }).join('');
     var base = '#/exam/review/' + id + '/' + which + '/';
     var html = '<div class="wrap page exam-review">' +
-      '<header class="page__head"><p class="crumb"><a href="#/exam/results/' + id + '">Back to results</a></p><h1>' + (which === 'all' ? 'All questions' : 'Questions you missed') + '</h1></header>' +
-      '<div class="exam-q review-q"><p class="exam-q__meta">Question ' + (n + 1) + ' of ' + list.length + ', Chapter ' + r.ch.number + ', ' + esc(c.tag || '') + '</p>' +
-        '<p class="verdict ' + (ok ? 'is-right">Correct' : x.a == null ? 'is-wrong">Not answered' : 'is-wrong">Incorrect') + '</p>' +
+      '<header class="page__head"><p class="crumb"><a href="#/exam/results/' + id + '">Back to results</a></p><h1>' + (which === 'all' ? 'All questions' : which === 'sure' ? 'Confident misses' : 'Questions you missed') + '</h1></header>' +
+      '<div class="exam-q review-q"><p class="exam-q__meta">Question ' + (n + 1) + ' of ' + list.length + ', Chapter ' + r.ch.number + ', ' + esc(c.tag || '') + (topicOf(x.k) ? ' · <a href="#/topics/' + topicOf(x.k) + '">' + esc(TOPIC[topicOf(x.k)].label) + '</a>' : '') + '</p>' +
+        '<p class="verdict ' + (ok ? 'is-right">Correct' : x.a == null ? 'is-wrong">Not answered' : 'is-wrong">Incorrect') + (x.c ? '<span class="verdict__conf"> · you marked ' + esc({ sure: 'sure', unsure: 'unsure', guess: 'guessing' }[x.c]) + '</span>' : '') + '</p>' + (x.a != null ? confNote(x.c, ok) : '') +
         '<p class="exam-q__stem">' + fmt(c.q) + '</p><ul class="choices choices--static">' + choices + '</ul><p class="face__why">' + fmt(c.why) + '</p>' +
         '<p class="report-row">' + reportLink('Chapter ' + r.ch.number + ' board question ' + c.id + (c.tag ? ' (' + c.tag + ')' : '')) + '</p>' +
         '<div class="card-nav"><a class="btn' + (n ? '' : ' is-disabled') + '" ' + (n ? 'href="' + base + (n - 1) + '"' : 'aria-disabled="true"') + '>Previous</a>' +
@@ -3505,6 +3824,7 @@
 
   loadAll().then(function () {
     indexCards();
+    indexTopics();
     updateNavBadges();
     route();
     setTopVar();
