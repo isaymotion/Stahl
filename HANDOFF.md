@@ -54,24 +54,30 @@ Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.
 | Teaching mode | Done: session builder (6 presets, multi-chapter, counts, order), high-yield blanks, flashcards, board Qs, vignettes, Name that drug, countdown, room/two-team scoring, flags, text size, end-of-session review + PDF |
 | Changelog | ids 1–19 used |
 
-## 7. Next steps (owner has not yet chosen order; ask her)
-Next changelog id **20**; next SW VERSION e.g. `PREFIX + '2026-10-26-<tag>'`.
+## 7. Next steps: agreed release plan (owner approved all A + B, order B1 → B4, 2026-11-09)
+Next changelog id **20**; next SW VERSION e.g. `PREFIX + '<date>-<tag>'`. One release = one changelog id + SW bump + full test run + push + update this table.
 
-**A. Approved “7 extras”** (owner said yes):
-1. “Report an error” mailto per guide section (chapter, section, page prefilled).
-2. Text-size setting per device.
-3. Home progress overview (mastery per chapter, due cards, streak).
-4. iPhone “Add to Home Screen” hint (once).
-5. Drug-class cheat sheets from library (+ PDF).
-6. Quiz from mistakes.
-7. Exam by topic across chapters.
+| # | Release | Items | Book PDF? | Status |
+|---|---|---|---|---|
+| R1 | Quick wins | A1 report-error mailto, A2 text size, A4 iPhone hint, A3 home progress overview | no | pending |
+| R2 | Practice engine | B3a confidence rating + cross-chapter topic tags on all cards/questions, then A6 quiz from mistakes, A7 exam by topic, weak-spot map | no | pending |
+| R3 | Library depth 1 | B1: Ch 4–5 drugs (antipsychotics) | yes | pending |
+| R4 | Library depth 2 | B1: Ch 6–7 drugs (mood, antidepressants) | yes | pending |
+| R5 | Library depth 3 | B1: Ch 8–13 + remaining drugs | yes | pending |
+| R6 | Cheat sheets | A5 drug-class cheat sheets + PDF (built on R3–R5) | no | pending |
+| R7 | Rationales 1 | B2: why-each-wrong-answer + page ref, Ch 9–13 | yes | pending |
+| R8 | Rationales 2 | B2: same, Ch 1–8 | yes | pending |
+| R9 | Vignettes 1 | B2: ~15 two-step vignettes/ch, Ch 1–7 | yes | pending |
+| R10 | Vignettes 2 | B2: same, Ch 8–13 | yes | pending |
+| R11 | Learning features | B3 rest: mechanism-reasoning drill, warm-ups, "explain why" prompts | no | pending |
+| R12 | Diagrams | B4: agonist slider, D2 occupancy meter, dopamine pathways, receptor ring | no | pending |
+| R13 | Ch 8/9 depth | recheck vs book, expand guide | yes | pending |
+| R14 | Housekeeping | errata page, "How current is this?" page, consistency checks, shareable assignment links | no | pending |
 
-**B. Recommended content upgrades** (from `audit.js`; proposed, awaiting her pick). Proposed order: B1 → B2 → B3 → B4.
-- **B1 Drug library depth:** 139/183 drugs lack binding strength, 78 lack side effects, 168 lack pearls. Fill from book; feeds Compare, Name that drug, teaching slides, cheat sheets.
-- **B2 Question bank:** only ~7% vignettes, stems 60–90 chars; explanations shrink from ~150 chars (Ch1) to ~50 (Ch13); no wrong-answer rationales. Add why-each-distractor-is-wrong + page ref (start Ch 9–13), then ~15 two-step vignettes per chapter.
-- **B3 Learning features:** confidence rating (sure/unsure/guess), cross-chapter topic tags (interleaving, weak-spot map, exam by topic), mechanism-reasoning drill generated from library, prerequisite warm-ups, “explain why” prompts.
-- **B4 Original interactive diagrams:** agonist-spectrum slider, D2 occupancy meter, dopamine pathways, drug “receptor ring”.
-- **Other ideas:** Ch 8 and Ch 9 are thin (≈2,300–2,500 words; recheck vs book); shareable assignment links (session encoded in URL, score code back); errata page of all caution callouts; “How current is this?” page of update boxes; automated consistency checks (library vs chapter text, duplicates).
+Working method: Claude does design, clinical/content decisions and final review of every item; subagents draft from extracted book pages (library fields, rationales, tags) and run test/screenshot passes. Suggest a fresh chat about every 3 releases (session-handoff skill).
+
+Reference (original wording of the items):
+- A1–A7 as above. B1: 139/183 drugs lack binding strength, 78 lack side effects, 168 lack pearls. B2: ~7% vignettes, explanations shrink to ~50 chars by Ch 13, no wrong-answer rationales. B3: confidence rating, topic tags (interleaving, weak-spot map, exam by topic), mechanism drill from library, warm-ups, explain-why. B4: original interactive diagrams.
 
 ## 8. Pitfalls learned
 - Router drops empty path segments (`#/compare/tca/` → `tca`); parse family ids explicitly.
