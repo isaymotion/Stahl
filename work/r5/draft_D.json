@@ -1,0 +1,227 @@
+{
+ "suvorexant": {
+  "sideEffects": [
+   {
+    "e": "No dependence, withdrawal, rebound, falls, amnesia or respiratory depression (compared with GABA-A PAMs)",
+    "via": "Reduces arousal rather than enhancing GABA"
+   },
+   {
+    "e": "Morning carryover in some patients (lower the dose)",
+    "via": "Residual orexin blockade"
+   }
+  ],
+  "pearls": [
+   "Hypnotic effect needs about **65% orexin-receptor occupancy**, versus 25–30% for GABA-A hypnotics and about 80% for serotonin/histamine antagonists",
+   "Plasma **half-life is not clinically important** for DORAs; net blockade depends on drug level against rising orexin, so adjust by **dose**",
+   "**Higher dose** may help early-morning awakenings or insomnia with high orexin tone; **lower dose** if next-morning carryover",
+   "No head-to-head data against lemborexant, but their binding profiles differ enough that a **non-responder to one** might do better on the other"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p428",
+    "p430",
+    "p430",
+    "p430"
+   ]
+  }
+ },
+ "lemborexant": {
+  "sideEffects": [
+   {
+    "e": "No dependence, withdrawal, rebound, falls, amnesia or respiratory depression (compared with GABA-A PAMs)",
+    "via": "Reduces arousal rather than enhancing GABA"
+   },
+   {
+    "e": "Morning carryover in some patients (lower the dose)",
+    "via": "Residual orexin blockade"
+   }
+  ],
+  "pearls": [
+   "Hypnotic effect needs about **65% orexin-receptor occupancy**, versus 25–30% for GABA-A hypnotics and about 80% for serotonin/histamine antagonists",
+   "Plasma **half-life is not clinically important** for DORAs; net blockade depends on drug level against rising orexin, so adjust by **dose**",
+   "**Higher dose** may help early-morning awakenings or insomnia with high orexin tone; **lower dose** if next-morning carryover",
+   "No head-to-head data against suvorexant, but their binding profiles differ enough that a **non-responder to one** might do better on the other"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p428",
+    "p430",
+    "p430",
+    "p430"
+   ]
+  }
+ },
+ "daridorexant": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {
+   "sideEffects": [],
+   "pearls": []
+  }
+ },
+ "ramelteon": {
+  "sideEffects": [],
+  "pearls": [
+   "Unlike OTC melatonin, acts at **MT1/MT2 only**, not the MT3 site (an enzyme, NRH–quinone oxidoreductase 2, not involved in sleep)",
+   "Sleep-onset effect is attributed to **MT1** inhibition of the suprachiasmatic nucleus, damping its wake-promoting signal",
+   "Grouped with **1–3 hour half-life hypnotics** (zaleplon, triazolam), so effect may fade before desired waking"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p439",
+    "p439",
+    "p429"
+   ]
+  }
+ },
+ "tasimelteon": {
+  "sideEffects": [],
+  "pearls": [
+   "Non-24 disorder arises because blind patients cannot **entrain the clock to light**; the free-running clock causes both insomnia and daytime sleepiness",
+   "**Phase shifting** and circadian entrainment are mainly MT2-mediated; like ramelteon, helps sleep **onset** rather than necessarily maintenance",
+   "Acts only at MT1/MT2, not the MT3 site that OTC melatonin also hits"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p438",
+    "p439",
+    "p439"
+   ]
+  }
+ },
+ "memantine": {
+  "sideEffects": [],
+  "pearls": [
+   "Rationale: plaque/tangle **glutamate leak** may first disrupt memory, then cause excitotoxic neuron loss; memantine aims to slow that decline",
+   "A **weak, low-potency** NMDA blocker; dextromethorphan blocks NMDA more robustly and is the agent tested for AD agitation"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p516",
+    "p533"
+   ]
+  }
+ },
+ "donepezil": {
+  "sideEffects": [
+   {
+    "e": "Nausea, vomiting, diarrhea (usually transient)",
+    "via": "Peripheral AChE inhibition in the gut"
+   }
+  ],
+  "pearls": [
+   "Cholinesterase inhibitors **usually preserve** memory (slow decline) rather than improve it, and lose effect as AD progresses and cholinergic receptor targets are lost",
+   "Little benefit for behavioral symptoms of dementia except in **Lewy body dementias**; may help apathy in some, better for prevention than treatment"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": [
+    "p510, p512",
+    "p530, p537"
+   ]
+  }
+ },
+ "rivastigmine": {
+  "sideEffects": [
+   {
+    "e": "More GI effects orally than donepezil",
+    "via": "PK profile; peripheral AChE and BuChE inhibition"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "galantamine": {
+  "sideEffects": [
+   {
+    "e": "Nausea, vomiting, diarrhea (usually transient)",
+    "via": "Peripheral AChE inhibition in the gut"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "aducanumab": {
+  "sideEffects": [
+   {
+    "e": "ARIA-E (brain edema) and ARIA-H (microbleeds), rarely fatal",
+    "via": "Amyloid removal from vessel walls; higher risk in APOE4 carriers"
+   },
+   {
+    "e": "Infusion reactions",
+    "via": "Antibody infusion"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "lecanemab": {
+  "sideEffects": [
+   {
+    "e": "ARIA-E (brain edema) and ARIA-H (microbleeds), rarely fatal",
+    "via": "Amyloid removal from vessel walls; higher risk in APOE4 carriers"
+   },
+   {
+    "e": "Infusion reactions",
+    "via": "Antibody infusion"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "donanemab": {
+  "sideEffects": [
+   {
+    "e": "ARIA-E (brain edema) and ARIA-H (microbleeds), rarely fatal",
+    "via": "Amyloid removal from vessel walls; higher risk in APOE4 carriers"
+   },
+   {
+    "e": "Infusion reactions",
+    "via": "Antibody infusion"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ }
+}

@@ -1,0 +1,260 @@
+{
+ "diazepam": {
+  "sideEffects": [
+   {
+    "e": "Blocks short-term memory",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "Sedation (sleep induction)",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "**Tolerance, dependence and withdrawal** (including rebound insomnia)",
+    "via": "Adaptation of α1-containing GABA-A receptors with chronic use"
+   },
+   {
+    "e": "**Unsteady gait, falls, confusion, respiratory depression**",
+    "via": "Class effect of GABA-A PAM hypnotics; mechanism not detailed by the book"
+   }
+  ],
+  "pearls": [
+   "Acts only at **γ-containing** GABA-A receptors (α1, α2, α3, α5); **δ-containing extrasynaptic** (tonic) receptors are benzodiazepine-insensitive",
+   "Subtype roles: α1 = **daytime sedation**, amnesia, anticonvulsant action; α2/α3 = **muscle relaxant** and alcohol-potentiating effects; α5 (hippocampus) = cognition",
+   "Part of the **mesolimbic reward** system's drugs of abuse; alcoholics often also abuse benzodiazepines, so screen for substance use before prescribing",
+   "Much **safer in overdose** than barbiturates",
+   "**Not recommended** for agitation in dementia; sedatives (including benzodiazepines) raise **aspiration** and pneumonia risk",
+   "Can be a **second-line sleep aid** in fibromyalgia, and an add-on to an SSRI in OCD"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "p422-423",
+    "p423"
+   ],
+   "pearls": [
+    "p422, p554",
+    "p423",
+    "p543, p553, p377",
+    "p556",
+    "p530, p524",
+    "p400, p577"
+   ],
+   "uses": [
+    "existing",
+    "existing",
+    "p377"
+   ]
+  },
+  "uses": [
+   "**Anxiolytic**",
+   "Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)",
+   "**GAD and panic disorder** (benzodiazepine class use, Chapter 8)"
+  ]
+ },
+ "alprazolam": {
+  "sideEffects": [
+   {
+    "e": "Blocks short-term memory",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "Sedation (sleep induction)",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "**Tolerance, dependence and withdrawal** (including rebound insomnia)",
+    "via": "Adaptation of α1-containing GABA-A receptors with chronic use"
+   },
+   {
+    "e": "**Unsteady gait, falls, confusion, respiratory depression**",
+    "via": "Class effect of GABA-A PAM hypnotics; mechanism not detailed by the book"
+   }
+  ],
+  "pearls": [
+   "Acts only at **γ-containing** GABA-A receptors (α1, α2, α3, α5); **δ-containing extrasynaptic** (tonic) receptors are benzodiazepine-insensitive",
+   "Subtype roles: α1 = **daytime sedation**, amnesia, anticonvulsant action; α2/α3 = **muscle relaxant** and alcohol-potentiating effects; α5 (hippocampus) = cognition",
+   "Part of the **mesolimbic reward** system's drugs of abuse; alcoholics often also abuse benzodiazepines, so screen for substance use before prescribing",
+   "Much **safer in overdose** than barbiturates",
+   "**Not recommended** for agitation in dementia; sedatives (including benzodiazepines) raise **aspiration** and pneumonia risk",
+   "Can be a **second-line sleep aid** in fibromyalgia, and an add-on to an SSRI in OCD"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "p422-423",
+    "p423"
+   ],
+   "pearls": [
+    "p422, p554",
+    "p423",
+    "p543, p553, p377",
+    "p556",
+    "p530, p524",
+    "p400, p577"
+   ]
+  }
+ },
+ "hydroxyzine": {
+  "sideEffects": [
+   {
+    "e": "Sedation",
+    "via": "H1 antagonism"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "prazosin": {
+  "sideEffects": [],
+  "pearls": [
+   "Targets only the **α1** part of excess noradrenergic drive; fear and worry symptoms are instead tied to β1 receptors and are reduced by **NET inhibitors**",
+   "Helps nightmares and hyperarousal in **some** patients, as an add-on for one symptom; most PTSD patients are not on monotherapy"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p370",
+    "p370, p378"
+   ]
+  }
+ },
+ "pregabalin": {
+  "sideEffects": [
+   {
+    "e": "**Sedation and unsteady gait** (reported with second-line agents for dementia agitation; the book also calls α2δ ligands not particularly sedating for sleep)",
+    "via": "Mechanism not given"
+   }
+  ],
+  "pearls": [
+   "**Open-channel, use-dependent** binding: blocks the most active N and P/Q channels and leaves closed channels, so normal transmission is spared",
+   "Pain may be best treated **early**: blocking central sensitization could stop pain being imprinted and progressing to chronic states",
+   "In fibromyalgia, combine with an **SNRI** for additive pain relief and broader coverage (α2δ: anxiety, slow-wave sleep; SNRI: depression, fatigue, fibro-fog)",
+   "If response is inadequate, **sodium-channel anticonvulsants** (second-line for neuropathic pain) act differently and may still work",
+   "Listed as a possible **second-line** option for agitation in dementia (not valproate, topiramate, oxcarbazepine or benzodiazepines)"
+  ],
+  "src": {
+   "sideEffects": [
+    "p530, p426"
+   ],
+   "pearls": [
+    "p398-399",
+    "p399",
+    "p399-400",
+    "p400",
+    "p530"
+   ]
+  }
+ },
+ "gabapentin": {
+  "sideEffects": [
+   {
+    "e": "**Sedation and unsteady gait** (reported with second-line agents for dementia agitation; the book also calls α2δ ligands not particularly sedating for sleep)",
+    "via": "Mechanism not given"
+   }
+  ],
+  "pearls": [
+   "**Open-channel, use-dependent** binding: blocks the most active N and P/Q channels and leaves closed channels, so normal transmission is spared",
+   "Pain may be best treated **early**: blocking central sensitization could stop pain being imprinted and progressing to chronic states",
+   "In fibromyalgia, combine with an **SNRI** for additive pain relief and broader coverage (α2δ: anxiety, slow-wave sleep; SNRI: depression, fatigue, fibro-fog)",
+   "If response is inadequate, **sodium-channel anticonvulsants** (second-line for neuropathic pain) act differently and may still work",
+   "Listed as a possible **second-line** option for agitation in dementia (not valproate, topiramate, oxcarbazepine or benzodiazepines)"
+  ],
+  "src": {
+   "sideEffects": [
+    "p530, p426"
+   ],
+   "pearls": [
+    "p398-399",
+    "p399",
+    "p399-400",
+    "p400",
+    "p530"
+   ]
+  }
+ },
+ "tiagabine": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {
+   "sideEffects": [],
+   "pearls": []
+  }
+ },
+ "levetiracetam": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {
+   "sideEffects": [],
+   "pearls": []
+  }
+ },
+ "morphine": {
+  "sideEffects": [
+   {
+    "e": "**Euphoria** at pain-relieving doses and above, a strongly reinforcing effect",
+    "via": "Mu-opioid receptor action on reward circuits; mesolimbic dopamine release is lower than with stimulants and the full mechanism is unclear"
+   },
+   {
+    "e": "**Tolerance and dependence** develop readily; analgesia fades over days to weeks",
+    "via": "Opioid receptor adaptation; behavioral control shifts from ventral to dorsal habit circuits"
+   },
+   {
+    "e": "**Withdrawal syndrome**: dysphoria, craving, irritability, tachycardia, tremor, sweating, piloerection",
+    "via": "Opioid receptor adaptation to chronic drug"
+   },
+   {
+    "e": "**Respiratory depression** and coma in overdose",
+    "via": "Opioid depressant action; mechanism not detailed"
+   },
+   {
+    "e": "Drowsiness (\"nodding\"), mental clouding, apathy and slowed movement after the rush",
+    "via": "Opioid CNS depressant action; mechanism not detailed"
+   }
+  ],
+  "pearls": [
+   "**Naloxone** reverses acute morphine effects but precipitates withdrawal in dependent patients",
+   "Short-half-life agonists give **intense, brief** withdrawal; methadone is milder but longer (peak 72-96 h, 14+ days)",
+   "**Fentanyl** is about 100 times, and carfentanil about 10,000 times, as potent as morphine",
+   "**Spares normal sensory input**: Aβ fibers lack μ receptors",
+   "Opioid analgesics lose effect with long-term use and are **limited in amount and duration**"
+  ],
+  "uses": [
+   "Acute **pain** relief (spinal and PAG μ receptors); no better than SNRIs or α2δ ligands for chronic neuropathic pain"
+  ],
+  "targets": [
+   {
+    "t": "mor",
+    "action": "agonist",
+    "note": "Full agonist; spinal and PAG μ receptors"
+   }
+  ],
+  "src": {
+   "sideEffects": [
+    "p560",
+    "p560",
+    "p560",
+    "p560",
+    "p560"
+   ],
+   "pearls": [
+    "p560",
+    "p561",
+    "p559-560",
+    "p390",
+    "p560"
+   ],
+   "uses": [
+    "p390, p560"
+   ],
+   "targets": "p390, p561"
+  }
+ }
+}

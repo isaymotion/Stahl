@@ -1,0 +1,12 @@
+# Group C notes (Ch 10, pp 421-430; Ch 3 p55 / Ch 6 p262 only class mentions)
+- flurazepam, quazepam: +1 side effect (accumulation, p428), +1 pearl (24-150 h above threshold, p428). Existing items kept.
+- triazolam: +1 side effect (early waking), +1 pearl (raise dose/switch if too short, p428-429). FLAG: half-life 1-2 h in Fig 10-33 (existing) vs "1-3 h" in Fig 10-41D; both from the book, not changed.
+- estazolam, temazepam: +1 side effect (hangover), +2 pearls (same profile as TCAs/mirtazapine/chlorpromazine; fix for grogginess, p429-430). Fig 10-41C states 15-30 h while Fig 10-33 gives 12-30 h / 4-20 h; not changed.
+- zolpidem: +1 side effect (early waking, IR), +1 pearl (alpha1 selectivity benefit unproven, p422). Sublingual/CR already in facts.
+- zaleplon: +1 side effect, +2 pearls (p422, p429).
+- zopiclone: +1 pearl (racemate vs S enantiomer debated, p423). Book has nothing else on it.
+- eszopiclone: +2 pearls (p423; not alpha1-selective p422/424). Existing "about 8 h above threshold" kept.
+- diphenhydramine: +3 pearls (M1 vs H1 anticholinergic origin p425; no withdrawal/dependence/rebound p426; arousal-reduction and ~80% threshold p421, p428). Side effects already complete per Fig 10-38.
+- doxylamine: book has nothing further (only named as OTC antihistamine ingredient, p425).
+- Book does not give side-effect specifics for Z drugs (e.g., complex sleep behaviors); nothing added. No targets or uses changes; no strengths given.
+- Wording note: flurazepam/quazepam existing fact says "way too hot", Fig 10-41B says ultra-long (>24 h).

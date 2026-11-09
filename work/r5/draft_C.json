@@ -1,0 +1,253 @@
+{
+ "flurazepam": {
+  "sideEffects": [
+   {
+    "e": "Tolerance, withdrawal, **rebound insomnia**",
+    "via": "Adaptation of α1 GABA-A receptors"
+   },
+   {
+    "e": "Sedation, amnesia, falls",
+    "via": "α1 GABA-A PAM action"
+   },
+   {
+    "e": "Drug **accumulation** with nightly use, next-day impairment, higher fall risk in the elderly",
+    "via": "Ultra-long half-life (>24 h): prolonged time above the sleep threshold"
+   }
+  ],
+  "pearls": [
+   "With nightly dosing the drug stays above the sleep threshold for roughly **24–150 hours**; an example of an ultra-long-acting hypnotic."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "p428"
+   ],
+   "pearls": [
+    "p428"
+   ]
+  }
+ },
+ "quazepam": {
+  "sideEffects": [
+   {
+    "e": "Tolerance, withdrawal, **rebound insomnia**",
+    "via": "Adaptation of α1 GABA-A receptors"
+   },
+   {
+    "e": "Sedation, amnesia, falls",
+    "via": "α1 GABA-A PAM action"
+   },
+   {
+    "e": "Drug **accumulation** with nightly use, next-day impairment, higher fall risk in the elderly",
+    "via": "Ultra-long half-life (>24 h): prolonged time above the sleep threshold"
+   }
+  ],
+  "pearls": [
+   "With nightly dosing the drug stays above the sleep threshold for roughly **24–150 hours**; an example of an ultra-long-acting hypnotic."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "p428"
+   ],
+   "pearls": [
+    "p428"
+   ]
+  }
+ },
+ "triazolam": {
+  "sideEffects": [
+   {
+    "e": "Tolerance, withdrawal, **rebound insomnia**",
+    "via": "Adaptation of α1 GABA-A receptors"
+   },
+   {
+    "e": "Sedation, amnesia, falls",
+    "via": "α1 GABA-A PAM action"
+   },
+   {
+    "e": "**Early-morning awakening** (loss of sleep maintenance)",
+    "via": "Ultra-short half-life: drug falls below sleep threshold before time to wake"
+   }
+  ],
+  "pearls": [
+   "Short-half-life fix when sleep is too short: **raise the dose** or switch to an agent that stays above threshold longer."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "p428–429"
+   ],
+   "pearls": [
+    "p429"
+   ]
+  }
+ },
+ "estazolam": {
+  "sideEffects": [
+   {
+    "e": "Tolerance, withdrawal, **rebound insomnia**",
+    "via": "Adaptation of α1 GABA-A receptors"
+   },
+   {
+    "e": "Sedation, amnesia, falls",
+    "via": "α1 GABA-A PAM action"
+   },
+   {
+    "e": "Next-day **hangover** (sedation, memory problems)",
+    "via": "Moderately long half-life: levels still above sleep threshold at time to wake"
+   }
+  ],
+  "pearls": [
+   "Shares the \"still too hot\" profile (15–30 h above threshold) with **most TCAs, mirtazapine and chlorpromazine**.",
+   "If groggy in the morning: **lower the dose**, give it earlier in the evening, or switch to a shorter-acting agent."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "p429"
+   ],
+   "pearls": [
+    "p429",
+    "p429–430"
+   ]
+  }
+ },
+ "temazepam": {
+  "sideEffects": [
+   {
+    "e": "Tolerance, withdrawal, **rebound insomnia**",
+    "via": "Adaptation of α1 GABA-A receptors"
+   },
+   {
+    "e": "Sedation, amnesia, falls",
+    "via": "α1 GABA-A PAM action"
+   },
+   {
+    "e": "Next-day **hangover** (sedation, memory problems)",
+    "via": "Moderately long half-life: levels still above sleep threshold at time to wake"
+   }
+  ],
+  "pearls": [
+   "Shares the \"still too hot\" profile (15–30 h above threshold) with **most TCAs, mirtazapine and chlorpromazine**.",
+   "If groggy in the morning: **lower the dose**, give it earlier in the evening, or switch to a shorter-acting agent."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "p429"
+   ],
+   "pearls": [
+    "p429",
+    "p429–430"
+   ]
+  }
+ },
+ "zolpidem": {
+  "sideEffects": [
+   {
+    "e": "**Early-morning awakening** with immediate-release form",
+    "via": "Short half-life (1–3 h): drug level falls below threshold before waking"
+   }
+  ],
+  "pearls": [
+   "**α1 selectivity** may mean less tolerance and dependence than benzodiazepines, but this is **not yet proven**."
+  ],
+  "src": {
+   "sideEffects": [
+    "p429"
+   ],
+   "pearls": [
+    "p422"
+   ]
+  }
+ },
+ "zaleplon": {
+  "sideEffects": [
+   {
+    "e": "Loss of **sleep maintenance**",
+    "via": "Ultra-short half-life (1–3 h): short time above sleep threshold"
+   }
+  ],
+  "pearls": [
+   "**α1 selectivity** may lower tolerance and dependence risk, but its functional significance is **unproven**.",
+   "If sleep is too short: raise the dose or move to a longer-acting hypnotic."
+  ],
+  "src": {
+   "sideEffects": [
+    "p429"
+   ],
+   "pearls": [
+    "p422",
+    "p429"
+   ]
+  }
+ },
+ "zopiclone": {
+  "sideEffects": [],
+  "pearls": [
+   "Whether the racemic mixture differs **clinically** from its S enantiomer (eszopiclone) is **debated**."
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p423"
+   ]
+  }
+ },
+ "eszopiclone": {
+  "sideEffects": [],
+  "pearls": [
+   "The single active **S enantiomer** of zopiclone; clinically meaningful advantage over the racemate remains **debated**.",
+   "Not α1-selective (binds α1, α2, α3, α5), unlike zolpidem and zaleplon."
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p423",
+    "p422, 424"
+   ]
+  }
+ },
+ "diphenhydramine": {
+  "sideEffects": [
+   {
+    "e": "Blurred vision, constipation, memory problems, dry mouth",
+    "via": "M1 antagonism"
+   },
+   {
+    "e": "Sedation",
+    "via": "H1 antagonism"
+   }
+  ],
+  "pearls": [
+   "Its anticholinergic effects come from **M1 blockade**, not H1; the idea that all antihistamines are anticholinergic arose because most potent ones also block M1.",
+   "H1-antagonist hypnotics have only **anecdotal** tolerance and no withdrawal, dependence or rebound.",
+   "Works by **reducing arousal** (blocking histamine) rather than boosting sleep drive; hypnotic threshold for histamine blockade is thought to be about **80%** occupancy."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p425",
+    "p426",
+    "p421, 428"
+   ]
+  }
+ },
+ "doxylamine": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {
+   "sideEffects": [],
+   "pearls": []
+  }
+ }
+}

@@ -1,0 +1,455 @@
+[
+ {
+  "id": "methadone",
+  "name": "Methadone",
+  "group": "Opioid",
+  "cls": "μ-opioid full agonist",
+  "nbn": "Opioid receptor agonist (μ)",
+  "nts": [
+   "endorphin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "559–563"
+   }
+  ],
+  "short": "Long-acting full μ agonist for opioid maintenance, usually at a clinic.",
+  "mechanism": "A long-acting **full μ-opioid agonist** that fully suppresses withdrawal given orally.",
+  "targets": [
+   {
+    "t": "mor",
+    "action": "full agonist"
+   }
+  ],
+  "uses": [
+   "**Opioid use disorder** (medication-assisted therapy)",
+   "Pain (a synthetic opioid)"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "560",
+    "text": "Usually dispensed **daily at a clinic**.",
+    "sec": "s13-oud-tx"
+   },
+   {
+    "ch": "ch13",
+    "pages": "561",
+    "text": "Withdrawal peaks at **72–96 h** and lasts **14+ days**: less intense but much longer than heroin.",
+    "sec": "s13-oud-tx"
+   }
+  ]
+ },
+ {
+  "id": "buprenorphine",
+  "name": "Buprenorphine",
+  "brand": "Suboxone (with naloxone); Sublocade; Brixadi",
+  "group": "Opioid",
+  "cls": "μ-opioid partial agonist",
+  "nbn": "Opioid receptor partial agonist (μ)",
+  "nts": [
+   "endorphin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "560–563"
+   }
+  ],
+  "short": "μ partial agonist for opioid maintenance; sublingual with naloxone, implant or depot.",
+  "mechanism": "A **μ-opioid partial agonist**: weaker agonist effects than full agonists, yet suppresses withdrawal, especially once mild withdrawal has begun.",
+  "targets": [
+   {
+    "t": "mor",
+    "action": "partial agonist"
+   }
+  ],
+  "uses": [
+   "**Opioid use disorder** (MAT)"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "560",
+    "text": "Sublingual (poor oral absorption), usually with **naloxone** to deter injection; several-day outpatient supplies; also a **6-month implant** and **1-month depot**.",
+    "sec": "s13-oud-tx"
+   },
+   {
+    "ch": "ch13",
+    "pages": "561",
+    "text": "Withdrawal peaks ~72 h and lasts about a week; less intense than heroin.",
+    "sec": "s13-oud-tx"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "X-waiver gone; weekly/monthly injection",
+    "text": "Since January 2023 no special DATA (“X”) waiver is needed to prescribe buprenorphine for OUD. **Brixadi**, a weekly or monthly extended-release injection, was approved May 23, 2023.",
+    "source": "DEA/SAMHSA, January 2023; Braeburn, May 2023"
+   }
+  ]
+ },
+ {
+  "id": "fentanyl",
+  "name": "Fentanyl",
+  "group": "Opioid",
+  "cls": "Synthetic μ-opioid agonist",
+  "nbn": "Opioid receptor agonist (μ)",
+  "nts": [
+   "endorphin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "559–560"
+   }
+  ],
+  "short": "Synthetic opioid ~100× morphine; drives most overdose deaths.",
+  "mechanism": "A very potent synthetic **μ agonist** (~100× morphine); derivatives like carfentanil are ~10,000× morphine.",
+  "targets": [
+   {
+    "t": "mor",
+    "action": "full agonist"
+   }
+  ],
+  "uses": [
+   "Anesthesia and severe pain (prescribed)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Respiratory depression and overdose death",
+    "via": "μ agonism"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "559–560",
+    "text": "Increasingly laced into street heroin. The book claims naloxone cannot reverse fentanyl; it can, though larger or repeated doses may be needed.",
+    "sec": "s13-opioids"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2025",
+    "title": "Overdose deaths falling",
+    "text": "US overdose deaths fell for a third straight year to about 70,000 in 2025 (provisional), with opioid-involved deaths down about 19%; synthetic opioids still dominate.",
+    "source": "CDC NCHS, May 13, 2026"
+   }
+  ]
+ },
+ {
+  "id": "lofexidine",
+  "name": "Lofexidine",
+  "brand": "Lucemyra",
+  "group": "α2 agonist",
+  "cls": "α2-adrenergic agonist",
+  "nbn": "Norepinephrine α2 receptor agonist",
+  "nts": [
+   "norepinephrine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "561–562"
+   }
+  ],
+  "short": "α2 agonist that eases autonomic opioid withdrawal symptoms.",
+  "mechanism": "An **α2-adrenergic agonist** that reduces autonomic hyperactivity during opioid withdrawal.",
+  "targets": [
+   {
+    "t": "alpha2",
+    "action": "agonist"
+   }
+  ],
+  "uses": [
+   "**Opioid withdrawal** (intensity, not duration)"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "561–562",
+    "text": "Combined with **naltrexone**, reduces both the severity and the duration of withdrawal after methadone or buprenorphine (Figures 13-20, 13-21).",
+    "sec": "s13-oud-tx"
+   }
+  ]
+ },
+ {
+  "id": "naltrexone",
+  "name": "Naltrexone",
+  "brand": "Revia (oral); Vivitrol (monthly injection)",
+  "group": "Addiction treatment",
+  "cls": "μ-opioid antagonist",
+  "nbn": "Opioid receptor antagonist (μ)",
+  "nts": [
+   "endorphin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "556, 561–563, 571–574"
+   }
+  ],
+  "short": "μ-opioid antagonist for alcohol and opioid use disorders; oral or monthly injection.",
+  "mechanism": "Blocks **μ-opioid** receptors, removing the opioid-mediated reward of alcohol and opioids.",
+  "targets": [
+   {
+    "t": "mor",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "**Alcohol use disorder**: fewer heavy drinking days, more abstinence",
+   "**Opioid use disorder** maintenance after detoxification (monthly injection)",
+   "Off-label: binge eating disorder (limited)"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "556",
+    "text": "Oral or **30-day injection** (380 mg IM); the injection solves adherence but is rarely prescribed.",
+    "sec": "s13-alcohol"
+   },
+   {
+    "ch": "ch13",
+    "pages": "561",
+    "text": "Added to an α2 agonist, shortens opioid withdrawal; monthly injection means one decision per 30 days and can’t be stopped impulsively.",
+    "sec": "s13-oud-tx"
+   },
+   {
+    "ch": "ch13",
+    "pages": "573",
+    "text": "Basis of the **Sinclair method**: taken ~1 h before drinking to extinguish the drinking habit; works best paired with use.",
+    "sec": "s13-extinction"
+   }
+  ]
+ },
+ {
+  "id": "nalmefene",
+  "name": "Nalmefene",
+  "brand": "Selincro (alcohol, ex-US); Opvee (nasal, overdose)",
+  "group": "Addiction treatment",
+  "cls": "μ-opioid antagonist",
+  "nbn": "Opioid receptor antagonist (μ)",
+  "nts": [
+   "endorphin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "556, 573"
+   }
+  ],
+  "short": "μ-opioid antagonist approved for alcohol outside the US.",
+  "mechanism": "Blocks μ-opioid receptors to blunt alcohol reward.",
+  "targets": [
+   {
+    "t": "mor",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "Alcohol use disorder (outside the US); Sinclair-type extinction"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "556",
+    "text": "Like naltrexone, reduces the euphoria of heavy drinking; approved outside the US.",
+    "sec": "s13-alcohol"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Nalmefene nasal spray for overdose",
+    "text": "In May 2023 the FDA approved **Opvee**, a prescription nalmefene nasal spray for emergency treatment of opioid overdose.",
+    "source": "NPR, May 22, 2023"
+   }
+  ]
+ },
+ {
+  "id": "acamprosate",
+  "name": "Acamprosate",
+  "brand": "Campral",
+  "group": "Addiction treatment",
+  "cls": "Glutamate modulator for alcohol dependence",
+  "nbn": "Glutamate receptor antagonist (mGluR)",
+  "nts": [
+   "glutamate",
+   "gaba"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "556"
+   }
+  ],
+  "short": "Taurine derivative; “artificial alcohol” that quiets withdrawal glutamate.",
+  "mechanism": "A taurine derivative that blocks **mGluRs** (mGlu5, perhaps mGlu2), reducing glutamate release in alcohol withdrawal; NMDA and GABA effects are probably indirect.",
+  "targets": [
+   {
+    "t": "mglur-g1",
+    "action": "antagonist",
+    "note": "mGlu5"
+   },
+   {
+    "t": "mglur-g2",
+    "action": "antagonist",
+    "note": "Perhaps mGlu2"
+   }
+  ],
+  "uses": [
+   "Maintaining abstinence in **alcohol dependence**"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "556",
+    "text": "Approved but **not prescribed very often**.",
+    "sec": "s13-alcohol"
+   }
+  ]
+ },
+ {
+  "id": "disulfiram",
+  "name": "Disulfiram",
+  "brand": "Antabuse",
+  "group": "Addiction treatment",
+  "cls": "Aldehyde dehydrogenase inhibitor",
+  "nbn": "Enzyme inhibitor (aldehyde dehydrogenase)",
+  "nts": [],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "556"
+   }
+  ],
+  "short": "Makes drinking aversive by blocking acetaldehyde clearance.",
+  "mechanism": "**Irreversibly** inhibits liver aldehyde dehydrogenase, so alcohol produces toxic **acetaldehyde**: an aversive, conditioning reaction.",
+  "targets": [
+   {
+    "t": "aldh",
+    "action": "inhibitor",
+    "note": "Irreversible"
+   }
+  ],
+  "uses": [
+   "Alcohol use disorder (now little used)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Flushing, nausea, vomiting, hypotension with alcohol (occasionally dangerous)",
+    "via": "Acetaldehyde accumulation"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "556",
+    "text": "The classic alcoholism drug; adherence is the problem.",
+    "sec": "s13-alcohol"
+   }
+  ]
+ },
+ {
+  "id": "alcohol",
+  "name": "Alcohol (ethanol)",
+  "aka": [
+   "ethanol"
+  ],
+  "group": "Drug of abuse",
+  "cls": "Sedative drug of abuse",
+  "nbn": "GABA-A PAM (δ subunit); glutamate reducer; opioid releaser",
+  "nts": [
+   "gaba",
+   "glutamate",
+   "endorphin",
+   "dopamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "553–556"
+   }
+  ],
+  "short": "More GABA, less glutamate, plus opioid-driven reward.",
+  "mechanism": "Hypothetically enhances GABA (blocks presynaptic **GABA-B**, PAM at **δ-subunit GABA-A** receptors), reduces glutamate (presynaptic mGluRs and VSCCs; NMDA and postsynaptic mGluRs), and acts at **μ-opioid** receptors or releases β-endorphin in the VTA, driving dopamine release.",
+  "targets": [
+   {
+    "t": "gabaa",
+    "action": "positive allosteric modulator",
+    "note": "δ-subunit (benzodiazepine-insensitive) receptors"
+   },
+   {
+    "t": "gabab",
+    "action": "antagonist",
+    "note": "Presynaptic: increases GABA release"
+   },
+   {
+    "t": "nmda",
+    "action": "antagonist",
+    "note": "Possible"
+   },
+   {
+    "t": "mor",
+    "action": "agonist",
+    "note": "Direct or via β-endorphin release"
+   }
+  ],
+  "uses": [],
+  "sideEffects": [
+   {
+    "e": "Withdrawal: glutamate excess, GABA deficiency",
+    "via": "Adaptation of GABA and glutamate systems"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "553",
+    "text": "About **85%** of alcoholics smoke; self-medication of psychiatric disorders is common.",
+    "sec": "s13-alcohol"
+   }
+  ]
+ },
+ {
+  "id": "ondansetron",
+  "name": "Ondansetron",
+  "brand": "Zofran",
+  "group": "Antiemetic",
+  "cls": "5HT3 antagonist",
+  "nbn": "Serotonin 5HT3 receptor antagonist",
+  "nts": [
+   "serotonin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "556"
+   }
+  ],
+  "short": "5HT3 antagonist that may help alcoholism (unapproved).",
+  "mechanism": "Blocks **5HT3** receptors.",
+  "targets": [
+   {
+    "t": "5ht3",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "Antiemetic",
+   "Unapproved: may help **alcoholism**"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "556",
+    "text": "Listed with topiramate as unapproved agents that may help alcoholism.",
+    "sec": "s13-alcohol"
+   }
+  ]
+ }
+]

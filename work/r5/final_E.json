@@ -1,0 +1,85 @@
+{
+ "methylphenidate": {
+  "sideEffects": [
+   {
+    "e": "**Insomnia** and evening side effects when the dose lasts too long",
+    "via": "DAT occupancy staying above threshold at bedtime"
+   },
+   {
+    "e": "**Rebound** hyperactivity and insomnia as evening levels fall early",
+    "via": "Loss of DAT occupancy as the formulation wears off"
+   },
+   {
+    "e": "**Worsened tics** in children with ADHD plus tics",
+    "via": "Excess dopamine in the motor striatum (hypothetical)"
+   },
+   {
+    "e": "**Euphoria and abuse** with fast delivery (IR, snorted, IV, smoked)",
+    "via": "Sudden DAT blockade, phasic DA surge in nucleus accumbens"
+   },
+   {
+    "e": "**Psychosis, mania, hypertension** at doses above therapeutic",
+    "via": "Excess DA/NE action; book gives no further mechanism"
+   }
+  ],
+  "pearls": [
+   "Effect needs roughly **50–60% DAT occupancy**; the effect ends when occupancy falls below that threshold.",
+   "**Concerta** has a small early peak and a 12 h duration, whereas **Metadate CD** has a strong early peak and an 8 h duration.",
+   "**Daytrana** patch peaks late (7–10 h) and covers about 12 h.",
+   "**IR tablets** last 3–4 h and need a **second dose at lunch**; Ritalin IR is labelled for ages 6–12 and adults.",
+   "Anxiety can worsen on a stimulant: with comorbid ADHD plus anxiety, a **NET inhibitor or α2A agonist** is an alternative."
+  ]
+ },
+ "amphetamine": {
+  "sideEffects": [
+   {
+    "e": "**Insomnia** and late-day side effects when action lasts too long",
+    "via": "DAT occupancy staying above threshold at bedtime"
+   },
+   {
+    "e": "**Rebound** hyperactivity and insomnia as evening levels fall early",
+    "via": "Loss of DAT occupancy as the formulation wears off"
+   },
+   {
+    "e": "**Euphoria and abuse** at high dose or with fast routes",
+    "via": "Vesicular displacement of DA, DAT reversal, phasic DA surge in nucleus accumbens"
+   },
+   {
+    "e": "**Tremor, restlessness, irritability, panic, stereotypy** at high doses",
+    "via": "High-dose stimulant effect; book gives no specific mechanism"
+   },
+   {
+    "e": "**Hypertension, tachycardia, hyperthermia** at very high doses; seizures and stroke in overdose",
+    "via": "High-dose stimulant effect; book gives no specific mechanism"
+   }
+  ],
+  "pearls": [
+   "**Oral dosing** slows entry into the brain and so lowers reinforcement; smoking, snorting or IV use gives the fastest, most reinforcing rise.",
+   "**Zenzedi/ProCentra** (D-amphetamine IR) last 4–5 or 4–6 h; **Dexedrine spansule** lasts 6–8 h once daily.",
+   "**Mydayis** is approved from age 13 (others mostly from 6, IR from 3).",
+   "Controlled-release **matrix** designs can resist powdering for snorting, smoking or injecting."
+  ]
+ },
+ "atomoxetine": {
+  "sideEffects": [
+   {
+    "e": "**Sedation** at high doses",
+    "via": "Excess NE at α2B receptors (thalamus)"
+   },
+   {
+    "e": "**Cognitive impairment** at high doses",
+    "via": "Excess NE favouring α1 over α2A actions"
+   }
+  ],
+  "pearls": [
+   "**Low doses** first raise α2A activity and improve cognition; **high doses** can swamp the synapse, so the fix is to lower the dose.",
+   "Benefit rests on **long-term adaptation** (restored tonic signaling), unlike stimulants whose effect tracks plasma level and momentary occupancy.",
+   "With ADHD plus **anxiety, depression or substance abuse**, an NET inhibitor or α2A agonist added to the primary treatment is favoured over a stimulant."
+  ]
+ },
+ "guanfacine": {
+  "pearls": [
+   "For ADHD with **anxiety, depression or substance abuse**, an α2A agonist is favoured over a stimulant as add-on to the primary treatment."
+  ]
+ }
+}

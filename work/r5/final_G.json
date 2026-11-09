@@ -1,0 +1,68 @@
+{
+ "methadone": {
+  "sideEffects": [
+   {
+    "e": "**Respiratory depression** and coma in overdose",
+    "via": "μ agonism (opioid class effect)"
+   },
+   {
+    "e": "**Tolerance, dependence** and a withdrawal syndrome when stopped",
+    "via": "Adaptation of μ-opioid receptors"
+   }
+  ],
+  "pearls": [
+   "Only the **levo enantiomer** carries the μ-agonist activity; the dextro form is a weak μ agonist and an NMDA antagonist (being developed for depression).",
+   "Works best inside a **structured program** with random urine screens and psychosocial support; tapering straight to abstinence rarely succeeds long term."
+  ]
+ },
+ "buprenorphine": {
+  "pearls": [
+   "**Injecting** the buprenorphine–naloxone combination gives no high and may precipitate withdrawal, so it blocks diversion of the sublingual form.",
+   "Like methadone, most successful in a **structured maintenance program** (random urine screens, psychosocial services); tapering to abstinence rarely succeeds long term."
+  ]
+ },
+ "fentanyl": {
+  "pearls": [
+   "Fentanyl and its derivatives account for about **one-third** of the roughly 60,000 yearly US opioid overdose deaths (the book’s figure)"
+  ]
+ },
+ "lofexidine": {
+  "pearls": [
+   "Settles the **autonomic hyperactivity** of withdrawal (tachycardia, tremor, sweating); clonidine is the comparable α2 agonist in the book."
+  ]
+ },
+ "naltrexone": {
+  "sideEffects": [
+   {
+    "e": "Can **precipitate withdrawal** in opioid-dependent patients (book states this for opioid antagonists generally)",
+    "via": "μ-opioid blockade"
+   }
+  ],
+  "pearls": [
+   "Better at cutting **heavy drinking** (≥5 drinks/day men, ≥4 women) than at securing complete abstinence.",
+   "Patients who try to **drink or inject over** the blockade find it unrewarding, which helps extinguish the habit.",
+   "Combined with bupropion, approved for **obesity** (Ch 6 mention)."
+  ]
+ },
+ "nalmefene": {
+  "sideEffects": [
+   {
+    "e": "Can **precipitate withdrawal** in opioid-dependent patients (book states this for opioid antagonists generally)",
+    "via": "μ-opioid blockade"
+   }
+  ],
+  "pearls": [
+   "Used in the Sinclair method as an **oral dose ~1 h before drinking**, as an alternative to naltrexone."
+  ]
+ },
+ "acamprosate": {
+  "pearls": [
+   "Targets the state after chronic alcohol is stopped: **glutamate overexcitation** (excitotoxicity) plus GABA deficiency."
+  ]
+ },
+ "alcohol": {
+  "pearls": [
+   "**Detox and deprivation** do not abolish craving; cue-triggered craving can persist for years and deprivation may raise later drinking."
+  ]
+ }
+}

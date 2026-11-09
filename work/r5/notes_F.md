@@ -1,0 +1,17 @@
+# Group F notes (Ch 13 pp544-575; Ch 7 pp355-358; Ch 8 pp376-378; Ch 4)
+- cocaine: +4 sideEffects (class stimulant toxicity, p545), +4 pearls. Book gives no receptor mechanism for most toxicity, so "via" says so.
+- methamphetamine: +3 sideEffects (same stimulant list; paranoia kept as existing), +3 pearls (selegiline metabolite p337, Fig 13-8 stage E, route/oral absorption).
+- mdpv: +2 pearls. FLAG: existing `nbn`/`nts` (DA and NE reuptake inhibitor) are not stated for MDPV on p546; the book only calls it a synthetic stimulant. Left unchanged.
+- nicotine: +2 sideEffects (craving/withdrawal, upregulation), +5 pearls. Existing fact p548 says nicotine acts on presynaptic glutamate receptors as α4β2; text p548 says "nicotinic presynaptic receptors", Fig 13-9 legend says α7. Existing fact only says "glutamate release", so no conflict.
+- varenicline: book lists no adverse effects; +2 pearls (bupropion about half the quit rate; VTA sites).
+- pcp: +4 sideEffects (class dissociative/PCP effects, pp570-571), +4 pearls. Vias are generic "NMDA blockade"; book ties only psychosis explicitly to mechanism.
+- lsd: +4 sideEffects (intoxication effects are class-wide for hallucinogens p569; flashbacks "mostly LSD" p568, so LSD only), +4 pearls.
+- mescaline: +3 sideEffects (class), +3 pearls. Flashbacks not added (book ties them mostly to LSD).
+- psilocybin: +3 sideEffects (class), +4 pearls, targets extended with psilocin strip (Fig 7-88, p357): 5HT1A, 5HT2C, 5HT1B/1D, 5HT5 all "+" (s=1); text p358 names 5HT1A, 5HT2A, 5HT2C. Existing s values consistent with the psilocybin strip. Note p568 and p358 both mislabel psilocin as DMT (already in facts).
+- mdma: +1 sideEffect (mania-like, anxious derealization, thought disorder; p569), +5 pearls. Existing item "SSRIs block MDMA" etc. not repeated.
+- cannabis: +5 sideEffect items (Table 13-2 risks, p563-566), +5 pearls. Via mostly "not specified"; THC anxiogenic with amygdala activation is from Fig 13-26.
+- dronabinol: book has nothing more on adverse effects; +2 pearls (Schedule III, FDA-approved pure THC).
+- nabilone: nothing more; +1 pearl. FLAG: existing targets list only cb1 though mechanism says CB1/CB2 and Table 13-4 states no receptor; left unchanged. Existing nabiximols/nabilone CB1-only targets are inferred from THC.
+- nabiximols: nothing more; +1 pearl (Schedule N/A).
+- cannabidiol: no adverse effects in book; +3 pearls, `uses` extended with investigational antipsychotic/anxiolytic (p563, p566). No valid target id for "serotonin system" without a receptor subtype, so targets untouched.
+- Not added: LSD/mescaline additional serotonin targets (p568 names 5HT2B, 5HT7 etc. for the whole class without strengths).

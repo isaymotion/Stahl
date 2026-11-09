@@ -1,0 +1,42 @@
+{
+ "suvorexant": {
+  "pearls": [
+   "Hypnotic effect needs about **65% orexin-receptor occupancy**, versus 25–30% for GABA-A hypnotics and about 80% for serotonin/histamine antagonists",
+   "Plasma **half-life is not clinically important** for DORAs: adjust by **dose** (higher for early waking or high orexin tone, lower for morning carryover)",
+   "No head-to-head data against lemborexant, but their binding profiles differ enough that a **non-responder to one** might do better on the other"
+  ]
+ },
+ "lemborexant": {
+  "pearls": [
+   "Hypnotic effect needs about **65% orexin-receptor occupancy**, versus 25–30% for GABA-A hypnotics and about 80% for serotonin/histamine antagonists",
+   "Plasma **half-life is not clinically important** for DORAs: adjust by **dose** (higher for early waking or high orexin tone, lower for morning carryover)",
+   "No head-to-head data against suvorexant, but their binding profiles differ enough that a **non-responder to one** might do better on the other"
+  ]
+ },
+ "ramelteon": {
+  "pearls": [
+   "Unlike OTC melatonin, acts at **MT1/MT2 only**, not the MT3 site (an enzyme, NRH–quinone oxidoreductase 2, not involved in sleep)",
+   "Sleep-onset effect is attributed to **MT1** inhibition of the suprachiasmatic nucleus, damping its wake-promoting signal",
+   "Grouped with **1–3 hour half-life hypnotics** (zaleplon, triazolam), so effect may fade before desired waking"
+  ]
+ },
+ "tasimelteon": {
+  "pearls": [
+   "Non-24 disorder arises because blind patients cannot **entrain the clock to light**; the free-running clock causes both insomnia and daytime sleepiness",
+   "**Phase shifting** and circadian entrainment are mainly MT2-mediated; like ramelteon, helps sleep **onset** rather than necessarily maintenance",
+   "Acts only at MT1/MT2, not the MT3 site that OTC melatonin also hits"
+  ]
+ },
+ "memantine": {
+  "pearls": [
+   "Rationale: plaque/tangle **glutamate leak** may first disrupt memory, then cause excitotoxic neuron loss; memantine aims to slow that decline",
+   "A relatively **weak, low-potency** NMDA blocker, never systematically tested for AD agitation; dextromethorphan–bupropion is the NMDA agent studied there"
+  ]
+ },
+ "donepezil": {
+  "pearls": [
+   "Cholinesterase inhibitors **usually preserve** memory (slow decline) rather than improve it, and lose effect as AD progresses and cholinergic receptor targets are lost",
+   "Little benefit for most **behavioral symptoms** of dementia, except in **Lewy body dementias**; also among possible (unapproved) treatments for apathy"
+  ]
+ }
+}

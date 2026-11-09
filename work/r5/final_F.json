@@ -1,0 +1,272 @@
+{
+ "cocaine": {
+  "sideEffects": [
+   {
+    "e": "**Tremor, restlessness, irritability, emotional lability, panic** and repetitive stereotyped behavior at high doses",
+    "via": "Excess stimulant effect (book gives no specific receptor)"
+   },
+   {
+    "e": "**Paranoia and hallucinations** resembling schizophrenia with repeated high doses",
+    "via": "Mesolimbic dopamine excess (direct)"
+   },
+   {
+    "e": "**Hypertension, tachycardia, ventricular irritability, hyperthermia, respiratory depression**",
+    "via": "Excess stimulant effect (book gives no specific mechanism)"
+   },
+   {
+    "e": "**Overdose: acute heart failure, stroke, seizures**",
+    "via": "Excess stimulant effect (book gives no specific mechanism)"
+   }
+  ],
+  "pearls": [
+   "**Inactive orally**; snorting bypasses the liver, so onset can beat even IV dosing",
+   "**Smoking** (crack) is the fastest, most reinforcing delivery: it avoids first-pass metabolism and acts like an arterial bolus",
+   "Between doses come **withdrawal** sleepiness and anhedonia: the bigger the high, the deeper the crash",
+   "Chronic abuse can end in **\"burn-out\"**: long-lasting dopamine depletion and axonal degeneration"
+  ]
+ },
+ "methamphetamine": {
+  "sideEffects": [
+   {
+    "e": "Paranoid psychosis",
+    "via": "Mesolimbic dopamine excess"
+   },
+   {
+    "e": "**Tremor, restlessness, irritability, emotional lability, panic** and repetitive stereotyped behavior at high doses",
+    "via": "Excess stimulant effect (book gives no specific receptor)"
+   },
+   {
+    "e": "**Hypertension, tachycardia, ventricular irritability, hyperthermia, respiratory depression**",
+    "via": "Excess stimulant effect (book gives no specific mechanism)"
+   },
+   {
+    "e": "**Overdose: acute heart failure, stroke, seizures**",
+    "via": "Excess stimulant effect (book gives no specific mechanism)"
+   }
+  ],
+  "pearls": [
+   "Oral use is less reinforcing because GI absorption slows brain entry; **smoking, snorting or injecting** maximizes the high"
+  ]
+ },
+ "mdpv": {
+  "pearls": [
+   "Also sold as **\"plant food\"**; like other stimulants it is reinforcing"
+  ]
+ },
+ "nicotine": {
+  "sideEffects": [
+   {
+    "e": "**Craving and withdrawal** between cigarettes",
+    "via": "α4β2 receptors resensitize and no longer release dopamine"
+   },
+   {
+    "e": "Amplified craving with chronic use",
+    "via": "α4β2 upregulation (futile; receptors are desensitized again by the next cigarette)"
+   }
+  ],
+  "pearls": [
+   "A cigarette's **length** roughly matches the time needed to desensitize α4β2 receptors; shorter wastes pleasure, longer adds nothing",
+   "Addiction can start with the **first cigarette** (anterior cingulate activation lasting about a month in animals); craving appears within a month of repeated use",
+   "Smoking is very common in psychiatric practice: **40–50%** of psychopharmacology patients, **60–85%** in ADHD, schizophrenia and bipolar; only about 10% are proactively offered treatment",
+   "Changes may be lifelong: a **\"molecular memory\"** persists in long-abstinent ex-smokers"
+  ]
+ },
+ "varenicline": {
+  "pearls": [
+   "Quit rates with **bupropion** are about half those of varenicline"
+  ]
+ },
+ "pcp": {
+  "sideEffects": [
+   {
+    "e": "Psychosis",
+    "via": "NMDA blockade on prefrontal GABA interneurons"
+   },
+   {
+    "e": "**Vertical nystagmus**, staggering gait, slurred speech",
+    "via": "NMDA blockade (unique nystagmus; mechanism not specified)"
+   },
+   {
+    "e": "**Catatonia** (excitement alternating with stupor), delirium, paranoia, disorientation",
+    "via": "NMDA blockade"
+   },
+   {
+    "e": "**Analgesia, amnesia**; at high doses sedation, respiratory depression, ataxia",
+    "via": "NMDA blockade (dissociative class effect)"
+   },
+   {
+    "e": "**Overdose: coma, extreme hyperthermia, seizures, rhabdomyolysis**",
+    "via": "Toxic NMDA blockade (mechanism not specified)"
+   }
+  ],
+  "pearls": [
+   "Abandoned as an **anesthetic** because it caused schizophrenia-like psychosis, often on emergence from anesthesia",
+   "Dissociative state of catalepsy, amnesia and analgesia; consciousness need not be lost (**dissociative anesthesia**)",
+   "With stimulants, PCP mimics psychosis **more genuinely** than classic hallucinogens do",
+   "Has stimulant as well as depressant actions; a \"club drug\" like ketamine, which acts at the same NMDA site but is far less psychotomimetic"
+  ]
+ },
+ "lsd": {
+  "sideEffects": [
+   {
+    "e": "Visual hallucinations",
+    "via": "5HT2A agonism in visual cortex"
+   },
+   {
+    "e": "Psychosis, delusions",
+    "via": "5HT2A-driven glutamate output to VTA → dopamine excess"
+   },
+   {
+    "e": "**Visual illusions, trails, macropsia/micropsia, synesthesia**, slowed time, depersonalization and derealization, with full alertness",
+    "via": "5HT2A agonism (plus other serotonin receptors)"
+   },
+   {
+    "e": "**Panic (\"bad trip\")**, then delirium and rarely psychosis with delusions and paranoia as intoxication escalates",
+    "via": "Hallucinogen intoxication; mechanism not specified"
+   },
+   {
+    "e": "Nausea, tachycardia, raised blood pressure and body temperature",
+    "via": "Not specified"
+   },
+   {
+    "e": "**Flashbacks** (spontaneous symptom recurrence lasting seconds to hours, days to months later; mostly reported with LSD)",
+    "via": "Unknown; possibly long-lasting serotonin adaptation or amygdala emotional conditioning"
+   }
+  ],
+  "pearls": [
+   "An **ergoline**; psilocybin is a tryptamine and mescaline a phenethylamine",
+   "Hallucinogens are **not selective** for 5HT2A; other serotonin receptors may add to the effect",
+   "Resemblance of a \"trip\" to **psychosis** is only superficial"
+  ]
+ },
+ "mescaline": {
+  "sideEffects": [
+   {
+    "e": "Visual hallucinations",
+    "via": "5HT2A agonism in visual cortex"
+   },
+   {
+    "e": "Psychosis, delusions",
+    "via": "5HT2A-driven glutamate output to VTA → dopamine excess"
+   },
+   {
+    "e": "**Visual illusions, trails, macropsia/micropsia, synesthesia**, slowed time, depersonalization and derealization, with full alertness",
+    "via": "5HT2A agonism (plus other serotonin receptors)"
+   },
+   {
+    "e": "**Panic (\"bad trip\")**, then delirium and rarely psychosis with delusions and paranoia as intoxication escalates",
+    "via": "Hallucinogen intoxication; mechanism not specified"
+   },
+   {
+    "e": "Nausea, tachycardia, raised blood pressure and body temperature",
+    "via": "Not specified"
+   }
+  ],
+  "pearls": [
+   "A **phenethylamine** hallucinogen (psilocybin is a tryptamine, LSD an ergoline)",
+   "Hallucinogens are **not selective** for 5HT2A; other serotonin receptors may add to the effect"
+  ]
+ },
+ "psilocybin": {
+  "sideEffects": [
+   {
+    "e": "Visual hallucinations",
+    "via": "5HT2A agonism in visual cortex"
+   },
+   {
+    "e": "Psychosis, delusions",
+    "via": "5HT2A-driven glutamate output to VTA → dopamine excess"
+   },
+   {
+    "e": "**Visual illusions, trails, macropsia/micropsia, synesthesia**, slowed time, depersonalization and derealization, with full alertness",
+    "via": "5HT2A agonism (plus other serotonin receptors)"
+   },
+   {
+    "e": "**Panic (\"bad trip\")**, then delirium and rarely psychosis with delusions and paranoia as intoxication escalates",
+    "via": "Hallucinogen intoxication; mechanism not specified"
+   },
+   {
+    "e": "Nausea, tachycardia, raised blood pressure and body temperature",
+    "via": "Not specified"
+   }
+  ],
+  "pearls": [
+   "From **\"magic mushrooms\"**; structurally similar to LSD and abused for euphoric, psychedelic trips",
+   "Therapy outcome depends on **set, setting and cast** (mindset, environment, therapist and others present) plus prior trust and preparation; few variables are established"
+  ]
+ },
+ "mdma": {
+  "sideEffects": [
+   {
+    "e": "**Hyperthermia**, organ damage, death (especially dancing all night, dehydrated)",
+    "via": "Possibly 5HT2A stimulation"
+   },
+   {
+    "e": "Distorted sensory and time perception, hallucinations",
+    "via": "5HT2A stimulation"
+   },
+   {
+    "e": "**Mania-like states, anxious derealization**, thought disorder, fear of losing thought or body control",
+    "via": "Not specified"
+   }
+  ],
+  "pearls": [
+   "Known as **\"Molly\"** (for \"molecular\") as well as Ecstasy; once popular in clubs and raves",
+   "Only **pure MDMA** is studied in therapy; street drug is often cut with bath salts, methamphetamine, dextromethorphan, ketamine or cocaine, and taken with marijuana and alcohol",
+   "Rationale in PTSD: an **empathic** state may suit painful-memory work better than psilocybin's mystical or ketamine's dissociative state",
+   "Aimed at patients for whom first-line **exposure therapy** fails or is too painful"
+  ]
+ },
+ "cannabis": {
+  "sideEffects": [
+   {
+    "e": "Increased risk of psychosis",
+    "via": "Environmental stressor acting on genetic risk"
+   },
+   {
+    "e": "**Impaired short-term memory**, slowed thinking, loss of temporal awareness",
+    "via": "THC at CB1/CB2; risk higher with low CBD"
+   },
+   {
+    "e": "**Anxiety**; at high doses panic and toxic delirium",
+    "via": "THC anxiogenic (increased amygdalar activity)"
+   },
+   {
+    "e": "**Amotivational syndrome** in heavy daily users (poor drive, attention, judgment, poor insight)",
+    "via": "Not specified"
+   },
+   {
+    "e": "Respiratory symptoms, **motor vehicle crashes**, lower birth weight",
+    "via": "Substantial-evidence risks (Table 13-2); mechanism not specified"
+   },
+   {
+    "e": "Moderate-evidence risks: **(hypo)mania in bipolar**, depression, suicidality, other substance use disorders, pediatric overdose injuries",
+    "via": "Not specified"
+   }
+  ],
+  "pearls": [
+   "**CB1** is denser in brain; **CB2** is mostly on peripheral immune cells",
+   "Cannabis has grown more **potent** (more THC, less CBD) over time; vulnerable people cannot be identified in advance",
+   "High CBD content lowers risk of psychosis symptoms and memory impairment; **low-CBD** cannabis goes with earlier onset of psychotic disorder",
+   "\"Medical marijuana\" is an **unprocessed plant** (~500 chemicals) with variable content and contaminants, so not a standard prescription drug",
+   "Evidence for benefit in anxiety, PTSD and Tourette is **limited**; epilepsy, dementia and addiction **insufficient**"
+  ]
+ },
+ "dronabinol": {
+  "pearls": [
+   "**Schedule III**, versus Schedule II for nabilone",
+   "Pure THC meets traditional **FDA drug standards**, unlike medical marijuana"
+  ]
+ },
+ "nabilone": {
+  "pearls": [
+   "Oral capsule only, with no AIDS-wasting indication, unlike dronabinol"
+  ]
+ },
+ "cannabidiol": {
+  "pearls": [
+   "Potential properties noted: neuropathic pain relief and **anti-inflammatory**",
+   "Epidiolex is CBD purified from marijuana, given as an **oral solution**"
+  ]
+ }
+}

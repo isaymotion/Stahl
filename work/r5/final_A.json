@@ -1,0 +1,109 @@
+{
+ "diazepam": {
+  "sideEffects": [
+   {
+    "e": "Blocks short-term memory",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "Sedation (sleep induction)",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "**Tolerance, dependence and withdrawal** (including rebound insomnia)",
+    "via": "Adaptation of α1-containing GABA-A receptors with chronic use"
+   }
+  ],
+  "pearls": [
+   "Subtype roles: α1 = **daytime sedation**, amnesia, anticonvulsant action; α2/α3 = **muscle relaxant** and alcohol-potentiating effects; α5 (hippocampus) = cognition",
+   "Part of the **mesolimbic reward** system's drugs of abuse; alcoholics often also abuse benzodiazepines, so screen for substance use before prescribing",
+   "Much **safer in overdose** than barbiturates",
+   "**Not recommended** for agitation in dementia; sedatives (including benzodiazepines) raise **aspiration** and pneumonia risk"
+  ],
+  "uses": [
+   "**Anxiolytic**",
+   "Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)",
+   "**GAD and panic disorder** (benzodiazepine class use, Chapter 8)"
+  ]
+ },
+ "alprazolam": {
+  "sideEffects": [
+   {
+    "e": "Blocks short-term memory",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "Sedation (sleep induction)",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "**Tolerance, dependence and withdrawal** (including rebound insomnia)",
+    "via": "Adaptation of α1-containing GABA-A receptors with chronic use"
+   }
+  ],
+  "pearls": [
+   "Subtype roles: α1 = **daytime sedation**, amnesia, anticonvulsant action; α2/α3 = **muscle relaxant** and alcohol-potentiating effects; α5 (hippocampus) = cognition",
+   "Part of the **mesolimbic reward** system's drugs of abuse; alcoholics often also abuse benzodiazepines, so screen for substance use before prescribing",
+   "Much **safer in overdose** than barbiturates",
+   "**Not recommended** for agitation in dementia; sedatives (including benzodiazepines) raise **aspiration** and pneumonia risk"
+  ]
+ },
+ "prazosin": {
+  "pearls": [
+   "Targets only the **α1** part of excess noradrenergic drive; fear and worry symptoms are instead tied to β1 receptors and are reduced by **NET inhibitors**",
+   "Helps nightmares and hyperarousal in **some** patients, as an add-on for one symptom; most PTSD patients are not on monotherapy"
+  ]
+ },
+ "pregabalin": {
+  "pearls": [
+   "Pain may be best treated **early**: blocking central sensitization could stop pain being imprinted and progressing to chronic states",
+   "In fibromyalgia, combine with an **SNRI** for additive pain relief and broader coverage (α2δ: anxiety, slow-wave sleep; SNRI: depression, fatigue, fibro-fog)",
+   "If response is inadequate, **sodium-channel anticonvulsants** (second-line for neuropathic pain) act differently and may still work",
+   "Listed as a possible **second-line** option for agitation in dementia (not valproate, topiramate, oxcarbazepine or benzodiazepines)"
+  ]
+ },
+ "gabapentin": {
+  "pearls": [
+   "Pain may be best treated **early**: blocking central sensitization could stop pain being imprinted and progressing to chronic states",
+   "In fibromyalgia, combine with an **SNRI** for additive pain relief and broader coverage (α2δ: anxiety, slow-wave sleep; SNRI: depression, fatigue, fibro-fog)",
+   "If response is inadequate, **sodium-channel anticonvulsants** (second-line for neuropathic pain) act differently and may still work",
+   "Listed as a possible **second-line** option for agitation in dementia (not valproate, topiramate, oxcarbazepine or benzodiazepines)"
+  ]
+ },
+ "morphine": {
+  "sideEffects": [
+   {
+    "e": "**Euphoria** at pain-relieving doses and above, a strongly reinforcing effect",
+    "via": "Mu-opioid receptor action on reward circuits; mesolimbic dopamine release is lower than with stimulants and the full mechanism is unclear"
+   },
+   {
+    "e": "**Tolerance and dependence** develop readily; analgesia fades over days to weeks",
+    "via": "Opioid receptor adaptation; behavioral control shifts from ventral to dorsal habit circuits"
+   },
+   {
+    "e": "**Withdrawal syndrome**: dysphoria, craving, irritability, tachycardia, tremor, sweating, piloerection",
+    "via": "Opioid receptor adaptation to chronic drug"
+   },
+   {
+    "e": "**Respiratory depression** and coma in overdose",
+    "via": "Opioid depressant action; mechanism not detailed"
+   }
+  ],
+  "pearls": [
+   "**Naloxone** reverses acute morphine effects but precipitates withdrawal in dependent patients",
+   "**Fentanyl** is about 100 times, and carfentanil about 10,000 times, as potent as morphine",
+   "**Spares normal sensory input**: Aβ fibers lack μ receptors",
+   "Opioid analgesics lose effect with long-term use and are **limited in amount and duration**"
+  ],
+  "uses": [
+   "Acute **pain** relief (spinal and PAG μ receptors); no better than SNRIs or α2δ ligands for chronic neuropathic pain"
+  ],
+  "targets": [
+   {
+    "t": "mor",
+    "action": "agonist",
+    "note": "Full agonist; spinal and PAG μ receptors"
+   }
+  ]
+ }
+}

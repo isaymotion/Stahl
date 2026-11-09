@@ -1,0 +1,913 @@
+[
+ {
+  "id": "cocaine",
+  "name": "Cocaine",
+  "group": "Drug of abuse",
+  "cls": "Stimulant drug of abuse",
+  "short": "Blocks DAT and NET; acts only at the transporters.",
+  "mechanism": "Acts on **DAT and NET**, blocking reuptake. Like methylphenidate, it targets **only the monoamine transporters**, not VMATs.",
+  "targets": [
+   {
+    "t": "dat",
+    "action": "inhibitor"
+   },
+   {
+    "t": "net",
+    "action": "inhibitor"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "34–35"
+   },
+   {
+    "ch": "ch04",
+    "pages": "78, 90"
+   },
+   {
+    "ch": "ch11",
+    "pages": "476–478"
+   },
+   {
+    "ch": "ch13",
+    "pages": "544–547"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "34–35",
+    "text": "The “stimulant” drug of abuse cocaine acts on **DAT and NET** in much the same manner as SSRIs at SERT.",
+    "sec": "s2-vesicular"
+   },
+   {
+    "ch": "ch04",
+    "pages": "78, 90",
+    "text": "A psychostimulant model of psychosis (Table 4-1: auditory hallucinations, paranoid delusions, no insight) that causes mesolimbic dopamine hyperactivity **directly**.",
+    "sec": "s4-mesolimbic"
+   },
+   {
+    "ch": "ch11",
+    "pages": "476–478",
+    "text": "A DAT blocker whose **rapid, complete** occupancy (especially intranasal, IV or smoked) gives a pulsatile phasic DA surge: euphoria and abuse.",
+    "sec": "s11-slowfast"
+   },
+   {
+    "ch": "ch13",
+    "pages": "544–547",
+    "text": "Inhibits **DAT, NET and SERT** and is a **local anesthetic**. Snorting, IV use or smoking crack gives rapid DAT blockade and phasic DA; no approved treatment; a vaccine is a future possibility.",
+    "sec": "s13-stimulants"
+   }
+  ]
+ },
+ {
+  "id": "methamphetamine",
+  "name": "Methamphetamine",
+  "group": "Drug of abuse",
+  "cls": "Stimulant drug of abuse",
+  "short": "Psychostimulant that causes mesolimbic dopamine hyperactivity directly.",
+  "mechanism": "A psychostimulant that inhibits **DAT and NET** (and, like amphetamine, releases dopamine); rapid routes produce massive phasic mesolimbic dopamine, euphoria and addiction.",
+  "nts": [
+   "dopamine"
+  ],
+  "sideEffects": [
+   {
+    "e": "Paranoid psychosis",
+    "via": "Mesolimbic dopamine excess"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch04",
+    "pages": "90"
+   },
+   {
+    "ch": "ch11",
+    "pages": "476–478"
+   },
+   {
+    "ch": "ch13",
+    "pages": "544–547"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch04",
+    "pages": "90",
+    "text": "With cocaine, the book’s example of a drug that produces mesolimbic hyperdopaminergia **directly**, unlike the indirect mechanisms of schizophrenia and other psychoses.",
+    "sec": "s4-mesolimbic"
+   },
+   {
+    "ch": "ch11",
+    "pages": "476–478",
+    "text": "A DAT blocker whose **rapid, complete** occupancy (especially intranasal, IV or smoked) gives a pulsatile phasic DA surge: euphoria and abuse.",
+    "sec": "s11-slowfast"
+   },
+   {
+    "ch": "ch13",
+    "pages": "545–547",
+    "text": "Progression: phasic highs → craving → escalation → crash (sleepiness, anhedonia) → compulsive use (paranoia, violence) → **burnout**. No approved treatment.",
+    "sec": "s13-stimulants"
+   }
+  ],
+  "targets": [
+   {
+    "t": "dat",
+    "action": "inhibitor",
+    "note": "Also releaser (like amphetamine)"
+   },
+   {
+    "t": "net",
+    "action": "inhibitor"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2021",
+    "title": "Naltrexone plus bupropion (ADAPT-2)",
+    "text": "Extended-release injectable naltrexone plus oral bupropion modestly increased response vs placebo in methamphetamine use disorder (NEJM, January 2021); not FDA-approved for this use.",
+    "source": "NIDA, January 2021"
+   }
+  ]
+ },
+ {
+  "id": "mdpv",
+  "name": "MDPV (“bath salts”)",
+  "aka": [
+   "methylenedioxypyrovalerone"
+  ],
+  "group": "Drug of abuse",
+  "cls": "Synthetic stimulant (cathinone)",
+  "nbn": "Dopamine and norepinephrine reuptake inhibitor",
+  "nts": [
+   "dopamine",
+   "norepinephrine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "546–547"
+   }
+  ],
+  "short": "Synthetic stimulant sold as “bath salts” or “plant food.”",
+  "mechanism": "A synthetic stimulant; bath salts may also contain mephedrone or methylone.",
+  "targets": [],
+  "uses": [],
+  "sideEffects": [
+   {
+    "e": "Agitation, paranoia, hallucinations, suicidality, chest pain",
+    "via": "Stimulant actions"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "546–547",
+    "text": "Packaged like Epsom salts and labeled “not for human consumption” to evade drug laws.",
+    "sec": "s13-stimulants"
+   }
+  ]
+ },
+ {
+  "id": "nicotine",
+  "name": "Nicotine",
+  "group": "Drug of abuse",
+  "cls": "Nicotinic agonist; drug of abuse",
+  "short": "Nicotinic agonist that desensitizes and inactivates its receptors.",
+  "mechanism": "Stimulates **nicotinic** acetylcholine receptors. Unlike acetylcholine it is **not hydrolyzed by acetylcholinesterase**, so it stimulates the receptors so profoundly and enduringly that they are **desensitized** within about one cigarette and **inactivated** for about the time between cigarettes.",
+  "targets": [
+   {
+    "t": "nicotinic",
+    "action": "agonist"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "63–64"
+   },
+   {
+    "ch": "ch11",
+    "pages": "467"
+   },
+   {
+    "ch": "ch13",
+    "pages": "547–553"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "64",
+    "text": "Explains why most smokers smoke about **a pack a day (20 cigarettes) over about 16 waking hours**: dosing is matched to receptor desensitization and inactivation.",
+    "sec": "s3-states"
+   },
+   {
+    "ch": "ch11",
+    "pages": "467",
+    "text": "ADHD patients smoke at about **twice** the general rate; nicotine releases DA and raises arousal, subjectively easing ADHD symptoms.",
+    "sec": "s11-priorities"
+   },
+   {
+    "ch": "ch13",
+    "pages": "548",
+    "text": "Releases DA three ways: α4β2 on VTA DA neurons, glutamate release, and desensitizing α4β2 on GABA interneurons. α7 in PFC = alerting, not addiction.",
+    "sec": "s13-nicotine"
+   },
+   {
+    "ch": "ch13",
+    "pages": "548–551",
+    "text": "Receptors desensitize over one cigarette and resensitize in ~45 min (craving); chronic smoking **upregulates** them. Possibly the most addicting substance; only 2–3% quit long term.",
+    "sec": "s13-nicotine"
+   },
+   {
+    "ch": "ch13",
+    "pages": "551",
+    "text": "Replacement (gum, lozenge, spray, inhaler, patch) gives steady, non-pulsatile nicotine: about the same quit rate as bupropion.",
+    "sec": "s13-nicotine"
+   }
+  ]
+ },
+ {
+  "id": "varenicline",
+  "name": "Varenicline",
+  "brand": "Chantix",
+  "group": "Nicotinic partial agonist",
+  "cls": "Nicotinic receptor partial agonist (NRPA)",
+  "nbn": "Acetylcholine nicotinic α4β2 receptor partial agonist",
+  "short": "Partial agonist at α4β2 nicotinic receptors.",
+  "mechanism": "A **partial agonist** at **α4β2 nicotinic** acetylcholine receptors, one of the first partial agonists at a ligand-gated channel in clinical use. As a partial agonist it is a **net agonist** when nicotine is absent and a **net antagonist** when nicotine is present. Details in Chapter 13.",
+  "targets": [
+   {
+    "t": "nicotinic",
+    "action": "partial agonist",
+    "note": "α4β2 subtype"
+   }
+  ],
+  "uses": [
+   "**Smoking cessation**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "55, 61"
+   },
+   {
+    "ch": "ch13",
+    "pages": "551–553, 573–574"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "55",
+    "text": "Listed in Table 3-2 as the nicotinic receptor partial agonist (NRPA) for **smoking cessation**.",
+    "sec": "s3-drugs"
+   },
+   {
+    "ch": "ch13",
+    "pages": "551",
+    "text": "Stabilizes α4β2 channels in an intermediate, **non-desensitized** state: reduces reward if the patient smokes and eases withdrawal. Triples–quadruples quit rates; ~10% abstinent at 1 year; 12 weeks may be too short.",
+    "sec": "s13-nicotine"
+   },
+   {
+    "ch": "ch13",
+    "pages": "573–574",
+    "text": "Higher affinity than nicotine, so patients cannot “**smoke over**” it: smoking stops being reinforcing (extinction).",
+    "sec": "s13-extinction"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2026",
+    "title": "A related partial agonist not yet approved",
+    "text": "**Cytisinicline**, a nicotinic partial agonist, received an FDA complete response letter on June 22, 2026 for manufacturing and labeling issues, with no efficacy or safety deficiencies cited.",
+    "source": "Drugs.com; Achieve Life Sciences, June 2026"
+   }
+  ]
+ },
+ {
+  "id": "pcp",
+  "name": "Phencyclidine (PCP)",
+  "aka": [
+   "angel dust"
+  ],
+  "group": "Drug of abuse",
+  "cls": "Dissociative hallucinogen",
+  "short": "Open-channel NMDA blocker (NAM).",
+  "mechanism": "A **NAM** at NMDA receptors that binds **inside the calcium channel**, getting in only **when the channel is open**, and prevents glutamate/glycine cotransmission from opening it.",
+  "targets": [
+   {
+    "t": "nmda",
+    "action": "negative allosteric modulator",
+    "note": "Open-channel site"
+   }
+  ],
+  "uses": [
+   "Dissociative hallucinogen (drug of abuse)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "55, 66"
+   },
+   {
+    "ch": "ch04",
+    "pages": "78, 105–110"
+   },
+   {
+    "ch": "ch13",
+    "pages": "569–571"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "66",
+    "text": "Also called **“angel dust”**; structurally related to the anesthetic ketamine.",
+    "sec": "s3-pam"
+   },
+   {
+    "ch": "ch04",
+    "pages": "78, 105–110",
+    "text": "Causes a psychosis sharing features with schizophrenia by blocking NMDA receptors at the **PCP site** on prefrontal GABA interneurons (Table 4-1: visual hallucinations, paranoid delusions, no insight).",
+    "sec": "s4-nmda-hypo"
+   },
+   {
+    "ch": "ch13",
+    "pages": "569–571",
+    "text": "Dissociative NMDA antagonist: schizophrenia-like psychosis, **vertical nystagmus**, catatonia, analgesia; overdose with coma, hyperthermia, seizures, **rhabdomyolysis**.",
+    "sec": "s13-hallucinogens"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "Psychosis",
+    "via": "NMDA blockade on prefrontal GABA interneurons"
+   }
+  ]
+ },
+ {
+  "id": "lsd",
+  "name": "LSD (lysergic acid diethylamide)",
+  "aka": [
+   "lysergic acid diethylamide"
+  ],
+  "group": "Hallucinogen",
+  "cls": "Psychedelic hallucinogen",
+  "nbn": "Serotonin 5HT2A receptor agonist",
+  "short": "5HT2A agonist hallucinogen; model of serotonin-driven psychosis.",
+  "mechanism": "A powerful **5HT2A agonist** that overstimulates prefrontal and visual cortex 5HT2A receptors on glutamate pyramidal neurons, causing psychosis, dissociative experiences and especially **visual hallucinations**. These effects are **blocked by 5HT2A antagonists**. Drugs of abuse are covered in Chapter 13.",
+  "nts": [
+   "serotonin"
+  ],
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "agonist"
+   },
+   {
+    "t": "5ht2c",
+    "action": "agonist",
+    "note": "To a lesser extent (Table 4-1)"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "Visual hallucinations",
+    "via": "5HT2A agonism in visual cortex"
+   },
+   {
+    "e": "Psychosis, delusions",
+    "via": "5HT2A-driven glutamate output to VTA → dopamine excess"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch04",
+    "pages": "78, 111, 131–133"
+   },
+   {
+    "ch": "ch13",
+    "pages": "567–569"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch04",
+    "pages": "78",
+    "text": "Table 4-1 psychedelic model: **5HT2A agonist** (and to a lesser extent 5HT2C), visual hallucinations, **mystical** delusions, **insight preserved**.",
+    "sec": "s4-three"
+   },
+   {
+    "ch": "ch04",
+    "pages": "131–133",
+    "text": "Hallucinogen psychosis is blocked by **5HT2A antagonists**, showing that it arises from 5HT2A stimulation.",
+    "sec": "s4-5ht-hyper"
+   },
+   {
+    "ch": "ch13",
+    "pages": "567–569",
+    "text": "A **5HT2A agonist** hallucinogen: rapid tolerance (5HT2A desensitization); mostly illusions with clear consciousness; flashbacks (mostly LSD); reversed by 5HT2A antagonists.",
+    "sec": "s13-hallucinogens"
+   }
+  ]
+ },
+ {
+  "id": "mescaline",
+  "name": "Mescaline",
+  "group": "Hallucinogen",
+  "cls": "Psychedelic hallucinogen",
+  "nbn": "Serotonin 5HT2A receptor agonist",
+  "short": "5HT2A agonist hallucinogen; model of serotonin-driven psychosis.",
+  "mechanism": "A powerful **5HT2A agonist** that overstimulates prefrontal and visual cortex 5HT2A receptors on glutamate pyramidal neurons, causing psychosis, dissociative experiences and especially **visual hallucinations**. These effects are **blocked by 5HT2A antagonists**. Drugs of abuse are covered in Chapter 13.",
+  "nts": [
+   "serotonin"
+  ],
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "agonist"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "Visual hallucinations",
+    "via": "5HT2A agonism in visual cortex"
+   },
+   {
+    "e": "Psychosis, delusions",
+    "via": "5HT2A-driven glutamate output to VTA → dopamine excess"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch04",
+    "pages": "111, 131–133"
+   },
+   {
+    "ch": "ch13",
+    "pages": "567–569"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch04",
+    "pages": "111, 131–133",
+    "text": "One of the three hallucinogens named as powerful **5HT2A agonists** that induce psychosis and visual hallucinations.",
+    "sec": "s4-5ht-hyper"
+   },
+   {
+    "ch": "ch13",
+    "pages": "567–569",
+    "text": "A **5HT2A agonist** hallucinogen: rapid tolerance (5HT2A desensitization); mostly illusions with clear consciousness; flashbacks (mostly LSD); reversed by 5HT2A antagonists.",
+    "sec": "s13-hallucinogens"
+   }
+  ]
+ },
+ {
+  "id": "psilocybin",
+  "name": "Psilocybin",
+  "group": "Hallucinogen",
+  "cls": "Psychedelic hallucinogen",
+  "nbn": "Serotonin 5HT2A receptor agonist",
+  "short": "5HT2A agonist hallucinogen; model of serotonin-driven psychosis.",
+  "mechanism": "A prodrug rapidly **dephosphorylated** to **psilocin**. Both bind several serotonin receptors (5HT1A, 5HT2A, 5HT2C and others); hallucinations are linked to **5HT2A agonism**, reversed by 5HT2A antagonists but not selective D2 antagonists.",
+  "nts": [
+   "serotonin"
+  ],
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "agonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2b",
+    "action": "binds",
+    "s": 2
+   },
+   {
+    "t": "5ht6",
+    "action": "binds",
+    "s": 1
+   },
+   {
+    "t": "5ht7",
+    "action": "binds",
+    "s": 1
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "Visual hallucinations",
+    "via": "5HT2A agonism in visual cortex"
+   },
+   {
+    "e": "Psychosis, delusions",
+    "via": "5HT2A-driven glutamate output to VTA → dopamine excess"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch04",
+    "pages": "78, 111, 131–133"
+   },
+   {
+    "ch": "ch07",
+    "pages": "355–358"
+   },
+   {
+    "ch": "ch08",
+    "pages": "376–378"
+   },
+   {
+    "ch": "ch13",
+    "pages": "567–569"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch04",
+    "pages": "78, 131–133",
+    "text": "Listed with LSD as a psychedelic model of psychosis (Table 4-1) and as a 5HT2A agonist whose effects are blocked by 5HT2A antagonists.",
+    "sec": "s4-5ht-hyper"
+   },
+   {
+    "ch": "ch07",
+    "pages": "357",
+    "text": "Bars follow psilocybin’s strip in **Figure 7-88** (5HT1E omitted). Psilocin’s strip differs: **5HT7 +++, 5HT2B +++, 5HT2A ++**, and + at 5HT1D, 5HT1E, 5HT2C, 5HT6, 5HT5, 5HT1B and 5HT1A.",
+    "sec": "s7-psychedelics"
+   },
+   {
+    "ch": "ch07",
+    "pages": "358",
+    "text": "FDA **breakthrough therapy** designation for depression; studied for existential distress in terminal illness, substance abuse and PTSD.",
+    "sec": "s7-psychedelics"
+   },
+   {
+    "ch": "ch08",
+    "pages": "376–377",
+    "text": "Studied to **disrupt reconsolidation** of reactivated fear memories during psychotherapy (PTSD, anxiety, existential distress in terminal illness).",
+    "sec": "s8-novel"
+   },
+   {
+    "ch": "ch13",
+    "pages": "567–569",
+    "text": "A **5HT2A agonist** hallucinogen: rapid tolerance (5HT2A desensitization); mostly illusions with clear consciousness; flashbacks (mostly LSD); reversed by 5HT2A antagonists.",
+    "sec": "s13-hallucinogens"
+   },
+   {
+    "ch": "ch13",
+    "pages": "567",
+    "text": "A **tryptamine**; both active itself and a prodrug for psilocin (4-hydroxy-DMT; the book mislabels psilocin as DMT).",
+    "sec": "s13-hallucinogens"
+   },
+   {
+    "ch": "ch13",
+    "pages": "574",
+    "text": "Psilocybin-assisted psychotherapy studied for cancer-related anxiety, resistant anxiety and depression, OCD, addictions and more.",
+    "sec": "s13-assisted"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2026",
+    "title": "Phase 3 program and filing",
+    "text": "Compass Pathways reported positive phase 3 results for psilocybin (COMP360) in treatment-resistant depression; as of May 2026 a rolling new drug application was under way, with completion planned for late 2026. Not yet approved at that time.",
+    "source": "Compass Pathways first-quarter 2026 report, May 13, 2026"
+   }
+  ]
+ },
+ {
+  "id": "mdma",
+  "name": "MDMA",
+  "brand": "“Ecstasy”",
+  "aka": [
+   "3,4-methylenedioxymethamphetamine",
+   "midomafetamine"
+  ],
+  "group": "Drug of abuse",
+  "cls": "Empathogen; drug of abuse",
+  "short": "A false substrate of SERT that releases serotonin.",
+  "mechanism": "An amphetamine derivative: a powerful **SERT inhibitor** with **VMAT2** inhibition (it is a false substrate), so it releases **serotonin** (and dopamine). Released 5HT acts at all serotonin receptors, especially **5HT2A**.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "substrate",
+    "note": "Competitive pseudosubstrate; reverses SERT; more selective for SERT than DAT/NET"
+   },
+   {
+    "t": "vmat2",
+    "action": "substrate",
+    "note": "Displaces vesicular serotonin"
+   }
+  ],
+  "uses": [
+   "“Empathogen”: experimental treatment of PTSD, especially with psychotherapy (at publication)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "31–33, 40"
+   },
+   {
+    "ch": "ch07",
+    "pages": "355–358"
+   },
+   {
+    "ch": "ch08",
+    "pages": "376–378"
+   },
+   {
+    "ch": "ch13",
+    "pages": "569, 574–575"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "31–33",
+    "text": "SERT has high affinity for transporting **Ecstasy (MDMA)** as well as serotonin (Table 2-1).",
+    "sec": "s2-monoamine"
+   },
+   {
+    "ch": "ch02",
+    "pages": "40",
+    "text": "Serotonin release by MDMA produces **indirect 5HT2A/2C agonism**: “empathogen,” experimental for PTSD with psychotherapy (Table 2-5).",
+    "sec": "s2-receptor-tables"
+   },
+   {
+    "ch": "ch05",
+    "pages": "174",
+    "text": "Like amphetamine, carried by VMAT2 as a **false substrate**.",
+    "sec": "s5-vmat2"
+   },
+   {
+    "ch": "ch07",
+    "pages": "356–357",
+    "text": "In hallucinogen-assisted psychotherapy it may promote **trust, closeness**, energy and emotional warmth. Tested for PTSD, existential distress in terminal illness, social anxiety in autism, refractory depression and substance abuse. Street MDMA is often contaminated.",
+    "sec": "s7-psychedelics"
+   },
+   {
+    "ch": "ch08",
+    "pages": "376–377",
+    "text": "Studied to **disrupt reconsolidation** of reactivated fear memories during psychotherapy (PTSD, anxiety, existential distress in terminal illness).",
+    "sec": "s8-novel"
+   },
+   {
+    "ch": "ch13",
+    "pages": "569",
+    "text": "An **empathogen**: SERT pseudosubstrate → VMAT → serotonin displacement → **SERT reversal**; released 5HT acts mostly at 5HT2A. Blocked by **SSRIs**. Hyperthermia deaths at raves.",
+    "sec": "s13-hallucinogens"
+   },
+   {
+    "ch": "ch13",
+    "pages": "574–575",
+    "text": "MDMA-assisted psychotherapy for **PTSD** aims to weaken reconsolidation of traumatic memories in a safe, empathic state.",
+    "sec": "s13-assisted"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2024",
+    "title": "Not approved for PTSD",
+    "text": "In August 2024 the FDA issued a **complete response letter** declining approval of MDMA-assisted therapy (midomafetamine) for PTSD and requested another phase III trial.",
+    "source": "FDA complete response letter to Lykos Therapeutics, August 9, 2024"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "**Hyperthermia**, organ damage, death (especially dancing all night, dehydrated)",
+    "via": "Possibly 5HT2A stimulation"
+   },
+   {
+    "e": "Distorted sensory and time perception, hallucinations",
+    "via": "5HT2A stimulation"
+   }
+  ]
+ },
+ {
+  "id": "cannabis",
+  "name": "Cannabis",
+  "aka": [
+   "marijuana"
+  ],
+  "group": "Drug of abuse",
+  "cls": "Cannabinoid drug of abuse",
+  "short": "An environmental risk factor for psychosis, especially high-potency forms.",
+  "mechanism": "A mixture of hundreds of chemicals and 100+ cannabinoids. **THC** is a **partial agonist at CB1 and CB2** (psychoactive, anxiogenic); **CBD** has little CB activity and is non-psychoactive. Higher THC/lower CBD raises the risk of psychosis, anxiety and memory impairment.",
+  "nts": [
+   "endocannabinoids"
+  ],
+  "targets": [
+   {
+    "t": "cb1",
+    "action": "partial agonist",
+    "note": "THC"
+   },
+   {
+    "t": "cb2",
+    "action": "partial agonist",
+    "note": "THC"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "Increased risk of psychosis",
+    "via": "Environmental stressor acting on genetic risk"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch04",
+    "pages": "150–151"
+   },
+   {
+    "ch": "ch13",
+    "pages": "563–567"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch04",
+    "pages": "150–151",
+    "text": "Psychosis rates track cannabis use across European cities. Without **high-potency cannabis**, an estimated **12%** of first-episode psychosis across Europe would be prevented (**32%** in London, **50%** in Amsterdam).",
+    "sec": "s4-cause"
+   },
+   {
+    "ch": "ch13",
+    "pages": "563",
+    "text": "High-potency cannabis: an estimated **12%** of first-episode psychosis in Europe (32% London, 50% Amsterdam) would be prevented without it; worsens existing psychosis.",
+    "sec": "s13-cannabis"
+   },
+   {
+    "ch": "ch13",
+    "pages": "563–564",
+    "text": "Effects: well-being, relaxation, distorted time, impaired short-term memory; high doses panic, delirium, psychosis; heavy use **amotivational syndrome**.",
+    "sec": "s13-cannabis"
+   },
+   {
+    "ch": "ch13",
+    "pages": "564–567",
+    "text": "Substantial evidence of benefit for chronic pain, chemo nausea and MS spasticity; risks include psychosis, crashes, respiratory symptoms, low birth weight.",
+    "sec": "s13-cannabis"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2026",
+    "title": "Partial rescheduling",
+    "text": "Effective April 28, 2026 the DEA moved marijuana in FDA-approved products and under state medical licenses to **Schedule III**; a decision on all other marijuana was still pending in late September 2026.",
+    "source": "Gibson Dunn, April 2026; Morgan Lewis, September 2026"
+   }
+  ]
+ },
+ {
+  "id": "dronabinol",
+  "name": "Dronabinol",
+  "brand": "Marinol; Syndros",
+  "group": "Cannabinoid",
+  "cls": "Synthetic THC",
+  "nbn": "Cannabinoid receptor partial agonist (CB1/CB2)",
+  "nts": [
+   "endocannabinoids"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "567"
+   }
+  ],
+  "short": "Synthetic THC for chemotherapy nausea and AIDS wasting.",
+  "mechanism": "Synthetic **THC**: partial agonist at CB1 and CB2.",
+  "targets": [
+   {
+    "t": "cb1",
+    "action": "partial agonist"
+   },
+   {
+    "t": "cb2",
+    "action": "partial agonist"
+   }
+  ],
+  "uses": [
+   "Chemotherapy-induced nausea and vomiting",
+   "Appetite in AIDS wasting (US)"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "567",
+    "text": "Oral capsule or solution (Table 13-4).",
+    "sec": "s13-cannabis"
+   }
+  ]
+ },
+ {
+  "id": "nabilone",
+  "name": "Nabilone",
+  "brand": "Cesamet",
+  "group": "Cannabinoid",
+  "cls": "Synthetic THC analogue",
+  "nbn": "Cannabinoid receptor partial agonist (CB1/CB2)",
+  "nts": [
+   "endocannabinoids"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "567"
+   }
+  ],
+  "short": "THC analogue for chemotherapy nausea; Schedule II.",
+  "mechanism": "A synthetic **THC analogue** at CB1/CB2.",
+  "targets": [
+   {
+    "t": "cb1",
+    "action": "partial agonist"
+   }
+  ],
+  "uses": [
+   "Chemotherapy-induced nausea and vomiting (US)"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "567",
+    "text": "**Schedule II** because of its potency.",
+    "sec": "s13-cannabis"
+   }
+  ]
+ },
+ {
+  "id": "nabiximols",
+  "name": "Nabiximols",
+  "brand": "Sativex",
+  "group": "Cannabinoid",
+  "cls": "THC:CBD oromucosal spray",
+  "nbn": "Cannabinoid receptor partial agonist (CB1/CB2)",
+  "nts": [
+   "endocannabinoids"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "567"
+   }
+  ],
+  "short": "~1:1 THC:CBD spray for MS spasticity (outside the US).",
+  "mechanism": "Purified ~1:1 **THC and CBD**.",
+  "targets": [
+   {
+    "t": "cb1",
+    "action": "partial agonist",
+    "note": "THC component"
+   }
+  ],
+  "uses": [
+   "MS spasticity (UK, Canada, Europe, Australia, NZ, Israel)",
+   "Pain in MS and cancer (Canada, Israel)"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "567",
+    "text": "Not approved in the US (Table 13-4).",
+    "sec": "s13-cannabis"
+   }
+  ]
+ },
+ {
+  "id": "cannabidiol",
+  "name": "Cannabidiol (CBD)",
+  "brand": "Epidiolex",
+  "group": "Cannabinoid",
+  "cls": "Purified cannabidiol",
+  "nbn": "Mechanism unclear",
+  "nts": [
+   "endocannabinoids"
+  ],
+  "chapters": [
+   {
+    "ch": "ch13",
+    "pages": "563–567"
+   }
+  ],
+  "short": "Non-psychoactive cannabinoid; Epidiolex treats rare epilepsies.",
+  "mechanism": "An isomer of THC with little CB1/CB2 activity; mechanism unknown (perhaps serotonergic). **Not psychoactive**; anxiolytic, anticonvulsant, possibly antipsychotic.",
+  "targets": [],
+  "uses": [
+   "Seizures in **Lennox–Gastaut** and **Dravet** syndromes from age 2 (US)"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "563–567",
+    "text": "Higher CBD content lowers the risk of hallucinations, delusions and memory impairment; Epidiolex is **not a controlled substance**.",
+    "sec": "s13-cannabis"
+   }
+  ]
+ }
+]

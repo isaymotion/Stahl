@@ -1,0 +1,513 @@
+[
+ {
+  "id": "diazepam",
+  "name": "Diazepam",
+  "brand": "Valium",
+  "group": "Benzodiazepine",
+  "cls": "Benzodiazepine",
+  "short": "PAM at the benzodiazepine site of GABA-A receptors.",
+  "mechanism": "Acts as a **full agonist at the benzodiazepine (PAM) site** of **GABA-A** receptors: with GABA bound, it opens the **chloride** channel further and more often, amplifying GABA’s inhibition (**phasic** inhibition). Clinically this reduces anxiety, induces sleep, blocks convulsions, blocks short-term memory and relaxes muscles. Onset can be almost immediate because ion flow changes at once.",
+  "nbn": "GABA-A positive allosteric modulator (benzodiazepine site)",
+  "nts": [
+   "gaba"
+  ],
+  "targets": [
+   {
+    "t": "gabaa",
+    "action": "positive allosteric modulator",
+    "note": "Benzodiazepine site; phasic inhibition"
+   }
+  ],
+  "uses": [
+   "**Anxiolytic**",
+   "Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Blocks short-term memory",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "Sedation (sleep induction)",
+    "via": "GABA-A PAM action"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch01",
+    "pages": "6"
+   },
+   {
+    "ch": "ch03",
+    "pages": "55, 65"
+   },
+   {
+    "ch": "ch08",
+    "pages": "366–367, 377"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch01",
+    "pages": "6",
+    "text": "Prescribed **before benzodiazepine receptors were discovered**.",
+    "sec": "s1-nts"
+   },
+   {
+    "ch": "ch03",
+    "pages": "65",
+    "text": "The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.",
+    "sec": "s3-pam"
+   },
+   {
+    "ch": "ch06",
+    "pages": "259–262",
+    "text": "Nonselective PAM at **α1, α2 and α3** benzodiazepine-sensitive GABA-A receptors (phasic inhibition); reversed by **flumazenil**.",
+    "sec": "s6-gabaa"
+   },
+   {
+    "ch": "ch08",
+    "pages": "366–367, 377",
+    "text": "Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.",
+    "sec": "s8-gad"
+   },
+   {
+    "ch": "ch10",
+    "pages": "421–422",
+    "text": "Benzodiazepines approved for anxiety are often used for insomnia; as hypnotics they are second line (tolerance, withdrawal, **rebound insomnia**).",
+    "sec": "s10-gaba-hypnotics"
+   }
+  ]
+ },
+ {
+  "id": "alprazolam",
+  "name": "Alprazolam",
+  "brand": "Xanax",
+  "group": "Benzodiazepine",
+  "cls": "Benzodiazepine",
+  "short": "PAM at the benzodiazepine site of GABA-A receptors.",
+  "mechanism": "Acts as a **full agonist at the benzodiazepine (PAM) site** of **GABA-A** receptors: with GABA bound, it opens the **chloride** channel further and more often, amplifying GABA’s inhibition (**phasic** inhibition). Clinically this reduces anxiety, induces sleep, blocks convulsions, blocks short-term memory and relaxes muscles. Onset can be almost immediate because ion flow changes at once.",
+  "nbn": "GABA-A positive allosteric modulator (benzodiazepine site)",
+  "nts": [
+   "gaba"
+  ],
+  "targets": [
+   {
+    "t": "gabaa",
+    "action": "positive allosteric modulator",
+    "note": "Benzodiazepine site; phasic inhibition"
+   }
+  ],
+  "uses": [
+   "**Anxiolytic**",
+   "Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)",
+   "GAD and panic disorder (Chapter 8)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Blocks short-term memory",
+    "via": "GABA-A PAM action"
+   },
+   {
+    "e": "Sedation (sleep induction)",
+    "via": "GABA-A PAM action"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch01",
+    "pages": "5–6"
+   },
+   {
+    "ch": "ch03",
+    "pages": "55, 65"
+   },
+   {
+    "ch": "ch08",
+    "pages": "366–367, 377"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch01",
+    "pages": "6",
+    "text": "Prescribed **before benzodiazepine receptors were discovered**.",
+    "sec": "s1-nts"
+   },
+   {
+    "ch": "ch03",
+    "pages": "65",
+    "text": "The book’s example of a **positive allosteric modulator**: a full agonist at the benzodiazepine site that boosts GABA’s chloride flux.",
+    "sec": "s3-pam"
+   },
+   {
+    "ch": "ch06",
+    "pages": "259–262",
+    "text": "Nonselective PAM at **α1–3** GABA-A receptors; α2/α3 actions are thought anxiolytic, α1 actions sedating.",
+    "sec": "s6-gabaa"
+   },
+   {
+    "ch": "ch08",
+    "pages": "366–367, 377",
+    "text": "Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.",
+    "sec": "s8-gad"
+   },
+   {
+    "ch": "ch10",
+    "pages": "421–422",
+    "text": "Benzodiazepines approved for anxiety are often used for insomnia; as hypnotics they are second line (tolerance, withdrawal, **rebound insomnia**).",
+    "sec": "s10-gaba-hypnotics"
+   }
+  ]
+ },
+ {
+  "id": "hydroxyzine",
+  "name": "Hydroxyzine",
+  "brand": "Atarax; Vistaril",
+  "group": "Antihistamine",
+  "cls": "Sedating antihistamine",
+  "nbn": "Histamine H1 receptor antagonist",
+  "nts": [
+   "histamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch08",
+    "pages": "377"
+   }
+  ],
+  "short": "Sedating antihistamine used off-label for anxiety.",
+  "mechanism": "A **sedating antihistamine** (H1 antagonist).",
+  "targets": [
+   {
+    "t": "h1",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "Off-label treatment of **anxiety** (GAD)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation",
+    "via": "H1 antagonism"
+   }
+  ]
+ },
+ {
+  "id": "prazosin",
+  "name": "Prazosin",
+  "brand": "Minipress",
+  "group": "α1 antagonist",
+  "cls": "α1-adrenergic antagonist",
+  "nbn": "Norepinephrine α1 receptor antagonist",
+  "nts": [
+   "norepinephrine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch08",
+    "pages": "370, 378"
+   }
+  ],
+  "short": "α1 blocker given at night for PTSD nightmares.",
+  "mechanism": "Blocks postsynaptic **α1-adrenergic** receptors, through which excess norepinephrine in the amygdala may cause **nightmares** and hyperarousal.",
+  "targets": [
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "**PTSD nightmares** and hyperarousal (given at night)"
+  ],
+  "facts": [
+   {
+    "ch": "ch08",
+    "pages": "370",
+    "text": "The book spells it “prazocin.” A unique PTSD treatment: an α1 antagonist at night to prevent nightmares (p. 378).",
+    "sec": "s8-ne"
+   }
+  ]
+ },
+ {
+  "id": "pregabalin",
+  "name": "Pregabalin",
+  "group": "Anticonvulsant",
+  "cls": "Anticonvulsant (α2δ ligand)",
+  "nbn": "Voltage-sensitive calcium channel α2δ ligand",
+  "short": "Binds the α2δ subunit of presynaptic calcium channels.",
+  "mechanism": "Binds the **α2δ** protein of voltage-sensitive calcium channels, which may regulate how the channel opens and closes. Reducing calcium entry at presynaptic N and P/Q channels can keep vesicles tethered and reduce release in states of excessive neurotransmission. Details in Chapters 8–10.",
+  "targets": [
+   {
+    "t": "a2d",
+    "action": "modulator",
+    "note": "Binds α2δ"
+   }
+  ],
+  "uses": [
+   "Anticonvulsant",
+   "Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)",
+   "**Anxiety**: shown in social anxiety and panic disorder; approved for anxiety in Europe and other countries, not the US; off-label add-on or alternative to benzodiazepines",
+   "**Neuropathic pain**: diabetic peripheral neuropathy, fibromyalgia, shingles; painful physical symptoms of depression/anxiety"
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "71"
+   },
+   {
+    "ch": "ch07",
+    "pages": "347, 352"
+   },
+   {
+    "ch": "ch08",
+    "pages": "366–368, 377"
+   },
+   {
+    "ch": "ch09",
+    "pages": "395–400"
+   },
+   {
+    "ch": "ch10",
+    "pages": "426"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "71",
+    "text": "The α2δ protein is **the target of pregabalin and gabapentin**.",
+    "sec": "s3-vscc"
+   },
+   {
+    "ch": "ch07",
+    "pages": "347, 352",
+    "text": "Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.",
+    "sec": "s7-lamotrigine"
+   },
+   {
+    "ch": "ch08",
+    "pages": "366–368, 377",
+    "text": "Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.",
+    "sec": "s8-a2d"
+   },
+   {
+    "ch": "ch09",
+    "pages": "395–400",
+    "text": "Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.",
+    "sec": "s9-a2d"
+   },
+   {
+    "ch": "ch10",
+    "pages": "426",
+    "text": "Used off-label for sleep: not very sedating, but enhances **slow-wave**, restorative sleep and helps pain.",
+    "sec": "s10-arousal-blockers"
+   }
+  ]
+ },
+ {
+  "id": "gabapentin",
+  "name": "Gabapentin",
+  "group": "Anticonvulsant",
+  "cls": "Anticonvulsant (α2δ ligand)",
+  "nbn": "Voltage-sensitive calcium channel α2δ ligand",
+  "short": "Binds the α2δ subunit of presynaptic calcium channels.",
+  "mechanism": "Binds the **α2δ** protein of voltage-sensitive calcium channels, like pregabalin. Details in Chapters 8–10.",
+  "targets": [
+   {
+    "t": "a2d",
+    "action": "modulator",
+    "note": "Binds α2δ"
+   }
+  ],
+  "uses": [
+   "Anticonvulsant",
+   "Class uses in chronic pain and possibly anxiety and sleep (Chapter 3 overview)",
+   "**Anxiety**: shown in social anxiety and panic disorder; approved for anxiety in Europe and other countries, not the US; off-label add-on or alternative to benzodiazepines",
+   "**Neuropathic pain**: diabetic peripheral neuropathy, fibromyalgia, shingles; painful physical symptoms of depression/anxiety"
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "71"
+   },
+   {
+    "ch": "ch07",
+    "pages": "347, 352"
+   },
+   {
+    "ch": "ch08",
+    "pages": "366–368, 377"
+   },
+   {
+    "ch": "ch09",
+    "pages": "395–400"
+   },
+   {
+    "ch": "ch10",
+    "pages": "426"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "71",
+    "text": "The α2δ protein is **the target of pregabalin and gabapentin**.",
+    "sec": "s3-vscc"
+   },
+   {
+    "ch": "ch07",
+    "pages": "347, 352",
+    "text": "Table 7-3: little or no mood-stabilizing action (+/− from above) but robust for **pain** and **anxiety**.",
+    "sec": "s7-lamotrigine"
+   },
+   {
+    "ch": "ch08",
+    "pages": "366–368, 377",
+    "text": "Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.",
+    "sec": "s8-a2d"
+   },
+   {
+    "ch": "ch09",
+    "pages": "395–400",
+    "text": "Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.",
+    "sec": "s9-a2d"
+   },
+   {
+    "ch": "ch10",
+    "pages": "426",
+    "text": "Used off-label for sleep: not very sedating, but enhances **slow-wave**, restorative sleep and helps pain.",
+    "sec": "s10-arousal-blockers"
+   }
+  ]
+ },
+ {
+  "id": "tiagabine",
+  "name": "Tiagabine",
+  "group": "Anticonvulsant",
+  "cls": "Anticonvulsant",
+  "nbn": "GABA transport (GAT1) inhibitor",
+  "short": "The only clinical drug that blocks a GABA transporter (GAT1).",
+  "mechanism": "Selectively blocks the presynaptic **GABA transporter GAT1**, increasing synaptic GABA. It is the **only** clinically used psychotropic drug known to bind any of the non-monoamine neurotransmitter transporters.",
+  "targets": [
+   {
+    "t": "gat",
+    "action": "inhibitor",
+    "note": "Selective for GAT1"
+   }
+  ],
+  "uses": [
+   "Anticonvulsant",
+   "May have therapeutic actions in anxiety, sleep disorders and pain"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "34"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "34",
+    "text": "GAT1 is **selectively blocked by tiagabine**; no other GAT inhibitor is available clinically.",
+    "sec": "s2-other"
+   }
+  ]
+ },
+ {
+  "id": "levetiracetam",
+  "name": "Levetiracetam",
+  "group": "Anticonvulsant",
+  "cls": "Anticonvulsant",
+  "nbn": "Synaptic vesicle protein 2A (SV2A) ligand",
+  "short": "Binds the synaptic vesicle protein SV2A.",
+  "mechanism": "Binds **SV2A**, a 12-transmembrane synaptic vesicle transporter of uncertain mechanism and substrate, perhaps **interfering with neurotransmitter release** and thereby reducing seizures.",
+  "targets": [
+   {
+    "t": "sv2a",
+    "action": "modulator",
+    "note": "Binds; mechanism uncertain"
+   }
+  ],
+  "uses": [
+   "Anticonvulsant"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "35"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "35",
+    "text": "Binds **SV2A** in the synaptic vesicle membrane.",
+    "sec": "s2-vesicular"
+   },
+   {
+    "ch": "ch03",
+    "pages": "72",
+    "text": "SV2A is drawn on the synaptic vesicle beside the **snare proteins** that tie vesicles to N and P/Q calcium channels (Figure 3-24).",
+    "sec": "s3-vscc"
+   }
+  ]
+ },
+ {
+  "id": "morphine",
+  "name": "Morphine",
+  "group": "Opioid",
+  "cls": "Opioid",
+  "short": "Mimics the brain’s own morphine, β-endorphin.",
+  "mechanism": "Mimics the endogenous opioid **β-endorphin**, the brain’s own morphine. Its receptor pharmacology is covered in later chapters.",
+  "nts": [
+   "endorphin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch01",
+    "pages": "5–6"
+   },
+   {
+    "ch": "ch08",
+    "pages": "375"
+   },
+   {
+    "ch": "ch09",
+    "pages": "382, 390"
+   },
+   {
+    "ch": "ch13",
+    "pages": "559–561"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch01",
+    "pages": "5–6",
+    "text": "Used clinically **before β-endorphin was discovered**: an example of a drug preceding knowledge of its natural counterpart (“God’s pharmacopeia”).",
+    "sec": "s1-nts"
+   },
+   {
+    "ch": "ch08",
+    "pages": "375",
+    "text": "Opioids given soon after trauma may mitigate consolidation of the traumatic memory and reduce PTSD risk (investigational).",
+    "sec": "s8-novel"
+   },
+   {
+    "ch": "ch09",
+    "pages": "382, 390",
+    "text": "Opiates reduce acute pain through **central** actions at spinal and PAG μ receptors, but are no better than SNRIs or α2δ ligands for chronic neuropathic pain and are not proven in fibromyalgia.",
+    "sec": "s9-descending"
+   },
+   {
+    "ch": "ch13",
+    "pages": "559–561",
+    "text": "An **opiate** (poppy-derived). Short half-life: withdrawal peaks at 36–72 h and lasts 7–10 days.",
+    "sec": "s13-opioids"
+   }
+  ]
+ }
+]

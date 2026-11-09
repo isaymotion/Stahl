@@ -1,0 +1,61 @@
+{
+ "clonidine": {
+  "sideEffects": [
+   {
+    "e": "**Sedation**",
+    "via": "α2B (thalamus), α2C and imidazoline receptor actions"
+   },
+   {
+    "e": "**Hypotension**",
+    "via": "α2C and imidazoline receptor actions"
+   }
+  ],
+  "pearls": [
+   "ADHD patients with hypothetically **low PFC norepinephrine but no dopamine problem** are the best candidates for **α2 agonist monotherapy**",
+   "No postsynaptic **DA receptor** action, which parallels the lack of abuse potential.",
+   "In pain, works by mimicking **descending noradrenergic** input onto inhibitory α2 receptors on primary afferent terminals."
+  ]
+ },
+ "naloxone": {
+  "sideEffects": [
+   {
+    "e": "**Precipitated withdrawal** in opioid-dependent patients",
+    "via": "μ-opioid receptor blockade"
+   }
+  ],
+  "pearls": [
+   "Reversal of opioid effects works only if given **early enough** and in sufficient dose, since it competes at the receptor.",
+   "Not absorbed by mouth or under the tongue, so it is **active by injection**; this is why the combination tablet deters injection."
+  ]
+ },
+ "cyclobenzaprine": {
+  "pearls": [
+   "Listed with sedating **mirtazapine and TCAs**; the book frames these second-line drugs as helping sleep disturbance in fibromyalgia."
+  ]
+ },
+ "modafinil": {
+  "pearls": [
+   "In OSA, an **adjunct** to CPAP-type airway treatment; sometimes used off-label alone when CPAP is not tolerated (adherence only about 54%).",
+   "In shift work disorder, pair with **circadian measures** such as timed bright light.",
+   "In the **arousal combo**, the SNRI boosts 5HT and NE while modafinil adds a single dopamine boost; with a stimulant, NE is boosted twice."
+  ]
+ },
+ "armodafinil": {
+  "pearls": [
+   "Its pharmacokinetics could give more **phasic dopamine** firing than racemic modafinil.",
+   "No head-to-head trials against stimulants exist, so **relative potency** in narcolepsy is unproven."
+  ]
+ },
+ "caffeine": {
+  "pearls": [
+   "Sleep-hygiene advice for insomnia: **avoid caffeine** near bedtime, along with alcohol and nicotine.",
+   "Its wake effect comes from **reducing homeostatic sleep drive**, since adenosine builds up as fatigue accumulates."
+  ]
+ },
+ "sodium-oxybate": {
+  "pearls": [
+   "A **controlled substance** supplied through a central pharmacy in the US.",
+   "Naturally occurring in the brain, **made from GABA**, with its own receptors."
+  ]
+ }
+}

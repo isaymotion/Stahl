@@ -1,0 +1,536 @@
+[
+ {
+  "id": "suvorexant",
+  "name": "Suvorexant",
+  "brand": "Belsomra",
+  "group": "Orexin antagonist",
+  "cls": "Dual orexin receptor antagonist (DORA)",
+  "nbn": "Orexin OX1/OX2 receptor antagonist",
+  "nts": [
+   "orexin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch10",
+    "pages": "423–424, 427–430"
+   }
+  ],
+  "short": "DORA with comparable OX1 and OX2 affinity.",
+  "mechanism": "A reversible, competitive antagonist with **comparable affinity for OX1 and OX2**; blocks orexin’s stabilization of wakefulness so the patient sleeps. Orexin rising in the morning reverses the block.",
+  "targets": [
+   {
+    "t": "ox",
+    "action": "antagonist",
+    "note": "OX1 = OX2"
+   }
+  ],
+  "uses": [
+   "**Insomnia**: sleep onset and maintenance"
+  ],
+  "sideEffects": [
+   {
+    "e": "No dependence, withdrawal, rebound, falls, amnesia or respiratory depression (compared with GABA-A PAMs)",
+    "via": "Reduces arousal rather than enhancing GABA"
+   },
+   {
+    "e": "Morning carryover in some patients (lower the dose)",
+    "via": "Residual orexin blockade"
+   }
+  ]
+ },
+ {
+  "id": "lemborexant",
+  "name": "Lemborexant",
+  "brand": "Dayvigo",
+  "group": "Orexin antagonist",
+  "cls": "Dual orexin receptor antagonist (DORA)",
+  "nbn": "Orexin OX1/OX2 receptor antagonist",
+  "nts": [
+   "orexin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch10",
+    "pages": "423–424, 427–430"
+   }
+  ],
+  "short": "DORA with higher OX2 affinity and fast kinetics.",
+  "mechanism": "A reversible DORA with **higher affinity for OX2 than OX1** and much **faster association/dissociation** at OX2, perhaps reversing faster as morning orexin rises.",
+  "targets": [
+   {
+    "t": "ox",
+    "action": "antagonist",
+    "note": "OX2 > OX1"
+   }
+  ],
+  "uses": [
+   "**Insomnia**: sleep onset and maintenance"
+  ],
+  "sideEffects": [
+   {
+    "e": "No dependence, withdrawal, rebound, falls, amnesia or respiratory depression (compared with GABA-A PAMs)",
+    "via": "Reduces arousal rather than enhancing GABA"
+   },
+   {
+    "e": "Morning carryover in some patients (lower the dose)",
+    "via": "Residual orexin blockade"
+   }
+  ]
+ },
+ {
+  "id": "daridorexant",
+  "name": "Daridorexant",
+  "brand": "Quviviq",
+  "group": "Orexin antagonist",
+  "cls": "Dual orexin receptor antagonist (DORA)",
+  "nbn": "Orexin OX1/OX2 receptor antagonist",
+  "nts": [
+   "orexin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch10",
+    "pages": "424"
+   }
+  ],
+  "short": "DORA in development at publication; later approved for insomnia.",
+  "mechanism": "A dual orexin receptor antagonist mentioned in the book as in development.",
+  "targets": [
+   {
+    "t": "ox",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "Insomnia"
+  ],
+  "updates": [
+   {
+    "year": "2022",
+    "title": "Approved for insomnia",
+    "text": "Approved by the FDA in January 2022 (25 and 50 mg) for adults with insomnia with difficulty in sleep onset and/or maintenance.",
+    "source": "Idorsia, January 10, 2022"
+   }
+  ]
+ },
+ {
+  "id": "ramelteon",
+  "name": "Ramelteon",
+  "brand": "Rozerem",
+  "group": "Melatonergic agent",
+  "cls": "Melatonin MT1/MT2 agonist",
+  "nbn": "Melatonin MT1/MT2 receptor agonist",
+  "nts": [
+   "melatonin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch10",
+    "pages": "428, 439–440"
+   }
+  ],
+  "short": "MT1/MT2 agonist for sleep-onset insomnia.",
+  "mechanism": "**MT1/MT2 agonist**; improves **sleep onset** (sometimes better after several days), not maintenance; short time above threshold.",
+  "targets": [
+   {
+    "t": "mt1mt2",
+    "action": "agonist"
+   }
+  ],
+  "uses": [
+   "**Insomnia** (sleep onset)"
+  ]
+ },
+ {
+  "id": "tasimelteon",
+  "name": "Tasimelteon",
+  "brand": "Hetlioz",
+  "group": "Melatonergic agent",
+  "cls": "Melatonin MT1/MT2 agonist",
+  "nbn": "Melatonin MT1/MT2 receptor agonist",
+  "nts": [
+   "melatonin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch10",
+    "pages": "439–440"
+   }
+  ],
+  "short": "MT1/MT2 agonist for non-24-hour sleep–wake disorder.",
+  "mechanism": "A powerful **MT1/MT2 agonist**; MT2 action retrains the circadian clock.",
+  "targets": [
+   {
+    "t": "mt1mt2",
+    "action": "agonist"
+   }
+  ],
+  "uses": [
+   "**Non-24-hour sleep–wake disorder** (mostly in the blind)"
+  ]
+ },
+ {
+  "id": "memantine",
+  "name": "Memantine",
+  "brand": "Namenda",
+  "group": "Dementia treatment",
+  "cls": "NMDA glutamate antagonist",
+  "nbn": "Glutamate NMDA receptor antagonist",
+  "short": "NMDA antagonist at NAM/Mg²⁺ sites; pro-cognitive in Alzheimer disease.",
+  "mechanism": "An **antagonist** at the **NAM channel/Mg²⁺ sites** of NMDA glutamate receptors. Details in Chapter 12.",
+  "targets": [
+   {
+    "t": "nmda",
+    "action": "antagonist",
+    "note": "Uncompetitive open-channel block at the Mg²⁺ site; low affinity"
+   },
+   {
+    "t": "sigma",
+    "action": "binds",
+    "note": "Relevance unclear"
+   },
+   {
+    "t": "5ht3",
+    "action": "antagonist",
+    "note": "Weak"
+   }
+  ],
+  "uses": [
+   "**Pro-cognitive in Alzheimer disease**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "55"
+   },
+   {
+    "ch": "ch12",
+    "pages": "515–521, 533"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "55",
+    "text": "Listed in Table 3-2 as the NMDA glutamate antagonist that is pro-cognitive in Alzheimer disease.",
+    "sec": "s3-drugs"
+   },
+   {
+    "ch": "ch12",
+    "pages": "516–518",
+    "text": "An **uncompetitive, open-channel** NMDA antagonist with low-to-moderate affinity, **voltage dependence** and fast on/off kinetics: blocks tonic excitotoxic glutamate but is expelled by phasic bursts, so learning continues and there are no psychotomimetic effects (“**artificial magnesium**”).",
+    "sec": "s12-memantine"
+   },
+   {
+    "ch": "ch12",
+    "pages": "518",
+    "text": "Usually given **with** a cholinesterase inhibitor for additive benefit; not effective (or tested) for agitation.",
+    "sec": "s12-memantine"
+   }
+  ]
+ },
+ {
+  "id": "donepezil",
+  "name": "Donepezil",
+  "brand": "Aricept",
+  "group": "Dementia treatment",
+  "cls": "Cholinesterase inhibitor",
+  "nbn": "Acetylcholine enzyme inhibitor (AChE)",
+  "nts": [
+   "acetylcholine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch12",
+    "pages": "509–510"
+   }
+  ],
+  "short": "Reversible, long-acting, AChE-selective cholinesterase inhibitor.",
+  "mechanism": "A **reversible, long-acting, selective AChE inhibitor** with no BuChE inhibition. Raises ACh at surviving postsynaptic cholinergic receptors in cortex and hippocampus.",
+  "targets": [
+   {
+    "t": "ache",
+    "action": "inhibitor",
+    "note": "Reversible; selective (no BuChE)"
+   }
+  ],
+  "uses": [
+   "Cognitive symptoms of **Alzheimer disease**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Nausea, vomiting, diarrhea (usually transient)",
+    "via": "Peripheral AChE inhibition in the gut"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch12",
+    "pages": "510",
+    "text": "Easy to dose; side effects mostly **GI** and transient.",
+    "sec": "s12-ache"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2022",
+    "title": "A weekly donepezil patch",
+    "text": "**Adlarity** (donepezil transdermal system, once weekly) was approved in March 2022; it was later listed as discontinued.",
+    "source": "Drugs.com approval history"
+   }
+  ]
+ },
+ {
+  "id": "rivastigmine",
+  "name": "Rivastigmine",
+  "brand": "Exelon",
+  "group": "Dementia treatment",
+  "cls": "Cholinesterase inhibitor",
+  "nbn": "Acetylcholine enzyme inhibitor (AChE, BuChE)",
+  "nts": [
+   "acetylcholine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch12",
+    "pages": "510–513"
+   }
+  ],
+  "short": "Pseudoirreversible AChE and BuChE inhibitor; patch available.",
+  "mechanism": "A **pseudoirreversible** (reverses over hours), intermediate-acting inhibitor of **AChE and BuChE**, possibly selective for cortical and hippocampal AChE. Glial BuChE inhibition may matter more as gliosis advances.",
+  "targets": [
+   {
+    "t": "ache",
+    "action": "inhibitor",
+    "note": "Pseudoirreversible"
+   },
+   {
+    "t": "buche",
+    "action": "inhibitor",
+    "note": "Glial BuChE"
+   }
+  ],
+  "uses": [
+   "Cognitive symptoms of **Alzheimer disease**"
+  ],
+  "sideEffects": [
+   {
+    "e": "More GI effects orally than donepezil",
+    "via": "PK profile; peripheral AChE and BuChE inhibition"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch12",
+    "pages": "510–511",
+    "text": "Comparable efficacy and safety to donepezil; the **transdermal patch** greatly reduces GI effects by lowering peaks. (The book also calls it “selective for AChE over BuChE”; it is a dual inhibitor.)",
+    "sec": "s12-ache"
+   }
+  ]
+ },
+ {
+  "id": "galantamine",
+  "name": "Galantamine",
+  "brand": "Razadyne",
+  "group": "Dementia treatment",
+  "cls": "Cholinesterase inhibitor",
+  "nbn": "Acetylcholine enzyme inhibitor (AChE); nicotinic PAM",
+  "nts": [
+   "acetylcholine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch12",
+    "pages": "514"
+   }
+  ],
+  "short": "AChE inhibitor and nicotinic positive allosteric modulator.",
+  "mechanism": "Inhibits **AChE** and is a **positive allosteric modulator** of nicotinic receptors, theoretically amplifying the extra ACh at nicotinic sites; clinical advantage unproven.",
+  "targets": [
+   {
+    "t": "ache",
+    "action": "inhibitor"
+   },
+   {
+    "t": "nicotinic",
+    "action": "positive allosteric modulator"
+   }
+  ],
+  "uses": [
+   "Cognitive symptoms of **Alzheimer disease**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Nausea, vomiting, diarrhea (usually transient)",
+    "via": "Peripheral AChE inhibition in the gut"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch12",
+    "pages": "514",
+    "text": "Found in **snowdrops and daffodils**.",
+    "sec": "s12-ache"
+   }
+  ]
+ },
+ {
+  "id": "aducanumab",
+  "name": "Aducanumab",
+  "brand": "Aduhelm",
+  "group": "Anti-amyloid antibody",
+  "cls": "Anti-amyloid monoclonal antibody",
+  "nbn": "Amyloid-β antibody",
+  "nts": [],
+  "chapters": [
+   {
+    "ch": "ch12",
+    "pages": "497–499"
+   }
+  ],
+  "short": "First anti-amyloid antibody approved (2021); discontinued 2024.",
+  "mechanism": "Monoclonal antibody that binds aggregated **Aβ** and removes plaque.",
+  "targets": [
+   {
+    "t": "abeta",
+    "action": "binds",
+    "note": "Aggregated Aβ"
+   }
+  ],
+  "uses": [
+   "Early Alzheimer disease (accelerated approval; discontinued)"
+  ],
+  "sideEffects": [
+   {
+    "e": "ARIA-E (brain edema) and ARIA-H (microbleeds), rarely fatal",
+    "via": "Amyloid removal from vessel walls; higher risk in APOE4 carriers"
+   },
+   {
+    "e": "Infusion reactions",
+    "via": "Antibody infusion"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch12",
+    "pages": "497–499",
+    "text": "Anti-amyloid antibodies are listed in Table 12-6 among disease-modifying strategies that had not shown clinical benefit when the book was written.",
+    "sec": "s12-status"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2021",
+    "title": "Approved, then discontinued",
+    "text": "Accelerated approval on June 7, 2021 based on plaque reduction; Biogen discontinued it on January 31, 2024, citing reasons unrelated to safety or efficacy.",
+    "source": "Drugs.com approval history; Biogen, January 2024"
+   }
+  ]
+ },
+ {
+  "id": "lecanemab",
+  "name": "Lecanemab",
+  "brand": "Leqembi; Leqembi Iqlik",
+  "group": "Anti-amyloid antibody",
+  "cls": "Anti-amyloid monoclonal antibody",
+  "nbn": "Amyloid-β antibody",
+  "nts": [],
+  "chapters": [
+   {
+    "ch": "ch12",
+    "pages": "497–499"
+   }
+  ],
+  "short": "Anti-Aβ protofibril antibody for early AD; IV or subcutaneous.",
+  "mechanism": "Monoclonal antibody against soluble Aβ **protofibrils** and plaque; clears amyloid and modestly slows decline in early AD.",
+  "targets": [
+   {
+    "t": "abeta",
+    "action": "binds",
+    "note": "Protofibrils"
+   }
+  ],
+  "uses": [
+   "**Early Alzheimer disease** (MCI or mild dementia with confirmed amyloid)"
+  ],
+  "sideEffects": [
+   {
+    "e": "ARIA-E (brain edema) and ARIA-H (microbleeds), rarely fatal",
+    "via": "Amyloid removal from vessel walls; higher risk in APOE4 carriers"
+   },
+   {
+    "e": "Infusion reactions",
+    "via": "Antibody infusion"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch12",
+    "pages": "497–499",
+    "text": "Anti-amyloid antibodies are listed in Table 12-6 among disease-modifying strategies that had not shown clinical benefit when the book was written.",
+    "sec": "s12-status"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Traditional approval and new forms",
+    "text": "Accelerated approval January 6, 2023; traditional approval July 2023; IV maintenance dosing January 2025; subcutaneous autoinjector (Leqembi Iqlik) for maintenance August 2025 and for starting treatment July 2026. Boxed warning for ARIA; test APOE4 before treatment.",
+    "source": "Drugs.com approval history; Eisai/Biogen, July 2026"
+   }
+  ]
+ },
+ {
+  "id": "donanemab",
+  "name": "Donanemab",
+  "brand": "Kisunla",
+  "group": "Anti-amyloid antibody",
+  "cls": "Anti-amyloid monoclonal antibody",
+  "nbn": "Amyloid-β antibody",
+  "nts": [],
+  "chapters": [
+   {
+    "ch": "ch12",
+    "pages": "497–499"
+   }
+  ],
+  "short": "Anti-plaque antibody for early AD; can stop after plaque clearance.",
+  "mechanism": "Monoclonal antibody against a modified form of Aβ in **deposited plaque**; treatment can stop once plaque is cleared.",
+  "targets": [
+   {
+    "t": "abeta",
+    "action": "binds",
+    "note": "Plaque-deposited Aβ"
+   }
+  ],
+  "uses": [
+   "**Early symptomatic Alzheimer disease**"
+  ],
+  "sideEffects": [
+   {
+    "e": "ARIA-E (brain edema) and ARIA-H (microbleeds), rarely fatal",
+    "via": "Amyloid removal from vessel walls; higher risk in APOE4 carriers"
+   },
+   {
+    "e": "Infusion reactions",
+    "via": "Antibody infusion"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch12",
+    "pages": "497–499",
+    "text": "Anti-amyloid antibodies are listed in Table 12-6 among disease-modifying strategies that had not shown clinical benefit when the book was written.",
+    "sec": "s12-status"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2024",
+    "title": "Donanemab approved",
+    "text": "Approved July 2, 2024 for early symptomatic AD, IV every 4 weeks; boxed warning for ARIA; label updated with modified titration in July 2025.",
+    "source": "Drugs.com approval history; Eli Lilly"
+   }
+  ]
+ }
+]

@@ -1,0 +1,669 @@
+[
+ {
+  "id": "methylphenidate",
+  "name": "Methylphenidate",
+  "brand": "Ritalin; Concerta; others",
+  "group": "Stimulant",
+  "cls": "Stimulant (ADHD)",
+  "nbn": "Dopamine and norepinephrine transport (DAT/NET) inhibitor",
+  "short": "Blocks DAT and NET; acts only at the transporters.",
+  "mechanism": "Blocks the **dopamine (DAT)** and **norepinephrine (NET)** transporters, enhancing synaptic dopamine and norepinephrine. Unlike amphetamine it targets **only the monoamine transporters**, much as SSRIs act at SERT.",
+  "targets": [
+   {
+    "t": "dat",
+    "action": "inhibitor",
+    "note": "Allosteric (non-competitive); D >> L isomer"
+   },
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Allosteric; D >> L isomer"
+   }
+  ],
+  "uses": [
+   "ADHD",
+   "Indirect dopamine agonism also improves depression and wakefulness (Table 2-5)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "34–35, 40"
+   },
+   {
+    "ch": "ch10",
+    "pages": "441–442"
+   },
+   {
+    "ch": "ch11",
+    "pages": "469–479"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "34",
+    "text": "A “stimulant” for ADHD that acts on **DAT and NET**.",
+    "sec": "s2-monoamine"
+   },
+   {
+    "ch": "ch02",
+    "pages": "35",
+    "text": "Targets **only the monoamine transporters** (not VMATs), in contrast to amphetamine.",
+    "sec": "s2-vesicular"
+   },
+   {
+    "ch": "ch10",
+    "pages": "441–442",
+    "text": "Approved for sleepiness in **narcolepsy** (not OSA or shift work, used off-label); highly effective but controlled (abuse, diversion, psychosis, mania, hypertension).",
+    "sec": "s10-caffeine-stimulants"
+   },
+   {
+    "ch": "ch11",
+    "pages": "469–470",
+    "text": "Blocks NET and DAT **allosterically** (a site distinct from the monoamine site), like antidepressant reuptake inhibitors: stops the pump, is **not transported** and has **no VMAT2** action.",
+    "sec": "s11-mph"
+   },
+   {
+    "ch": "ch11",
+    "pages": "470",
+    "text": "Racemic: the **D-isomer** is much more potent than L at both NET and DAT; single-enantiomer **dexmethylphenidate** also available.",
+    "sec": "s11-mph"
+   },
+   {
+    "ch": "ch11",
+    "pages": "470–471",
+    "text": "Table 11-1 formulations: IR Ritalin/Methylin (3–4 h), Concerta (12 h), Ritalin LA (two peaks), Metadate CD, Aptensio XR, Quillivant XR, QuilliChew ER, Daytrana patch, Cotempla XR-ODT, **Jornay PM** (evening dose, delayed 10 h), Adhansia XR.",
+    "sec": "s11-mph"
+   },
+   {
+    "ch": "ch11",
+    "pages": "477–479",
+    "text": "OROS, LA and transdermal forms are **slow-dose** stimulants (tonic signaling, lower abuse); IR is **pulsatile**.",
+    "sec": "s11-slowfast"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Stronger stimulant warnings",
+    "text": "In May 2023 the FDA required the boxed warning of all prescription stimulants to describe the risks of **misuse, abuse, addiction and overdose** consistently and to tell patients never to share them.",
+    "source": "FDA Drug Safety Communication, May 2023"
+   }
+  ]
+ },
+ {
+  "id": "dexmethylphenidate",
+  "name": "Dexmethylphenidate (D-methylphenidate)",
+  "brand": "Focalin; Focalin XR",
+  "group": "Stimulant",
+  "cls": "Stimulant (ADHD)",
+  "nbn": "Dopamine and norepinephrine transport (DAT/NET) inhibitor",
+  "nts": [
+   "dopamine",
+   "norepinephrine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch11",
+    "pages": "469–471"
+   }
+  ],
+  "short": "The more potent D-enantiomer of methylphenidate.",
+  "mechanism": "The single **D-enantiomer** of methylphenidate, much more potent than the L form at both **NET and DAT**; blocks them allosterically without VMAT2 action.",
+  "targets": [
+   {
+    "t": "dat",
+    "action": "inhibitor",
+    "note": "Allosteric"
+   },
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Allosteric"
+   }
+  ],
+  "uses": [
+   "**ADHD**"
+  ],
+  "facts": [
+   {
+    "ch": "ch11",
+    "pages": "471",
+    "text": "Table 11-2: **Focalin** IR (early peak, 4–6 h; ages 6–17) and **Focalin XR** (peaks at 1.5 and 6.5 h, 8–10 h; ages 6–17 and adults).",
+    "sec": "s11-mph"
+   },
+   {
+    "ch": "ch11",
+    "pages": "477",
+    "text": "XR D-methylphenidate is a **slow-dose** stimulant.",
+    "sec": "s11-slowfast"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2021",
+    "title": "A prodrug combination",
+    "text": "**Azstarys** (serdexmethylphenidate, a dexmethylphenidate prodrug, plus IR dexmethylphenidate) was approved on March 2, 2021 for ADHD from age 6.",
+    "source": "Drugs.com approval history; KemPharm, March 2021"
+   }
+  ]
+ },
+ {
+  "id": "amphetamine",
+  "name": "Amphetamine",
+  "brand": "Adderall; Dexedrine; others",
+  "group": "Stimulant",
+  "cls": "Stimulant (ADHD)",
+  "nbn": "Dopamine and norepinephrine releaser (DAT/NET and VMAT2 substrate)",
+  "short": "A transported substrate of DAT, NET and VMAT2: two targets.",
+  "mechanism": "A **false substrate** carried into the neuron by **DAT and NET** (DAT has high affinity for amphetamines), and also a **transported substrate of VMAT2** in synaptic vesicles. Amphetamine therefore has **two targets**: the monoamine transporters and VMATs. Reuptake inhibition and release of dopamine stimulate D1–D5 receptors indirectly.",
+  "targets": [
+   {
+    "t": "dat",
+    "action": "substrate",
+    "note": "Competitive pseudosubstrate; transported; D > L"
+   },
+   {
+    "t": "net",
+    "action": "substrate",
+    "note": "Competitive pseudosubstrate; D ≈ L"
+   },
+   {
+    "t": "vmat2",
+    "action": "substrate",
+    "note": "Competitive inhibitor/substrate at high doses; displaces DA"
+   }
+  ],
+  "uses": [
+   "ADHD",
+   "Indirect dopamine agonism improves depression and wakefulness (Table 2-5)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "31–35, 40"
+   },
+   {
+    "ch": "ch04",
+    "pages": "78–79"
+   },
+   {
+    "ch": "ch07",
+    "pages": "337, 356"
+   },
+   {
+    "ch": "ch10",
+    "pages": "441–442"
+   },
+   {
+    "ch": "ch11",
+    "pages": "472–479"
+   },
+   {
+    "ch": "ch13",
+    "pages": "544–545"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "31",
+    "text": "Listed in Table 2-1 as a false substrate of both **NET and DAT**.",
+    "sec": "s2-monoamine"
+   },
+   {
+    "ch": "ch02",
+    "pages": "35",
+    "text": "**Amphetamine has two targets**: monoamine transporters and VMATs (as a transported substrate).",
+    "sec": "s2-vesicular"
+   },
+   {
+    "ch": "ch04",
+    "pages": "79",
+    "text": "Dopamine release by amphetamine causes a **paranoid psychosis** much like schizophrenia: a cornerstone of the dopamine hypothesis. Table 4-1 lists psychostimulants as **D2 agonist** models with auditory hallucinations, paranoid delusions and no insight.",
+    "sec": "s4-three"
+   },
+   {
+    "ch": "ch05",
+    "pages": "174",
+    "text": "A false substrate of **VMAT2** that competes with natural transmitters; dopamine or amphetamine are the “too hot” end of the Goldilocks analogy.",
+    "sec": "s5-vmat2"
+   },
+   {
+    "ch": "ch07",
+    "pages": "337",
+    "text": "Amphetamine is also a **weak, reversible MAO inhibitor**; some MAOIs (tranylcypromine, selegiline via metabolites) are closely linked to amphetamine.",
+    "sec": "s7-maoi"
+   },
+   {
+    "ch": "ch10",
+    "pages": "441–442",
+    "text": "Approved for sleepiness in **narcolepsy** (not OSA or shift work, used off-label); highly effective but controlled (abuse, diversion, psychosis, mania, hypertension).",
+    "sec": "s10-caffeine-stimulants"
+   },
+   {
+    "ch": "ch11",
+    "pages": "472",
+    "text": "A **competitive inhibitor and pseudosubstrate** at NET and DAT. At ADHD doses the difference from methylphenidate is small; at abused doses it enters vesicles via VMAT2, displaces DA, opens channels and **reverses DAT**, causing euphoria.",
+    "sec": "s11-amph"
+   },
+   {
+    "ch": "ch11",
+    "pages": "472–473",
+    "text": "**D-amphetamine**: D > L at DAT, so relatively more DAT action. **Mixed D,L salts**: D ≈ L at NET, so more NET action than D-amphetamine, but still DAT > NET.",
+    "sec": "s11-amph"
+   },
+   {
+    "ch": "ch11",
+    "pages": "474–475",
+    "text": "Tables 11-3/11-4: Adderall and Evekeo IR (from age 3), Adderall XR, **Mydayis** (up to 16 h), Adzenys XR-ODT/ER, Dyanavel XR; D-amphetamine Zenzedi, ProCentra, Dexedrine spansule.",
+    "sec": "s11-amph"
+   },
+   {
+    "ch": "ch11",
+    "pages": "477–479",
+    "text": "Spansules and XR mixed salts are **slow-dose**; IR forms are **pulsatile**, with more abuse potential.",
+    "sec": "s11-slowfast"
+   },
+   {
+    "ch": "ch13",
+    "pages": "544–545",
+    "text": "Abused amphetamine (high dose, fast routes) blasts mesolimbic DATs; therapeutic doses boost tonic PFC dopamine.",
+    "sec": "s13-stimulants"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2022",
+    "title": "An amphetamine patch",
+    "text": "**Xelstrym** (dextroamphetamine transdermal system), worn 9 hours once daily, was approved on March 22, 2022 for ADHD in adults and children aged 6 and older.",
+    "source": "Drugs.com approval history; Noven, March 2022"
+   },
+   {
+    "year": "2023",
+    "title": "Stronger stimulant warnings",
+    "text": "In May 2023 the FDA required the boxed warning of all prescription stimulants to describe the risks of **misuse, abuse, addiction and overdose** consistently and to tell patients never to share them.",
+    "source": "FDA Drug Safety Communication, May 2023"
+   }
+  ]
+ },
+ {
+  "id": "lisdexamfetamine",
+  "name": "Lisdexamfetamine",
+  "brand": "Vyvanse",
+  "group": "Stimulant",
+  "cls": "Stimulant prodrug (ADHD)",
+  "nbn": "Dopamine and norepinephrine releaser (DAT/NET and VMAT2 substrate)",
+  "nts": [
+   "dopamine",
+   "norepinephrine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch11",
+    "pages": "473–479"
+   },
+   {
+    "ch": "ch13",
+    "pages": "575"
+   }
+  ],
+  "short": "Lysine-linked prodrug of D-amphetamine: a slow-dose stimulant.",
+  "mechanism": "**D-amphetamine linked to lysine**: inactive until the lysine is cleaved, releasing D-amphetamine slowly for gradual, sustained transporter occupancy. (The book says cleavage occurs in the stomach; it actually occurs mainly in **red blood cells**.)",
+  "targets": [
+   {
+    "t": "dat",
+    "action": "substrate",
+    "note": "As D-amphetamine"
+   },
+   {
+    "t": "net",
+    "action": "substrate",
+    "note": "As D-amphetamine"
+   },
+   {
+    "t": "vmat2",
+    "action": "substrate",
+    "note": "As D-amphetamine"
+   }
+  ],
+  "uses": [
+   "**ADHD** (ages 6–17 and adults)",
+   "**Binge eating disorder** (only approved drug)"
+  ],
+  "facts": [
+   {
+    "ch": "ch11",
+    "pages": "473",
+    "text": "Not absorbed as active drug until slowly converted to D-amphetamine plus L-lysine, so it rises **slowly rather than rapidly**.",
+    "sec": "s11-amph"
+   },
+   {
+    "ch": "ch11",
+    "pages": "475",
+    "text": "Table 11-4: lasts up to **12 h**, peak 3.5 h, once in the morning.",
+    "sec": "s11-amph"
+   },
+   {
+    "ch": "ch11",
+    "pages": "477",
+    "text": "A **slow-dose** stimulant: enhances tonic NE/DA with hypothetically lower abuse potential.",
+    "sec": "s11-slowfast"
+   },
+   {
+    "ch": "ch13",
+    "pages": "575",
+    "text": "The **only approved** treatment for **binge eating disorder**, perhaps via striatal neuroplasticity rather than appetite suppression.",
+    "sec": "s13-bed"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Generic lisdexamfetamine",
+    "text": "The FDA approved the first **generic** versions of Vyvanse in late August 2023, amid ADHD stimulant shortages.",
+    "source": "Psychiatric Times, August 29, 2023"
+   },
+   {
+    "year": "2023",
+    "title": "Stronger stimulant warnings",
+    "text": "In May 2023 the FDA required the boxed warning of all prescription stimulants to describe the risks of **misuse, abuse, addiction and overdose** consistently and to tell patients never to share them.",
+    "source": "FDA Drug Safety Communication, May 2023"
+   }
+  ]
+ },
+ {
+  "id": "atomoxetine",
+  "name": "Atomoxetine",
+  "brand": "Strattera",
+  "group": "NRI",
+  "cls": "Selective norepinephrine reuptake inhibitor (NRI)",
+  "nbn": "Norepinephrine reuptake inhibitor (NET)",
+  "nts": [
+   "norepinephrine",
+   "dopamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch09",
+    "pages": "399"
+   },
+   {
+    "ch": "ch11",
+    "pages": "480–481"
+   }
+  ],
+  "short": "Selective NET inhibitor approved for ADHD in children and adults; no abuse potential.",
+  "mechanism": "A **selective NET inhibitor (NRI)**. Blocking prefrontal NET raises **both NE and DA** there (NET clears DA in the PFC); few NETs in the **nucleus accumbens** means no rise in DA there and **no abuse potential**. Continuous blockade restores tonic α2A/D1 signaling and dampens phasic NE/DA.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "**ADHD** in children and adults (the only well-studied, approved NRI)",
+   "**Fibro-fog** in fibromyalgia (Chapter 9)"
+  ],
+  "facts": [
+   {
+    "ch": "ch11",
+    "pages": "480",
+    "text": "Raises prefrontal NE and DA but **not** accumbens DA: hence no reinforcing, abuse or addiction potential.",
+    "sec": "s11-nri"
+   },
+   {
+    "ch": "ch11",
+    "pages": "480–481",
+    "text": "In stressed, comorbid ADHD, chronic use may restore tonic signaling, downregulate phasic NE/DA and desensitize receptors, possibly easing **anxiety, depression and heavy drinking**.",
+    "sec": "s11-nri"
+   },
+   {
+    "ch": "ch11",
+    "pages": "481",
+    "text": "24-hour relief; smaller short-term effect sizes than stimulants, but not necessarily inferior in **stimulant-naïve** patients or after 8–11 weeks. High doses may cause **sedation or cognitive impairment** (α1): lower the dose.",
+    "sec": "s11-nri"
+   }
+  ]
+ },
+ {
+  "id": "viloxazine",
+  "name": "Viloxazine ER",
+  "brand": "Qelbree",
+  "group": "NRI",
+  "cls": "NET inhibitor with 5HT2B/5HT2C actions",
+  "nbn": "Norepinephrine reuptake inhibitor; serotonin receptor actions",
+  "nts": [
+   "norepinephrine",
+   "serotonin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch11",
+    "pages": "485"
+   }
+  ],
+  "short": "NET inhibitor with 5HT2B/2C actions; a nonstimulant for ADHD.",
+  "mechanism": "Inhibits the **norepinephrine transporter** and also acts at **5HT2B and 5HT2C** receptors. Once marketed abroad for depression but never in the US; repurposed as a controlled-release form for ADHD.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor"
+   },
+   {
+    "t": "5ht2b",
+    "action": "binds",
+    "note": "Action noted in Figure 11-45"
+   },
+   {
+    "t": "5ht2c",
+    "action": "binds",
+    "note": "Action noted in Figure 11-45"
+   }
+  ],
+  "uses": [
+   "**ADHD** (book: late-stage development)"
+  ],
+  "facts": [
+   {
+    "ch": "ch11",
+    "pages": "485",
+    "text": "A selective NRI in late-stage development for ADHD as a controlled-release formulation (Figure 11-45).",
+    "sec": "s11-future"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2021–2022",
+    "title": "Viloxazine approved",
+    "text": "**Qelbree** was approved on April 2, 2021 for ADHD in ages 6–17 and on April 29, 2022 for adults. Nonstimulant, not controlled; the label calls it a serotonin norepinephrine modulating agent and warns of suicidal thoughts and behaviors.",
+    "source": "Drugs.com approval history; Supernus, April 2022"
+   }
+  ]
+ },
+ {
+  "id": "reboxetine",
+  "name": "Reboxetine",
+  "group": "NRI",
+  "cls": "Selective norepinephrine reuptake inhibitor (NRI)",
+  "nbn": "Norepinephrine reuptake inhibitor (NET)",
+  "nts": [
+   "norepinephrine",
+   "dopamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch11",
+    "pages": "480–481"
+   }
+  ],
+  "short": "Selective NRI listed among NET inhibitors used for ADHD.",
+  "mechanism": "A **selective NET inhibitor**: like atomoxetine, raises NE and DA in the PFC but not in the nucleus accumbens.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "Listed among NET inhibitors used for ADHD with variable success (Figure 11-38); not approved for ADHD"
+  ],
+  "facts": [
+   {
+    "ch": "ch11",
+    "pages": "480–481",
+    "text": "One of several NRI-acting drugs used for ADHD with varying success; only atomoxetine is well investigated and approved.",
+    "sec": "s11-nri"
+   }
+  ]
+ },
+ {
+  "id": "guanfacine",
+  "name": "Guanfacine",
+  "brand": "Intuniv (ER); Tenex (IR)",
+  "group": "α2 agonist",
+  "cls": "Selective α2A-adrenergic agonist",
+  "nbn": "Norepinephrine α2A receptor agonist",
+  "nts": [
+   "norepinephrine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch11",
+    "pages": "481–484"
+   }
+  ],
+  "short": "α2A-selective agonist; ER form approved for ADHD alone or with stimulants.",
+  "mechanism": "A **direct α2A agonist**, **15–60×** more selective for α2A than α2B/α2C. Stimulates postsynaptic α2A receptors on PFC pyramidal spines (Gi, ↓cAMP, HCN closed), **strengthening the signal**. No DA receptor action, hence no abuse potential.",
+  "targets": [
+   {
+    "t": "alpha2",
+    "action": "agonist",
+    "note": "α2A-selective (15–60×)"
+   }
+  ],
+  "uses": [
+   "**ADHD** (ER form), alone or as **augmentation** of stimulants",
+   "Off-label: conduct disorder, ODD, **Tourette syndrome**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation (less than clonidine)",
+    "via": "α2B/α2C"
+   },
+   {
+    "e": "Hypotension (less than clonidine)",
+    "via": "α2"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch11",
+    "pages": "482",
+    "text": "**10× weaker** than clonidine at sedation and lowering blood pressure, yet **25× more potent** at enhancing PFC function. ER form allows once-daily dosing with fewer peak-dose effects; only the ER form is approved for ADHD.",
+    "sec": "s11-alpha2"
+   },
+   {
+    "ch": "ch11",
+    "pages": "482–484",
+    "text": "Best monotherapy candidates may have low prefrontal **NE** with normal DA; no predictor beyond an **empiric trial**.",
+    "sec": "s11-alpha2"
+   },
+   {
+    "ch": "ch11",
+    "pages": "484",
+    "text": "Approved as an **augmenting agent** after inadequate stimulant response; may especially help **oppositional** symptoms (low VMPFC NE).",
+    "sec": "s11-alpha2"
+   }
+  ]
+ },
+ {
+  "id": "mazindol",
+  "name": "Mazindol",
+  "group": "Investigational drug for ADHD",
+  "cls": "DAT inhibitor",
+  "nbn": "Dopamine reuptake inhibitor (DAT)",
+  "nts": [
+   "dopamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch11",
+    "pages": "485"
+   }
+  ],
+  "short": "DAT inhibitor once approved for appetite suppression; tested in ADHD.",
+  "mechanism": "A **DAT inhibitor**, formerly approved as an appetite suppressant.",
+  "targets": [
+   {
+    "t": "dat",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "In testing for **ADHD** (book)"
+  ],
+  "facts": [
+   {
+    "ch": "ch11",
+    "pages": "485",
+    "text": "Listed as a future ADHD treatment in testing.",
+    "sec": "s11-future"
+   }
+  ]
+ },
+ {
+  "id": "centanafadine",
+  "name": "Centanafadine",
+  "brand": "Simtriyo",
+  "group": "Investigational drug for ADHD",
+  "cls": "Triple (5HT–NE–DA) reuptake inhibitor",
+  "nbn": "Serotonin, norepinephrine and dopamine reuptake inhibitor (SERT/NET/DAT)",
+  "nts": [
+   "serotonin",
+   "norepinephrine",
+   "dopamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch11",
+    "pages": "485"
+   }
+  ],
+  "short": "Triple reuptake inhibitor for ADHD (approved 2026).",
+  "mechanism": "Inhibits the **serotonin, norepinephrine and dopamine** transporters.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor"
+   },
+   {
+    "t": "dat",
+    "action": "inhibitor"
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "**ADHD** (book: in testing)"
+  ],
+  "facts": [
+   {
+    "ch": "ch11",
+    "pages": "485",
+    "text": "A triple (5HT–NE–DA) reuptake inhibitor in testing for ADHD.",
+    "sec": "s11-future"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2026",
+    "title": "Centanafadine approved",
+    "text": "**Simtriyo** was approved on July 24, 2026 for ADHD in adults and children aged 6 and older (once-daily ER capsule), after four positive phase 3 trials; launch awaited DEA scheduling.",
+    "source": "Otsuka, July 24, 2026; Psychiatric Times; ADDitude"
+   }
+  ]
+ }
+]

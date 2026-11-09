@@ -1,0 +1,11 @@
+# Group G notes (book: Ch 13 p553-563, 573; p306, p355)
+- methadone: +2 sideEffects (opioid-class overdose respiratory depression/coma; tolerance/dependence/withdrawal), +2 pearls (levo enantiomer, p355; structured program, tapering fails). Side effects are class statements for "opioids"; book gives none specific to methadone.
+- buprenorphine: +1 sideEffect (class-level; flag: book says nothing specific, partial agonist, reviewer may drop), +2 pearls (injection of combo = no high/precipitated withdrawal, partly overlaps existing fact; structured program).
+- fentanyl: +1 sideEffect (coma), +1 pearl (one-third of ~60,000 deaths. Existing fact already flags the book's naloxone claim; no change.
+- lofexidine: +2 pearls; targets alpha2 gets note "α2A" (book says α2A agonist), no s values.
+- naltrexone: +1 sideEffect (precipitated withdrawal, from antagonist-class statement p560), +4 pearls. Obesity pearl is from Ch 6 (p306, bupropion-naltrexone), drop if out of scope.
+- nalmefene: +1 sideEffect (same class statement), +1 pearl (Sinclair, ~1 h before).
+- acamprosate: +2 pearls; no side effects in book.
+- disulfiram: book has nothing further (existing side effect kept).
+- alcohol: +1 pearl (craving persists after detox, p573); book gives no further adverse effects beyond the existing withdrawal item.
+- ondansetron: book has nothing further (only listed as unapproved agent, p556).

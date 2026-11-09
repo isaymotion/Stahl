@@ -1,0 +1,497 @@
+[
+ {
+  "id": "lidocaine",
+  "name": "Lidocaine",
+  "brand": "Xylocaine",
+  "group": "Local anesthetic",
+  "cls": "Local anesthetic",
+  "nbn": "Voltage-sensitive sodium channel blocker",
+  "nts": [],
+  "chapters": [
+   {
+    "ch": "ch09",
+    "pages": "381"
+   }
+  ],
+  "short": "Local anesthetic that blocks sodium channels on primary afferents.",
+  "mechanism": "Blocks **voltage-sensitive sodium channels** on primary afferent neurons, stopping nociceptive impulses from entering the CNS.",
+  "targets": [
+   {
+    "t": "vssc",
+    "action": "blocker"
+   }
+  ],
+  "uses": [
+   "Local anesthesia (peripherally administered)"
+  ]
+ },
+ {
+  "id": "clonidine",
+  "name": "Clonidine",
+  "brand": "Catapres",
+  "group": "α2 agonist",
+  "cls": "α2-adrenergic agonist",
+  "nbn": "Norepinephrine α2 receptor agonist",
+  "nts": [
+   "norepinephrine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch09",
+    "pages": "390"
+   },
+   {
+    "ch": "ch11",
+    "pages": "481–484"
+   },
+   {
+    "ch": "ch13",
+    "pages": "561"
+   }
+  ],
+  "short": "Nonselective α2 agonist (plus imidazoline); ER form approved for ADHD.",
+  "mechanism": "A **direct-acting, nonselective α2 agonist** (α2A, α2B, α2C) that also binds **imidazoline** receptors. Postsynaptic α2A stimulation in the PFC strengthens the signal; α2B, α2C and imidazoline actions add **sedation and hypotension**. In the spinal cord it mimics descending noradrenergic pain inhibition.",
+  "targets": [
+   {
+    "t": "alpha2",
+    "action": "agonist",
+    "note": "α2A, α2B and α2C"
+   },
+   {
+    "t": "imidazoline",
+    "action": "agonist",
+    "note": "Sedation, hypotension"
+   }
+  ],
+  "uses": [
+   "**ADHD** (controlled-release form only)",
+   "Hypertension",
+   "Off-label: conduct disorder, ODD, **Tourette syndrome**",
+   "Pain relief in some patients (Chapter 9)"
+  ],
+  "facts": [
+   {
+    "ch": "ch11",
+    "pages": "482",
+    "text": "Approved for hypertension; only **controlled-release** clonidine is approved for ADHD. Guanfacine is 10× weaker at sedation/hypotension and 25× more potent on PFC function.",
+    "sec": "s11-alpha2"
+   },
+   {
+    "ch": "ch13",
+    "pages": "561",
+    "text": "Reduces the **intensity** (autonomic symptoms) but not the duration of opioid withdrawal.",
+    "sec": "s13-oud-tx"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2024",
+    "title": "A liquid clonidine for ADHD",
+    "text": "**Onyda XR** (clonidine ER oral suspension) was approved in May 2024 for ADHD from age 6, alone or with stimulants, dosed once daily at bedtime.",
+    "source": "Drugs.com approval history; Tris Pharma, May 29, 2024"
+   }
+  ]
+ },
+ {
+  "id": "naloxone",
+  "name": "Naloxone",
+  "brand": "Narcan",
+  "group": "Opioid antagonist",
+  "cls": "μ-opioid antagonist",
+  "nbn": "Opioid μ receptor antagonist",
+  "nts": [
+   "endorphin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch09",
+    "pages": "392"
+   },
+   {
+    "ch": "ch13",
+    "pages": "560"
+   }
+  ],
+  "short": "μ-opioid antagonist that reverses placebo analgesia.",
+  "mechanism": "Blocks **μ-opioid** receptors. Its ability to reverse placebo pain relief suggests placebo analgesia involves endogenous opioid release.",
+  "targets": [
+   {
+    "t": "mor",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "Opioid reversal (later chapters)"
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "560",
+    "text": "Competitive μ antagonist that reverses opioid overdose and can precipitate withdrawal. (The book claims fentanyl cannot be reversed; it can, though larger or repeated doses may be needed.)",
+    "sec": "s13-opioids"
+   },
+   {
+    "ch": "ch13",
+    "pages": "560",
+    "text": "Combined with **buprenorphine**: inactive sublingually but blocks the high if the tablet is injected.",
+    "sec": "s13-oud-tx"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Naloxone over the counter",
+    "text": "Narcan 4 mg nasal spray was approved for **over-the-counter** sale on March 29, 2023.",
+    "source": "FDA via BioSpace, March 29, 2023"
+   }
+  ]
+ },
+ {
+  "id": "cyclobenzaprine",
+  "name": "Cyclobenzaprine",
+  "brand": "Flexeril; Tonmya",
+  "group": "Muscle relaxant",
+  "cls": "Tricyclic muscle relaxant",
+  "nts": [],
+  "chapters": [
+   {
+    "ch": "ch09",
+    "pages": "399"
+   }
+  ],
+  "short": "Tricyclic muscle relaxant used second line for fibromyalgia.",
+  "mechanism": "A **tricyclic** muscle relaxant; the book does not detail its pharmacology.",
+  "uses": [
+   "Second-line treatment of **fibromyalgia** pain"
+  ],
+  "facts": [
+   {
+    "ch": "ch09",
+    "pages": "399",
+    "text": "Spelled “cyclobenzapine” in the book.",
+    "sec": "s9-ancillary"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2025",
+    "title": "Sublingual form approved for fibromyalgia",
+    "text": "Tonmya, a once-nightly sublingual cyclobenzaprine tablet, was approved for fibromyalgia in adults on August 15, 2025, the first new fibromyalgia drug in more than 15 years.",
+    "source": "FDA approval reported by Healio, August 15, 2025"
+   }
+  ]
+ },
+ {
+  "id": "modafinil",
+  "name": "Modafinil",
+  "brand": "Provigil",
+  "group": "Wake-promoting agent",
+  "cls": "Wake-promoting agent (DAT inhibitor)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333, 335"
+   },
+   {
+    "ch": "ch09",
+    "pages": "399–400"
+   },
+   {
+    "ch": "ch10",
+    "pages": "442–444"
+   }
+  ],
+  "nbn": "Dopamine reuptake inhibitor (DAT)",
+  "nts": [
+   "dopamine"
+  ],
+  "short": "A DAT inhibitor used with an SNRI as an “arousal combo.”",
+  "mechanism": "Racemic wake-promoting agent acting mainly as a **DAT inhibitor**: weak affinity but high plasma levels give slow, sustained (6–8 h), incomplete DAT occupancy that raises **tonic** dopamine, then downstream **histamine** (TMN) and **orexin** release. Works even without orexin neurons.",
+  "targets": [
+   {
+    "t": "dat",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "With an SNRI for residual **fatigue, low energy and poor concentration/alertness** in depression (arousal combo)",
+   "**Narcolepsy**; adjunct for **OSA**; **shift work disorder** (approved)"
+  ],
+  "facts": [
+   {
+    "ch": "ch09",
+    "pages": "399–400",
+    "text": "Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).",
+    "sec": "s9-ancillary"
+   },
+   {
+    "ch": "ch10",
+    "pages": "442–444",
+    "text": "Possibly less powerful than stimulants in narcolepsy but with much lower abuse potential; often needs a second daily dose.",
+    "sec": "s10-modafinil"
+   },
+   {
+    "ch": "ch11",
+    "pages": "476",
+    "text": "Also a DAT blocker: the more rapidly and completely the DAT is blocked, the more reinforcing a drug becomes.",
+    "sec": "s11-dat"
+   }
+  ]
+ },
+ {
+  "id": "armodafinil",
+  "name": "Armodafinil",
+  "brand": "Nuvigil",
+  "group": "Wake-promoting agent",
+  "cls": "Wake-promoting agent",
+  "nts": [
+   "dopamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch09",
+    "pages": "399"
+   },
+   {
+    "ch": "ch10",
+    "pages": "442–444"
+   }
+  ],
+  "short": "Wake-promoting agent used for fibro-fog and fatigue.",
+  "mechanism": "The **R enantiomer** of modafinil: a DAT inhibitor with later peak, longer half-life and higher plasma levels 6–14 h after dosing, possibly avoiding a second daily dose.",
+  "uses": [
+   "**Fibro-fog** and fatigue in fibromyalgia (as for cognitive dysfunction in depression)",
+   "**Narcolepsy**; adjunct for **OSA**; **shift work disorder** (approved)"
+  ],
+  "targets": [
+   {
+    "t": "dat",
+    "action": "inhibitor"
+   }
+  ]
+ },
+ {
+  "id": "solriamfetol",
+  "name": "Solriamfetol",
+  "brand": "Sunosi",
+  "group": "Wake-promoting agent",
+  "cls": "Wake-promoting NDRI",
+  "nbn": "Norepinephrine and dopamine reuptake inhibitor (NET/DAT)",
+  "nts": [
+   "norepinephrine",
+   "dopamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch10",
+    "pages": "444"
+   }
+  ],
+  "short": "Wake-promoting NDRI for narcolepsy and OSA.",
+  "mechanism": "An **NE and DA reuptake inhibitor**: more potent than bupropion, less potent but more tolerable and **less abusable** than stimulants; short half-life wears off by bedtime.",
+  "targets": [
+   {
+    "t": "dat",
+    "action": "inhibitor"
+   },
+   {
+    "t": "net",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "Sleepiness in **narcolepsy**",
+   "Adjunct for sleepiness in **OSA**"
+  ]
+ },
+ {
+  "id": "pitolisant",
+  "name": "Pitolisant",
+  "brand": "Wakix",
+  "group": "Wake-promoting agent",
+  "cls": "H3 antagonist",
+  "nbn": "Histamine H3 receptor antagonist",
+  "nts": [
+   "histamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch10",
+    "pages": "444–446"
+   }
+  ],
+  "short": "H3 autoreceptor antagonist for narcolepsy; not controlled.",
+  "mechanism": "Blocks presynaptic **H3 autoreceptors**, disinhibiting **histamine release** to promote wakefulness.",
+  "targets": [
+   {
+    "t": "h3",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "Sleepiness in **narcolepsy**; anecdotally cataplexy",
+   "In testing for OSA sleepiness (at publication)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Overactivation: anxiety, insomnia",
+    "via": "Histamine release"
+   },
+   {
+    "e": "No known abuse potential; not a controlled substance",
+    "via": "—"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch10",
+    "pages": "446",
+    "text": "About as effective as modafinil, perhaps less than stimulants.",
+    "sec": "s10-newer"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2024",
+    "title": "Pediatric approval",
+    "text": "Approved in June 2024 for excessive daytime sleepiness in children aged 6 and older with narcolepsy.",
+    "source": "Harmony Biosciences, June 24, 2024"
+   }
+  ]
+ },
+ {
+  "id": "caffeine",
+  "name": "Caffeine",
+  "group": "Wake-promoting agent",
+  "cls": "Adenosine receptor antagonist",
+  "nbn": "Adenosine receptor antagonist",
+  "nts": [
+   "dopamine"
+  ],
+  "chapters": [
+   {
+    "ch": "ch10",
+    "pages": "440–441"
+   }
+  ],
+  "short": "The world’s most used psychoactive drug: an adenosine antagonist.",
+  "mechanism": "Blocks **adenosine** receptors. Adenosine (the “accountant” of fatigue) heterodimerizes its receptors with **D2** receptors and lowers their dopamine affinity; caffeine restores it, enhancing DA action.",
+  "targets": [
+   {
+    "t": "adenosine",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "Wake promotion; reduces fatigue"
+  ]
+ },
+ {
+  "id": "sodium-oxybate",
+  "name": "Sodium oxybate (GHB)",
+  "brand": "Xyrem",
+  "aka": [
+   "γ-Hydroxybutyrate",
+   "GHB"
+  ],
+  "group": "Hypnotic",
+  "cls": "Slow-wave sleep enhancer",
+  "nts": [
+   "gaba"
+  ],
+  "chapters": [
+   {
+    "ch": "ch09",
+    "pages": "399"
+   },
+   {
+    "ch": "ch10",
+    "pages": "446–448"
+   },
+   {
+    "ch": "ch13",
+    "pages": "559"
+   }
+  ],
+  "short": "Narcolepsy drug that enhances slow-wave sleep; abuse and diversion risk.",
+  "mechanism": "**Full agonist at GHB receptors** and **partial agonist at GABA-B** receptors (antagonist when GABA is high, agonist when low). Increases **slow-wave sleep** and reduces cataplexy via GABA-B, so patients sleep so well at night they are less sleepy by day.",
+  "uses": [
+   "**Cataplexy** and **excessive sleepiness** in narcolepsy (approved); reduces hypnagogic hallucinations and sleep paralysis",
+   "Alcoholism (some European countries)",
+   "Severe, treatment-resistant **fibromyalgia** in expert hands (heroic cases)"
+  ],
+  "sideEffects": [
+   {
+    "e": "**Diversion and abuse** potential",
+    "via": "GHB"
+   },
+   {
+    "e": "“Date rape” misuse with alcohol (sedation, amnesia); abuse by athletes for growth hormone surge",
+    "via": "Profound sedation; slow-wave sleep"
+   }
+  ],
+  "targets": [
+   {
+    "t": "ghb",
+    "action": "full agonist"
+   },
+   {
+    "t": "gabab",
+    "action": "partial agonist"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Once-nightly formulation",
+    "text": "Lumryz, an extended-release sodium oxybate taken once at bedtime, was approved in May 2023 for cataplexy or excessive daytime sleepiness in adults with narcolepsy.",
+    "source": "FDA approval reported May 1, 2023 (NeurologyLive)"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch13",
+    "pages": "559",
+    "text": "As GHB it is abused to get high and as a “**date rape**” drug; agonist at GHB and GABA-B receptors.",
+    "sec": "s13-sedatives"
+   }
+  ]
+ },
+ {
+  "id": "oveporexton",
+  "name": "Oveporexton",
+  "brand": "Orzeyful",
+  "group": "Wake-promoting agent",
+  "cls": "Orexin 2 receptor agonist",
+  "nbn": "Orexin OX2 receptor agonist",
+  "nts": [
+   "orexin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch10",
+    "pages": "444–446"
+   }
+  ],
+  "short": "First orexin receptor agonist (post-publication), for narcolepsy type 1.",
+  "mechanism": "Not in the book: an oral **OX2 agonist** that replaces the missing orexin signal in narcolepsy type 1. Listed here because Chapter 10 explains why orexin loss causes narcolepsy.",
+  "targets": [
+   {
+    "t": "ox",
+    "action": "agonist",
+    "note": "OX2-selective"
+   }
+  ],
+  "uses": [
+   "Narcolepsy type 1 (adults)"
+  ],
+  "updates": [
+   {
+    "year": "2026",
+    "title": "Approved for narcolepsy type 1",
+    "text": "Approved by the FDA on August 5, 2026 for adults with narcolepsy type 1; phase 3 trials improved sleepiness, cataplexy and quality of life; insomnia and urinary frequency were common.",
+    "source": "Takeda, August 5, 2026 (AJMC)"
+   }
+  ]
+ }
+]

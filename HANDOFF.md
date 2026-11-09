@@ -48,18 +48,18 @@ python3 -u tests/r2_practice.py                         # confidence, topics, ex
 ```
 Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.email="isaymotion@gmail.com" commit -m "…" && git push origin main`.
 
-## 6. Status (as of 2026-11-09, main = 815e009, version 26.0.0)
+## 6. Status (as of 2026-11-09, main = ba73af3, version 27.0.0)
 | Area | State |
 |---|---|
 | Chapters 1–13 | Done: 247 guide sections, 1,102 high-yield points, 726 mech / 268 drug / 200 clinical cards, 608 board questions, 469 glossary terms |
-| Library | 183 drugs, 105 targets, 16 NTs, 83 circuits, 17 drug types |
+| Library | 183 drugs, 105 targets, 16 NTs, 83 circuits, 17 drug types. B1 pass done (R3–R5): 271 pearls + 65 side effects added; 63 drugs still have no pearls because the book has nothing more on them |
 | QoL pass | Done: phone home layout, two-column PDF generator (chapter + all chapters), Compare drug-type filters, NbN by class, auto-hiding tab bar, phone overflow fixes, SW cache-prefix fix |
 | Teaching mode | Done: session builder (6 presets, multi-chapter, counts, order), high-yield blanks, flashcards, board Qs, vignettes, Name that drug, countdown, room/two-team scoring, flags, text size, end-of-session review + PDF |
-| Since 10-26 | 20.0.0 Monitoring checklists (`#/monitoring`), 21.0.0 Text size (Aa), 22.0.0 Design refresh (semver changelog, About page, match-device theme, Tagalog draft strings), 23.0.0 = R1, 24.0.0 = R2, 25.0.0 = R3, 26.0.0 = R4 |
+| Since 10-26 | 20.0.0 Monitoring checklists (`#/monitoring`), 21.0.0 Text size (Aa), 22.0.0 Design refresh (semver changelog, About page, match-device theme, Tagalog draft strings), 23.0.0 = R1, 24.0.0 = R2, 25.0.0 = R3, 26.0.0 = R4, 27.0.0 = R5 |
 | Practice engine (R2) | `data/topics.js`: 28 topics (`SP.topics`), all 1,802 items mapped (`SP.topicMap`, key `chNN/deck/id`); edit `work/r2/topics_vocab.json` + `topic_map.json`, then `node tools/build_topics.js ../stahl`. localStorage `att` = per-item last 8 outcomes (upper = right; S/U/G = sure/unsure/guess, R/W = no rating); `confAsk` pref; `MISTAKES[k].sure`. Routes `#/topics`, `#/topics/<id>`, `#/topics/<id>/cards`, `#/exam/topic/<id>`, `#/exam/mistakes`. Topic strength needs ≥5 practised items. |
 
 ## 7. Next steps: agreed release plan (owner approved all A + B, order B1 → B4, 2026-11-09)
-Next version **27.0.0** (R5). One release = one changelog id + SW bump + full test run + push + update this table.
+Next version **28.0.0** (R6). One release = one changelog id + SW bump + full test run + push + update this table.
 
 | # | Release | Items | Book PDF? | Status |
 |---|---|---|---|---|
@@ -67,7 +67,7 @@ Next version **27.0.0** (R5). One release = one changelog id + SW bump + full te
 | R2 | Practice engine | B3a confidence rating + cross-chapter topic tags on all cards/questions, then A6 quiz from mistakes, A7 exam by topic, weak-spot map | no | **done 24.0.0** |
 | R3 | Library depth 1 | B1: Ch 4–5 drugs (antipsychotics) | yes | **done 25.0.0** (68 pearls/32 drugs; see R3 method below) |
 | R4 | Library depth 2 | B1: Ch 6–7 drugs (mood, antidepressants) | yes | **done 26.0.0** (78 pearls/37 drugs; `work/r4/`) |
-| R5 | Library depth 3 | B1: Ch 8–13 + remaining drugs | yes | pending |
+| R5 | Library depth 3 | B1: Ch 8–13 + remaining drugs | yes | **done 27.0.0** (125 pearls + 61 SEs/55 drugs; `work/r5/`) |
 | R6 | Cheat sheets | A5 drug-class cheat sheets + PDF (built on R3–R5) | no | pending |
 | R7 | Rationales 1 | B2: why-each-wrong-answer + page ref, Ch 9–13 | yes | pending |
 | R8 | Rationales 2 | B2: same, Ch 1–8 | yes | pending |
@@ -76,13 +76,14 @@ Next version **27.0.0** (R5). One release = one changelog id + SW bump + full te
 | R11 | Learning features | B3 rest: mechanism-reasoning drill, warm-ups, "explain why" prompts | no | pending |
 | R12 | Diagrams | B4: agonist slider, D2 occupancy meter, dopamine pathways, receptor ring | no | pending |
 | R13 | Ch 8/9 depth | recheck vs book, expand guide | yes | pending |
-| R14 | Housekeeping | errata page, "How current is this?" page, consistency checks, shareable assignment links | no | pending |
+| R14 | Housekeeping | errata page, "How current is this?" page, consistency checks, shareable assignment links. Known items: aducanumab/lecanemab/donanemab `sideEffects` (ARIA, infusion reactions) are post-book, move into their `updates`; existing book-error notes kept as facts (topiramate + bupropion p352, fentanyl not reversible by naloxone p560, lisdexamfetamine cleavage site) could become `caution` callouts / errata | no | pending |
 
 Working method: Claude does design, clinical/content decisions and final review of every item; subagents draft from extracted book pages (library fields, rationales, tags) and run test/screenshot passes. Suggest a fresh chat about every 3 releases (session-handoff skill).
 
 R3 method (reuse for R4/R5): `work/r3/BRIEF.md` (drafting rules for subagents) → `current_<G>.json` (dump of the group's entries) → subagents write `draft_<G>.json` + `notes_<G>.md` → `node work/r3/check_drafts.js ../stahl /home/claude/book/pages <G…>` (8-word verbatim check vs book, src alignment, target ids) → lead verifies claims in the page files and writes `final_<G>.json` → back up `data/db`, `node tools/dbtool.js ../stahl work/r3/r3_patch.js` (applies finals). Book pages extracted per printed page: `pdftotext -layout -f $((p+16)) -l $((p+16))` into `/home/claude/book/pages/p<N>.txt`.
 R3 findings: the book's per-drug side-effect detail is mostly already in the library (only 3 SEs added); gains are in pearls. The 11 FGAs listed only in Table 5-1 (p183) have no further book detail: leave as is. Rejected from drafts: "does not bind X" inferred from absence in a figure; pearls that restate the entry's own mechanism/facts. Hallucinogens, stimulants, ketamine, fluoxetine, mirtazapine also appear in Ch 4–5 but belong to R4/R5.
 R4 (same method, `work/r4/`, groups A–F): Ch 6 = p245–282, Ch 7 = p283–358 (pages extracted). Deferred to R5 although in Ch 7: amphetamine, MDMA, modafinil, pregabalin, gabapentin, psilocybin. Most TCAs, desvenlafaxine, milnacipran, levomilnacipran, nefazodone, iproniazid, flumazenil, brexanolone, zuranolone: book adds nothing. Book error kept as flagged fact: topiramate "with bupropion" for weight loss (p352). Common draft faults to cut: pearls repeating `mechanism`/`uses`, class points applied to one drug, "still unclear" pearls.
+R5 (`work/r5/`, groups A–G; `show.js G` lists new items beside the entry's mechanism/uses/facts for review): Ch 8 = p359–378, 9 = 379–400, 10 = 401–448, 11 = 449–484, 12 = 485–536, 13 = 537–624 (all pages p77–624 now extracted). Benzodiazepines (diazepam, alprazolam) carry class points as the library's representatives. Rejected: psilocin binding values on psilocybin (different strip), lofexidine "α2A" (book says α2), page numbers inside pearl text.
 
 Reference (original wording of the items):
 - A1–A7 as above. B1: 139/183 drugs lack binding strength, 78 lack side effects, 168 lack pearls. B2: ~7% vignettes, explanations shrink to ~50 chars by Ch 13, no wrong-answer rationales. B3: confidence rating, topic tags (interleaving, weak-spot map, exam by topic), mechanism drill from library, warm-ups, explain-why. B4: original interactive diagrams.

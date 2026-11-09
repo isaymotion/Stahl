@@ -1,0 +1,165 @@
+{
+ "clonidine": {
+  "sideEffects": [
+   {
+    "e": "**Sedation**",
+    "via": "α2B (thalamus), α2C and imidazoline receptor actions"
+   },
+   {
+    "e": "**Hypotension**",
+    "via": "α2C and imidazoline receptor actions"
+   }
+  ],
+  "pearls": [
+   "Best candidate for **α2 monotherapy** in ADHD: hypothetically low PFC norepinephrine with no added dopamine problem.",
+   "No postsynaptic **DA receptor** action, which parallels the lack of abuse potential.",
+   "For **opioid withdrawal**, adding naltrexone to clonidine or lofexidine also shortens the course, not just its severity.",
+   "In pain, works by mimicking **descending noradrenergic** input onto inhibitory α2 receptors on primary afferent terminals."
+  ],
+  "src": {
+   "sideEffects": [
+    "p482-483",
+    "p482-483"
+   ],
+   "pearls": [
+    "p482-483",
+    "p483",
+    "p561-562",
+    "p390"
+   ]
+  }
+ },
+ "naloxone": {
+  "sideEffects": [
+   {
+    "e": "**Precipitated withdrawal** in opioid-dependent patients",
+    "via": "μ-opioid receptor blockade"
+   }
+  ],
+  "pearls": [
+   "Reversal of opioid effects works only if given **early enough** and in sufficient dose, since it competes at the receptor.",
+   "Not absorbed by mouth or under the tongue, so it is **active by injection**; this is why the combination tablet deters injection."
+  ],
+  "src": {
+   "sideEffects": [
+    "p560"
+   ],
+   "pearls": [
+    "p560",
+    "p560"
+   ]
+  }
+ },
+ "cyclobenzaprine": {
+  "sideEffects": [
+   {
+    "e": "**Sedation** (grouped with sedating second-line agents)",
+    "via": "Not specified in the book"
+   }
+  ],
+  "pearls": [
+   "Listed with sedating **mirtazapine and TCAs**; the book frames these second-line drugs as helping sleep disturbance in fibromyalgia."
+  ],
+  "src": {
+   "sideEffects": [
+    "p400"
+   ],
+   "pearls": [
+    "p400"
+   ]
+  }
+ },
+ "modafinil": {
+  "sideEffects": [
+   {
+    "e": "**Low abuse liability** and milder side effects than amphetamine or methylphenidate",
+    "via": "Slow, incomplete DAT occupancy raising tonic rather than phasic dopamine"
+   }
+  ],
+  "pearls": [
+   "Approved for **OSA and shift work disorder**, which amphetamine and methylphenidate are not.",
+   "In OSA, an **adjunct** to CPAP-type airway treatment; sometimes used off-label alone when CPAP is not tolerated (adherence only about 54%).",
+   "In shift work disorder, pair with **circadian measures** such as timed bright light.",
+   "In the **arousal combo**, the SNRI boosts 5HT and NE while modafinil adds a single dopamine boost; with a stimulant, NE is boosted twice.",
+   "For **fibro-fog**, sits with atomoxetine, bupropion and cautious stimulants; SNRI plus modafinil can also address physical fatigue."
+  ],
+  "src": {
+   "sideEffects": [
+    "p442-443"
+   ],
+   "pearls": [
+    "p442-443",
+    "p443",
+    "p444",
+    "p333, p335",
+    "p400"
+   ]
+  }
+ },
+ "armodafinil": {
+  "pearls": [
+   "Its pharmacokinetics could give more **phasic dopamine** firing than racemic modafinil.",
+   "No head-to-head trials against stimulants exist, so **relative potency** in narcolepsy is unproven.",
+   "For fibromyalgia, SNRI plus armodafinil can address **physical and mental fatigue**."
+  ],
+  "src": {
+   "pearls": [
+    "p443",
+    "p443",
+    "p400"
+   ]
+  }
+ },
+ "caffeine": {
+  "pearls": [
+   "Sleep-hygiene advice for insomnia: **avoid caffeine** near bedtime, along with alcohol and nicotine.",
+   "Its wake effect comes from **reducing homeostatic sleep drive**, since adenosine builds up as fatigue accumulates."
+  ],
+  "src": {
+   "pearls": [
+    "p431",
+    "p440"
+   ]
+  }
+ },
+ "sodium-oxybate": {
+  "pearls": [
+   "A **controlled substance** supplied through a central pharmacy in the US.",
+   "Naturally occurring in the brain, **made from GABA**, with its own receptors.",
+   "Unlike other sleepiness drugs, it does not raise wake-promoting transmitters; it works through **night-time sleep**.",
+   "In fibromyalgia, reserved for refractory cases because of **slow-wave sleep** benefit versus diversion risk."
+  ],
+  "src": {
+   "pearls": [
+    "p447",
+    "p446",
+    "p447",
+    "p400, p448"
+   ],
+   "sideEffects": [
+    "existing",
+    "existing"
+   ]
+  },
+  "sideEffects": [
+   {
+    "e": "**Diversion and abuse** potential",
+    "via": "GHB"
+   },
+   {
+    "e": "“Date rape” misuse with alcohol (sedation, amnesia); abuse by athletes for growth hormone surge",
+    "via": "Profound sedation; slow-wave sleep"
+   }
+  ]
+ },
+ "oveporexton": {
+  "pearls": [
+   "Book context: **CSF orexin** below about 110 pg/mL is diagnostic, but levels are often normal without cataplexy."
+  ],
+  "src": {
+   "pearls": [
+    "p435"
+   ]
+  }
+ }
+}
