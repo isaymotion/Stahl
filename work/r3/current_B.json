@@ -1,0 +1,937 @@
+[
+ {
+  "id": "lurasidone",
+  "name": "Lurasidone",
+  "brand": "Latuda",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “done”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "D4 and 5HT7 most potent; low metabolic risk; preferred for bipolar depression.",
+  "mechanism": "A **5HT2A/D2 antagonist** with a relatively simple profile: most potent at **D4** and **5HT7**, high 5HT2A, moderate **5HT1A** and **α2**, minimal **H1 and M1** (Figure 5-53). These may explain its antidepressant profile.",
+  "targets": [
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 3
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "α2C, α2A"
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "**Bipolar depression** (10+): highly effective and a preferred agent",
+   "Schizophrenia/maintenance; often preferred for **children**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Low weight gain and metabolic risk",
+    "via": "Minimal H1/M1 actions"
+   },
+   {
+    "e": "Motor effects and sedation (less if dosed at night)",
+    "via": "D2 blockade"
+   }
+  ],
+  "pearls": [
+   "**NRX101** (Cyclurad) adds D-cycloserine for acute suicidality and bipolar depression (early positive findings)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "198, 236–237"
+   },
+   {
+    "ch": "ch07",
+    "pages": "343"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "236–237",
+    "text": "Synergy among several potential antidepressant properties with good tolerability makes it one of the preferred bipolar-depression agents where approved.",
+    "sec": "s5-dones"
+   },
+   {
+    "ch": "ch07",
+    "pages": "343",
+    "text": "Table 7-1: approved for **bipolar depression**; never tested in mania. The only agent with a large randomized trial in **unipolar depression with mixed features**; used at lower doses than for psychosis.",
+    "sec": "s7-bipolar-depression"
+   }
+  ]
+ },
+ {
+  "id": "lumateperone",
+  "name": "Lumateperone",
+  "brand": "Caplyta",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (the “rone”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "Very potent 5HT2A, modest D2, SERT binding and possible presynaptic D2 partial agonism.",
+  "mechanism": "A **5HT2A/D2 antagonist** with very high **5HT2A** affinity, moderate **D2, D1, α1** and **SERT** affinity, and low H1 (Figure 5-54). The **widest 5HT2A–D2 separation** may explain antipsychotic action at **low D2 occupancy**. Preclinical evidence suggests **presynaptic D2 partial agonism** with postsynaptic antagonism, turning down dopamine synthesis (Figure 5-55).",
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "Postsynaptic antagonist; possibly presynaptic partial agonist (preclinical)"
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "s": 2
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia (no titration needed)",
+   "Bipolar depression trials promising at publication"
+  ],
+  "sideEffects": [
+   {
+    "e": "Little or no weight gain or metabolic disturbance",
+    "via": "Low H1; low-risk tier"
+   },
+   {
+    "e": "Little or no DIP or akathisia",
+    "via": "Low D2 occupancy"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "198, 219, 237–239"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "237–239",
+    "text": "SERT binding suggests antidepressant potential; if presynaptic D2 agonism is proven, less postsynaptic blockade would be needed for an antipsychotic effect.",
+    "sec": "s5-dones"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2025",
+    "title": "Depression indications",
+    "text": "Approved for bipolar I and II depression (monotherapy and adjunct to lithium or valproate) in December 2021 and as an adjunct for major depressive disorder in November 2025.",
+    "source": "FDA, December 2021; November 6, 2025"
+   }
+  ]
+ },
+ {
+  "id": "sertindole",
+  "name": "Sertindole",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "short": "5HT2A/D2 antagonist withdrawn and reintroduced over QTc concerns.",
+  "mechanism": "A **5HT2A/D2 antagonist** with potent **α1** antagonism that may account for some side effects (Figure 5-60).",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 2,
+    "note": "5HT1D, 5HT1B"
+   },
+   {
+    "t": "dat",
+    "action": "inhibitor",
+    "s": 1
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 1,
+    "note": "α2B, α2C, α2A"
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 1
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Second-line agent in some countries, with close cardiac and drug-interaction monitoring"
+  ],
+  "sideEffects": [
+   {
+    "e": "QTc prolongation (dose-dependent)",
+    "via": "Cardiac safety concerns led to withdrawal"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "236, 240–241"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "240–241",
+    "text": "Originally approved in some European countries, then withdrawn for cardiac/QTc testing and reintroduced as a second-line agent.",
+    "sec": "s5-others"
+   }
+  ]
+ },
+ {
+  "id": "perospirone",
+  "name": "Perospirone",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "short": "5HT2A/D2 antagonist with 5HT1A partial agonism, used in Asia.",
+  "mechanism": "A **5HT2A and D2** antagonist with **5HT1A** partial agonist actions that may contribute to efficacy or tolerability (Figure 5-61).",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "targets": [
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 3
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia (Asia); more experience in schizophrenia than mania"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "241"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "241",
+    "text": "Usually given three times a day; its potential for weight gain, dyslipidemia, insulin resistance and diabetes is not well investigated.",
+    "sec": "s5-others"
+   }
+  ]
+ },
+ {
+  "id": "blonanserin",
+  "name": "Blonanserin",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic",
+  "nbn": "Dopamine D2/D3 and serotonin 5HT2A receptor antagonist",
+  "short": "5HT2A/D2 antagonist with higher D3 affinity than dopamine, used in Asia.",
+  "mechanism": "A **5HT2A/D2 antagonist** with high **D3** affinity, higher than dopamine’s own (like cariprazine), suggesting possible use for negative symptoms and bipolar depression (Figure 5-62).",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "targets": [
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   }
+  ],
+  "uses": [
+   "Schizophrenia (Asia), twice daily"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "241"
+   },
+   {
+    "ch": "ch07",
+    "pages": "344"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "241",
+    "text": "Its D3 potency suggests utility for negative symptoms and bipolar depression, not yet well studied.",
+    "sec": "s5-others"
+   },
+   {
+    "ch": "ch07",
+    "pages": "344",
+    "text": "With cariprazine, one of only two agents whose **D3 affinity** is orders of magnitude higher than dopamine’s (Figure 7-72).",
+    "sec": "s7-bipolar-depression"
+   }
+  ]
+ },
+ {
+  "id": "aripiprazole",
+  "name": "Aripiprazole",
+  "brand": "Abilify",
+  "group": "D2/5HT1A partial agonist",
+  "cls": "Atypical antipsychotic (the original “pip”)",
+  "nbn": "Dopamine D2 and serotonin 5HT1A receptor partial agonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "The original D2/5HT1A partial agonist: low motor effects except akathisia; lowers prolactin.",
+  "mechanism": "A **D2 partial agonist** close to the antagonist end of the spectrum, with **5HT1A** partial agonism (higher affinity than its moderate **5HT2A** antagonism), plus **5HT7** and **5HT2C** antagonism (Figure 5-56). It lacks muscarinic and H1 actions associated with sedation, and the actions associated with metabolic risk.",
+  "targets": [
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "d2",
+    "action": "partial agonist",
+    "s": 3
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 3
+   },
+   {
+    "t": "d3",
+    "action": "partial agonist",
+    "s": 2
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 2,
+    "note": "α1A, α1B"
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "α2C, α2A, α2B"
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 2,
+    "note": "5HT1D, 5HT1B"
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht3",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia/maintenance (13+); **IM** agitation",
+   "Bipolar mania/maintenance (10+)",
+   "Autism-related irritability (5–17); **Tourette syndrome** (6–18)",
+   "**Adjunct to SSRIs/SNRIs in major depression**: its main US use",
+   "Off-label in bipolar depression"
+  ],
+  "sideEffects": [
+   {
+    "e": "**Akathisia** (main motor effect)",
+    "via": "D2 partial agonism"
+   },
+   {
+    "e": "Lowers prolactin",
+    "via": "Lactotrophs read it as an agonist"
+   },
+   {
+    "e": "Not generally sedating; little or no weight gain (some in children)",
+    "via": "No M1/H1-type actions"
+   }
+  ],
+  "pearls": [
+   "Oral, liquid, orally disintegrating; **4-week** and **4- to 8-week** long-acting injections (the latter with a day-1 loading injection)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "193, 239"
+   },
+   {
+    "ch": "ch07",
+    "pages": "325–327"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "193",
+    "text": "The result of “throwing a dart” closer to the antagonist end after OPC4392 and bifeprunox were too agonistic; some question its efficacy in the most severe psychosis (never proven).",
+    "sec": "s5-pa"
+   },
+   {
+    "ch": "ch05",
+    "pages": "239",
+    "text": "5HT1A partial agonism and 5HT2C/5HT7 antagonism at low doses are theoretical antidepressant mechanisms.",
+    "sec": "s5-pips"
+   },
+   {
+    "ch": "ch07",
+    "pages": "325–327",
+    "text": "Table 7-1: approved for **bipolar mania** and **maintenance** and as an **adjunct for MDD**; one of the most prescribed augmenters in the US; **5HT1A partial agonism** (plus D3, 5HT7, 5HT2C, α2) may explain antidepressant action; some **akathisia**; not approved for bipolar depression.",
+    "sec": "s7-augment-sda"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524",
+    "text": "Used cautiously **off-label** for agitation/psychosis in dementia despite the boxed warning for stroke and death.",
+    "sec": "s12-d2"
+   },
+   {
+    "ch": "ch13",
+    "pages": "575",
+    "text": "Gambling has been observed after dopamine agonists and **partial agonists**.",
+    "sec": "s13-bed"
+   }
+  ]
+ },
+ {
+  "id": "brexpiprazole",
+  "name": "Brexpiprazole",
+  "brand": "Rexulti",
+  "group": "D2/5HT1A partial agonist",
+  "cls": "Atypical antipsychotic (the second “pip”)",
+  "short": "Aripiprazole relative with more potent 5HT1A, 5HT2A and α1 action; approved later for Alzheimer agitation.",
+  "mechanism": "A **D2 partial agonist** related to aripiprazole but with relatively more potent **5HT2A** antagonism, **5HT1A** partial agonism (its most potent action) and **α1** antagonism versus D2 (Figure 5-57), which should theoretically reduce motor effects and akathisia. Higher α1 and α2 binding than aripiprazole may add antidepressant actions; α1 actions may help explain efficacy in **agitation in dementia**.",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "chapters": [
+   {
+    "ch": "ch04",
+    "pages": "146"
+   },
+   {
+    "ch": "ch05",
+    "pages": "197, 239–240"
+   },
+   {
+    "ch": "ch07",
+    "pages": "327–328"
+   },
+   {
+    "ch": "ch08",
+    "pages": "377–378"
+   },
+   {
+    "ch": "ch12",
+    "pages": "530–533"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch04",
+    "pages": "146",
+    "text": "Chapter 4 notes that **treatments for agitation in dementia are evolving separately** from those for psychosis in dementia and in schizophrenia.",
+    "sec": "s4-aggression"
+   },
+   {
+    "ch": "ch05",
+    "pages": "197, 239–240",
+    "text": "Positive results for agitation in dementia suggest it may have a satisfactory risk:benefit profile; a positive study with sertraline in PTSD was a promising exception among anxiety/PTSD uses.",
+    "sec": "s5-pips"
+   },
+   {
+    "ch": "ch07",
+    "pages": "327–328",
+    "text": "Table 7-1: approved as an **adjunct for MDD** only. Stronger 5HT2A, 5HT1A and **α1** binding than aripiprazole (possibly less akathisia); α1 + 5HT2A synergy may aid antidepressant action and evidence in Alzheimer agitation and PTSD.",
+    "sec": "s7-augment-sda"
+   },
+   {
+    "ch": "ch08",
+    "pages": "377–378",
+    "text": "In testing with **sertraline** for PTSD at publication, with promising initial findings.",
+    "sec": "s8-ptsd"
+   },
+   {
+    "ch": "ch12",
+    "pages": "530–533",
+    "text": "For AD agitation: **D2 and 5HT1A partial agonism**, **5HT2A** antagonism and **α1/α2C** antagonism act synergistically on the agitation network; lower doses than for schizophrenia.",
+    "sec": "s12-agitation"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Approved for Alzheimer agitation",
+    "text": "Approved by the FDA for **agitation associated with dementia due to Alzheimer disease**, the first drug approved for this indication in the US.",
+    "source": "FDA, May 10, 2023"
+   },
+   {
+    "year": "2025",
+    "title": "PTSD application not approved",
+    "text": "The supplemental application for brexpiprazole with sertraline in adults with PTSD received an FDA complete response letter in September 2025.",
+    "source": "Otsuka/Lundbeck, September 2025"
+   }
+  ],
+  "nbn": "Dopamine D2 and serotonin 5HT1A receptor partial agonist",
+  "targets": [
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 4
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 4,
+    "note": "α1B, α1D, α1A"
+   },
+   {
+    "t": "d2",
+    "action": "partial agonist",
+    "s": 4
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 4,
+    "note": "α2C"
+   },
+   {
+    "t": "d3",
+    "action": "partial agonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 2,
+    "note": "5HT1B"
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia (not indicated for acute mania)",
+   "Positive late-stage studies in **agitation in dementia** (approved 2023, see update)",
+   "Preliminary data with **sertraline for PTSD**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Some akathisia (perhaps less than aripiprazole; not proven head to head)",
+    "via": "D2 partial agonism"
+   },
+   {
+    "e": "Low metabolic risk, little sedation",
+    "via": "Lacks the relevant receptor actions"
+   }
+  ]
+ },
+ {
+  "id": "cariprazine",
+  "name": "Cariprazine",
+  "brand": "Vraylar",
+  "group": "D2/5HT1A partial agonist",
+  "cls": "Atypical antipsychotic (the “rip”)",
+  "nbn": "Dopamine D2 and serotonin 5HT1A receptor partial agonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "D2/5HT1A partial agonist whose most potent action is D3 partial agonism.",
+  "mechanism": "A **D2/5HT1A partial agonist** whose most potent binding is **D3 partial agonism**, with higher D3 affinity than dopamine itself; also potent **5HT2B**, α1 and α2A, with weaker **5HT2A** and H1 (Figure 5-58). D3 action may block limbic D3 receptors and, at VTA somatodendritic D3 receptors, raise prefrontal dopamine.",
+  "targets": [
+   {
+    "t": "d3",
+    "action": "partial agonist",
+    "s": 4
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "d2",
+    "action": "partial agonist",
+    "s": 4
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 3
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3,
+    "note": "α1B, α1D, α1A"
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 3,
+    "note": "α2A"
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia; **superior to a D2/5HT2A antagonist for negative symptoms**",
+   "Acute bipolar mania",
+   "**Bipolar depression** at lower doses; broad efficacy across mixtures of mania and depression"
+  ],
+  "sideEffects": [
+   {
+    "e": "Some **akathisia** (reduced by slow titration); low DIP",
+    "via": "D2 partial agonism with potent 5HT1A"
+   },
+   {
+    "e": "Very low weight gain or metabolic disturbance",
+    "via": "Low-risk tier"
+   }
+  ],
+  "pearls": [
+   "Two long-lived active metabolites: potential weekly to monthly **“oral depot”**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "193, 198, 240"
+   },
+   {
+    "ch": "ch07",
+    "pages": "343–345"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "240",
+    "text": "D3 partial agonism shows preclinical promise for cognition, mood, emotion, reward/substance use and negative symptoms.",
+    "sec": "s5-pips"
+   },
+   {
+    "ch": "ch07",
+    "pages": "343–345",
+    "text": "Table 7-1: approved for **bipolar mania** and **bipolar depression**; evidence in mania with mixed features and depression with mixed features. The most potent **D3** binder: VTA D3 blockade releases DA onto prefrontal D1 receptors.",
+    "sec": "s7-bipolar-depression"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2022",
+    "title": "Adjunctive treatment of depression",
+    "text": "Approved as an adjunct to antidepressants for major depressive disorder in adults in December 2022.",
+    "source": "AbbVie/FDA, December 16, 2022"
+   }
+  ]
+ },
+ {
+  "id": "pimavanserin",
+  "name": "Pimavanserin",
+  "group": "Selective 5HT2A antagonist",
+  "cls": "Selective 5HT2A antagonist/inverse agonist",
+  "nbn": "Serotonin 5HT2A receptor antagonist (inverse agonist)",
+  "short": "The only proven antipsychotic that does not bind D2; approved for Parkinson’s disease psychosis.",
+  "mechanism": "A potent **5HT2A antagonist** (sometimes called inverse agonist) with lesser **5HT2C** antagonism and **no D2** binding (Figure 5-59). 5HT2C antagonism might raise dopamine release in depression and negative symptoms. It blocks the overstimulated, upregulated 5HT2A receptors of Parkinson’s disease psychosis without the motor worsening of D2 blockade.",
+  "nts": [
+   "serotonin"
+  ],
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "inverse agonist",
+    "s": 4
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 3
+   }
+  ],
+  "uses": [
+   "**Psychosis in Parkinson’s disease**",
+   "Dementia-related psychosis (late-stage testing at publication; see updates)",
+   "Early positive adjunctive results in major depression and negative symptoms"
+  ],
+  "chapters": [
+   {
+    "ch": "ch04",
+    "pages": "131–141, 157"
+   },
+   {
+    "ch": "ch05",
+    "pages": "198, 240"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524–528"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch04",
+    "pages": "131–141",
+    "text": "The 5HT2A mechanism avoids the D2 blockade that **worsens movement** in Parkinson’s disease and raises **stroke and death** risk in dementia.",
+    "sec": "s4-5ht-hyper"
+   },
+   {
+    "ch": "ch05",
+    "pages": "240",
+    "text": "The **only** known drug with proven antipsychotic efficacy that lacks D2 antagonist/partial agonist actions; in the low metabolic risk tier.",
+    "sec": "s5-others"
+   },
+   {
+    "ch": "ch12",
+    "pages": "526–528",
+    "text": "In dementia psychosis it blocks excitatory **5HT2A** input to surviving glutamate neurons that lost GABA inhibition, normalizing visual cortex (hallucinations) and VTA dopamine (delusions) output. Approved for PD psychosis.",
+    "sec": "s12-psychosis"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2022",
+    "title": "Not approved for dementia-related psychosis",
+    "text": "The FDA issued complete response letters for dementia-related psychosis (April 2021) and for hallucinations and delusions of Alzheimer disease psychosis (August 2022, after a 9–3 advisory committee vote against efficacy). Its US approval remains for Parkinson’s disease psychosis.",
+    "source": "FDA actions reported April 2021 and August 4, 2022"
+   }
+  ]
+ }
+]

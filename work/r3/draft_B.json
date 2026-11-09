@@ -1,0 +1,273 @@
+{
+ "lurasidone": {
+  "sideEffects": [
+   {
+    "e": "Low weight gain and metabolic risk",
+    "via": "Minimal H1/M1 actions"
+   },
+   {
+    "e": "Motor effects and sedation (less if dosed at night)",
+    "via": "D2 blockade"
+   }
+  ],
+  "pearls": [
+   "**NRX101** (Cyclurad) adds D-cycloserine for acute suicidality and bipolar depression (early positive findings)",
+   "Has **greater affinity for 5HT7 than for D2**; far more used in **bipolar depression** than in schizophrenia"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "existing",
+    "p213, p236"
+   ],
+   "uses": [
+    "existing",
+    "p237"
+   ]
+  },
+  "uses": [
+   "**Bipolar depression** (10+): highly effective and a preferred agent",
+   "Schizophrenia/maintenance (**10+**); often preferred for **children** because of good tolerability"
+  ]
+ },
+ "lumateperone": {
+  "sideEffects": [
+   {
+    "e": "Little or no weight gain or metabolic disturbance",
+    "via": "Low H1; low-risk tier"
+   },
+   {
+    "e": "Little or no DIP or akathisia",
+    "via": "Low D2 occupancy"
+   }
+  ],
+  "pearls": [
+   "Among agents with the **lowest D2 occupancy** at antipsychotic doses (under 60%), with quetiapine and clozapine",
+   "**Does not bind** 5HT1A, α2, D3 or 5HT1B/D receptors, unlike most other \"dones\""
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p219",
+    "p207, p209, p210, p214"
+   ],
+   "targets": "p237 (low H1 affinity); rest existing"
+  },
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "Postsynaptic antagonist; possibly presynaptic partial agonist (preclinical)"
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "s": 2
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 1
+   }
+  ]
+ },
+ "sertindole": {
+  "sideEffects": [
+   {
+    "e": "QTc prolongation (dose-dependent)",
+    "via": "Cardiac safety concerns led to withdrawal"
+   },
+   {
+    "e": "Some adverse effects from its potent **α1 antagonism**",
+    "via": "Potent α1 blockade"
+   }
+  ],
+  "pearls": [
+   "**Dose-dependent QTc prolongation**, shared with iloperidone, zotepine, amisulpride but not ziprasidone",
+   "Reserved for patients who failed other agents and can have **close cardiac and interaction monitoring**"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "p232"
+   ],
+   "pearls": [
+    "p236",
+    "p240-241"
+   ]
+  }
+ },
+ "perospirone": {
+  "sideEffects": [
+   {
+    "e": "Weight gain, dyslipidemia, insulin resistance, diabetes risk **not well investigated**",
+    "via": "Unknown"
+   }
+  ],
+  "pearls": [
+   "Given **three times daily**",
+   "**5HT1A partial agonism** may help mood and cognitive symptoms"
+  ],
+  "src": {
+   "sideEffects": [
+    "p241"
+   ],
+   "pearls": [
+    "p241",
+    "p233"
+   ]
+  }
+ },
+ "blonanserin": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {
+   "sideEffects": [],
+   "pearls": []
+  }
+ },
+ "aripiprazole": {
+  "sideEffects": [
+   {
+    "e": "**Akathisia** (main motor effect)",
+    "via": "D2 partial agonism"
+   },
+   {
+    "e": "Lowers prolactin",
+    "via": "Lactotrophs read it as an agonist"
+   },
+   {
+    "e": "Not generally sedating; little or no weight gain (some in children)",
+    "via": "No M1/H1-type actions"
+   },
+   {
+    "e": "Relatively low motor effects (**DIP** uncommon)",
+    "via": "D2 partial agonism, close to antagonist end"
+   }
+  ],
+  "pearls": [
+   "Oral, liquid, orally disintegrating; **4-week** and **4- to 8-week** long-acting injections (the latter with a day-1 loading injection)",
+   "**Lowers** prolactin rather than raising it (can reverse prolactin rise from D2 antagonists); co-prescribing can fix antipsychotic-induced hyperprolactinemia",
+   "**Long-acting injectables** are a common adherence option, especially in early-onset psychosis"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "p193, p239"
+   ],
+   "pearls": [
+    "existing",
+    "p193",
+    "p239"
+   ]
+  }
+ },
+ "brexpiprazole": {
+  "sideEffects": [
+   {
+    "e": "Some akathisia (perhaps less than aripiprazole; not proven head to head)",
+    "via": "D2 partial agonism"
+   },
+   {
+    "e": "Low metabolic risk, little sedation",
+    "via": "Lacks the relevant receptor actions"
+   },
+   {
+    "e": "**Lowers prolactin** (like other D2 partial agonists)",
+    "via": "Lactotrophs read it as an agonist"
+   }
+  ],
+  "pearls": [
+   "Lack of sedating and weight-gain receptor actions noted, but book says **too early** to judge its clinical profile"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "p193"
+   ],
+   "pearls": [
+    "p230"
+   ]
+  }
+ },
+ "cariprazine": {
+  "sideEffects": [
+   {
+    "e": "Some **akathisia** (reduced by slow titration); low DIP",
+    "via": "D2 partial agonism with potent 5HT1A"
+   },
+   {
+    "e": "Very low weight gain or metabolic disturbance",
+    "via": "Low-risk tier"
+   },
+   {
+    "e": "**Lowers prolactin** (like other D2 partial agonists)",
+    "via": "Lactotrophs read it as an agonist"
+   }
+  ],
+  "pearls": [
+   "Two long-lived active metabolites: potential weekly to monthly **“oral depot”**",
+   "Oral depot: **longer to reach steady state** but a skipped dose lowers levels less"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "p193"
+   ],
+   "pearls": [
+    "existing",
+    "p240"
+   ]
+  }
+ },
+ "pimavanserin": {
+  "sideEffects": [
+   {
+    "e": "Low metabolic risk; no D2-related motor worsening",
+    "via": "No D2 binding; low-risk tier"
+   }
+  ],
+  "pearls": [
+   "**5HT2C** antagonism has no clear role in psychosis; theoretically raises dopamine release in depression and negative symptoms"
+  ],
+  "src": {
+   "sideEffects": [
+    "p198, p240"
+   ],
+   "pearls": [
+    "p240"
+   ]
+  }
+ }
+}

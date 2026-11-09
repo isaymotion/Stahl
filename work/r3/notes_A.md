@@ -1,0 +1,11 @@
+# Notes, group A (Ch 4-5)
+- clozapine: +3 pearls (sialorrhea treatment p224; anticholinergic co-prescription and ileus p225; not first line p224-225). Side effects already complete (Table 5-2).
+- olanzapine: +1 pearl (higher doses in non-responders p226). Book has nothing further tied to side effects.
+- quetiapine: +3 pearls (non-psychosis use p227; 50 mg unapproved/metabolic p227; 300 mg stacked mechanisms p229-230). Side effects unchanged.
+- asenapine: +1 pearl (BID despite long half-life p232). Rest already covered.
+- zotepine: book has nothing further (p233 only).
+- risperidone: +3 pearls (children p234; BID at start p235; rapid absorption/peaks p235). FLAG: existing prolactin "via D2 blockade not offset by 5HT2A" is not stated for risperidone in Ch5 text I could find (only "raises prolactin even at low doses", p235); kept.
+- paliperidone: +1 pearl (plasma levels p235-236). 
+- ziprasidone: +1 pearl (low metabolic-risk group p198). Book has nothing further.
+- iloperidone: book has nothing further (p225, p236 already captured).
+- No target or uses changes. Figure-legend text for p206-216 was too fragmentary to support new strengths.

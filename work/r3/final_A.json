@@ -1,0 +1,202 @@
+{
+ "clozapine": {
+  "sideEffects": [
+   {
+    "e": "**Neutropenia** (blood count monitoring)",
+    "via": "Unknown mechanism"
+   },
+   {
+    "e": "Constipation, **paralytic ileus**, **sialorrhea**",
+    "via": "Profound muscarinic blockade"
+   },
+   {
+    "e": "Sedation, orthostasis, tachycardia",
+    "via": "M1, H1 and α1 antagonism"
+   },
+   {
+    "e": "**Seizures** (high doses)",
+    "via": "Dose-related"
+   },
+   {
+    "e": "Greatest **weight gain** and cardiometabolic risk",
+    "via": "H1 + 5HT2C antagonism plus insulin resistance"
+   },
+   {
+    "e": "**Myocarditis**, cardiomyopathy, interstitial nephritis; DRESS, serositis",
+    "via": "Unknown mechanism"
+   }
+  ],
+  "pearls": [
+   "Little motor effect, **no prolactin** elevation, does not seem to cause TD",
+   "Rare “awakenings” to near-normal function",
+   "Underused; finger-stick point-of-care counts and **plasma levels** help",
+   "Sialorrhea can be eased with **pro-cholinergic** treatment or, if severe, local **botulinum toxin** injections",
+   "Constipation/ileus risk climbs with added anticholinergics (**benztropine**, chlorpromazine); watch bowel status",
+   "Not first line: reserved for failure of other antipsychotics, and prescribing it means being able to **manage its side effects**",
+   "**High metabolic risk** tier among the newer agents, with olanzapine"
+  ]
+ },
+ "olanzapine": {
+  "sideEffects": [
+   {
+    "e": "**High** metabolic risk (weight gain, dyslipidemia, diabetes)",
+    "via": "H1 + 5HT2C antagonism; insulin resistance"
+   },
+   {
+    "e": "Sedation",
+    "via": "H1 and M1 antagonism"
+   },
+   {
+    "e": "Anticholinergic effects",
+    "via": "Muscarinic antagonism"
+   }
+  ],
+  "pearls": [
+   "Often used at **higher** doses than approved, guided by plasma levels",
+   "Forms: orally disintegrating, acute IM, **4-week depot**; inhaled form in development",
+   "Combination with **samidorphan** to limit weight gain",
+   "Higher doses may work better in patients not responding to other drugs or to **lower olanzapine doses**",
+   "**High metabolic risk** tier among the newer agents, with clozapine"
+  ]
+ },
+ "quetiapine": {
+  "sideEffects": [
+   {
+    "e": "Sedation (daytime)",
+    "via": "H1, M1 and α1 antagonism"
+   },
+   {
+    "e": "Weight gain, **moderate** metabolic risk",
+    "via": "H1 + 5HT2C antagonism"
+   },
+   {
+    "e": "Virtually no motor effects or prolactin elevation",
+    "via": "Weak D2 binding"
+   }
+  ],
+  "pearls": [
+   "**Baby Bear 50 mg**: H1 only; **Mama Bear 300 mg**: antidepressant mix; **Papa Bear 800 mg**: saturates H1 and 5HT2A, inconsistent >60% D2 occupancy",
+   "50 mg hypnotic use is unapproved and carries **metabolic risk**, so not first line for sleep",
+   "At 300 mg, the antidepressant effect comes from stacked **NET, 5HT1A, α2, 5HT2C and 5HT7** actions (largely via its metabolite)",
+   "**Moderate metabolic risk** tier among the newer agents, with risperidone, paliperidone, asenapine, iloperidone"
+  ]
+ },
+ "asenapine": {
+  "sideEffects": [
+   {
+    "e": "Oral **hypoesthesia**",
+    "via": "Sublingual administration"
+   },
+   {
+    "e": "Sedation (especially at first)",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Moderate weight gain, metabolic and motor effects",
+    "via": "Class actions"
+   }
+  ],
+  "pearls": [
+   "**Not absorbed if swallowed**: sublingual, usually twice daily; no food or drink for **10 minutes**",
+   "Also a **transdermal** formulation",
+   "Dose size is limited by oral-cavity surface area, so given **twice daily** despite a long half-life",
+   "**Moderate metabolic risk** tier among the newer agents, with risperidone, paliperidone, quetiapine, iloperidone"
+  ]
+ },
+ "zotepine": {
+  "sideEffects": [
+   {
+    "e": "Possible elevated **seizure** risk",
+    "via": "Not specified"
+   },
+   {
+    "e": "Dose-dependent QTc prolongation",
+    "via": "Noted with iloperidone, sertindole, amisulpride"
+   }
+  ],
+  "pearls": []
+ },
+ "risperidone": {
+  "sideEffects": [
+   {
+    "e": "**Prolactin elevation** even at low doses",
+    "via": "Tuberoinfundibular D2 blockade"
+   },
+   {
+    "e": "Moderate weight gain and dyslipidemia (especially in **children**)",
+    "via": "Class actions"
+   },
+   {
+    "e": "Orthostasis, sedation",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Fewer motor effects at lower doses",
+    "via": "D2 dose-dependence"
+   }
+  ],
+  "pearls": [
+   "Depot injections lasting **2 or 4 weeks**; monitor plasma levels of risperidone + paliperidone",
+   "Orally disintegrating tablet and liquid",
+   "Often preferred by some for **children and adolescents**",
+   "May need **twice-daily** dosing at the start (esp. children, elderly) to avoid sedation and orthostasis",
+   "Rapid absorption and high peaks may underlie some side effects (removed by paliperidone’s controlled release)",
+   "**Moderate metabolic risk** tier among the newer agents, with paliperidone, quetiapine, asenapine, iloperidone"
+  ]
+ },
+ "paliperidone": {
+  "sideEffects": [
+   {
+    "e": "Moderate weight gain and metabolic risk",
+    "via": "Class actions"
+   },
+   {
+    "e": "Perhaps less sedation, orthostasis and motor effects than risperidone (anecdotal)",
+    "via": "Smoother sustained-release levels"
+   }
+  ],
+  "pearls": [
+   "Sustained-release oral form: **once daily**, but easily **underdosed**",
+   "LAI is easier to load and dose than risperidone’s",
+   "Plasma levels help guide dosing, esp. in **treatment-resistant** patients on depots",
+   "**Moderate metabolic risk** tier among the newer agents, with risperidone, quetiapine, asenapine, iloperidone"
+  ]
+ },
+ "ziprasidone": {
+  "sideEffects": [
+   {
+    "e": "Little or no weight gain or metabolic effect",
+    "via": "Lacks H1/5HT2C and “receptor X” liability"
+   }
+  ],
+  "pearls": [
+   "Short acting: more than once daily, **with food**",
+   "QTc concerns now seem **exaggerated**: no dose-dependent QTc prolongation, few drugs raise its levels",
+   "**Low metabolic risk** tier among the newer agents, with lurasidone, cariprazine, lumateperone, pimavanserin, aripiprazole, brexpiprazole"
+  ]
+ },
+ "iloperidone": {
+  "sideEffects": [
+   {
+    "e": "**Orthostatic hypotension**, sedation",
+    "via": "Potent α1 antagonism"
+   },
+   {
+    "e": "Very low **motor** effects",
+    "via": "Possibly helped by α1 antagonism"
+   },
+   {
+    "e": "Moderate weight gain; low dyslipidemia",
+    "via": "Class actions"
+   },
+   {
+    "e": "Dose-dependent QTc prolongation",
+    "via": "Noted in the book"
+   }
+  ],
+  "pearls": [
+   "18- to 33-hour half-life, but usually twice daily with **slow titration**, which delays onset",
+   "**Moderate metabolic risk** tier among the newer agents, with risperidone, paliperidone, quetiapine, asenapine"
+  ]
+ }
+}

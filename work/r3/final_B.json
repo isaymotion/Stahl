@@ -1,0 +1,177 @@
+{
+ "lurasidone": {
+  "sideEffects": [
+   {
+    "e": "Low weight gain and metabolic risk",
+    "via": "Minimal H1/M1 actions"
+   },
+   {
+    "e": "Motor effects and sedation (less if dosed at night)",
+    "via": "D2 blockade"
+   }
+  ],
+  "pearls": [
+   "**NRX101** (Cyclurad) adds D-cycloserine for acute suicidality and bipolar depression (early positive findings)",
+   "Has **greater affinity for 5HT7 than for D2**; far more used in **bipolar depression** than in schizophrenia",
+   "**Low metabolic risk** tier among the newer agents, with cariprazine, lumateperone, ziprasidone, pimavanserin, aripiprazole, brexpiprazole"
+  ],
+  "uses": [
+   "**Bipolar depression** (10+): highly effective and a preferred agent",
+   "Schizophrenia/maintenance (**10+**); often preferred for **children** because of good tolerability"
+  ]
+ },
+ "lumateperone": {
+  "sideEffects": [
+   {
+    "e": "Little or no weight gain or metabolic disturbance",
+    "via": "Low H1; low-risk tier"
+   },
+   {
+    "e": "Little or no DIP or akathisia",
+    "via": "Low D2 occupancy"
+   }
+  ],
+  "pearls": [
+   "Among agents with the **lowest D2 occupancy** at antipsychotic doses (under 60%), with quetiapine and clozapine",
+   "**Low metabolic risk** tier among the newer agents, with lurasidone, cariprazine, ziprasidone, pimavanserin, aripiprazole, brexpiprazole"
+  ],
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "Postsynaptic antagonist; possibly presynaptic partial agonist (preclinical)"
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "s": 2
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 1
+   }
+  ]
+ },
+ "sertindole": {
+  "sideEffects": [
+   {
+    "e": "QTc prolongation (dose-dependent)",
+    "via": "Cardiac safety concerns led to withdrawal"
+   },
+   {
+    "e": "Some adverse effects from its potent **α1 antagonism**",
+    "via": "Potent α1 blockade"
+   }
+  ],
+  "pearls": [
+   "**Dose-dependent QTc prolongation**, shared with iloperidone, zotepine, amisulpride but not ziprasidone",
+   "Reserved for patients who failed other agents and can have **close cardiac and interaction monitoring**"
+  ]
+ },
+ "perospirone": {
+  "sideEffects": [],
+  "pearls": [
+   "Given **three times daily**; more experience in schizophrenia than in mania",
+   "Its risk of **weight gain and metabolic** problems has not been well studied",
+   "**5HT1A partial agonism** may add to efficacy or tolerability"
+  ]
+ },
+ "blonanserin": {
+  "sideEffects": [],
+  "pearls": []
+ },
+ "aripiprazole": {
+  "sideEffects": [
+   {
+    "e": "**Akathisia** (main motor effect)",
+    "via": "D2 partial agonism"
+   },
+   {
+    "e": "Lowers prolactin",
+    "via": "Lactotrophs read it as an agonist"
+   },
+   {
+    "e": "Not generally sedating; little or no weight gain (some in children)",
+    "via": "No M1/H1-type actions"
+   },
+   {
+    "e": "Relatively low motor effects (**DIP** uncommon)",
+    "via": "D2 partial agonism, close to antagonist end"
+   }
+  ],
+  "pearls": [
+   "Oral, liquid, orally disintegrating; **4-week** and **4- to 6- to 8-week** long-acting injections (the latter with a day-1 loading injection)",
+   "**Lowers** prolactin rather than raising it (can reverse prolactin rise from D2 antagonists); co-prescribing can fix antipsychotic-induced hyperprolactinemia",
+   "**Long-acting injectables** are a common adherence option, especially in early-onset psychosis",
+   "**Low metabolic risk** tier among the newer agents, with lurasidone, cariprazine, lumateperone, ziprasidone, pimavanserin, brexpiprazole"
+  ]
+ },
+ "brexpiprazole": {
+  "sideEffects": [
+   {
+    "e": "Some akathisia (perhaps less than aripiprazole; not proven head to head)",
+    "via": "D2 partial agonism"
+   },
+   {
+    "e": "Low metabolic risk, little sedation",
+    "via": "Lacks the relevant receptor actions"
+   }
+  ],
+  "pearls": [
+   "Lack of sedating and weight-gain receptor actions noted, but book says **too early** to judge its clinical profile",
+   "Like other D2 partial agonists, it tends to **lower prolactin** rather than raise it",
+   "**Low metabolic risk** tier among the newer agents, with lurasidone, cariprazine, lumateperone, ziprasidone, pimavanserin, aripiprazole"
+  ]
+ },
+ "cariprazine": {
+  "sideEffects": [
+   {
+    "e": "Some **akathisia** (reduced by slow titration); low DIP",
+    "via": "D2 partial agonism with potent 5HT1A"
+   },
+   {
+    "e": "Very low weight gain or metabolic disturbance",
+    "via": "Low-risk tier"
+   }
+  ],
+  "pearls": [
+   "Two long-lived active metabolites: potential weekly to monthly **“oral depot”**",
+   "Oral depot: **longer to reach steady state** but a skipped dose lowers levels less",
+   "Like other D2 partial agonists, it tends to **lower prolactin** rather than raise it",
+   "**Low metabolic risk** tier among the newer agents, with lurasidone, lumateperone, ziprasidone, pimavanserin, aripiprazole, brexpiprazole"
+  ]
+ },
+ "pimavanserin": {
+  "sideEffects": [
+   {
+    "e": "Low metabolic risk; no D2-related motor worsening",
+    "via": "No D2 binding; low-risk tier"
+   }
+  ],
+  "pearls": [
+   "**5HT2C** antagonism has no clear role in psychosis; theoretically raises dopamine release in depression and negative symptoms"
+  ]
+ }
+}

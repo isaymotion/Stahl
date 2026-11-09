@@ -1,0 +1,39 @@
+{
+ "tetrabenazine": {
+  "pearls": [
+   "Short half-life: **three times daily**",
+   "**CYP2D6 genotyping** needed to go to higher doses",
+   "For TD, VMAT2 inhibitors may need **>90% VMAT2 inhibition** for the best balance of efficacy and tolerability",
+   "Treats TD by **lowering dopamine** in both the go and stop pathways, with no D2 receptor blockade"
+  ]
+ },
+ "reserpine": {
+  "pearls": [
+   "VMAT1 sits on vesicles in **peripheral and central** neurons, whereas VMAT2 is **central only**, which is why reserpine, unlike tetrabenazine-type drugs, has frequent peripheral effects"
+  ]
+ },
+ "benztropine": {
+  "pearls": [
+   "Does not help **akathisia** much and may worsen **tardive dystonia**",
+   "Works best for parkinsonism from **older D2 blockers** lacking serotonergic actions",
+   "**IM anticholinergic** nearly always relieves acute dystonia within about 20 minutes",
+   "Many patients on D2 blockers carry too much **anticholinergic burden**: consider a D2 blocker without anticholinergic action, stopping the anticholinergic, or switching to amantadine"
+  ]
+ },
+ "dantrolene": {
+  "pearls": [
+   "Know the picture it treats: NMS brings extreme **rigidity, high fever and coma** and can be fatal; some see it as the extreme end of DIP"
+  ]
+ },
+ "metformin": {
+  "pearls": [
+   "Of the co-therapies for weight gain, **topiramate** has less consistent results than metformin",
+   "Co-therapy may also help prevent **dyslipidemia** (raised only as a possibility)"
+  ]
+ },
+ "samidorphan": {
+  "pearls": [
+   "Described only as a partner for **olanzapine**, aimed at weight gain and metabolic disturbance rather than psychosis"
+  ]
+ }
+}

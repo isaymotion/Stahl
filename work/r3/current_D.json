@@ -1,0 +1,443 @@
+[
+ {
+  "id": "levodopa",
+  "name": "Levodopa",
+  "aka": [
+   "L-DOPA"
+  ],
+  "group": "Parkinson’s disease treatment",
+  "cls": "Dopamine precursor",
+  "short": "Dopamine precursor for Parkinson’s disease; chronic use causes dyskinesias.",
+  "mechanism": "A dopamine precursor used to treat **Parkinson’s disease**. Chronic stimulation of nigrostriatal **D2** receptors is thought to cause **levodopa-induced dyskinesias (LID)**.",
+  "nts": [
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "d2",
+    "action": "agonist",
+    "note": "Indirect, via dopamine formed from levodopa"
+   }
+  ],
+  "uses": [
+   "**Parkinson’s disease**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Levodopa-induced dyskinesias",
+    "via": "Chronic nigrostriatal D2 stimulation"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch04",
+    "pages": "88–89"
+   },
+   {
+    "ch": "ch05",
+    "pages": "171"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch04",
+    "pages": "88–89",
+    "text": "Chronic D2 stimulation by levodopa produces abnormal hyperkinetic movements (**LID**); chronic D2 **blockade** produces tardive dyskinesia.",
+    "sec": "s4-da-pathways"
+   },
+   {
+    "ch": "ch05",
+    "pages": "171",
+    "text": "Chronic levodopa causes dyskinesias that look like TD, perhaps through the same aberrant striatal plasticity; amantadine has some evidence for LID.",
+    "sec": "s5-td"
+   },
+   {
+    "ch": "ch12",
+    "pages": "509, 537",
+    "text": "Cholinesterase inhibitors are compared to levodopa in PD (boosting transmitter at surviving targets); levodopa is also suggested for **apathy**.",
+    "sec": "s12-ache"
+   }
+  ]
+ },
+ {
+  "id": "tetrabenazine",
+  "name": "Tetrabenazine",
+  "group": "VMAT2 inhibitor",
+  "cls": "VMAT2 inhibitor",
+  "nbn": "Vesicular monoamine transporter 2 (VMAT2) inhibitor",
+  "short": "Inhibits VMAT2, especially in dopamine neurons.",
+  "mechanism": "A **reversible VMAT2** inhibitor that preferentially depletes **dopamine** at clinical doses. An **inactive prodrug**: carbonyl reductase makes four active dihydro metabolites (mostly the **+β** enantiomer; –α and –β add 5HT7 and some D2 antagonism), all inactivated by **CYP2D6** (Figure 5-11A).",
+  "targets": [
+   {
+    "t": "vmat2",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "**Chorea of Huntington’s disease** (not approved for TD in the book)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "35, 50"
+   },
+   {
+    "ch": "ch05",
+    "pages": "174–179"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "35",
+    "text": "With its derivatives deutetrabenazine and valbenazine, an **inhibitor of VMATs**.",
+    "sec": "s2-vesicular"
+   },
+   {
+    "ch": "ch05",
+    "pages": "174–176",
+    "text": "Reversibly inhibits only VMAT2 (unlike reserpine), so lacks reserpine’s peripheral side effects.",
+    "sec": "s5-vmat2"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "Peak-dose **sedation** and **drug-induced parkinsonism**",
+    "via": "Dopamine depletion"
+   },
+   {
+    "e": "Depression and **suicide** risk (Huntington’s)",
+    "via": "Monoamine depletion"
+   }
+  ],
+  "pearls": [
+   "Short half-life: **three times daily**",
+   "**CYP2D6 genotyping** needed to go to higher doses"
+  ]
+ },
+ {
+  "id": "deutetrabenazine",
+  "name": "Deutetrabenazine",
+  "group": "VMAT2 inhibitor",
+  "cls": "VMAT2 inhibitor",
+  "nbn": "Vesicular monoamine transporter 2 (VMAT2) inhibitor",
+  "short": "A tetrabenazine derivative that inhibits VMAT2.",
+  "mechanism": "**Deuterated** tetrabenazine: some hydrogens are replaced by deuterium, making it a poorer **CYP2D6** substrate, with a longer half-life, lower peaks and fewer peak-dose side effects. Its metabolites are the same as tetrabenazine’s (Figure 5-11B).",
+  "targets": [
+   {
+    "t": "vmat2",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "**Tardive dyskinesia**",
+   "**Huntington’s disease** chorea"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "35, 50"
+   },
+   {
+    "ch": "ch05",
+    "pages": "175–176"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "35",
+    "text": "A tetrabenazine derivative acting as a **VMAT inhibitor**.",
+    "sec": "s2-vesicular"
+   },
+   {
+    "ch": "ch05",
+    "pages": "175–176",
+    "text": "Deuteration can also restart patent life, creating incentives for drug development.",
+    "sec": "s5-vmat2"
+   }
+  ],
+  "pearls": [
+   "**Twice daily, with food**",
+   "No genotyping needed for the full dose range; no suicide warning for TD"
+  ]
+ },
+ {
+  "id": "valbenazine",
+  "name": "Valbenazine",
+  "group": "VMAT2 inhibitor",
+  "cls": "VMAT2 inhibitor",
+  "nbn": "Vesicular monoamine transporter 2 (VMAT2) inhibitor",
+  "short": "A tetrabenazine derivative that inhibits VMAT2.",
+  "mechanism": "Tetrabenazine’s **+α enantiomer linked to valine**. After slow hydrolysis, carbonyl reductase yields only **+α-dihydrotetrabenazine**, the most selective and potent VMAT2 inhibitor of the four metabolites (Figure 5-11C).",
+  "targets": [
+   {
+    "t": "vmat2",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "**Tardive dyskinesia**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "35, 50"
+   },
+   {
+    "ch": "ch05",
+    "pages": "176"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "35",
+    "text": "A tetrabenazine derivative acting as a **VMAT inhibitor**.",
+    "sec": "s2-vesicular"
+   },
+   {
+    "ch": "ch05",
+    "pages": "176",
+    "text": "Slow hydrolysis gives a long half-life and once-daily dosing.",
+    "sec": "s5-vmat2"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Huntington’s disease chorea",
+    "text": "Approved by the FDA in August 2023 for **chorea associated with Huntington’s disease**, in addition to tardive dyskinesia.",
+    "source": "Neurocrine Biosciences / FDA, August 2023"
+   }
+  ],
+  "pearls": [
+   "Long half-life: **once daily**",
+   "No genotyping, no food requirement, **no suicide warning**"
+  ]
+ },
+ {
+  "id": "reserpine",
+  "name": "Reserpine",
+  "group": "VMAT inhibitor",
+  "cls": "Irreversible VMAT1/VMAT2 inhibitor",
+  "short": "Irreversible VMAT1 and VMAT2 inhibitor; once used for hypertension.",
+  "mechanism": "Inhibits both **VMAT1 and VMAT2** irreversibly, depleting monoamines centrally and peripherally.",
+  "targets": [
+   {
+    "t": "vmat2",
+    "action": "inhibitor",
+    "note": "Irreversible; also VMAT1"
+   }
+  ],
+  "uses": [
+   "Formerly hypertension"
+  ],
+  "sideEffects": [
+   {
+    "e": "Orthostatic hypotension, stuffy nose, itching, GI effects",
+    "via": "Peripheral VMAT1 inhibition"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "174–175"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "174–175",
+    "text": "Its peripheral side effects contrast with tetrabenazine-related drugs, which spare VMAT1.",
+    "sec": "s5-vmat2"
+   }
+  ]
+ },
+ {
+  "id": "benztropine",
+  "name": "Benztropine",
+  "group": "Anticholinergic",
+  "cls": "Muscarinic antagonist (anticholinergic)",
+  "short": "Commonly used anticholinergic for drug-induced parkinsonism.",
+  "mechanism": "Blocks **muscarinic** (especially M1) receptors, offsetting the excess striatal acetylcholine released when D2 receptors are blocked, partly restoring the dopamine–acetylcholine balance (Figure 5-7C).",
+  "nts": [
+   "acetylcholine"
+  ],
+  "targets": [
+   {
+    "t": "m1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m2m3",
+    "action": "antagonist",
+    "note": "Peripheral side effects"
+   }
+  ],
+  "uses": [
+   "**Drug-induced parkinsonism**",
+   "IM anticholinergic for **acute dystonia**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Peripheral muscarinic blockade"
+   },
+   {
+    "e": "Drowsiness; memory, concentration and processing problems",
+    "via": "Central muscarinic blockade"
+   },
+   {
+    "e": "**Paralytic ileus** with other anticholinergics (e.g., clozapine)",
+    "via": "Total anticholinergic burden"
+   }
+  ],
+  "pearls": [
+   "Does not help **akathisia** much and may worsen **tardive dystonia**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "166–169, 225"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "166–169",
+    "text": "Stahl warns that many patients on D2 blockers are overmedicated with total anticholinergic burden; alternatives should often be sought.",
+    "sec": "s5-motor"
+   }
+  ]
+ },
+ {
+  "id": "amantadine",
+  "name": "Amantadine",
+  "group": "Movement disorder treatment",
+  "cls": "Weak NMDA antagonist",
+  "short": "Non-anticholinergic option for drug-induced parkinsonism.",
+  "mechanism": "Thought to be a **weak NMDA antagonist**, possibly changing dopamine activity downstream in the direct and indirect striatal motor pathways; it lacks anticholinergic properties.",
+  "nts": [
+   "glutamate",
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "nmda",
+    "action": "antagonist",
+    "note": "Weak"
+   }
+  ],
+  "uses": [
+   "**Drug-induced parkinsonism**",
+   "Some evidence in **tardive dyskinesia** and **levodopa-induced dyskinesia**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "169"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "169",
+    "text": "Useful whatever its actual mechanism; an alternative to adding anticholinergic burden.",
+    "sec": "s5-motor"
+   }
+  ]
+ },
+ {
+  "id": "dantrolene",
+  "name": "Dantrolene",
+  "group": "Muscle relaxant",
+  "cls": "Muscle relaxant",
+  "short": "Muscle relaxant used in neuroleptic malignant syndrome.",
+  "mechanism": "A **muscle-relaxing** agent used, with dopamine agonists and intensive support, after withdrawing the D2 blocker in **neuroleptic malignant syndrome**.",
+  "uses": [
+   "**Neuroleptic malignant syndrome**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "169–170"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "169–170",
+    "text": "NMS is a medical emergency requiring withdrawal of the D2 blocker, dantrolene and dopamine agonists, and intensive supportive care.",
+    "sec": "s5-motor"
+   }
+  ]
+ },
+ {
+  "id": "metformin",
+  "name": "Metformin",
+  "group": "Metabolic adjunct",
+  "cls": "Antidiabetic",
+  "short": "Antidiabetic that can limit weight gain from drugs for psychosis.",
+  "mechanism": "An anti-diabetes drug; in Chapter 5 it is a co-therapy for drug-induced weight gain.",
+  "uses": [
+   "Weight loss after drug-induced weight gain; **reduces weight gain** when starting a high- or moderate-risk agent"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "201"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "201",
+    "text": "Shown in several studies to reduce weight gain with high- or moderate-metabolic-risk agents.",
+    "sec": "s5-metabolic"
+   }
+  ]
+ },
+ {
+  "id": "samidorphan",
+  "name": "Samidorphan",
+  "group": "Metabolic adjunct",
+  "cls": "μ-Opioid antagonist",
+  "short": "μ-Opioid antagonist combined with olanzapine to reduce weight gain.",
+  "mechanism": "A **μ-opioid antagonist** combined with olanzapine to mitigate weight gain and metabolic disturbance.",
+  "nts": [
+   "endorphin"
+  ],
+  "targets": [
+   {
+    "t": "mor",
+    "action": "antagonist"
+   }
+  ],
+  "uses": [
+   "With **olanzapine**, to reduce olanzapine-induced weight gain"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "201, 226"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "201, 226",
+    "text": "In late-stage testing with olanzapine at publication.",
+    "sec": "s5-metabolic"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2021",
+    "title": "Olanzapine–samidorphan approved",
+    "text": "Approved with olanzapine (Lybalvi) for schizophrenia and bipolar I disorder in May 2021.",
+    "source": "FDA, May 28, 2021"
+   }
+  ]
+ }
+]

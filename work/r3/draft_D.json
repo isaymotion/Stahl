@@ -1,0 +1,117 @@
+{
+ "levodopa": {
+  "sideEffects": [
+   {"e": "Levodopa-induced dyskinesias", "via": "Chronic nigrostriatal D2 stimulation"}
+  ],
+  "pearls": [
+   "LID look much like **tardive dyskinesia**, so chronic D2 stimulation and chronic D2 blockade may both end in similar aberrant striatal plasticity",
+   "Opposite insults, similar outcome: **too much** dopamine at D2 (levodopa) or **too little** (D2 blockers) can each leave the motor striatum hyperkinetic"
+  ],
+  "src": {
+   "sideEffects": ["existing"],
+   "pearls": ["p170", "p89, p170"]
+  }
+ },
+ "tetrabenazine": {
+  "sideEffects": [
+   {"e": "Peak-dose **sedation** and **drug-induced parkinsonism**", "via": "Dopamine depletion"},
+   {"e": "Depression and **suicide** risk (Huntington’s)", "via": "Monoamine depletion"}
+  ],
+  "pearls": [
+   "Short half-life: **three times daily**",
+   "**CYP2D6 genotyping** needed to go to higher doses",
+   "For TD, roughly **>90% VMAT2 inhibition** may be needed for the best efficacy-tolerability balance (applies to VMAT2 inhibitors generally)",
+   "Treats TD by **lowering dopamine** in both go and stop pathways, without blocking D2 receptors"
+  ],
+  "src": {
+   "sideEffects": ["existing", "existing"],
+   "pearls": ["existing", "existing", "p178", "p178-179"]
+  }
+ },
+ "deutetrabenazine": {
+  "pearls": [
+   "**Twice daily, with food**",
+   "No genotyping needed for the full dose range; no suicide warning for TD",
+   "Deuteration gives a **slower CYP2D6** clearance than tetrabenazine, so fewer doses and lower peaks, but still more frequent than valbenazine"
+  ],
+  "src": {
+   "pearls": ["existing", "existing", "p175-176"]
+  }
+ },
+ "valbenazine": {
+  "pearls": [
+   "Long half-life: **once daily**",
+   "No genotyping, no food requirement, **no suicide warning**",
+   "The only one of the three delivering a single metabolite (**+α-dihydro**) rather than four; the others’ extra D2/5HT7 actions come from the –α and –β metabolites"
+  ],
+  "src": {
+   "pearls": ["existing", "existing", "p176"]
+  }
+ },
+ "reserpine": {
+  "sideEffects": [
+   {"e": "Orthostatic hypotension, stuffy nose, itching, GI effects", "via": "Peripheral VMAT1 inhibition"}
+  ],
+  "pearls": [
+   "VMAT1 sits on vesicles in **peripheral and central** neurons, whereas VMAT2 is **central only**, which is why reserpine, unlike tetrabenazine-type drugs, has frequent peripheral effects"
+  ],
+  "src": {
+   "sideEffects": ["existing"],
+   "pearls": ["p174-175"]
+  }
+ },
+ "benztropine": {
+  "sideEffects": [
+   {"e": "Dry mouth, blurred vision, urinary retention, constipation", "via": "Peripheral muscarinic blockade"},
+   {"e": "Drowsiness; memory, concentration and processing problems", "via": "Central muscarinic blockade"},
+   {"e": "**Paralytic ileus** with other anticholinergics (e.g., clozapine)", "via": "Total anticholinergic burden"}
+  ],
+  "pearls": [
+   "Does not help **akathisia** much and may worsen **tardive dystonia**",
+   "Works best for parkinsonism from **older D2 blockers** lacking serotonergic actions",
+   "**IM anticholinergic** nearly always relieves acute dystonia within about 20 minutes",
+   "Many D2-blocker patients are **overmedicated** with anticholinergic burden: consider a drug without anticholinergic action, stopping it, or amantadine"
+  ],
+  "src": {
+   "sideEffects": ["existing", "existing", "existing"],
+   "pearls": ["existing", "p167", "p169", "p167, p169"]
+  }
+ },
+ "amantadine": {
+  "pearls": [
+   "**No anticholinergic action**, so it avoids adding to total anticholinergic burden",
+   "Mechanism uncertain, but clinically useful for **DIP** whatever the mechanism",
+   "Option for patients on D2 blockers who need parkinsonism relief without benztropine-type side effects"
+  ],
+  "src": {
+   "pearls": ["p169", "p169", "p167, p169"]
+  }
+ },
+ "dantrolene": {
+  "pearls": [
+   "Only one part of the NMS package: **stop the D2 blocker first**, add dopamine agonists, and give intensive supportive care",
+   "NMS: extreme **rigidity, high fever, coma**, possibly death; seen as the extreme end of DIP or a toxic effect on cell membranes including muscle"
+  ],
+  "src": {
+   "pearls": ["p169-170", "p169"]
+  }
+ },
+ "metformin": {
+  "pearls": [
+   "Evidence covers both **treating** weight gain already present and **preventing** it when starting a high- or moderate-risk drug",
+   "Book calls co-therapy promising; **topiramate** results are less consistent",
+   "Co-therapy might also prevent **dyslipidemia**, though the book words this only as a possibility"
+  ],
+  "src": {
+   "pearls": ["p201", "p201", "p201"]
+  }
+ },
+ "samidorphan": {
+  "pearls": [
+   "Described only as a partner for **olanzapine**, aimed at weight gain and metabolic disturbance rather than psychosis"
+  ],
+  "src": {
+   "pearls": ["p201, p226"]
+  }
+ }
+}

@@ -1,0 +1,1396 @@
+[
+ {
+  "id": "clozapine",
+  "name": "Clozapine",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “pine”)",
+  "short": "Gold standard for treatment-resistant schizophrenia; the only antipsychotic shown to reduce suicide.",
+  "mechanism": "A 5HT2A/D2 antagonist whose many other binding properties are mostly **more potent than D2** (α1, 5HT2B, M1, H1, 5HT2A, 5HT6, 5HT2C, M4 and others; Figure 5-43). It occupies **fewer D2 receptors** than other drugs at therapeutic doses, so its gold-standard efficacy probably comes from an unknown **non-D2** mechanism.",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "uses": [
+   "**Treatment-resistant schizophrenia** (gold standard)",
+   "Reduces **suicide** risk in schizophrenia",
+   "May help **aggression and violence** in psychotic patients (Chapter 4)",
+   "May **treat tardive dyskinesia**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch04",
+    "pages": "147"
+   },
+   {
+    "ch": "ch05",
+    "pages": "222–225"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch04",
+    "pages": "147",
+    "text": "With high doses of standard drugs for schizophrenia, may help **psychotic or impulsive violence**; behavioral measures help impulsive violence and organized violence may need confinement.",
+    "sec": "s4-aggression"
+   },
+   {
+    "ch": "ch05",
+    "pages": "222–225",
+    "text": "Table 5-2 lists side effects needing expert management: neutropenia, constipation/paralytic ileus, sedation/orthostasis/tachycardia, sialorrhea, seizures, weight gain/dyslipidemia/hyperglycemia, myocarditis/cardiomyopathy/interstitial nephritis, DRESS/serositis.",
+    "sec": "s5-pines"
+   },
+   {
+    "ch": "ch05",
+    "pages": "219",
+    "text": "One of the three agents with the widest 5HT2A–D2 separation and **D2 occupancy below 60%** at antipsychotic doses.",
+    "sec": "s5-binding"
+   },
+   {
+    "ch": "ch07",
+    "pages": "328",
+    "text": "Among the agents with the lowest DIP, attributed to robust **α1 + 5HT2A** antagonism.",
+    "sec": "s7-augment-sda"
+   }
+  ],
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist (multimodal)",
+  "targets": [
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3,
+    "note": "α1A, α1B"
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "m4",
+    "action": "binds",
+    "s": 2,
+    "note": "Action not specified in the book"
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "α2C, α2B, α2A"
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "m2m3",
+    "action": "antagonist",
+    "s": 2,
+    "note": "M3, M2"
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 1
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht3",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 1,
+    "note": "5HT1B, 5HT1D"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "**Neutropenia** (blood count monitoring)",
+    "via": "Unknown mechanism"
+   },
+   {
+    "e": "Constipation, **paralytic ileus**, **sialorrhea**",
+    "via": "Profound muscarinic blockade"
+   },
+   {
+    "e": "Sedation, orthostasis, tachycardia",
+    "via": "M1, H1 and α1 antagonism"
+   },
+   {
+    "e": "**Seizures** (high doses)",
+    "via": "Dose-related"
+   },
+   {
+    "e": "Greatest **weight gain** and cardiometabolic risk",
+    "via": "H1 + 5HT2C antagonism plus insulin resistance"
+   },
+   {
+    "e": "**Myocarditis**, cardiomyopathy, interstitial nephritis; DRESS, serositis",
+    "via": "Unknown mechanism"
+   }
+  ],
+  "pearls": [
+   "Little motor effect, **no prolactin** elevation, does not seem to cause TD",
+   "Rare “awakenings” to near-normal function",
+   "Underused; finger-stick point-of-care counts and **plasma levels** help"
+  ],
+  "updates": [
+   {
+    "year": "2025",
+    "title": "Clozapine REMS removed",
+    "text": "The FDA eliminated the clozapine REMS in 2025; ANC reporting to a REMS program is no longer required before dispensing, but the FDA still advises ANC monitoring per the prescribing information.",
+    "source": "FDA; REMS eliminated effective June 13, 2025"
+   }
+  ]
+ },
+ {
+  "id": "olanzapine",
+  "name": "Olanzapine",
+  "brand": "Zyprexa",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “pine”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "Probably the next most effective after clozapine; high metabolic risk.",
+  "mechanism": "A **5HT2A/D2 antagonist** whose strongest binding is at **H1 and 5HT2A** (Figure 5-44). **5HT2C** antagonism may help mood and cognition, and with H1 antagonism contributes to **weight gain**. Strong muscarinic binding.",
+  "targets": [
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "m2m3",
+    "action": "antagonist",
+    "s": 2,
+    "note": "M3, M2"
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "α2C, α2B, α2A"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 1,
+    "note": "α1A, α1B"
+   },
+   {
+    "t": "5ht3",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "m4",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 1,
+    "note": "5HT1B, 5HT1D"
+   }
+  ],
+  "uses": [
+   "Schizophrenia and maintenance (13+)",
+   "**IM** agitation in schizophrenia or bipolar mania",
+   "Acute mania/mixed mania and maintenance (13+)",
+   "With **fluoxetine**: bipolar depression and treatment-resistant unipolar depression (US)"
+  ],
+  "sideEffects": [
+   {
+    "e": "**High** metabolic risk (weight gain, dyslipidemia, diabetes)",
+    "via": "H1 + 5HT2C antagonism; insulin resistance"
+   },
+   {
+    "e": "Sedation",
+    "via": "H1 and M1 antagonism"
+   },
+   {
+    "e": "Anticholinergic effects",
+    "via": "Muscarinic antagonism"
+   }
+  ],
+  "pearls": [
+   "Often used at **higher** doses than approved, guided by plasma levels",
+   "Forms: orally disintegrating, acute IM, **4-week depot**; inhaled form in development",
+   "Combination with **samidorphan** to limit weight gain"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "198, 225–226"
+   },
+   {
+    "ch": "ch07",
+    "pages": "325–326, 343"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "225–226",
+    "text": "Widely considered, by clinical experience rather than definitive trials, the **next most effective** after clozapine; 5HT2C plus weaker α2 antagonism, especially with fluoxetine’s 5HT2C antagonism, may explain efficacy in depression.",
+    "sec": "s5-pines"
+   },
+   {
+    "ch": "ch07",
+    "pages": "325–326, 343",
+    "text": "Table 7-1: mania, maintenance; with **fluoxetine** for bipolar depression and treatment-resistant MDD; post hoc evidence in mania with mixed features. The combination acts as a potent SERT/5HT2C inhibitor but causes weight gain.",
+    "sec": "s7-augment-sda"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524",
+    "text": "Used cautiously **off-label** for agitation/psychosis in dementia despite the boxed warning for stroke and death.",
+    "sec": "s12-d2"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2021",
+    "title": "Olanzapine–samidorphan approved",
+    "text": "Olanzapine combined with the μ-opioid antagonist samidorphan (Lybalvi) was approved for schizophrenia and bipolar I disorder in May 2021.",
+    "source": "FDA, May 28, 2021"
+   }
+  ]
+ },
+ {
+  "id": "quetiapine",
+  "name": "Quetiapine",
+  "brand": "Seroquel",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “pine”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "A “different drug at different doses”: sleep at 50 mg, depression at 300 mg, psychosis at 800 mg.",
+  "mechanism": "A **5HT2A/D2 antagonist** with **weak D2** binding. Its net actions combine the parent drug and the active metabolite **norquetiapine**, which adds **NET inhibition**; together they have **5HT7, 5HT2C and α2** antagonism and **5HT1A** partial agonism (Figure 5-45). Its most potent action is **H1** antagonism.",
+  "targets": [
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "m2m3",
+    "action": "antagonist",
+    "s": 2,
+    "note": "M3, M2"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 2,
+    "note": "α1A, α1B"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "s": 2,
+    "note": "Mainly via norquetiapine"
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "m4",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 1
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 1,
+    "note": "α2C, α2A, α2B"
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 1,
+    "note": "5HT1D"
+   },
+   {
+    "t": "5ht3",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht5",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia and maintenance (13+)",
+   "Mania/mixed mania and maintenance (10+)",
+   "**Bipolar depression**; **augmentation** of SSRIs/SNRIs in unipolar depression (US)",
+   "Often used for insomnia (not approved), anxiety, **Parkinson’s disease psychosis**, or as an adjunct"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation (daytime)",
+    "via": "H1, M1 and α1 antagonism"
+   },
+   {
+    "e": "Weight gain, **moderate** metabolic risk",
+    "via": "H1 + 5HT2C antagonism"
+   },
+   {
+    "e": "Virtually no motor effects or prolactin elevation",
+    "via": "Weak D2 binding"
+   }
+  ],
+  "pearls": [
+   "**Baby Bear 50 mg**: H1 only; **Mama Bear 300 mg**: antidepressant mix; **Papa Bear 800 mg**: saturates H1 and 5HT2A, inconsistent >60% D2 occupancy"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "219–220, 226–231"
+   },
+   {
+    "ch": "ch07",
+    "pages": "326, 343"
+   },
+   {
+    "ch": "ch10",
+    "pages": "425, 428"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "227–231",
+    "text": "Goldilocks and the three bears: different pharmacology at 50, 300 and 800 mg (Figure 5-46). Low D2 occupancy (< 60%) at antipsychotic doses.",
+    "sec": "s5-pines"
+   },
+   {
+    "ch": "ch07",
+    "pages": "326, 343",
+    "text": "Table 7-1: mania, maintenance, **bipolar depression** and **adjunct for MDD**; antidepressant action may come from norquetiapine at NET and 5HT2C plus 5HT2A, 5HT7, α2A antagonism and 5HT1A agonism.",
+    "sec": "s7-augment-sda"
+   },
+   {
+    "ch": "ch10",
+    "pages": "425, 428",
+    "text": "Sedating via H1 (with other) blockade; mirtazapine and chlorpromazine fall in the “still too hot” (hangover) category of Figure 10-41C.",
+    "sec": "s10-pk"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524",
+    "text": "The book does **not** list quetiapine among the D2 blockers used off-label in dementia.",
+    "sec": "s12-d2"
+   }
+  ]
+ },
+ {
+  "id": "asenapine",
+  "name": "Asenapine",
+  "brand": "Saphris",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “pine”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "Sublingual pine related to mirtazapine; usable as a rapid oral PRN.",
+  "mechanism": "Structurally related to **mirtazapine** and shares its **5HT2A, 5HT2C, H1 and α2** antagonism, plus **D2** antagonism and many other serotonin and dopamine actions (Figure 5-47). Antidepressant action is suggested, but only antipsychotic/antimanic action is proven.",
+  "targets": [
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3,
+    "note": "α1B, α1A"
+   },
+   {
+    "t": "5ht5",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 3,
+    "note": "5HT1B, 5HT1D"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 3,
+    "note": "α2B, α2A, α2C"
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 2
+   },
+   {
+    "t": "5ht3",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "m2m3",
+    "action": "antagonist",
+    "s": 1,
+    "note": "M2"
+   }
+  ],
+  "uses": [
+   "Schizophrenia/maintenance (adults)",
+   "Bipolar mania (10+, US)",
+   "Rapid-acting **oral PRN** “top-up” instead of an injection"
+  ],
+  "sideEffects": [
+   {
+    "e": "Oral **hypoesthesia**",
+    "via": "Sublingual administration"
+   },
+   {
+    "e": "Sedation (especially at first)",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Moderate weight gain, metabolic and motor effects",
+    "via": "Class actions"
+   }
+  ],
+  "pearls": [
+   "**Not absorbed if swallowed**: sublingual, usually twice daily; no food or drink for **10 minutes**",
+   "Also a **transdermal** formulation"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "198, 232–233"
+   },
+   {
+    "ch": "ch07",
+    "pages": "326"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "232–233",
+    "text": "Rapid sublingual absorption gives rapid peak levels, unlike orally dissolving tablets that are absorbed later.",
+    "sec": "s5-pines"
+   },
+   {
+    "ch": "ch07",
+    "pages": "326",
+    "text": "Table 7-1: approved for **bipolar mania** and **maintenance**; evidence in **mania with mixed features**.",
+    "sec": "s7-sda-mania"
+   }
+  ]
+ },
+ {
+  "id": "zotepine",
+  "name": "Zotepine",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “pine”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "Pine available in Japan and Europe; three times daily; possible seizure risk.",
+  "mechanism": "A **5HT2A/D2 antagonist** that is also a **5HT2C, α1 and 5HT7** antagonist, a weak **5HT1A** partial agonist and a weak **NET** inhibitor, suggesting antidepressant potential not yet established (Figure 5-48).",
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 2,
+    "note": "5HT1B, 5HT1D"
+   },
+   {
+    "t": "m2m3",
+    "action": "antagonist",
+    "s": 1,
+    "note": "M2"
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 1
+   },
+   {
+    "t": "5ht3",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "s": 1
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia (Japan and Europe; not the US)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Possible elevated **seizure** risk",
+    "via": "Not specified"
+   },
+   {
+    "e": "Dose-dependent QTc prolongation",
+    "via": "Noted with iloperidone, sertindole, amisulpride"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "233–234, 236"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "233",
+    "text": "Less popular because it must be given **three times a day**.",
+    "sec": "s5-pines"
+   }
+  ]
+ },
+ {
+  "id": "risperidone",
+  "name": "Risperidone",
+  "brand": "Risperdal",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “done”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "The original “done”; raises prolactin even at low doses.",
+  "mechanism": "A **5HT2A/D2 antagonist** with a different structure and profile from the pines (Figure 5-49). **α2** antagonism may contribute to antidepressant action, but simultaneous **α1** antagonism can cancel it and causes orthostasis and sedation.",
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 3,
+    "note": "α2C, α2B, α2A"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3,
+    "note": "α1A, α1B"
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 2,
+    "note": "5HT1B, 5HT1D"
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht5",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia/maintenance (13+)",
+   "Bipolar mania/maintenance (10+)",
+   "**Irritability associated with autistic disorder** (5–16)",
+   "Low-dose off-label use in dementia agitation/psychosis is controversial (**black box** warning)"
+  ],
+  "sideEffects": [
+   {
+    "e": "**Prolactin elevation** even at low doses",
+    "via": "D2 blockade not offset by its 5HT2A action"
+   },
+   {
+    "e": "Moderate weight gain and dyslipidemia (especially in **children**)",
+    "via": "Class actions"
+   },
+   {
+    "e": "Orthostasis, sedation",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Fewer motor effects at lower doses",
+    "via": "D2 dose-dependence"
+   }
+  ],
+  "pearls": [
+   "Depot injections lasting **2 or 4 weeks**; monitor plasma levels of risperidone + paliperidone",
+   "Orally disintegrating tablet and liquid"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "198, 234–235"
+   },
+   {
+    "ch": "ch07",
+    "pages": "326"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "234–235",
+    "text": "Some prefer it for children and adolescents; it may need twice-daily dosing at initiation (especially in children or the elderly) to avoid sedation and orthostasis.",
+    "sec": "s5-dones"
+   },
+   {
+    "ch": "ch07",
+    "pages": "326",
+    "text": "Table 7-1: approved for **bipolar mania** and **maintenance**.",
+    "sec": "s7-sda-mania"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524",
+    "text": "Used cautiously **off-label** for agitation/psychosis in dementia despite the boxed warning for stroke and death.",
+    "sec": "s12-d2"
+   }
+  ]
+ },
+ {
+  "id": "paliperidone",
+  "name": "Paliperidone",
+  "brand": "Invega",
+  "aka": [
+   "9-hydroxy-risperidone"
+  ],
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “done”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "Risperidone’s active metabolite: renally cleared, sustained release, long-interval injections.",
+  "mechanism": "The active metabolite of risperidone, sharing its **5HT2A/D2** antagonism and binding (Figure 5-50). **Not hepatically metabolized** (urinary excretion), so few pharmacokinetic interactions.",
+  "targets": [
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 4,
+    "note": "α1B, α1A"
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 3,
+    "note": "α2C, α2A, α2B"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 2,
+    "note": "5HT1B, 5HT1D"
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht5",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia/maintenance (12+)",
+   "Long-acting injectable: **1-month and 3-month** (6-month in study at publication)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Moderate weight gain and metabolic risk",
+    "via": "Class actions"
+   },
+   {
+    "e": "Perhaps less sedation, orthostasis and motor effects than risperidone (anecdotal)",
+    "via": "Smoother sustained-release levels"
+   }
+  ],
+  "pearls": [
+   "Sustained-release oral form: **once daily**, but easily **underdosed**",
+   "LAI is easier to load and dose than risperidone’s"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "198, 235–236"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "235",
+    "text": "Rapid absorption and high peaks of risperidone may cause some of its side effects; paliperidone’s controlled release removes these.",
+    "sec": "s5-dones"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2021",
+    "title": "Six-month injection approved",
+    "text": "A 6-month paliperidone palmitate long-acting injection (Invega Hafyera) was approved for adults with schizophrenia after adequate treatment with the 1- or 3-month formulations.",
+    "source": "FDA, August 30, 2021"
+   }
+  ]
+ },
+ {
+  "id": "ziprasidone",
+  "name": "Ziprasidone",
+  "brand": "Geodon",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “done”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "5HT2A/D2 antagonist with little or no weight gain; take with food.",
+  "mechanism": "A **5HT2A/D2 antagonist** that also binds 5HT1B/1D about as potently as D2, plus 5HT2C, 5HT7, D3, α1 and weak **NET and SERT** (Figure 5-51). It lacks the actions linked to weight gain, insulin resistance and significant sedation.",
+  "targets": [
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 3,
+    "note": "5HT1B, 5HT1D"
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3,
+    "note": "α1B, α1A"
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "s": 2
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "α2B, α2C, α2A"
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht5",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia/maintenance",
+   "Bipolar mania/maintenance",
+   "**IM** form for urgent use"
+  ],
+  "sideEffects": [
+   {
+    "e": "Little or no weight gain or metabolic effect",
+    "via": "Lacks H1/5HT2C and “receptor X” liability"
+   }
+  ],
+  "pearls": [
+   "Short acting: more than once daily, **with food**",
+   "QTc concerns now seem **exaggerated**: no dose-dependent QTc prolongation, few drugs raise its levels"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "198, 236"
+   },
+   {
+    "ch": "ch07",
+    "pages": "326"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "236",
+    "text": "Unlike iloperidone, zotepine, sertindole and amisulpride, ziprasidone does **not** cause dose-dependent QTc prolongation.",
+    "sec": "s5-dones"
+   },
+   {
+    "ch": "ch07",
+    "pages": "326",
+    "text": "Table 7-1: approved for **bipolar mania** and **maintenance**; evidence in **mania with mixed features**.",
+    "sec": "s7-sda-mania"
+   }
+  ]
+ },
+ {
+  "id": "iloperidone",
+  "name": "Iloperidone",
+  "brand": "Fanapt",
+  "group": "5HT2A/D2 antagonist",
+  "cls": "Atypical antipsychotic (a “done”)",
+  "nbn": "Serotonin 5HT2A/dopamine D2 receptor antagonist",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "short": "Simple profile with potent α1 antagonism: very low motor effects, slow titration.",
+  "mechanism": "A **5HT2A/D2 antagonist** with one of the **simplest** profiles, closest to a pure serotonin–dopamine antagonist; its most potent property is **α1 antagonism** (Figure 5-52).",
+  "targets": [
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 2,
+    "note": "5HT1D, 5HT1B"
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "α2C, α2A, α2B"
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia/maintenance (US); often a **switch** agent in non-urgent settings"
+  ],
+  "sideEffects": [
+   {
+    "e": "**Orthostatic hypotension**, sedation",
+    "via": "Potent α1 antagonism"
+   },
+   {
+    "e": "Very low **motor** effects",
+    "via": "Possibly helped by α1 antagonism"
+   },
+   {
+    "e": "Moderate weight gain; low dyslipidemia",
+    "via": "Class actions"
+   },
+   {
+    "e": "Dose-dependent QTc prolongation",
+    "via": "Noted in the book"
+   }
+  ],
+  "pearls": [
+   "18- to 33-hour half-life, but usually twice daily with **slow titration**, which delays onset"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "198, 236"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "236",
+    "text": "Its distinguishing features are very low motor side effects, low dyslipidemia, moderate weight gain and potent α1 antagonism.",
+    "sec": "s5-dones"
+   },
+   {
+    "ch": "ch07",
+    "pages": "328",
+    "text": "Among the agents with the lowest DIP, attributed to robust **α1 + 5HT2A** antagonism.",
+    "sec": "s7-augment-sda"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2024",
+    "title": "Bipolar I indication",
+    "text": "Iloperidone was approved for acute treatment of manic or mixed episodes of bipolar I disorder in adults in April 2024.",
+    "source": "FDA, April 2, 2024"
+   }
+  ]
+ }
+]

@@ -1,0 +1,11 @@
+# Notes group B (Ch 4-5)
+- lurasidone: +1 pearl (5HT7 > D2 affinity; bipolar depression more popular), uses corrected to add age 10+ for schizophrenia (p237). Book has nothing more on side effects.
+- lumateperone: +2 pearls (lowest D2 occupancy <60%; non-binding list), target h1 s1 added (book: "low affinity", p237; s=1 is my reading of "low"). No new side effects.
+- sertindole: +1 side effect (α1-related, book says only "some side effects"; no specific ones named), +2 pearls (QTc comparison; monitoring). Existing QTc item OK.
+- perospirone: +1 side effect (metabolic risk unknown), +2 pearls (TID, 5HT1A mood/cognition). TID duplicates an existing facts entry (not an item).
+- blonanserin: book has nothing further beyond existing entry (BID, D3, negative symptoms already present).
+- aripiprazole: +1 side effect (low DIP), +2 pearls (prolactin reversal; LAI adherence). FLAG: book p239 says LAI "4- to 6- to 8-week"; existing pearl says "4- to 8-week" (kept).
+- brexpiprazole: +1 side effect (lowers prolactin; book p193 says "three partial agonists in clinical use"), +1 pearl (too early to judge). Existing "low metabolic risk" consistent with p198.
+- cariprazine: +1 side effect (prolactin), +1 pearl (steady state/missed dose).
+- pimavanserin: +1 side effect (low metabolic tier; no D2 motor worsening), +1 pearl (5HT2C role unclear). Book Ch5 gives no adverse effects.
+- Possible flag: aripiprazole target 5ht2b s4 (most potent) is not clearly in Ch5 text; not verified against figure. Not changed.

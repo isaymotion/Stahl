@@ -1,0 +1,757 @@
+[
+ {
+  "id": "chlorpromazine",
+  "name": "Chlorpromazine",
+  "brand": "Thorazine",
+  "aka": [
+   "Largactil"
+  ],
+  "group": "D2 antagonist (first generation)",
+  "cls": "Conventional (first-generation) antipsychotic",
+  "nbn": "Dopamine D2 receptor antagonist",
+  "short": "The first D2 antagonist; a sedating phenothiazine with many receptor actions.",
+  "mechanism": "A **phenothiazine** discovered by serendipity in the 1950s while being tested as an antihistamine; its antipsychotic action is **D2 antagonism**. Originally branded **Largactil** for its large number of actions: potent **α1, D3 and H1** binding plus many serotonin and muscarinic receptors (Figure 5-27).",
+  "nts": [
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "m2m3",
+    "action": "antagonist",
+    "s": 2,
+    "note": "M3, M2"
+   },
+   {
+    "t": "m4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht5",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "d5",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 1,
+    "note": "5HT1D"
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Psychosis",
+   "Short-term oral or short-acting **IM** use for **agitation** or sudden worsening, often on top of a daily drug, exploiting its sedation"
+  ],
+  "sideEffects": [
+   {
+    "e": "Drug-induced parkinsonism, dystonia, akathisia; TD with chronic use",
+    "via": "Nigrostriatal D2 blockade"
+   },
+   {
+    "e": "Hyperprolactinemia",
+    "via": "Tuberoinfundibular D2 blockade"
+   },
+   {
+    "e": "Secondary negative symptoms",
+    "via": "Mesolimbic/mesocortical D2 blockade"
+   },
+   {
+    "e": "Marked sedation",
+    "via": "M1 + H1 + α1 antagonism"
+   },
+   {
+    "e": "Anticholinergic effects; ileus risk (e.g., with clozapine)",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension",
+    "via": "α1 antagonism"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "161, 180–182, 201–202"
+   },
+   {
+    "ch": "ch10",
+    "pages": "425, 428"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "161",
+    "text": "Its observed improvement of psychosis out of proportion to sedation led to the discovery of **D2 antagonism** as the antipsychotic mechanism.",
+    "sec": "s5-history"
+   },
+   {
+    "ch": "ch05",
+    "pages": "180",
+    "text": "Table 5-1: low potency.",
+    "sec": "s5-fga"
+   },
+   {
+    "ch": "ch05",
+    "pages": "201–202",
+    "text": "Often prescribed to exploit its **sedation**, short term orally or IM for agitation.",
+    "sec": "s5-first-agents"
+   },
+   {
+    "ch": "ch10",
+    "pages": "425, 428",
+    "text": "Sedating via H1 (with other) blockade; mirtazapine and chlorpromazine fall in the “still too hot” (hangover) category of Figure 10-41C.",
+    "sec": "s10-pk"
+   }
+  ]
+ },
+ {
+  "id": "fluphenazine",
+  "name": "Fluphenazine",
+  "brand": "Prolixin",
+  "group": "D2 antagonist (first generation)",
+  "cls": "Conventional (first-generation) antipsychotic",
+  "nbn": "Dopamine D2 receptor antagonist",
+  "short": "High-potency phenothiazine D2 antagonist with short- and long-acting forms.",
+  "mechanism": "A **phenothiazine** D2 antagonist, more potent and **less sedating** than chlorpromazine, with potent **D3, 5HT7 and α1** actions (Figure 5-28).",
+  "nts": [
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 4
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d5",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 2,
+    "note": "α2C, α2B, α2A"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht6",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 1,
+    "note": "5HT1B, 5HT1D"
+   },
+   {
+    "t": "5ht1a",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Psychosis; short- and **long-acting** (depot) formulations",
+   "**Plasma level** monitoring may be useful"
+  ],
+  "sideEffects": [
+   {
+    "e": "Drug-induced parkinsonism, dystonia, akathisia; TD with chronic use",
+    "via": "Nigrostriatal D2 blockade"
+   },
+   {
+    "e": "Hyperprolactinemia",
+    "via": "Tuberoinfundibular D2 blockade"
+   },
+   {
+    "e": "Secondary negative symptoms",
+    "via": "Mesolimbic/mesocortical D2 blockade"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "180, 202–203"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "180",
+    "text": "Table 5-1: high potency; depot.",
+    "sec": "s5-fga"
+   },
+   {
+    "ch": "ch05",
+    "pages": "202–203",
+    "text": "Has short- and long-acting formulations; one of the agents for which plasma drug levels may be useful.",
+    "sec": "s5-first-agents"
+   }
+  ]
+ },
+ {
+  "id": "haloperidol",
+  "name": "Haloperidol",
+  "brand": "Haldol",
+  "group": "D2 antagonist (first generation)",
+  "cls": "Conventional (first-generation) antipsychotic",
+  "nbn": "Dopamine D2 receptor antagonist",
+  "short": "One of the most potent D2 antagonists; little anticholinergic action, so more DIP.",
+  "mechanism": "One of the **most potent D2 antagonists**, also binding σ, D3 and α1 sites (Figure 5-29). It has **relatively little anticholinergic or antihistamine** binding, so it is less sedating but more likely to cause drug-induced parkinsonism.",
+  "nts": [
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "sigma",
+    "action": "binds",
+    "s": 3,
+    "note": "Labelled σ in Figure 5-29; the caption says “omega”; action not specified"
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d4",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "d1",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "s": 1,
+    "note": "5HT1B"
+   },
+   {
+    "t": "alpha2",
+    "action": "antagonist",
+    "s": 1,
+    "note": "α2C, α2B, α2A"
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Psychosis; short- and **long-acting** (depot) formulations",
+   "**Plasma level** monitoring may be useful"
+  ],
+  "sideEffects": [
+   {
+    "e": "Drug-induced parkinsonism (more likely)",
+    "via": "Potent D2 blockade with little built-in anticholinergic action"
+   },
+   {
+    "e": "Acute dystonia, akathisia; TD with chronic use",
+    "via": "Nigrostriatal D2 blockade"
+   },
+   {
+    "e": "Hyperprolactinemia",
+    "via": "Tuberoinfundibular D2 blockade"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "180–181, 202–204"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "180",
+    "text": "Table 5-1: high potency; depot.",
+    "sec": "s5-fga"
+   },
+   {
+    "ch": "ch05",
+    "pages": "181",
+    "text": "Has relatively little anticholinergic or antihistaminic binding, illustrating why D2 antagonists differ in side effects more than in efficacy.",
+    "sec": "s5-fga"
+   },
+   {
+    "ch": "ch05",
+    "pages": "202",
+    "text": "Less sedating than some others; plasma levels may be useful.",
+    "sec": "s5-first-agents"
+   },
+   {
+    "ch": "ch12",
+    "pages": "524",
+    "text": "Used cautiously **off-label** for agitation/psychosis in dementia despite the boxed warning for stroke and death.",
+    "sec": "s12-d2"
+   }
+  ]
+ },
+ {
+  "id": "sulpiride",
+  "name": "Sulpiride",
+  "brand": "Dolmatil",
+  "group": "D2 antagonist (first generation)",
+  "cls": "Conventional (first-generation) antipsychotic",
+  "nbn": "Dopamine D2 receptor antagonist",
+  "short": "D2 antagonist with D3 antagonist/partial agonist actions; popular outside the US.",
+  "mechanism": "A D2 antagonist with **D3 antagonist/partial agonist** actions (Figure 5-30). At usual doses it causes motor effects and prolactin elevation; at **lower** doses it may be activating and help **negative symptoms and depression**, with D3 action a candidate explanation.",
+  "nts": [
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 2,
+    "note": "Antagonist/partial agonist"
+   },
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 2
+   }
+  ],
+  "uses": [
+   "Psychosis (popular in countries such as the **UK**; may be better tolerated than other original agents)",
+   "Possibly **negative symptoms** and **depression** at low doses"
+  ],
+  "sideEffects": [
+   {
+    "e": "Drug-induced parkinsonism, dystonia, akathisia; TD with chronic use",
+    "via": "Nigrostriatal D2 blockade"
+   },
+   {
+    "e": "Hyperprolactinemia",
+    "via": "Tuberoinfundibular D2 blockade"
+   },
+   {
+    "e": "Secondary negative symptoms",
+    "via": "Mesolimbic/mesocortical D2 blockade"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "180, 202–205"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "202–203",
+    "text": "May be activating at lower doses with efficacy for negative symptoms and depression for unclear reasons; D3 antagonism/partial agonism is a candidate explanation.",
+    "sec": "s5-first-agents"
+   }
+  ]
+ },
+ {
+  "id": "amisulpride",
+  "name": "Amisulpride",
+  "group": "D2 antagonist (first generation)",
+  "cls": "Benzamide D2/D3 antagonist",
+  "nbn": "Dopamine D2/D3 receptor antagonist",
+  "short": "Sulpiride relative with D3 and weak 5HT7 actions; marketed outside the US.",
+  "mechanism": "Structurally related to sulpiride. A D2 antagonist with some **D3 antagonist** and weak **5HT7 antagonist** actions (Figure 5-31). Early preclinical data suggest it may favor **mesolimbic/mesostriatal** over nigrostriatal receptors, which might mean fewer motor side effects.",
+  "nts": [
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "d2",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "d3",
+    "action": "antagonist",
+    "s": 3
+   },
+   {
+    "t": "5ht2b",
+    "action": "antagonist",
+    "s": 2
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Psychosis (outside the US)",
+   "Reported efficacy for **negative symptoms** and **depression** at low doses"
+  ],
+  "sideEffects": [
+   {
+    "e": "Dose-dependent QTc prolongation",
+    "via": "Noted alongside iloperidone, zotepine and sertindole"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "203, 205, 236"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "203",
+    "text": "D3 antagonism and 5HT7 antagonism may explain its negative-symptom and antidepressant actions; its active isomer is in early clinical testing in the US.",
+    "sec": "s5-first-agents"
+   }
+  ]
+ },
+ {
+  "id": "roluperidone",
+  "name": "Roluperidone",
+  "aka": [
+   "MIN-101"
+  ],
+  "group": "Investigational drug for psychosis",
+  "cls": "5HT2A/σ2 antagonist (investigational)",
+  "short": "5HT2A antagonist with σ2 antagonism, studied for negative symptoms.",
+  "mechanism": "A **5HT2A antagonist** with additional **σ2** antagonist actions (Figure 5-63), in study for schizophrenia with early signs of efficacy for **negative symptoms**.",
+  "nts": [
+   "serotonin"
+  ],
+  "targets": [
+   {
+    "t": "sigma",
+    "action": "antagonist",
+    "s": 4,
+    "note": "σ2"
+   },
+   {
+    "t": "5ht2a",
+    "action": "antagonist",
+    "s": 4
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "241"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "241",
+    "text": "Early studies suggest possible efficacy for negative symptoms; trials ongoing at publication.",
+    "sec": "s5-future"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2024",
+    "title": "FDA complete response letter",
+    "text": "The FDA declined approval for negative symptoms of schizophrenia in February 2024, citing insufficient evidence that the change was clinically meaningful and asking for at least one additional positive controlled study.",
+    "source": "Minerva Neurosciences, February 27, 2024"
+   }
+  ]
+ },
+ {
+  "id": "ulotaront",
+  "name": "Ulotaront (SEP-363856)",
+  "aka": [
+   "SEP-363856"
+  ],
+  "group": "Investigational drug for psychosis",
+  "cls": "TAAR1 agonist (investigational)",
+  "short": "TAAR1 agonist found serendipitously; a non-D2-blocking candidate for psychosis.",
+  "mechanism": "An agonist with weak affinity at **TAAR1**, plus weaker **5HT1D** and **5HT7** antagonist and **5HT1A** agonist actions (Figure 5-66). Antipsychotic effects in animals were found first; the TAAR1 mechanism was discovered afterwards. TAAR1 agonism biases D2 signaling toward Gi without blocking D2.",
+  "nts": [
+   "dopamine",
+   "serotonin"
+  ],
+  "targets": [
+   {
+    "t": "taar1",
+    "action": "agonist"
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "antagonist",
+    "note": "5HT1D"
+   },
+   {
+    "t": "5ht1a",
+    "action": "agonist"
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "242"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "242",
+    "text": "An early study in schizophrenia confirmed antipsychotic action with few side effects, and regulators granted **breakthrough** status.",
+    "sec": "s5-future"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Phase III trials negative",
+    "text": "Ulotaront did not separate from placebo in the phase III DIAMOND 1 and DIAMOND 2 schizophrenia trials; the companies cited a high placebo response.",
+    "source": "Sumitomo Pharma/Otsuka, July 31, 2023"
+   }
+  ]
+ },
+ {
+  "id": "xanomeline",
+  "name": "Xanomeline (with trospium)",
+  "aka": [
+   "xanomeline–trospium",
+   "KarXT",
+   "Cobenfy"
+  ],
+  "group": "Muscarinic agonist",
+  "cls": "Central M4/M1 muscarinic agonist with peripheral antagonist",
+  "nbn": "Muscarinic M1/M4 receptor agonist",
+  "short": "Central M4/M1 agonist paired with peripheral trospium: a non-D2 mechanism for psychosis.",
+  "mechanism": "A central **M4/M1 agonist**: M4 agonism may reduce psychosis by lowering VTA dopamine firing, and M1 agonism may improve cognition; it also raises prefrontal dopamine. It binds several serotonin receptors (Figure 5-67). **Trospium**, an anticholinergic that does not enter the brain, blocks peripheral **M2/M3** side effects.",
+  "nts": [
+   "acetylcholine",
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "5ht1b1d",
+    "action": "binds",
+    "s": 3,
+    "note": "5HT1D, 5HT1B"
+   },
+   {
+    "t": "m4",
+    "action": "agonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2b",
+    "action": "binds",
+    "s": 2
+   },
+   {
+    "t": "m2m3",
+    "action": "binds",
+    "s": 2,
+    "note": "M3, M2; Peripheral M2/M3 effects blocked by trospium"
+   },
+   {
+    "t": "5ht2c",
+    "action": "binds",
+    "s": 2
+   },
+   {
+    "t": "5ht1a",
+    "action": "binds",
+    "s": 2
+   },
+   {
+    "t": "m1",
+    "action": "agonist",
+    "s": 2
+   },
+   {
+    "t": "5ht2a",
+    "action": "binds",
+    "s": 1
+   },
+   {
+    "t": "5ht7",
+    "action": "binds",
+    "s": 1
+   },
+   {
+    "t": "5ht4",
+    "action": "binds",
+    "s": 1
+   },
+   {
+    "t": "d3",
+    "action": "binds",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "Schizophrenia (in advanced trials at publication; approved 2024)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch05",
+    "pages": "242"
+   },
+   {
+    "ch": "ch12",
+    "pages": "507"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch05",
+    "pages": "242",
+    "text": "With trospium, showed promising efficacy and tolerability for psychotic symptoms of schizophrenia and was progressing as a potential breakthrough.",
+    "sec": "s5-future"
+   },
+   {
+    "ch": "ch12",
+    "pages": "507",
+    "text": "As an M4/M1 agonist it could theoretically reduce both psychotic and cognitive symptoms in AD.",
+    "sec": "s12-ach"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2024",
+    "title": "Approved for schizophrenia",
+    "text": "Xanomeline–trospium (Cobenfy) was approved for schizophrenia in adults in September 2024. As an add-on to other antipsychotics it missed its primary endpoint in the phase III ARISE trial (April 2025).",
+    "source": "FDA, September 26, 2024; Bristol Myers Squibb, April 2025"
+   }
+  ]
+ }
+]

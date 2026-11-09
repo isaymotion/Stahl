@@ -1,0 +1,217 @@
+{
+ "chlorpromazine": {
+  "sideEffects": [
+   {
+    "e": "Drug-induced parkinsonism, dystonia, akathisia; TD with chronic use",
+    "via": "Nigrostriatal D2 blockade"
+   },
+   {
+    "e": "Hyperprolactinemia",
+    "via": "Tuberoinfundibular D2 blockade"
+   },
+   {
+    "e": "Secondary negative symptoms",
+    "via": "Mesolimbic/mesocortical D2 blockade"
+   },
+   {
+    "e": "Marked sedation",
+    "via": "M1 + H1 + α1 antagonism"
+   },
+   {
+    "e": "Anticholinergic effects; ileus risk (e.g., with clozapine)",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension",
+    "via": "α1 antagonism"
+   }
+  ],
+  "pearls": [
+   "**Low potency** first-generation agent (Table 5-1); the prototype for combining strong **M1 + H1 + α1** blockade to get sedation on top of D2 action.",
+   "Built-in strong anticholinergic action may mean **less DIP** but more constipation and **ileus** risk; extra caution with other anticholinergics (benztropine, clozapine)."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p183",
+    "p181, p225"
+   ]
+  }
+ },
+ "fluphenazine": {
+  "sideEffects": [
+   {
+    "e": "Drug-induced parkinsonism, dystonia, akathisia; TD with chronic use",
+    "via": "Nigrostriatal D2 blockade"
+   },
+   {
+    "e": "Hyperprolactinemia",
+    "via": "Tuberoinfundibular D2 blockade"
+   },
+   {
+    "e": "Secondary negative symptoms",
+    "via": "Mesolimbic/mesocortical D2 blockade"
+   }
+  ],
+  "pearls": [
+   "**High potency** phenothiazine with a **depot** form (Table 5-1).",
+   "Both **short-acting and long-acting** formulations make it convenient; plasma levels can guide dosing."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p183",
+    "p202"
+   ]
+  }
+ },
+ "haloperidol": {
+  "sideEffects": [
+   {
+    "e": "Drug-induced parkinsonism (more likely)",
+    "via": "Potent D2 blockade with little built-in anticholinergic action"
+   },
+   {
+    "e": "Acute dystonia, akathisia; TD with chronic use",
+    "via": "Nigrostriatal D2 blockade"
+   },
+   {
+    "e": "Hyperprolactinemia",
+    "via": "Tuberoinfundibular D2 blockade"
+   }
+  ],
+  "pearls": [
+   "**High potency** with a **depot** form (Table 5-1); among the **most potent** D2 blockers and less sedating than some others.",
+   "Illustrates that D2 antagonists differ in **side-effect profile** (anticholinergic/antihistamine binding) more than in efficacy.",
+   "Short- and long-acting formulations; **plasma level** monitoring may help."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p183, p202",
+    "p181",
+    "p202"
+   ]
+  }
+ },
+ "sulpiride": {
+  "sideEffects": [
+   {
+    "e": "Drug-induced parkinsonism, dystonia, akathisia; TD with chronic use",
+    "via": "Nigrostriatal D2 blockade"
+   },
+   {
+    "e": "Hyperprolactinemia",
+    "via": "Tuberoinfundibular D2 blockade"
+   },
+   {
+    "e": "Secondary negative symptoms",
+    "via": "Mesolimbic/mesocortical D2 blockade"
+   }
+  ],
+  "pearls": [
+   "**Not available in the US** (Table 5-1); used widely elsewhere, e.g., the UK.",
+   "Dose matters: **usual doses** give motor effects and prolactin rise, while **lower doses** may be mildly activating."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p183",
+    "p203"
+   ]
+  }
+ },
+ "amisulpride": {
+  "sideEffects": [
+   {
+    "e": "Dose-dependent QTc prolongation",
+    "via": "Noted alongside iloperidone, zotepine and sertindole"
+   }
+  ],
+  "pearls": [
+   "Unlike **ziprasidone**, it causes **dose-dependent QTc** prolongation (as do iloperidone, zotepine, sertindole).",
+   "**Lower doses** than those for positive symptoms are reported to help negative symptoms and depression."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": [
+    "p236",
+    "p203"
+   ]
+  }
+ },
+ "roluperidone": {
+  "sideEffects": [],
+  "pearls": [
+   "A **5HT2A antagonist** with no D2 blockade; investigational, with early hints of benefit for **negative symptoms**.",
+   "Binding strip shows roughly equal **σ2 and 5HT2A** potency."
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p235, p241",
+    "p235"
+   ]
+  }
+ },
+ "ulotaront": {
+  "sideEffects": [],
+  "pearls": [
+   "**Novel mechanism:** TAAR1 activation lets D2 signal via **Gi** instead of β-arrestin 2, without any direct D2 blockade.",
+   "Presynaptic effect: **less dopamine** synthesis and release; postsynaptic effect: less downstream **GSK-3** overactivation.",
+   "Efficacy in animals was found **before** the TAAR1 action was identified; an early human study showed antipsychotic action with **few side effects**.",
+   "Trace amines act as a **rheostat** of dopamine, glutamate and serotonin neurotransmission; **TAAR1** is the main human trace amine receptor."
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p241-p242",
+    "p242",
+    "p242",
+    "p241"
+   ]
+  }
+ },
+ "xanomeline": {
+  "sideEffects": [],
+  "pearls": [
+   "Raising **prefrontal dopamine** could in theory help cognitive, negative and affective symptoms, beyond the antipsychotic effect of lower VTA firing.",
+   "**Trospium** does not cross into the brain, so it blocks M2/M3 effects only in the periphery, improving tolerability.",
+   "Other muscarinic routes (direct or **allosteric modulation**) are under study as antipsychotic mechanisms."
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p242",
+    "p242",
+    "p242"
+   ]
+  }
+ }
+}
