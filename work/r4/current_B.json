@@ -1,0 +1,396 @@
+[
+ {
+  "id": "phenelzine",
+  "name": "Phenelzine",
+  "brand": "Nardil",
+  "group": "MAO inhibitor",
+  "cls": "Irreversible MAO inhibitor",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "336–338"
+   },
+   {
+    "ch": "ch08",
+    "pages": "377"
+   }
+  ],
+  "nbn": "Monoamine oxidase inhibitor (MAO-A and MAO-B, irreversible)",
+  "nts": [
+   "serotonin",
+   "norepinephrine",
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "mao",
+    "action": "inhibitor",
+    "note": "Irreversible; MAO-A and MAO-B"
+   }
+  ],
+  "uses": [
+   "Treatment-resistant unipolar depression (among the most powerful options)",
+   "**Panic disorder** and **social anxiety disorder**"
+  ],
+  "sideEffects": [
+   {
+    "e": "**Hypertensive crisis** with dietary tyramine",
+    "via": "MAO-A inhibition prevents breakdown of tyramine-released NE"
+   },
+   {
+    "e": "Blood pressure rise with sympathomimetic drugs",
+    "via": "Drug interaction"
+   },
+   {
+    "e": "Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors",
+    "via": "Drug interaction"
+   }
+  ],
+  "short": "Classic irreversible MAOI.",
+  "mechanism": "Irreversibly inhibits **MAO-A and MAO-B**; enzyme activity returns only after new enzyme is synthesized (about 2–3 weeks). Inhibiting both raises 5HT, NE **and DA**.",
+  "facts": [
+   {
+    "ch": "ch08",
+    "pages": "377",
+    "text": "MAOIs are much neglected but powerful in **treatment-resistant panic disorder**.",
+    "sec": "s8-panic"
+   }
+  ]
+ },
+ {
+  "id": "tranylcypromine",
+  "name": "Tranylcypromine",
+  "brand": "Parnate",
+  "group": "MAO inhibitor",
+  "cls": "Irreversible MAO inhibitor",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "336–338"
+   }
+  ],
+  "nbn": "Monoamine oxidase inhibitor (MAO-A and MAO-B, irreversible)",
+  "nts": [
+   "serotonin",
+   "norepinephrine",
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "mao",
+    "action": "inhibitor",
+    "note": "Irreversible; MAO-A and MAO-B"
+   }
+  ],
+  "uses": [
+   "Treatment-resistant unipolar depression (among the most powerful options)",
+   "**Panic disorder** and **social anxiety disorder**"
+  ],
+  "sideEffects": [
+   {
+    "e": "**Hypertensive crisis** with dietary tyramine",
+    "via": "MAO-A inhibition prevents breakdown of tyramine-released NE"
+   },
+   {
+    "e": "Blood pressure rise with sympathomimetic drugs",
+    "via": "Drug interaction"
+   },
+   {
+    "e": "Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors",
+    "via": "Drug interaction"
+   }
+  ],
+  "short": "Irreversible MAOI modeled on amphetamine.",
+  "mechanism": "Irreversibly inhibits **MAO-A and MAO-B**; its structure is modeled on **amphetamine**, so it also has amphetamine-like **dopamine-releasing** properties."
+ },
+ {
+  "id": "isocarboxazid",
+  "name": "Isocarboxazid",
+  "brand": "Marplan",
+  "group": "MAO inhibitor",
+  "cls": "Irreversible MAO inhibitor",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "336–338"
+   }
+  ],
+  "nbn": "Monoamine oxidase inhibitor (MAO-A and MAO-B, irreversible)",
+  "nts": [
+   "serotonin",
+   "norepinephrine",
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "mao",
+    "action": "inhibitor",
+    "note": "Irreversible; MAO-A and MAO-B"
+   }
+  ],
+  "uses": [
+   "Treatment-resistant unipolar depression (among the most powerful options)",
+   "**Panic disorder** and **social anxiety disorder**"
+  ],
+  "sideEffects": [
+   {
+    "e": "**Hypertensive crisis** with dietary tyramine",
+    "via": "MAO-A inhibition prevents breakdown of tyramine-released NE"
+   },
+   {
+    "e": "Blood pressure rise with sympathomimetic drugs",
+    "via": "Drug interaction"
+   },
+   {
+    "e": "Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors",
+    "via": "Drug interaction"
+   }
+  ],
+  "short": "Classic irreversible MAOI.",
+  "mechanism": "Irreversibly inhibits **MAO-A and MAO-B**; activity returns after about 2–3 weeks."
+ },
+ {
+  "id": "selegiline",
+  "name": "Selegiline",
+  "brand": "Emsam; Eldepryl",
+  "group": "MAO inhibitor",
+  "cls": "Irreversible MAO inhibitor (MAO-B selective at low doses)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "336–338"
+   }
+  ],
+  "nbn": "Monoamine oxidase inhibitor (MAO-A and MAO-B, irreversible)",
+  "nts": [
+   "serotonin",
+   "norepinephrine",
+   "dopamine"
+  ],
+  "targets": [
+   {
+    "t": "mao",
+    "action": "inhibitor",
+    "note": "Irreversible; MAO-A and MAO-B"
+   }
+  ],
+  "uses": [
+   "Depression (when MAO-A is also inhibited)",
+   "**Parkinson’s disease** (MAO-B selective doses)"
+  ],
+  "sideEffects": [
+   {
+    "e": "**Hypertensive crisis** with dietary tyramine",
+    "via": "MAO-A inhibition prevents breakdown of tyramine-released NE"
+   },
+   {
+    "e": "Blood pressure rise with sympathomimetic drugs",
+    "via": "Drug interaction"
+   },
+   {
+    "e": "Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors",
+    "via": "Drug interaction"
+   }
+  ],
+  "short": "MAOI metabolized to l-amphetamine and l-methamphetamine; MAO-B selective at low doses.",
+  "mechanism": "An irreversible MAOI. At **selective MAO-B** doses it boosts levodopa in Parkinson’s disease but is not antidepressant; inhibiting both forms is needed for depression. Has no amphetamine-like action itself but is metabolized to **l-amphetamine and l-methamphetamine**."
+ },
+ {
+  "id": "rasagiline",
+  "name": "Rasagiline",
+  "brand": "Azilect",
+  "group": "Parkinson’s disease treatment",
+  "cls": "MAO-B inhibitor",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "338"
+   }
+  ],
+  "nbn": "Monoamine oxidase B inhibitor",
+  "nts": [
+   "dopamine"
+  ],
+  "short": "Selective MAO-B inhibitor for Parkinson’s disease; not antidepressant.",
+  "mechanism": "Selectively inhibits **MAO-B**, boosting concomitant **levodopa** and reducing on/off fluctuations; at selective doses it does not treat depression.",
+  "targets": [
+   {
+    "t": "mao",
+    "action": "inhibitor",
+    "note": "MAO-B selective"
+   }
+  ],
+  "uses": [
+   "**Parkinson’s disease**"
+  ]
+ },
+ {
+  "id": "safinamide",
+  "name": "Safinamide",
+  "brand": "Xadago",
+  "group": "Parkinson’s disease treatment",
+  "cls": "MAO-B inhibitor",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "338"
+   }
+  ],
+  "nbn": "Monoamine oxidase B inhibitor",
+  "nts": [
+   "dopamine"
+  ],
+  "short": "Selective MAO-B inhibitor for Parkinson’s disease; not antidepressant.",
+  "mechanism": "Selectively inhibits **MAO-B**; approved for Parkinson’s disease, not effective for depression at selective doses.",
+  "targets": [
+   {
+    "t": "mao",
+    "action": "inhibitor",
+    "note": "MAO-B selective"
+   }
+  ],
+  "uses": [
+   "**Parkinson’s disease**"
+  ]
+ },
+ {
+  "id": "iproniazid",
+  "name": "Iproniazid",
+  "group": "MAO inhibitor",
+  "cls": "MAO inhibitor (historical)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "336"
+   }
+  ],
+  "nbn": "Monoamine oxidase inhibitor",
+  "nts": [
+   "serotonin",
+   "norepinephrine",
+   "dopamine"
+  ],
+  "short": "The anti-tuberculosis drug that became the first antidepressant.",
+  "mechanism": "An anti-tuberculosis drug found by accident to improve depression in tuberculosis patients; its antidepressant action was due to **MAO inhibition**, unrelated to its antitubercular effect.",
+  "targets": [
+   {
+    "t": "mao",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "Historical: the **first** clinically effective drug for depression"
+  ]
+ },
+ {
+  "id": "flumazenil",
+  "name": "Flumazenil",
+  "group": "Benzodiazepine antagonist",
+  "cls": "Benzodiazepine receptor antagonist",
+  "nbn": "GABA-A benzodiazepine-site antagonist",
+  "short": "Neutral antagonist that reverses benzodiazepines.",
+  "mechanism": "A **neutral antagonist** at the benzodiazepine (PAM) site of GABA-A receptors. Its ability to reverse benzodiazepines shows that benzodiazepines act as **agonists** at their allosteric site (Figure 6-23).",
+  "nts": [
+   "gaba"
+  ],
+  "targets": [
+   {
+    "t": "gabaa",
+    "action": "antagonist",
+    "note": "Benzodiazepine site; neutral antagonist"
+   }
+  ],
+  "uses": [
+   "Reversal of benzodiazepine **anesthesia**",
+   "Benzodiazepine **overdose**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch06",
+    "pages": "261–262"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch06",
+    "pages": "261–262",
+    "text": "Reverses a full-agonist benzodiazepine acting at its site on the GABA-A receptor.",
+    "sec": "s6-gabaa"
+   }
+  ]
+ },
+ {
+  "id": "buspirone",
+  "name": "Buspirone",
+  "brand": "BuSpar",
+  "group": "5HT1A partial agonist",
+  "cls": "Anxiolytic (5HT1A partial agonist)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "296, 333"
+   },
+   {
+    "ch": "ch08",
+    "pages": "368–370, 377"
+   }
+  ],
+  "nbn": "Serotonin 5HT1A receptor partial agonist",
+  "nts": [
+   "serotonin"
+  ],
+  "short": "5HT1A partial agonist sometimes added to SSRIs/SNRIs.",
+  "mechanism": "A **5HT1A partial agonist** (anxiolytic, Chapter 8). Adding it to an SSRI/SNRI resembles giving vilazodone or vortioxetine.",
+  "targets": [
+   {
+    "t": "5ht1a",
+    "action": "partial agonist"
+   }
+  ],
+  "uses": [
+   "**Generalized anxiety disorder** (not the other anxiety/trauma disorders)",
+   "Augmentation of SSRIs/SNRIs in unipolar depression (not approved; less used than other 5HT1A agents)"
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "A buspirone analogue approved for depression",
+    "text": "Extended-release **gepirone** (Exxua), a pharmacologic analogue of buspirone and selective 5HT1A agonist, was approved for major depressive disorder in adults in September 2023.",
+    "source": "FDA approval announced September 2023 (Psychiatric Times, September 29, 2023)"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch08",
+    "pages": "368–370",
+    "text": "Anxiolytic onset is **delayed**, like SSRIs, implying adaptive receptor changes rather than acute occupancy.",
+    "sec": "s8-serotonin"
+   }
+  ]
+ },
+ {
+  "id": "thyroid-hormone",
+  "name": "Thyroid hormones",
+  "group": "Hormone",
+  "cls": "Augmenting agent",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333"
+   }
+  ],
+  "nbn": "Thyroid hormone receptor agonist",
+  "nts": [],
+  "short": "Nuclear-receptor hormones once used to augment drugs for depression.",
+  "mechanism": "Bind **nuclear receptors** to form ligand-activated **transcription factors**; regulation of neuronal organization, arborization and synapse formation may boost monoamine transmission.",
+  "targets": [
+   {
+    "t": "thr",
+    "action": "agonist"
+   }
+  ],
+  "uses": [
+   "Augmentation of unipolar or bipolar depression treatment, to boost efficacy or speed onset (**out of favor**)"
+  ]
+ }
+]

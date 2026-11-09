@@ -1,0 +1,13 @@
+# Notes, group D
+- venlafaxine: +2 pearls (skilled titration; SNRI-vs-SSRI efficacy still debated), p302. No new side effects (book's list already captured).
+- desvenlafaxine: book has nothing further beyond existing entry/facts.
+- duloxetine: +2 pearls (pain relief without depression; painful physical symptoms not in DSM criteria but common residual symptom), p302-303.
+- milnacipran: book has nothing further.
+- levomilnacipran: book has nothing further.
+- bupropion: +5 pearls (not abusable/unscheduled; SSRI-intolerant or nonresponders; symptom targets; PFC NET blockade raises DA; "Well-oft"), p294, p305-306. Seizure/activation/sexual items already present.
+- agomelatine: +2 pearls (circadian rationale; shared 5HT2C antagonism), p307-308. Book gives no side effects, so none added.
+- mirtazapine: +4 pearls (5HT3 GI protection; 5HT2A slow-wave sleep; rocket fuel quadruple boost; synergy), p309, p311, p333-334. The 5HT3 GI point is stated for 5HT3 blockade generally; applied to mirtazapine as a 5HT3 antagonist (reviewer to confirm).
+- mianserin: +1 side effect (sedation, weight gain via H1). INFERRED: p309 states H1 blockade causes these and lists H1 antagonism for mianserin; book does not name them for mianserin specifically.
+- trazodone: +5 pearls (IR best for hypnotic use; original IR multiple dosing; first-dose hypnotic action/tolerability; residual insomnia and remission; α1+5HT2A PFC DA), p311, p314, p328. Existing items not contradicted.
+- nefazodone: book has nothing further.
+- No contradictions with existing items found. No targets/uses changes.

@@ -1,0 +1,50 @@
+{
+ "fluoxetine": {
+  "pearls": [
+   "In the **olanzapine–fluoxetine** combination both drugs block 5HT2C, so net 5HT2C antagonism exceeds either alone (a potent SERT/5HT2C inhibitor)",
+   "**Long half-life** softens discontinuation reactions but means slow washout; allow for it before switching to an MAOI; **weekly** oral form exists"
+  ]
+ },
+ "sertraline": {
+  "pearls": [
+   "Its **σ1** binding is weaker than fluvoxamine’s; what σ1 does clinically is still unclear (the “sigma enigma”)",
+   "Combination with bupropion adds up each drug's **weak DAT** action"
+  ]
+ },
+ "paroxetine": {
+  "pearls": [
+   "Worst discontinuation risk after abrupt stop from **long-term high-dose** use; **controlled-release** form may mitigate"
+  ]
+ },
+ "fluvoxamine": {
+  "pearls": [
+   "Like sertraline, shown to help **psychotic/delusional depression**",
+   "Immediate-release has a short half-life needing **twice-daily** dosing; CR allows once daily"
+  ]
+ },
+ "citalopram": {
+  "pearls": [
+   "Among the **better-tolerated** SSRIs, with favorable findings in the **elderly**",
+   "**Inconsistent at the lowest dose**, so dose often rises, but **QTc** prolongation caps the dose"
+  ]
+ },
+ "escitalopram": {
+  "pearls": [
+   "Lowest dose is **predictably effective** and there is no higher-dose **QTc** restriction (unlike citalopram)",
+   "Possibly the **best tolerated** of the SSRIs, with the **fewest CYP450** interaction problems",
+   "Dropping the R enantiomer also removes citalopram's **antihistamine** action"
+  ]
+ },
+ "vilazodone": {
+  "pearls": [
+   "One drug replaces the SSRI plus **5HT1A partial agonist** (buspirone, aripiprazole, etc.) strategy, avoiding extra interactions and off-target effects",
+   "5HT1A downstream **dopamine release** hypothesized to aid mood and cognition and to explain less sexual dysfunction and weight gain"
+  ]
+ },
+ "vortioxetine": {
+  "pearls": [
+   "**5HT3 blockade** (brain: excitatory on GABA interneurons) disinhibits glutamate, ACh and NE; peripherally it may protect against serotonin-induced **GI side effects**",
+   "**5HT1B/D** antagonism and **5HT7** blockade remove brakes on 5HT release, boosting it beyond SERT inhibition alone"
+  ]
+ }
+}

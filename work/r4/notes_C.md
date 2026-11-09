@@ -1,0 +1,11 @@
+# Group C notes (Ch 7 pp 289-298, 309-320, 326, 333, 343)
+- fluoxetine: +1 sideEffect (OFC weight/metabolic, p326), +3 pearls. No target changes.
+- sertraline: +3 pearls; no side effects added (book names none beyond class). Existing "overactivation of panic ... via weak DAT" kept (book says consistent with weak DAT; fine).
+- paroxetine: +1 sideEffect (calming/sedation, M1 "perhaps", p294), +3 pearls.
+- fluvoxamine: +1 sideEffect (peak-dose sedation implied by "possibly less" with CR; mechanism not stated), +3 pearls. FLAG: only weak evidence for that side effect; drop if reviewer prefers.
+- citalopram: +3 pearls; nothing else. Book gives no side-effect mechanism for R-enantiomer antihistamine action.
+- escitalopram: +3 pearls.
+- vilazodone: +3 pearls; existing side-effect item kept.
+- vortioxetine: +4 pearls; book lists no vortioxetine side effects in Ch 6-7 (GI protection is by implication of 5HT3 blockade, p311).
+- Targets: no `s` strengths set. Book gives only relative statements (fluvoxamine sigma > sertraline sigma; sertraline DAT weaker than SERT; paroxetine NET weak-to-moderate; vortioxetine 5HT3 among most potent) and the entries have no `s` values to calibrate; left unchanged.
+- No contradictions found with existing items. Note: SSRI "Weight gain" not attributed to any specific SSRI in Ch 7.

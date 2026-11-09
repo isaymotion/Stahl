@@ -1,0 +1,548 @@
+[
+ {
+  "id": "ketamine",
+  "name": "Ketamine",
+  "group": "NMDA antagonist",
+  "cls": "Anesthetic; rapid-acting antidepressant",
+  "nbn": "Glutamate NMDA receptor antagonist (open-channel)",
+  "short": "Open-channel NMDA blocker; anesthetic and rapid-acting antidepressant.",
+  "mechanism": "A racemic (**R + S**) **NMDA antagonist** at the open-channel **PCP site**, with **σ1** binding; weak NET, μ-opioid and SERT actions are proposed but disputed. Subanesthetic infusions block NMDA on GABA interneurons, releasing a **burst of glutamate** that stimulates **AMPA** receptors and, via **mTOR** or **BDNF/VEGF** release, rapidly builds dendritic spines.",
+  "targets": [
+   {
+    "t": "nmda",
+    "action": "negative allosteric modulator",
+    "s": 1,
+    "note": "Open-channel PCP site"
+   },
+   {
+    "t": "sigma",
+    "action": "binds",
+    "s": 1,
+    "note": "σ1"
+   },
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Weak; disputed"
+   },
+   {
+    "t": "mor",
+    "action": "binds",
+    "note": "Weak; disputed role"
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "note": "Weak"
+   }
+  ],
+  "uses": [
+   "Anesthetic",
+   "**Treatment-resistant depression** and **suicidal thoughts**",
+   "Rapid-acting antidepressant"
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "55, 66"
+   },
+   {
+    "ch": "ch04",
+    "pages": "78, 105–110"
+   },
+   {
+    "ch": "ch07",
+    "pages": "328–331, 353"
+   },
+   {
+    "ch": "ch08",
+    "pages": "376–378"
+   },
+   {
+    "ch": "ch13",
+    "pages": "569–574"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "66",
+    "text": "Used as a treatment for **resistant depression and suicidal thoughts**.",
+    "sec": "s3-pam"
+   },
+   {
+    "ch": "ch04",
+    "pages": "78, 105–110",
+    "text": "A model of NMDA-hypofunction psychosis (Table 4-1: **visual** hallucinations, paranoid delusions, no insight). Blocking NMDA receptors on prefrontal GABA interneurons is **acute and reversible**, unlike the neurodevelopmental defect of schizophrenia.",
+    "sec": "s4-nmda-hypo"
+   },
+   {
+    "ch": "ch07",
+    "pages": "328–331",
+    "text": "Rapid, sometimes **anti-suicidal**, effects in patients failing many monoamine drugs; benefit usually fades over **a few days** but can be re-triggered by repeated infusions or extended by monoamine drugs. Used **off-label** after multiple failures.",
+    "sec": "s7-ketamine"
+   },
+   {
+    "ch": "ch08",
+    "pages": "376–377",
+    "text": "Studied to **disrupt reconsolidation** of reactivated fear memories during psychotherapy (PTSD, anxiety, existential distress in terminal illness).",
+    "sec": "s8-novel"
+   },
+   {
+    "ch": "ch13",
+    "pages": "569–571",
+    "text": "Dissociative anesthetic (especially in children, and veterinary use); abused as “special K”; far less psychotomimetic than PCP; dissociation (depersonalization, derealization) at antidepressant doses.",
+    "sec": "s13-hallucinogens"
+   },
+   {
+    "ch": "ch13",
+    "pages": "574",
+    "text": "Ketamine-assisted psychotherapy explored for craving and use of cocaine, nicotine and alcohol, perhaps by promoting prefrontal plasticity.",
+    "sec": "s13-assisted"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2025",
+    "title": "Esketamine monotherapy",
+    "text": "Esketamine (the S-enantiomer of ketamine) nasal spray, approved in 2019 as add-on treatment, was approved in January 2025 as **monotherapy** for treatment-resistant depression.",
+    "source": "FDA, January 2025"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "Psychosis (visual hallucinations, paranoia)",
+    "via": "NMDA blockade on prefrontal GABA interneurons → glutamate and dopamine excess"
+   }
+  ]
+ },
+ {
+  "id": "esketamine",
+  "name": "Esketamine",
+  "brand": "Spravato",
+  "group": "NMDA antagonist",
+  "cls": "Rapid-acting antidepressant (S-ketamine)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "331–332"
+   },
+   {
+    "ch": "ch13",
+    "pages": "571"
+   }
+  ],
+  "nbn": "Glutamate NMDA receptor antagonist (open-channel)",
+  "nts": [
+   "glutamate"
+  ],
+  "short": "Intranasal S-ketamine for treatment-resistant depression.",
+  "mechanism": "The **S enantiomer** of ketamine: an NMDA antagonist (with σ binding) given **intranasally**, rapidly active without IV infusion.",
+  "targets": [
+   {
+    "t": "nmda",
+    "action": "antagonist",
+    "s": 1,
+    "note": "Open-channel site"
+   },
+   {
+    "t": "sigma",
+    "action": "binds",
+    "s": 1
+   }
+  ],
+  "uses": [
+   "**Treatment-resistant depression** as an augmenting agent: twice weekly at first, then weekly or every other week"
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "332",
+    "text": "A study of up to a year of esketamine plus a switch to an untried oral monoamine drug showed sustained improvement and acceptable safety.",
+    "sec": "s7-ketamine"
+   },
+   {
+    "ch": "ch13",
+    "pages": "571",
+    "text": "Subanesthetic nasal esketamine for resistant depression; dissociative effects may be harnessed in psychotherapy.",
+    "sec": "s13-hallucinogens"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2025",
+    "title": "Monotherapy approval",
+    "text": "Approved in 2019 as add-on treatment, esketamine nasal spray was approved in January 2025 as **monotherapy** for treatment-resistant depression.",
+    "source": "FDA, January 2025"
+   }
+  ]
+ },
+ {
+  "id": "dextromethorphan",
+  "name": "Dextromethorphan",
+  "group": "NMDA antagonist",
+  "cls": "NMDA antagonist",
+  "nbn": "Glutamate NMDA receptor antagonist (open-channel)",
+  "short": "Open-channel NMDA antagonist.",
+  "mechanism": "A **weak NMDA antagonist** with stronger binding at **SERT** and **σ1** (also α1D and weak μ-opioid). It is rapidly metabolized by **CYP2D6**, so it is combined with a 2D6 inhibitor: **bupropion** (also an NDRI, with possible synergy) or **quinidine**. A **deuterated** form extends its half-life.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "s": 2
+   },
+   {
+    "t": "sigma",
+    "action": "binds",
+    "s": 1,
+    "note": "σ1"
+   },
+   {
+    "t": "nmda",
+    "action": "antagonist",
+    "s": 1,
+    "note": "Open-channel site"
+   },
+   {
+    "t": "alpha1",
+    "action": "binds",
+    "s": 1,
+    "note": "α1D"
+   },
+   {
+    "t": "mor",
+    "action": "binds",
+    "note": "Weak"
+   },
+   {
+    "t": "cyp2d6",
+    "action": "substrate",
+    "note": "Rapid metabolism"
+   }
+  ],
+  "uses": [
+   "**Pseudobulbar affect**",
+   "Agitation in Alzheimer disease",
+   "Rapid-acting antidepressant (Table 3-2 class actions)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "55"
+   },
+   {
+    "ch": "ch07",
+    "pages": "353–355"
+   },
+   {
+    "ch": "ch12",
+    "pages": "533–536"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "55",
+    "text": "Listed with PCP, ketamine and dextromethadone at NMDA open-channel sites (Table 3-2).",
+    "sec": "s3-drugs"
+   },
+   {
+    "ch": "ch07",
+    "pages": "353–354",
+    "text": "With **quinidine**: approved for **pseudobulbar affect**. With **bupropion** (AXS-05): FDA breakthrough therapy for MDD and fast track for TRD and Alzheimer agitation (at publication). Bars follow the plus signs in **Figure 7-84**.",
+    "sec": "s7-dxm"
+   },
+   {
+    "ch": "ch12",
+    "pages": "533–534",
+    "text": "A more robust NMDA antagonist than memantine; with **bupropion** (CYP2D6 inhibitor) it blocks NMDA receptors across the agitation network (cortex, thalamus, amygdala, VTA, LC) for **AD agitation**.",
+    "sec": "s12-agitation"
+   },
+   {
+    "ch": "ch12",
+    "pages": "535–536",
+    "text": "With **quinidine**, approved for **pseudobulbar affect** (NMDA and σ actions).",
+    "sec": "s12-pba-apathy"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2022",
+    "title": "Approved for depression",
+    "text": "**Dextromethorphan–bupropion** (Auvelity) was approved for major depressive disorder in adults in August 2022.",
+    "source": "FDA, August 2022"
+   },
+   {
+    "year": "2026",
+    "title": "Approved for Alzheimer agitation",
+    "text": "Axsome announced FDA approval of dextromethorphan–bupropion (Auvelity) for agitation associated with dementia due to Alzheimer disease on April 30, 2026.",
+    "source": "Axsome Therapeutics, April 30, 2026"
+   },
+   {
+    "year": "2024",
+    "title": "Deuterated dextromethorphan–quinidine trial failed",
+    "text": "AVP-786 (deuterated dextromethorphan with quinidine) missed its primary agitation endpoint in a phase 3 Alzheimer dementia trial reported in February 2024.",
+    "source": "Otsuka, February 12, 2024"
+   }
+  ]
+ },
+ {
+  "id": "quinidine",
+  "name": "Quinidine",
+  "group": "CYP2D6 inhibitor",
+  "cls": "CYP2D6 inhibitor (antiarrhythmic)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "353–354"
+   },
+   {
+    "ch": "ch12",
+    "pages": "534–536"
+   }
+  ],
+  "nts": [],
+  "short": "CYP2D6 inhibitor that boosts dextromethorphan levels.",
+  "mechanism": "Inhibits **CYP2D6** at doses below those with cardiovascular actions, preventing rapid breakdown of dextromethorphan.",
+  "targets": [
+   {
+    "t": "cyp2d6",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "With dextromethorphan: **pseudobulbar affect** (approved); depression and Alzheimer agitation (in trials at publication)"
+  ],
+  "facts": [
+   {
+    "ch": "ch12",
+    "pages": "534–536",
+    "text": "Combined with dextromethorphan for **pseudobulbar affect**, by inhibiting CYP2D6.",
+    "sec": "s12-pba-apathy"
+   }
+  ]
+ },
+ {
+  "id": "dextromethadone",
+  "name": "Dextromethadone",
+  "aka": [
+   "Esmethadone",
+   "REL-1017"
+  ],
+  "group": "NMDA antagonist",
+  "cls": "NMDA antagonist (investigational at publication)",
+  "short": "Open-channel NMDA antagonist studied as a rapid antidepressant.",
+  "mechanism": "The **dextro** enantiomer of methadone: a relatively more potent **NMDA antagonist** with much weaker μ-opioid agonism than levomethadone. Other binding (5HT2A, δ-opioid, SERT, σ) is less well characterized; μ action might enhance NMDA blockade via **NMDA–μ receptor dimers** (speculative).",
+  "targets": [
+   {
+    "t": "mor",
+    "action": "agonist",
+    "s": 2,
+    "note": "Weaker than levomethadone"
+   },
+   {
+    "t": "5ht2a",
+    "action": "binds",
+    "s": 1
+   },
+   {
+    "t": "nmda",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "s": 1
+   },
+   {
+    "t": "sigma",
+    "action": "binds",
+    "s": 1
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "55"
+   },
+   {
+    "ch": "ch07",
+    "pages": "355"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "55",
+    "text": "Listed among the NMDA open-channel antagonists in Table 3-2.",
+    "sec": "s3-drugs"
+   },
+   {
+    "ch": "ch07",
+    "pages": "355",
+    "text": "In clinical development (at publication) as a **rapid-onset** treatment for major depression with promising early results. Bars follow **Figure 7-86**; δ-opioid binding (+) has no separate target entry.",
+    "sec": "s7-dxm"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2024",
+    "title": "Development halted",
+    "text": "Relmada stopped its phase III trials of esmethadone (REL-1017) for adjunctive treatment of major depression in December 2024 after interim results showed little chance of success.",
+    "source": "Relmada Therapeutics, December 2024"
+   }
+  ]
+ },
+ {
+  "id": "allopregnanolone",
+  "name": "Allopregnanolone",
+  "aka": [
+   "brexanolone"
+  ],
+  "group": "Neuroactive steroid",
+  "cls": "Neuroactive steroid",
+  "nbn": "GABA-A positive allosteric modulator (neurosteroid site)",
+  "short": "Acts at benzodiazepine-insensitive neurosteroid sites on GABA-A (tonic inhibition).",
+  "mechanism": "A **neuroactive steroid** acting as a full agonist at **benzodiazepine-insensitive neurosteroid sites** on GABA-A receptors, which mediate **tonic** inhibition. Details in Chapter 7.",
+  "targets": [
+   {
+    "t": "gabaa",
+    "action": "positive allosteric modulator",
+    "note": "Neurosteroid site; tonic inhibition"
+   }
+  ],
+  "uses": [
+   "**Postpartum depression**",
+   "Rapid-acting antidepressant",
+   "Anesthetic"
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "55"
+   },
+   {
+    "ch": "ch06",
+    "pages": "263–264"
+   },
+   {
+    "ch": "ch07",
+    "pages": "320–322"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "55",
+    "text": "The neuroactive steroid listed in Table 3-2 for postpartum depression, rapid antidepressant and anesthetic actions.",
+    "sec": "s3-drugs"
+   },
+   {
+    "ch": "ch06",
+    "pages": "263–264",
+    "text": "A neuroactive steroid acting mainly at **extrasynaptic δ** GABA-A sites (tonic inhibition). Postpartum depression may follow the **fall** in neurosteroids after delivery; a **60-hour IV infusion** may reverse it.",
+    "sec": "s6-neurosteroids"
+   },
+   {
+    "ch": "ch07",
+    "pages": "320–322",
+    "text": "Given IV as **brexanolone** for postpartum depression; neuroactive steroids act at both benzodiazepine-sensitive and **benzodiazepine-insensitive** GABA-A receptors.",
+    "sec": "s7-neurosteroids"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "An oral neurosteroid",
+    "text": "**Zuranolone**, an oral neuroactive steroid GABA-A PAM, was approved in August 2023 as the first oral treatment for postpartum depression.",
+    "source": "FDA, August 4, 2023"
+   }
+  ]
+ },
+ {
+  "id": "brexanolone",
+  "name": "Brexanolone",
+  "brand": "Zulresso",
+  "group": "Neuroactive steroid",
+  "cls": "Neuroactive steroid (IV allopregnanolone)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "320–322"
+   }
+  ],
+  "nbn": "GABA-A positive allosteric modulator (neurosteroid site)",
+  "nts": [
+   "gaba"
+  ],
+  "short": "Cyclodextrin-based IV allopregnanolone; a 60-hour infusion for postpartum depression.",
+  "mechanism": "A **cyclodextrin-based intravenous** formulation of **allopregnanolone**, a PAM at the neuroactive steroid site of **benzodiazepine-sensitive and -insensitive** GABA-A receptors. Restoring neurosteroid levels after their postpartum fall rapidly reverses depression.",
+  "targets": [
+   {
+    "t": "gabaa",
+    "action": "positive allosteric modulator",
+    "note": "Neurosteroid site; synaptic and extrasynaptic"
+   }
+  ],
+  "uses": [
+   "**Postpartum depression**: 60-hour continuous IV infusion, rapid and sustained effect"
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "320–321",
+    "text": "The 60-hour duration seems to give patients time to accommodate to lower neurosteroid levels without relapse.",
+    "sec": "s7-neurosteroids"
+   }
+  ],
+  "updates": [
+   {
+    "year": "2025",
+    "title": "Withdrawn from the market",
+    "text": "At Sage Therapeutics’ request, the FDA withdrew approval of Zulresso (brexanolone) effective April 14, 2025; the company said it was no longer marketed.",
+    "source": "Federal Register, March 14, 2025"
+   }
+  ]
+ },
+ {
+  "id": "zuranolone",
+  "name": "Zuranolone (SAGE-217)",
+  "brand": "Zurzuvae",
+  "aka": [
+   "SAGE-217"
+  ],
+  "group": "Neuroactive steroid",
+  "cls": "Oral neuroactive steroid",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "322"
+   }
+  ],
+  "nbn": "GABA-A positive allosteric modulator (neurosteroid site)",
+  "nts": [
+   "gaba"
+  ],
+  "short": "Synthetic oral allopregnanolone analogue (SAGE-217 in the book).",
+  "mechanism": "A synthetic, **orally active allopregnanolone analogue**; like brexanolone it enhances GABA at GABA-A receptors via the neuroactive steroid site.",
+  "targets": [
+   {
+    "t": "gabaa",
+    "action": "positive allosteric modulator",
+    "note": "Neurosteroid site"
+   }
+  ],
+  "uses": [
+   "In testing (at publication) as a **rapid-onset** treatment for major depressive disorder"
+  ],
+  "updates": [
+   {
+    "year": "2023",
+    "title": "Approved for postpartum depression",
+    "text": "Approved in August 2023 as the first oral treatment for postpartum depression (once daily for 14 days); the major depressive disorder application received a complete response letter.",
+    "source": "FDA, August 4, 2023"
+   }
+  ]
+ }
+]

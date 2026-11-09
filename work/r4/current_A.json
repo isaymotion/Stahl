@@ -1,0 +1,1011 @@
+[
+ {
+  "id": "amitriptyline",
+  "name": "Amitriptyline",
+  "brand": "Elavil",
+  "aka": [
+   "Endep",
+   "Tryptizol",
+   "Laroxyl"
+  ],
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "short": "A tricyclic blocking NET and SERT plus H1, α1, muscarinic receptors and sodium channels.",
+  "mechanism": "Like most TCAs it blocks both **NET** and **SERT** to some extent, plus the four unwanted TCA actions: **H1, muscarinic, α1** and **voltage-sensitive sodium channel** blockade.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor"
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "note": "Most TCAs block both to some extent"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ],
+  "chapters": [
+   {
+    "ch": "ch01",
+    "pages": "6"
+   },
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch01",
+    "pages": "6",
+    "text": "Entered clinical practice **before molecular clarification of the serotonin transporter site**.",
+    "sec": "s1-nts"
+   },
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (Elavil; Endep; Tryptizol; Laroxyl).",
+    "sec": "s7-tca"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ]
+ },
+ {
+  "id": "clomipramine",
+  "name": "Clomipramine",
+  "brand": "Anafranil",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   },
+   {
+    "ch": "ch13",
+    "pages": "577"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "serotonin",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "**Obsessive–compulsive disorder**",
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Anafranil.",
+    "sec": "s7-tca"
+   },
+   {
+    "ch": "ch13",
+    "pages": "577",
+    "text": "A second-line option for **OCD** after SSRIs.",
+    "sec": "s13-ocd"
+   }
+  ],
+  "short": "TCA with the strongest SERT inhibition; treats OCD.",
+  "mechanism": "A TCA with **equal or greater potency at SERT** than NET, plus the shared H1, muscarinic, α1 and sodium channel blockade.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "note": "Equal or greater than NET"
+   },
+   {
+    "t": "net",
+    "action": "inhibitor"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "imipramine",
+  "name": "Imipramine",
+  "brand": "Tofranil",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "serotonin",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Tofranil.",
+    "sec": "s7-tca"
+   }
+  ],
+  "short": "Classic TCA blocking NET and SERT.",
+  "mechanism": "A classic TCA blocking **NET** and, to some extent, **SERT**, with the shared H1, muscarinic, α1 and sodium channel blockade.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor"
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "desipramine",
+  "name": "Desipramine",
+  "brand": "Norpramin; Pertofran",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   },
+   {
+    "ch": "ch11",
+    "pages": "480"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Norpramin; Pertofran.",
+    "sec": "s7-tca"
+   },
+   {
+    "ch": "ch11",
+    "pages": "480",
+    "text": "Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.",
+    "sec": "s11-nri"
+   }
+  ],
+  "short": "Relatively NET-selective TCA.",
+  "mechanism": "A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Relatively selective"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "nortriptyline",
+  "name": "Nortriptyline",
+  "brand": "Pamelor; Aventyl",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   },
+   {
+    "ch": "ch11",
+    "pages": "480"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Pamelor; Aventyl.",
+    "sec": "s7-tca"
+   },
+   {
+    "ch": "ch11",
+    "pages": "480",
+    "text": "Has NET-inhibiting actions and has been used for ADHD with varying success; only atomoxetine is approved.",
+    "sec": "s11-nri"
+   }
+  ],
+  "short": "Relatively NET-selective TCA.",
+  "mechanism": "A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Relatively selective"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "protriptyline",
+  "name": "Protriptyline",
+  "brand": "Vivactil",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Vivactil.",
+    "sec": "s7-tca"
+   }
+  ],
+  "short": "Relatively NET-selective TCA.",
+  "mechanism": "A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Relatively selective"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "maprotiline",
+  "name": "Maprotiline",
+  "brand": "Ludiomil",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Ludiomil.",
+    "sec": "s7-tca"
+   }
+  ],
+  "short": "Relatively NET-selective TCA.",
+  "mechanism": "A TCA **more selective for NET** than SERT, with the shared H1, muscarinic, α1 and sodium channel blockade.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Relatively selective"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "amoxapine",
+  "name": "Amoxapine",
+  "brand": "Asendin",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "serotonin",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Asendin.",
+    "sec": "s7-tca"
+   }
+  ],
+  "short": "Tricyclic listed in Table 7-2.",
+  "mechanism": "Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Class property"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "doxepin",
+  "name": "Doxepin",
+  "brand": "Sinequan; Adapin",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   },
+   {
+    "ch": "ch10",
+    "pages": "425–427"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "serotonin",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)",
+   "**Insomnia** at low doses (1–6 mg)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Sinequan; Adapin.",
+    "sec": "s7-tca"
+   },
+   {
+    "ch": "ch10",
+    "pages": "425–427",
+    "text": "At **1–6 mg** a relatively **selective H1 antagonist** hypnotic without anticholinergic or reuptake actions (antidepressant dose 150–300 mg); used in trace doses as an H1 PET ligand.",
+    "sec": "s10-arousal-blockers"
+   }
+  ],
+  "short": "Tricyclic listed in Table 7-2.",
+  "mechanism": "Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Class property"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "trimipramine",
+  "name": "Trimipramine",
+  "brand": "Surmontil",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "serotonin",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Surmontil.",
+    "sec": "s7-tca"
+   }
+  ],
+  "short": "Tricyclic listed in Table 7-2.",
+  "mechanism": "Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Class property"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "dothiepin",
+  "name": "Dothiepin",
+  "brand": "Prothiaden",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "serotonin",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Prothiaden.",
+    "sec": "s7-tca"
+   }
+  ],
+  "short": "Tricyclic listed in Table 7-2.",
+  "mechanism": "Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Class property"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "lofepramine",
+  "name": "Lofepramine",
+  "brand": "Deprimyl; Gamanil",
+  "group": "Tricyclic antidepressant",
+  "cls": "Tricyclic antidepressant (TCA)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "333–336"
+   }
+  ],
+  "nbn": "Norepinephrine (and serotonin) reuptake inhibitor with multiple receptor antagonism",
+  "nts": [
+   "norepinephrine",
+   "serotonin",
+   "histamine",
+   "acetylcholine"
+  ],
+  "uses": [
+   "Unipolar depression (second line, for treatment resistance)",
+   "Anti-panic effects at antidepressant doses; low doses for neuropathic and low back pain (class)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (TCAs still in use); trade names: Deprimyl; Gamanil.",
+    "sec": "s7-tca"
+   }
+  ],
+  "short": "Tricyclic listed in Table 7-2.",
+  "mechanism": "Listed among TCAs still in use. The book describes TCAs as a class: all block **NET** (many also SERT) and share H1, muscarinic, α1 and sodium channel blockade; individual profiles are not detailed.",
+  "targets": [
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Class property"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist"
+   },
+   {
+    "t": "alpha1",
+    "action": "antagonist"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Muscarinic cholinergic receptors"
+   },
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Weak at therapeutic doses; lethal in overdose"
+   }
+  ]
+ },
+ {
+  "id": "tianeptine",
+  "name": "Tianeptine",
+  "brand": "Coaxil; Stablon",
+  "group": "Tricyclic antidepressant",
+  "cls": "Listed with the tricyclics (Table 7-2)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "335"
+   }
+  ],
+  "nts": [],
+  "short": "Listed in Table 7-2 among tricyclics still in use; pharmacology not described.",
+  "mechanism": "Appears in the book’s table of tricyclics still in use; Chapter 7 does not describe its pharmacology.",
+  "uses": [
+   "Depression (outside the US)"
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "335",
+    "text": "Listed in **Table 7-2** (Coaxil; Stablon).",
+    "sec": "s7-tca"
+   }
+  ]
+ }
+]

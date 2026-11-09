@@ -1,0 +1,374 @@
+{
+ "amitriptyline": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "clomipramine": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [
+   "The one TCA the book singles out as having **anti-OCD** efficacy, showing TCAs are not only antidepressants; it is also the example of a TCA with **SERT potency at least equal to NET**."
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p335"
+   ]
+  }
+ },
+ "imipramine": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "desipramine": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "nortriptyline": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "protriptyline": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "maprotiline": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "amoxapine": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "doxepin": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "trimipramine": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "dothiepin": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "lofepramine": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   },
+   {
+    "e": "Dry mouth, blurred vision, urinary retention, constipation",
+    "via": "Muscarinic antagonism"
+   },
+   {
+    "e": "Orthostatic hypotension, dizziness",
+    "via": "α1 antagonism"
+   },
+   {
+    "e": "Overdose: coma, seizures, arrhythmia, cardiac arrest (lethal dose ≈ 30-day supply)",
+    "via": "Voltage-sensitive sodium channel blockade"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "tianeptine": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {
+   "sideEffects": [],
+   "pearls": []
+  }
+ }
+}

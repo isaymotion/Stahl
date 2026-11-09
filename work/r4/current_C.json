@@ -1,0 +1,554 @@
+[
+ {
+  "id": "fluoxetine",
+  "name": "Fluoxetine",
+  "brand": "Prozac",
+  "group": "SSRI",
+  "cls": "Selective serotonin reuptake inhibitor (SSRI)",
+  "nbn": "Serotonin transport (SERT) inhibitor",
+  "short": "An activating SSRI with 5HT2C antagonism and a very long half-life.",
+  "mechanism": "Blocks **SERT**; also a **5HT2C antagonist**, which disinhibits NE and DA release and makes it **activating** from the first dose; weak **NET** inhibition only at very high doses. Half-life **2–3 days**; active metabolite about **2 weeks**.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "note": "Allosteric site (Chapter 2)"
+   },
+   {
+    "t": "5ht2c",
+    "action": "antagonist"
+   },
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Weak; relevant only at very high doses"
+   }
+  ],
+  "uses": [
+   "Unipolar depression (SSRIs are first-line for many depressions)",
+   "As a SERT blocker, part of the class used for anxiety disorders, OCD, PTSD, eating disorders and other conditions (Chapter 2 overview)",
+   "Only SSRI approved for **bulimia** (higher doses)",
+   "With **olanzapine**: treatment-resistant unipolar and bipolar depression",
+   "Best matched to reduced positive affect, hypersomnia, psychomotor retardation, apathy, fatigue"
+  ],
+  "chapters": [
+   {
+    "ch": "ch01",
+    "pages": "5–6"
+   },
+   {
+    "ch": "ch02",
+    "pages": "33"
+   },
+   {
+    "ch": "ch05",
+    "pages": "226"
+   },
+   {
+    "ch": "ch07",
+    "pages": "289–294, 325–326, 343"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch01",
+    "pages": "6",
+    "text": "Entered clinical practice **before molecular clarification of the serotonin transporter site**.",
+    "sec": "s1-nts"
+   },
+   {
+    "ch": "ch02",
+    "pages": "33",
+    "text": "The book’s example of an SSRI at SERT’s **inhibitory allosteric site** (the “front seat” of the transporter wagon), reducing SERT’s affinity for serotonin.",
+    "sec": "s2-monoamine"
+   },
+   {
+    "ch": "ch05",
+    "pages": "226",
+    "text": "Combined with **olanzapine** for bipolar depression and treatment-resistant unipolar depression; 5HT2C antagonism of both may contribute.",
+    "sec": "s5-pines"
+   },
+   {
+    "ch": "ch07",
+    "pages": "293–294",
+    "text": "Long half-life reduces **withdrawal** reactions but means slow washout before starting drugs such as an **MAOI**; available once daily and **once weekly**.",
+    "sec": "s7-ssri-agents"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "Unwanted activation, even panic, in agitated, anxious or insomniac patients",
+    "via": "5HT2C antagonism"
+   }
+  ]
+ },
+ {
+  "id": "sertraline",
+  "name": "Sertraline",
+  "brand": "Zoloft",
+  "group": "SSRI",
+  "cls": "Selective serotonin reuptake inhibitor (SSRI)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "292–295"
+   },
+   {
+    "ch": "ch08",
+    "pages": "377–378"
+   }
+  ],
+  "nbn": "Serotonin transport (SERT) inhibitor",
+  "nts": [
+   "serotonin",
+   "dopamine"
+  ],
+  "short": "SSRI with weak DAT inhibition and σ1 binding.",
+  "mechanism": "Blocks **SERT**; also weakly inhibits **DAT** (clinical relevance debated, though a little DAT inhibition may aid energy, motivation and concentration) and binds **σ1** receptors.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor"
+   },
+   {
+    "t": "dat",
+    "action": "inhibitor",
+    "note": "Weak; relevance debated"
+   },
+   {
+    "t": "sigma",
+    "action": "binds",
+    "note": "σ1"
+   }
+  ],
+  "uses": [
+   "Unipolar major depression",
+   "Anxiety disorders, PTSD, OCD, premenstrual dysphoric disorder, eating disorders (class uses)",
+   "Mild activation may help **atypical depression** (hypersomnia, low energy, mood reactivity)",
+   "Possible advantage in **psychotic/delusional depression** (σ1)",
+   "With bupropion (“Well-oft”)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   },
+   {
+    "e": "Overactivation of some **panic** patients (titrate slowly)",
+    "via": "Weak DAT inhibition"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "294–295",
+    "text": "σ1 actions may contribute to anxiolytic effects and benefit in psychotic and delusional depression.",
+    "sec": "s7-ssri-agents"
+   },
+   {
+    "ch": "ch08",
+    "pages": "377–378",
+    "text": "Combined with **brexpiprazole** for PTSD in testing at publication.",
+    "sec": "s8-ptsd"
+   }
+  ]
+ },
+ {
+  "id": "paroxetine",
+  "name": "Paroxetine",
+  "brand": "Paxil",
+  "group": "SSRI",
+  "cls": "Selective serotonin reuptake inhibitor (SSRI)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "294–295"
+   }
+  ],
+  "nbn": "Serotonin transport (SERT) inhibitor",
+  "nts": [
+   "serotonin",
+   "norepinephrine",
+   "acetylcholine"
+  ],
+  "short": "Calming SSRI with mild anticholinergic, weak NET and NOS-inhibiting actions.",
+  "mechanism": "Blocks **SERT**; mild **M1** antagonism (calming, even sedating early), weak **NET** inhibition (may add antidepressant action at high doses) and inhibition of **nitric oxide synthase**.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor"
+   },
+   {
+    "t": "m1",
+    "action": "antagonist",
+    "note": "Mild"
+   },
+   {
+    "t": "net",
+    "action": "inhibitor",
+    "note": "Weak to moderate"
+   },
+   {
+    "t": "nos",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "Unipolar major depression",
+   "Anxiety disorders, PTSD, OCD, premenstrual dysphoric disorder, eating disorders (class uses)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   },
+   {
+    "e": "Sexual dysfunction, especially in men",
+    "via": "NOS inhibition plus 5HT2A/2C stimulation"
+   },
+   {
+    "e": "Notorious **withdrawal**: akathisia, restlessness, GI upset, dizziness, tingling",
+    "via": "SERT inhibition plus **anticholinergic rebound**"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "295",
+    "text": "A **controlled-release** form may reduce side effects including discontinuation reactions.",
+    "sec": "s7-ssri-agents"
+   }
+  ]
+ },
+ {
+  "id": "fluvoxamine",
+  "name": "Fluvoxamine",
+  "brand": "Luvox",
+  "group": "SSRI",
+  "cls": "Selective serotonin reuptake inhibitor (SSRI)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "295"
+   }
+  ],
+  "nbn": "Serotonin transport (SERT) inhibitor",
+  "nts": [
+   "serotonin"
+  ],
+  "short": "SSRI with potent σ1 binding; an OCD drug in the US.",
+  "mechanism": "Blocks **SERT** and binds **σ1** sites more potently than sertraline; preclinical data suggest it may be a σ1 **agonist**, possibly adding anxiolytic action.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor"
+   },
+   {
+    "t": "sigma",
+    "action": "binds",
+    "note": "σ1; possibly agonist"
+   }
+  ],
+  "uses": [
+   "**OCD** (never approved for depression in the US)",
+   "Depression elsewhere; one of the first SSRIs launched worldwide",
+   "Psychotic/delusional depression",
+   "CR form: high remission in **OCD** and **social anxiety disorder**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "295",
+    "text": "The **controlled-release** form allows once-daily dosing (IR often twice daily) and may cause less peak-dose sedation.",
+    "sec": "s7-ssri-agents"
+   }
+  ]
+ },
+ {
+  "id": "citalopram",
+  "name": "Citalopram",
+  "brand": "Celexa",
+  "group": "SSRI",
+  "cls": "Selective serotonin reuptake inhibitor (SSRI)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "295–296"
+   },
+   {
+    "ch": "ch12",
+    "pages": "534–535"
+   }
+  ],
+  "nbn": "Serotonin transport (SERT) inhibitor",
+  "nts": [
+   "serotonin"
+  ],
+  "short": "Racemic SSRI; the R enantiomer adds antihistamine action and may hinder SERT inhibition.",
+  "mechanism": "A racemic mixture of **R and S** enantiomers. S inhibits **SERT**; R carries weak **antihistamine** action and may act at SERT in a way that **interferes** with S, reducing net SERT inhibition, especially at low doses.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "note": "S enantiomer"
+   },
+   {
+    "t": "h1",
+    "action": "antagonist",
+    "note": "Weak; R enantiomer"
+   }
+  ],
+  "uses": [
+   "Unipolar depression; favorable findings in the **elderly**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   },
+   {
+    "e": "**QTc prolongation** at higher doses (limits dose increases)",
+    "via": "Dose-related"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "295–296",
+    "text": "Generally well tolerated but somewhat **inconsistent** at the lowest dose, often needing a dose increase that QTc concerns limit.",
+    "sec": "s7-ssri-agents"
+   },
+   {
+    "ch": "ch12",
+    "pages": "534–535",
+    "text": "Limited efficacy for depression in dementia; may help **agitation**, but prolongs **QT**.",
+    "sec": "s12-depression"
+   }
+  ]
+ },
+ {
+  "id": "escitalopram",
+  "name": "Escitalopram",
+  "brand": "Lexapro",
+  "group": "SSRI",
+  "cls": "Selective serotonin reuptake inhibitor (SSRI)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "296"
+   },
+   {
+    "ch": "ch12",
+    "pages": "534–537"
+   }
+  ],
+  "nbn": "Serotonin transport (SERT) inhibitor",
+  "nts": [
+   "serotonin"
+  ],
+  "short": "The pure S enantiomer of citalopram: the “quintessential SSRI.”",
+  "mechanism": "The active **S enantiomer** of citalopram, without the R enantiomer. **Pure SERT inhibition** explains almost all of its actions.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor"
+   }
+  ],
+  "uses": [
+   "Unipolar major depression",
+   "Anxiety disorders, PTSD, OCD, premenstrual dysphoric disorder, eating disorders (class uses)"
+  ],
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "296",
+    "text": "No antihistamine action, no higher-dose **QTc** restriction, lowest dose predictably effective; perhaps the **best-tolerated** SSRI with the **fewest CYP450 interactions**.",
+    "sec": "s7-ssri-agents"
+   },
+   {
+    "ch": "ch12",
+    "pages": "534–535",
+    "text": "May match citalopram in dementia without **QT** prolongation; SSRIs/SNRIs may help apathy in FTD.",
+    "sec": "s12-depression"
+   }
+  ]
+ },
+ {
+  "id": "vilazodone",
+  "name": "Vilazodone",
+  "brand": "Viibryd",
+  "group": "Antidepressant",
+  "cls": "Serotonin partial agonist reuptake inhibitor (SPARI)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "296–298"
+   },
+   {
+    "ch": "ch08",
+    "pages": "368–370, 377"
+   }
+  ],
+  "nbn": "Serotonin reuptake inhibitor and 5HT1A partial agonist",
+  "nts": [
+   "serotonin",
+   "dopamine"
+  ],
+  "short": "SPARI: SERT inhibition plus 5HT1A partial agonism in one molecule.",
+  "mechanism": "Inhibits **SERT** and is a **5HT1A partial agonist**. About half of SERTs and half of 5HT1A receptors are occupied immediately; partial agonism at somatodendritic autoreceptors speeds their **desensitization**, and postsynaptic 5HT1A action may release **dopamine** downstream.",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor"
+   },
+   {
+    "t": "5ht1a",
+    "action": "partial agonist"
+   }
+  ],
+  "uses": [
+   "Unipolar depression"
+  ],
+  "sideEffects": [
+   {
+    "e": "Less sexual dysfunction and weight gain (observed)",
+    "via": "Downstream DA release from 5HT1A partial agonism"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "296",
+    "text": "Recreates in one drug the long-used strategy of adding a 5HT1A partial agonist (buspirone, aripiprazole, brexpiprazole, cariprazine, quetiapine) to an SSRI, avoiding drug interactions and off-target effects.",
+    "sec": "s7-spari"
+   },
+   {
+    "ch": "ch08",
+    "pages": "368–370, 377",
+    "text": "Should theoretically be **anxiolytic** (SERT inhibition + 5HT1A partial agonism); an off-label option for anxiety.",
+    "sec": "s8-gad"
+   }
+  ]
+ },
+ {
+  "id": "vortioxetine",
+  "name": "Vortioxetine",
+  "brand": "Trintellix",
+  "group": "Antidepressant",
+  "cls": "Multimodal serotonergic agent",
+  "short": "SERT inhibitor with 5HT3/5HT7 antagonism, 5HT1A agonism and 5HT1B/D partial agonism; pro-cognitive.",
+  "mechanism": "Inhibits **SERT**; **5HT3** antagonist (one of its most potent actions) and **5HT7** antagonist; **5HT1A agonist**; weak **5HT1B/D** partial agonist/antagonist. Some actions raise 5HT further (SERT, 5HT1B/D, 5HT7), others release **DA, NE, ACh and histamine** (5HT1A, 5HT1B heteroreceptors, 5HT3).",
+  "targets": [
+   {
+    "t": "sert",
+    "action": "inhibitor"
+   },
+   {
+    "t": "5ht3",
+    "action": "antagonist",
+    "note": "One of its most potent actions"
+   },
+   {
+    "t": "5ht7",
+    "action": "antagonist"
+   },
+   {
+    "t": "5ht1a",
+    "action": "agonist"
+   },
+   {
+    "t": "5ht1b1d",
+    "action": "partial agonist",
+    "note": "Weak partial agonist to antagonist"
+   }
+  ],
+  "uses": [
+   "Antidepressant; possibly pro-cognitive (Table 3-2)",
+   "Unipolar depression with **cognitive symptoms**: superior on the **DSST** (processing speed)"
+  ],
+  "chapters": [
+   {
+    "ch": "ch03",
+    "pages": "55"
+   },
+   {
+    "ch": "ch07",
+    "pages": "315–320"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch03",
+    "pages": "55",
+    "text": "A **5HT3 antagonist** with pro-cognitive and antidepressant actions (Table 3-2).",
+    "sec": "s3-drugs"
+   },
+   {
+    "ch": "ch07",
+    "pages": "315–320",
+    "text": "The DSST samples attention, executive function, memory and mostly **processing speed** (the “Fab Four”); vortioxetine improves it more than other antidepressants.",
+    "sec": "s7-vortioxetine"
+   }
+  ],
+  "nbn": "Serotonin reuptake inhibitor and receptor modulator (multimodal)",
+  "nts": [
+   "serotonin",
+   "norepinephrine",
+   "dopamine",
+   "acetylcholine",
+   "histamine"
+  ]
+ }
+]

@@ -1,0 +1,50 @@
+{
+ "venlafaxine": {
+  "pearls": [
+   "Dose-titrate skillfully: experienced prescribers use **titration** to cope with the unpredictable NET effect",
+   "Whether SNRIs truly beat SSRIs for remission or resistant depression is still **debated**, though the dual mechanism makes it plausible"
+  ]
+ },
+ "duloxetine": {
+  "pearls": [
+   "Relieves **pain without depression** as well as depression without pain"
+  ]
+ },
+ "bupropion": {
+  "pearls": [
+   "Not scheduled and not known to be **abusable**, yet effective for nicotine addiction",
+   "PFC has no DAT, so **NET blockade** there raises DA as well as NE",
+   "Added to sertraline, nicknamed “**Well-oft**” (Wellbutrin plus Zoloft)"
+  ]
+ },
+ "agomelatine": {
+  "pearls": [
+   "Rationale: some depressed patients have **out-of-sync rhythms** and low nocturnal melatonin",
+   "Shares **5HT2C antagonism** with fluoxetine, trazodone, mirtazapine and some TCAs; olanzapine and quetiapine too, for bipolar depression"
+  ]
+ },
+ "mirtazapine": {
+  "pearls": [
+   "**5HT3 blockade** may protect against serotonin-driven GI side effects such as nausea",
+   "**5HT2A blockade** improves slow-wave sleep, helpful in many depressed patients",
+   "SNRI plus mirtazapine gives a theoretical **quadruple boost** of 5HT and NE (reuptake, α2, 5HT2A, 5HT2C blockade) and possibly extra DA",
+   "Reuptake blockade and **α2 antagonism are synergistic**, so combining them disinhibits 5HT and NE much more"
+  ]
+ },
+ "mianserin": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism (as with mirtazapine)"
+   }
+  ]
+ },
+ "trazodone": {
+  "pearls": [
+   "Best hypnotic delivery is a **standard immediate-release** oral form: quick onset, gone by morning",
+   "Hypnotic action from the first dose gives **rapid onset** and better tolerability than SSRIs/SNRIs",
+   "Treating residual insomnia may also lift **remission rates** by improving energy and mood",
+   "Combined **α1 + 5HT2A blockade** is thought to boost PFC dopamine release"
+  ]
+ }
+}

@@ -1,0 +1,228 @@
+{
+ "lithium": {
+  "sideEffects": [
+   {
+    "e": "GI upset: dyspepsia, nausea, vomiting, diarrhea",
+    "via": "Lithium"
+   },
+   {
+    "e": "Weight gain, hair loss, acne, tremor, sedation, decreased cognition, incoordination",
+    "via": "Lithium"
+   },
+   {
+    "e": "Long-term **thyroid** and **kidney** effects",
+    "via": "Lithium"
+   },
+   {
+    "e": "Toxicity risk: **narrow therapeutic window**; monitor plasma levels",
+    "via": "Pharmacokinetics"
+   }
+  ],
+  "pearls": [
+   "Use has **declined**: newer options, side effects and the monitoring burden all contribute",
+   "Best-evidenced mania combination: **lithium plus a serotonin/dopamine blocker**",
+   "**Rapid cycling and mixed** episodes are hard to treat; combinations such as lithium + valproate + a 5HT/DA blocker are usual",
+   "Pairing with a 5HT/DA blocker is for mania, **not schizophrenia** (no clear added benefit there)",
+   "Older practice: **augmenting tricyclics** in unipolar depression, at lower than antimanic doses"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p346",
+    "p353",
+    "p349",
+    "p342",
+    "p332"
+   ]
+  }
+ },
+ "valproate": {
+  "sideEffects": [
+   {
+    "e": "Hair loss, weight gain, sedation",
+    "via": "Dose-related; harm adherence"
+   },
+   {
+    "e": "Bone marrow, liver and pancreatic toxicity; monitor counts and platelets",
+    "via": "Chronic exposure"
+   },
+   {
+    "e": "**Neural-tube defects** and other fetal toxicity",
+    "via": "Teratogenic"
+   },
+   {
+    "e": "Amenorrhea, **polycystic ovaries**, hyperandrogenism, obesity, insulin resistance in women",
+    "via": "Valproate exposure"
+   }
+  ],
+  "pearls": [
+   "Distinctive proven use is **migraine** (carbamazepine's is neuropathic pain)",
+   "**Pushing the dose** may be ideal for efficacy, but side effects often cost adherence",
+   "Lowering the dose eases some problems but **cuts efficacy**, so combine with other mood stabilizers",
+   "Some toxicities track **duration of exposure**, not dose, so dose reduction may not prevent them",
+   "Weak evidence for **depression**: no convincing protection against depressive recurrence",
+   "Blood counts **including platelets** need periodic monitoring"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p350",
+    "p349",
+    "p350",
+    "p350",
+    "p349",
+    "p350"
+   ]
+  }
+ },
+ "carbamazepine": {
+  "sideEffects": [
+   {
+    "e": "Profound early **bone marrow suppression**: monitor blood counts",
+    "via": "Carbamazepine"
+   },
+   {
+    "e": "Drug interactions",
+    "via": "**CYP3A4 induction**"
+   },
+   {
+    "e": "Sedation",
+    "via": "Ion channel actions"
+   },
+   {
+    "e": "**Neural-tube defects**",
+    "via": "Teratogenic"
+   }
+  ],
+  "pearls": [
+   "Distinctive proven use is **neuropathic pain** (valproate's is migraine)",
+   "Bone marrow suppression is more profound **early on**: check blood counts at the start",
+   "Hypothesized VSSC action **differs from valproate** but resembles oxcarbazepine/eslicarbazepine",
+   "Like valproate, treats mania **from above**; both are sedating"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p350",
+    "p350",
+    "p350",
+    "p350"
+   ]
+  }
+ },
+ "lamotrigine": {
+  "sideEffects": [
+   {
+    "e": "**Rash**, rarely **Stevens–Johnson syndrome** (toxic epidermal necrolysis)",
+    "via": "Minimized by very slow titration and managing interactions (e.g., **valproate** raises levels)"
+   }
+  ],
+  "pearls": [
+   "Approved to **prevent** recurrence of both poles, but not to treat acute mania or depression",
+   "Generally **well tolerated** apart from rash",
+   "Learn to tell **benign from serious rash** (see Prescriber's Guide)",
+   "Practice-based **bipolar depression** combo: add to a serotonin/dopamine blocker"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": [
+    "p350",
+    "p352",
+    "p352",
+    "p353"
+   ]
+  }
+ },
+ "oxcarbazepine": {
+  "sideEffects": [
+   {
+    "e": "Less sedation, bone marrow toxicity and CYP3A4 interaction than carbamazepine",
+    "via": "Different metabolism"
+   }
+  ],
+  "pearls": [
+   "Same presumed mechanism as carbamazepine but **easier to dose** and better tolerated",
+   "Off-label use rests on **mechanism and tolerability**, not proof in acute mania or depression"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": [
+    "p352",
+    "p352"
+   ]
+  }
+ },
+ "eslicarbazepine": {
+  "sideEffects": [],
+  "pearls": [
+   "Oxcarbazepine **works via** this active form, now sold as its own anticonvulsant",
+   "Used off-label for mania only **more recently** than oxcarbazepine"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p352",
+    "p352"
+   ]
+  }
+ },
+ "topiramate": {
+  "sideEffects": [
+   {
+    "e": "Weight loss",
+    "via": "Topiramate"
+   },
+   {
+    "e": "Unacceptable sedation in some",
+    "via": "Topiramate"
+   }
+  ],
+  "pearls": [
+   "Bipolar trials **inconsistent** and clinical practice unconvincing as a mood stabilizer",
+   "Sometimes added to antipsychotics or mood stabilizers that cause **weight gain**"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p352",
+    "p352"
+   ]
+  }
+ },
+ "riluzole": {
+  "sideEffects": [],
+  "pearls": [
+   "Developed for **ALS**; anticonvulsant action seen in preclinical models",
+   "Excess glutamate may occur in **bipolar depression**, though not severe enough to kill neurons"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p352-353",
+    "p353"
+   ]
+  }
+ }
+}

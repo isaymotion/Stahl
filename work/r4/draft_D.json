@@ -1,0 +1,262 @@
+{
+ "venlafaxine": {
+  "sideEffects": [
+   {
+    "e": "Sweating, raised blood pressure",
+    "via": "NET inhibition"
+   },
+   {
+    "e": "Nausea and other serotonergic effects",
+    "via": "SERT inhibition"
+   },
+   {
+    "e": "Bothersome **withdrawal**, especially after high-dose long-term use",
+    "via": "Sudden discontinuation"
+   },
+   {
+    "e": "Nausea, worse with the IR form",
+    "via": "IR formulation (now little used)"
+   }
+  ],
+  "pearls": [
+   "Dose-titrate skillfully: experienced prescribers use **titration** to cope with the unpredictable NET effect",
+   "Whether SNRIs truly beat SSRIs for remission or resistant depression is still **debated**, though the dual mechanism makes it plausible"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p302",
+    "p302"
+   ]
+  }
+ },
+ "desvenlafaxine": {
+  "sideEffects": [
+   {
+    "e": "Sweating, raised blood pressure",
+    "via": "NET inhibition"
+   },
+   {
+    "e": "Nausea and other serotonergic effects",
+    "via": "SERT inhibition"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "duloxetine": {
+  "sideEffects": [
+   {
+    "e": "Sweating, raised blood pressure",
+    "via": "NET inhibition"
+   },
+   {
+    "e": "Nausea and other serotonergic effects",
+    "via": "SERT inhibition"
+   }
+  ],
+  "pearls": [
+   "Relieves **pain without depression** as well as depression without pain",
+   "Painful physical symptoms are **absent from the diagnostic criteria** for depression yet are common and a leading residual symptom"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p302",
+    "p302-303"
+   ]
+  }
+ },
+ "milnacipran": {
+  "sideEffects": [
+   {
+    "e": "More **sweating** and **urinary hesitancy**",
+    "via": "Robust NET inhibition (bladder α1)"
+   },
+   {
+    "e": "Energizing/activating",
+    "via": "NET inhibition"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "levomilnacipran": {
+  "sideEffects": [
+   {
+    "e": "Sweating, raised blood pressure",
+    "via": "NET inhibition"
+   },
+   {
+    "e": "Nausea and other serotonergic effects",
+    "via": "SERT inhibition"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": []
+  }
+ },
+ "bupropion": {
+  "sideEffects": [
+   {
+    "e": "**Seizures** at peak plasma levels (reduced by SR and XL)",
+    "via": "Peak drug levels"
+   },
+   {
+    "e": "Activation, stimulation",
+    "via": "NE and DA reuptake inhibition"
+   },
+   {
+    "e": "No significant sexual dysfunction",
+    "via": "No serotonergic component"
+   }
+  ],
+  "pearls": [
+   "Not scheduled and not known to be **abusable**, yet effective for nicotine addiction",
+   "Helps patients who **cannot tolerate** serotonergic SSRI effects or fail to respond to them",
+   "Targets loss of joy, interest, pleasure, energy, enthusiasm, alertness and self-confidence",
+   "PFC has no DAT, so **NET blockade** there raises DA as well as NE",
+   "Added to sertraline, nicknamed “**Well-oft**” (Wellbutrin plus Zoloft)"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p306",
+    "p306",
+    "p306",
+    "p305",
+    "p294"
+   ]
+  }
+ },
+ "agomelatine": {
+  "sideEffects": [],
+  "pearls": [
+   "Rationale: some depressed patients have **out-of-sync rhythms** and low nocturnal melatonin",
+   "Shares **5HT2C antagonism** with fluoxetine, trazodone, mirtazapine and some TCAs; olanzapine and quetiapine too, for bipolar depression"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p308",
+    "p307"
+   ]
+  }
+ },
+ "mirtazapine": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   }
+  ],
+  "pearls": [
+   "**5HT3 blockade** may protect against serotonin-driven GI side effects such as nausea",
+   "**5HT2A blockade** improves slow-wave sleep, helpful in many depressed patients",
+   "SNRI plus mirtazapine gives a theoretical **quadruple boost** of 5HT and NE (reuptake, α2, 5HT2A, 5HT2C blockade) and possibly extra DA",
+   "Reuptake blockade and **α2 antagonism are synergistic**, so combining them disinhibits 5HT and NE much more"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": [
+    "p311",
+    "p309",
+    "p333-334",
+    "p309"
+   ]
+  }
+ },
+ "mianserin": {
+  "sideEffects": [
+   {
+    "e": "Sedation, weight gain",
+    "via": "H1 antagonism"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "p309"
+   ],
+   "pearls": []
+  }
+ },
+ "trazodone": {
+  "sideEffects": [
+   {
+    "e": "Daytime **sedation** at peak levels with IR antidepressant dosing",
+    "via": "H1, α1, 5HT2A antagonism"
+   },
+   {
+    "e": "No sexual dysfunction or weight gain; less insomnia and anxiety than SSRIs",
+    "via": "5HT2A/5HT2C blockade"
+   }
+  ],
+  "pearls": [
+   "Best hypnotic delivery is a **standard immediate-release** oral form: quick onset, gone by morning",
+   "Original IR antidepressant dosing was short-acting and needed **multiple daily doses** above hypnotic doses",
+   "Hypnotic action from the first dose gives **rapid onset** and better tolerability than SSRIs/SNRIs",
+   "Treating residual insomnia may also lift **remission rates** by improving energy and mood",
+   "Combined **α1 + 5HT2A blockade** is thought to boost PFC dopamine release"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p311",
+    "p311",
+    "p314",
+    "p311",
+    "p328"
+   ]
+  }
+ },
+ "nefazodone": {
+  "sideEffects": [
+   {
+    "e": "Rare **liver toxicity**",
+    "via": "Idiosyncratic"
+   }
+  ],
+  "pearls": [],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": []
+  }
+ }
+}

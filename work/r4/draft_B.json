@@ -1,0 +1,198 @@
+{
+ "phenelzine": {
+  "sideEffects": [
+   {
+    "e": "**Hypertensive crisis** with dietary tyramine",
+    "via": "MAO-A inhibition prevents breakdown of tyramine-released NE"
+   },
+   {
+    "e": "Blood pressure rise with sympathomimetic drugs",
+    "via": "Drug interaction"
+   },
+   {
+    "e": "Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors",
+    "via": "Drug interaction"
+   }
+  ],
+  "pearls": [
+   "**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs",
+   "**MAO-A** must be substantially inhibited for antidepressant effect; adding MAO-B inhibition lifts **dopamine**, aimed at refractory low positive affect"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p338",
+    "p338"
+   ]
+  }
+ },
+ "tranylcypromine": {
+  "sideEffects": [
+   {
+    "e": "**Hypertensive crisis** with dietary tyramine",
+    "via": "MAO-A inhibition prevents breakdown of tyramine-released NE"
+   },
+   {
+    "e": "Blood pressure rise with sympathomimetic drugs",
+    "via": "Drug interaction"
+   },
+   {
+    "e": "Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors",
+    "via": "Drug interaction"
+   }
+  ],
+  "pearls": [
+   "**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs",
+   "**MAO-A** must be substantially inhibited for antidepressant effect; adding MAO-B inhibition lifts **dopamine**, aimed at refractory low positive affect"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p338",
+    "p338"
+   ]
+  }
+ },
+ "isocarboxazid": {
+  "sideEffects": [
+   {
+    "e": "**Hypertensive crisis** with dietary tyramine",
+    "via": "MAO-A inhibition prevents breakdown of tyramine-released NE"
+   },
+   {
+    "e": "Blood pressure rise with sympathomimetic drugs",
+    "via": "Drug interaction"
+   },
+   {
+    "e": "Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors",
+    "via": "Drug interaction"
+   }
+  ],
+  "pearls": [
+   "**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs",
+   "**MAO-A** must be substantially inhibited for antidepressant effect; adding MAO-B inhibition lifts **dopamine**, aimed at refractory low positive affect"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p338",
+    "p338"
+   ]
+  }
+ },
+ "selegiline": {
+  "sideEffects": [
+   {
+    "e": "**Hypertensive crisis** with dietary tyramine",
+    "via": "MAO-A inhibition prevents breakdown of tyramine-released NE"
+   },
+   {
+    "e": "Blood pressure rise with sympathomimetic drugs",
+    "via": "Drug interaction"
+   },
+   {
+    "e": "Potentially fatal **serotonin syndrome** with serotonin reuptake inhibitors",
+    "via": "Drug interaction"
+   }
+  ],
+  "pearls": [
+   "**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs",
+   "One of **three MAO-B inhibitors** approved for Parkinson's (with rasagiline, safinamide); selective doses do not treat depression"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p338",
+    "p338"
+   ]
+  }
+ },
+ "rasagiline": {
+  "sideEffects": [],
+  "pearls": [
+   "**No antidepressant** effect when only MAO-B is blocked: MAO-A keeps clearing 5HT/NE, and little DA accumulates",
+   "One of **three MAO-B inhibitors** approved for Parkinson's (with selegiline and safinamide)"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p338",
+    "p338"
+   ]
+  }
+ },
+ "safinamide": {
+  "sideEffects": [],
+  "pearls": [
+   "**No antidepressant** effect when only MAO-B is blocked: MAO-A keeps clearing 5HT/NE, and little DA accumulates",
+   "One of **three MAO-B inhibitors** approved for Parkinson's (with selegiline and rasagiline)"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p338",
+    "p338"
+   ]
+  }
+ },
+ "iproniazid": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {
+   "sideEffects": [],
+   "pearls": []
+  }
+ },
+ "flumazenil": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {
+   "sideEffects": [],
+   "pearls": []
+  }
+ },
+ "buspirone": {
+  "sideEffects": [],
+  "pearls": [
+   "Grouped with **lithium and thyroid** as agents lacking robust antidepressant action alone but able to improve monoamine drugs",
+   "5HT1A partial agonists act at once on **somatodendritic autoreceptors**, theoretically synergizing with SERT blockade"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p332",
+    "p296"
+   ]
+  }
+ },
+ "thyroid-hormone": {
+  "sideEffects": [],
+  "pearls": [
+   "Thyroid abnormalities have long been linked to **depression**",
+   "Not a robust antidepressant alone; **no augmentation strategy** is specifically approved"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p333",
+    "p332"
+   ]
+  }
+ }
+}

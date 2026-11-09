@@ -1,0 +1,266 @@
+{
+ "fluoxetine": {
+  "sideEffects": [
+   {
+    "e": "Unwanted activation, even panic, in agitated, anxious or insomniac patients",
+    "via": "5HT2C antagonism"
+   },
+   {
+    "e": "Weight gain and metabolic disturbance when given with **olanzapine** (OFC)",
+    "via": "Olanzapine's receptor actions (combination)"
+   }
+  ],
+  "pearls": [
+   "In the **olanzapine–fluoxetine** combination both drugs block 5HT2C, so net 5HT2C antagonism exceeds either alone (a potent SERT/5HT2C inhibitor)",
+   "**Long half-life** softens discontinuation reactions but means slow washout; allow for it before switching to an MAOI; **weekly** oral form exists",
+   "Energizing effect, with better concentration and attention, may be noticed **from the first dose**"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "p326"
+   ],
+   "pearls": [
+    "p326",
+    "p293",
+    "p293"
+   ]
+  }
+ },
+ "sertraline": {
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   },
+   {
+    "e": "Overactivation of some **panic** patients (titrate slowly)",
+    "via": "Weak DAT inhibition"
+   }
+  ],
+  "pearls": [
+   "Only a **small amount of DAT** inhibition may be needed for energy, motivation and concentration; strong DAT inhibition is the stimulant/reinforcing profile and is not wanted in a depression drug",
+   "**σ1** function is still unclear (the \"sigma enigma\"); linked to anxiety and psychosis, and sertraline's σ1 binding is weaker than fluvoxamine's",
+   "Combination with bupropion adds up each drug's **weak DAT** action"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p294",
+    "p294,p295",
+    "p294"
+   ]
+  }
+ },
+ "paroxetine": {
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   },
+   {
+    "e": "Sexual dysfunction, especially in men",
+    "via": "NOS inhibition plus 5HT2A/2C stimulation"
+   },
+   {
+    "e": "Notorious **withdrawal**: akathisia, restlessness, GI upset, dizziness, tingling",
+    "via": "SERT inhibition plus **anticholinergic rebound**"
+   },
+   {
+    "e": "Early **calming or sedation**",
+    "via": "Mild M1 antagonism (proposed)"
+   }
+  ],
+  "pearls": [
+   "**Calming** early in treatment, in contrast to activating fluoxetine and sertraline",
+   "Weak-to-moderate **NET** inhibition may add to antidepressant effect, especially at high doses",
+   "Worst discontinuation risk after abrupt stop from **long-term high-dose** use; **controlled-release** form may mitigate"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing",
+    "existing",
+    "p294"
+   ],
+   "pearls": [
+    "p294",
+    "p294,p295",
+    "p295"
+   ]
+  }
+ },
+ "fluvoxamine": {
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   },
+   {
+    "e": "Peak-dose sedation (possibly less with controlled-release form)",
+    "via": "Peak plasma level; mechanism not specified"
+   }
+  ],
+  "pearls": [
+   "**σ1** binding is stronger than sertraline's and may be anxiolytic; σ1 is linked to anxiety and psychosis",
+   "Like sertraline, shown to help **psychotic/delusional depression**",
+   "Immediate-release has a short half-life needing **twice-daily** dosing; CR allows once daily"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "p295"
+   ],
+   "pearls": [
+    "p295",
+    "p295",
+    "p295"
+   ]
+  }
+ },
+ "citalopram": {
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   },
+   {
+    "e": "**QTc prolongation** at higher doses (limits dose increases)",
+    "via": "Dose-related"
+   }
+  ],
+  "pearls": [
+   "Among the **better-tolerated** SSRIs, with favorable findings in the **elderly**",
+   "**Inconsistent at the lowest dose**, so dose often rises, but **QTc** prolongation caps the dose",
+   "The R enantiomer may interfere with S at SERT, so the racemate is considered less favorable than escitalopram"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p295",
+    "p295,p296",
+    "p295,p296"
+   ]
+  }
+ },
+ "escitalopram": {
+  "sideEffects": [
+   {
+    "e": "Early side effects that fade with time",
+    "via": "Acute 5HT at unwanted receptors; tolerance as postsynaptic receptors desensitize"
+   },
+   {
+    "e": "Sexual dysfunction, insomnia, activation/anxiety",
+    "via": "5HT at 5HT2A and 5HT2C receptors"
+   },
+   {
+    "e": "Nausea, GI effects",
+    "via": "Peripheral 5HT3 stimulation"
+   }
+  ],
+  "pearls": [
+   "Lowest dose is **predictably effective** and there is no higher-dose **QTc** restriction (unlike citalopram)",
+   "Perhaps the **best-tolerated** SSRI, with the **fewest CYP450** interactions",
+   "Dropping the R enantiomer also removes citalopram's **antihistamine** action"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing",
+    "existing",
+    "existing"
+   ],
+   "pearls": [
+    "p296",
+    "p296",
+    "p296"
+   ]
+  }
+ },
+ "vilazodone": {
+  "sideEffects": [
+   {
+    "e": "Less sexual dysfunction and weight gain (observed)",
+    "via": "Downstream DA release from 5HT1A partial agonism"
+   }
+  ],
+  "pearls": [
+   "One drug replaces the SSRI plus **5HT1A partial agonist** (buspirone, aripiprazole, etc.) strategy, avoiding extra interactions and off-target effects",
+   "In animals, adding 5HT1A partial agonism gave **faster, larger** rises in 5HT than SSRI alone; action at postsynaptic 5HT1A is immediate",
+   "5HT1A downstream **dopamine release** hypothesized to aid mood and cognition and to explain less sexual dysfunction and weight gain"
+  ],
+  "src": {
+   "sideEffects": [
+    "existing"
+   ],
+   "pearls": [
+    "p296,p333",
+    "p296,p297",
+    "p297,p298"
+   ]
+  }
+ },
+ "vortioxetine": {
+  "sideEffects": [],
+  "pearls": [
+   "**5HT3 blockade** (brain: excitatory on GABA interneurons) disinhibits glutamate, ACh and NE; peripherally it may protect against serotonin-induced **GI side effects**",
+   "**5HT1B/D** antagonism and **5HT7** blockade remove brakes on 5HT release, boosting it beyond SERT inhibition alone",
+   "Same logic as adding buspirone to an SSRI: SERT inhibition plus **5HT1A agonism**",
+   "Cognition has four domains (attention, executive, memory, processing speed); **DSST** is a quick bedside measure, mainly of processing speed"
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": [
+    "p311,p318",
+    "p318",
+    "p317,p333",
+    "p317"
+   ]
+  }
+ }
+}

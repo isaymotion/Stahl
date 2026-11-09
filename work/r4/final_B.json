@@ -1,0 +1,48 @@
+{
+ "phenelzine": {
+  "pearls": [
+   "**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs",
+   "Antidepressant action needs **substantial MAO-A inhibition**; also blocking MAO-B raises **dopamine**, a strategy for refractory loss of positive affect"
+  ]
+ },
+ "tranylcypromine": {
+  "pearls": [
+   "**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs",
+   "Antidepressant action needs **substantial MAO-A inhibition**; also blocking MAO-B raises **dopamine**, a strategy for refractory loss of positive affect"
+  ]
+ },
+ "isocarboxazid": {
+  "pearls": [
+   "**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs",
+   "Antidepressant action needs **substantial MAO-A inhibition**; also blocking MAO-B raises **dopamine**, a strategy for refractory loss of positive affect"
+  ]
+ },
+ "selegiline": {
+  "pearls": [
+   "**Drug interactions** may matter more than diet: commoner, and some are lethal; counsel on cough/cold and pain drugs",
+   "One of **three MAO-B inhibitors** approved for Parkinson's (with rasagiline, safinamide); selective doses do not treat depression"
+  ]
+ },
+ "rasagiline": {
+  "pearls": [
+   "One of **three MAO-B inhibitors** approved for Parkinson's (with selegiline and safinamide)"
+  ]
+ },
+ "safinamide": {
+  "pearls": [
+   "One of **three MAO-B inhibitors** approved for Parkinson's (with selegiline and rasagiline)"
+  ]
+ },
+ "buspirone": {
+  "pearls": [
+   "Grouped with **lithium and thyroid** as agents lacking robust antidepressant action alone but able to improve monoamine drugs",
+   "5HT1A partial agonists act at once on **somatodendritic autoreceptors**, theoretically synergizing with SERT blockade"
+  ]
+ },
+ "thyroid-hormone": {
+  "pearls": [
+   "Thyroid abnormalities have long been linked to **depression**",
+   "Not a robust antidepressant alone, and **not approved** as an augmenting agent (like lithium and buspirone)"
+  ]
+ }
+}

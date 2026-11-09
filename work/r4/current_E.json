@@ -1,0 +1,450 @@
+[
+ {
+  "id": "lithium",
+  "name": "Lithium",
+  "group": "Mood stabilizer",
+  "cls": "Mood stabilizer (antimanic)",
+  "short": "An ion with uncertain mechanism; proven in mania and in preventing suicide.",
+  "mechanism": "An **ion** whose mechanism is uncertain. Candidates are in signal transduction: inhibition of **inositol monophosphatase**, modulation of **G proteins**, and regulation of growth-factor and plasticity genes via cascades including inhibition of **GSK-3** and **protein kinase C**.",
+  "targets": [
+   {
+    "t": "gsk3",
+    "action": "inhibitor",
+    "note": "Possible mechanism"
+   },
+   {
+    "t": "impase",
+    "action": "inhibitor",
+    "note": "Possible mechanism"
+   },
+   {
+    "t": "pkc",
+    "action": "inhibitor",
+    "note": "Possible mechanism"
+   }
+  ],
+  "uses": [
+   "**Manic episodes** and prevention of recurrence, especially of mania (perhaps less for depression)",
+   "Well established to help **prevent suicide** in mood disorders",
+   "Bipolar depression and augmentation in unipolar depression (not approved; lower doses; out of favor)",
+   "Added to serotonin/dopamine agents in mania"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "48"
+   },
+   {
+    "ch": "ch07",
+    "pages": "332, 345–346, 353"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "48",
+    "text": "The antimanic agent lithium **may target GSK-3**, one of only three enzymes targeted by psychotropic drugs.",
+    "sec": "s2-enzymes"
+   },
+   {
+    "ch": "ch07",
+    "pages": "345–346",
+    "text": "Used for more than 50 years. Modern expert use: one member of a **portfolio**, often **once daily** and at **lower doses** combined with other agents, rather than high-dose monotherapy for euphoric mania.",
+    "sec": "s7-lithium"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "GI upset: dyspepsia, nausea, vomiting, diarrhea",
+    "via": "Lithium"
+   },
+   {
+    "e": "Weight gain, hair loss, acne, tremor, sedation, decreased cognition, incoordination",
+    "via": "Lithium"
+   },
+   {
+    "e": "Long-term **thyroid** and **kidney** effects",
+    "via": "Lithium"
+   },
+   {
+    "e": "Toxicity risk: **narrow therapeutic window**; monitor plasma levels",
+    "via": "Pharmacokinetics"
+   }
+  ]
+ },
+ {
+  "id": "valproate",
+  "name": "Valproate",
+  "aka": [
+   "Valproic acid",
+   "Sodium valproate"
+  ],
+  "group": "Mood stabilizer",
+  "cls": "Anticonvulsant; antimanic",
+  "short": "Mania-minded anticonvulsant with uncertain mechanism (VSSC, GABA, signal transduction).",
+  "mechanism": "Mechanism uncertain. Three hypotheses: altering **VSSC** sensitivity (binding channel or regulatory units, or inhibiting phosphorylating enzymes) to reduce glutamate release; **enhancing GABA** (more release, less reuptake or slower breakdown by GABA-T); and regulating **signal transduction** (inhibiting GSK-3, PKC and MARCKS; activating ERK, BCL2 and GAP43). May also act at calcium channels and indirectly block glutamate.",
+  "targets": [
+   {
+    "t": "vssc",
+    "action": "modulator",
+    "note": "Possible; site unknown"
+   },
+   {
+    "t": "gabat",
+    "action": "inhibitor",
+    "note": "One possible way it enhances GABA"
+   },
+   {
+    "t": "gsk3",
+    "action": "inhibitor",
+    "note": "Possible"
+   },
+   {
+    "t": "pkc",
+    "action": "inhibitor",
+    "note": "Possible"
+   },
+   {
+    "t": "vscc",
+    "action": "modulator",
+    "note": "Possible; poorly characterized"
+   }
+  ],
+  "uses": [
+   "**Acute mania** (proven); commonly long term to prevent mania (less established)",
+   "Possibly **rapid cycling** and **mixed** episodes (some experts), usually in combination",
+   "Epilepsy; **migraine**"
+  ],
+  "chapters": [
+   {
+    "ch": "ch02",
+    "pages": "48"
+   },
+   {
+    "ch": "ch07",
+    "pages": "346–350, 353"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch02",
+    "pages": "48",
+    "text": "The antimanic agent valproate **may** have actions on GSK-3 (marked with a question mark in Figure 2-14).",
+    "sec": "s2-enzymes"
+   },
+   {
+    "ch": "ch07",
+    "pages": "349",
+    "text": "Raises **lamotrigine** levels, increasing rash risk unless lamotrigine is titrated slowly (p. 352).",
+    "sec": "s7-lamotrigine"
+   }
+  ],
+  "sideEffects": [
+   {
+    "e": "Hair loss, weight gain, sedation",
+    "via": "Dose-related; harm adherence"
+   },
+   {
+    "e": "Bone marrow, liver and pancreatic toxicity; monitor counts and platelets",
+    "via": "Chronic exposure"
+   },
+   {
+    "e": "**Neural-tube defects** and other fetal toxicity",
+    "via": "Teratogenic"
+   },
+   {
+    "e": "Amenorrhea, **polycystic ovaries**, hyperandrogenism, obesity, insulin resistance in women",
+    "via": "Valproate exposure"
+   }
+  ]
+ },
+ {
+  "id": "carbamazepine",
+  "name": "Carbamazepine",
+  "brand": "Tegretol; Equetro",
+  "group": "Mood stabilizer",
+  "cls": "Anticonvulsant; antimanic",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "346–347, 350"
+   },
+   {
+    "ch": "ch12",
+    "pages": "530"
+   }
+  ],
+  "nbn": "Voltage-sensitive sodium channel blocker",
+  "nts": [
+   "glutamate"
+  ],
+  "short": "Mania-minded anticonvulsant blocking the VSSC α subunit; CYP3A4 inducer.",
+  "mechanism": "Thought to bind a site **within the α subunit** of **voltage-sensitive sodium channels** in the open conformation, unlike valproate; may also act at calcium and potassium channels and thereby enhance GABA’s inhibitory actions.",
+  "targets": [
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "α subunit, open channel"
+   },
+   {
+    "t": "cyp3a4",
+    "action": "inducer",
+    "note": "Notable inducer"
+   }
+  ],
+  "uses": [
+   "**Acute mania** (first anticonvulsant shown to work; FDA-approved later as a once-daily controlled-release form)",
+   "Epilepsy; **neuropathic pain**"
+  ],
+  "sideEffects": [
+   {
+    "e": "Profound early **bone marrow suppression**: monitor blood counts",
+    "via": "Carbamazepine"
+   },
+   {
+    "e": "Drug interactions",
+    "via": "**CYP3A4 induction**"
+   },
+   {
+    "e": "Sedation",
+    "via": "Ion channel actions"
+   },
+   {
+    "e": "**Neural-tube defects**",
+    "via": "Teratogenic"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "347",
+    "text": "Table 7-3: epilepsy ++++, treat from above ++++, stabilize from above ++, treat from below +, stabilize from below +/−.",
+    "sec": "s7-anticonvulsants"
+   },
+   {
+    "ch": "ch12",
+    "pages": "530",
+    "text": "Perhaps the most effective unapproved drug for neuropsychiatric symptoms of dementia, but side effects and **drug interactions** limit it in the elderly.",
+    "sec": "s12-agitation"
+   }
+  ]
+ },
+ {
+  "id": "lamotrigine",
+  "name": "Lamotrigine",
+  "brand": "Lamictal",
+  "group": "Mood stabilizer",
+  "cls": "Anticonvulsant; depression-minded mood stabilizer",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "346–347, 350–353"
+   }
+  ],
+  "nbn": "Voltage-sensitive sodium channel blocker; glutamate release inhibitor",
+  "nts": [
+   "glutamate"
+  ],
+  "short": "Depression-minded anticonvulsant that prevents recurrence of both poles; rash risk.",
+  "mechanism": "Binds the **open-channel VSSC α subunit** (like carbamazepine) and may also act at calcium and potassium channels. Uniquely, it may **reduce glutamate release**, via VSSCs or an unidentified synaptic action, which could explain why it treats and stabilizes **from below**.",
+  "targets": [
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "α subunit, open channel"
+   }
+  ],
+  "uses": [
+   "Prevention of **recurrence of mania and depression** in bipolar disorder (approved)",
+   "**Bipolar depression** (believed effective by experts; not FDA-approved)",
+   "Added to serotonin/dopamine agents when depression is not controlled"
+  ],
+  "sideEffects": [
+   {
+    "e": "**Rash**, rarely **Stevens–Johnson syndrome** (toxic epidermal necrolysis)",
+    "via": "Minimized by very slow titration and managing interactions (e.g., **valproate** raises levels)"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "347",
+    "text": "Table 7-3: epilepsy ++++, treat from above +/−, stabilize from above ++++, treat from below +++, stabilize from below ++++.",
+    "sec": "s7-anticonvulsants"
+   },
+   {
+    "ch": "ch07",
+    "pages": "351–352",
+    "text": "Not approved for mania, perhaps because its sodium channel action is too weak or its long **titration** prevents the quick action mania needs.",
+    "sec": "s7-lamotrigine"
+   }
+  ]
+ },
+ {
+  "id": "oxcarbazepine",
+  "name": "Oxcarbazepine",
+  "brand": "Trileptal",
+  "group": "Anticonvulsant",
+  "cls": "Anticonvulsant (prodrug of licarbazepine)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "347, 352"
+   }
+  ],
+  "nbn": "Voltage-sensitive sodium channel blocker",
+  "nts": [
+   "glutamate"
+  ],
+  "short": "Carbamazepine relative and prodrug; better tolerated but unproven in bipolar disorder.",
+  "mechanism": "Structurally related to, but not a metabolite of, carbamazepine. A **prodrug** converted to the 10-hydroxy (monohydroxy) derivative **licarbazepine**, whose active S form is **eslicarbazepine**; presumed to bind the open-channel VSSC α subunit.",
+  "targets": [
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Via licarbazepine; α subunit"
+   }
+  ],
+  "uses": [
+   "Epilepsy",
+   "Used **off-label**, especially for mania, despite never being proven in acute mania or depression"
+  ],
+  "sideEffects": [
+   {
+    "e": "Less sedation, bone marrow toxicity and CYP3A4 interaction than carbamazepine",
+    "via": "Different metabolism"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "347",
+    "text": "Table 7-3 (oxcarbazepine/licarbazepine): epilepsy ++++, treat from above ++, stabilize from above +, treat and stabilize from below +/−.",
+    "sec": "s7-anticonvulsants"
+   }
+  ]
+ },
+ {
+  "id": "eslicarbazepine",
+  "name": "Eslicarbazepine",
+  "brand": "Aptiom",
+  "group": "Anticonvulsant",
+  "cls": "Anticonvulsant (active S-licarbazepine)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "350, 352"
+   }
+  ],
+  "nbn": "Voltage-sensitive sodium channel blocker",
+  "nts": [
+   "glutamate"
+  ],
+  "short": "The active S enantiomer of licarbazepine, oxcarbazepine’s active form.",
+  "mechanism": "The active **S enantiomer of licarbazepine**, through which oxcarbazepine works; presumed VSSC α-subunit binding like carbamazepine.",
+  "targets": [
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "α subunit"
+   }
+  ],
+  "uses": [
+   "Anticonvulsant; used off-label, especially for mania"
+  ]
+ },
+ {
+  "id": "topiramate",
+  "name": "Topiramate",
+  "brand": "Topamax",
+  "group": "Anticonvulsant",
+  "cls": "Anticonvulsant",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "347, 352"
+   },
+   {
+    "ch": "ch13",
+    "pages": "556, 575"
+   }
+  ],
+  "nts": [],
+  "short": "Anticonvulsant with ambiguous bipolar results; causes weight loss.",
+  "mechanism": "An anticonvulsant also approved for migraine; Chapter 7 does not detail its mechanism.",
+  "uses": [
+   "Epilepsy; **migraine**",
+   "Adjunct to drugs that cause weight gain (**weight loss**)",
+   "Tested in stimulant and alcohol use disorders",
+   "Bipolar disorder: **ambiguous** trials; not clearly a mood stabilizer"
+  ],
+  "sideEffects": [
+   {
+    "e": "Weight loss",
+    "via": "Topiramate"
+   },
+   {
+    "e": "Unacceptable sedation in some",
+    "via": "Topiramate"
+   }
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "347",
+    "text": "Table 7-3: epilepsy ++++, treat and stabilize from above +/−.",
+    "sec": "s7-anticonvulsants"
+   },
+   {
+    "ch": "ch07",
+    "pages": "352",
+    "text": "The book says it is combined with **bupropion** for weight loss; the marketed weight-loss combinations pair bupropion with naltrexone and topiramate with phentermine.",
+    "sec": "s7-lamotrigine"
+   },
+   {
+    "ch": "ch13",
+    "pages": "556, 575",
+    "text": "Unapproved but may help **alcoholism**; used off-label for **binge eating disorder** with limited efficacy.",
+    "sec": "s13-alcohol"
+   }
+  ]
+ },
+ {
+  "id": "riluzole",
+  "name": "Riluzole",
+  "brand": "Rilutek",
+  "group": "Glutamate modulator",
+  "cls": "Glutamate release inhibitor (ALS drug)",
+  "chapters": [
+   {
+    "ch": "ch07",
+    "pages": "347, 352–353"
+   }
+  ],
+  "nbn": "Voltage-sensitive sodium channel blocker; glutamate release inhibitor",
+  "nts": [
+   "glutamate"
+  ],
+  "short": "ALS drug that may reduce glutamate release like lamotrigine.",
+  "mechanism": "Developed to slow **ALS**; theoretically binds **VSSCs** and prevents **glutamate release**, like the action postulated for lamotrigine, to reduce excitotoxicity.",
+  "targets": [
+   {
+    "t": "vssc",
+    "action": "blocker",
+    "note": "Theoretical"
+   }
+  ],
+  "uses": [
+   "**Amyotrophic lateral sclerosis**",
+   "Bipolar depression: theoretical rationale (excess glutamate)"
+  ],
+  "facts": [
+   {
+    "ch": "ch07",
+    "pages": "347",
+    "text": "Table 7-3: epilepsy +, treat from below +, stabilize from below +/−.",
+    "sec": "s7-anticonvulsants"
+   }
+  ]
+ }
+]

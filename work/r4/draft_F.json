@@ -1,0 +1,92 @@
+{
+ "ketamine": {
+  "sideEffects": [
+   {"e": "Psychosis (visual hallucinations, paranoia)", "via": "NMDA blockade on prefrontal GABA interneurons → glutamate and dopamine excess"}
+  ],
+  "pearls": [
+   "Reserved for patients with **multiple failures** of monoamine drugs, whereas 5HT/dopamine blockers are added after only one or two failures.",
+   "Works in apparently **nonmonoaminergic** depression; onset is almost immediate (minutes to hours), sometimes with a direct **anti-suicidal** effect.",
+   "Psychosis-like syndrome is mainly a feature of **high, acute** doses; slow **subanesthetic** infusions for depression are not thought to cause it.",
+   "Also raises **BDNF and VEGF**, so it may reverse synaptic atrophy within minutes, unlike monoamine drugs, whose growth-factor effect takes weeks."
+  ],
+  "src": {
+   "sideEffects": ["existing"],
+   "pearls": ["p328", "p329", "p330", "p329, p331"]
+  }
+ },
+ "esketamine": {
+  "sideEffects": [],
+  "pearls": [
+   "The exact **R versus S** pharmacology, and that of their active metabolites, is still being worked out, though esketamine is clearly active as a rapid antidepressant."
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": ["p331, p333"]
+  }
+ },
+ "dextromethorphan": {
+  "sideEffects": [],
+  "pearls": [
+   "It is unclear which **NMDA subtypes** it engages and what role its σ1, SERT and μ-opioid binding play in the rapid antidepressant effect.",
+   "**Deuteration** lengthens half-life and so changes the **quinidine dose** needed in the deuterated combination."
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": ["p354", "p354, p355"]
+  }
+ },
+ "quinidine": {
+  "sideEffects": [],
+  "pearls": [
+   "Used here only as a **2D6 booster**; the dose is kept below that with cardiovascular actions, and is adjusted when paired with deuterated dextromethorphan.",
+   "**Bupropion** is the alternative booster in the other combination, adding its own NDRI antidepressant action."
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": ["p354, p355", "p354"]
+  }
+ },
+ "dextromethadone": {
+  "sideEffects": [],
+  "pearls": [
+   "Racemic **methadone** is an oral μ-agonist for opioid use disorder; the opioid activity sits mostly in the **levo** form.",
+   "Whether NMDA block alone, the **NMDA subtype**, or accompanying μ, σ1 and SERT actions matter most is still unresolved, as for other NMDA antagonists."
+  ],
+  "targets": [
+   {"t": "mor", "action": "agonist", "s": 2, "note": "Weaker than levomethadone"},
+   {"t": "5ht2a", "action": "binds", "s": 1},
+   {"t": "nmda", "action": "antagonist", "s": 1},
+   {"t": "sert", "action": "inhibitor", "s": 1},
+   {"t": "sigma", "action": "binds", "s": 1},
+   {"t": "dor", "action": "binds", "s": 1, "note": "δ-opioid"}
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": ["p355", "p355"],
+   "targets": "p355-356 (Figure 7-86)"
+  }
+ },
+ "allopregnanolone": {
+  "sideEffects": [],
+  "pearls": [
+   "Binds the **same sites** as general anesthetics (propofol, etomidate, alphaxolone, alfadalone), which are dosed far higher.",
+   "**Benzodiazepines lack antidepressant action**, so the **benzodiazepine-insensitive** (extrasynaptic) receptors are thought to be the key target.",
+   "Made and released by **glia** and captured by extrasynaptic δ-containing receptors; may also have **anxiolytic** potential.",
+   "How neurosteroids produce a rapid and possibly **lasting** antidepressant effect is unknown; reduced GABA in depression is one hint."
+  ],
+  "src": {
+   "sideEffects": [],
+   "pearls": ["p322", "p322, p264", "p263", "p322"]
+  }
+ },
+ "brexanolone": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {"sideEffects": [], "pearls": []}
+ },
+ "zuranolone": {
+  "sideEffects": [],
+  "pearls": [],
+  "src": {"sideEffects": [], "pearls": []}
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "ketamine": {
+  "pearls": [
+   "Reserved for patients with **multiple failures** of monoamine drugs, whereas 5HT/dopamine blockers are added after only one or two failures.",
+   "Works in apparently **nonmonoaminergic** depression; onset is almost immediate (minutes to hours), sometimes with a direct **anti-suicidal** effect.",
+   "Psychosis-like syndrome is mainly a feature of **high, acute** doses; slow **subanesthetic** infusions for depression are not thought to cause it.",
+   "Also raises **BDNF and VEGF**, so it may reverse synaptic atrophy within minutes, unlike monoamine drugs, whose growth-factor effect takes weeks."
+  ]
+ },
+ "esketamine": {
+  "pearls": [
+   "The exact **R versus S** pharmacology, and that of their active metabolites, is still being worked out, though esketamine is clearly active as a rapid antidepressant."
+  ]
+ },
+ "dextromethorphan": {
+  "pearls": [
+   "**Deuteration** lengthens half-life and so changes the **quinidine dose** needed in the deuterated combination."
+  ]
+ },
+ "quinidine": {
+  "pearls": [
+   "Paired with dextromethorphan only as a **2D6 booster**; its dose changes when the partner is **deuterated** dextromethorphan",
+   "**Bupropion** is the alternative booster in the other combination, adding its own NDRI antidepressant action"
+  ]
+ },
+ "dextromethadone": {
+  "pearls": [
+   "Racemic **methadone** is an oral μ-agonist for opioid use disorder; the opioid activity sits mostly in the **levo** form."
+  ],
+  "targets": [
+   {
+    "t": "mor",
+    "action": "agonist",
+    "s": 2,
+    "note": "Weaker than levomethadone"
+   },
+   {
+    "t": "5ht2a",
+    "action": "binds",
+    "s": 1
+   },
+   {
+    "t": "nmda",
+    "action": "antagonist",
+    "s": 1
+   },
+   {
+    "t": "sert",
+    "action": "inhibitor",
+    "s": 1
+   },
+   {
+    "t": "sigma",
+    "action": "binds",
+    "s": 1
+   },
+   {
+    "t": "dor",
+    "action": "binds",
+    "s": 1,
+    "note": "δ-opioid"
+   }
+  ]
+ },
+ "allopregnanolone": {
+  "pearls": [
+   "Binds the **same sites** as general anesthetics (propofol, etomidate, alphaxolone, alfadalone), which are dosed far higher.",
+   "**Benzodiazepines lack antidepressant action**, so the **benzodiazepine-insensitive** (extrasynaptic) receptors are thought to be the key target.",
+   "Made and released by **glia** and captured by extrasynaptic δ-containing receptors; may also have **anxiolytic** potential."
+  ]
+ }
+}

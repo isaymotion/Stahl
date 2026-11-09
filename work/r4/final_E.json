@@ -1,0 +1,45 @@
+{
+ "lithium": {
+  "pearls": [
+   "Use has **declined**: newer options, side effects and the monitoring burden all contribute",
+   "Best-evidenced mania combination: **lithium plus a serotonin/dopamine blocker**",
+   "**Rapid cycling and mixed** episodes are hard to treat; combinations such as lithium + valproate + a 5HT/DA blocker are usual",
+   "Pairing with a 5HT/DA blocker is for mania, **not schizophrenia** (no clear added benefit there)",
+   "Older practice: **augmenting tricyclics** in unipolar depression, at lower than antimanic doses"
+  ]
+ },
+ "valproate": {
+  "pearls": [
+   "Distinctive proven use is **migraine** (carbamazepine's is neuropathic pain)",
+   "**Pushing the dose** helps efficacy but side effects often cost adherence; lower doses usually need a second mood stabilizer",
+   "Some toxicities track **duration of exposure**, not dose, so dose reduction may not prevent them",
+   "Weak evidence for **depression**: no convincing protection against depressive recurrence",
+   "Blood counts **including platelets** need periodic monitoring"
+  ]
+ },
+ "carbamazepine": {
+  "pearls": [
+   "Distinctive proven use is **neuropathic pain** (valproate's is migraine)",
+   "Bone marrow suppression is more profound **early on**: check blood counts at the start",
+   "Like valproate, treats mania **from above**; both are sedating"
+  ]
+ },
+ "lamotrigine": {
+  "pearls": [
+   "Approved to **prevent** recurrence of both poles, but not to treat acute mania or depression",
+   "Generally **well tolerated** apart from rash",
+   "Learn to tell **benign from serious rash** (see Prescriber's Guide)",
+   "Practice-based **bipolar depression** combo: add to a serotonin/dopamine blocker"
+  ]
+ },
+ "oxcarbazepine": {
+  "pearls": [
+   "Same presumed mechanism as carbamazepine but **easier to dose** and better tolerated"
+  ]
+ },
+ "eslicarbazepine": {
+  "pearls": [
+   "Used off-label for mania only **more recently** than oxcarbazepine"
+  ]
+ }
+}
