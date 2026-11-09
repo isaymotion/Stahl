@@ -9,6 +9,35 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "27.0.0",
+    "date": "2026-11-10",
+    "title": "Drug library: anxiety, pain, sleep, ADHD, dementia and addiction drugs in more depth",
+    "summary": "125 new pearls and 61 side effects across 55 drugs from Chapters 8 to 13, each checked against the book. Completes the library pass.",
+    "items": [
+      {
+        "type": "content",
+        "text": "Sleep and wake: where each hypnotic sits on the half-life spectrum and what to do about early waking or a morning hangover, the orexin antagonists (receptor occupancy needed, dosing by effect rather than half-life), ramelteon and tasimelteon, diphenhydramine's anticholinergic action, modafinil and armodafinil, caffeine and sodium oxybate.",
+        "ch": "ch10",
+        "href": "#/drugs",
+        "link": "Drug database"
+      },
+      {
+        "type": "content",
+        "text": "ADHD: stimulant side effects tied to DAT occupancy (late insomnia, evening rebound, tics, abuse with fast delivery), formulation durations, atomoxetine's dose-dependent effects, and when an NET inhibitor or α2A agonist is preferred. Anxiety and pain: benzodiazepine subtype roles and cautions, prazosin, pregabalin and gabapentin, clonidine.",
+        "ch": "ch11"
+      },
+      {
+        "type": "content",
+        "text": "Addiction: stimulants, nicotine and varenicline, PCP, the classic hallucinogens, MDMA and psilocybin in therapy, cannabis risks and the cannabinoid medicines, opioids (morphine, methadone, buprenorphine, fentanyl), naloxone, naltrexone, nalmefene, acamprosate and lofexidine. Dementia: donepezil and memantine.",
+        "ch": "ch13"
+      },
+      {
+        "type": "content",
+        "text": "Nothing was added where the book has nothing beyond the entry already: for example, hydroxyzine, tiagabine, levetiracetam, lidocaine, solriamfetol, pitolisant, daridorexant, rivastigmine, galantamine, the anti-amyloid antibodies, dexmethylphenidate, viloxazine, disulfiram and ondansetron."
+      }
+    ]
+  },
+  {
     "version": "26.0.0",
     "date": "2026-11-09",
     "title": "Drug library: antidepressants and mood stabilizers in more depth",

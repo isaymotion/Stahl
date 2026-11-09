@@ -21,7 +21,16 @@ SP.drugs = [
       { ch: 'ch08', pages: '375', text: 'Opioids given soon after trauma may mitigate consolidation of the traumatic memory and reduce PTSD risk (investigational).', sec: 's8-novel' },
       { ch: 'ch09', pages: '382, 390', text: 'Opiates reduce acute pain through **central** actions at spinal and PAG μ receptors, but are no better than SNRIs or α2δ ligands for chronic neuropathic pain and are not proven in fibromyalgia.', sec: 's9-descending' },
       { ch: 'ch13', pages: '559–561', text: 'An **opiate** (poppy-derived). Short half-life: withdrawal peaks at 36–72 h and lasts 7–10 days.', sec: 's13-opioids' }
-    ]
+    ],
+    sideEffects: [
+      { e: '**Euphoria** at pain-relieving doses and above, a strongly reinforcing effect', via: 'Mu-opioid receptor action on reward circuits; mesolimbic dopamine release is lower than with stimulants and the full mechanism is unclear' },
+      { e: '**Tolerance and dependence** develop readily; analgesia fades over days to weeks', via: 'Opioid receptor adaptation; behavioral control shifts from ventral to dorsal habit circuits' },
+      { e: '**Withdrawal syndrome**: dysphoria, craving, irritability, tachycardia, tremor, sweating, piloerection', via: 'Opioid receptor adaptation to chronic drug' },
+      { e: '**Respiratory depression** and coma in overdose', via: 'Opioid depressant action; mechanism not detailed' }
+    ],
+    pearls: ['**Naloxone** reverses acute morphine effects but precipitates withdrawal in dependent patients', '**Fentanyl** is about 100 times, and carfentanil about 10,000 times, as potent as morphine', '**Spares normal sensory input**: Aβ fibers lack μ receptors', 'Opioid analgesics lose effect with long-term use and are **limited in amount and duration**'],
+    uses: ['Acute **pain** relief (spinal and PAG μ receptors); no better than SNRIs or α2δ ligands for chronic neuropathic pain'],
+    targets: [{ t: 'mor', action: 'agonist', note: 'Full agonist; spinal and PAG μ receptors' }]
   },
   {
     id: 'methadone', name: 'Methadone', group: 'Opioid', cls: 'μ-opioid full agonist',
@@ -35,7 +44,12 @@ SP.drugs = [
     facts: [
       { ch: 'ch13', pages: '560', text: 'Usually dispensed **daily at a clinic**.', sec: 's13-oud-tx' },
       { ch: 'ch13', pages: '561', text: 'Withdrawal peaks at **72–96 h** and lasts **14+ days**: less intense but much longer than heroin.', sec: 's13-oud-tx' }
-    ]
+    ],
+    sideEffects: [
+      { e: '**Respiratory depression** and coma in overdose', via: 'μ agonism (opioid class effect)' },
+      { e: '**Tolerance, dependence** and a withdrawal syndrome when stopped', via: 'Adaptation of μ-opioid receptors' }
+    ],
+    pearls: ['Only the **levo enantiomer** carries the μ-agonist activity; the dextro form is a weak μ agonist and an NMDA antagonist (being developed for depression).', 'Works best inside a **structured program** with random urine screens and psychosocial support; tapering straight to abstinence rarely succeeds long term.']
   },
   {
     id: 'buprenorphine', name: 'Buprenorphine', brand: 'Suboxone (with naloxone); Sublocade; Brixadi', group: 'Opioid', cls: 'μ-opioid partial agonist',
@@ -50,7 +64,8 @@ SP.drugs = [
       { ch: 'ch13', pages: '560', text: 'Sublingual (poor oral absorption), usually with **naloxone** to deter injection; several-day outpatient supplies; also a **6-month implant** and **1-month depot**.', sec: 's13-oud-tx' },
       { ch: 'ch13', pages: '561', text: 'Withdrawal peaks ~72 h and lasts about a week; less intense than heroin.', sec: 's13-oud-tx' }
     ],
-    updates: [{ year: '2023', title: 'X-waiver gone; weekly/monthly injection', text: 'Since January 2023 no special DATA (“X”) waiver is needed to prescribe buprenorphine for OUD. **Brixadi**, a weekly or monthly extended-release injection, was approved May 23, 2023.', source: 'DEA/SAMHSA, January 2023; Braeburn, May 2023' }]
+    updates: [{ year: '2023', title: 'X-waiver gone; weekly/monthly injection', text: 'Since January 2023 no special DATA (“X”) waiver is needed to prescribe buprenorphine for OUD. **Brixadi**, a weekly or monthly extended-release injection, was approved May 23, 2023.', source: 'DEA/SAMHSA, January 2023; Braeburn, May 2023' }],
+    pearls: ['**Injecting** the buprenorphine–naloxone combination gives no high and may precipitate withdrawal, so it blocks diversion of the sublingual form.', 'Like methadone, most successful in a **structured maintenance program** (random urine screens, psychosocial services); tapering to abstinence rarely succeeds long term.']
   },
   {
     id: 'fentanyl', name: 'Fentanyl', group: 'Opioid', cls: 'Synthetic μ-opioid agonist',
@@ -63,7 +78,8 @@ SP.drugs = [
     uses: ['Anesthesia and severe pain (prescribed)'],
     sideEffects: [{ e: 'Respiratory depression and overdose death', via: 'μ agonism' }],
     facts: [{ ch: 'ch13', pages: '559–560', text: 'Increasingly laced into street heroin. The book claims naloxone cannot reverse fentanyl; it can, though larger or repeated doses may be needed.', sec: 's13-opioids' }],
-    updates: [{ year: '2025', title: 'Overdose deaths falling', text: 'US overdose deaths fell for a third straight year to about 70,000 in 2025 (provisional), with opioid-involved deaths down about 19%; synthetic opioids still dominate.', source: 'CDC NCHS, May 13, 2026' }]
+    updates: [{ year: '2025', title: 'Overdose deaths falling', text: 'US overdose deaths fell for a third straight year to about 70,000 in 2025 (provisional), with opioid-involved deaths down about 19%; synthetic opioids still dominate.', source: 'CDC NCHS, May 13, 2026' }],
+    pearls: ['Fentanyl and its derivatives account for about **one-third** of the roughly 60,000 yearly US opioid overdose deaths (the book’s figure)']
   },
   {
     id: 'diazepam', name: 'Diazepam', brand: 'Valium', group: 'Benzodiazepine', cls: 'Benzodiazepine',
@@ -72,10 +88,11 @@ SP.drugs = [
     nbn: 'GABA-A positive allosteric modulator (benzodiazepine site)',
     nts: ['gaba'],
     targets: [{ t: 'gabaa', action: 'positive allosteric modulator', note: 'Benzodiazepine site; phasic inhibition' }],
-    uses: ['**Anxiolytic**', 'Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)'],
+    uses: ['**Anxiolytic**', 'Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)', '**GAD and panic disorder** (benzodiazepine class use, Chapter 8)'],
     sideEffects: [
       { e: 'Blocks short-term memory', via: 'GABA-A PAM action' },
-      { e: 'Sedation (sleep induction)', via: 'GABA-A PAM action' }
+      { e: 'Sedation (sleep induction)', via: 'GABA-A PAM action' },
+      { e: '**Tolerance, dependence and withdrawal** (including rebound insomnia)', via: 'Adaptation of α1-containing GABA-A receptors with chronic use' }
     ],
     chapters: [
       { ch: 'ch01', pages: '6' },
@@ -88,7 +105,8 @@ SP.drugs = [
       { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1, α2 and α3** benzodiazepine-sensitive GABA-A receptors (phasic inhibition); reversed by **flumazenil**.', sec: 's6-gabaa' },
       { ch: 'ch08', pages: '366–367, 377', text: 'Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.', sec: 's8-gad' },
       { ch: 'ch10', pages: '421–422', text: 'Benzodiazepines approved for anxiety are often used for insomnia; as hypnotics they are second line (tolerance, withdrawal, **rebound insomnia**).', sec: 's10-gaba-hypnotics' }
-    ]
+    ],
+    pearls: ['Subtype roles: α1 = **daytime sedation**, amnesia, anticonvulsant action; α2/α3 = **muscle relaxant** and alcohol-potentiating effects; α5 (hippocampus) = cognition', 'Part of the **mesolimbic reward** system\'s drugs of abuse; alcoholics often also abuse benzodiazepines, so screen for substance use before prescribing', 'Much **safer in overdose** than barbiturates', '**Not recommended** for agitation in dementia; sedatives (including benzodiazepines) raise **aspiration** and pneumonia risk']
   },
   {
     id: 'alprazolam', name: 'Alprazolam', brand: 'Xanax', group: 'Benzodiazepine', cls: 'Benzodiazepine',
@@ -100,7 +118,8 @@ SP.drugs = [
     uses: ['**Anxiolytic**', 'Also sleep induction, anticonvulsant and muscle relaxant actions (Chapter 3)', 'GAD and panic disorder (Chapter 8)'],
     sideEffects: [
       { e: 'Blocks short-term memory', via: 'GABA-A PAM action' },
-      { e: 'Sedation (sleep induction)', via: 'GABA-A PAM action' }
+      { e: 'Sedation (sleep induction)', via: 'GABA-A PAM action' },
+      { e: '**Tolerance, dependence and withdrawal** (including rebound insomnia)', via: 'Adaptation of α1-containing GABA-A receptors with chronic use' }
     ],
     chapters: [
       { ch: 'ch01', pages: '5–6' },
@@ -113,7 +132,8 @@ SP.drugs = [
       { ch: 'ch06', pages: '259–262', text: 'Nonselective PAM at **α1–3** GABA-A receptors; α2/α3 actions are thought anxiolytic, α1 actions sedating.', sec: 's6-gabaa' },
       { ch: 'ch08', pages: '366–367, 377', text: 'Reduces fear in the amygdala and worry in CSTC loops by enhancing **phasic** GABA-A inhibition. In GAD: short term when starting an SSRI/SNRI, to “top up” a partial response, or intermittently for surges; avoid with **alcohol/substance abuse**. Less accepted in social anxiety; use with caution in PTSD.', sec: 's8-gad' },
       { ch: 'ch10', pages: '421–422', text: 'Benzodiazepines approved for anxiety are often used for insomnia; as hypnotics they are second line (tolerance, withdrawal, **rebound insomnia**).', sec: 's10-gaba-hypnotics' }
-    ]
+    ],
+    pearls: ['Subtype roles: α1 = **daytime sedation**, amnesia, anticonvulsant action; α2/α3 = **muscle relaxant** and alcohol-potentiating effects; α5 (hippocampus) = cognition', 'Part of the **mesolimbic reward** system\'s drugs of abuse; alcoholics often also abuse benzodiazepines, so screen for substance use before prescribing', 'Much **safer in overdose** than barbiturates', '**Not recommended** for agitation in dementia; sedatives (including benzodiazepines) raise **aspiration** and pneumonia risk']
   },
   {
     id: 'flurazepam', name: 'Flurazepam', brand: 'Dalmane', group: 'Benzodiazepine', cls: 'Benzodiazepine hypnotic',
@@ -126,7 +146,8 @@ SP.drugs = [
     uses: ['**Insomnia** (second line; severe or resistant cases)'],
     sideEffects: [
       { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
-      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' },
+      { e: 'Drug **accumulation** with nightly use, next-day impairment, higher fall risk in the elderly', via: 'Ultra-long half-life (>24 h): prolonged time above the sleep threshold' }
     ],
     facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**way too hot**”: accumulation and falls.', sec: 's10-pk' }]
   },
@@ -141,7 +162,8 @@ SP.drugs = [
     uses: ['**Insomnia** (second line; severe or resistant cases)'],
     sideEffects: [
       { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
-      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' },
+      { e: 'Drug **accumulation** with nightly use, next-day impairment, higher fall risk in the elderly', via: 'Ultra-long half-life (>24 h): prolonged time above the sleep threshold' }
     ],
     facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**way too hot**”: accumulation and falls.', sec: 's10-pk' }]
   },
@@ -156,9 +178,11 @@ SP.drugs = [
     uses: ['**Insomnia** (second line; severe or resistant cases)'],
     sideEffects: [
       { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
-      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' },
+      { e: '**Early-morning awakening** (loss of sleep maintenance)', via: 'Ultra-short half-life: drug falls below sleep threshold before time to wake' }
     ],
-    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**too cold**”: may lose sleep maintenance.', sec: 's10-pk' }]
+    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**too cold**”: may lose sleep maintenance.', sec: 's10-pk' }],
+    pearls: ['Short-half-life fix when sleep is too short: **raise the dose** or switch to an agent that stays above threshold longer.']
   },
   {
     id: 'estazolam', name: 'Estazolam', brand: 'ProSom', group: 'Benzodiazepine', cls: 'Benzodiazepine hypnotic',
@@ -171,9 +195,11 @@ SP.drugs = [
     uses: ['**Insomnia** (second line; severe or resistant cases)'],
     sideEffects: [
       { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
-      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' },
+      { e: 'Next-day **hangover** (sedation, memory problems)', via: 'Moderately long half-life: levels still above sleep threshold at time to wake' }
     ],
-    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**still too hot**”: possible hangover.', sec: 's10-pk' }]
+    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**still too hot**”: possible hangover.', sec: 's10-pk' }],
+    pearls: ['If groggy in the morning: **lower the dose**, give it earlier in the evening, or switch to a shorter-acting agent.']
   },
   {
     id: 'temazepam', name: 'Temazepam', brand: 'Restoril', group: 'Benzodiazepine', cls: 'Benzodiazepine hypnotic',
@@ -186,9 +212,11 @@ SP.drugs = [
     uses: ['**Insomnia** (second line; severe or resistant cases)'],
     sideEffects: [
       { e: 'Tolerance, withdrawal, **rebound insomnia**', via: 'Adaptation of α1 GABA-A receptors' },
-      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' }
+      { e: 'Sedation, amnesia, falls', via: 'α1 GABA-A PAM action' },
+      { e: 'Next-day **hangover** (sedation, memory problems)', via: 'Moderately long half-life: levels still above sleep threshold at time to wake' }
     ],
-    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**still too hot**”: possible hangover.', sec: 's10-pk' }]
+    facts: [{ ch: 'ch10', pages: '423, 427–428', text: 'In the Goldilocks figure: “**still too hot**”: possible hangover.', sec: 's10-pk' }],
+    pearls: ['If groggy in the morning: **lower the dose**, give it earlier in the evening, or switch to a shorter-acting agent.']
   },
   {
     id: 'flumazenil', name: 'Flumazenil', group: 'Benzodiazepine antagonist', cls: 'Benzodiazepine receptor antagonist',
@@ -1006,7 +1034,15 @@ SP.drugs = [
       { ch: 'ch11', pages: '470–471', text: 'Table 11-1 formulations: IR Ritalin/Methylin (3–4 h), Concerta (12 h), Ritalin LA (two peaks), Metadate CD, Aptensio XR, Quillivant XR, QuilliChew ER, Daytrana patch, Cotempla XR-ODT, **Jornay PM** (evening dose, delayed 10 h), Adhansia XR.', sec: 's11-mph' },
       { ch: 'ch11', pages: '477–479', text: 'OROS, LA and transdermal forms are **slow-dose** stimulants (tonic signaling, lower abuse); IR is **pulsatile**.', sec: 's11-slowfast' }
     ],
-    updates: [{ year: '2023', title: 'Stronger stimulant warnings', text: 'In May 2023 the FDA required the boxed warning of all prescription stimulants to describe the risks of **misuse, abuse, addiction and overdose** consistently and to tell patients never to share them.', source: 'FDA Drug Safety Communication, May 2023' }]
+    updates: [{ year: '2023', title: 'Stronger stimulant warnings', text: 'In May 2023 the FDA required the boxed warning of all prescription stimulants to describe the risks of **misuse, abuse, addiction and overdose** consistently and to tell patients never to share them.', source: 'FDA Drug Safety Communication, May 2023' }],
+    sideEffects: [
+      { e: '**Insomnia** and evening side effects when the dose lasts too long', via: 'DAT occupancy staying above threshold at bedtime' },
+      { e: '**Rebound** hyperactivity and insomnia as evening levels fall early', via: 'Loss of DAT occupancy as the formulation wears off' },
+      { e: '**Worsened tics** in children with ADHD plus tics', via: 'Excess dopamine in the motor striatum (hypothetical)' },
+      { e: '**Euphoria and abuse** with fast delivery (IR, snorted, IV, smoked)', via: 'Sudden DAT blockade, phasic DA surge in nucleus accumbens' },
+      { e: '**Psychosis, mania, hypertension** at doses above therapeutic', via: 'Excess DA/NE action; book gives no further mechanism' }
+    ],
+    pearls: ['Effect needs roughly **50–60% DAT occupancy**; the effect ends when occupancy falls below that threshold.', '**Concerta** has a small early peak and a 12 h duration, whereas **Metadate CD** has a strong early peak and an 8 h duration.', '**Daytrana** patch peaks late (7–10 h) and covers about 12 h.', '**IR tablets** last 3–4 h and need a **second dose at lunch**; Ritalin IR is labelled for ages 6–12 and adults.', 'Anxiety can worsen on a stimulant: with comorbid ADHD plus anxiety, a **NET inhibitor or α2A agonist** is an alternative.']
   },
   {
     id: 'dexmethylphenidate', name: 'Dexmethylphenidate (D-methylphenidate)', brand: 'Focalin; Focalin XR', group: 'Stimulant', cls: 'Stimulant (ADHD)',
@@ -1061,7 +1097,15 @@ SP.drugs = [
     updates: [
       { year: '2022', title: 'An amphetamine patch', text: '**Xelstrym** (dextroamphetamine transdermal system), worn 9 hours once daily, was approved on March 22, 2022 for ADHD in adults and children aged 6 and older.', source: 'Drugs.com approval history; Noven, March 2022' },
       { year: '2023', title: 'Stronger stimulant warnings', text: 'In May 2023 the FDA required the boxed warning of all prescription stimulants to describe the risks of **misuse, abuse, addiction and overdose** consistently and to tell patients never to share them.', source: 'FDA Drug Safety Communication, May 2023' }
-    ]
+    ],
+    sideEffects: [
+      { e: '**Insomnia** and late-day side effects when action lasts too long', via: 'DAT occupancy staying above threshold at bedtime' },
+      { e: '**Rebound** hyperactivity and insomnia as evening levels fall early', via: 'Loss of DAT occupancy as the formulation wears off' },
+      { e: '**Euphoria and abuse** at high dose or with fast routes', via: 'Vesicular displacement of DA, DAT reversal, phasic DA surge in nucleus accumbens' },
+      { e: '**Tremor, restlessness, irritability, panic, stereotypy** at high doses', via: 'High-dose stimulant effect; book gives no specific mechanism' },
+      { e: '**Hypertension, tachycardia, hyperthermia** at very high doses; seizures and stroke in overdose', via: 'High-dose stimulant effect; book gives no specific mechanism' }
+    ],
+    pearls: ['**Oral dosing** slows entry into the brain and so lowers reinforcement; smoking, snorting or IV use gives the fastest, most reinforcing rise.', '**Zenzedi/ProCentra** (D-amphetamine IR) last 4–5 or 4–6 h; **Dexedrine spansule** lasts 6–8 h once daily.', '**Mydayis** is approved from age 13 (others mostly from 6, IR from 3).', 'Controlled-release **matrix** designs can resist powdering for snorting, smoking or injecting.']
   },
   {
     id: 'lisdexamfetamine', name: 'Lisdexamfetamine', brand: 'Vyvanse', group: 'Stimulant', cls: 'Stimulant prodrug (ADHD)',
@@ -1109,7 +1153,14 @@ SP.drugs = [
       { ch: 'ch04', pages: '78, 90', text: 'A psychostimulant model of psychosis (Table 4-1: auditory hallucinations, paranoid delusions, no insight) that causes mesolimbic dopamine hyperactivity **directly**.', sec: 's4-mesolimbic' },
       { ch: 'ch11', pages: '476–478', text: 'A DAT blocker whose **rapid, complete** occupancy (especially intranasal, IV or smoked) gives a pulsatile phasic DA surge: euphoria and abuse.', sec: 's11-slowfast' },
       { ch: 'ch13', pages: '544–547', text: 'Inhibits **DAT, NET and SERT** and is a **local anesthetic**. Snorting, IV use or smoking crack gives rapid DAT blockade and phasic DA; no approved treatment; a vaccine is a future possibility.', sec: 's13-stimulants' }
-    ]
+    ],
+    sideEffects: [
+      { e: '**Tremor, restlessness, irritability, emotional lability, panic** and repetitive stereotyped behavior at high doses', via: 'Excess stimulant effect (book gives no specific receptor)' },
+      { e: '**Paranoia and hallucinations** resembling schizophrenia with repeated high doses', via: 'Mesolimbic dopamine excess (direct)' },
+      { e: '**Hypertension, tachycardia, ventricular irritability, hyperthermia, respiratory depression**', via: 'Excess stimulant effect (book gives no specific mechanism)' },
+      { e: '**Overdose: acute heart failure, stroke, seizures**', via: 'Excess stimulant effect (book gives no specific mechanism)' }
+    ],
+    pearls: ['**Inactive orally**; snorting bypasses the liver, so onset can beat even IV dosing', '**Smoking** (crack) is the fastest, most reinforcing delivery: it avoids first-pass metabolism and acts like an arterial bolus', 'Between doses come **withdrawal** sleepiness and anhedonia: the bigger the high, the deeper the crash', 'Chronic abuse can end in **"burn-out"**: long-lasting dopamine depletion and axonal degeneration']
   },
   {
     id: 'mdpv', name: 'MDPV (“bath salts”)', aka: ['methylenedioxypyrovalerone'], group: 'Drug of abuse', cls: 'Synthetic stimulant (cathinone)',
@@ -1121,14 +1172,20 @@ SP.drugs = [
     targets: [],
     uses: [],
     sideEffects: [{ e: 'Agitation, paranoia, hallucinations, suicidality, chest pain', via: 'Stimulant actions' }],
-    facts: [{ ch: 'ch13', pages: '546–547', text: 'Packaged like Epsom salts and labeled “not for human consumption” to evade drug laws.', sec: 's13-stimulants' }]
+    facts: [{ ch: 'ch13', pages: '546–547', text: 'Packaged like Epsom salts and labeled “not for human consumption” to evade drug laws.', sec: 's13-stimulants' }],
+    pearls: ['Also sold as **"plant food"**; like other stimulants it is reinforcing']
   },
   {
     id: 'methamphetamine', name: 'Methamphetamine', group: 'Drug of abuse', cls: 'Stimulant drug of abuse',
     short: 'Psychostimulant that causes mesolimbic dopamine hyperactivity directly.',
     mechanism: 'A psychostimulant that inhibits **DAT and NET** (and, like amphetamine, releases dopamine); rapid routes produce massive phasic mesolimbic dopamine, euphoria and addiction.',
     nts: ['dopamine'],
-    sideEffects: [{ e: 'Paranoid psychosis', via: 'Mesolimbic dopamine excess' }],
+    sideEffects: [
+      { e: 'Paranoid psychosis', via: 'Mesolimbic dopamine excess' },
+      { e: '**Tremor, restlessness, irritability, emotional lability, panic** and repetitive stereotyped behavior at high doses', via: 'Excess stimulant effect (book gives no specific receptor)' },
+      { e: '**Hypertension, tachycardia, ventricular irritability, hyperthermia, respiratory depression**', via: 'Excess stimulant effect (book gives no specific mechanism)' },
+      { e: '**Overdose: acute heart failure, stroke, seizures**', via: 'Excess stimulant effect (book gives no specific mechanism)' }
+    ],
     chapters: [
       { ch: 'ch04', pages: '90' },
       { ch: 'ch11', pages: '476–478' },
@@ -1143,7 +1200,8 @@ SP.drugs = [
       { t: 'dat', action: 'inhibitor', note: 'Also releaser (like amphetamine)' },
       { t: 'net', action: 'inhibitor' }
     ],
-    updates: [{ year: '2021', title: 'Naltrexone plus bupropion (ADAPT-2)', text: 'Extended-release injectable naltrexone plus oral bupropion modestly increased response vs placebo in methamphetamine use disorder (NEJM, January 2021); not FDA-approved for this use.', source: 'NIDA, January 2021' }]
+    updates: [{ year: '2021', title: 'Naltrexone plus bupropion (ADAPT-2)', text: 'Extended-release injectable naltrexone plus oral bupropion modestly increased response vs placebo in methamphetamine use disorder (NEJM, January 2021); not FDA-approved for this use.', source: 'NIDA, January 2021' }],
+    pearls: ['Oral use is less reinforcing because GI absorption slows brain entry; **smoking, snorting or injecting** maximizes the high']
   },
   {
     id: 'alcohol', name: 'Alcohol (ethanol)', aka: ['ethanol'], group: 'Drug of abuse', cls: 'Sedative drug of abuse',
@@ -1160,7 +1218,8 @@ SP.drugs = [
     ],
     uses: [],
     sideEffects: [{ e: 'Withdrawal: glutamate excess, GABA deficiency', via: 'Adaptation of GABA and glutamate systems' }],
-    facts: [{ ch: 'ch13', pages: '553', text: 'About **85%** of alcoholics smoke; self-medication of psychiatric disorders is common.', sec: 's13-alcohol' }]
+    facts: [{ ch: 'ch13', pages: '553', text: 'About **85%** of alcoholics smoke; self-medication of psychiatric disorders is common.', sec: 's13-alcohol' }],
+    pearls: ['**Detox and deprivation** do not abolish craving; cue-triggered craving can persist for years and deprivation may raise later drinking.']
   },
   {
     id: 'levodopa', name: 'Levodopa', aka: ['L-DOPA'], group: 'Parkinson’s disease treatment', cls: 'Dopamine precursor',
@@ -1207,8 +1266,10 @@ SP.drugs = [
     updates: [{ year: '2024', title: 'Not approved for PTSD', text: 'In August 2024 the FDA issued a **complete response letter** declining approval of MDMA-assisted therapy (midomafetamine) for PTSD and requested another phase III trial.', source: 'FDA complete response letter to Lykos Therapeutics, August 9, 2024' }],
     sideEffects: [
       { e: '**Hyperthermia**, organ damage, death (especially dancing all night, dehydrated)', via: 'Possibly 5HT2A stimulation' },
-      { e: 'Distorted sensory and time perception, hallucinations', via: '5HT2A stimulation' }
-    ]
+      { e: 'Distorted sensory and time perception, hallucinations', via: '5HT2A stimulation' },
+      { e: '**Mania-like states, anxious derealization**, thought disorder, fear of losing thought or body control', via: 'Not specified' }
+    ],
+    pearls: ['Known as **"Molly"** (for "molecular") as well as Ecstasy; once popular in clubs and raves', 'Only **pure MDMA** is studied in therapy; street drug is often cut with bath salts, methamphetamine, dextromethorphan, ketamine or cocaine, and taken with marijuana and alcohol', 'Rationale in PTSD: an **empathic** state may suit painful-memory work better than psilocybin\'s mystical or ketamine\'s dissociative state', 'Aimed at patients for whom first-line **exposure therapy** fails or is too painful']
   },
   {
     id: 'tiagabine', name: 'Tiagabine', group: 'Anticonvulsant', cls: 'Anticonvulsant',
@@ -1527,7 +1588,8 @@ SP.drugs = [
       { ch: 'ch13', pages: '551', text: 'Stabilizes α4β2 channels in an intermediate, **non-desensitized** state: reduces reward if the patient smokes and eases withdrawal. Triples–quadruples quit rates; ~10% abstinent at 1 year; 12 weeks may be too short.', sec: 's13-nicotine' },
       { ch: 'ch13', pages: '573–574', text: 'Higher affinity than nicotine, so patients cannot “**smoke over**” it: smoking stops being reinforcing (extinction).', sec: 's13-extinction' }
     ],
-    updates: [{ year: '2026', title: 'A related partial agonist not yet approved', text: '**Cytisinicline**, a nicotinic partial agonist, received an FDA complete response letter on June 22, 2026 for manufacturing and labeling issues, with no efficacy or safety deficiencies cited.', source: 'Drugs.com; Achieve Life Sciences, June 2026' }]
+    updates: [{ year: '2026', title: 'A related partial agonist not yet approved', text: '**Cytisinicline**, a nicotinic partial agonist, received an FDA complete response letter on June 22, 2026 for manufacturing and labeling issues, with no efficacy or safety deficiencies cited.', source: 'Drugs.com; Achieve Life Sciences, June 2026' }],
+    pearls: ['Quit rates with **bupropion** are about half those of varenicline']
   },
   {
     id: 'nicotine', name: 'Nicotine', group: 'Drug of abuse', cls: 'Nicotinic agonist; drug of abuse',
@@ -1545,7 +1607,12 @@ SP.drugs = [
       { ch: 'ch13', pages: '548', text: 'Releases DA three ways: α4β2 on VTA DA neurons, glutamate release, and desensitizing α4β2 on GABA interneurons. α7 in PFC = alerting, not addiction.', sec: 's13-nicotine' },
       { ch: 'ch13', pages: '548–551', text: 'Receptors desensitize over one cigarette and resensitize in ~45 min (craving); chronic smoking **upregulates** them. Possibly the most addicting substance; only 2–3% quit long term.', sec: 's13-nicotine' },
       { ch: 'ch13', pages: '551', text: 'Replacement (gum, lozenge, spray, inhaler, patch) gives steady, non-pulsatile nicotine: about the same quit rate as bupropion.', sec: 's13-nicotine' }
-    ]
+    ],
+    sideEffects: [
+      { e: '**Craving and withdrawal** between cigarettes', via: 'α4β2 receptors resensitize and no longer release dopamine' },
+      { e: 'Amplified craving with chronic use', via: 'α4β2 upregulation (futile; receptors are desensitized again by the next cigarette)' }
+    ],
+    pearls: ['A cigarette\'s **length** roughly matches the time needed to desensitize α4β2 receptors; shorter wastes pleasure, longer adds nothing', 'Addiction can start with the **first cigarette** (anterior cingulate activation lasting about a month in animals); craving appears within a month of repeated use', 'Smoking is very common in psychiatric practice: **40–50%** of psychopharmacology patients, **60–85%** in ADHD, schizophrenia and bipolar; only about 10% are proactively offered treatment', 'Changes may be lifelong: a **"molecular memory"** persists in long-abstinent ex-smokers']
   },
   {
     id: 'zolpidem', name: 'Zolpidem', brand: 'Ambien; Ambien CR', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
@@ -1561,7 +1628,9 @@ SP.drugs = [
     facts: [
       { ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2 that improve insomnia.', sec: 's3-drugs' },
       { ch: 'ch10', pages: '422–423, 427–428', text: '**α1-selective**. IR lasts ~2–4 h (too cold: early waking); **CR** extends to 6–8 h (just right); low-dose **sublingual** form for middle-of-the-night waking.', sec: 's10-gaba-hypnotics' }
-    ]
+    ],
+    sideEffects: [{ e: '**Early-morning awakening** with immediate-release form', via: 'Short half-life (1–3 h): drug level falls below threshold before waking' }],
+    pearls: ['**α1 selectivity** may mean less tolerance and dependence than benzodiazepines, but this is **not yet proven**.']
   },
   {
     id: 'zaleplon', name: 'Zaleplon', brand: 'Sonata', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
@@ -1577,7 +1646,9 @@ SP.drugs = [
     facts: [
       { ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2.', sec: 's3-drugs' },
       { ch: 'ch10', pages: '422, 428', text: '**α1-selective**, ultra-short (1–3 h): good for onset, may lose maintenance.', sec: 's10-gaba-hypnotics' }
-    ]
+    ],
+    sideEffects: [{ e: 'Loss of **sleep maintenance**', via: 'Ultra-short half-life (1–3 h): short time above sleep threshold' }],
+    pearls: ['**α1 selectivity** may lower tolerance and dependence risk, but its functional significance is **unproven**.', 'If sleep is too short: raise the dose or move to a longer-acting hypnotic.']
   },
   {
     id: 'suvorexant', name: 'Suvorexant', brand: 'Belsomra', group: 'Orexin antagonist', cls: 'Dual orexin receptor antagonist (DORA)',
@@ -1591,7 +1662,8 @@ SP.drugs = [
     sideEffects: [
       { e: 'No dependence, withdrawal, rebound, falls, amnesia or respiratory depression (compared with GABA-A PAMs)', via: 'Reduces arousal rather than enhancing GABA' },
       { e: 'Morning carryover in some patients (lower the dose)', via: 'Residual orexin blockade' }
-    ]
+    ],
+    pearls: ['Hypnotic effect needs about **65% orexin-receptor occupancy**, versus 25–30% for GABA-A hypnotics and about 80% for serotonin/histamine antagonists', 'Plasma **half-life is not clinically important** for DORAs: adjust by **dose** (higher for early waking or high orexin tone, lower for morning carryover)', 'No head-to-head data against lemborexant, but their binding profiles differ enough that a **non-responder to one** might do better on the other']
   },
   {
     id: 'lemborexant', name: 'Lemborexant', brand: 'Dayvigo', group: 'Orexin antagonist', cls: 'Dual orexin receptor antagonist (DORA)',
@@ -1605,7 +1677,8 @@ SP.drugs = [
     sideEffects: [
       { e: 'No dependence, withdrawal, rebound, falls, amnesia or respiratory depression (compared with GABA-A PAMs)', via: 'Reduces arousal rather than enhancing GABA' },
       { e: 'Morning carryover in some patients (lower the dose)', via: 'Residual orexin blockade' }
-    ]
+    ],
+    pearls: ['Hypnotic effect needs about **65% orexin-receptor occupancy**, versus 25–30% for GABA-A hypnotics and about 80% for serotonin/histamine antagonists', 'Plasma **half-life is not clinically important** for DORAs: adjust by **dose** (higher for early waking or high orexin tone, lower for morning carryover)', 'No head-to-head data against suvorexant, but their binding profiles differ enough that a **non-responder to one** might do better on the other']
   },
   {
     id: 'daridorexant', name: 'Daridorexant', brand: 'Quviviq', group: 'Orexin antagonist', cls: 'Dual orexin receptor antagonist (DORA)',
@@ -1632,7 +1705,9 @@ SP.drugs = [
     facts: [
       { ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2.', sec: 's3-drugs' },
       { ch: 'ch10', pages: '422–423', text: 'Racemic R + S zopiclone, available outside the US; binds α1, α2, α3 and α5 like benzodiazepines. (Figure 10-34 labels it “Stilnox,” a zolpidem brand.)', sec: 's10-gaba-hypnotics' }
-    ]
+    ],
+    sideEffects: [],
+    pearls: ['Whether the racemic mixture differs **clinically** from its S enantiomer (eszopiclone) is **debated**.']
   },
   {
     id: 'eszopiclone', name: 'Eszopiclone', brand: 'Lunesta', group: 'Z-drug hypnotic', cls: 'Nonbenzodiazepine hypnotic (“Z drug”)',
@@ -1648,7 +1723,9 @@ SP.drugs = [
     facts: [
       { ch: 'ch03', pages: '55', text: 'One of the four “Z drugs” in Table 3-2.', sec: 's3-drugs' },
       { ch: 'ch10', pages: '422–423, 427', text: 'The **S enantiomer** of zopiclone, available in the US; about 8 h above threshold (“just right”).', sec: 's10-gaba-hypnotics' }
-    ]
+    ],
+    sideEffects: [],
+    pearls: ['Not α1-selective (binds α1, α2, α3, α5), unlike zolpidem and zaleplon.']
   },
   {
     id: 'allopregnanolone', name: 'Allopregnanolone', aka: ['brexanolone'], group: 'Neuroactive steroid', cls: 'Neuroactive steroid',
@@ -1737,7 +1814,8 @@ SP.drugs = [
       { ch: 'ch09', pages: '399–400', text: 'Used for ancillary symptoms of **fibromyalgia** (see Chapter 9 table).', sec: 's9-ancillary' },
       { ch: 'ch10', pages: '442–444', text: 'Possibly less powerful than stimulants in narcolepsy but with much lower abuse potential; often needs a second daily dose.', sec: 's10-modafinil' },
       { ch: 'ch11', pages: '476', text: 'Also a DAT blocker: the more rapidly and completely the DAT is blocked, the more reinforcing a drug becomes.', sec: 's11-dat' }
-    ]
+    ],
+    pearls: ['In OSA, an **adjunct** to CPAP-type airway treatment; sometimes used off-label alone when CPAP is not tolerated (adherence only about 54%).', 'In shift work disorder, pair with **circadian measures** such as timed bright light.', 'In the **arousal combo**, the SNRI boosts 5HT and NE while modafinil adds a single dopamine boost; with a stimulant, NE is boosted twice.']
   },
   {
     id: 'armodafinil', name: 'Armodafinil', brand: 'Nuvigil', group: 'Wake-promoting agent', cls: 'Wake-promoting agent',
@@ -1749,7 +1827,8 @@ SP.drugs = [
     short: 'Wake-promoting agent used for fibro-fog and fatigue.',
     mechanism: 'The **R enantiomer** of modafinil: a DAT inhibitor with later peak, longer half-life and higher plasma levels 6–14 h after dosing, possibly avoiding a second daily dose.',
     uses: ['**Fibro-fog** and fatigue in fibromyalgia (as for cognitive dysfunction in depression)', '**Narcolepsy**; adjunct for **OSA**; **shift work disorder** (approved)'],
-    targets: [{ t: 'dat', action: 'inhibitor' }]
+    targets: [{ t: 'dat', action: 'inhibitor' }],
+    pearls: ['Its pharmacokinetics could give more **phasic dopamine** firing than racemic modafinil.', 'No head-to-head trials against stimulants exist, so **relative potency** in narcolepsy is unproven.']
   },
   {
     id: 'caffeine', name: 'Caffeine', group: 'Wake-promoting agent', cls: 'Adenosine receptor antagonist',
@@ -1759,7 +1838,8 @@ SP.drugs = [
     short: 'The world’s most used psychoactive drug: an adenosine antagonist.',
     mechanism: 'Blocks **adenosine** receptors. Adenosine (the “accountant” of fatigue) heterodimerizes its receptors with **D2** receptors and lowers their dopamine affinity; caffeine restores it, enhancing DA action.',
     targets: [{ t: 'adenosine', action: 'antagonist' }],
-    uses: ['Wake promotion; reduces fatigue']
+    uses: ['Wake promotion; reduces fatigue'],
+    pearls: ['Sleep-hygiene advice for insomnia: **avoid caffeine** near bedtime, along with alcohol and nicotine.', 'Its wake effect comes from **reducing homeostatic sleep drive**, since adenosine builds up as fatigue accumulates.']
   },
   {
     id: 'solriamfetol', name: 'Solriamfetol', brand: 'Sunosi', group: 'Wake-promoting agent', cls: 'Wake-promoting NDRI',
@@ -1817,7 +1897,12 @@ SP.drugs = [
       { ch: 'ch11', pages: '480', text: 'Raises prefrontal NE and DA but **not** accumbens DA: hence no reinforcing, abuse or addiction potential.', sec: 's11-nri' },
       { ch: 'ch11', pages: '480–481', text: 'In stressed, comorbid ADHD, chronic use may restore tonic signaling, downregulate phasic NE/DA and desensitize receptors, possibly easing **anxiety, depression and heavy drinking**.', sec: 's11-nri' },
       { ch: 'ch11', pages: '481', text: '24-hour relief; smaller short-term effect sizes than stimulants, but not necessarily inferior in **stimulant-naïve** patients or after 8–11 weeks. High doses may cause **sedation or cognitive impairment** (α1): lower the dose.', sec: 's11-nri' }
-    ]
+    ],
+    sideEffects: [
+      { e: '**Sedation** at high doses', via: 'Excess NE at α2B receptors (thalamus)' },
+      { e: '**Cognitive impairment** at high doses', via: 'Excess NE favouring α1 over α2A actions' }
+    ],
+    pearls: ['**Low doses** first raise α2A activity and improve cognition; **high doses** can swamp the synapse, so the fix is to lower the dose.', 'Benefit rests on **long-term adaptation** (restored tonic signaling), unlike stimulants whose effect tracks plasma level and momentary occupancy.', 'With ADHD plus **anxiety, depression or substance abuse**, an NET inhibitor or α2A agonist added to the primary treatment is favoured over a stimulant.']
   },
   {
     id: 'reboxetine', name: 'Reboxetine', group: 'NRI', cls: 'Selective norepinephrine reuptake inhibitor (NRI)',
@@ -1882,7 +1967,8 @@ SP.drugs = [
     mechanism: 'Blocks postsynaptic **α1-adrenergic** receptors, through which excess norepinephrine in the amygdala may cause **nightmares** and hyperarousal.',
     targets: [{ t: 'alpha1', action: 'antagonist' }],
     uses: ['**PTSD nightmares** and hyperarousal (given at night)'],
-    facts: [{ ch: 'ch08', pages: '370', text: 'The book spells it “prazocin.” A unique PTSD treatment: an α1 antagonist at night to prevent nightmares (p. 378).', sec: 's8-ne' }]
+    facts: [{ ch: 'ch08', pages: '370', text: 'The book spells it “prazocin.” A unique PTSD treatment: an α1 antagonist at night to prevent nightmares (p. 378).', sec: 's8-ne' }],
+    pearls: ['Targets only the **α1** part of excess noradrenergic drive; fear and worry symptoms are instead tied to β1 receptors and are reduced by **NET inhibitors**', 'Helps nightmares and hyperarousal in **some** patients, as an add-on for one symptom; most PTSD patients are not on monotherapy']
   },
   {
     id: 'hydroxyzine', name: 'Hydroxyzine', brand: 'Atarax; Vistaril', group: 'Antihistamine', cls: 'Sedating antihistamine',
@@ -1910,7 +1996,8 @@ SP.drugs = [
     sideEffects: [
       { e: 'Blurred vision, constipation, memory problems, dry mouth', via: 'M1 antagonism' },
       { e: 'Sedation', via: 'H1 antagonism' }
-    ]
+    ],
+    pearls: ['Its anticholinergic effects come from **M1 blockade**, not H1; the idea that all antihistamines are anticholinergic arose because most potent ones also block M1.', 'H1-antagonist hypnotics have only **anecdotal** tolerance and no withdrawal, dependence or rebound.', 'Works by **reducing arousal** (blocking histamine) rather than boosting sleep drive; hypnotic threshold for histamine blockade is thought to be about **80%** occupancy.']
   },
   {
     id: 'doxylamine', name: 'Doxylamine', group: 'Antihistamine', cls: 'Sedating antihistamine',
@@ -1930,7 +2017,8 @@ SP.drugs = [
     short: 'MT1/MT2 agonist for sleep-onset insomnia.',
     mechanism: '**MT1/MT2 agonist**; improves **sleep onset** (sometimes better after several days), not maintenance; short time above threshold.',
     targets: [{ t: 'mt1mt2', action: 'agonist' }],
-    uses: ['**Insomnia** (sleep onset)']
+    uses: ['**Insomnia** (sleep onset)'],
+    pearls: ['Unlike OTC melatonin, acts at **MT1/MT2 only**, not the MT3 site (an enzyme, NRH–quinone oxidoreductase 2, not involved in sleep)', 'Sleep-onset effect is attributed to **MT1** inhibition of the suprachiasmatic nucleus, damping its wake-promoting signal', 'Grouped with **1–3 hour half-life hypnotics** (zaleplon, triazolam), so effect may fade before desired waking']
   },
   {
     id: 'tasimelteon', name: 'Tasimelteon', brand: 'Hetlioz', group: 'Melatonergic agent', cls: 'Melatonin MT1/MT2 agonist',
@@ -1940,7 +2028,8 @@ SP.drugs = [
     short: 'MT1/MT2 agonist for non-24-hour sleep–wake disorder.',
     mechanism: 'A powerful **MT1/MT2 agonist**; MT2 action retrains the circadian clock.',
     targets: [{ t: 'mt1mt2', action: 'agonist' }],
-    uses: ['**Non-24-hour sleep–wake disorder** (mostly in the blind)']
+    uses: ['**Non-24-hour sleep–wake disorder** (mostly in the blind)'],
+    pearls: ['Non-24 disorder arises because blind patients cannot **entrain the clock to light**; the free-running clock causes both insomnia and daytime sleepiness', '**Phase shifting** and circadian entrainment are mainly MT2-mediated; like ramelteon, helps sleep **onset** rather than necessarily maintenance', 'Acts only at MT1/MT2, not the MT3 site that OTC melatonin also hits']
   },
   {
     id: 'lidocaine', name: 'Lidocaine', brand: 'Xylocaine', group: 'Local anesthetic', cls: 'Local anesthetic',
@@ -1972,7 +2061,12 @@ SP.drugs = [
       { ch: 'ch11', pages: '482', text: 'Approved for hypertension; only **controlled-release** clonidine is approved for ADHD. Guanfacine is 10× weaker at sedation/hypotension and 25× more potent on PFC function.', sec: 's11-alpha2' },
       { ch: 'ch13', pages: '561', text: 'Reduces the **intensity** (autonomic symptoms) but not the duration of opioid withdrawal.', sec: 's13-oud-tx' }
     ],
-    updates: [{ year: '2024', title: 'A liquid clonidine for ADHD', text: '**Onyda XR** (clonidine ER oral suspension) was approved in May 2024 for ADHD from age 6, alone or with stimulants, dosed once daily at bedtime.', source: 'Drugs.com approval history; Tris Pharma, May 29, 2024' }]
+    updates: [{ year: '2024', title: 'A liquid clonidine for ADHD', text: '**Onyda XR** (clonidine ER oral suspension) was approved in May 2024 for ADHD from age 6, alone or with stimulants, dosed once daily at bedtime.', source: 'Drugs.com approval history; Tris Pharma, May 29, 2024' }],
+    sideEffects: [
+      { e: '**Sedation**', via: 'α2B (thalamus), α2C and imidazoline receptor actions' },
+      { e: '**Hypotension**', via: 'α2C and imidazoline receptor actions' }
+    ],
+    pearls: ['ADHD patients with hypothetically **low PFC norepinephrine but no dopamine problem** are the best candidates for **α2 agonist monotherapy**', 'No postsynaptic **DA receptor** action, which parallels the lack of abuse potential.', 'In pain, works by mimicking **descending noradrenergic** input onto inhibitory α2 receptors on primary afferent terminals.']
   },
   {
     id: 'guanfacine', name: 'Guanfacine', brand: 'Intuniv (ER); Tenex (IR)', group: 'α2 agonist', cls: 'Selective α2A-adrenergic agonist',
@@ -1991,7 +2085,8 @@ SP.drugs = [
       { ch: 'ch11', pages: '482', text: '**10× weaker** than clonidine at sedation and lowering blood pressure, yet **25× more potent** at enhancing PFC function. ER form allows once-daily dosing with fewer peak-dose effects; only the ER form is approved for ADHD.', sec: 's11-alpha2' },
       { ch: 'ch11', pages: '482–484', text: 'Best monotherapy candidates may have low prefrontal **NE** with normal DA; no predictor beyond an **empiric trial**.', sec: 's11-alpha2' },
       { ch: 'ch11', pages: '484', text: 'Approved as an **augmenting agent** after inadequate stimulant response; may especially help **oppositional** symptoms (low VMPFC NE).', sec: 's11-alpha2' }
-    ]
+    ],
+    pearls: ['For ADHD with **anxiety, depression or substance abuse**, an α2A agonist is favoured over a stimulant as add-on to the primary treatment.']
   },
   {
     id: 'lofexidine', name: 'Lofexidine', brand: 'Lucemyra', group: 'α2 agonist', cls: 'α2-adrenergic agonist',
@@ -2002,7 +2097,8 @@ SP.drugs = [
     mechanism: 'An **α2-adrenergic agonist** that reduces autonomic hyperactivity during opioid withdrawal.',
     targets: [{ t: 'alpha2', action: 'agonist' }],
     uses: ['**Opioid withdrawal** (intensity, not duration)'],
-    facts: [{ ch: 'ch13', pages: '561–562', text: 'Combined with **naltrexone**, reduces both the severity and the duration of withdrawal after methadone or buprenorphine (Figures 13-20, 13-21).', sec: 's13-oud-tx' }]
+    facts: [{ ch: 'ch13', pages: '561–562', text: 'Combined with **naltrexone**, reduces both the severity and the duration of withdrawal after methadone or buprenorphine (Figures 13-20, 13-21).', sec: 's13-oud-tx' }],
+    pearls: ['Settles the **autonomic hyperactivity** of withdrawal (tachycardia, tremor, sweating); clonidine is the comparable α2 agonist in the book.']
   },
   {
     id: 'naloxone', name: 'Naloxone', brand: 'Narcan', group: 'Opioid antagonist', cls: 'μ-opioid antagonist',
@@ -2020,7 +2116,9 @@ SP.drugs = [
       { ch: 'ch13', pages: '560', text: 'Competitive μ antagonist that reverses opioid overdose and can precipitate withdrawal. (The book claims fentanyl cannot be reversed; it can, though larger or repeated doses may be needed.)', sec: 's13-opioids' },
       { ch: 'ch13', pages: '560', text: 'Combined with **buprenorphine**: inactive sublingually but blocks the high if the tablet is injected.', sec: 's13-oud-tx' }
     ],
-    updates: [{ year: '2023', title: 'Naloxone over the counter', text: 'Narcan 4 mg nasal spray was approved for **over-the-counter** sale on March 29, 2023.', source: 'FDA via BioSpace, March 29, 2023' }]
+    updates: [{ year: '2023', title: 'Naloxone over the counter', text: 'Narcan 4 mg nasal spray was approved for **over-the-counter** sale on March 29, 2023.', source: 'FDA via BioSpace, March 29, 2023' }],
+    sideEffects: [{ e: '**Precipitated withdrawal** in opioid-dependent patients', via: 'μ-opioid receptor blockade' }],
+    pearls: ['Reversal of opioid effects works only if given **early enough** and in sufficient dose, since it competes at the receptor.', 'Not absorbed by mouth or under the tongue, so it is **active by injection**; this is why the combination tablet deters injection.']
   },
   {
     id: 'naltrexone', name: 'Naltrexone', brand: 'Revia (oral); Vivitrol (monthly injection)', group: 'Addiction treatment', cls: 'μ-opioid antagonist',
@@ -2035,7 +2133,9 @@ SP.drugs = [
       { ch: 'ch13', pages: '556', text: 'Oral or **30-day injection** (380 mg IM); the injection solves adherence but is rarely prescribed.', sec: 's13-alcohol' },
       { ch: 'ch13', pages: '561', text: 'Added to an α2 agonist, shortens opioid withdrawal; monthly injection means one decision per 30 days and can’t be stopped impulsively.', sec: 's13-oud-tx' },
       { ch: 'ch13', pages: '573', text: 'Basis of the **Sinclair method**: taken ~1 h before drinking to extinguish the drinking habit; works best paired with use.', sec: 's13-extinction' }
-    ]
+    ],
+    sideEffects: [{ e: 'Can **precipitate withdrawal** in opioid-dependent patients (book states this for opioid antagonists generally)', via: 'μ-opioid blockade' }],
+    pearls: ['Better at cutting **heavy drinking** (≥5 drinks/day men, ≥4 women) than at securing complete abstinence.', 'Patients who try to **drink or inject over** the blockade find it unrewarding, which helps extinguish the habit.', 'Combined with bupropion, approved for **obesity** (Ch 6 mention).']
   },
   {
     id: 'nalmefene', name: 'Nalmefene', brand: 'Selincro (alcohol, ex-US); Opvee (nasal, overdose)', group: 'Addiction treatment', cls: 'μ-opioid antagonist',
@@ -2047,7 +2147,9 @@ SP.drugs = [
     targets: [{ t: 'mor', action: 'antagonist' }],
     uses: ['Alcohol use disorder (outside the US); Sinclair-type extinction'],
     facts: [{ ch: 'ch13', pages: '556', text: 'Like naltrexone, reduces the euphoria of heavy drinking; approved outside the US.', sec: 's13-alcohol' }],
-    updates: [{ year: '2023', title: 'Nalmefene nasal spray for overdose', text: 'In May 2023 the FDA approved **Opvee**, a prescription nalmefene nasal spray for emergency treatment of opioid overdose.', source: 'NPR, May 22, 2023' }]
+    updates: [{ year: '2023', title: 'Nalmefene nasal spray for overdose', text: 'In May 2023 the FDA approved **Opvee**, a prescription nalmefene nasal spray for emergency treatment of opioid overdose.', source: 'NPR, May 22, 2023' }],
+    sideEffects: [{ e: 'Can **precipitate withdrawal** in opioid-dependent patients (book states this for opioid antagonists generally)', via: 'μ-opioid blockade' }],
+    pearls: ['Used in the Sinclair method as an **oral dose ~1 h before drinking**, as an alternative to naltrexone.']
   },
   {
     id: 'acamprosate', name: 'Acamprosate', brand: 'Campral', group: 'Addiction treatment', cls: 'Glutamate modulator for alcohol dependence',
@@ -2061,7 +2163,8 @@ SP.drugs = [
       { t: 'mglur-g2', action: 'antagonist', note: 'Perhaps mGlu2' }
     ],
     uses: ['Maintaining abstinence in **alcohol dependence**'],
-    facts: [{ ch: 'ch13', pages: '556', text: 'Approved but **not prescribed very often**.', sec: 's13-alcohol' }]
+    facts: [{ ch: 'ch13', pages: '556', text: 'Approved but **not prescribed very often**.', sec: 's13-alcohol' }],
+    pearls: ['Targets the state after chronic alcohol is stopped: **glutamate overexcitation** (excitotoxicity) plus GABA deficiency.']
   },
   {
     id: 'disulfiram', name: 'Disulfiram', brand: 'Antabuse', group: 'Addiction treatment', cls: 'Aldehyde dehydrogenase inhibitor',
@@ -2094,7 +2197,8 @@ SP.drugs = [
     mechanism: 'A **tricyclic** muscle relaxant; the book does not detail its pharmacology.',
     uses: ['Second-line treatment of **fibromyalgia** pain'],
     facts: [{ ch: 'ch09', pages: '399', text: 'Spelled “cyclobenzapine” in the book.', sec: 's9-ancillary' }],
-    updates: [{ year: '2025', title: 'Sublingual form approved for fibromyalgia', text: 'Tonmya, a once-nightly sublingual cyclobenzaprine tablet, was approved for fibromyalgia in adults on August 15, 2025, the first new fibromyalgia drug in more than 15 years.', source: 'FDA approval reported by Healio, August 15, 2025' }]
+    updates: [{ year: '2025', title: 'Sublingual form approved for fibromyalgia', text: 'Tonmya, a once-nightly sublingual cyclobenzaprine tablet, was approved for fibromyalgia in adults on August 15, 2025, the first new fibromyalgia drug in more than 15 years.', source: 'FDA approval reported by Healio, August 15, 2025' }],
+    pearls: ['Listed with sedating **mirtazapine and TCAs**; the book frames these second-line drugs as helping sleep disturbance in fibromyalgia.']
   },
   {
     id: 'sodium-oxybate', name: 'Sodium oxybate (GHB)', brand: 'Xyrem', aka: ['γ-Hydroxybutyrate', 'GHB'], group: 'Hypnotic', cls: 'Slow-wave sleep enhancer',
@@ -2116,7 +2220,8 @@ SP.drugs = [
       { t: 'gabab', action: 'partial agonist' }
     ],
     updates: [{ year: '2023', title: 'Once-nightly formulation', text: 'Lumryz, an extended-release sodium oxybate taken once at bedtime, was approved in May 2023 for cataplexy or excessive daytime sleepiness in adults with narcolepsy.', source: 'FDA approval reported May 1, 2023 (NeurologyLive)' }],
-    facts: [{ ch: 'ch13', pages: '559', text: 'As GHB it is abused to get high and as a “**date rape**” drug; agonist at GHB and GABA-B receptors.', sec: 's13-sedatives' }]
+    facts: [{ ch: 'ch13', pages: '559', text: 'As GHB it is abused to get high and as a “**date rape**” drug; agonist at GHB and GABA-B receptors.', sec: 's13-sedatives' }],
+    pearls: ['A **controlled substance** supplied through a central pharmacy in the US.', 'Naturally occurring in the brain, **made from GABA**, with its own receptors.']
   },
   {
     id: 'memantine', name: 'Memantine', brand: 'Namenda', group: 'Dementia treatment', cls: 'NMDA glutamate antagonist',
@@ -2137,7 +2242,8 @@ SP.drugs = [
       { ch: 'ch03', pages: '55', text: 'Listed in Table 3-2 as the NMDA glutamate antagonist that is pro-cognitive in Alzheimer disease.', sec: 's3-drugs' },
       { ch: 'ch12', pages: '516–518', text: 'An **uncompetitive, open-channel** NMDA antagonist with low-to-moderate affinity, **voltage dependence** and fast on/off kinetics: blocks tonic excitotoxic glutamate but is expelled by phasic bursts, so learning continues and there are no psychotomimetic effects (“**artificial magnesium**”).', sec: 's12-memantine' },
       { ch: 'ch12', pages: '518', text: 'Usually given **with** a cholinesterase inhibitor for additive benefit; not effective (or tested) for agitation.', sec: 's12-memantine' }
-    ]
+    ],
+    pearls: ['Rationale: plaque/tangle **glutamate leak** may first disrupt memory, then cause excitotoxic neuron loss; memantine aims to slow that decline', 'A relatively **weak, low-potency** NMDA blocker, never systematically tested for AD agitation; dextromethorphan–bupropion is the NMDA agent studied there']
   },
   {
     id: 'donepezil', name: 'Donepezil', brand: 'Aricept', group: 'Dementia treatment', cls: 'Cholinesterase inhibitor',
@@ -2150,7 +2256,8 @@ SP.drugs = [
     uses: ['Cognitive symptoms of **Alzheimer disease**'],
     sideEffects: [{ e: 'Nausea, vomiting, diarrhea (usually transient)', via: 'Peripheral AChE inhibition in the gut' }],
     facts: [{ ch: 'ch12', pages: '510', text: 'Easy to dose; side effects mostly **GI** and transient.', sec: 's12-ache' }],
-    updates: [{ year: '2022', title: 'A weekly donepezil patch', text: '**Adlarity** (donepezil transdermal system, once weekly) was approved in March 2022; it was later listed as discontinued.', source: 'Drugs.com approval history' }]
+    updates: [{ year: '2022', title: 'A weekly donepezil patch', text: '**Adlarity** (donepezil transdermal system, once weekly) was approved in March 2022; it was later listed as discontinued.', source: 'Drugs.com approval history' }],
+    pearls: ['Cholinesterase inhibitors **usually preserve** memory (slow decline) rather than improve it, and lose effect as AD progresses and cholinergic receptor targets are lost', 'Little benefit for most **behavioral symptoms** of dementia, except in **Lewy body dementias**; also among possible (unapproved) treatments for apathy']
   },
   {
     id: 'rivastigmine', name: 'Rivastigmine', brand: 'Exelon', group: 'Dementia treatment', cls: 'Cholinesterase inhibitor',
@@ -2246,7 +2353,14 @@ SP.drugs = [
       { ch: 'ch04', pages: '78, 105–110', text: 'Causes a psychosis sharing features with schizophrenia by blocking NMDA receptors at the **PCP site** on prefrontal GABA interneurons (Table 4-1: visual hallucinations, paranoid delusions, no insight).', sec: 's4-nmda-hypo' },
       { ch: 'ch13', pages: '569–571', text: 'Dissociative NMDA antagonist: schizophrenia-like psychosis, **vertical nystagmus**, catatonia, analgesia; overdose with coma, hyperthermia, seizures, **rhabdomyolysis**.', sec: 's13-hallucinogens' }
     ],
-    sideEffects: [{ e: 'Psychosis', via: 'NMDA blockade on prefrontal GABA interneurons' }]
+    sideEffects: [
+      { e: 'Psychosis', via: 'NMDA blockade on prefrontal GABA interneurons' },
+      { e: '**Vertical nystagmus**, staggering gait, slurred speech', via: 'NMDA blockade (unique nystagmus; mechanism not specified)' },
+      { e: '**Catatonia** (excitement alternating with stupor), delirium, paranoia, disorientation', via: 'NMDA blockade' },
+      { e: '**Analgesia, amnesia**; at high doses sedation, respiratory depression, ataxia', via: 'NMDA blockade (dissociative class effect)' },
+      { e: '**Overdose: coma, extreme hyperthermia, seizures, rhabdomyolysis**', via: 'Toxic NMDA blockade (mechanism not specified)' }
+    ],
+    pearls: ['Abandoned as an **anesthetic** because it caused schizophrenia-like psychosis, often on emergence from anesthesia', 'Dissociative state of catalepsy, amnesia and analgesia; consciousness need not be lost (**dissociative anesthesia**)', 'With stimulants, PCP mimics psychosis **more genuinely** than classic hallucinogens do', 'Has stimulant as well as depressant actions; a "club drug" like ketamine, which acts at the same NMDA site but is far less psychotomimetic']
   },
   {
     id: 'lsd', name: 'LSD (lysergic acid diethylamide)', aka: ['lysergic acid diethylamide'], group: 'Hallucinogen', cls: 'Psychedelic hallucinogen',
@@ -2260,7 +2374,11 @@ SP.drugs = [
     ],
     sideEffects: [
       { e: 'Visual hallucinations', via: '5HT2A agonism in visual cortex' },
-      { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' }
+      { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' },
+      { e: '**Visual illusions, trails, macropsia/micropsia, synesthesia**, slowed time, depersonalization and derealization, with full alertness', via: '5HT2A agonism (plus other serotonin receptors)' },
+      { e: '**Panic ("bad trip")**, then delirium and rarely psychosis with delusions and paranoia as intoxication escalates', via: 'Hallucinogen intoxication; mechanism not specified' },
+      { e: 'Nausea, tachycardia, raised blood pressure and body temperature', via: 'Not specified' },
+      { e: '**Flashbacks** (spontaneous symptom recurrence lasting seconds to hours, days to months later; mostly reported with LSD)', via: 'Unknown; possibly long-lasting serotonin adaptation or amygdala emotional conditioning' }
     ],
     chapters: [
       { ch: 'ch04', pages: '78, 111, 131–133' },
@@ -2270,7 +2388,8 @@ SP.drugs = [
       { ch: 'ch04', pages: '78', text: 'Table 4-1 psychedelic model: **5HT2A agonist** (and to a lesser extent 5HT2C), visual hallucinations, **mystical** delusions, **insight preserved**.', sec: 's4-three' },
       { ch: 'ch04', pages: '131–133', text: 'Hallucinogen psychosis is blocked by **5HT2A antagonists**, showing that it arises from 5HT2A stimulation.', sec: 's4-5ht-hyper' },
       { ch: 'ch13', pages: '567–569', text: 'A **5HT2A agonist** hallucinogen: rapid tolerance (5HT2A desensitization); mostly illusions with clear consciousness; flashbacks (mostly LSD); reversed by 5HT2A antagonists.', sec: 's13-hallucinogens' }
-    ]
+    ],
+    pearls: ['An **ergoline**; psilocybin is a tryptamine and mescaline a phenethylamine', 'Hallucinogens are **not selective** for 5HT2A; other serotonin receptors may add to the effect', 'Resemblance of a "trip" to **psychosis** is only superficial']
   },
   {
     id: 'psilocybin', name: 'Psilocybin', group: 'Hallucinogen', cls: 'Psychedelic hallucinogen',
@@ -2286,7 +2405,10 @@ SP.drugs = [
     ],
     sideEffects: [
       { e: 'Visual hallucinations', via: '5HT2A agonism in visual cortex' },
-      { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' }
+      { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' },
+      { e: '**Visual illusions, trails, macropsia/micropsia, synesthesia**, slowed time, depersonalization and derealization, with full alertness', via: '5HT2A agonism (plus other serotonin receptors)' },
+      { e: '**Panic ("bad trip")**, then delirium and rarely psychosis with delusions and paranoia as intoxication escalates', via: 'Hallucinogen intoxication; mechanism not specified' },
+      { e: 'Nausea, tachycardia, raised blood pressure and body temperature', via: 'Not specified' }
     ],
     chapters: [
       { ch: 'ch04', pages: '78, 111, 131–133' },
@@ -2303,7 +2425,8 @@ SP.drugs = [
       { ch: 'ch13', pages: '567', text: 'A **tryptamine**; both active itself and a prodrug for psilocin (4-hydroxy-DMT; the book mislabels psilocin as DMT).', sec: 's13-hallucinogens' },
       { ch: 'ch13', pages: '574', text: 'Psilocybin-assisted psychotherapy studied for cancer-related anxiety, resistant anxiety and depression, OCD, addictions and more.', sec: 's13-assisted' }
     ],
-    updates: [{ year: '2026', title: 'Phase 3 program and filing', text: 'Compass Pathways reported positive phase 3 results for psilocybin (COMP360) in treatment-resistant depression; as of May 2026 a rolling new drug application was under way, with completion planned for late 2026. Not yet approved at that time.', source: 'Compass Pathways first-quarter 2026 report, May 13, 2026' }]
+    updates: [{ year: '2026', title: 'Phase 3 program and filing', text: 'Compass Pathways reported positive phase 3 results for psilocybin (COMP360) in treatment-resistant depression; as of May 2026 a rolling new drug application was under way, with completion planned for late 2026. Not yet approved at that time.', source: 'Compass Pathways first-quarter 2026 report, May 13, 2026' }],
+    pearls: ['From **"magic mushrooms"**; structurally similar to LSD and abused for euphoric, psychedelic trips', 'Therapy outcome depends on **set, setting and cast** (mindset, environment, therapist and others present) plus prior trust and preparation; few variables are established']
   },
   {
     id: 'mescaline', name: 'Mescaline', group: 'Hallucinogen', cls: 'Psychedelic hallucinogen',
@@ -2314,7 +2437,10 @@ SP.drugs = [
     targets: [{ t: '5ht2a', action: 'agonist' }],
     sideEffects: [
       { e: 'Visual hallucinations', via: '5HT2A agonism in visual cortex' },
-      { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' }
+      { e: 'Psychosis, delusions', via: '5HT2A-driven glutamate output to VTA → dopamine excess' },
+      { e: '**Visual illusions, trails, macropsia/micropsia, synesthesia**, slowed time, depersonalization and derealization, with full alertness', via: '5HT2A agonism (plus other serotonin receptors)' },
+      { e: '**Panic ("bad trip")**, then delirium and rarely psychosis with delusions and paranoia as intoxication escalates', via: 'Hallucinogen intoxication; mechanism not specified' },
+      { e: 'Nausea, tachycardia, raised blood pressure and body temperature', via: 'Not specified' }
     ],
     chapters: [
       { ch: 'ch04', pages: '111, 131–133' },
@@ -2323,7 +2449,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch04', pages: '111, 131–133', text: 'One of the three hallucinogens named as powerful **5HT2A agonists** that induce psychosis and visual hallucinations.', sec: 's4-5ht-hyper' },
       { ch: 'ch13', pages: '567–569', text: 'A **5HT2A agonist** hallucinogen: rapid tolerance (5HT2A desensitization); mostly illusions with clear consciousness; flashbacks (mostly LSD); reversed by 5HT2A antagonists.', sec: 's13-hallucinogens' }
-    ]
+    ],
+    pearls: ['A **phenethylamine** hallucinogen (psilocybin is a tryptamine, LSD an ergoline)', 'Hallucinogens are **not selective** for 5HT2A; other serotonin receptors may add to the effect']
   },
   {
     id: 'cannabis', name: 'Cannabis', aka: ['marijuana'], group: 'Drug of abuse', cls: 'Cannabinoid drug of abuse',
@@ -2334,7 +2461,14 @@ SP.drugs = [
       { t: 'cb1', action: 'partial agonist', note: 'THC' },
       { t: 'cb2', action: 'partial agonist', note: 'THC' }
     ],
-    sideEffects: [{ e: 'Increased risk of psychosis', via: 'Environmental stressor acting on genetic risk' }],
+    sideEffects: [
+      { e: 'Increased risk of psychosis', via: 'Environmental stressor acting on genetic risk' },
+      { e: '**Impaired short-term memory**, slowed thinking, loss of temporal awareness', via: 'THC at CB1/CB2; risk higher with low CBD' },
+      { e: '**Anxiety**; at high doses panic and toxic delirium', via: 'THC anxiogenic (increased amygdalar activity)' },
+      { e: '**Amotivational syndrome** in heavy daily users (poor drive, attention, judgment, poor insight)', via: 'Not specified' },
+      { e: 'Respiratory symptoms, **motor vehicle crashes**, lower birth weight', via: 'Substantial-evidence risks (Table 13-2); mechanism not specified' },
+      { e: 'Moderate-evidence risks: **(hypo)mania in bipolar**, depression, suicidality, other substance use disorders, pediatric overdose injuries', via: 'Not specified' }
+    ],
     chapters: [
       { ch: 'ch04', pages: '150–151' },
       { ch: 'ch13', pages: '563–567' }
@@ -2345,7 +2479,8 @@ SP.drugs = [
       { ch: 'ch13', pages: '563–564', text: 'Effects: well-being, relaxation, distorted time, impaired short-term memory; high doses panic, delirium, psychosis; heavy use **amotivational syndrome**.', sec: 's13-cannabis' },
       { ch: 'ch13', pages: '564–567', text: 'Substantial evidence of benefit for chronic pain, chemo nausea and MS spasticity; risks include psychosis, crashes, respiratory symptoms, low birth weight.', sec: 's13-cannabis' }
     ],
-    updates: [{ year: '2026', title: 'Partial rescheduling', text: 'Effective April 28, 2026 the DEA moved marijuana in FDA-approved products and under state medical licenses to **Schedule III**; a decision on all other marijuana was still pending in late September 2026.', source: 'Gibson Dunn, April 2026; Morgan Lewis, September 2026' }]
+    updates: [{ year: '2026', title: 'Partial rescheduling', text: 'Effective April 28, 2026 the DEA moved marijuana in FDA-approved products and under state medical licenses to **Schedule III**; a decision on all other marijuana was still pending in late September 2026.', source: 'Gibson Dunn, April 2026; Morgan Lewis, September 2026' }],
+    pearls: ['**CB1** is denser in brain; **CB2** is mostly on peripheral immune cells', 'Cannabis has grown more **potent** (more THC, less CBD) over time; vulnerable people cannot be identified in advance', 'High CBD content lowers risk of psychosis symptoms and memory impairment; **low-CBD** cannabis goes with earlier onset of psychotic disorder', '"Medical marijuana" is an **unprocessed plant** (~500 chemicals) with variable content and contaminants, so not a standard prescription drug', 'Evidence for benefit in anxiety, PTSD and Tourette is **limited**; epilepsy, dementia and addiction **insufficient**']
   },
   {
     id: 'dronabinol', name: 'Dronabinol', brand: 'Marinol; Syndros', group: 'Cannabinoid', cls: 'Synthetic THC',
@@ -2359,7 +2494,8 @@ SP.drugs = [
       { t: 'cb2', action: 'partial agonist' }
     ],
     uses: ['Chemotherapy-induced nausea and vomiting', 'Appetite in AIDS wasting (US)'],
-    facts: [{ ch: 'ch13', pages: '567', text: 'Oral capsule or solution (Table 13-4).', sec: 's13-cannabis' }]
+    facts: [{ ch: 'ch13', pages: '567', text: 'Oral capsule or solution (Table 13-4).', sec: 's13-cannabis' }],
+    pearls: ['**Schedule III**, versus Schedule II for nabilone', 'Pure THC meets traditional **FDA drug standards**, unlike medical marijuana']
   },
   {
     id: 'nabilone', name: 'Nabilone', brand: 'Cesamet', group: 'Cannabinoid', cls: 'Synthetic THC analogue',
@@ -2370,7 +2506,8 @@ SP.drugs = [
     mechanism: 'A synthetic **THC analogue** at CB1/CB2.',
     targets: [{ t: 'cb1', action: 'partial agonist' }],
     uses: ['Chemotherapy-induced nausea and vomiting (US)'],
-    facts: [{ ch: 'ch13', pages: '567', text: '**Schedule II** because of its potency.', sec: 's13-cannabis' }]
+    facts: [{ ch: 'ch13', pages: '567', text: '**Schedule II** because of its potency.', sec: 's13-cannabis' }],
+    pearls: ['Oral capsule only, with no AIDS-wasting indication, unlike dronabinol']
   },
   {
     id: 'nabiximols', name: 'Nabiximols', brand: 'Sativex', group: 'Cannabinoid', cls: 'THC:CBD oromucosal spray',
@@ -2392,7 +2529,8 @@ SP.drugs = [
     mechanism: 'An isomer of THC with little CB1/CB2 activity; mechanism unknown (perhaps serotonergic). **Not psychoactive**; anxiolytic, anticonvulsant, possibly antipsychotic.',
     targets: [],
     uses: ['Seizures in **Lennox–Gastaut** and **Dravet** syndromes from age 2 (US)'],
-    facts: [{ ch: 'ch13', pages: '563–567', text: 'Higher CBD content lowers the risk of hallucinations, delusions and memory impairment; Epidiolex is **not a controlled substance**.', sec: 's13-cannabis' }]
+    facts: [{ ch: 'ch13', pages: '563–567', text: 'Higher CBD content lowers the risk of hallucinations, delusions and memory impairment; Epidiolex is **not a controlled substance**.', sec: 's13-cannabis' }],
+    pearls: ['Potential properties noted: neuropathic pain relief and **anti-inflammatory**', 'Epidiolex is CBD purified from marijuana, given as an **oral solution**']
   },
   {
     id: 'ketamine', name: 'Ketamine', group: 'NMDA antagonist', cls: 'Anesthetic; rapid-acting antidepressant',
@@ -3712,7 +3850,8 @@ SP.drugs = [
       { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' },
       { ch: 'ch09', pages: '395–400', text: 'Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.', sec: 's9-a2d' },
       { ch: 'ch10', pages: '426', text: 'Used off-label for sleep: not very sedating, but enhances **slow-wave**, restorative sleep and helps pain.', sec: 's10-arousal-blockers' }
-    ]
+    ],
+    pearls: ['Pain may be best treated **early**: blocking central sensitization could stop pain being imprinted and progressing to chronic states', 'In fibromyalgia, combine with an **SNRI** for additive pain relief and broader coverage (α2δ: anxiety, slow-wave sleep; SNRI: depression, fatigue, fibro-fog)', 'If response is inadequate, **sodium-channel anticonvulsants** (second-line for neuropathic pain) act differently and may still work', 'Listed as a possible **second-line** option for agitation in dementia (not valproate, topiramate, oxcarbazepine or benzodiazepines)']
   },
   {
     id: 'gabapentin', name: 'Gabapentin', group: 'Anticonvulsant', cls: 'Anticonvulsant (α2δ ligand)',
@@ -3734,6 +3873,7 @@ SP.drugs = [
       { ch: 'ch08', pages: '366–368, 377', text: 'Binds open, overactive N and P/Q channels in amygdala and CSTC circuits to block excess glutamate; useful when SSRIs/SNRIs or benzodiazepines fail, or combined with them in partial responders.', sec: 's8-a2d' },
       { ch: 'ch09', pages: '395–400', text: 'Binds the α2δ subunit of open, overactive N and P/Q VSCCs in the dorsal horn, thalamus and cortex: proven for diabetic neuropathy, fibromyalgia, shingles and painful symptoms of depression/anxiety; may also help **anxiety** and **slow-wave sleep** in fibromyalgia.', sec: 's9-a2d' },
       { ch: 'ch10', pages: '426', text: 'Used off-label for sleep: not very sedating, but enhances **slow-wave**, restorative sleep and helps pain.', sec: 's10-arousal-blockers' }
-    ]
+    ],
+    pearls: ['Pain may be best treated **early**: blocking central sensitization could stop pain being imprinted and progressing to chronic states', 'In fibromyalgia, combine with an **SNRI** for additive pain relief and broader coverage (α2δ: anxiety, slow-wave sleep; SNRI: depression, fatigue, fibro-fog)', 'If response is inadequate, **sodium-channel anticonvulsants** (second-line for neuropathic pain) act differently and may still work', 'Listed as a possible **second-line** option for agitation in dementia (not valproate, topiramate, oxcarbazepine or benzodiazepines)']
   }
 ];
