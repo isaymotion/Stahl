@@ -8,10 +8,10 @@ Chapter-by-chapter review web app for psychiatry residents, built from **Stahl�
 ## 2. Fixed rules
 - Content strictly from the book, **in the app’s own words**, with page refs; no verbatim passages, no reproduced figures (original diagrams only).
 - Post-2021 info only in labeled, web-verified `update` blocks. Book errors flagged in `caution` callouts.
-- Attribution verbatim: `App created by Isabella Navarro, MD. Latest version October 2026. isaymotion@gmail.com` (footer, PDFs: `ATTRIBUTION` const in js/app.js).
-- Default theme dark. Keep Kaplan-style back/forward buttons, search, Backup Progress in footer.
+- Attribution verbatim: `App created by Isabella Navarro, MD. Latest version <Month YYYY>. isaymotion@gmail.com` (now November 2026): `index.html` footer, `data/app-meta.js` (`attribution`, used by PDFs), README.
+- Theme: match device / light / dark (design refresh 22.0.0 replaced dark-by-default). Keep back/forward buttons, search, Backup Progress in footer. Shell UI strings go through `t()` / `data/strings.js` (en + draft tl).
 - Service worker: `PREFIX = 'stahl-companion-'` never changes; only delete own caches.
-- Every release: changelog entry + bump `VERSION` in `sw.js`.
+- Every release: new top entry in `data/changelog.js` (`version` semver `N.0.0`, ISO date) + same version in `data/app-meta.js` and `sw.js` VERSION (`PREFIX + 'N.0.0'`) + a README line.
 - Commits: author `Isabella Navarro <isaymotion@gmail.com>`; end message with the Co-Authored-By/Claude-Session lines the session supplies.
 - User wants short progress messages while working and a brief final report; asks before big ambiguous builds.
 
@@ -22,14 +22,15 @@ Vanilla JS SPA, hash routes (`#/c/ch04/guide`, `#/drugs/fluoxetine`, `#/compare/
 - `data/chNN/`: `guide.js` (`{intro, parts:[{title, sections:[{id,title,pages,blocks:[…]}]}]}`; block types `p, list, defs, table, callout{variant: pearl|exam|caution|analogy|mnemonic|key}, case{title,text,point}, steps, flow, compare, update{year,title,text,source}`), `highyield.js` (`[{id, topic, items:["… **bold = blank** …"]}]`), `cards-mech|drugs|clinical.js` (`{id, tag, q, a}`), `cards-cases.js` (`{id, tag, q, choices[5], answer(0-4), why}`), `glossary.js` (`SP.glossary` rows `[term, def, "Ch N"]` + `SP.glossaryAliases`).
 - Cross-refs in text: `[[drug:id|label]] [[target:id]] [[nt:id]] [[ch:chNN|label]] [[page:…]]`.
 - `data/db/`: `drugs.js` (183; `id,name,brand,aka,group,cls,short,mechanism,nts,chapters:[{ch,pages}],targets:[{t,action,s(1-4),note}],uses,sideEffects:[{e,via}],pearls,nbn,facts,updates`), `targets.js` (105), `neurotransmitters.js` (16), `circuits.js` (83), `families.js` (17 drug types mapping `group` → family; used by Compare, drug DB, NbN, Name that drug).
-- `data/changelog.js`: `SP.changelog = [{id, date, title, summary, items:[{type: chapter|feature|correction|update, text, href?, link?}]}, …]`, newest first.
+- `data/changelog.js`: `window.APP_CHANGELOG = [{version, date, title, summary, items:[{type: chapter|feature|correction|update|content, text, ch?, href?, link?}]}, …]`, newest first.
+- `data/app-meta.js` (name, version, attribution, APP_LINKS), `data/strings.js` (shell strings en/tl), `data/hospital.js`.
 
 ## 4. Per-unit recipe (content pass on one chapter)
 1. Extract text: `pdftotext -f P -l Q book.pdf -` (PDF page = printed page + 16).
 2. Edit `data/chNN/*.js` (own words, page refs). For library changes write `work/chNN_patchX.js` and run `dbtool.js` after backing up `data/db`.
 3. If new board questions: `shuffle_cases.js`.
 4. `check_xrefs.js` → `problems 0`; glossary has no duplicate terms/aliases.
-5. Changelog entry (next id below), bump `sw.js` VERSION suffix.
+5. Changelog entry (next version below), bump app-meta + `sw.js` VERSION.
 6. Serve, run `routes.py` (no `!!`), `overflow.py` (all 390), relevant tests; screenshot phone (390) + desktop.
 7. Commit + push `main`; update this doc on `dev-tools`.
 
@@ -41,25 +42,26 @@ cd ../stahl-dev
 node tools/check_xrefs.js ../stahl                      # expect: glossary terms 469 drugs 183 nts 16 targets 105 problems 0
 timeout 600 python3 tools/routes.py http://localhost:8766 /tmp/shots | grep '!!'   # expect nothing
 python3 -u tests/overflow.py ; python3 -u tests/tabbar.py   # expect widths 390, ERRORS: []
+python3 -u tests/r1_home.py                             # progress panel, report links, iOS hint; ERRORS: []
 (cd ../stahl && node ../stahl-dev/tests/audit.js)       # content-depth table
 ```
 Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.email="isaymotion@gmail.com" commit -m "…" && git push origin main`.
 
-## 6. Status (as of 2026-10-26, main = 74b1a0e)
+## 6. Status (as of 2026-11-09, main = 56e18c3, version 23.0.0)
 | Area | State |
 |---|---|
 | Chapters 1–13 | Done: 247 guide sections, 1,102 high-yield points, 726 mech / 268 drug / 200 clinical cards, 608 board questions, 469 glossary terms |
 | Library | 183 drugs, 105 targets, 16 NTs, 83 circuits, 17 drug types |
 | QoL pass | Done: phone home layout, two-column PDF generator (chapter + all chapters), Compare drug-type filters, NbN by class, auto-hiding tab bar, phone overflow fixes, SW cache-prefix fix |
 | Teaching mode | Done: session builder (6 presets, multi-chapter, counts, order), high-yield blanks, flashcards, board Qs, vignettes, Name that drug, countdown, room/two-team scoring, flags, text size, end-of-session review + PDF |
-| Changelog | ids 1–19 used |
+| Since 10-26 | 20.0.0 Monitoring checklists (`#/monitoring`), 21.0.0 Text size (Aa), 22.0.0 Design refresh (semver changelog, About page, match-device theme, Tagalog draft strings), 23.0.0 = R1 |
 
 ## 7. Next steps: agreed release plan (owner approved all A + B, order B1 → B4, 2026-11-09)
-Next changelog id **20**; next SW VERSION e.g. `PREFIX + '<date>-<tag>'`. One release = one changelog id + SW bump + full test run + push + update this table.
+Next version **24.0.0** (R2). One release = one changelog id + SW bump + full test run + push + update this table.
 
 | # | Release | Items | Book PDF? | Status |
 |---|---|---|---|---|
-| R1 | Quick wins | A1 report-error mailto, A2 text size, A4 iPhone hint, A3 home progress overview | no | pending |
+| R1 | Quick wins | A1 report-error mailto, A2 text size (already in 21.0.0), A4 iPhone hint, A3 home progress overview | no | **done 23.0.0** |
 | R2 | Practice engine | B3a confidence rating + cross-chapter topic tags on all cards/questions, then A6 quiz from mistakes, A7 exam by topic, weak-spot map | no | pending |
 | R3 | Library depth 1 | B1: Ch 4–5 drugs (antipsychotics) | yes | pending |
 | R4 | Library depth 2 | B1: Ch 6–7 drugs (mood, antidepressants) | yes | pending |
