@@ -1234,7 +1234,7 @@ SP.drugs = [
       { e: 'Peak-dose **sedation** and **drug-induced parkinsonism**', via: 'Dopamine depletion' },
       { e: 'Depression and **suicide** risk (Huntington’s)', via: 'Monoamine depletion' }
     ],
-    pearls: ['Short half-life: **three times daily**', '**CYP2D6 genotyping** needed to go to higher doses']
+    pearls: ['Short half-life: **three times daily**', '**CYP2D6 genotyping** needed to go to higher doses', 'For TD, VMAT2 inhibitors may need **>90% VMAT2 inhibition** for the best balance of efficacy and tolerability', 'Treats TD by **lowering dopamine** in both the go and stop pathways, with no D2 receptor blockade']
   },
   {
     id: 'deutetrabenazine', name: 'Deutetrabenazine', group: 'VMAT2 inhibitor', cls: 'VMAT2 inhibitor',
@@ -1279,7 +1279,8 @@ SP.drugs = [
     uses: ['Formerly hypertension'],
     sideEffects: [{ e: 'Orthostatic hypotension, stuffy nose, itching, GI effects', via: 'Peripheral VMAT1 inhibition' }],
     chapters: [{ ch: 'ch05', pages: '174–175' }],
-    facts: [{ ch: 'ch05', pages: '174–175', text: 'Its peripheral side effects contrast with tetrabenazine-related drugs, which spare VMAT1.', sec: 's5-vmat2' }]
+    facts: [{ ch: 'ch05', pages: '174–175', text: 'Its peripheral side effects contrast with tetrabenazine-related drugs, which spare VMAT1.', sec: 's5-vmat2' }],
+    pearls: ['VMAT1 sits on vesicles in **peripheral and central** neurons, whereas VMAT2 is **central only**, which is why reserpine, unlike tetrabenazine-type drugs, has frequent peripheral effects']
   },
   {
     id: 'benztropine', name: 'Benztropine', group: 'Anticholinergic', cls: 'Muscarinic antagonist (anticholinergic)',
@@ -1296,7 +1297,7 @@ SP.drugs = [
       { e: 'Drowsiness; memory, concentration and processing problems', via: 'Central muscarinic blockade' },
       { e: '**Paralytic ileus** with other anticholinergics (e.g., clozapine)', via: 'Total anticholinergic burden' }
     ],
-    pearls: ['Does not help **akathisia** much and may worsen **tardive dystonia**'],
+    pearls: ['Does not help **akathisia** much and may worsen **tardive dystonia**', 'Works best for parkinsonism from **older D2 blockers** lacking serotonergic actions', '**IM anticholinergic** nearly always relieves acute dystonia within about 20 minutes', 'Many patients on D2 blockers carry too much **anticholinergic burden**: consider a D2 blocker without anticholinergic action, stopping the anticholinergic, or switching to amantadine'],
     chapters: [{ ch: 'ch05', pages: '166–169, 225' }],
     facts: [{ ch: 'ch05', pages: '166–169', text: 'Stahl warns that many patients on D2 blockers are overmedicated with total anticholinergic burden; alternatives should often be sought.', sec: 's5-motor' }]
   },
@@ -1316,7 +1317,8 @@ SP.drugs = [
     mechanism: 'A **muscle-relaxing** agent used, with dopamine agonists and intensive support, after withdrawing the D2 blocker in **neuroleptic malignant syndrome**.',
     uses: ['**Neuroleptic malignant syndrome**'],
     chapters: [{ ch: 'ch05', pages: '169–170' }],
-    facts: [{ ch: 'ch05', pages: '169–170', text: 'NMS is a medical emergency requiring withdrawal of the D2 blocker, dantrolene and dopamine agonists, and intensive supportive care.', sec: 's5-motor' }]
+    facts: [{ ch: 'ch05', pages: '169–170', text: 'NMS is a medical emergency requiring withdrawal of the D2 blocker, dantrolene and dopamine agonists, and intensive supportive care.', sec: 's5-motor' }],
+    pearls: ['Know the picture it treats: NMS brings extreme **rigidity, high fever and coma** and can be fatal; some see it as the extreme end of DIP']
   },
   {
     id: 'metformin', name: 'Metformin', group: 'Metabolic adjunct', cls: 'Antidiabetic',
@@ -1324,7 +1326,8 @@ SP.drugs = [
     mechanism: 'An anti-diabetes drug; in Chapter 5 it is a co-therapy for drug-induced weight gain.',
     uses: ['Weight loss after drug-induced weight gain; **reduces weight gain** when starting a high- or moderate-risk agent'],
     chapters: [{ ch: 'ch05', pages: '201' }],
-    facts: [{ ch: 'ch05', pages: '201', text: 'Shown in several studies to reduce weight gain with high- or moderate-metabolic-risk agents.', sec: 's5-metabolic' }]
+    facts: [{ ch: 'ch05', pages: '201', text: 'Shown in several studies to reduce weight gain with high- or moderate-metabolic-risk agents.', sec: 's5-metabolic' }],
+    pearls: ['Of the co-therapies for weight gain, **topiramate** has less consistent results than metformin', 'Co-therapy may also help prevent **dyslipidemia** (raised only as a possibility)']
   },
   {
     id: 'samidorphan', name: 'Samidorphan', group: 'Metabolic adjunct', cls: 'μ-Opioid antagonist',
@@ -1335,7 +1338,8 @@ SP.drugs = [
     uses: ['With **olanzapine**, to reduce olanzapine-induced weight gain'],
     chapters: [{ ch: 'ch05', pages: '201, 226' }],
     facts: [{ ch: 'ch05', pages: '201, 226', text: 'In late-stage testing with olanzapine at publication.', sec: 's5-metabolic' }],
-    updates: [{ year: '2021', title: 'Olanzapine–samidorphan approved', text: 'Approved with olanzapine (Lybalvi) for schizophrenia and bipolar I disorder in May 2021.', source: 'FDA, May 28, 2021' }]
+    updates: [{ year: '2021', title: 'Olanzapine–samidorphan approved', text: 'Approved with olanzapine (Lybalvi) for schizophrenia and bipolar I disorder in May 2021.', source: 'FDA, May 28, 2021' }],
+    pearls: ['Described only as a partner for **olanzapine**, aimed at weight gain and metabolic disturbance rather than psychosis']
   },
   {
     id: 'lithium', name: 'Lithium', group: 'Mood stabilizer', cls: 'Mood stabilizer (antimanic)',
@@ -2635,7 +2639,8 @@ SP.drugs = [
       { ch: 'ch05', pages: '180', text: 'Table 5-1: low potency.', sec: 's5-fga' },
       { ch: 'ch05', pages: '201–202', text: 'Often prescribed to exploit its **sedation**, short term orally or IM for agitation.', sec: 's5-first-agents' },
       { ch: 'ch10', pages: '425, 428', text: 'Sedating via H1 (with other) blockade; mirtazapine and chlorpromazine fall in the “still too hot” (hangover) category of Figure 10-41C.', sec: 's10-pk' }
-    ]
+    ],
+    pearls: ['**Low potency** first-generation agent (Table 5-1); the prototype for combining strong **M1 + H1 + α1** blockade to get sedation on top of D2 action.', 'Built-in strong anticholinergic action may mean **less DIP** but more constipation and **ileus** risk; extra caution with other anticholinergics (benztropine, clozapine).']
   },
   {
     id: 'cyamemazine', name: 'Cyamemazine', brand: 'Tercian', group: 'D2 antagonist (first generation)', cls: 'Conventional (first-generation) antipsychotic',
@@ -2701,7 +2706,8 @@ SP.drugs = [
     facts: [
       { ch: 'ch05', pages: '180', text: 'Table 5-1: high potency; depot.', sec: 's5-fga' },
       { ch: 'ch05', pages: '202–203', text: 'Has short- and long-acting formulations; one of the agents for which plasma drug levels may be useful.', sec: 's5-first-agents' }
-    ]
+    ],
+    pearls: ['**High potency** phenothiazine: more potent and less sedating than chlorpromazine, with a **depot** form (Table 5-1)', 'Short- and long-acting formulations; **plasma levels** may help guide dosing']
   },
   {
     id: 'haloperidol', name: 'Haloperidol', brand: 'Haldol', group: 'D2 antagonist (first generation)', cls: 'Conventional (first-generation) antipsychotic',
@@ -2736,7 +2742,8 @@ SP.drugs = [
       { ch: 'ch05', pages: '181', text: 'Has relatively little anticholinergic or antihistaminic binding, illustrating why D2 antagonists differ in side effects more than in efficacy.', sec: 's5-fga' },
       { ch: 'ch05', pages: '202', text: 'Less sedating than some others; plasma levels may be useful.', sec: 's5-first-agents' },
       { ch: 'ch12', pages: '524', text: 'Used cautiously **off-label** for agitation/psychosis in dementia despite the boxed warning for stroke and death.', sec: 's12-d2' }
-    ]
+    ],
+    pearls: ['**High potency** agent with a **depot** form (Table 5-1)', 'Short- and long-acting formulations; **plasma levels** may help guide dosing', 'Shows that D2 antagonists differ more in **side-effect profile** (anticholinergic, antihistamine binding) than in efficacy']
   },
   {
     id: 'loxapine', name: 'Loxapine', brand: 'Loxitane', group: 'D2 antagonist (first generation)', cls: 'Conventional (first-generation) antipsychotic',
@@ -2835,7 +2842,8 @@ SP.drugs = [
       { e: 'Secondary negative symptoms', via: 'Mesolimbic/mesocortical D2 blockade' }
     ],
     chapters: [{ ch: 'ch05', pages: '180, 202–205' }],
-    facts: [{ ch: 'ch05', pages: '202–203', text: 'May be activating at lower doses with efficacy for negative symptoms and depression for unclear reasons; D3 antagonism/partial agonism is a candidate explanation.', sec: 's5-first-agents' }]
+    facts: [{ ch: 'ch05', pages: '202–203', text: 'May be activating at lower doses with efficacy for negative symptoms and depression for unclear reasons; D3 antagonism/partial agonism is a candidate explanation.', sec: 's5-first-agents' }],
+    pearls: ['**Not available in the US** (Table 5-1); used widely elsewhere, e.g., the UK.', 'Dose matters: **usual doses** give motor effects and prolactin rise, while **lower doses** may be mildly activating.']
   },
   {
     id: 'thioridazine', name: 'Thioridazine', brand: 'Mellaril', group: 'D2 antagonist (first generation)', cls: 'Conventional (first-generation) antipsychotic',
@@ -2916,7 +2924,8 @@ SP.drugs = [
     uses: ['Psychosis (outside the US)', 'Reported efficacy for **negative symptoms** and **depression** at low doses'],
     sideEffects: [{ e: 'Dose-dependent QTc prolongation', via: 'Noted alongside iloperidone, zotepine and sertindole' }],
     chapters: [{ ch: 'ch05', pages: '203, 205, 236' }],
-    facts: [{ ch: 'ch05', pages: '203', text: 'D3 antagonism and 5HT7 antagonism may explain its negative-symptom and antidepressant actions; its active isomer is in early clinical testing in the US.', sec: 's5-first-agents' }]
+    facts: [{ ch: 'ch05', pages: '203', text: 'D3 antagonism and 5HT7 antagonism may explain its negative-symptom and antidepressant actions; its active isomer is in early clinical testing in the US.', sec: 's5-first-agents' }],
+    pearls: ['Unlike **ziprasidone**, it causes **dose-dependent QTc** prolongation (as do iloperidone, zotepine, sertindole).', '**Lower doses** than those for positive symptoms are reported to help negative symptoms and depression.']
   },
   {
     id: 'vortioxetine', name: 'Vortioxetine', brand: 'Trintellix', group: 'Antidepressant', cls: 'Multimodal serotonergic agent',
@@ -2986,7 +2995,7 @@ SP.drugs = [
       { e: 'Greatest **weight gain** and cardiometabolic risk', via: 'H1 + 5HT2C antagonism plus insulin resistance' },
       { e: '**Myocarditis**, cardiomyopathy, interstitial nephritis; DRESS, serositis', via: 'Unknown mechanism' }
     ],
-    pearls: ['Little motor effect, **no prolactin** elevation, does not seem to cause TD', 'Rare “awakenings” to near-normal function', 'Underused; finger-stick point-of-care counts and **plasma levels** help'],
+    pearls: ['Little motor effect, **no prolactin** elevation, does not seem to cause TD', 'Rare “awakenings” to near-normal function', 'Underused; finger-stick point-of-care counts and **plasma levels** help', 'Sialorrhea can be eased with **pro-cholinergic** treatment or, if severe, local **botulinum toxin** injections', 'Constipation/ileus risk climbs with added anticholinergics (**benztropine**, chlorpromazine); watch bowel status', 'Not first line: reserved for failure of other antipsychotics, and prescribing it means being able to **manage its side effects**', '**High metabolic risk** tier among the newer agents, with olanzapine'],
     updates: [{ year: '2025', title: 'Clozapine REMS removed', text: 'The FDA eliminated the clozapine REMS in 2025; ANC reporting to a REMS program is no longer required before dispensing, but the FDA still advises ANC monitoring per the prescribing information.', source: 'FDA; REMS eliminated effective June 13, 2025' }]
   },
   {
@@ -3020,7 +3029,7 @@ SP.drugs = [
       { e: 'Sedation', via: 'H1 and M1 antagonism' },
       { e: 'Anticholinergic effects', via: 'Muscarinic antagonism' }
     ],
-    pearls: ['Often used at **higher** doses than approved, guided by plasma levels', 'Forms: orally disintegrating, acute IM, **4-week depot**; inhaled form in development', 'Combination with **samidorphan** to limit weight gain'],
+    pearls: ['Often used at **higher** doses than approved, guided by plasma levels', 'Forms: orally disintegrating, acute IM, **4-week depot**; inhaled form in development', 'Combination with **samidorphan** to limit weight gain', 'Higher doses may work better in patients not responding to other drugs or to **lower olanzapine doses**', '**High metabolic risk** tier among the newer agents, with clozapine'],
     chapters: [
       { ch: 'ch05', pages: '198, 225–226' },
       { ch: 'ch07', pages: '325–326, 343' },
@@ -3066,7 +3075,7 @@ SP.drugs = [
       { e: 'Weight gain, **moderate** metabolic risk', via: 'H1 + 5HT2C antagonism' },
       { e: 'Virtually no motor effects or prolactin elevation', via: 'Weak D2 binding' }
     ],
-    pearls: ['**Baby Bear 50 mg**: H1 only; **Mama Bear 300 mg**: antidepressant mix; **Papa Bear 800 mg**: saturates H1 and 5HT2A, inconsistent >60% D2 occupancy'],
+    pearls: ['**Baby Bear 50 mg**: H1 only; **Mama Bear 300 mg**: antidepressant mix; **Papa Bear 800 mg**: saturates H1 and 5HT2A, inconsistent >60% D2 occupancy', '50 mg hypnotic use is unapproved and carries **metabolic risk**, so not first line for sleep', 'At 300 mg, the antidepressant effect comes from stacked **NET, 5HT1A, α2, 5HT2C and 5HT7** actions (largely via its metabolite)', '**Moderate metabolic risk** tier among the newer agents, with risperidone, paliperidone, asenapine, iloperidone'],
     chapters: [
       { ch: 'ch05', pages: '219–220, 226–231' },
       { ch: 'ch07', pages: '326, 343' },
@@ -3111,7 +3120,7 @@ SP.drugs = [
       { e: 'Sedation (especially at first)', via: 'H1 antagonism' },
       { e: 'Moderate weight gain, metabolic and motor effects', via: 'Class actions' }
     ],
-    pearls: ['**Not absorbed if swallowed**: sublingual, usually twice daily; no food or drink for **10 minutes**', 'Also a **transdermal** formulation'],
+    pearls: ['**Not absorbed if swallowed**: sublingual, usually twice daily; no food or drink for **10 minutes**', 'Also a **transdermal** formulation', 'Dose size is limited by oral-cavity surface area, so given **twice daily** despite a long half-life', '**Moderate metabolic risk** tier among the newer agents, with risperidone, paliperidone, quetiapine, iloperidone'],
     chapters: [
       { ch: 'ch05', pages: '198, 232–233' },
       { ch: 'ch07', pages: '326' }
@@ -3153,7 +3162,8 @@ SP.drugs = [
       { e: 'Dose-dependent QTc prolongation', via: 'Noted with iloperidone, sertindole, amisulpride' }
     ],
     chapters: [{ ch: 'ch05', pages: '233–234, 236' }],
-    facts: [{ ch: 'ch05', pages: '233', text: 'Less popular because it must be given **three times a day**.', sec: 's5-pines' }]
+    facts: [{ ch: 'ch05', pages: '233', text: 'Less popular because it must be given **three times a day**.', sec: 's5-pines' }],
+    pearls: []
   },
   {
     id: 'risperidone', name: 'Risperidone', brand: 'Risperdal', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic (a “done”)',
@@ -3179,12 +3189,12 @@ SP.drugs = [
     ],
     uses: ['Schizophrenia/maintenance (13+)', 'Bipolar mania/maintenance (10+)', '**Irritability associated with autistic disorder** (5–16)', 'Low-dose off-label use in dementia agitation/psychosis is controversial (**black box** warning)'],
     sideEffects: [
-      { e: '**Prolactin elevation** even at low doses', via: 'D2 blockade not offset by its 5HT2A action' },
+      { e: '**Prolactin elevation** even at low doses', via: 'Tuberoinfundibular D2 blockade' },
       { e: 'Moderate weight gain and dyslipidemia (especially in **children**)', via: 'Class actions' },
       { e: 'Orthostasis, sedation', via: 'α1 antagonism' },
       { e: 'Fewer motor effects at lower doses', via: 'D2 dose-dependence' }
     ],
-    pearls: ['Depot injections lasting **2 or 4 weeks**; monitor plasma levels of risperidone + paliperidone', 'Orally disintegrating tablet and liquid'],
+    pearls: ['Depot injections lasting **2 or 4 weeks**; monitor plasma levels of risperidone + paliperidone', 'Orally disintegrating tablet and liquid', 'Often preferred by some for **children and adolescents**', 'May need **twice-daily** dosing at the start (esp. children, elderly) to avoid sedation and orthostasis', 'Rapid absorption and high peaks may underlie some side effects (removed by paliperidone’s controlled release)', '**Moderate metabolic risk** tier among the newer agents, with paliperidone, quetiapine, asenapine, iloperidone'],
     chapters: [
       { ch: 'ch05', pages: '198, 234–235' },
       { ch: 'ch07', pages: '326' },
@@ -3223,7 +3233,7 @@ SP.drugs = [
       { e: 'Moderate weight gain and metabolic risk', via: 'Class actions' },
       { e: 'Perhaps less sedation, orthostasis and motor effects than risperidone (anecdotal)', via: 'Smoother sustained-release levels' }
     ],
-    pearls: ['Sustained-release oral form: **once daily**, but easily **underdosed**', 'LAI is easier to load and dose than risperidone’s'],
+    pearls: ['Sustained-release oral form: **once daily**, but easily **underdosed**', 'LAI is easier to load and dose than risperidone’s', 'Plasma levels help guide dosing, esp. in **treatment-resistant** patients on depots', '**Moderate metabolic risk** tier among the newer agents, with risperidone, quetiapine, asenapine, iloperidone'],
     chapters: [{ ch: 'ch05', pages: '198, 235–236' }],
     facts: [{ ch: 'ch05', pages: '235', text: 'Rapid absorption and high peaks of risperidone may cause some of its side effects; paliperidone’s controlled release removes these.', sec: 's5-dones' }],
     updates: [{ year: '2021', title: 'Six-month injection approved', text: 'A 6-month paliperidone palmitate long-acting injection (Invega Hafyera) was approved for adults with schizophrenia after adequate treatment with the 1- or 3-month formulations.', source: 'FDA, August 30, 2021' }]
@@ -3255,7 +3265,7 @@ SP.drugs = [
     ],
     uses: ['Schizophrenia/maintenance', 'Bipolar mania/maintenance', '**IM** form for urgent use'],
     sideEffects: [{ e: 'Little or no weight gain or metabolic effect', via: 'Lacks H1/5HT2C and “receptor X” liability' }],
-    pearls: ['Short acting: more than once daily, **with food**', 'QTc concerns now seem **exaggerated**: no dose-dependent QTc prolongation, few drugs raise its levels'],
+    pearls: ['Short acting: more than once daily, **with food**', 'QTc concerns now seem **exaggerated**: no dose-dependent QTc prolongation, few drugs raise its levels', '**Low metabolic risk** tier among the newer agents, with lurasidone, cariprazine, lumateperone, pimavanserin, aripiprazole, brexpiprazole'],
     chapters: [
       { ch: 'ch05', pages: '198, 236' },
       { ch: 'ch07', pages: '326' }
@@ -3287,9 +3297,13 @@ SP.drugs = [
       { t: 'm1', action: 'antagonist', s: 1 }
     ],
     uses: ['Second-line agent in some countries, with close cardiac and drug-interaction monitoring'],
-    sideEffects: [{ e: 'QTc prolongation (dose-dependent)', via: 'Cardiac safety concerns led to withdrawal' }],
+    sideEffects: [
+      { e: 'QTc prolongation (dose-dependent)', via: 'Cardiac safety concerns led to withdrawal' },
+      { e: 'Some adverse effects from its potent **α1 antagonism**', via: 'Potent α1 blockade' }
+    ],
     chapters: [{ ch: 'ch05', pages: '236, 240–241' }],
-    facts: [{ ch: 'ch05', pages: '240–241', text: 'Originally approved in some European countries, then withdrawn for cardiac/QTc testing and reintroduced as a second-line agent.', sec: 's5-others' }]
+    facts: [{ ch: 'ch05', pages: '240–241', text: 'Originally approved in some European countries, then withdrawn for cardiac/QTc testing and reintroduced as a second-line agent.', sec: 's5-others' }],
+    pearls: ['**Dose-dependent QTc prolongation**, shared with iloperidone, zotepine, amisulpride but not ziprasidone', 'Reserved for patients who failed other agents and can have **close cardiac and interaction monitoring**']
   },
   {
     id: 'perospirone', name: 'Perospirone', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic',
@@ -3308,7 +3322,9 @@ SP.drugs = [
     ],
     uses: ['Schizophrenia (Asia); more experience in schizophrenia than mania'],
     chapters: [{ ch: 'ch05', pages: '241' }],
-    facts: [{ ch: 'ch05', pages: '241', text: 'Usually given three times a day; its potential for weight gain, dyslipidemia, insulin resistance and diabetes is not well investigated.', sec: 's5-others' }]
+    facts: [{ ch: 'ch05', pages: '241', text: 'Usually given three times a day; its potential for weight gain, dyslipidemia, insulin resistance and diabetes is not well investigated.', sec: 's5-others' }],
+    sideEffects: [],
+    pearls: ['Given **three times daily**; more experience in schizophrenia than in mania', 'Its risk of **weight gain and metabolic** problems has not been well studied', '**5HT1A partial agonism** may add to efficacy or tolerability']
   },
   {
     id: 'blonanserin', name: 'Blonanserin', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic',
@@ -3329,7 +3345,9 @@ SP.drugs = [
     facts: [
       { ch: 'ch05', pages: '241', text: 'Its D3 potency suggests utility for negative symptoms and bipolar depression, not yet well studied.', sec: 's5-others' },
       { ch: 'ch07', pages: '344', text: 'With cariprazine, one of only two agents whose **D3 affinity** is orders of magnitude higher than dopamine’s (Figure 7-72).', sec: 's7-bipolar-depression' }
-    ]
+    ],
+    sideEffects: [],
+    pearls: []
   },
   {
     id: 'roluperidone', name: 'Roluperidone', aka: ['MIN-101'], group: 'Investigational drug for psychosis', cls: '5HT2A/σ2 antagonist (investigational)',
@@ -3342,7 +3360,9 @@ SP.drugs = [
     ],
     chapters: [{ ch: 'ch05', pages: '241' }],
     facts: [{ ch: 'ch05', pages: '241', text: 'Early studies suggest possible efficacy for negative symptoms; trials ongoing at publication.', sec: 's5-future' }],
-    updates: [{ year: '2024', title: 'FDA complete response letter', text: 'The FDA declined approval for negative symptoms of schizophrenia in February 2024, citing insufficient evidence that the change was clinically meaningful and asking for at least one additional positive controlled study.', source: 'Minerva Neurosciences, February 27, 2024' }]
+    updates: [{ year: '2024', title: 'FDA complete response letter', text: 'The FDA declined approval for negative symptoms of schizophrenia in February 2024, citing insufficient evidence that the change was clinically meaningful and asking for at least one additional positive controlled study.', source: 'Minerva Neurosciences, February 27, 2024' }],
+    sideEffects: [],
+    pearls: ['A **5HT2A antagonist** with no D2 blockade; investigational, with early hints of benefit for **negative symptoms**.', 'Binding strip shows roughly equal **σ2 and 5HT2A** potency.']
   },
   {
     id: 'ulotaront', name: 'Ulotaront (SEP-363856)', aka: ['SEP-363856'], group: 'Investigational drug for psychosis', cls: 'TAAR1 agonist (investigational)',
@@ -3357,7 +3377,9 @@ SP.drugs = [
     ],
     chapters: [{ ch: 'ch05', pages: '242' }],
     facts: [{ ch: 'ch05', pages: '242', text: 'An early study in schizophrenia confirmed antipsychotic action with few side effects, and regulators granted **breakthrough** status.', sec: 's5-future' }],
-    updates: [{ year: '2023', title: 'Phase III trials negative', text: 'Ulotaront did not separate from placebo in the phase III DIAMOND 1 and DIAMOND 2 schizophrenia trials; the companies cited a high placebo response.', source: 'Sumitomo Pharma/Otsuka, July 31, 2023' }]
+    updates: [{ year: '2023', title: 'Phase III trials negative', text: 'Ulotaront did not separate from placebo in the phase III DIAMOND 1 and DIAMOND 2 schizophrenia trials; the companies cited a high placebo response.', source: 'Sumitomo Pharma/Otsuka, July 31, 2023' }],
+    sideEffects: [],
+    pearls: ['**Novel mechanism:** TAAR1 activation lets D2 signal via **Gi** instead of β-arrestin 2, without any direct D2 blockade.', 'Presynaptic effect: **less dopamine** synthesis and release; postsynaptic effect: less downstream **GSK-3** overactivation.', 'Efficacy in animals was found **before** the TAAR1 action was identified; an early human study showed antipsychotic action with **few side effects**.', 'Trace amines act as a **rheostat** of dopamine, glutamate and serotonin neurotransmission; **TAAR1** is the main human trace amine receptor.']
   },
   {
     id: 'xanomeline', name: 'Xanomeline (with trospium)', aka: ['xanomeline–trospium', 'KarXT', 'Cobenfy'], group: 'Muscarinic agonist', cls: 'Central M4/M1 muscarinic agonist with peripheral antagonist',
@@ -3387,7 +3409,9 @@ SP.drugs = [
       { ch: 'ch05', pages: '242', text: 'With trospium, showed promising efficacy and tolerability for psychotic symptoms of schizophrenia and was progressing as a potential breakthrough.', sec: 's5-future' },
       { ch: 'ch12', pages: '507', text: 'As an M4/M1 agonist it could theoretically reduce both psychotic and cognitive symptoms in AD.', sec: 's12-ach' }
     ],
-    updates: [{ year: '2024', title: 'Approved for schizophrenia', text: 'Xanomeline–trospium (Cobenfy) was approved for schizophrenia in adults in September 2024. As an add-on to other antipsychotics it missed its primary endpoint in the phase III ARISE trial (April 2025).', source: 'FDA, September 26, 2024; Bristol Myers Squibb, April 2025' }]
+    updates: [{ year: '2024', title: 'Approved for schizophrenia', text: 'Xanomeline–trospium (Cobenfy) was approved for schizophrenia in adults in September 2024. As an add-on to other antipsychotics it missed its primary endpoint in the phase III ARISE trial (April 2025).', source: 'FDA, September 26, 2024; Bristol Myers Squibb, April 2025' }],
+    sideEffects: [],
+    pearls: ['Raising **prefrontal dopamine** could in theory help cognitive, negative and affective symptoms, beyond the antipsychotic effect of lower VTA firing.', '**Trospium** does not cross into the brain, so it blocks M2/M3 effects only in the periphery, improving tolerability.', 'Other muscarinic routes (direct or **allosteric modulation**) are under study as antipsychotic mechanisms.']
   },
   {
     id: 'iloperidone', name: 'Iloperidone', brand: 'Fanapt', group: '5HT2A/D2 antagonist', cls: 'Atypical antipsychotic (a “done”)',
@@ -3417,7 +3441,7 @@ SP.drugs = [
       { e: 'Moderate weight gain; low dyslipidemia', via: 'Class actions' },
       { e: 'Dose-dependent QTc prolongation', via: 'Noted in the book' }
     ],
-    pearls: ['18- to 33-hour half-life, but usually twice daily with **slow titration**, which delays onset'],
+    pearls: ['18- to 33-hour half-life, but usually twice daily with **slow titration**, which delays onset', '**Moderate metabolic risk** tier among the newer agents, with risperidone, paliperidone, quetiapine, asenapine'],
     chapters: [{ ch: 'ch05', pages: '198, 236' }],
     facts: [
       { ch: 'ch05', pages: '236', text: 'Its distinguishing features are very low motor side effects, low dyslipidemia, moderate weight gain and potent α1 antagonism.', sec: 's5-dones' },
@@ -3442,12 +3466,12 @@ SP.drugs = [
       { t: 'alpha1', action: 'antagonist', s: 2 },
       { t: '5ht2c', action: 'antagonist', s: 1 }
     ],
-    uses: ['**Bipolar depression** (10+): highly effective and a preferred agent', 'Schizophrenia/maintenance; often preferred for **children**'],
+    uses: ['**Bipolar depression** (10+): highly effective and a preferred agent', 'Schizophrenia/maintenance (**10+**); often preferred for **children** because of good tolerability'],
     sideEffects: [
       { e: 'Low weight gain and metabolic risk', via: 'Minimal H1/M1 actions' },
       { e: 'Motor effects and sedation (less if dosed at night)', via: 'D2 blockade' }
     ],
-    pearls: ['**NRX101** (Cyclurad) adds D-cycloserine for acute suicidality and bipolar depression (early positive findings)'],
+    pearls: ['**NRX101** (Cyclurad) adds D-cycloserine for acute suicidality and bipolar depression (early positive findings)', 'Has **greater affinity for 5HT7 than for D2**; far more used in **bipolar depression** than in schizophrenia', '**Low metabolic risk** tier among the newer agents, with cariprazine, lumateperone, ziprasidone, pimavanserin, aripiprazole, brexpiprazole'],
     chapters: [
       { ch: 'ch05', pages: '198, 236–237' },
       { ch: 'ch07', pages: '343' }
@@ -3469,7 +3493,8 @@ SP.drugs = [
       { t: 'd1', action: 'antagonist', s: 2 },
       { t: 'sert', action: 'inhibitor', s: 2 },
       { t: 'alpha1', action: 'antagonist', s: 2 },
-      { t: '5ht2c', action: 'antagonist', s: 1 }
+      { t: '5ht2c', action: 'antagonist', s: 1 },
+      { t: 'h1', action: 'antagonist', s: 1 }
     ],
     uses: ['Schizophrenia (no titration needed)', 'Bipolar depression trials promising at publication'],
     sideEffects: [
@@ -3478,7 +3503,8 @@ SP.drugs = [
     ],
     chapters: [{ ch: 'ch05', pages: '198, 219, 237–239' }],
     facts: [{ ch: 'ch05', pages: '237–239', text: 'SERT binding suggests antidepressant potential; if presynaptic D2 agonism is proven, less postsynaptic blockade would be needed for an antipsychotic effect.', sec: 's5-dones' }],
-    updates: [{ year: '2025', title: 'Depression indications', text: 'Approved for bipolar I and II depression (monotherapy and adjunct to lithium or valproate) in December 2021 and as an adjunct for major depressive disorder in November 2025.', source: 'FDA, December 2021; November 6, 2025' }]
+    updates: [{ year: '2025', title: 'Depression indications', text: 'Approved for bipolar I and II depression (monotherapy and adjunct to lithium or valproate) in December 2021 and as an adjunct for major depressive disorder in November 2025.', source: 'FDA, December 2021; November 6, 2025' }],
+    pearls: ['Among agents with the **lowest D2 occupancy** at antipsychotic doses (under 60%), with quetiapine and clozapine', '**Low metabolic risk** tier among the newer agents, with lurasidone, cariprazine, ziprasidone, pimavanserin, aripiprazole, brexpiprazole']
   },
   {
     id: 'aripiprazole', name: 'Aripiprazole', brand: 'Abilify', group: 'D2/5HT1A partial agonist', cls: 'Atypical antipsychotic (the original “pip”)',
@@ -3506,9 +3532,10 @@ SP.drugs = [
     sideEffects: [
       { e: '**Akathisia** (main motor effect)', via: 'D2 partial agonism' },
       { e: 'Lowers prolactin', via: 'Lactotrophs read it as an agonist' },
-      { e: 'Not generally sedating; little or no weight gain (some in children)', via: 'No M1/H1-type actions' }
+      { e: 'Not generally sedating; little or no weight gain (some in children)', via: 'No M1/H1-type actions' },
+      { e: 'Relatively low motor effects (**DIP** uncommon)', via: 'D2 partial agonism, close to antagonist end' }
     ],
-    pearls: ['Oral, liquid, orally disintegrating; **4-week** and **4- to 8-week** long-acting injections (the latter with a day-1 loading injection)'],
+    pearls: ['Oral, liquid, orally disintegrating; **4-week** and **4- to 6- to 8-week** long-acting injections (the latter with a day-1 loading injection)', '**Lowers** prolactin rather than raising it (can reverse prolactin rise from D2 antagonists); co-prescribing can fix antipsychotic-induced hyperprolactinemia', '**Long-acting injectables** are a common adherence option, especially in early-onset psychosis', '**Low metabolic risk** tier among the newer agents, with lurasidone, cariprazine, lumateperone, ziprasidone, pimavanserin, brexpiprazole'],
     chapters: [
       { ch: 'ch05', pages: '193, 239' },
       { ch: 'ch07', pages: '325–327' },
@@ -3543,7 +3570,9 @@ SP.drugs = [
       { ch: 'ch05', pages: '240', text: 'The **only** known drug with proven antipsychotic efficacy that lacks D2 antagonist/partial agonist actions; in the low metabolic risk tier.', sec: 's5-others' },
       { ch: 'ch12', pages: '526–528', text: 'In dementia psychosis it blocks excitatory **5HT2A** input to surviving glutamate neurons that lost GABA inhibition, normalizing visual cortex (hallucinations) and VTA dopamine (delusions) output. Approved for PD psychosis.', sec: 's12-psychosis' }
     ],
-    updates: [{ year: '2022', title: 'Not approved for dementia-related psychosis', text: 'The FDA issued complete response letters for dementia-related psychosis (April 2021) and for hallucinations and delusions of Alzheimer disease psychosis (August 2022, after a 9–3 advisory committee vote against efficacy). Its US approval remains for Parkinson’s disease psychosis.', source: 'FDA actions reported April 2021 and August 4, 2022' }]
+    updates: [{ year: '2022', title: 'Not approved for dementia-related psychosis', text: 'The FDA issued complete response letters for dementia-related psychosis (April 2021) and for hallucinations and delusions of Alzheimer disease psychosis (August 2022, after a 9–3 advisory committee vote against efficacy). Its US approval remains for Parkinson’s disease psychosis.', source: 'FDA actions reported April 2021 and August 4, 2022' }],
+    sideEffects: [{ e: 'Low metabolic risk; no D2-related motor worsening', via: 'No D2 binding; low-risk tier' }],
+    pearls: ['**5HT2C** antagonism has no clear role in psychosis; theoretically raises dopamine release in depression and negative symptoms']
   },
   {
     id: 'brexpiprazole', name: 'Brexpiprazole', brand: 'Rexulti', group: 'D2/5HT1A partial agonist', cls: 'Atypical antipsychotic (the second “pip”)',
@@ -3589,7 +3618,8 @@ SP.drugs = [
     sideEffects: [
       { e: 'Some akathisia (perhaps less than aripiprazole; not proven head to head)', via: 'D2 partial agonism' },
       { e: 'Low metabolic risk, little sedation', via: 'Lacks the relevant receptor actions' }
-    ]
+    ],
+    pearls: ['Lack of sedating and weight-gain receptor actions noted, but book says **too early** to judge its clinical profile', 'Like other D2 partial agonists, it tends to **lower prolactin** rather than raise it', '**Low metabolic risk** tier among the newer agents, with lurasidone, cariprazine, lumateperone, ziprasidone, pimavanserin, aripiprazole']
   },
   {
     id: 'cariprazine', name: 'Cariprazine', brand: 'Vraylar', group: 'D2/5HT1A partial agonist', cls: 'Atypical antipsychotic (the “rip”)',
@@ -3614,7 +3644,7 @@ SP.drugs = [
       { e: 'Some **akathisia** (reduced by slow titration); low DIP', via: 'D2 partial agonism with potent 5HT1A' },
       { e: 'Very low weight gain or metabolic disturbance', via: 'Low-risk tier' }
     ],
-    pearls: ['Two long-lived active metabolites: potential weekly to monthly **“oral depot”**'],
+    pearls: ['Two long-lived active metabolites: potential weekly to monthly **“oral depot”**', 'Oral depot: **longer to reach steady state** but a skipped dose lowers levels less', 'Like other D2 partial agonists, it tends to **lower prolactin** rather than raise it', '**Low metabolic risk** tier among the newer agents, with lurasidone, lumateperone, ziprasidone, pimavanserin, aripiprazole, brexpiprazole'],
     chapters: [
       { ch: 'ch05', pages: '193, 198, 240' },
       { ch: 'ch07', pages: '343–345' }

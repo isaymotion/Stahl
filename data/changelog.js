@@ -9,6 +9,36 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "25.0.0",
+    "date": "2026-11-09",
+    "title": "Drug library: antipsychotics and movement-disorder drugs in more depth",
+    "summary": "68 new pearls across 32 drugs from Chapters 4 and 5, each checked against the book.",
+    "items": [
+      {
+        "type": "content",
+        "text": "Pearls for the antipsychotics: dosing and formulation details, monitoring, what makes each agent distinctive, and where each newer agent sits on the book's metabolic-risk spectrum (high, moderate or low). Covers clozapine, olanzapine, quetiapine, asenapine, risperidone, paliperidone, ziprasidone, iloperidone, lurasidone, lumateperone, aripiprazole, brexpiprazole, cariprazine, sertindole, perospirone, pimavanserin, chlorpromazine, fluphenazine, haloperidol, sulpiride and amisulpride.",
+        "ch": "ch05",
+        "href": "#/drugs",
+        "link": "Drug database"
+      },
+      {
+        "type": "content",
+        "text": "Movement-disorder and metabolic drugs (tetrabenazine, reserpine, benztropine, dantrolene, metformin, samidorphan) and the investigational agents roluperidone, ulotaront and xanomeline now have pearls too. Lumateperone's low H1 affinity is added to its binding profile.",
+        "ch": "ch05"
+      },
+      {
+        "type": "correction",
+        "text": "Aripiprazole's second long-acting injection is given every 4 to 6 to 8 weeks (it said 4 to 8). Lurasidone's schizophrenia approval is from age 10. Risperidone's prolactin rise is now attributed to D2 blockade in the tuberoinfundibular pathway, as in the book.",
+        "href": "#/drugs/aripiprazole",
+        "link": "Aripiprazole"
+      },
+      {
+        "type": "content",
+        "text": "The older first-generation agents listed only in Table 5-1 (loxapine, perphenazine, pimozide, thioridazine and others) are unchanged: the book has no further detail on them individually."
+      }
+    ]
+  },
+  {
     "version": "24.0.0",
     "date": "2026-11-09",
     "title": "Practice engine: confidence, topics and weak spots",
