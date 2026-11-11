@@ -1,0 +1,9 @@
+{
+ "q13-55": {"pages": "578",
+  "whyNot": {"0": "Psychopathic violence is the **least** common of the three types the book names.",
+             "2": "Predatory is not one of the book's three categories: psychotic, impulsive and psychopathic.",
+             "4": "Instrumental is not one of the book's three categories either; the most common type is **impulsive**."},
+  "whyNotPages": {"0": "578", "2": "578", "3": "578", "4": "578"}},
+ "q13-12": {"whyNot": {"3": "Kindling is not a stage in the book's stimulant progression, which ends in long-lasting dopamine depletion."}},
+ "q13-09": {"whyNot": {"4": "Cocaine is indeed inactive orally, so this is true of cocaine but is not what separates it from **amphetamine**."}}
+}

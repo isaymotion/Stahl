@@ -45,27 +45,30 @@ python3 -u tests/overflow.py ; python3 -u tests/tabbar.py   # expect widths 390,
 python3 -u tests/r1_home.py                             # progress panel, report links, iOS hint; ERRORS: []
 python3 -u tests/r2_practice.py                         # confidence, topics, exam by topic/mistakes, phone 390; ERRORS: []
 python3 -u tests/r6_cheat.py                            # 17 cheat sheets, PDFs, links, phone 390; ERRORS: []
+python3 -u tests/r7_rationales.py                       # rationales: exam review, card toggle, teaching, phone 390; ERRORS: []
+                                                        # CHS="ch09 ch13" to limit it to some chapters
 (cd ../stahl && node ../stahl-dev/tests/audit.js)       # content-depth table
 ```
 Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.email="isaymotion@gmail.com" commit -m "…" && git push origin main`.
 
-## 6. Status (as of 2026-11-11, main = b5534ea, version 28.0.0)
+## 6. Status (as of 2026-11-11, main = de6d187, version 29.0.0)
 
-Pushed 2026-11-11 (main b5534ea, dev-tools 6bf8e12).
+Pushed 2026-11-11 (main de6d187, dev-tools: this commit).
 
 | Area | State |
 |---|---|
-| Chapters 1–13 | Done: 247 guide sections, 1,102 high-yield points, 726 mech / 268 drug / 200 clinical cards, 608 board questions, 469 glossary terms |
+| Chapters 1–13 | Done: 247 guide sections, 1,102 high-yield points, 726 mech / 268 drug / 200 clinical cards, 608 board questions (230 of them, Ch 9–13, with wrong-answer rationales), 469 glossary terms |
 | Library | 183 drugs, 105 targets, 16 NTs, 83 circuits, 17 drug types. B1 pass done (R3–R5): 271 pearls + 65 side effects added; 63 drugs still have no pearls because the book has nothing more on them |
 | QoL pass | Done: phone home layout, two-column PDF generator (chapter + all chapters), Compare drug-type filters, NbN by class, auto-hiding tab bar, phone overflow fixes, SW cache-prefix fix |
 | Teaching mode | Done: session builder (6 presets, multi-chapter, counts, order), high-yield blanks, flashcards, board Qs, vignettes, Name that drug, countdown, room/two-team scoring, flags, text size, end-of-session review + PDF |
-| Since 10-26 | 20.0.0 Monitoring checklists (`#/monitoring`), 21.0.0 Text size (Aa), 22.0.0 Design refresh (semver changelog, About page, match-device theme, Tagalog draft strings), 23.0.0 = R1, 24.0.0 = R2, 25.0.0 = R3, 26.0.0 = R4, 27.0.0 = R5, 28.0.0 = R6 |
+| Since 10-26 | 29.0.0 = R7, 20.0.0 Monitoring checklists (`#/monitoring`), 21.0.0 Text size (Aa), 22.0.0 Design refresh (semver changelog, About page, match-device theme, Tagalog draft strings), 23.0.0 = R1, 24.0.0 = R2, 25.0.0 = R3, 26.0.0 = R4, 27.0.0 = R5, 28.0.0 = R6, 29.0.0 = R7 |
 | Cheat sheets (R6) | `#/cheat` index + `#/cheat/<familyId>` (17), section "drug-class cheat sheets" in `js/app.js` before the NT section. Built only from library fields: at-a-glance (subgroups, chapters, shared targets = targets ≥ half the class and ≥2 drugs act on, majority action with "also …" for others), binding grid (only if ≥3 drugs have `s`: antipsychotics, SSRI/SNRI, NMDA; columns = targets with `s` in ≥2 drugs, max 12), drug-by-drug table (Key points = `CHEAT_KEY` 4 targets/3 uses/3 SEs/2 pearls, or Everything; subgroup chips; stacks to cards under 640px). PDF via `cheatPdfSpec` → `js/pdf.js` (pages = layout count at 7 pt, then `plan` enlarges up to 9.5 pt). Prefs `cheatPrefs` {detail, paper, gf[fam]}. Links: drug page Same class box (`.side-cheat`), drug DB `#dcheat`, Compare `.cmp-cheat`, library tile `nav.cheat`, search kind `cheat`. CSS block at end of `app.css` (`.cheat-*`, `.act`, `.mx`, `.sdots`). Test `tests/r6_cheat.py`. |
+| Rationales (R7) | Ch 9–13 board questions carry `pages` (printed page of the right answer), `whyNot` (one line per choice, `''` at the answer) and `whyNotPages`. Shown by `whyNotLine()` / `whyBlock()` / `pageChip()` in `js/app.js` (section before `renderExamReview`): exam review lists a reason under every wrong choice (your pick gets `.is-mine`); practice `choiceList(c, chosen)` shows your pick's reason and folds the rest behind "Why not the others" (pref `whyNotOpen`); teaching mode shows the room's pick + `#t-others`, and `S.pk[id]` carries the pick into the end-of-session review and PDF. `pageChip()` resolves a printed page → chapter → guide section via `chapterOfPage`/`sectionOfPage` and links `#/c/chNN/guide/<sec>`. Rationale text is in the search index. CSS at end of `app.css` (`.whynot`, `.choice__body`, `.pg-chip`, `.teach__others`; block layout under 640px). Test `tests/r7_rationales.py`. |
 | Practice engine (R2) | `data/topics.js`: 28 topics (`SP.topics`), all 1,802 items mapped (`SP.topicMap`, key `chNN/deck/id`); edit `work/r2/topics_vocab.json` + `topic_map.json`, then `node tools/build_topics.js ../stahl`. localStorage `att` = per-item last 8 outcomes (upper = right; S/U/G = sure/unsure/guess, R/W = no rating); `confAsk` pref; `MISTAKES[k].sure`. Routes `#/topics`, `#/topics/<id>`, `#/topics/<id>/cards`, `#/exam/topic/<id>`, `#/exam/mistakes`. Topic strength needs ≥5 practised items. |
 
 ## 7. Next steps: agreed release plan (owner approved all A + B, order B1 → B4, 2026-11-09)
-Next version **29.0.0** (R7). One release = one changelog id + SW bump + full test run + push + update this table.
-R7 starting point: B2 wrong-answer rationales for Ch 9–13 board questions (`cards-cases.js`: add a per-choice rationale + page ref; needs the book PDF re-attached and pages re-extracted, see R3 method). Decide the data shape first (e.g. `whyNot: [5 strings]` with `''` at the answer index) and how the exam review shows it; then subagents draft per chapter, lead verifies. Reuse the 8-word verbatim check.
+Next version **30.0.0** (R8). One release = one changelog id + SW bump + full test run + push + update this table.
+R8 starting point: the same pass for **Ch 1–8** (378 questions). Reuse `work/r7/` end to end — copy `BRIEF.md` (change the chapter page ranges: Ch 1 = p1–28, 2 = 29–50, 3 = 51–76, 4 = 77–158, 5 = 159–243, 6 = 244–282, 7 = 283–358, 8 = 359–378), `check_drafts.js` (update its `RANGE` map), `build_final.js`, `show.js` and `tools/apply_rationales.js`. The data shape, the display and `tests/r7_rationales.py` (set `CHS`) all carry over unchanged, so R8 is a content pass only: dump `current_chNN.json`, one subagent per chapter, lead verifies against the page files, then apply, changelog 30.0.0, SW bump, full test run, push. Needs the book PDF re-attached and the pages re-extracted.
 
 | # | Release | Items | Book PDF? | Status |
 |---|---|---|---|---|
@@ -75,7 +78,7 @@ R7 starting point: B2 wrong-answer rationales for Ch 9–13 board questions (`ca
 | R4 | Library depth 2 | B1: Ch 6–7 drugs (mood, antidepressants) | yes | **done 26.0.0** (78 pearls/37 drugs; `work/r4/`) |
 | R5 | Library depth 3 | B1: Ch 8–13 + remaining drugs | yes | **done 27.0.0** (125 pearls + 61 SEs/55 drugs; `work/r5/`) |
 | R6 | Cheat sheets | A5 drug-class cheat sheets + PDF (built on R3–R5) | no | **done 28.0.0** (17 sheets, binding grid, PDF) |
-| R7 | Rationales 1 | B2: why-each-wrong-answer + page ref, Ch 9–13 | yes | pending |
+| R7 | Rationales 1 | B2: why-each-wrong-answer + page ref, Ch 9–13 | yes | **done 29.0.0** (920 rationales/230 questions, 210 `why` expanded; `work/r7/`) |
 | R8 | Rationales 2 | B2: same, Ch 1–8 | yes | pending |
 | R9 | Vignettes 1 | B2: ~15 two-step vignettes/ch, Ch 1–7 | yes | pending |
 | R10 | Vignettes 2 | B2: same, Ch 8–13 | yes | pending |
@@ -90,6 +93,9 @@ R3 method (reuse for R4/R5): `work/r3/BRIEF.md` (drafting rules for subagents) �
 R3 findings: the book's per-drug side-effect detail is mostly already in the library (only 3 SEs added); gains are in pearls. The 11 FGAs listed only in Table 5-1 (p183) have no further book detail: leave as is. Rejected from drafts: "does not bind X" inferred from absence in a figure; pearls that restate the entry's own mechanism/facts. Hallucinogens, stimulants, ketamine, fluoxetine, mirtazapine also appear in Ch 4–5 but belong to R4/R5.
 R4 (same method, `work/r4/`, groups A–F): Ch 6 = p245–282, Ch 7 = p283–358 (pages extracted). Deferred to R5 although in Ch 7: amphetamine, MDMA, modafinil, pregabalin, gabapentin, psilocybin. Most TCAs, desvenlafaxine, milnacipran, levomilnacipran, nefazodone, iproniazid, flumazenil, brexanolone, zuranolone: book adds nothing. Book error kept as flagged fact: topiramate "with bupropion" for weight loss (p352). Common draft faults to cut: pearls repeating `mechanism`/`uses`, class points applied to one drug, "still unclear" pearls.
 R5 (`work/r5/`, groups A–G; `show.js G` lists new items beside the entry's mechanism/uses/facts for review): Ch 8 = p359–378, 9 = 379–400, 10 = 401–448, 11 = 449–484, 12 = 485–536, 13 = 537–624 (all pages p77–624 now extracted). Benzodiazepines (diazepam, alprazolam) carry class points as the library's representatives. Rejected: psilocin binding values on psilocybin (different strip), lofexidine "α2A" (book says α2), page numbers inside pearl text.
+
+R7 (`work/r7/`, one group per chapter): `BRIEF.md` → `current_chNN.json` → subagents write `draft_chNN.json` + `notes_chNN.md` → `node work/r7/check_drafts.js ../stahl /home/claude/book/pages chNN` (8-word verbatim check, whyNot shape, pages exist/in range, word counts, no page numbers in text; `--final` checks the finals) → lead verifies against the page files and writes `fix_chNN.json` (sparse: `{qid: {why?, pages?, whyNot: {idx: str}, whyNotPages: {idx: str}}}`) → `node build_final.js chNN…` merges draft+fix into `final_chNN.json` → `node tools/apply_rationales.js ../stahl work/r7 chNN…` writes the chapter files. `node work/r7/show.js chNN draft|final [from] [to]` prints each question with its rationales and a crude key-word support score against the cited page (low % = check by hand, not proof of error).
+R7 findings: `tools/shuffle_cases.js` now shuffles choice *indices* so `whyNot`/`whyNotPages` move with their choices — any future shuffle keeps them aligned. Drafts were accurate; the lead changed 15 fields across 15 questions in 5 chapters. Common faults: a rationale for an "all of the above"/"none of the above" option that states the answer instead of why that option fails; "not discussed in the book" used where a real contrast exists; q10-41's rewritten `why` copied 8 words from the book (the checker caught it). q12-53 (lecanemab/donanemab ARIA) is **not in the book**: its `why` now says so explicitly and cites the app's own update block; questions like that should stay tagged `Updates`.
 
 Reference (original wording of the items):
 - A1–A7 as above. B1: 139/183 drugs lack binding strength, 78 lack side effects, 168 lack pearls. B2: ~7% vignettes, explanations shrink to ~50 chars by Ch 13, no wrong-answer rationales. B3: confidence rating, topic tags (interleaving, weak-spot map, exam by topic), mechanism drill from library, warm-ups, explain-why. B4: original interactive diagrams.
@@ -107,7 +113,9 @@ Reference (original wording of the items):
 - Segmented radios (`.seg`): the hidden input sits over its label, so Playwright clicks on `input + span` time out; click `label:has(input[...])`.
 - `store` caches prefs in memory: after setting localStorage in a test, `reload()` (a hash change is not enough).
 - New cards/questions need a topic: add keys to `work/r2/topic_map.json` and rebuild `data/topics.js`, or they drop out of topics and exam-by-topic.
+- Board questions with rationales: `whyNot` must stay index-aligned with `choices` (`''` at `answer`). Anything that reorders choices must reorder both arrays; `apply_rationales.js` refuses a mismatch.
+- The exam asks for a confidence rating before each answer: in Playwright press `s` before the letter key, or `#ex-submit` never becomes reachable. Starting a new exam over one in progress fires a `window.confirm` — register a dialog handler.
 - Drug families: the `other` family also catches drugs whose `group` is in no family (`familyOf` fallback), so its sheet can hold more than its listed groups.
 
 ## 9. Files to re-attach
-- `Stahls_Essential_Psychopharmacology_5th_ed.pdf`: needed for content work (R7–R10 rationales and vignettes, R13 Ch 8/9 depth). Not needed for R6 (cheat sheets come from the library), R11, R12 or R14. After attaching, re-extract pages with the command in the R3 method line (extracted text is never committed: copyrighted).
+- `Stahls_Essential_Psychopharmacology_5th_ed.pdf`: needed for content work (R8–R10 rationales and vignettes, R13 Ch 8/9 depth). Not needed for R6 (cheat sheets come from the library), R11, R12 or R14. R7 used it (pages re-extracted 2026-11-11). After attaching, re-extract pages with the command in the R3 method line (extracted text is never committed: copyrighted).

@@ -1,0 +1,755 @@
+{
+ "q10-01": {
+  "pages": "406",
+  "whyNot": [
+   "The **suprachiasmatic nucleus** is the circadian clock receiving light input that drives orexin release; it does not make histamine.",
+   "",
+   "The **locus coeruleus** supplies norepinephrine and richly expresses OX1 receptors; it is not where histamine is made.",
+   "The **raphe nuclei** release serotonin onto the basal forebrain and thalamus, not histamine.",
+   "The **VLPO** is the GABA sleep center that histamine inhibits, not the source of histamine neurons."
+  ],
+  "whyNotPages": [
+   "413",
+   "",
+   "407",
+   "412",
+   "406"
+  ],
+  "why": "In the brain histamine is made solely by cells of the **tuberomammillary nucleus** of the hypothalamus, a small bilateral nucleus that sends histaminergic fibers to nearly all brain regions and the spinal cord."
+ },
+ "q10-02": {
+  "pages": "402",
+  "whyNot": [
+   "There is no apparent histamine **reuptake** pump, so released histamine simply diffuses widely away from its synapse.",
+   "**COMT** is not part of the histamine pathway the book describes, which is methylation followed by MAO-B.",
+   "",
+   "**Acetylcholinesterase** is not among the enzymes the book names for histamine, which are HNMT and then MAO-B.",
+   "**Diamine oxidase** clears histamine only outside the brain; the brain uses a two-enzyme sequence."
+  ],
+  "whyNotPages": [
+   "402",
+   "402",
+   "",
+   "402",
+   "402"
+  ],
+  "why": "Brain histamine is cleared by two enzymes in sequence: **HNMT** makes N-methylhistamine, then **MAO-B** converts it to an inactive product; with no reuptake pump, histamine diffuses away widely."
+ },
+ "q10-03": {
+  "pages": "405",
+  "whyNot": [
+   "Blocking **H1** removes histamine's alerting signal and causes sedation, the opposite of promoting wakefulness.",
+   "The **polyamine site** is an allosteric spot on NMDA receptors where histamine can act, not a receptor that gates histamine release.",
+   "**H2** receptors are postsynaptic, signal through cAMP, and do not appear directly linked to wakefulness.",
+   "**H4** receptors have not been found in the brain, so they cannot control central histamine release.",
+   ""
+  ],
+  "whyNotPages": [
+   "402",
+   "406",
+   "405",
+   "406",
+   ""
+  ],
+  "why": "**H3** receptors are presynaptic autoreceptors that act as a gate on histamine release; blocking them (as pitolisant does) opens the gate, releases histamine and promotes wakefulness."
+ },
+ "q10-04": {
+  "pages": "405",
+  "whyNot": [
+   "**Adenosine** is the homeostatic sleep-drive signal that builds with time awake, not the effector of histamine's alerting action.",
+   "**Chloride channels** are not part of H1 signaling, which runs through a G-protein second-messenger system.",
+   "**GIRK** inactivation is an orexin 2 receptor effect, not the H1 pathway.",
+   "",
+   "**cAMP and CREB** are the H2 pathway, which has no direct tie to wakefulness."
+  ],
+  "whyNotPages": [
+   "413",
+   "405",
+   "409",
+   "",
+   "405"
+  ],
+  "why": "Postsynaptic **H1** receptors couple to a G-protein pathway that activates phosphatidylinositol and the transcription factor **cFOS**, producing wakefulness and alertness; H2 uses cAMP/PKA/CREB instead."
+ },
+ "q10-05": {
+  "pages": "407",
+  "whyNot": [
+   "",
+   "**Hypocretin** is only the alternate name for the same peptides (orexin A and B); it is not a separate OX2-selective peptide.",
+   "Orexin A, not orexin B, reaches **OX1**; orexin B does not bind OX1 at all.",
+   "**Orexin A** interacts with both OX1 and OX2, so it is not the OX2-selective peptide.",
+   "One of the two peptides, **orexin B**, is selective for OX2."
+  ],
+  "whyNotPages": [
+   "",
+   "406",
+   "407",
+   "407",
+   "407"
+  ],
+  "why": "The two orexin peptides differ in reach: orexin A can act on both OX1 and OX2, whereas **orexin B** binds selectively to OX2."
+ },
+ "q10-06": {
+  "pages": "407",
+  "whyNot": [
+   "**VLPO GABA neurons** form the sleep-promoting center that wakefulness suppresses; orexin's wake action is not exerted through them.",
+   "",
+   "**Cerebellar Purkinje cells** are not part of the orexin wake circuit; OX2 is highlighted in the histaminergic TMN.",
+   "The **pineal** gland secretes melatonin and is not the OX2-rich site that carries orexin's wake effect.",
+   "**Spinal motor neurons** are not named as orexin's wake target; the book ties OX2 to the histaminergic TMN."
+  ],
+  "whyNotPages": [
+   "408",
+   "",
+   "409",
+   "439",
+   "409"
+  ],
+  "why": "Orexin's wake-stabilizing effect runs largely through **OX2 receptors** that are densely expressed on the histaminergic neurons of the **TMN**, which then release histamine across the brain."
+ },
+ "q10-07": {
+  "pages": "407",
+  "whyNot": [
+   "",
+   "The **thalamus** receives orexin projections; it does not contain the orexin neurons themselves.",
+   "Orexin cell bodies are found only in hypothalamic areas, so a midbrain site like the **substantia nigra** is wrong.",
+   "The **basal forebrain** receives orexin input and releases acetylcholine but does not house orexin neurons.",
+   "The **locus coeruleus** is a target that releases norepinephrine and expresses OX1, not the origin of orexin neurons."
+  ],
+  "whyNotPages": [
+   "",
+   "407",
+   "407",
+   "413",
+   "407"
+  ],
+  "why": "Orexin/hypocretin neurons are found **only in hypothalamic areas** (lateral, perifornical and posterior) and project widely; these are the neurons that degenerate in narcolepsy."
+ },
+ "q10-08": {
+  "pages": "413",
+  "whyNot": [
+   "**Histamine** is an arousal transmitter released from the TMN that promotes waking, not the substance that builds up as sleep pressure.",
+   "**Orexin** belongs to the opposing circadian wake drive via the SCN, not the homeostatic sleep drive.",
+   "**Melatonin** is secreted at night in the dark and relates to circadian timing, not to the buildup that tracks time awake.",
+   "**Cortisol** is not named in the sleep-drive mechanism; the book ties homeostatic drive to adenosine.",
+   ""
+  ],
+  "whyNotPages": [
+   "402",
+   "413",
+   "413",
+   "413",
+   ""
+  ],
+  "why": "Homeostatic sleep drive tracks time awake because **adenosine** accumulates, then disinhibits the VLPO so that GABA is released to inhibit the wake-promoting centers."
+ },
+ "q10-09": {
+  "pages": "413",
+  "whyNot": [
+   "**Histamine** is a wake-promoting transmitter from the TMN, which the VLPO suppresses rather than uses.",
+   "**Orexin** stabilizes wakefulness from the lateral hypothalamus; it is the signal whose fall lets the VLPO take over.",
+   "The book names **GABA**, not glutamate, as the transmitter of the sleep-promoting VLPO.",
+   "",
+   "**Acetylcholine** is an arousal transmitter from the basal forebrain and PPT/LDT that the VLPO suppresses."
+  ],
+  "whyNotPages": [
+   "408",
+   "413",
+   "413",
+   "",
+   "413"
+  ],
+  "why": "The sleep-promoting **VLPO** releases **GABA** onto the TMN and the other arousal centers, inhibiting histamine, norepinephrine, serotonin, dopamine and acetylcholine so sleep can take over."
+ },
+ "q10-10": {
+  "pages": "414",
+  "whyNot": [
+   "**Stage 1** is not the acetylcholine peak; the book places that peak in REM sleep.",
+   "**Stage 2** is where dopamine, norepinephrine, serotonin and histamine peak, whereas acetylcholine peaks in REM.",
+   "",
+   "Acetylcholine is not **constant**; it swings between a stage 4 low and a REM high each cycle.",
+   "**Stage 4** is the acetylcholine low point, the opposite of its peak."
+  ],
+  "whyNotPages": [
+   "414",
+   "414",
+   "",
+   "414",
+   "414"
+  ],
+  "why": "Acetylcholine tracks the stage 4 to REM swing of each sleep cycle, bottoming in stage 4 and **peaking in REM**, when cortical activity resembles wakefulness."
+ },
+ "q10-11": {
+  "pages": "414",
+  "whyNot": [
+   "",
+   "**Wakefulness** is when these arousal circuits are active; the book's trough for these transmitters is REM, with a peak in stage 2 sleep.",
+   "**Stage 3** is deeper slow-wave sleep, not the trough; the lowest levels are in REM.",
+   "**Stage 1** is not singled out; these transmitters fall lowest only in REM and peak in stage 2.",
+   "**Stage 2** is the peak, not the trough, for dopamine, norepinephrine, serotonin and histamine."
+  ],
+  "whyNotPages": [
+   "",
+   "414",
+   "414",
+   "414",
+   "414"
+  ],
+  "why": "Dopamine, norepinephrine, serotonin and histamine rise to a peak in stage 2 sleep and drop to their **lowest in REM**, the stage in which acetylcholine is highest."
+ },
+ "q10-12": {
+  "pages": "417",
+  "whyNot": [
+   "The book links **growth hormone** release to slow-wave sleep, which GHB deepens; sleep loss is not described as raising it.",
+   "",
+   "**Opposite direction:** disturbed sleep lowers appetite-inhibiting leptin rather than raising it, and raises ghrelin.",
+   "**Melatonin** is secreted at night in the dark with normal sleep; insomnia biology shows reduced nocturnal secretion.",
+   "**Cortisol** is not the change named for impaired sleep; related insomnia biology shows HPA-axis activation, an increase."
+  ],
+  "whyNotPages": [
+   "447",
+   "",
+   "417",
+   "419",
+   "419"
+  ],
+  "why": "Disturbed sleep lowers the appetite-inhibiting hormone **leptin** and raises the appetite-stimulating hormone **ghrelin**, along with gut dysbiosis, which raises the odds of obesity, diabetes and heart disease."
+ },
+ "q10-13": {
+  "pages": "418",
+  "whyNot": [
+   "Insomnia biology shows **reduced** nocturnal melatonin secretion, not an excess.",
+   "Loss of **orexin neurons** is the narcolepsy pathology; in insomnia, excess orexin is considered as a possible driver.",
+   "That is the older view; the newest imaging evidence points away from a failure to **switch on** sleep circuits.",
+   "",
+   "**Adenosine** is the sleep-drive signal; the book attributes insomnia to persistent arousal rather than low sleep pressure."
+  ],
+  "whyNotPages": [
+   "419",
+   "418",
+   "418",
+   "",
+   "418"
+  ],
+  "why": "Insomnia is conceptualized as nighttime **hyperarousal**: the newest imaging evidence suggests the brain cannot turn **off** its arousal circuits, rather than failing to turn on the VLPO sleep circuits."
+ },
+ "q10-14": {
+  "pages": "421",
+  "whyNot": [
+   "The suggested latency criterion is longer than **30** minutes, not 10.",
+   "**SOREMPs** are a narcolepsy marker on sleep testing, not an insomnia criterion.",
+   "",
+   "The **Epworth** scale subjectively rates daytime sleepiness for hypersomnia evaluation, not insomnia.",
+   "The suggested threshold for total sleep time is under **6.5** hours, not 8."
+  ],
+  "whyNotPages": [
+   "421",
+   "435",
+   "",
+   "430",
+   "421"
+  ],
+  "why": "Suggested insomnia criteria quantify poor sleep: latency or wake after sleep onset over 30 minutes, total sleep under 6.5 hours, and **sleep efficiency below 85%**."
+ },
+ "q10-15": {
+  "pages": "420",
+  "whyNot": [
+   "Sevenfold is the figure for **substance use disorders**, not depression.",
+   "**1.2** does not appear in the insomnia risk figure, whose depression value is far higher.",
+   "Twofold is the risk for **anxiety**, not depression.",
+   "**Ten** times does not appear; the highest risk shown is sevenfold, for substance use disorders.",
+   ""
+  ],
+  "whyNotPages": [
+   "420",
+   "420",
+   "420",
+   "420",
+   ""
+  ],
+  "why": "Insomnia is a risk factor for, or prodrome of, later psychiatric illness: about **fourfold** risk of depression, twofold for anxiety and sevenfold for substance use disorders."
+ },
+ "q10-16": {
+  "pages": "422",
+  "whyNot": [
+   "**Eszopiclone** lacks α1 selectivity and binds several α subunits, like the benzodiazepines.",
+   "**Zopiclone and eszopiclone** bind α1, α2, α3 and α5, so they are not α1-selective.",
+   "",
+   "Not **all** Z drugs are selective; the zopiclone family is not.",
+   "**Zaleplon and zolpidem** do bind selectively to α1 subunits, so the answer is not none."
+  ],
+  "whyNotPages": [
+   "424",
+   "422",
+   "",
+   "424",
+   "422"
+  ]
+ },
+ "q10-17": {
+  "pages": "422–423",
+  "whyNot": [
+   "",
+   "**Anxiolysis** is linked to the α2 and α3 subtypes, not α1.",
+   "**Alcohol potentiation** is linked to the α2 and α3 subtypes.",
+   "**Muscle relaxation** is linked to the α2 and α3 subtypes.",
+   "**Cognition** and related functions are tied to the α5 subtype, mostly in the hippocampus."
+  ],
+  "whyNotPages": [
+   "",
+   "423",
+   "423",
+   "423",
+   "423"
+  ],
+  "why": "The **α1** subtype is critical for sedation, so every effective GABA-A PAM hypnotic targets it; it is also linked to amnesia and anticonvulsant action, and its adaptation with chronic use is thought to cause tolerance."
+ },
+ "q10-18": {
+  "pages": "422",
+  "whyNot": [
+   "They remain **effective**; when first-line hypnotics fail, benzodiazepines still have a place in treatment.",
+   "**Liver toxicity** is not the book's reason; its concerns are tolerance, withdrawal and rebound.",
+   "**Weight gain** is raised in the book for antihistamines, not as the reason benzodiazepine hypnotics are second-line.",
+   "",
+   "**Cardiac toxicity** is not given as a reason; the issues named are lost efficacy over time and withdrawal effects."
+  ],
+  "whyNotPages": [
+   "422",
+   "422",
+   "425",
+   "",
+   "422"
+  ],
+  "why": "Long-term use brings loss of efficacy (**tolerance**) and **withdrawal**, including rebound insomnia that can be worse than the original problem, so benzodiazepines rank behind first-line hypnotics."
+ },
+ "q10-19": {
+  "pages": "423",
+  "whyNot": [
+   "**Flurazepam** is ultra-long acting, with a half-life measured in days, not hours.",
+   "**Quazepam**, like flurazepam, is ultra-long acting, lasting days.",
+   "**Estazolam** has a moderate half-life, not an ultra-short one.",
+   "**Temazepam** has a moderate half-life, placing it in the hangover-risk group.",
+   ""
+  ],
+  "whyNotPages": [
+   "423",
+   "423",
+   "423",
+   "429",
+   ""
+  ],
+  "why": "Among the five benzodiazepines approved for insomnia, **triazolam** is the one with an ultra-short half-life of about 1 to 2 hours, unlike the day-long flurazepam and quazepam."
+ },
+ "q10-20": {
+  "pages": "423",
+  "whyNot": [
+   "Blocking **adenosine** receptors is how caffeine promotes wakefulness, the opposite of sleep.",
+   "",
+   "Enhancing GABA at the VLPO describes **benzodiazepines and Z drugs**; DORAs work differently.",
+   "**H1 blockade** is the antihistamine route, a separate arousal-reducing mechanism from orexin blockade.",
+   "**Melatonin receptor agonism** is how ramelteon and tasimelteon work, not DORAs."
+  ],
+  "whyNotPages": [
+   "440",
+   "",
+   "423",
+   "425",
+   "439"
+  ],
+  "why": "DORAs block OX1 and OX2 receptors, especially OX2, so the orexins can no longer **stabilize wakefulness** or drive release of other wake-promoting transmitters, and the patient falls asleep."
+ },
+ "q10-21": {
+  "pages": "423",
+  "whyNot": [
+   "Neither DORA is a **GABA-A PAM**; they act by blocking orexin, not by enhancing GABA.",
+   "Comparable OX1 and OX2 affinity describes **suvorexant**, not lemborexant.",
+   "Both are **reversible** inhibitors, which lets rising morning orexin reverse the blockade.",
+   "",
+   "The book credits lemborexant with faster **kinetics**, not a longer-acting profile."
+  ],
+  "whyNotPages": [
+   "423",
+   "423",
+   "423",
+   "",
+   "423"
+  ],
+  "why": "Lemborexant binds **OX2 more strongly than OX1**, unlike suvorexant's comparable affinity, and shows faster association and dissociation at OX2, which may imply quicker morning reversal."
+ },
+ "q10-22": {
+  "pages": "430",
+  "whyNot": [
+   "Absorption is not the issue raised; the point is competition between falling drug and rising **orexin**.",
+   "DORAs block orexin receptors in the brain's wake circuits; **peripheral-only** action is not the explanation.",
+   "They are **reversible** inhibitors, which is exactly why rising orexin can displace them.",
+   "A **threshold** does exist for DORAs, at about 65% receptor blockade.",
+   ""
+  ],
+  "whyNotPages": [
+   "430",
+   "423",
+   "423",
+   "427",
+   ""
+  ]
+ },
+ "q10-23": {
+  "pages": "425",
+  "whyNot": [
+   "",
+   "**D2 antagonism** is not part of trazodone's hypnotic action, which is blockade of serotonin, norepinephrine and histamine pathways.",
+   "**5HT1A agonism** is not the hypnotic mechanism; the book describes 5HT2A, α1 and H1 antagonism.",
+   "**NET inhibition** is not credited; α1 blockade combined with H1 and 5HT2A antagonism produces the hypnotic effect.",
+   "**SERT inhibition** appears only at higher antidepressant doses and is not what deepens slow-wave sleep."
+  ],
+  "whyNotPages": [
+   "",
+   "424",
+   "424",
+   "425",
+   "425"
+  ],
+  "why": "Trazodone's **5HT2A antagonism** specifically enhances slow-wave (deep) sleep, which can correlate with restorative sleep; its α1 and H1 blockade add to the hypnotic effect."
+ },
+ "q10-24": {
+  "pages": "425–426",
+  "whyNot": [
+   "**α1 antagonism** is part of trazodone's arousal-reducing profile; at hypnotic doses doxepin is selective for H1 instead.",
+   "",
+   "**Orexin antagonists** are the DORAs such as suvorexant; doxepin is a tricyclic acting on histamine.",
+   "**M1 antagonism** is the anticholinergic action of agents like diphenhydramine; low-dose doxepin lacks it.",
+   "**SERT and NET inhibition** occurs only at antidepressant doses of 150 to 300 mg, not at 1 to 6 mg."
+  ],
+  "whyNotPages": [
+   "426",
+   "",
+   "423",
+   "426",
+   "427"
+  ],
+  "why": "At 1 to 6 mg, far below antidepressant doses, doxepin's very high affinity for **H1** makes it a relatively **selective H1 antagonist**, without anticholinergic or reuptake-blocking effects."
+ },
+ "q10-25": {
+  "pages": "426",
+  "whyNot": [
+   "**α2 blockade** is not described for diphenhydramine; its anticholinergic effects come from muscarinic receptors.",
+   "**H1 blockade** produces the sedating, hypnotic effect rather than the anticholinergic side effects.",
+   "",
+   "**5HT3 receptors** are not described as part of diphenhydramine's action.",
+   "**H3 blockade** would release histamine and promote wakefulness, as pitolisant does."
+  ],
+  "whyNotPages": [
+   "426",
+   "426",
+   "",
+   "426",
+   "444"
+  ],
+  "why": "Diphenhydramine is not selective for H1; it also blocks **muscarinic M1** receptors, which causes anticholinergic effects such as dry mouth, constipation, blurred vision and memory problems."
+ },
+ "q10-26": {
+  "pages": "427",
+  "whyNot": [
+   "",
+   "**25 to 30%** is the threshold for GABA-A positive allosteric modulators, not DORAs.",
+   "**10%** is not a threshold the book gives for any hypnotic class.",
+   "About **80%** is the estimated threshold for serotonin and histamine antagonists.",
+   "**95%** is not a sleep threshold in the book; the highest estimate given is about 80%."
+  ],
+  "whyNotPages": [
+   "",
+   "427",
+   "427",
+   "427",
+   "427"
+  ],
+  "why": "Sleep onset depends on receptor occupancy crossing a threshold, roughly 25 to 30% for GABA-A drugs, about **65% for DORAs** and about 80% for serotonin or histamine antagonists."
+ },
+ "q10-27": {
+  "pages": "429–430",
+  "whyNot": [
+   "Food can delay absorption, so avoiding it is advised for slow sleep onset; it does not fix morning **grogginess**.",
+   "",
+   "**Opposite direction:** grogginess calls for dosing earlier in the evening, not later.",
+   "**Caffeine** at bedtime opposes the hypnotic and does nothing to bring drug levels below threshold by morning.",
+   "**Raising** the dose is the fix for sleep that does not last long enough, and would worsen morning carryover."
+  ],
+  "whyNotPages": [
+   "429",
+   "",
+   "430",
+   "440",
+   "429"
+  ],
+  "why": "Morning grogginess means drug levels are still near or above the sleep threshold at wake time, so **lower the dose**, give it earlier in the evening, or switch to a drug that stays above threshold for less time."
+ },
+ "q10-28": {
+  "pages": "429",
+  "whyNot": [
+   "**Too cold** describes ultra-short half-lives of 1 to 3 hours that wear off before waking; these two last longer.",
+   "Both are **benzodiazepine hypnotics** approved for insomnia.",
+   "",
+   "**Way too hot** is for ultra-long half-life agents like flurazepam and quazepam that accumulate.",
+   "**Just right** is about 8 hours above threshold, shown by agents like eszopiclone, zolpidem CR and low-dose trazodone."
+  ],
+  "whyNotPages": [
+   "429",
+   "423",
+   "",
+   "428",
+   "428"
+  ],
+  "why": "With moderately long half-lives (15 to 30 hours), estazolam and temazepam stay above the sleep threshold past wake time, giving the **'still too hot'** hangover of sedation and memory problems."
+ },
+ "q10-29": {
+  "pages": "443",
+  "whyNot": [
+   "**Modafinil** is approved only as an adjunct to treating the airway obstruction, not as first-line therapy.",
+   "**Melatonin** acts on circadian timing and sleep onset; it does nothing for airway obstruction.",
+   "**Sodium oxybate** is used for cataplexy and sleepiness in narcolepsy, not for airway obstruction.",
+   "",
+   "**Stimulants** such as amphetamine and methylphenidate are not approved for OSA and do not treat the obstruction."
+  ],
+  "whyNotPages": [
+   "443",
+   "439",
+   "446",
+   "",
+   "441"
+  ],
+  "why": "Because OSA is airway obstruction, first-line treatment is **continuous positive airway pressure**; wake-promoting drugs such as modafinil only serve as adjuncts for residual sleepiness."
+ },
+ "q10-30": {
+  "pages": "435",
+  "whyNot": [
+   "Diagnostic MSLT latency is **short**, 8 minutes or less, not longer than 15.",
+   "**Long sleep** of over 10 hours is a feature of idiopathic hypersomnia, not narcolepsy.",
+   "Most narcolepsy patients are **HLA DQB1-0602** positive, so normal typing is not the diagnostic finding.",
+   "**Two or more**, not fewer than two, SOREMPs are diagnostic; fewer than two fits idiopathic hypersomnia.",
+   ""
+  ],
+  "whyNotPages": [
+   "435",
+   "433",
+   "435",
+   "435",
+   ""
+  ],
+  "why": "A CSF orexin level below **110 pg/mL** is diagnostic for narcolepsy, reflecting loss of orexin neurons; two or more SOREMPs with a short MSLT latency also count when orexin is normal."
+ },
+ "q10-31": {
+  "pages": "434–435",
+  "whyNot": [
+   "The book does not attribute cataplexy to **H3**; H3 blockade is a treatment strategy for sleepiness.",
+   "**Adenosine** relates to sleep drive and caffeine, not to the loss of muscle tone in cataplexy.",
+   "**Melatonin** regulates circadian timing and is not linked to cataplexy.",
+   "**Histamine** promotes wakefulness; cataplexy stems from low orexin, not from too much histamine.",
+   ""
+  ],
+  "whyNotPages": [
+   "444",
+   "440",
+   "439",
+   "435",
+   ""
+  ],
+  "why": "Orexin normally keeps motor tone stable by day and permits motor inhibition at night; with orexin neurons lost, REM-type **inhibition intrudes** into wakefulness as sudden loss of muscle tone."
+ },
+ "q10-32": {
+  "pages": "435",
+  "whyNot": [
+   "**5%** understates it greatly; the book reports a large majority of patients as positive.",
+   "**Half** is too low; most patients, especially those with cataplexy, are positive.",
+   "",
+   "**20%** is the rate in the general population, not in narcolepsy.",
+   "Not **every** patient carries it; the book reports a majority, not a universal, figure."
+  ],
+  "whyNotPages": [
+   "435",
+   "435",
+   "",
+   "435",
+   "435"
+  ],
+  "why": "HLA DQB1-0602 is a genetic marker strongly enriched in narcolepsy: about **90%** of patients, particularly those with cataplexy, carry it, compared with only 20% of the general population."
+ },
+ "q10-33": {
+  "pages": "435",
+  "whyNot": [
+   "",
+   "**HLA DQB1-0602** positivity is a narcolepsy finding, present in most but not all of those patients.",
+   "CSF orexin is not typically affected in idiopathic hypersomnia; **undetectable** levels point to narcolepsy with cataplexy.",
+   "**Opposite:** idiopathic hypersomnia involves long or normal sleep that is non-refreshing.",
+   "**Cataplexy** is a narcolepsy feature tied to orexin loss, not part of idiopathic hypersomnia."
+  ],
+  "whyNotPages": [
+   "",
+   "435",
+   "435",
+   "432",
+   "435"
+  ]
+ },
+ "q10-34": {
+  "pages": "438",
+  "whyNot": [
+   "**Non-24** mainly affects blind people who cannot entrain the clock to light; it is not called the most common.",
+   "**Irregular sleep–wake** disorder is not among the circadian disorders the chapter lists, so it cannot be the most common.",
+   "**Advanced sleep phase** disorder is linked to PER2 variants and early bed and wake times, but not called the most common.",
+   "",
+   "**Shift work** disorder affects a share of shift workers across the workforce, not only nurses, and is not called the most common."
+  ],
+  "whyNotPages": [
+   "438",
+   "435",
+   "435",
+   "",
+   "435"
+  ],
+  "why": "**Delayed sleep phase disorder** is the most common circadian rhythm disorder; sleep is normal in duration and quality but shifted late, and it is linked to CLOCK gene polymorphisms."
+ },
+ "q10-35": {
+  "pages": "438–439",
+  "whyNot": [
+   "**Evening light alone** is incomplete; advanced sleep phase pairs evening light with early morning melatonin.",
+   "",
+   "**Noon melatonin** is not a timing the book recommends; it advises early morning melatonin for advanced phase.",
+   "**Morning light** is the delayed-phase approach and would push an already early clock earlier.",
+   "That combination of **morning light and evening melatonin** is the delayed phase, depression and shift work regimen, the reverse of this one."
+  ],
+  "whyNotPages": [
+   "439",
+   "",
+   "439",
+   "439",
+   "439"
+  ],
+  "why": "Advanced sleep phase disorder needs the clock shifted **later**, so give early evening bright light and early morning melatonin; delayed sleep phase gets the reverse."
+ },
+ "q10-36": {
+  "pages": "438–439",
+  "whyNot": [
+   "**Zolpidem** is an α1-selective GABA-A Z drug for insomnia, not a circadian agent.",
+   "",
+   "**Modafinil** is a DAT-inhibiting wake promoter for narcolepsy and shift work disorder, not for clock synchronization.",
+   "**Pitolisant** is an H3 antagonist for narcolepsy sleepiness, not a melatonin agent.",
+   "**Ramelteon** is the MT1/MT2 agonist marketed for insomnia; tasimelteon carries the non-24 indication."
+  ],
+  "whyNotPages": [
+   "424",
+   "",
+   "443",
+   "444",
+   "439"
+  ],
+  "why": "Blind people cannot entrain the SCN clock to light, so it free-runs; the melatonin MT1/MT2 agonist **tasimelteon** synchronizes the clock, acting at MT2 to retrain the circadian rhythm."
+ },
+ "q10-37": {
+  "pages": "439",
+  "whyNot": [
+   "",
+   "**5HT2C** is a serotonin receptor, where agomelatine acts as an antagonist, separate from the MT3 site.",
+   "Orexin receptors are **OX1 and OX2**, unrelated to melatonin sites.",
+   "**H3** is a presynaptic histamine autoreceptor, not a melatonin site.",
+   "It is not a **GABA-A subunit**; the book identifies the MT3 site as an enzyme."
+  ],
+  "whyNotPages": [
+   "",
+   "439",
+   "407",
+   "405",
+   "439"
+  ],
+  "why": "Melatonin acts at MT1 and MT2 receptors and also at a third site, 'MT3', which turned out to be the enzyme **NRH-quinone oxidoreductase 2** and is probably not involved in sleep physiology."
+ },
+ "q10-38": {
+  "pages": "440",
+  "whyNot": [
+   "**MAO-B** is the enzyme that metabolizes N-methylhistamine, not caffeine's target.",
+   "**H3 blockade** is pitolisant's wake-promoting mechanism, not caffeine's.",
+   "Caffeine is an adenosine antagonist; **orexin agonism** is not its mechanism.",
+   "**DAT inhibition** is the mechanism proposed for modafinil and armodafinil; caffeine acts indirectly through adenosine receptors.",
+   ""
+  ],
+  "whyNotPages": [
+   "402",
+   "444",
+   "440",
+   "442",
+   ""
+  ],
+  "why": "Caffeine **blocks adenosine receptors**, easing the fatigue signal of accumulated adenosine and restoring dopamine's affinity at D2 receptors that adenosine had dampened, so dopamine action is enhanced."
+ },
+ "q10-39": {
+  "pages": "443",
+  "whyNot": [
+   "**Methylphenidate** is approved for narcolepsy, not for shift work disorder or OSA, where use is off-label.",
+   "**Pitolisant** is approved for narcolepsy sleepiness, not shift work disorder.",
+   "",
+   "**Sodium oxybate** is approved for cataplexy and sleepiness in narcolepsy, not shift work disorder.",
+   "**Caffeine** is a widely used wake promoter but is not described as approved for shift work disorder."
+  ],
+  "whyNotPages": [
+   "441",
+   "444",
+   "",
+   "447",
+   "440"
+  ],
+  "why": "**Modafinil and armodafinil** are approved for narcolepsy, as OSA adjuncts, and for shift work disorder, an indication amphetamine and methylphenidate do not have."
+ },
+ "q10-40": {
+  "pages": "442–443",
+  "whyNot": [
+   "**GABA-B** is the target of sodium oxybate, which promotes sleep rather than wakefulness.",
+   "**Melatonin agonists** affect sleep onset and the circadian clock, not daytime wakefulness.",
+   "Modafinil is not an **orexin agonist**; any orexin release is a secondary, downstream effect of dopamine.",
+   "",
+   "**H3 blockade** is pitolisant's mechanism; modafinil's histamine release is downstream of dopamine."
+  ],
+  "whyNotPages": [
+   "446",
+   "439",
+   "443",
+   "",
+   "444"
+  ],
+  "why": "Modafinil primarily inhibits the **dopamine transporter**, raising tonic dopamine; histamine and orexin release follow downstream, so orexin neurons are not required for its wake-promoting effect."
+ },
+ "q10-41": {
+  "pages": "444",
+  "whyNot": [
+   "**Amphetamine** is a controlled substance with high abuse potential that acts on monoamine transporters, not H3.",
+   "**Solriamfetol** is a norepinephrine-dopamine reuptake inhibitor, not an H3 antagonist.",
+   "**Armodafinil** is a DAT inhibitor with much reduced abuse potential, not an H3 antagonist.",
+   "",
+   "**Sodium oxybate** acts at GABA-B and GHB receptors and is a tightly regulated controlled substance."
+  ],
+  "whyNotPages": [
+   "442",
+   "444",
+   "443",
+   "",
+   "447"
+  ],
+  "why": "**Pitolisant** blocks presynaptic H3 autoreceptors, which disinhibits histamine release and promotes wakefulness in narcolepsy; unlike the stimulants and oxybate, it is neither controlled nor known to be abused."
+ },
+ "q10-42": {
+  "pages": "446",
+  "whyNot": [
+   "**Orexin receptors** are blocked by DORAs for insomnia and are not the sodium oxybate target.",
+   "**Benzodiazepine sites on GABA-A** are how benzodiazepines and Z drugs act, not sodium oxybate.",
+   "",
+   "**D2 receptors** matter for dopamine and adenosine coupling in caffeine's action, not oxybate's.",
+   "**H1 blockade** is the antihistamine hypnotic route, which oxybate does not use."
+  ],
+  "whyNotPages": [
+   "423",
+   "422",
+   "",
+   "440",
+   "425"
+  ],
+  "why": "Sodium oxybate (GHB) is a **GABA-B partial agonist** as well as a GHB-receptor agonist; its GABA-B actions are presumed to improve slow-wave sleep and cataplexy."
+ }
+}

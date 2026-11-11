@@ -1,0 +1,991 @@
+{
+ "q13-01": {
+  "pages": "538",
+  "whyNot": [
+   "Compulsion is not about forming habits; habits are a kind of compulsion, so that ability is not what is lost.",
+   "",
+   "Failing to **stop initiating** actions describes impulsivity, the opposite construct.",
+   "Postponing reward is an impulsivity problem; compulsivity is persisting with actions that bring poor outcomes.",
+   "Compulsions are defined by behavior that persists despite poor results, not by loss of pleasure."
+  ],
+  "whyNotPages": [
+   "538",
+   "",
+   "538",
+   "538",
+   "538"
+  ]
+ },
+ "q13-02": {
+  "pages": "539",
+  "whyNot": [
+   "Desire for the outcome drives **goal-directed** behavior; habits run on stimuli whatever the outcome is worth now.",
+   "Habits are often **adaptive**, saving effort in daily routines, though they can become maladaptive perseveration.",
+   "",
+   "Goal-directed actions are the cognitively demanding ones; habits need minimal conscious awareness.",
+   "Habit control sits in the **dorsal** striatum loop, while the ventral striatum handles reward-driven impulsive acts."
+  ],
+  "whyNotPages": [
+   "539",
+   "539",
+   "",
+   "539",
+   "540"
+  ],
+  "why": "Habits are stimulus–response links stamped in by repetition, so they fire automatically to cues and stay **insensitive to outcome**, unlike goal-directed acts that depend on knowing and wanting the result."
+ },
+ "q13-03": {
+  "pages": "540",
+  "whyNot": [
+   "The dorsal striatum with the OFC forms the **compulsive** habit loop, not the impulsive reward loop.",
+   "The hypothalamus and pituitary are not part of the impulsivity circuit described in this chapter's cortico-striatal loops.",
+   "Cerebellum and pons are not nodes of the impulsive or compulsive cortico-striatal circuits.",
+   "Amygdala and hippocampus are not the loop nodes; the impulsive circuit runs through striatum, thalamus and prefrontal cortex.",
+   ""
+  ],
+  "whyNotPages": [
+   "540",
+   "540",
+   "540",
+   "540",
+   ""
+  ],
+  "why": "The impulsive loop runs ventral striatum to thalamus to VMPFC/ACC and back, driving reward-seeking action. The compulsive habit loop is the separate **dorsal** striatum–thalamus–OFC circuit."
+ },
+ "q13-04": {
+  "pages": "540",
+  "whyNot": [
+   "Raphe to hippocampus is a serotonin pathway, not the dorsal striatal habit loop.",
+   "Locus coeruleus to cortex is a norepinephrine projection, not the cortico-striatal habit circuit.",
+   "VTA to amygdala is not the habit loop; the compulsive circuit is anchored in the **dorsal striatum**.",
+   "",
+   "That is the **impulsive** ventral loop, running ventral striatum to thalamus to VMPFC/ACC."
+  ],
+  "whyNotPages": [
+   "540",
+   "540",
+   "540",
+   "",
+   "540"
+  ],
+  "why": "The compulsive habit loop projects from the dorsal striatum to the thalamus, then to the orbitofrontal cortex, and back to the dorsal striatum; top-down OFC control normally restrains it."
+ },
+ "q13-05": {
+  "pages": "540",
+  "whyNot": [
+   "",
+   "Control does change: repeated use engages neuroadaptations that move the locus of control between loops.",
+   "Control moves within cortico-striatal loops, not out to the cerebellum.",
+   "Opposite direction: the treatment goal is reverse migration from dorsal back to **ventral**, where control began.",
+   "The shift is between ventral and dorsal striatal circuits, not into the hippocampus."
+  ],
+  "whyNotPages": [
+   "",
+   "540",
+   "540",
+   "544",
+   "540"
+  ],
+  "why": "With repetition, neuroplastic changes hand control of drug use from the ventral reward loop to the dorsal habit loop, so an impulsive act eventually becomes a **compulsive** stimulus-driven habit."
+ },
+ "q13-06": {
+  "pages": "542",
+  "whyNot": [
+   "The book calls the theory less applicable to **cannabis** and opioids, which act through other systems as well.",
+   "",
+   "Hallucinogens are not singled out as fitting the dopamine theory; the book highlights stimulants and nicotine.",
+   "Dissociatives are not the drugs the theory fits best; the strongest dopamine-releasing drugs fit better.",
+   "Benzodiazepines are not the best fit; the theory suits drugs with the greatest effect on dopamine release."
+  ],
+  "whyNotPages": [
+   "542",
+   "",
+   "542",
+   "542",
+   "542"
+  ],
+  "why": "The dopamine theory makes mesolimbic dopamine release the final reward pathway; it is an oversimplification that fits drugs with the biggest dopamine effect, **stimulants and nicotine**, best."
+ },
+ "q13-07": {
+  "pages": "543",
+  "whyNot": [
+   "",
+   "Anandamide is the brain's own **marijuana**, acting at cannabinoid receptors.",
+   "GABA is not one of the brain's drug-mimicking reward inputs listed; it is an inhibitory modulator of the pathway.",
+   "Dopamine itself is the brain's own **cocaine and amphetamine**.",
+   "Endorphins are the brain's own **morphine or heroin**."
+  ],
+  "whyNotPages": [
+   "",
+   "543",
+   "543",
+   "543",
+   "543"
+  ],
+  "why": "Natural reward inputs mimic drugs of abuse: endorphins resemble morphine, anandamide resembles marijuana, dopamine resembles cocaine, and **acetylcholine** resembles nicotine at nicotinic receptors."
+ },
+ "q13-08": {
+  "pages": "546",
+  "whyNot": [
+   "Half-life is not the determinant; what matters is how quickly the drug reaches the brain.",
+   "Dose alone does not set the high; the speed of brain entry and route of administration matter.",
+   "Serotonin binding is not what tracks the stimulant high; the self-reported high follows DAT blockade.",
+   "Moderate NET and DAT occupancy in the PFC underlies the **therapeutic** effect in ADHD, not the abuse-related high.",
+   ""
+  ],
+  "whyNotPages": [
+   "544",
+   "544",
+   "546",
+   "544",
+   ""
+  ],
+  "why": "Self-reported high tracks both how fast and how much the DAT is blocked in the mesolimbic circuit. Rapid entry triggers phasic dopamine firing, which is what makes the drug reinforcing."
+ },
+ "q13-09": {
+  "pages": "545",
+  "whyNot": [
+   "Hallucinogens act at 5HT2A receptors; cocaine's added serotonin action is at the **transporter** instead.",
+   "Blocking NMDA receptors is the action of dissociatives like PCP and ketamine, not cocaine.",
+   "Amphetamine, not cocaine, is the one noted for inhibiting **VMAT2** and releasing dopamine.",
+   "",
+   "Cocaine is inactive orally, but amphetamine's difference from it is not about oral activity."
+  ],
+  "whyNotPages": [
+   "568",
+   "569",
+   "441",
+   "",
+   "544"
+  ],
+  "why": "Both drugs inhibit DAT and NET, but cocaine additionally blocks SERT and also acts as a **local anesthetic**, a property Freud exploited."
+ },
+ "q13-10": {
+  "pages": "546",
+  "whyNot": [
+   "Toluene is an **inhalant** found in paint thinner and glue, not the bath salts ingredient.",
+   "MDMA is the prototype **empathogen**, not the usual ingredient of bath salts.",
+   "",
+   "Ketamine is a **dissociative** NMDA antagonist, not a synthetic stimulant bath salt.",
+   "Magnesium sulfate is not the ingredient; the name comes from disguising these stimulants as Epsom salts."
+  ],
+  "whyNotPages": [
+   "547",
+   "569",
+   "",
+   "571",
+   "546"
+  ],
+  "why": "Bath salts are synthetic stimulants, not bathing products; the name is a disguise as Epsom salts. They commonly contain MDPV and may include mephedrone or methylone."
+ },
+ "q13-11": {
+  "pages": "547",
+  "whyNot": [
+   "",
+   "Inhaled substances do **not** show up on drug tests, so detection in urine is not expected.",
+   "Huffing is dangerous in the short term, with sudden death from cardiac arrest, aspiration or suffocation.",
+   "Inhalants are not an ADHD treatment; ADHD stimulants are a different group discussed in the ADHD chapter.",
+   "Inhalants are thought to act as direct dopamine releasers in the nucleus accumbens, not at 5HT2A receptors."
+  ],
+  "whyNotPages": [
+   "",
+   "547",
+   "547",
+   "544",
+   "547"
+  ],
+  "why": "Huffing can kill suddenly through cardiac arrest, aspiration, or suffocation, and the inhaled substances do **not** appear on drug screens, so use can go undetected."
+ },
+ "q13-12": {
+  "pages": "547",
+  "whyNot": [
+   "Serotonin syndrome is not a stage of the stimulant abuse progression shown in the figure.",
+   "",
+   "Reverse tolerance is the earlier addicted stage, when more drug is needed to reach a phasic dopamine high.",
+   "Kindling is not a term used for the stimulant progression; the final stage is labeled differently.",
+   "Tardive dyskinesia is not a stage of stimulant abuse in this progression."
+  ],
+  "whyNotPages": [
+   "547",
+   "",
+   "547",
+   "547",
+   "547"
+  ],
+  "why": "The last stage of stimulant abuse shows long-lasting dopamine depletion and axonal degeneration with enduring cognitive loss, labeled **burn-out** in the progression figure."
+ },
+ "q13-13": {
+  "pages": "548",
+  "whyNot": [
+   "The book singles out **α4β2** for nicotine addiction, not α3β4.",
+   "A muscle-type α1 receptor is not the subtype implicated in smoking addiction in the reward circuit.",
+   "The α7 subtype is linked to **alerting and pro-cognitive** effects, not addiction.",
+   "",
+   "Muscarinic M1 is a different receptor family; nicotine's addictive action is at nicotinic α4β2 receptors."
+  ],
+  "whyNotPages": [
+   "548",
+   "548",
+   "548",
+   "",
+   "548"
+  ],
+  "why": "The α4β2 nicotinic receptors on VTA dopamine neurons release dopamine when nicotine binds, so they are theoretically tied to addiction, whereas α7 relates to alertness and cognition."
+ },
+ "q13-14": {
+  "pages": "549",
+  "whyNot": [
+   "Nicotine acts on VTA neurons; the accumbens is where the released dopamine ends up, not where desensitization acts.",
+   "Cerebellar Purkinje cells are not part of nicotine's reward-circuit mechanism in the VTA.",
+   "",
+   "Hippocampal pyramidal cells are not the site of this disinhibition mechanism.",
+   "Serotonin neurons are not the target; the indirect effect comes from silencing VTA **GABA** interneurons."
+  ],
+  "whyNotPages": [
+   "548",
+   "549",
+   "",
+   "549",
+   "549"
+  ],
+  "why": "Nicotine desensitizes α4β2 receptors on VTA GABA interneurons, reducing inhibitory GABA tone, so the mesolimbic dopamine neurons are **disinhibited** and release more dopamine in the accumbens."
+ },
+ "q13-15": {
+  "pages": "548",
+  "whyNot": [
+   "Receptors upregulate with chronic exposure; they are not permanently internalized.",
+   "Nicotine opens then desensitizes the receptors; craving is not due to blockade.",
+   "Desensitization comes at the end of the cigarette and ends reward; craving starts when it wears off.",
+   "Binding acetylcholine is not what triggers craving; the trigger is receptors returning to the resting state.",
+   ""
+  ],
+  "whyNotPages": [
+   "548",
+   "548",
+   "548",
+   "548",
+   ""
+  ],
+  "why": "Receptors desensitize during a cigarette, then recover to the resting state in about the interval smokers leave between cigarettes. The first sign of that **resensitization** starts craving and withdrawal."
+ },
+ "q13-16": {
+  "pages": "548",
+  "whyNot": [
+   "Chronic intermittent nicotine does change the receptors: their number increases.",
+   "Opposite direction: neurons respond to desensitized receptors by making **more** of them.",
+   "",
+   "Receptors are desensitized by nicotine, not permanently activated.",
+   "Receptors do not convert to α7; α4β2 remains the addiction-relevant subtype."
+  ],
+  "whyNotPages": [
+   "548",
+   "548",
+   "",
+   "548",
+   "548"
+  ],
+  "why": "Neurons compensate for desensitized receptors by upregulating them, but this is futile because nicotine desensitizes them again; the extra receptors **amplify craving** as they resensitize."
+ },
+ "q13-17": {
+  "pages": "551",
+  "whyNot": [
+   "",
+   "A full open state belongs to full agonists like acetylcholine and nicotine.",
+   "Nicotine-like permanent desensitization is not the partial agonist state; it is not desensitized.",
+   "A closed state describes an antagonist, which stabilizes the channel closed without desensitizing it.",
+   "Varenicline clearly alters channel state; it stabilizes the α4β2 channel in an intermediate position."
+  ],
+  "whyNotPages": [
+   "",
+   "551",
+   "551",
+   "551",
+   "551"
+  ],
+  "why": "As an α4β2 partial agonist, varenicline holds the channel in an intermediate, non-desensitized state, opening less often than nicotine but more often than an antagonist, blunting reward while easing withdrawal."
+ },
+ "q13-18": {
+  "pages": "553",
+  "whyNot": [
+   "Bupropion's quit rate is lower than varenicline's, not twice as high.",
+   "Bupropion does help; it supplies a little dopamine to reduce craving.",
+   "Quit rates are not equal; varenicline is the more effective agent.",
+   "",
+   "Ten times higher is far off; varenicline's advantage over bupropion is roughly twofold."
+  ],
+  "whyNotPages": [
+   "553",
+   "553",
+   "553",
+   "",
+   "553"
+  ],
+  "why": "Bupropion, an NDRI, only partly eases craving by releasing a bit of dopamine, so its quit rates are about half of varenicline's and similar to alternative nicotine delivery like patches."
+ },
+ "q13-19": {
+  "pages": "551",
+  "whyNot": [
+   "Half abstinent at a year is far too high for varenicline, which still leaves most smokers relapsing.",
+   "The 2–3% figure is the long-term success rate for smokers overall, not varenicline users.",
+   "90% abstinence is wildly beyond what the book reports for a year out.",
+   "75% is much too high; most varenicline-treated smokers are not abstinent at a year.",
+   ""
+  ],
+  "whyNotPages": [
+   "551",
+   "551",
+   "551",
+   "551",
+   ""
+  ],
+  "why": "Varenicline triples or quadruples quit rates versus placebo, but because tobacco is so addicting, only about 10% of treated smokers remain abstinent a year later."
+ },
+ "q13-20": {
+  "pages": "554",
+  "whyNot": [
+   "The book does not name β3; the alcohol-relevant receptors are those containing **δ** subunits.",
+   "",
+   "A γ-containing receptor is part of the benzodiazepine-sensitive type, not the neurosteroid-sensitive δ type alcohol favors.",
+   "The ρ subunit is not discussed; alcohol's PAM action is at δ-containing receptors.",
+   "α1 receptors are benzodiazepine-sensitive types; alcohol's action is linked to **δ**-containing, benzodiazepine-insensitive receptors."
+  ],
+  "whyNotPages": [
+   "554",
+   "",
+   "554",
+   "554",
+   "554"
+  ],
+  "why": "Alcohol positively modulates postsynaptic GABA-A receptors containing δ subunits. These respond to neuroactive steroids but not to benzodiazepines, unlike the classic α/γ benzodiazepine sites."
+ },
+ "q13-21": {
+  "pages": "556",
+  "whyNot": [
+   "mGlu receptor blockade is the proposed action of **acamprosate**, not naltrexone.",
+   "Aldehyde dehydrogenase is the enzyme inhibited by **disulfiram**, not naltrexone.",
+   "Alcohol's GABA-B effect is to block presynaptic GABA-B, but naltrexone does not target it.",
+   "",
+   "5HT3 antagonism is ondansetron's unapproved action, not naltrexone's."
+  ],
+  "whyNotPages": [
+   "556",
+   "556",
+   "554",
+   "",
+   "556"
+  ],
+  "why": "Alcohol is thought to release endogenous opioids that act at μ receptors and drive dopamine release, so a μ antagonist like naltrexone blunts the euphoria and 'high' of heavy drinking."
+ },
+ "q13-22": {
+  "pages": "556",
+  "whyNot": [
+   "Blocking μ-opioid receptors is **naltrexone's** mechanism, not acamprosate's.",
+   "Acamprosate is a taurine derivative, not a benzodiazepine, though it may mimic alcohol somewhat.",
+   "Blocking aldehyde dehydrogenase is **disulfiram's** action.",
+   "Acamprosate acts on glutamate and GABA systems, not by blocking dopamine D2 receptors.",
+   ""
+  ],
+  "whyNotPages": [
+   "556",
+   "556",
+   "556",
+   "556",
+   ""
+  ],
+  "why": "After chronic alcohol is withdrawn, glutamate is overactive and GABA deficient. Acamprosate seems to block mGluRs (mGlu5, perhaps mGlu2), curbing withdrawal glutamate release like an 'artificial alcohol'."
+ },
+ "q13-23": {
+  "pages": "556",
+  "whyNot": [
+   "",
+   "Enhancing GABA-A is how alcohol and sedative hypnotics act, not disulfiram.",
+   "Disulfiram acts on metabolism, not on absorption of alcohol.",
+   "5HT3 antagonism describes ondansetron, an unapproved alcohol agent.",
+   "Blocking μ receptors is the action of naltrexone or nalmefene, not disulfiram."
+  ],
+  "whyNotPages": [
+   "",
+   "554",
+   "556",
+   "556",
+   "556"
+  ],
+  "why": "Disulfiram irreversibly inhibits aldehyde dehydrogenase, so drinking causes toxic acetaldehyde buildup with flushing, nausea, vomiting and hypotension, conditioning an aversion to alcohol."
+ },
+ "q13-24": {
+  "pages": "556",
+  "whyNot": [
+   "Weekly totals are not how the trials defined it; the definition is a per-day count.",
+   "",
+   "Three drinks per day falls below the trial threshold for men.",
+   "Any drinking is not heavy drinking; the trials counted a specific number of drinks per day.",
+   "Two or more per day is below the book's threshold of five for a man."
+  ],
+  "whyNotPages": [
+   "556",
+   "",
+   "556",
+   "556",
+   "556"
+  ],
+  "why": "The trials counted a heavy drinking day as at least five drinks for a man (four for a woman), and naltrexone was shown to reduce such days."
+ },
+ "q13-25": {
+  "pages": "554",
+  "whyNot": [
+   "Benzodiazepine receptors are not β-only; they also carry α and γ subunits.",
+   "α4/α6 with δ forms the benzodiazepine-**insensitive** type favored by alcohol and neurosteroids.",
+   "",
+   "Glycine receptors are not the benzodiazepine target; they act at GABA-A receptors.",
+   "Benzodiazepines need α and γ subunits, not ρ alone."
+  ],
+  "whyNotPages": [
+   "554",
+   "554",
+   "",
+   "554",
+   "554"
+  ],
+  "why": "Benzodiazepines are positive allosteric modulators at GABA-A receptors containing α1, α2, α3 or α5 together with γ subunits, but not at δ-containing receptors, which alcohol and neurosteroids favor."
+ },
+ "q13-26": {
+  "pages": "559",
+  "whyNot": [
+   "",
+   "NMDA antagonism is the action of PCP and ketamine, not GHB.",
+   "GHB acts at its own receptors and GABA-B, not at the benzodiazepine site of GABA-A.",
+   "μ-opioid receptors are the target of opioids like heroin and morphine, not GHB.",
+   "5HT2A receptors are the hallucinogen target, not GHB's."
+  ],
+  "whyNotPages": [
+   "",
+   "569",
+   "559",
+   "559",
+   "568"
+  ],
+  "why": "GHB is an agonist at its own GHB receptors and at GABA-B receptors; this mechanism underlies both its use for narcolepsy/cataplexy and its abuse as a sedating 'date rape' drug."
+ },
+ "q13-27": {
+  "pages": "559",
+  "whyNot": [
+   "Prodynorphin gives dynorphin, which acts at κ, so this pairs a different peptide with κ.",
+   "",
+   "POMC is right, but κ receptors respond to dynorphin rather than β-endorphin.",
+   "Proenkephalin gives enkephalin, not β-endorphin, though μ is correct.",
+   "Proenkephalin yields enkephalin, which acts at δ receptors, not β-endorphin."
+  ],
+  "whyNotPages": [
+   "559",
+   "",
+   "559",
+   "559",
+   "559"
+  ],
+  "why": "β-endorphin, the brain's own morphine, is cleaved from the precursor POMC and released onto postsynaptic μ-opioid receptors, as part of three parallel opioid systems."
+ },
+ "q13-28": {
+  "pages": "559",
+  "whyNot": [
+   "Sigma is not one of the three opioid receptors tied to the endogenous opioid peptides.",
+   "NMDA is a glutamate receptor, not an opioid receptor.",
+   "",
+   "δ receptors are linked to enkephalin, not dynorphin.",
+   "μ receptors are linked to β-endorphin, not dynorphin."
+  ],
+  "whyNotPages": [
+   "559",
+   "559",
+   "",
+   "559",
+   "559"
+  ],
+  "why": "The three parallel opioid systems pair each peptide with a receptor: β-endorphin with μ, enkephalin with δ, and dynorphin, derived from prodynorphin, with **κ** receptors."
+ },
+ "q13-29": {
+  "pages": "560",
+  "whyNot": [
+   "Withdrawal features autonomic hyperactivity; pupillary constriction is not part of that picture.",
+   "Respiratory depression is an effect of opioid **overdose**, not withdrawal.",
+   "Withdrawal brings tachycardia, not a slowed heart rate.",
+   "",
+   "Sedation and a cooled state fit intoxication; withdrawal is marked by agitation and hyperactivity."
+  ],
+  "whyNotPages": [
+   "560",
+   "560",
+   "560",
+   "",
+   "560"
+  ],
+  "why": "Opioid withdrawal features dysphoria, craving, irritability and autonomic hyperactivity (tachycardia, tremor, sweating); piloerection is especially tied to abrupt 'cold turkey' cessation."
+ },
+ "q13-30": {
+  "pages": "561",
+  "whyNot": [
+   "Not identical: methadone's long half-life makes its withdrawal gentler in intensity but extended.",
+   "It is less, not more, intense than short-acting heroin's.",
+   "Methadone withdrawal does occur, peaking later and lasting 14 days or more.",
+   "It is not shorter; the longer half-life prolongs the course.",
+   ""
+  ],
+  "whyNotPages": [
+   "561",
+   "561",
+   "561",
+   "561",
+   ""
+  ],
+  "why": "Withdrawal intensity and duration follow half-life. Long-acting methadone produces a milder but much more prolonged syndrome, peaking around 72–96 hours, than short-acting heroin or morphine."
+ },
+ "q13-31": {
+  "pages": "560",
+  "whyNot": [
+   "The combination does not alter buprenorphine's half-life.",
+   "Constipation is not the aim; naloxone is added to discourage injection.",
+   "It is an opioid addiction preparation; it does not address alcohol use.",
+   "Naloxone is not absorbed sublingually, so it does not improve absorption.",
+   ""
+  ],
+  "whyNotPages": [
+   "560",
+   "560",
+   "560",
+   "560",
+   ""
+  ],
+  "why": "Naloxone is not absorbed sublingually, so it does nothing when taken as prescribed. If the tablet is injected, it blocks the high and may precipitate withdrawal, preventing **intravenous diversion**."
+ },
+ "q13-32": {
+  "pages": "560",
+  "whyNot": [
+   "Buprenorphine is given sublingually, not intravenously, and injection is what the naloxone discourages.",
+   "No month of abstinence is required; it is used to ease withdrawal after abused opioids are stopped.",
+   "",
+   "Giving a partial agonist during full-agonist intoxication does not match the guidance; mild withdrawal should have begun.",
+   "Methadone is the alternative substitution option; the two are not given together."
+  ],
+  "whyNotPages": [
+   "560",
+   "560",
+   "",
+   "560",
+   "560"
+  ],
+  "why": "Buprenorphine is a partial μ agonist, so it suppresses withdrawal best once mild withdrawal has begun; started too early, it can displace full agonists and precipitate withdrawal."
+ },
+ "q13-33": {
+  "pages": "561",
+  "whyNot": [
+   "",
+   "Euphoria is not what lofexidine reduces; it relieves autonomic signs of withdrawal.",
+   "Lofexidine aids detoxification; it does not reduce craving for months.",
+   "Respiratory depression is an overdose effect reversed by naloxone, not what lofexidine treats.",
+   "Duration is not shortened by an α2 agonist alone; adding naltrexone also shortens it."
+  ],
+  "whyNotPages": [
+   "",
+   "561",
+   "561",
+   "560",
+   "562"
+  ],
+  "why": "Lofexidine, like clonidine, is an α2-adrenergic agonist that dampens autonomic hyperactivity, lowering withdrawal intensity; only adding naltrexone as well shortens the duration."
+ },
+ "q13-34": {
+  "pages": "561",
+  "whyNot": [
+   "Naltrexone does not treat withdrawal pain; it blocks μ receptors and can precipitate withdrawal.",
+   "It is the opposite: a monthly injection removes the daily decision, unlike daily clinic dosing.",
+   "Naltrexone is an antagonist, not an agonist.",
+   "",
+   "Sublingual use describes buprenorphine; naltrexone is given orally or as an injection."
+  ],
+  "whyNotPages": [
+   "560",
+   "561",
+   "561",
+   "",
+   "560"
+  ],
+  "why": "With a monthly injection, therapeutic levels are steady and the patient decides only once every 30 days instead of 30 times, so an impulsive patient cannot easily quit it to relapse."
+ },
+ "q13-35": {
+  "pages": "561",
+  "whyNot": [
+   "40% understates the book's estimate of 60–80% relapse within a month.",
+   "",
+   "Nearly zero is wrong; relapse is common even after supervised residential rehab.",
+   "20% is far below the 60–80% the book cites.",
+   "5–10% is much too low for relapse after residential rehabilitation."
+  ],
+  "whyNotPages": [
+   "561",
+   "",
+   "561",
+   "561",
+   "561"
+  ],
+  "why": "The habit circuit drives return to opioids when cues reappear. Even after 30 to 90 drug-free residential days, some analyses estimate relapse in 60 to 80 percent within a month, climbing to over 90 percent by three months."
+ },
+ "q13-36": {
+  "pages": "563",
+  "whyNot": [
+   "MAO inhibition is an antidepressant mechanism, not how endocannabinoids work.",
+   "",
+   "Endocannabinoids act at cannabinoid receptors, not at GABA-A.",
+   "They are not sodium channel blockers; they signal through CB receptors.",
+   "They are made postsynaptically and act on presynaptic receptors, not postsynaptic NMDA."
+  ],
+  "whyNotPages": [
+   "563",
+   "",
+   "563",
+   "563",
+   "565"
+  ],
+  "why": "Endocannabinoids are made on demand in the postsynaptic membrane and travel **backward** across the synapse to presynaptic CB1 receptors, where they inhibit release of the classic neurotransmitter."
+ },
+ "q13-37": {
+  "pages": "564",
+  "whyNot": [
+   "",
+   "Hepatocytes are not the main CB2 site; CB2 is mostly on immune cells.",
+   "CB1 receptors are the ones on neuron terminals; CB2 is not mainly on dopamine terminals.",
+   "Purkinje cells are not the main CB2 site; CB2 is chiefly peripheral and immune.",
+   "Cortical neurons carry CB1 mostly; CB2 is less widely expressed in brain."
+  ],
+  "whyNotPages": [
+   "",
+   "564",
+   "564",
+   "564",
+   "564"
+  ],
+  "why": "CB1 receptors are abundant at neuron terminals throughout the nervous system, while CB2 receptors are mainly in the periphery on **immune cells**, modulating cell migration and cytokine release."
+ },
+ "q13-38": {
+  "pages": "563",
+  "whyNot": [
+   "THC, not CBD, is the euphoric and psychoactive component.",
+   "CBD is less psychotogenic; higher CBD content lowers hallucination and delusion risk.",
+   "THC is the anxiogenic component; CBD may be anxiolytic.",
+   "CBD is relatively inactive at CB1, so it is not a full agonist.",
+   ""
+  ],
+  "whyNotPages": [
+   "565",
+   "563",
+   "565",
+   "563",
+   ""
+  ],
+  "why": "CBD is not psychoactive, is relatively inactive at CB1, and may be anxiolytic or even antipsychotic, so cannabis with more CBD carries lower risk of hallucinations, delusions, and memory impairment."
+ },
+ "q13-39": {
+  "pages": "567",
+  "whyNot": [
+   "Approval covers two rare, severe epilepsies, not absence epilepsy.",
+   "Febrile seizures are not an approved indication.",
+   "",
+   "Status epilepticus is not an approved indication.",
+   "Juvenile myoclonic epilepsy is not an approved indication."
+  ],
+  "whyNotPages": [
+   "567",
+   "567",
+   "",
+   "567",
+   "567"
+  ],
+  "why": "Purified CBD (Epidiolex) is approved in the US for seizures in Lennox–Gastaut and Dravet syndromes in patients aged 2 and older, and unlike THC products it is not a controlled substance."
+ },
+ "q13-40": {
+  "pages": "563",
+  "whyNot": [
+   "Cocaine use leads to craving, withdrawal and compulsive use, not the 'amotivational' picture.",
+   "Ketamine anesthesia produces dissociation, not a chronic loss of drive.",
+   "LSD flashbacks are spontaneous symptom recurrences, a different phenomenon.",
+   "",
+   "Opioid withdrawal means dysphoria and autonomic hyperactivity, not loss of drive."
+  ],
+  "whyNotPages": [
+   "546",
+   "570",
+   "568",
+   "",
+   "560"
+  ],
+  "why": "Heavy daily cannabis use can produce an 'amotivational syndrome': decreased drive and ambition, short attention span, poor judgment, and deteriorating personal habits."
+ },
+ "q13-41": {
+  "pages": "568",
+  "whyNot": [
+   "D2 antagonists do not reverse hallucinogens; the effect is mediated at 5HT2A.",
+   "NMDA antagonism is the action of dissociatives such as PCP and ketamine.",
+   "SERT reversal is how MDMA releases serotonin, not these hallucinogens.",
+   "",
+   "μ-opioid agonism is the action of opioids, not psychedelics."
+  ],
+  "whyNotPages": [
+   "568",
+   "569",
+   "569",
+   "",
+   "559"
+  ],
+  "why": "Psilocybin, LSD, and mescaline act as agonists at 5HT2A receptors; the supporting clue is that 5HT2A antagonists, but not D2 antagonists, reverse their effects in humans."
+ },
+ "q13-42": {
+  "pages": "568",
+  "whyNot": [
+   "Hallucinogen tolerance is not explained by SERT changes; SERT is MDMA's target.",
+   "Enzyme induction would be a pharmacokinetic change, not the proposed receptor mechanism.",
+   "",
+   "NMDA receptors are the dissociative target, not the cause of hallucinogen tolerance.",
+   "Dopamine depletion is the stimulant 'burn-out' state, not hallucinogen tolerance."
+  ],
+  "whyNotPages": [
+   "569",
+   "568",
+   "",
+   "569",
+   "547"
+  ],
+  "why": "Hallucinogens can produce tolerance after a single dose. The proposed explanation is rapid **desensitization** of the 5HT2A receptors that these drugs activate."
+ },
+ "q13-43": {
+  "pages": "569",
+  "whyNot": [
+   "",
+   "MDMA is an empathogen, not a good model of schizophrenia-like psychosis.",
+   "Psilocybin's resemblance to psychosis is superficial at best.",
+   "LSD, like other hallucinogens, only superficially resembles psychosis.",
+   "Mescaline is a hallucinogen, and its resemblance to psychosis is superficial."
+  ],
+  "whyNotPages": [
+   "",
+   "569",
+   "569",
+   "569",
+   "569"
+  ],
+  "why": "PCP blocks NMDA receptors, a model for schizophrenia's proposed NMDA hypoactivity, and produces a genuinely psychosis-like state, whereas hallucinogens only superficially resemble psychosis."
+ },
+ "q13-44": {
+  "pages": "569",
+  "whyNot": [
+   "Serotonin release by MDMA is not by 5HT2A agonism; 5HT2A is where released serotonin then acts.",
+   "",
+   "MAO-A is not MDMA's mechanism; it works through transporters.",
+   "D2 receptors are not the site; MDMA is selective for serotonin transporters over dopamine ones.",
+   "NMDA receptors are the target of dissociatives, not MDMA."
+  ],
+  "whyNotPages": [
+   "569",
+   "",
+   "569",
+   "569",
+   "569"
+  ],
+  "why": "MDMA competes with serotonin at SERT and is carried into the terminal and into vesicles via VMAT. It displaces serotonin, which then floods out via channel opening and SERT reversal; SSRIs block this."
+ },
+ "q13-45": {
+  "pages": "571",
+  "whyNot": [
+   "Pinpoint pupils are not the described PCP sign; it brings vertical nystagmus.",
+   "Flaccid paralysis is not described; PCP causes catalepsy, ataxia and staggering gait.",
+   "Piloerection is a feature of opioid withdrawal, not PCP intoxication.",
+   "PCP overdose is associated with extremely high temperature, not hypothermia.",
+   ""
+  ],
+  "whyNotPages": [
+   "571",
+   "570",
+   "560",
+   "571",
+   ""
+  ],
+  "why": "PCP intoxication produces a staggering gait and slurred speech and a unique **vertical nystagmus**; higher intoxication brings catatonia, and overdose can bring extreme hyperthermia and rhabdomyolysis."
+ },
+ "q13-46": {
+  "pages": "572",
+  "whyNot": [
+   "Dopamine mediates 'wanting' (anticipation), not 'liking'.",
+   "",
+   "Glutamate is not the mediator named for liking in this reward model.",
+   "Acetylcholine is not the mediator named for liking in this model.",
+   "Serotonin is not the mediator named for liking in this model."
+  ],
+  "whyNotPages": [
+   "572",
+   "",
+   "572",
+   "572",
+   "572"
+  ],
+  "why": "In this model, 'liking' (learning the pleasure of a reward) is an opioid-dependent process, whereas 'wanting' (anticipation) depends on dopamine, and exaggerated wanting underlies impulsivity."
+ },
+ "q13-47": {
+  "pages": "573",
+  "whyNot": [
+   "The method uses an oral antagonist, not an intravenous drug during withdrawal.",
+   "It is dosed around drinking, not yearly.",
+   "Opioid antagonists work poorly during abstinence; they are effective when paired with drinking.",
+   "",
+   "Taking it after bingeing would not prevent the reward; it must be on board before the alcohol."
+  ],
+  "whyNotPages": [
+   "573",
+   "573",
+   "573",
+   "",
+   "573"
+  ],
+  "why": "Taking an oral opioid antagonist about an hour before drinking means alcohol no longer rewards, so repeated pairing extinguishes the conditioned habit; the antagonist works poorly during abstinence."
+ },
+ "q13-48": {
+  "pages": "573",
+  "whyNot": [
+   "Varenicline is a partial agonist, not a full agonist.",
+   "CYP2A6 inhibition is not the mechanism; the point is receptor affinity.",
+   "Nausea is not the described mechanism; smoking simply becomes non-reinforcing.",
+   "It works at the receptor, not by blocking nicotine absorption.",
+   ""
+  ],
+  "whyNotPages": [
+   "551",
+   "573",
+   "573",
+   "573",
+   ""
+  ],
+  "why": "Varenicline binds α4β2 receptors more tightly than nicotine, so smoking over it is not reinforcing. Repeated unrewarded smoking extinguishes the habit, unlike smoking over a patch or bupropion."
+ },
+ "q13-49": {
+  "pages": "574",
+  "whyNot": [
+   "NMDA blockade is how ketamine works, not MDMA.",
+   "Dopamine burnout is a stimulant abuse stage, not a therapeutic mechanism.",
+   "",
+   "Desensitization of 5HT2A underlies hallucinogen tolerance, not MDMA therapy.",
+   "Sedation is not the idea; it is a clear, empathic state in which painful memories can be explored."
+  ],
+  "whyNotPages": [
+   "574",
+   "547",
+   "",
+   "568",
+   "574"
+  ],
+  "why": "MDMA's empathic state lets patients re-experience traumatic memories safely with a therapist, which hypothetically weakens or blocks their reconsolidation so they lose emotional force."
+ },
+ "q13-50": {
+  "pages": "575",
+  "whyNot": [
+   "",
+   "Phentermine is not mentioned as an approved BED medicine.",
+   "Topiramate is used off-label with limited efficacy, not approved.",
+   "Fluoxetine is among the off-label antidepressants, not approved for BED.",
+   "Naltrexone is used off-label with limited efficacy, not approved."
+  ],
+  "whyNotPages": [
+   "",
+   "575",
+   "575",
+   "575",
+   "575"
+  ],
+  "why": "Lisdexamfetamine, a prodrug of D-amphetamine, is the only approved BED drug; it may help by promoting striatal neuroplasticity rather than by suppressing appetite."
+ },
+ "q13-51": {
+  "pages": "575",
+  "whyNot": [
+   "50% understates the figure; about 80% have a comorbid mood, anxiety, substance, or ADHD diagnosis.",
+   "100% is excessive; the reported figure is about 80%.",
+   "10% is far too low for this comorbidity.",
+   "",
+   "25% understates the high rate of comorbidity in BED."
+  ],
+  "whyNotPages": [
+   "575",
+   "575",
+   "575",
+   "",
+   "575"
+  ],
+  "why": "Most BED patients seek care for a comorbid condition, with about 80% meeting criteria for a mood, anxiety, substance, or ADHD disorder, so clinicians should ask about binge eating in those patients."
+ },
+ "q13-52": {
+  "pages": "575",
+  "whyNot": [
+   "Lithium is not linked to gambling in the book.",
+   "Anticholinergics are not linked to gambling in the book.",
+   "SSRIs are not named; the link is to drugs that stimulate mesolimbic dopamine.",
+   "Benzodiazepines are not named as triggers of gambling.",
+   ""
+  ],
+  "whyNotPages": [
+   "575",
+   "575",
+   "575",
+   "575",
+   ""
+  ],
+  "why": "Gambling has appeared after dopamine agonists and partial agonists, which suggests that driving the mesolimbic reward pathway can trigger gambling in susceptible patients."
+ },
+ "q13-53": {
+  "pages": "577",
+  "whyNot": [
+   "",
+   "SSRIs only **suppress** the circuitry; symptoms return after stopping them.",
+   "Clomipramine is a serotonergic second-line drug that works like SSRIs, with no lasting benefit.",
+   "Benzodiazepine augmentation is a pharmacologic option, and benefits do not persist after stopping.",
+   "Augmentation with a serotonin–dopamine blocker is pharmacologic suppression, not a lasting fix."
+  ],
+  "whyNotPages": [
+   "",
+   "577",
+   "577",
+   "577",
+   "577"
+  ],
+  "why": "Exposure and response prevention may actually reverse abnormal circuitry: symptoms keep improving after stopping it, but not after stopping SSRIs, which seem merely to suppress it."
+ },
+ "q13-54": {
+  "pages": "577",
+  "whyNot": [
+   "Body dysmorphic disorder may respond somewhat to SSRIs.",
+   "Hoarding may respond somewhat to SSRIs.",
+   "",
+   "Compulsive shopping may respond somewhat to SSRIs.",
+   "Skin picking may respond somewhat to SSRIs."
+  ],
+  "whyNotPages": [
+   "577",
+   "577",
+   "",
+   "577",
+   "577"
+  ],
+  "why": "OCD-related conditions such as hoarding, compulsive shopping, skin picking and body dysmorphic disorder may respond somewhat to SSRIs, but trichotillomania is the exception, not especially responsive."
+ },
+ "q13-55": {
+  "pages": "577",
+  "whyNot": [
+   "Psychopathic violence is the **least** common type.",
+   "",
+   "Predatory is not one of the book's categories of violence.",
+   "Psychotic violence accounts for roughly a fifth of violent acts, fewer than impulsive.",
+   "Instrumental is not one of the book's three categories; psychotic, impulsive, or psychopathic."
+  ],
+  "whyNotPages": [
+   "577",
+   "",
+   "577",
+   "578",
+   "577"
+  ],
+  "why": "Violence is categorized as impulsive, psychotic, or psychopathic. Impulsive acts are the most frequent, about 63%, reflecting weak top-down inhibition against bottom-up drives, especially in institutions."
+ }
+}

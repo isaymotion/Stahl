@@ -1,0 +1,537 @@
+{
+ "q9-01": {
+  "pages": "380",
+  "whyNot": [
+   "That is pain felt from a body part that no longer exists, after amputation, not pain from an ordinary touch.",
+   "",
+   "Analgesia means reduced pain sensation while normal touch is left intact, the opposite of touch causing pain.",
+   "Local anesthesia **blocks** all sensation, both painful and innocuous, rather than making harmless touch hurt.",
+   "Nociception is the neural process of detecting noxious stimuli; a bedsheet is not noxious, so this is not the term."
+  ],
+  "whyNotPages": [
+   "384",
+   "",
+   "380",
+   "380",
+   "380"
+  ],
+  "why": "**Allodynia** means pain from a stimulus that is normally harmless, such as bedsheets on the skin, because sensitized pain circuits misread innocuous touch as noxious."
+ },
+ "q9-02": {
+  "pages": "380",
+  "whyNot": [
+   "The book calls an **artificial** cutoff such as 1 month inappropriate for defining chronicity.",
+   "The book rejects fixed time thresholds; a 6-month cutoff is equally **arbitrary** for this definition.",
+   "",
+   "Chronic pain can be peripheral or central in origin; neuropathic pain is only one type, not the definition.",
+   "Many chronic pain states start **centrally** with no peripheral cause, such as fibromyalgia."
+  ],
+  "whyNotPages": [
+   "380",
+   "380",
+   "",
+   "380",
+   "379"
+  ],
+  "why": "Chronic pain is defined by **persistence beyond what would be expected** for tissue healing, not by a fixed calendar cutoff, which the book calls artificial."
+ },
+ "q9-03": {
+  "pages": "381",
+  "whyNot": [
+   "The dorsal horn holds the **second**-order neurons, inside the spinal cord, not the primary afferent cell bodies.",
+   "The ventral horn is not part of the nociceptive afferent pathway described; primary afferent cell bodies sit outside the spinal cord.",
+   "The thalamus is a higher relay on the way to the cortex, not where primary afferent cell bodies lie.",
+   "The periaqueductal gray is a site of origin for **descending** inhibition, not primary afferent cell bodies.",
+   ""
+  ],
+  "whyNotPages": [
+   "382",
+   "381",
+   "382",
+   "390",
+   ""
+  ],
+  "why": "Primary afferent neurons are peripheral, not central, cells: their cell bodies sit in the **dorsal root ganglion** beside the spinal column, outside the CNS."
+ },
+ "q9-04": {
+  "pages": "381",
+  "whyNot": [
+   "Projection neurons are dorsal horn cells that relay signals up the cord; they are not peripheral sensory fibers.",
+   "Aα fibers are not among the three primary afferent types the book describes (Aβ, Aδ, C).",
+   "Aδ fibers fall **in between**, sensing noxious mechanical and sub-noxious thermal stimuli, so they are not exclusively noxious.",
+   "",
+   "Aβ fibers detect light touch, vibration and hair movement, responding only to **non-noxious** stimuli."
+  ],
+  "whyNotPages": [
+   "382",
+   "381",
+   "381",
+   "",
+   "381"
+  ],
+  "why": "**C fibers** end in bare nerve endings that fire only for noxious mechanical, heat or chemical stimuli, making them the true nociceptors among afferent types."
+ },
+ "q9-05": {
+  "pages": "381",
+  "whyNot": [
+   "",
+   "NK1 receptors respond to **substance P** in the dorsal horn, not to capsaicin on peripheral terminals.",
+   "μ-opioid receptors respond to endorphins and opioid drugs to inhibit transmission, not to cause burning.",
+   "Stretch-activated channels make afferents **mechanosensitive**, not capsaicin-sensitive.",
+   "5HT3 receptors are excitatory serotonin receptors in the dorsal horn, not the capsaicin target."
+  ],
+  "whyNotPages": [
+   "",
+   "383",
+   "390",
+   "381",
+   "390"
+  ],
+  "why": "Afferents expressing **VR1** channels are activated by capsaicin and by noxious heat, which explains why both produce the same burning sensation."
+ },
+ "q9-06": {
+  "pages": "381",
+  "whyNot": [
+   "N-type calcium channels govern presynaptic transmitter release and are the α2δ ligand target, not lidocaine's.",
+   "",
+   "NMDA receptors are glutamate receptors in the dorsal horn, not the target of local anesthetic nerve block.",
+   "GABA-A receptors are inhibitory dorsal horn receptors; lidocaine does not act there to stop afferent impulses.",
+   "α2 receptors mediate **noradrenergic** descending inhibition, which clonidine mimics, not lidocaine's action."
+  ],
+  "whyNotPages": [
+   "395",
+   "",
+   "383",
+   "383",
+   "390"
+  ],
+  "why": "Lidocaine blocks **voltage-sensitive sodium channels** on primary afferents, preventing the action potential from travelling to the spinal cord, so impulse flow stops."
+ },
+ "q9-07": {
+  "pages": "382",
+  "whyNot": [
+   "",
+   "Spinobulbar tracts reach the brainstem and limbic regions, conveying the **emotional/motivational** component rather than location.",
+   "The dorsal column is not the pathway the book assigns to precise location and intensity of pain.",
+   "The descending raphe pathway carries **inhibition** downward to the dorsal horn; it is not an ascending pathway.",
+   "The corticospinal tract is a motor pathway and is not part of the pain pathways described."
+  ],
+  "whyNotPages": [
+   "",
+   "382",
+   "382",
+   "390",
+   "382"
+  ],
+  "why": "The spinothalamic tract relays through the thalamus to the somatosensory cortex, the **sensory/discriminatory** route that tells where a stimulus is and how intense."
+ },
+ "q9-08": {
+  "pages": "383",
+  "whyNot": [
+   "Cholecystokinin acts at CCK-A and CCK-B receptors, not NK receptors.",
+   "CGRP acts at its own CGRP receptors, not NK receptors.",
+   "Somatostatin acts at its own somatostatin receptor, not NK receptors.",
+   "Glycine is an inhibitory transmitter with its own receptor, not an NK ligand.",
+   ""
+  ],
+  "whyNotPages": [
+   "383",
+   "383",
+   "383",
+   "383",
+   ""
+  ],
+  "why": "The NK receptor family (NK1, NK2, NK3) is activated by the tachykinin **substance P** among the dorsal horn transmitters."
+ },
+ "q9-09": {
+  "pages": "384",
+  "whyNot": [
+   "Suprasegmental sensitization involves the thalamus and cortex, not the dorsal horn changes seen after amputation.",
+   "Phantom pain is classed as a **central** sensitization example, not simple nociceptive pain from tissue damage.",
+   "Peripheral sensitization is a separate nerve-level process; phantom pain is the book's example of dorsal horn plasticity.",
+   "",
+   "Placebo analgesia involves endogenous opioid release, which is unrelated to phantom limb pain."
+  ],
+  "whyNotPages": [
+   "384",
+   "382",
+   "382",
+   "",
+   "393"
+  ],
+  "why": "After amputation, constant firing of the pain pathway causes use-dependent plastic changes in the **dorsal horn**, the hallmark of segmental central sensitization."
+ },
+ "q9-10": {
+  "pages": "384",
+  "whyNot": [
+   "Demyelination is not given as the hypothesized cause of fibromyalgia in the book.",
+   "The book describes no pathology in muscles or joints for fibromyalgia; the problem is **central** processing.",
+   "",
+   "Fibromyalgia is not attributed to opioid deficiency; opiates are not even proven effective for it.",
+   "Segmental sensitization is the dorsal horn type seen with **peripheral** injury, not fibromyalgia."
+  ],
+  "whyNotPages": [
+   "387",
+   "387",
+   "",
+   "390",
+   "384"
+  ]
+ },
+ "q9-11": {
+  "pages": "384",
+  "whyNot": [
+   "",
+   "Gating refers to **closing the pain gate**, where nearby innocuous stimulation reduces pain, not an exaggerated response.",
+   "Renewal is not a pain-processing term the book uses; the term for amplified responses is **wind-up**.",
+   "Desensitization is not what happens; constant pain input causes **amplified** responses, not reduced ones.",
+   "Analgesia means reduced pain sensation, the opposite of the exaggerated response described."
+  ],
+  "whyNotPages": [
+   "",
+   "384",
+   "384",
+   "384",
+   "380"
+  ],
+  "why": "Constant firing of the dorsal horn pain pathway causes exaggerated or prolonged responses to noxious input, termed **wind-up**, a feature of segmental central sensitization."
+ },
+ "q9-12": {
+  "pages": "384",
+  "whyNot": [
+   "NSAIDs reduce input from primary afferents peripherally, which is a drug effect and not what the gate theory addresses.",
+   "",
+   "Opioids sparing touch is explained by Aβ fibers lacking **μ receptors**, not by the gate theory.",
+   "The gate theory says nothing about SSRIs; their inconsistent pain effect reflects serotonin's dual actions.",
+   "Chronicity is explained by central sensitization, not by the gate theory."
+  ],
+  "whyNotPages": [
+   "382",
+   "",
+   "390",
+   "390",
+   "384"
+  ],
+  "why": "Stimulating the area near an injury with acupuncture, vibration or rubbing can **close the pain gate**, so innocuous input reduces perceived pain from the injury."
+ },
+ "q9-13": {
+  "pages": "387",
+  "whyNot": [
+   "The book states fibromyalgia has tenderness without **structural pathology** in joints, so imaging is not diagnostic.",
+   "Fibromyalgia has no identifiable pathology, so inflammatory markers are not the basis for diagnosis.",
+   "No pathology is identifiable in the muscles, so biopsy is not how it is diagnosed.",
+   "",
+   "Nerve conduction studies are not part of the diagnostic approach; the diagnosis rests on symptoms and pain distribution."
+  ],
+  "whyNotPages": [
+   "387",
+   "387",
+   "387",
+   "",
+   "387"
+  ],
+  "why": "With no known pathology in muscles or joints, fibromyalgia is diagnosed clinically by counting painful body areas (**WPI**) together with associated symptom severity."
+ },
+ "q9-14": {
+  "pages": "389",
+  "whyNot": [
+   "The thalamus is linked to pain transmission and to sleep problems, not to concentration difficulty.",
+   "The spinal cord is linked to physical fatigue, not to cognitive symptoms.",
+   "",
+   "The amygdala is linked to depressed mood and anxiety, not to concentration.",
+   "The hypothalamus is linked to sleep and appetite disturbance, not cognition."
+  ],
+  "whyNotPages": [
+   "389",
+   "389",
+   "",
+   "389",
+   "389"
+  ],
+  "why": "Problems concentrating, lack of interest and mental fatigue (**fibro-fog**) are matched to the dorsolateral prefrontal cortex, the hypothesized malfunctioning circuit for executive function."
+ },
+ "q9-15": {
+  "pages": "389",
+  "whyNot": [
+   "Figure data show gray-matter loss in the thalamus in chronic pain, so it is part of the list.",
+   "The DLPFC is among the regions with reported gray-matter loss, so it is not the exception.",
+   "Temporal cortex gray-matter loss is reported in chronic pain, so it is included.",
+   "",
+   "'None of the above' is wrong because one listed region, the **hippocampus**, is not among the chronic pain regions."
+  ],
+  "whyNotPages": [
+   "389",
+   "389",
+   "389",
+   "",
+   "390"
+  ]
+ },
+ "q9-16": {
+  "pages": "390",
+  "whyNot": [
+   "Blocking VSSCs is how **local anesthetics** work; opioids act at μ-opioid receptors.",
+   "Opioids act centrally at spinal and periaqueductal gray μ receptors, so peripheral-only action is not the explanation.",
+   "",
+   "Touch is carried by **Aβ fibers**; C fibers carry noxious input.",
+   "μ receptors occur on spinal afferents and the periaqueductal gray, not only the cortex."
+  ],
+  "whyNotPages": [
+   "381",
+   "390",
+   "",
+   "381",
+   "390"
+  ],
+  "why": "Aβ fibers carry light touch and lack μ-opioid receptors, so opioids dampen pain signaling while leaving normal sensation intact."
+ },
+ "q9-17": {
+  "pages": "390",
+  "whyNot": [
+   "",
+   "β1 adrenoceptors are not the receptors the book names for descending inhibition; inhibition acts via **α2**.",
+   "5HT3 receptors are excitatory **serotonin** receptors that facilitate, not noradrenergic inhibition.",
+   "α1 receptors are not cited in descending pain inhibition; the inhibitory receptor is α2.",
+   "D2 receptors are dopamine receptors, unrelated to descending noradrenergic pain inhibition."
+  ],
+  "whyNotPages": [
+   "",
+   "390",
+   "390",
+   "390",
+   "390"
+  ],
+  "why": "Descending norepinephrine neurons from the locus coeruleus release NE onto inhibitory **α2 adrenoceptors** on afferents, which is why clonidine can relieve pain."
+ },
+ "q9-18": {
+  "pages": "390",
+  "whyNot": [
+   "The book gives no blood-brain barrier explanation; SSRIs reach the brain and raise **serotonin** there.",
+   "SSRIs raise serotonin levels and are not opioid antagonists.",
+   "Serotonin does act in the spinal cord, both **inhibiting** and facilitating pain transmission.",
+   "",
+   "SSRIs act on the serotonin transporter; SNRIs add the NET effect, which is the reason SNRIs work better."
+  ],
+  "whyNotPages": [
+   "390",
+   "390",
+   "390",
+   "",
+   "393"
+  ],
+  "why": "Serotonin inhibits pain via 5HT1B/D but facilitates it via 5HT3, so SSRIs are inconsistent; SNRIs add **norepinephrine** and are proven for pain."
+ },
+ "q9-19": {
+  "pages": "390",
+  "whyNot": [
+   "The locus coeruleus is the origin of the descending **norepinephrine** pathway.",
+   "The substantia nigra is not named as a source of descending pain pathways.",
+   "The dorsal root ganglion holds primary afferent cell bodies, not descending serotonin neurons.",
+   "The ventral tegmental area is not described as a descending pain pathway origin.",
+   ""
+  ],
+  "whyNotPages": [
+   "390",
+   "390",
+   "381",
+   "390",
+   ""
+  ],
+  "why": "The descending spinal serotonin pathway begins in the **nucleus raphe magnus** of the rostroventromedial medulla, along with other caudal raphe nuclei."
+ },
+ "q9-20": {
+  "pages": "393",
+  "whyNot": [
+   "Aβ fibers carry non-noxious touch; overactivity of them is not the hypothesis offered for painful symptoms.",
+   "",
+   "Excess descending inhibition would **reduce** pain perception, the opposite of the hypothesis.",
+   "The book does not propose opioid excess; descending opioid release normally reduces pain.",
+   "The hypothesis involves normal input that is misperceived, not peripheral nerve damage."
+  ],
+  "whyNotPages": [
+   "381",
+   "",
+   "393",
+   "393",
+   "393"
+  ],
+  "why": "If descending inhibition is deficient, normally ignored bodily signals from muscles, joints or gut are no longer masked, so they are **perceived as pain**."
+ },
+ "q9-21": {
+  "pages": "393",
+  "whyNot": [
+   "Duloxetine is an SNRI that boosts monoamines; it is not the antagonist used to reverse placebo analgesia.",
+   "Clonidine is an α2 **agonist** that mimics NE inhibition, not an opioid antagonist.",
+   "Pregabalin is an α2δ ligand acting on calcium channels, not an opioid antagonist.",
+   "",
+   "Lidocaine blocks sodium channels in peripheral nerves, and has no role in reversing a placebo response."
+  ],
+  "whyNotPages": [
+   "393",
+   "390",
+   "395",
+   "",
+   "381"
+  ],
+  "why": "Reversal of placebo analgesia by the μ-opioid antagonist **naloxone** implies endogenous opioid release from descending inhibitory neurons."
+ },
+ "q9-22": {
+  "pages": "390",
+  "whyNot": [
+   "The book says opiates are no better than SNRIs or α2δ ligands for neuropathic pain and unproven in fibromyalgia.",
+   "No book statement says opiates work only when combined with SSRIs; SSRIs are themselves inconsistent for pain.",
+   "Opiates are **no more** effective than SNRIs for chronic neuropathic pain, so not more effective.",
+   "The book names SNRIs and α2δ ligands as proven agents; opiates are not described as approved.",
+   ""
+  ],
+  "whyNotPages": [
+   "390",
+   "390",
+   "390",
+   "399",
+   ""
+  ],
+  "why": "Opiates work no better than SNRIs or α2δ ligands in chronic neuropathic pain, and in fibromyalgia they have **not been proven** effective."
+ },
+ "q9-23": {
+  "pages": "398",
+  "whyNot": [
+   "",
+   "Voltage-sensitive calcium channels are voltage-gated, not ligand-gated, and α2δ ligands bind their α2δ subunit.",
+   "These channels are on neurons in the pain pathway, not restricted to muscle.",
+   "The channels are **presynaptic**, controlling neurotransmitter release, so postsynaptic-only is wrong.",
+   "α2δ ligands bind poorly to the closed conformation, so normal neurotransmission is spared."
+  ],
+  "whyNotPages": [
+   "",
+   "398",
+   "395",
+   "395",
+   "399"
+  ],
+  "why": "Gabapentin and pregabalin bind best to the **open** channel conformation, giving use-dependent block of the most active, centrally sensitized channels."
+ },
+ "q9-24": {
+  "pages": "395",
+  "whyNot": [
+   "R-type is not among the channel types named for release in pain pathways; N and P/Q are cited.",
+   "",
+   "Ryanodine receptors are intracellular calcium stores and are not cited as the release mechanism.",
+   "T-type channels are not named for release; the book cites N-type and P/Q-type channels.",
+   "L-type channels are not named for this release mechanism; N and P/Q are."
+  ],
+  "whyNotPages": [
+   "395",
+   "",
+   "395",
+   "395",
+   "395"
+  ],
+  "why": "Release of substance P, CGRP and glutamate needs presynaptic depolarization opening **N-type and P/Q-type** voltage-sensitive calcium channels."
+ },
+ "q9-25": {
+  "pages": "397",
+  "whyNot": [
+   "Peripheral sensitization is a separate process; this question concerns central changes from excessive channel opening.",
+   "Excessive transmitter release causes pain, the **opposite** of analgesia.",
+   "",
+   "Muscle weakness is not a consequence the book describes for excessive calcium channel activity.",
+   "Loss of sensation is not described; excessive release causes more pain, not less."
+  ],
+  "whyNotPages": [
+   "382",
+   "397",
+   "",
+   "397",
+   "397"
+  ]
+ },
+ "q9-26": {
+  "pages": "400",
+  "whyNot": [
+   "",
+   "Depression is better targeted by **SNRIs**; the α2δ benefit lies in anxiety and sleep.",
+   "Fibro-fog is improved by SNRIs through dopamine in the DLPFC, not by α2δ ligands.",
+   "Fatigue is addressed by SNRIs, sometimes with augmenting agents, not by α2δ ligands.",
+   "The book does not list psychosis as a fibromyalgia symptom helped by α2δ ligands."
+  ],
+  "whyNotPages": [
+   "",
+   "400",
+   "400",
+   "400",
+   "400"
+  ],
+  "why": "Beyond pain, α2δ ligands may ease **anxiety** and improve slow-wave sleep in fibromyalgia, while SNRIs cover mood, fatigue and cognitive symptoms."
+ },
+ "q9-27": {
+  "pages": "400",
+  "whyNot": [
+   "Cholinesterase inhibition is not how SNRIs affect cognition in the book's explanation.",
+   "",
+   "D2 antagonism is not the mechanism; SNRIs act by blocking reuptake.",
+   "SNRIs are not described as increasing GABA for fibro-fog.",
+   "DAT blockade is not how SNRIs raise DLPFC dopamine; there, **NET** clears dopamine."
+  ],
+  "whyNotPages": [
+   "400",
+   "",
+   "400",
+   "400",
+   "400"
+  ],
+  "why": "In the prefrontal cortex dopamine is cleared by the norepinephrine transporter, so blocking **NET** with an SNRI raises DLPFC dopamine and may lift fibro-fog."
+ },
+ "q9-28": {
+  "pages": "400",
+  "whyNot": [
+   "Naloxone is an opioid antagonist used to reverse placebo analgesia, not a fibromyalgia treatment.",
+   "Donepezil is not listed among second-line fibromyalgia pain options.",
+   "",
+   "Lithium is not mentioned as a fibromyalgia pain treatment.",
+   "Haloperidol is not listed among fibromyalgia pain options."
+  ],
+  "whyNotPages": [
+   "393",
+   "400",
+   "",
+   "400",
+   "400"
+  ]
+ },
+ "q9-29": {
+  "pages": "400",
+  "whyNot": [
+   "The book describes GHB as second-line or for resistant cases, not a first-line fibromyalgia therapy.",
+   "The book allows expert use in **heroic** cases, so never is too absolute.",
+   "Opioids are not required; they are unproven in fibromyalgia, and the caution concerns abuse.",
+   "",
+   "It enhances **slow-wave sleep**, so the rationale is sleep disturbance, not daytime fatigue."
+  ],
+  "whyNotPages": [
+   "400",
+   "400",
+   "390",
+   "",
+   "400"
+  ]
+ },
+ "q9-30": {
+  "pages": "387",
+  "whyNot": [
+   "Opiates are no better than SNRIs or α2δ ligands for chronic neuropathic pain, and NSAIDs act peripherally.",
+   "Stimulants and MAOIs are not the shared pain treatments named across this spectrum.",
+   "Antipsychotics and lithium are not the shared pain treatments named across the spectrum.",
+   "SSRIs are inconsistent for pain, and benzodiazepines are not named as shared pain therapy.",
+   ""
+  ],
+  "whyNotPages": [
+   "390",
+   "387",
+   "387",
+   "390",
+   ""
+  ],
+  "why": "Pain is treated as the same symptom wherever it occurs along the spectrum from mood disorders to neuropathic pain, using **SNRIs** and α2δ ligands."
+ }
+}

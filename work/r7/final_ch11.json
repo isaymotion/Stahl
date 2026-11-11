@@ -1,0 +1,895 @@
+{
+ "q11-01": {
+  "pages": "449",
+  "whyNot": [
+   "The **ventromedial** prefrontal cortex is tied to comorbid conduct, oppositional and mood or anxiety symptoms, not to sustaining attention.",
+   "",
+   "The **orbitofrontal** loop is linked to impulsivity such as blurting out, not to trouble finishing tasks.",
+   "The **dACC** handles selective attention (focusing, careless mistakes), not sustaining effort over a task.",
+   "The supplementary motor area is linked to motor **hyperactivity**, not to difficulty sustaining attention."
+  ],
+  "whyNotPages": [
+   "453",
+   "",
+   "452",
+   "450",
+   "454"
+  ],
+  "why": "Trouble sustaining attention and solving problems reflects inefficient processing in the **DLPFC**, which the n-back test activates and which underlies executive dysfunction across many disorders."
+ },
+ "q11-02": {
+  "pages": "450",
+  "whyNot": [
+   "Sustained attention and the DLPFC are probed by the **n-back** test, not by the Stroop task.",
+   "Impulsivity maps to the orbitofrontal cortex, and a color-naming Stroop task does not measure it.",
+   "",
+   "Hyperactivity is modulated by the prefrontal motor cortex loop; Stroop tests **selective attention**, not motor activity.",
+   "Mood instability is a comorbid symptom tied to the VMPFC, and the Stroop task does not probe it."
+  ],
+  "whyNotPages": [
+   "451",
+   "452",
+   "",
+   "452",
+   "453"
+  ],
+  "why": "The Stroop task, naming the ink color instead of reading the word, demands **selective attention** and should activate the **dACC**; ADHD patients may under-recruit it or recruit it only with great effort."
+ },
+ "q11-03": {
+  "pages": "452",
+  "whyNot": [
+   "The **DLPFC** relates to sustained attention and problem solving, not to blurting out and interrupting.",
+   "The **cerebellum** is not part of the prefrontal loop the book uses for impulsivity, which runs through the orbitofrontal cortex.",
+   "The thalamus is only one stop in the loop; its prefrontal hub for impulsivity is the **orbitofrontal** cortex.",
+   "The **hippocampus** is not a region the book assigns to impulsive symptoms of ADHD; the orbitofrontal cortex is.",
+   ""
+  ],
+  "whyNotPages": [
+   "450",
+   "452",
+   "452",
+   "452",
+   ""
+  ],
+  "why": "Impulsive symptoms such as blurting things out, not waiting a turn and interrupting arise from a cortico-striato-thalamo-cortical loop centered on the **orbitofrontal cortex**."
+ },
+ "q11-04": {
+  "pages": "452",
+  "whyNot": [
+   "The book routes the motor loop through the **putamen** (lateral striatum), not through a caudate-only pathway.",
+   "The hypothalamus is not part of this cortico-striato-thalamo-cortical loop; the striatal stop is the **putamen**.",
+   "The amygdala is not in this circuit; it runs from prefrontal motor cortex to **putamen** to thalamus and back.",
+   "",
+   "The nucleus accumbens is a reward center where phasic DA reinforces learning, not the relay for motor hyperactivity."
+  ],
+  "whyNotPages": [
+   "452",
+   "452",
+   "452",
+   "",
+   "455"
+  ],
+  "why": "Motor activity is modulated by a loop passing from prefrontal motor cortex through the **putamen** (lateral striatum) and thalamus, then back again."
+ },
+ "q11-05": {
+  "pages": "453",
+  "whyNot": [
+   "",
+   "The occipital cortex is not a prefrontal region, and the book ties oppositional comorbidity to the **VMPFC** instead.",
+   "The **dACC** is linked to selective attention problems such as careless mistakes, not to tantrums or defiance.",
+   "The **DLPFC** governs sustained attention and problem solving, not temper tantrums and aggression.",
+   "The supplementary motor area is linked to motor **hyperactivity**, not to oppositional behavior."
+  ],
+  "whyNotPages": [
+   "",
+   "453",
+   "450",
+   "450",
+   "454"
+  ],
+  "why": "Inadequate tuning of the **ventromedial prefrontal cortex** is hypothesized to produce comorbid conduct, oppositional and mood or anxiety symptoms such as tantrums, argumentativeness and aggression."
+ },
+ "q11-06": {
+  "pages": "451",
+  "whyNot": [
+   "Naming the ink color of a word is the **Stroop** task, which tests selective attention, not the n-back.",
+   "",
+   "Pressing a button for the number on screen is the **0-back** version, the easiest level.",
+   "Delayed list recall is not the n-back as described; it asks for a number seen one step earlier.",
+   "Withholding a response to a target is not the n-back design, which asks for the **previous** number."
+  ],
+  "whyNotPages": [
+   "451",
+   "",
+   "451",
+   "451",
+   "451"
+  ],
+  "why": "In the 0-back the participant reports the number on screen; in the **1-back** the button must match the number seen one step earlier, and a higher n makes the test harder."
+ },
+ "q11-07": {
+  "pages": "454–455",
+  "whyNot": [
+   "",
+   "Receptors of the **α1** type are less sensitive and are recruited only when NE is too high, which impairs working memory.",
+   "**D1** receptors respond to dopamine rather than norepinephrine.",
+   "**β1** receptors, like α1, are the less sensitive receptors recruited when NE is excessive, harming working memory.",
+   "The α2C subtype is densest in striatum with few in the PFC; the prefrontal benefit comes from postsynaptic **α2A**."
+  ],
+  "whyNotPages": [
+   "",
+   "455",
+   "455",
+   "455",
+   "481"
+  ],
+  "why": "Low to moderate NE preferentially engages the most sensitive postsynaptic **α2A** receptors, strengthening prefrontal signals; too much NE spills onto less sensitive α1 and β1 receptors and impairs function."
+ },
+ "q11-08": {
+  "pages": "455",
+  "whyNot": [
+   "D4 is not among the prefrontal dopamine receptors the book ranks; its sensitivity order is D3, then D2, then D1.",
+   "**D2** is the moderately sensitive receptor, stimulated after D3 but before D1.",
+   "**D3** is the most sensitive receptor, recruited first when DA release is low.",
+   "D5 is not part of the sensitivity ranking the book gives for prefrontal dopamine receptors.",
+   ""
+  ],
+  "whyNotPages": [
+   "455",
+   "455",
+   "455",
+   "455",
+   ""
+  ],
+  "why": "D1 is the least sensitive DA receptor and predominates postsynaptically in the PFC, so low DA leaves it under-stimulated; tuning requires DA high enough to reach an **optimal D1** level."
+ },
+ "q11-09": {
+  "pages": "455",
+  "whyNot": [
+   "**D3** is the most sensitive dopamine receptor and not a norepinephrine target, so it cannot explain the stress effect.",
+   "Imidazoline receptors are clonidine targets tied to sedation and hypotension, not to stress-related working-memory loss.",
+   "**α2A** is recruited at modest NE and improves prefrontal function; the harm comes from other receptors.",
+   "",
+   "5HT1A is a serotonin receptor, and the book attributes NE-driven working-memory loss to α1 and β1 receptors."
+  ],
+  "whyNotPages": [
+   "455",
+   "482",
+   "455",
+   "",
+   "455"
+  ],
+  "why": "Too much NE, as in stress, anxiety, substance abuse or mania, swamps the synapse and also stimulates the less sensitive **α1 and β1** receptors, which impairs working memory."
+ },
+ "q11-10": {
+  "pages": "455",
+  "whyNot": [
+   "Phasic firing is normal; DA neurons burst when salient inputs arrive, so it is present in healthy people.",
+   "A steady baseline tone in the PFC is **tonic** firing, the opposite of phasic bursts.",
+   "",
+   "Phasic firing is a property of dopamine neurons, not a purely noradrenergic process.",
+   "Phasic bursts recruit **all** three DA receptor subtypes, not D3 alone."
+  ],
+  "whyNotPages": [
+   "455",
+   "454",
+   "",
+   "455",
+   "455"
+  ]
+ },
+ "q11-11": {
+  "pages": "457",
+  "whyNot": [
+   "",
+   "Blocking NMDA receptors is not how the book explains α2A signal strengthening, which runs through Gi, cAMP and HCN channels.",
+   "Opening chloride channels is not the mechanism; α2A works through cAMP and HCN channel **closure**.",
+   "NE does not change HCN channel expression; it closes the existing channels by lowering cAMP.",
+   "A Gs-driven cAMP rise that opens HCN channels describes **D1** signaling, which leaks the signal."
+  ],
+  "whyNotPages": [
+   "",
+   "457",
+   "457",
+   "461",
+   "461"
+  ],
+  "why": "α2A receptors couple to **Gi**, which lowers cAMP and closes HCN channels, so the incoming signal is not shunted out of the spine and survives to strengthen network connectivity."
+ },
+ "q11-12": {
+  "pages": "457",
+  "whyNot": [
+   "D1 acts through Gs-linked cAMP and HCN channels, not by directly depolarizing via sodium channels.",
+   "",
+   "Lowering cAMP and closing HCN channels is the **α2A**/NE action, the opposite of D1.",
+   "D1 is Gs-linked and **raises** cAMP, so it clearly does affect cAMP.",
+   "Postsynaptic D1 receptors predominate in the prefrontal cortex, so D1 does not act only **presynaptically**."
+  ],
+  "whyNotPages": [
+   "457",
+   "",
+   "457",
+   "457",
+   "456"
+  ],
+  "why": "D1 receptors are Gs-linked, so dopamine raises cAMP, which opens HCN channels and lowers membrane resistance. Moderate D1 stimulation reduces noise, but excessive stimulation lets the signal leak away."
+ },
+ "q11-13": {
+  "pages": "457",
+  "whyNot": [
+   "Phasic bursts describe how dopamine neurons fire, not what open HCN channels do to a spine's input.",
+   "Nothing in the HCN mechanism sends signals back to the locus coeruleus, which is the source of NE input.",
+   "Amplification happens when HCN channels are **closed**, as with α2A stimulation.",
+   "",
+   "The signal is not unchanged; an open channel lowers membrane resistance and the input is lost."
+  ],
+  "whyNotPages": [
+   "455",
+   "462",
+   "457",
+   "",
+   "457"
+  ],
+  "why": "Open HCN channels lower membrane resistance, so incoming signals are **shunted out** of the spine and lost, whereas closed channels let the signal survive and travel on."
+ },
+ "q11-14": {
+  "pages": "462",
+  "whyNot": [
+   "Increased signal with reduced noise is the **optimal** tuned state, not the low NE plus low DA state.",
+   "Low NE does reduce the signal, but low DA **increases** rather than reduces noise.",
+   "",
+   "Output is not unchanged; the mistuned neuron yields a poor signal-to-noise ratio causing inattention or hyperactivity.",
+   "Low NE **decreases** the signal rather than increasing it, so this choice has both effects backward."
+  ],
+  "whyNotPages": [
+   "462",
+   "462",
+   "",
+   "462",
+   "462"
+  ],
+  "why": "Low NE means too little α2A stimulation, so the signal weakens; low DA means too little D1 stimulation, so noise rises. Together they give the poor signal-to-noise ratio of untreated ADHD."
+ },
+ "q11-15": {
+  "pages": "463",
+  "whyNot": [
+   "25% understates it; the book places ADHD heritability at roughly three-quarters.",
+   "95% overstates it; genetic causation is strong but complex and multifactorial, about 75%.",
+   "10% is far too low for a disorder with such a large genetic contribution.",
+   "40% is too low; the book gives about 75% for ADHD.",
+   ""
+  ],
+  "whyNotPages": [
+   "463",
+   "463",
+   "463",
+   "463",
+   ""
+  ],
+  "why": "Genetic influence on ADHD is among the largest in psychiatry, roughly **75%**, though many genes contribute and causation is complex, with delayed prefrontal maturation as a unifying idea."
+ },
+ "q11-16": {
+  "pages": "463",
+  "whyNot": [
+   "Age 18 is not the cutoff; the criteria demand a childhood onset, by 12.",
+   "Age 5 is too early; DSM-5 allows onset up to 12, and preschool inattention is hard to recognize.",
+   "",
+   "Age 7 was the older **DSM-IV** cutoff, which DSM-5 extended.",
+   "Age 16 is not a cutoff the book cites; the current limit is **12**."
+  ],
+  "whyNotPages": [
+   "463",
+   "463",
+   "",
+   "463",
+   "463"
+  ],
+  "why": "Onset before age **12** is the DSM-5 requirement, loosened from age 7 in DSM-IV; experts still debate whether late-onset adult ADHD should be excluded."
+ },
+ "q11-17": {
+  "pages": "463",
+  "whyNot": [
+   "",
+   "Motor hyperactivity declines notably by adolescence and early adulthood.",
+   "Climbing and running are overt hyperactive behaviors, which fade rather than persist.",
+   "Impulsivity also **declines** by adolescence and early adulthood.",
+   "Leaving one's seat is another hyperactive symptom that wanes with age."
+  ],
+  "whyNotPages": [
+   "",
+   "463",
+   "452",
+   "463",
+   "452"
+  ]
+ },
+ "q11-18": {
+  "pages": "463",
+  "whyNot": [
+   "About half is the figure for **children and adolescents** diagnosed and treated, not adults.",
+   "One-third is not the book's number, and the stem asks about adults; about half of children are treated.",
+   "Three-quarters is the heritability estimate, not the fraction of adults diagnosed and treated.",
+   "",
+   "Nearly all is wrong; adult ADHD is largely unrecognized and untreated."
+  ],
+  "whyNotPages": [
+   "463",
+   "463",
+   "463",
+   "",
+   "463"
+  ],
+  "why": "About half of children and adolescents are diagnosed and treated, but fewer than **1 in 5** adults, since retrospective diagnosis of onset before 12 is hard and symptoms often go untreated."
+ },
+ "q11-19": {
+  "pages": "466",
+  "whyNot": [
+   "In adults ADHD is often an afterthought, addressed once the substance, mood and anxiety problems are managed.",
+   "Nicotine dependence is addressed eventually, after cognitive symptoms are under control, not first.",
+   "Giving a stimulant to someone actively abusing drugs is poorly advised; a tonic NET or α2A agent is preferred.",
+   "Anxiety disorders are treated after substance abuse in this scheme, since continued use blocks progress.",
+   ""
+  ],
+  "whyNotPages": [
+   "466",
+   "466",
+   "468",
+   "466",
+   ""
+  ],
+  "why": "In complex cases little progress is possible while the patient keeps abusing alcohol or stimulants, so **substance abuse** is usually stabilized first, with ADHD fine-tuned afterward."
+ },
+ "q11-20": {
+  "pages": "466–467",
+  "whyNot": [
+   "The rate is similar to that of schizophrenia, not half of it.",
+   "",
+   "Smoking is more common than in the general population, not the same, perhaps because nicotine eases untreated ADHD symptoms.",
+   "Ten times overshoots; the book gives about **double** the US rate.",
+   "Half the general rate is the opposite direction; smoking is twice as frequent."
+  ],
+  "whyNotPages": [
+   "467",
+   "",
+   "467",
+   "467",
+   "467"
+  ],
+  "why": "Adults and adolescents with ADHD smoke about **twice** as often as the general US population, similar to patients with schizophrenia, perhaps because nicotine releases dopamine and boosts arousal."
+ },
+ "q11-21": {
+  "pages": "468",
+  "whyNot": [
+   "Blocking D2 receptors is how tics would be treated, not why a stimulant worsens them.",
+   "Excess cortical NE is not offered as the reason; the conflict is a DA mismatch between motor striatum and cortex.",
+   "Low striatal DA is backwards; tics represent hypothetically **excess** DA in the motor striatum.",
+   "",
+   "α2A overstimulation is not cited; tics worsen because stimulants add to already high motor-striatal DA."
+  ],
+  "whyNotPages": [
+   "468",
+   "468",
+   "468",
+   "",
+   "468"
+  ],
+  "why": "Tics reflect hypothetically excessive DA activity in the motor striatum, while ADHD reflects deficient cortical DA; a stimulant that fixes the cortex can push striatal DA higher and worsen tics."
+ },
+ "q11-22": {
+  "pages": "469–470",
+  "whyNot": [
+   "Inhibiting VMAT2 is an amphetamine property; methylphenidate has no action at VMAT2.",
+   "DAT reversal occurs with high-dose **amphetamine**, not with methylphenidate.",
+   "Competitive pseudosubstrate action is amphetamine's mode; methylphenidate binds a distinct, **allosteric** site.",
+   "Displacing DA from vesicles is amphetamine's action after it is carried into the neuron; methylphenidate never enters.",
+   ""
+  ],
+  "whyNotPages": [
+   "469",
+   "472",
+   "472",
+   "472",
+   ""
+  ],
+  "why": "Methylphenidate binds DAT and NET at a site distinct from the monoamine site, so it stops the pumps without being transported inside or touching VMAT2, unlike amphetamine."
+ },
+ "q11-23": {
+  "pages": "470",
+  "whyNot": [
+   "",
+   "Both isomers bind NET and DAT; the **D**-isomer is simply much more potent.",
+   "Potency is not equal; the D-isomer far exceeds L at both transporters.",
+   "The racemate is active mainly through its D-isomer, and D-methylphenidate is also sold alone.",
+   "The **L**-isomer is the weaker one at both NET and DAT."
+  ],
+  "whyNotPages": [
+   "",
+   "470",
+   "470",
+   "470",
+   "470"
+  ],
+  "why": "Both enantiomers bind NET and DAT, but **D-methylphenidate** is much more potent than L at both, which is why D-methylphenidate is also marketed on its own."
+ },
+ "q11-24": {
+  "pages": "470",
+  "whyNot": [
+   "Daytrana is a patch worn in the morning, with a single peak at 7 to 10 hours.",
+   "",
+   "Focalin is immediate-release D-methylphenidate, with an early peak and a second dose at lunch.",
+   "Ritalin LA is a morning capsule with two strong peaks, early and at about 4 hours.",
+   "Concerta is a morning tablet with a small early peak and a 12-hour duration."
+  ],
+  "whyNotPages": [
+   "470",
+   "",
+   "470",
+   "470",
+   "470"
+  ],
+  "why": "**Jornay PM** is taken in the evening, with initial absorption delayed about 10 hours and a single peak near 14 hours, so drug levels are already present as the patient wakes."
+ },
+ "q11-25": {
+  "pages": "470",
+  "whyNot": [
+   "Quillivant XR is a suspension with a single peak at about 5 hours and a 12-hour duration.",
+   "Concerta has a small early peak and lasts 12 hours, not two strong peaks.",
+   "",
+   "Cotempla XR-ODT is listed as a 12-hour once-daily tablet, with no two-peak profile.",
+   "Immediate-release Ritalin gives one early peak lasting 3 to 4 hours."
+  ],
+  "whyNotPages": [
+   "470",
+   "470",
+   "",
+   "470",
+   "470"
+  ],
+  "why": "**Ritalin LA** is a capsule built for two strong peaks, one early and one near 4 hours, covering a 6 to 8 hour duration, whereas the other products listed have a single peak or a different profile."
+ },
+ "q11-26": {
+  "pages": "472",
+  "whyNot": [
+   "",
+   "Direct D1 stimulation is a postsynaptic effect; amphetamine's flood comes from vesicle displacement and DAT reversal.",
+   "Allosteric DAT blockade is **methylphenidate's** mechanism, not amphetamine's.",
+   "COMT inhibition is not part of the amphetamine mechanism the book describes.",
+   "Blocking α2 autoreceptors is not how amphetamine floods DA; it enters terminals and displaces DA."
+  ],
+  "whyNotPages": [
+   "",
+   "472",
+   "469",
+   "472",
+   "472"
+  ],
+  "why": "At abuse doses amphetamine is carried into the terminal and then into vesicles via VMAT2, displacing DA; rising cytoplasmic DA reverses DATs and opens channels, dumping DA into the synapse."
+ },
+ "q11-27": {
+  "pages": "472–473",
+  "whyNot": [
+   "Only DAT action is wrong; mixed salts also act on NET, with relatively **more** NET action than D-amphetamine.",
+   "",
+   "Less NET action reverses it; the L-isomer is about as potent as D at NET.",
+   "VMAT effects remain; both D,L and D amphetamine are competitive inhibitors at VMAT.",
+   "Only NET action is wrong; both preparations still act more on DAT than on NET."
+  ],
+  "whyNotPages": [
+   "472",
+   "",
+   "472",
+   "473",
+   "473"
+  ],
+  "why": "The L-isomer is about as potent as D at NET but weaker at DAT, so mixed D,L salts add relative NET action versus D-amphetamine alone, though DAT action still exceeds NET action."
+ },
+ "q11-28": {
+  "pages": "473",
+  "whyNot": [
+   "It is amphetamine-based and linked to lysine, so it is not a **methylphenidate** prodrug.",
+   "Transdermal delivery describes a methylphenidate patch; lisdexamfetamine is an oral capsule.",
+   "",
+   "It is a prodrug needing cleavage, not a direct α2A agonist; those are guanfacine and clonidine.",
+   "Racemic D,L salts are a different product class; lisdexamfetamine contains only the **D**-isomer."
+  ],
+  "whyNotPages": [
+   "475",
+   "475",
+   "",
+   "482",
+   "473"
+  ],
+  "why": "Lisdexamfetamine is D-amphetamine linked to lysine; it is inactive until cleaved in the stomach and is then absorbed slowly, giving the gradual delivery of a slow-dose stimulant."
+ },
+ "q11-29": {
+  "pages": "475",
+  "whyNot": [
+   "Adderall XR is listed at 8 to 12 hours.",
+   "Dexedrine capsules are listed at 6 to 8 hours.",
+   "Evekeo is an immediate-release tablet lasting about 6 hours.",
+   "",
+   "Zenzedi is an immediate-release tablet lasting 4 to 5 hours."
+  ],
+  "whyNotPages": [
+   "475",
+   "475",
+   "475",
+   "",
+   "475"
+  ],
+  "why": "**Mydayis** is an extended-release mixed amphetamine salt capsule listed at up to 16 hours, the longest duration in the tables, and is approved from age 13 upward."
+ },
+ "q11-30": {
+  "pages": "474",
+  "whyNot": [
+   "Occupancy of 20 to 30% falls below the likely 50 to 60% threshold, so benefit would not begin.",
+   "Complete blockade is not required; sudden, complete DAT blockade is the catastrophic, abuse-linked pattern.",
+   "80 to 90% overshoots the threshold; rapid, high occupancy raises abuse risk rather than being needed.",
+   "5 to 10% is far too little occupancy to reach the therapeutic threshold.",
+   ""
+  ],
+  "whyNotPages": [
+   "474",
+   "476",
+   "476",
+   "474",
+   ""
+  ],
+  "why": "ADHD benefit begins only once DAT occupancy rises above a critical threshold, probably around **50 to 60%**, and stops as soon as occupancy falls back below it, much like hypnotic onset and offset."
+ },
+ "q11-31": {
+  "pages": "473",
+  "whyNot": [
+   "Hallucinations are not linked to continuous DAT engagement; the book ties it to delayed antidepressant effects.",
+   "Immediate ADHD benefit comes from crossing an occupancy **threshold**, not from weeks of continuous engagement.",
+   "Rapid tolerance is not discussed; the weeks-long consequence is delayed downstream molecular change.",
+   "Immediate euphoria arises from fast, high occupancy, not slow, continuous engagement.",
+   ""
+  ],
+  "whyNotPages": [
+   "473",
+   "473",
+   "473",
+   "476",
+   ""
+  ],
+  "why": "Antidepressant effects of DAT or NET engagement need round-the-clock occupancy for weeks to trigger downstream events like neurotrophic factor production; the immediate DA rise is not antidepressant."
+ },
+ "q11-32": {
+  "pages": "475",
+  "whyNot": [
+   "**Rebound** is the opposite problem: levels drop too early in the evening, bringing hyperactivity and insomnia.",
+   "Too short an action causes late-afternoon and evening symptoms, not excess focus with sleeplessness.",
+   "",
+   "Delayed onset produces **morning** symptoms, not evening insomnia.",
+   "The model explains insomnia by DAT occupancy staying above threshold too long, not by NET occupancy."
+  ],
+  "whyNotPages": [
+   "475",
+   "475",
+   "",
+   "475",
+   "477"
+  ],
+  "why": "If DAT blockade stays above the therapeutic threshold too long into the evening, benefit continues but late-day side effects, notably **insomnia**, appear; the dose should drop below threshold by bedtime."
+ },
+ "q11-33": {
+  "pages": "475",
+  "whyNot": [
+   "",
+   "Sensitization is not the term the book uses for falling evening levels; it names this pattern rebound.",
+   "Tachyphylaxis is not the book's term here; the evening pattern of early level decline is rebound.",
+   "Withdrawal psychosis is not described; the book calls evening hyperactivity and insomnia from falling levels rebound.",
+   "Tolerance would mean a shrinking effect over time, while this scenario is about levels falling too early in the day."
+  ],
+  "whyNotPages": [
+   "",
+   "475",
+   "475",
+   "475",
+   "475"
+  ],
+  "why": "**Rebound** occurs when evening serum levels fall too early after the day's dose, so DAT occupancy drops below threshold and the patient becomes hyperactive and cannot sleep."
+ },
+ "q11-34": {
+  "pages": "476",
+  "whyNot": [
+   "Swallowed IR drug reaches the brain more slowly than snorted, injected or smoked drug.",
+   "Transdermal delivery is a slow-dose route giving gradual, steady levels, the opposite of fastest entry.",
+   "Oral extended-release is built for gradual, sustained delivery, not rapid entry.",
+   "",
+   "Intranasal is faster than oral but slower than intravenous and smoking."
+  ],
+  "whyNotPages": [
+   "476",
+   "476",
+   "479",
+   "",
+   "476"
+  ],
+  "why": "Brain entry speed rises from oral to intranasal to intravenous to **smoked**, and the quicker and fuller the DAT blockade, the greater the reinforcement and abuse liability."
+ },
+ "q11-35": {
+  "pages": "476",
+  "whyNot": [
+   "The mechanism still involves NET and DAT, not serotonin; stimulants here are norepinephrine and dopamine reuptake blockers.",
+   "",
+   "Slow-dose preparations are absorbed orally; their lower abuse potential comes from delivery speed.",
+   "Slow-dose stimulants block transporters rather than D2 receptors; accumbens D2 signaling is simply not driven up.",
+   "They do bind DAT, but not quickly or extensively enough in the accumbens to raise phasic signaling."
+  ],
+  "whyNotPages": [
+   "469",
+   "",
+   "476",
+   "476",
+   "476"
+  ]
+ },
+ "q11-36": {
+  "pages": "478",
+  "whyNot": [
+   "Lisdexamfetamine is a prodrug absorbed slowly and counts among the slow-dose stimulants.",
+   "",
+   "Transdermal methylphenidate is a **slow-dose** formulation.",
+   "Extended-release D-methylphenidate is listed as slow-dose.",
+   "OROS methylphenidate is a slow-dose product with gradually rising levels."
+  ],
+  "whyNotPages": [
+   "476",
+   "",
+   "476",
+   "476",
+   "476"
+  ],
+  "why": "Immediate-release oral stimulants, like intravenous, smoked or snorted ones, produce a rapid rise in NE and DA and count as pulsatile, while extended-release forms and the prodrug are slow-dose."
+ },
+ "q11-37": {
+  "pages": "479",
+  "whyNot": [
+   "",
+   "Brief high peaks are **pulsatile** delivery, linked to abuse and euphoria rather than therapeutic benefit.",
+   "Maximal phasic DA release is not the goal; the aim is mainly tonic firing with only judicious phasic increase.",
+   "DAT-only effects at high doses ignore NET; the best use targets both transporters rather than raising the dose.",
+   "Rapid, complete DAT blockade is the catastrophic pattern associated with abuse."
+  ],
+  "whyNotPages": [
+   "",
+   "479",
+   "478",
+   "479",
+   "476"
+  ],
+  "why": "The ideal is slow onset, robust but sub-saturating NET and DAT occupancy, and a long duration, giving hours of ADHD relief without euphoria."
+ },
+ "q11-38": {
+  "pages": "480",
+  "whyNot": [
+   "D1 agonism is not atomoxetine's action; it is a NET inhibitor that indirectly lets DA act on D1.",
+   "MAO-B inhibition is not part of atomoxetine's action in the book.",
+   "Atomoxetine does not release DA from vesicles; it blocks reuptake.",
+   "DATs are scarce in the prefrontal cortex, so DAT blockade is not how DA rises there.",
+   ""
+  ],
+  "whyNotPages": [
+   "480",
+   "480",
+   "480",
+   "480",
+   ""
+  ],
+  "why": "In the prefrontal cortex DATs are scarce, so NETs inactivate much of the DA as well as NE; blocking NETs with atomoxetine therefore raises both NE and DA there."
+ },
+ "q11-39": {
+  "pages": "480",
+  "whyNot": [
+   "D2 blockade is an antipsychotic-type action and plays no role here; atomoxetine works at NET.",
+   "Being a prodrug is not the book's reason; the explanation is regional, few NETs in the accumbens.",
+   "",
+   "It does reach the brain, raising prefrontal NE and DA; the low abuse potential is explained by the accumbens.",
+   "α2A agonism characterizes guanfacine and clonidine, not atomoxetine, which is a NET inhibitor."
+  ],
+  "whyNotPages": [
+   "480",
+   "481",
+   "",
+   "481",
+   "482"
+  ],
+  "why": "The nucleus accumbens has few NE neurons and NETs, so NET inhibition raises neither NE nor DA there; without that reward-center effect, atomoxetine is thought to lack reinforcing or addictive potential."
+ },
+ "q11-40": {
+  "pages": "480",
+  "whyNot": [
+   "NRIs are not always inferior; for stimulant-naive patients and after longer treatment they may do as well.",
+   "Atomoxetine is approved for both children and adults.",
+   "Plasma-level dependence is typical of stimulants; NRIs give round-the-clock relief.",
+   "",
+   "Larger short-term effect sizes belong to stimulants; NRIs are generally smaller in short-term trials."
+  ],
+  "whyNotPages": [
+   "481",
+   "480",
+   "480",
+   "",
+   "480"
+  ]
+ },
+ "q11-41": {
+  "pages": "480",
+  "whyNot": [
+   "Bupropion is a weak NRI and weak DAT inhibitor (NDRI), not the well-investigated approved agent.",
+   "Reboxetine is listed as an NRI among NET inhibitors, but the book does not describe it as approved for ADHD.",
+   "Desipramine is a TCA with notable NRI action that has been tried in ADHD, but it is not the approved agent.",
+   "",
+   "Nortriptyline is likewise a TCA with NRI action used with varying success, not an approved ADHD drug."
+  ],
+  "whyNotPages": [
+   "480",
+   "481",
+   "480",
+   "",
+   "480"
+  ],
+  "why": "Several agents with NRI properties (bupropion, desipramine, nortriptyline) have been tried in ADHD with varying success, but only **atomoxetine** is well investigated and approved."
+ },
+ "q11-42": {
+  "pages": "482",
+  "whyNot": [
+   "Guanfacine is not more sedating; it is about 10 times weaker than clonidine at causing sedation.",
+   "Imidazoline binding is a **clonidine** property, which guanfacine lacks.",
+   "",
+   "Guanfacine is an agonist at α2A, not a blocker of those receptors.",
+   "Only the controlled-release guanfacine is approved for ADHD, not an immediate-release form."
+  ],
+  "whyNotPages": [
+   "482",
+   "482",
+   "",
+   "482",
+   "482"
+  ]
+ },
+ "q11-43": {
+  "pages": "481",
+  "whyNot": [
+   "",
+   "β1 is a beta-adrenergic receptor recruited when NE is excessive, not an α2 subtype.",
+   "α2A is the dominant prefrontal subtype for NE's beneficial effects, not the thalamic sedative one.",
+   "α2C receptors are densest in striatum, not thalamus.",
+   "α1D is an α1 subtype that opposes α2 actions at high NE, not the thalamic sedation receptor."
+  ],
+  "whyNotPages": [
+   "",
+   "455",
+   "481",
+   "481",
+   "481"
+  ],
+  "why": "**α2B** receptors are concentrated in the thalamus and may mediate the sedating actions of NE, which helps explain the sedation seen with less selective α2 agonists."
+ },
+ "q11-44": {
+  "pages": "482",
+  "whyNot": [
+   "Working-memory gains come from α2A stimulation in the PFC, not from imidazoline receptors.",
+   "",
+   "Tic exacerbation is not attributed to imidazoline binding; clonidine is used off-label for Tourette syndrome.",
+   "Weight gain is not attributed to imidazoline receptor binding in the book.",
+   "Abuse potential is absent for these agents, which lack action at postsynaptic DA receptors."
+  ],
+  "whyNotPages": [
+   "482",
+   "",
+   "482",
+   "482",
+   "483"
+  ],
+  "why": "Clonidine, unlike guanfacine, also binds imidazoline receptors, which are thought to account for part of its sedating and blood-pressure-lowering effects."
+ },
+ "q11-45": {
+  "pages": "484",
+  "whyNot": [
+   "Accumbens DA is not the issue; the stimulant already optimized DA and reduced the noise.",
+   "D2 blockade is not guanfacine's mechanism; it stimulates postsynaptic α2A receptors.",
+   "The stimulant did not raise NE too much; NE stays very low in the VMPFC.",
+   "Lowering serotonin is not the rationale; the target is the NE signal via α2A.",
+   ""
+  ],
+  "whyNotPages": [
+   "484",
+   "482",
+   "484",
+   "484",
+   ""
+  ],
+  "why": "The stimulant fixes DA and reduces noise but leaves very low NE in the VMPFC, so the signal stays weak; guanfacine ER stimulates α2A receptors to restore it and may help oppositional behavior."
+ },
+ "q11-46": {
+  "pages": "482",
+  "whyNot": [
+   "Neither is a **controlled substance**: acting at α2 receptors rather than DA receptors, they carry no abuse potential.",
+   "",
+   "Both act at α2 receptors, not mainly DA receptors.",
+   "Both are used off-label for **Tourette** syndrome, among other conditions.",
+   "Only controlled-release clonidine is approved for ADHD; clonidine otherwise treats hypertension."
+  ],
+  "whyNotPages": [
+   "483",
+   "",
+   "483",
+   "482",
+   "482"
+  ]
+ },
+ "q11-47": {
+  "pages": "485",
+  "whyNot": [
+   "H3 antagonism is a wake-promoting mechanism from the sleep chapter, not viloxazine's.",
+   "An α2A agonist describes guanfacine or clonidine, while viloxazine is a **NET** inhibitor.",
+   "A DAT inhibitor once approved for appetite suppression describes **mazindol**, a different agent in testing.",
+   "",
+   "A triple reuptake inhibitor describes **centanafadine**, not viloxazine."
+  ],
+  "whyNotPages": [
+   "440",
+   "482",
+   "485",
+   "",
+   "485"
+  ],
+  "why": "Viloxazine ER is a selective NRI, once marketed abroad for depression, with added 5HT2B and 5HT2C actions; mazindol (DAT) and centanafadine (triple) are other future agents."
+ },
+ "q11-48": {
+  "pages": "469",
+  "whyNot": [
+   "ADHD can be treated alongside anxiety; the book recommends augmenting rather than withholding treatment.",
+   "Cocaine-like DAT blockade carries abuse liability, and stimulants risk worsening anxiety.",
+   "A benzodiazepine-stimulant combination is not suggested; the book favors tonic activators over stimulants here.",
+   "Immediate-release amphetamine is a pulsatile stimulant that may worsen anxiety and is increasingly avoided.",
+   ""
+  ],
+  "whyNotPages": [
+   "468",
+   "468",
+   "469",
+   "468",
+   ""
+  ],
+  "why": "Stimulants may worsen anxiety, so the book suggests augmenting anxiolytic or antidepressant therapy with a long-acting NET inhibitor or α2A agonist, which are tonic activators without abuse potential."
+ },
+ "q11-49": {
+  "pages": "468",
+  "whyNot": [
+   "Blocking prefrontal D1 receptors is backwards; the rationale is to **stimulate** them.",
+   "α2A activation is guanfacine's role, not the serotonin-dopamine antagonist's.",
+   "",
+   "Raising accumbens DA contradicts the aim of reducing limbic DA activity at **D2** receptors.",
+   "NET inhibition belongs to atomoxetine, not to the serotonin-dopamine antagonist's rationale."
+  ],
+  "whyNotPages": [
+   "468",
+   "482",
+   "",
+   "468",
+   "480"
+  ]
+ },
+ "q11-50": {
+  "pages": "467",
+  "whyNot": [
+   "",
+   "Phasic-only firing is not described; the progression is from high to depleted levels.",
+   "Levels do not normalize on their own; poor signal persists until treatment optimizes them.",
+   "The book describes no switch to serotonin; NE and DA simply become depleted.",
+   "Rising further indefinitely is wrong; levels plummet through depletion over time."
+  ],
+  "whyNotPages": [
+   "",
+   "467",
+   "467",
+   "467",
+   "467"
+  ],
+  "why": "With chronic stress, NE and DA first surge, worsening signal and noise, then plummet from depletion with no relief in signal output; treatment aims to raise both to optimal."
+ }
+}

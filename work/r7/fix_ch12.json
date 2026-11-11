@@ -1,0 +1,14 @@
+{
+ "q12-03": {"whyNot": {"4": "One option is the exception: **Lewy bodies** mark the synucleinopathies (DLB, PDD), not the three AD hallmarks."}},
+ "q12-23": {"whyNot": {"3": "Microglial activation is not how tau harms synapses here; the damage comes from tau losing its hold on **microtubules**."}, "whyNotPages": {"3": "502"}},
+ "q12-43": {"why": "Pimavanserin, a selective **5HT2A antagonist**, is approved for Parkinson's disease psychosis; the book reports positive trials in all-cause dementia psychosis, but the FDA later declined both that and the narrower Alzheimer indication (see the update note)."},
+ "q12-53": {
+  "pages": "499",
+  "why": "From the app's post-book update notes: lecanemab and donanemab carry a boxed warning for **ARIA**, brain edema or microbleeds on MRI, with higher risk in APOE4 carriers. The book itself lists anti-amyloid antibodies only as a disease-modifying approach.",
+  "whyNot": {"1": "Blood-count risk (**neutropenia**) is the clozapine warning, not one attached to anti-amyloid antibodies.",
+             "2": "**QT prolongation** is the concern with citalopram and D2 blockers in elderly dementia patients, not these antibodies.",
+             "3": "**Serotonin syndrome** comes from combining MAOIs with serotonin reuptake blockers, not from antibodies.",
+             "4": "Liver failure is not their warning; the boxed warning concerns **brain edema and microbleeds** seen on imaging."},
+  "whyNotPages": {"1": "224", "2": "535", "3": "338", "4": "499"}
+ }
+}

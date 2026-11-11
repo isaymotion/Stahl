@@ -1,0 +1,11 @@
+# ch12 notes
+- q12-53: lecanemab/donanemab and ARIA are not in the book (only "anti-amyloid antibodies" listed in Table 12-6, p497); keyed answer is outside-book knowledge. Distractor rationales are weak for this reason. Consider cutting or marking out-of-book.
+- q12-43: current `why` cites 2021/2022 FDA declinations (post-book facts); rewritten to book-only (approved for PD psychosis, positive trials in dementia-related psychosis, p527).
+- q12-24: tyrosine hydroxylase / GAD distractors cited to other chapters (p80, p255).
+- q12-31, q12-32: physostigmine, tacrine, pyridostigmine are not in the book; rationales just point to the three inhibitors the book covers.
+- q12-29: tuberomammillary / substantia nigra distractors cited to p407 / p102.
+- q12-02/q12-20/q12-22: "about half" for MCI conversion (p488) vs "half of Aβ-positive MCI progress within a year" (p502) - different statistics, fine.
+- q12-47: book lists benzodiazepines under second-line agents "but not"; "advises against" is a mild paraphrase.
+- q12-27: stem says "regulates dopamine release in nucleus accumbens" - book p507/508 matches α4β2.
+- q12-49: book says "citalopram but has QT prolongation" only; no other SSRI differences, so distractors are generic.
+- q12-05 and q12-10 and q12-16 and q12-17: choices contain implausible numbers; fine.

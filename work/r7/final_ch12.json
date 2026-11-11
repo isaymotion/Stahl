@@ -1,0 +1,954 @@
+{
+ "q12-01": {
+  "pages": "487",
+  "whyNot": [
+   "Amyloid on PET is a **biomarker** of AD pathology found even in cognitively normal elderly and in MCI, so it does not define dementia.",
+   "",
+   "Subjective **memory complaints** are very common in older adults and are part of MCI, so they cannot separate it from dementia.",
+   "Age is a risk setting, not a criterion; MCI itself is reported in a sizable share of people over 65.",
+   "Testing can document impairment in both conditions; the deciding line is whether **daily function** is significantly affected."
+  ],
+  "whyNotPages": [
+   "500",
+   "",
+   "488",
+   "487",
+   "487"
+  ],
+  "why": "Dementia is cognitive decline severe enough to interfere with usual daily activities, whereas MCI is only mild decline that does **not yet significantly impair** activities of daily living."
+ },
+ "q12-02": {
+  "pages": "488",
+  "whyNot": [
+   "Far too low; clinical studies without biomarkers show a yearly conversion several times higher than this.",
+   "Too high per year; about **half** of MCI patients meet dementia criteria only after roughly 5 years.",
+   "",
+   "That is roughly the cumulative fraction at **5 years**, not the annual conversion rate.",
+   "That is the share proven to have AD after **10 years** or at autopsy, not a yearly rate."
+  ],
+  "whyNotPages": [
+   "488",
+   "488",
+   "",
+   "488",
+   "488"
+  ],
+  "why": "Without biomarkers, **6–15%** of MCI patients convert to dementia each year, about half by 5 years, and up to 80% prove to have AD by 10 years or autopsy."
+ },
+ "q12-03": {
+  "pages": "488",
+  "whyNot": [
+   "Aβ plaques are the first of the three autopsy hallmarks of AD, so this option is one of them.",
+   "**Tau** tangles are the second hallmark, built from hyperphosphorylated tau.",
+   "Substantial neuronal loss, visible to the naked eye at autopsy, is the third hallmark.",
+   "",
+   "One option is the exception: **Lewy bodies** mark the synucleinopathies (DLB, PDD), not the three AD hallmarks."
+  ],
+  "whyNotPages": [
+   "488",
+   "488",
+   "488",
+   "",
+   "493"
+  ],
+  "why": "AD's three hallmarks are Aβ plaques, tau tangles and neuronal loss; **Lewy bodies** (α-synuclein) define DLB and PDD, though about 30% of AD brains contain them."
+ },
+ "q12-04": {
+  "pages": "490",
+  "whyNot": [
+   "Sensorimotor and subcortical hypometabolism fits **vascular** dementia, not AD.",
+   "AD hypometabolism is described in **posterior cortical** areas; the cerebellum is not the site the book names.",
+   "A frontal pattern points to frontotemporal cortices in FTD, not to the posterior pattern of AD.",
+   "",
+   "Parieto-occipital change is listed for Lewy body dementias; AD is **temporo-parietal**, not occipital alone."
+  ],
+  "whyNotPages": [
+   "491",
+   "490",
+   "489",
+   "",
+   "489"
+  ],
+  "why": "Neuronal loss in AD lowers glucose use mainly in **posterior** regions, especially the temporo-parietal cortex, and the deficit deepens as MCI progresses to dementia."
+ },
+ "q12-05": {
+  "pages": "491",
+  "whyNot": [
+   "",
+   "Far too high; vascular dementia is the **second** most common cause, behind AD.",
+   "Too low for the second most common dementia, which makes up about a fifth of cases.",
+   "Far too small; vascular dementia is a major cause, second only to AD.",
+   "Too high; half would make it more common than AD, which is the leading cause."
+  ],
+  "whyNotPages": [
+   "",
+   "491",
+   "491",
+   "491",
+   "488"
+  ],
+  "why": "Vascular dementia, the **second most common** dementia after AD, accounts for roughly 20% of cases and reflects reduced cerebral blood flow from cerebrovascular disease."
+ },
+ "q12-06": {
+  "pages": "491",
+  "whyNot": [
+   "Not a vascular finding in the book; MRI there shows white-matter abnormalities and medial temporal atrophy.",
+   "",
+   "Caudate atrophy is tied to PDD pathology, and enlargement is not described for vascular disease.",
+   "No pituitary finding is tied to dementia; the vascular marker is **white-matter** disease.",
+   "Not a described finding; vascular dementia reflects ischemic damage, white-matter change and microbleeds."
+  ],
+  "whyNotPages": [
+   "489",
+   "",
+   "493",
+   "491",
+   "491"
+  ],
+  "why": "Vascular dementia reflects reduced cerebral blood flow from small-vessel disease, so MRI shows progressively more **white-matter hyperintensities** as severity increases."
+ },
+ "q12-07": {
+  "pages": "493",
+  "whyNot": [
+   "",
+   "**Tau** aggregates into neurofibrillary tangles in AD and some FTLD, not into Lewy bodies.",
+   "Huntingtin is not linked to Lewy bodies in the book; they hold α-synuclein.",
+   "**Aβ** aggregates into plaques in AD, a separate pathology from Lewy bodies.",
+   "TDP-43 is not named; Lewy bodies are built on α-synuclein, with ubiquitin and other proteins mixed in."
+  ],
+  "whyNotPages": [
+   "",
+   "494",
+   "493",
+   "488",
+   "492"
+  ],
+  "why": "In DLB and PDD, **α-synuclein** misfolds into oligomers and then Lewy bodies and neurites as neurons degenerate, which is why these disorders are called synucleinopathies."
+ },
+ "q12-08": {
+  "pages": "493",
+  "whyNot": [
+   "This is a **suggestive** feature of DLB, not a core one.",
+   "REM sleep behavior disorder is only a **suggestive** feature.",
+   "Severe neuroleptic sensitivity is listed as suggestive, not core.",
+   "Repeated falls are a **supportive** feature, a lower tier than core.",
+   ""
+  ],
+  "whyNotPages": [
+   "493",
+   "493",
+   "493",
+   "493",
+   ""
+  ]
+ },
+ "q12-09": {
+  "pages": "494",
+  "whyNot": [
+   "FTD is defined by early personality and behavior change, not by years of prior motor disease.",
+   "Vascular dementia follows cerebrovascular events; the motor-onset timing rule separates DLB from PDD.",
+   "**DLB** fits when dementia begins at the same time as, or before, parkinsonism.",
+   "",
+   "AD does not use the motor-onset rule; parkinsonism a year or more before dementia points to PDD."
+  ],
+  "whyNotPages": [
+   "494",
+   "492",
+   "494",
+   "",
+   "494"
+  ],
+  "why": "When parkinsonian motor symptoms precede dementia by **a year or more**, the diagnosis is PDD; here PD came 4 years earlier. DLB requires dementia first or simultaneously."
+ },
+ "q12-10": {
+  "pages": "492",
+  "whyNot": [
+   "That is the share with **additional** pathology, especially AD, not the pure proportion.",
+   "Too low; roughly one in five has pure LBD pathology.",
+   "",
+   "Far too high given that most LBD patients carry coexisting dementia pathology.",
+   "Too high; most patients have mixed pathology, so pure cases are only a fifth."
+  ],
+  "whyNotPages": [
+   "492",
+   "492",
+   "",
+   "492",
+   "492"
+  ],
+  "why": "Only about **20%** of LBD patients have pure Lewy body pathology; roughly 80% also show other pathology, especially AD, illustrating how common mixed dementia is."
+ },
+ "q12-11": {
+  "pages": "494",
+  "whyNot": [
+   "",
+   "Vascular dementia shows slowed processing and impaired abstraction, often after a stroke, not primary personality change.",
+   "DLB is marked by fluctuating attention, visual hallucinations and parkinsonism.",
+   "Logopenic PPA is a **language** variant; aphasia, not disinhibition, is its presentation.",
+   "AD begins with short-term memory loss; this patient's good cued memory argues against it."
+  ],
+  "whyNotPages": [
+   "",
+   "488",
+   "493",
+   "495",
+   "494"
+  ],
+  "why": "**bvFTD** brings disinhibition, loss of empathy, hyperorality and compulsive behaviors with relatively spared cued memory, unlike the rapid memory loss of AD."
+ },
+ "q12-12": {
+  "pages": "494",
+  "whyNot": [
+   "Huntington disease is not linked to MAPT in the book, which ties tau gene mutations to FTLD.",
+   "",
+   "MAPT mutations are explicitly **not** associated with AD, where tau acts through tangles instead.",
+   "DLB is a synuclein disorder, not a tau-gene disorder.",
+   "Vascular dementia stems from impaired blood flow, not tau gene mutations."
+  ],
+  "whyNotPages": [
+   "494",
+   "",
+   "494",
+   "493",
+   "491"
+  ],
+  "why": "MAPT mutations alter the ratio of 3R to 4R tau, favoring pathological tau accumulation, and are linked to several forms of **FTLD** rather than to AD."
+ },
+ "q12-13": {
+  "pages": "495",
+  "whyNot": [
+   "Pure vascular pathology is a minority pattern; vascular change usually coexists with other pathology.",
+   "Most dementia brains do show pathology, typically several kinds combined.",
+   "Single-pathology AD is the exception, not the rule.",
+   "",
+   "Pure Lewy body pathology is uncommon; most LBD patients also have other pathology."
+  ],
+  "whyNotPages": [
+   "496",
+   "496",
+   "495",
+   "",
+   "492"
+  ],
+  "why": "Postmortem studies show **mixed pathology**, combining protein aggregates and vascular changes, in most dementia patients, which complicates diagnosis and treatment."
+ },
+ "q12-14": {
+  "pages": "497",
+  "whyNot": [
+   "**β-secretase** makes the first cut in the amyloidogenic pathway, so it promotes Aβ formation.",
+   "Acetylcholinesterase breaks down acetylcholine and has no role in APP processing.",
+   "",
+   "Choline acetyltransferase **synthesizes** acetylcholine; it does not cut APP.",
+   "**γ-secretase** completes the amyloidogenic pathway, producing Aβ peptides of 38–43 residues."
+  ],
+  "whyNotPages": [
+   "497",
+   "505",
+   "",
+   "505",
+   "497"
+  ],
+  "why": "**α-secretase** cleaves APP within the Aβ region (non-amyloidogenic pathway), so no intact Aβ forms; β- then γ-secretase cutting generates Aβ instead."
+ },
+ "q12-15": {
+  "pages": "497",
+  "whyNot": [
+   "Aβ42 is **more aggregation-prone** and toxic, but it is less common than Aβ40.",
+   "Not an isoform the book lists; γ-secretase yields peptides of 38 to 43 amino acids.",
+   "Aβ38 sits at the short end of the 38–43 range and is not the most common.",
+   "Aβ43 is **rare**, though thought to aggregate even more readily than Aβ42.",
+   ""
+  ],
+  "whyNotPages": [
+   "497",
+   "498",
+   "498",
+   "498",
+   ""
+  ],
+  "why": "γ-secretase yields Aβ peptides of 38–43 amino acids; **Aβ40** predominates, whereas Aβ42 aggregates more readily and is regarded as more toxic."
+ },
+ "q12-16": {
+  "pages": "499",
+  "whyNot": [
+   "Opposite direction: the protective allele is APOE2, whereas APOE4 raises risk.",
+   "An understatement; even a single APOE4 copy gives a larger increase than this.",
+   "",
+   "That is the risk increase with **one** copy of APOE4, not two.",
+   "Overstated; two APOE4 copies raise risk by an amount well short of this."
+  ],
+  "whyNotPages": [
+   "499",
+   "499",
+   "",
+   "499",
+   "499"
+  ],
+  "why": "APOE4 raises risk in a dose-dependent way: one copy gives about threefold and **two copies about tenfold**, making APOE a prominent genetic influence in AD."
+ },
+ "q12-17": {
+  "pages": "499",
+  "whyNot": [
+   "",
+   "APOE3, the most common form, confers **intermediate** risk between APOE2 and APOE4.",
+   "APOE1 is not an allele discussed; the forms named are APOE2, APOE3 and APOE4.",
+   "**APOE4** raises AD risk, threefold with one copy and tenfold with two.",
+   "One allele does appear protective, so this is wrong; APOE2 offers some protection."
+  ],
+  "whyNotPages": [
+   "",
+   "499",
+   "499",
+   "499",
+   "499"
+  ],
+  "why": "**APOE2** appears protective, APOE3 (the most common allele) confers intermediate risk, and APOE4 raises risk."
+ },
+ "q12-18": {
+  "pages": "499",
+  "whyNot": [
+   "That is the **skeptics'** view, that Aβ merely marks neuronal death, not the proponents' defense.",
+   "High placebo response is raised about D2-blocker trials, not as the amyloid proponents' explanation.",
+   "Proponents note that many drugs did **successfully engage** Aβ targets yet showed no benefit.",
+   "",
+   "Isoform choice is not the argument; the defense concerns when treatment starts."
+  ],
+  "whyNotPages": [
+   "499",
+   "524",
+   "499",
+   "",
+   "499"
+  ],
+  "why": "Anti-Aβ trials enrolled patients with MCI or overt AD; proponents argue the cascade is by then **self-perpetuating** with irreversible damage, so treatment must precede symptoms."
+ },
+ "q12-19": {
+  "pages": "500",
+  "whyNot": [
+   "Opposite direction: CSF Aβ is **reduced** because Aβ is held in the brain.",
+   "CSF Aβ is already **abnormal** at this stage, falling as amyloid deposits.",
+   "Elevated CSF tau signals neurodegeneration in stage 2, and Aβ is low rather than elevated.",
+   "Aβ is reduced, not absent; the change is a fall in CSF levels.",
+   ""
+  ],
+  "whyNotPages": [
+   "500",
+   "500",
+   "502",
+   "500",
+   ""
+  ],
+  "why": "In asymptomatic amyloidosis, Aβ is deposited in the brain rather than cleared into CSF, so CSF Aβ is **low** while amyloid PET turns positive."
+ },
+ "q12-20": {
+  "pages": "500",
+  "whyNot": [
+   "Not all; the figure shows more than half only in the 80–90 age band.",
+   "",
+   "Some are Aβ-negative, but about a quarter are positive, so this understates.",
+   "Far above the real figure; only about a quarter of normal elderly are positive.",
+   "About 5% matches the youngest age band in the figure, not elderly controls overall."
+  ],
+  "whyNotPages": [
+   "502",
+   "",
+   "500",
+   "500",
+   "502"
+  ],
+  "why": "Roughly **a quarter** of cognitively normal elderly people are Aβ-positive on PET and are considered to have presymptomatic AD despite having no symptoms."
+ },
+ "q12-21": {
+  "pages": "502",
+  "whyNot": [
+   "Low CSF Aβ reflects **amyloidosis**, Aβ being held in the brain.",
+   "Amyloid PET labels Aβ plaques directly, so it is an amyloidosis marker.",
+   "APOE4 is a genetic risk factor, not a measure of neurodegeneration.",
+   "",
+   "Aβ40 is simply the commonest isoform; it is not a neurodegeneration marker in the book."
+  ],
+  "whyNotPages": [
+   "500",
+   "500",
+   "499",
+   "",
+   "497"
+  ],
+  "why": "Neurodegeneration is shown by **elevated CSF tau** (also NfL, MRI atrophy and FDG PET hypometabolism), whereas amyloid PET and low CSF Aβ mark amyloidosis."
+ },
+ "q12-22": {
+  "pages": "502",
+  "whyNot": [
+   "Too low; roughly half of MCI patients lack Aβ deposition.",
+   "Too high; the other half do show moderate or severe Aβ deposition.",
+   "Not none; a substantial share of MCI patients are Aβ-negative.",
+   "Not all; about half have moderate or severe Aβ deposition.",
+   ""
+  ],
+  "whyNotPages": [
+   "502",
+   "502",
+   "502",
+   "502",
+   ""
+  ],
+  "why": "About **half** of MCI patients have no Aβ on imaging, so their cognitive symptoms probably stem from another cause, such as depression or a different dementia-causing disorder."
+ },
+ "q12-23": {
+  "pages": "502",
+  "whyNot": [
+   "",
+   "**α-secretase** acts on APP processing, which is amyloid biology, not tau's effect on synapses.",
+   "Inhibiting acetylcholinesterase is a **drug** mechanism that raises ACh, not what tau does.",
+   "Microglial activation is not how tau harms synapses here; the damage comes from tau losing its hold on **microtubules**.",
+   "NMDA blockade describes **memantine**, not hyperphosphorylated tau."
+  ],
+  "whyNotPages": [
+   "",
+   "497",
+   "510",
+   "502",
+   "516"
+  ],
+  "why": "Hyperphosphorylated tau can no longer bind and stabilize **microtubules**, so vesicle transport to the synapse fails and synapses malfunction; tau also forms tangles."
+ },
+ "q12-24": {
+  "pages": "505",
+  "whyNot": [
+   "Tyrosine hydroxylase is the rate-limiting step for **catecholamine** (dopamine) synthesis, not ACh.",
+   "",
+   "Glutamic acid decarboxylase makes **GABA** from glutamate, not acetylcholine.",
+   "Butyrylcholinesterase **breaks down** ACh rather than making it.",
+   "Acetylcholinesterase **terminates** ACh action by breaking it down; it does not synthesize it."
+  ],
+  "whyNotPages": [
+   "80",
+   "",
+   "255",
+   "505",
+   "505"
+  ],
+  "why": "Choline acetyltransferase (**ChAT**) combines choline with acetyl coenzyme A, which neurons make from glucose in mitochondria, to produce acetylcholine."
+ },
+ "q12-25": {
+  "pages": "505",
+  "whyNot": [
+   "Purkinje cells are not named; BuChE is described in glia, with AChE concentrated in neurons receiving ACh.",
+   "AChE, not BuChE, is concentrated in neurons that receive ACh input.",
+   "",
+   "Dopamine neurons are not a BuChE site in the book; glia are.",
+   "Synaptic vesicles store ACh via VAChT; they are not where BuChE sits."
+  ],
+  "whyNotPages": [
+   "505",
+   "505",
+   "",
+   "505",
+   "506"
+  ],
+  "why": "In the brain BuChE sits mainly in **glial cells**, whereas AChE is abundant in neurons receiving ACh input; BuChE activity rises with gliosis as cortical neurons die."
+ },
+ "q12-26": {
+  "pages": "506",
+  "whyNot": [
+   "",
+   "M3 and M5 are **excitatory** postsynaptic receptors, not autoreceptors.",
+   "M1 and M3 are excitatory postsynaptic; M1 is the memory-related subtype.",
+   "M1 and M5 are excitatory postsynaptic receptors, so they do not curb ACh release.",
+   "M1 is an **excitatory** postsynaptic receptor important for memory, not an autoreceptor."
+  ],
+  "whyNotPages": [
+   "",
+   "506",
+   "507",
+   "506",
+   "507"
+  ],
+  "why": "**M2 and M4** are inhibitory presynaptic autoreceptors that curb further ACh release once it builds up, whereas M1, M3 and M5 are excitatory postsynaptic receptors."
+ },
+ "q12-27": {
+  "pages": "507",
+  "whyNot": [
+   "α3β4 is not a subtype the chapter discusses; the key brain subtypes are α7 and α4β2.",
+   "",
+   "Muscle-type nicotinic receptors lie **outside the brain**, in skeletal muscle and ganglia.",
+   "M4 is a **muscarinic** receptor, and it restrains mesolimbic dopamine rather than regulating accumbens release the nicotinic way.",
+   "α7 receptors facilitate ACh release and support prefrontal cognition rather than being nicotine's main target here."
+  ],
+  "whyNotPages": [
+   "507",
+   "",
+   "507",
+   "507",
+   "508"
+  ],
+  "why": "The **α4β2** nicotinic subtype is postsynaptic, regulates dopamine release in the nucleus accumbens, and is a main target of nicotine, linking it to tobacco's reinforcing effects."
+ },
+ "q12-28": {
+  "pages": "509",
+  "whyNot": [
+   "ACh breakdown is done by the enzymes AChE and BuChE, not by α7 receptors.",
+   "On glutamate neurons, α7 receptors **facilitate** glutamate release, not inhibit it.",
+   "",
+   "Choline reuptake is handled by the choline transporter, not α7 receptors.",
+   "Opposite direction: inhibition of ACh release is the job of M2/M4 autoreceptors; α7 facilitates."
+  ],
+  "whyNotPages": [
+   "505",
+   "508",
+   "",
+   "506",
+   "506"
+  ]
+ },
+ "q12-29": {
+  "pages": "509",
+  "whyNot": [
+   "Raphe neurons are the **serotonin** source in the book, not the memory-related cholinergic projection.",
+   "The tuberomammillary nucleus is the **histamine** source involved in wakefulness.",
+   "The locus coeruleus supplies **norepinephrine** to the cortex, not the memory-related ACh pathway.",
+   "",
+   "The substantia nigra supplies **dopamine** to the striatum, not these cholinergic projections."
+  ],
+  "whyNotPages": [
+   "526",
+   "407",
+   "532",
+   "",
+   "102"
+  ],
+  "why": "Cholinergic neurons of the basal forebrain project to the prefrontal cortex, amygdala and hippocampus and are thought especially important for memory; their early loss drives memory decline."
+ },
+ "q12-30": {
+  "pages": "509",
+  "whyNot": [
+   "Cholinesterase inhibitors are **symptomatic** and do not remove amyloid or halt neurodegeneration.",
+   "They block ACh breakdown rather than increasing the synthetic enzyme ChAT.",
+   "NMDA blockade describes **memantine**, a different mechanism from cholinesterase inhibition.",
+   "They cannot regenerate neurons; they only boost ACh at the surviving targets.",
+   ""
+  ],
+  "whyNotPages": [
+   "503",
+   "510",
+   "516",
+   "509",
+   ""
+  ],
+  "why": "Early in AD the presynaptic cholinergic input is lost but **postsynaptic targets survive**, so slowing ACh breakdown restores some function, much as levodopa does in Parkinson's."
+ },
+ "q12-31": {
+  "pages": "510",
+  "whyNot": [
+   "Not discussed in the book; the chapter's cholinesterase inhibitors are donepezil, rivastigmine and galantamine.",
+   "Galantamine adds nicotinic positive allosteric modulation to AChE inhibition.",
+   "Not discussed in the book as an AD drug; the chapter's inhibitors are donepezil, rivastigmine and galantamine.",
+   "Rivastigmine is **pseudoirreversible**, intermediate-acting, and also inhibits BuChE.",
+   ""
+  ],
+  "whyNotPages": [
+   "510",
+   "514",
+   "510",
+   "510",
+   ""
+  ],
+  "why": "**Donepezil** is a reversible, long-acting inhibitor selective for AChE without BuChE inhibition; it is easy to dose, and its mostly GI side effects tend to be transient."
+ },
+ "q12-32": {
+  "pages": "510",
+  "whyNot": [
+   "Memantine is an **NMDA** antagonist, not a cholinesterase inhibitor.",
+   "Galantamine inhibits AChE and also modulates nicotinic receptors; BuChE inhibition is not its signature.",
+   "",
+   "Donepezil is **reversible** and selective for AChE, sparing BuChE.",
+   "Not discussed in the book; the chapter's cholinesterase inhibitors are donepezil, rivastigmine and galantamine."
+  ],
+  "whyNotPages": [
+   "516",
+   "514",
+   "",
+   "510",
+   "510"
+  ],
+  "why": "**Rivastigmine** is pseudoirreversible (reversing over hours) and inhibits both AChE and BuChE, including glial BuChE; a transdermal patch greatly reduces its GI side effects."
+ },
+ "q12-33": {
+  "pages": "514",
+  "whyNot": [
+   "",
+   "5HT2A antagonism belongs to agents like pimavanserin and brexpiprazole, not galantamine.",
+   "BuChE inhibition is a feature of **rivastigmine**, which is pseudoirreversible.",
+   "M1 agonism is described for xanomeline, not galantamine.",
+   "NMDA channel blockade is the mechanism of **memantine**."
+  ],
+  "whyNotPages": [
+   "",
+   "527",
+   "510",
+   "507",
+   "516"
+  ],
+  "why": "Galantamine is also a **positive allosteric modulator** at nicotinic receptors, a second action that could theoretically boost ACh effects, though a clinical advantage is unproven."
+ },
+ "q12-34": {
+  "pages": "510",
+  "whyNot": [
+   "The book ties side effects to peripheral AChE blockade in the **gut**; kidney is not named.",
+   "The retina is not named; the peripheral effect described is gastrointestinal.",
+   "Liver is not the source of the common side effects; GI cholinergic effects are.",
+   "",
+   "Skin is not a site; the transdermal rivastigmine patch avoids peripheral GI effects."
+  ],
+  "whyNotPages": [
+   "510",
+   "513",
+   "513",
+   "",
+   "510"
+  ],
+  "why": "Cholinesterase inhibitors also block AChE in the periphery, and the resulting boost of ACh in the **gastrointestinal** tract causes the typical, often transient GI side effects."
+ },
+ "q12-35": {
+  "pages": "516",
+  "whyNot": [
+   "AMPA receptors only help depolarize neurons; memantine acts on the NMDA channel itself.",
+   "",
+   "Glycine is a cotransmitter needed to open the channel; memantine is a pore blocker, not an agonist.",
+   "Memantine has **low** affinity, unlike PCP and ketamine, which block much more powerfully.",
+   "It is **uncompetitive**, plugging the channel when open, not competing at the glutamate site."
+  ],
+  "whyNotPages": [
+   "515",
+   "",
+   "515",
+   "518",
+   "516"
+  ],
+  "why": "Memantine plugs the open NMDA channel at the magnesium site with low affinity, voltage dependence and fast on-off kinetics, blocking tonic glutamate leak but not phasic bursts."
+ },
+ "q12-36": {
+  "pages": "518",
+  "whyNot": [
+   "Memantine is a channel blocker, not a glycine-site agonist.",
+   "",
+   "It acts on NMDA receptors, not AMPA receptors.",
+   "It acts like **artificial magnesium** at the same channel site; it is not metabolized into magnesium.",
+   "It does reach the brain, where it acts on NMDA receptors in Alzheimer disease."
+  ],
+  "whyNotPages": [
+   "518",
+   "",
+   "518",
+   "518",
+   "516"
+  ],
+  "why": "Because memantine binds with low affinity and fast kinetics, a phasic glutamate burst with depolarization expels it from the channel, behaving like **artificial magnesium** without PCP-like effects."
+ },
+ "q12-37": {
+  "pages": "522",
+  "whyNot": [
+   "",
+   "A year is far longer than the criterion, which requires only **one month**.",
+   "Three months exceeds the stated duration criterion.",
+   "Six months exceeds the stated duration criterion.",
+   "One week is too short; the definition requires persistence of at least a **month**."
+  ],
+  "whyNotPages": [
+   "",
+   "522",
+   "522",
+   "522",
+   "522"
+  ],
+  "why": "Dementia-related psychosis means delusions or hallucinations arising after cognitive decline, lasting **at least one month** and not better explained by delirium or another mental illness."
+ },
+ "q12-38": {
+  "pages": "523",
+  "whyNot": [
+   "Memantine targets cognition and has not been systematically tested for agitation.",
+   "Benzodiazepines are among the agents the book does not favor, and sedatives raise aspiration pneumonia risk.",
+   "Cholinesterase inhibitors give little behavioral benefit except in Lewy body dementias.",
+   "D2 blockers carry a boxed warning and are used only cautiously after weighing risks, not as a first step.",
+   ""
+  ],
+  "whyNotPages": [
+   "533",
+   "524",
+   "530",
+   "524",
+   ""
+  ],
+  "why": "Before drugs, manage reversible precipitants such as pain, nicotine withdrawal, medication side effects, illness and provocative environments, and use **non-drug** approaches first."
+ },
+ "q12-39": {
+  "pages": "524",
+  "whyNot": [
+   "Agranulocytosis is not the dementia warning; the boxed warning concerns cardiovascular events.",
+   "Hepatic failure is not the warning cited; it is stroke and death.",
+   "",
+   "Seizures are not the cited warning; the concern is cardiovascular events and mortality.",
+   "Hyponatremia is not the cited warning; it is stroke and death."
+  ],
+  "whyNotPages": [
+   "524",
+   "524",
+   "",
+   "524",
+   "524"
+  ],
+  "why": "D2 blockers carry a black-box warning in elderly dementia because they raise **stroke and mortality**, via stroke, thromboembolism, falls, QT effects and aspiration pneumonia."
+ },
+ "q12-40": {
+  "pages": "525",
+  "whyNot": [
+   "AD hallucination prevalence is only about 11–17%, far below DLB.",
+   "MCI is not dementia and does not appear in the psychosis prevalence table.",
+   "FTD has the lowest psychosis prevalence of the dementias listed.",
+   "",
+   "Vascular dementia hallucinations are only about 5–14%."
+  ],
+  "whyNotPages": [
+   "525",
+   "525",
+   "525",
+   "",
+   "525"
+  ],
+  "why": "DLB has the highest hallucination prevalence (**55–78%**), mostly visual, with Parkinson's disease dementia next at 32–63%."
+ },
+ "q12-41": {
+  "pages": "524",
+  "whyNot": [
+   "The common delusions described are paranoid and misidentification types, not grandiose.",
+   "Visual hallucinations typify the **Lewy body** dementias, not AD, where delusions predominate.",
+   "Auditory command hallucinations are not the AD pattern described.",
+   "",
+   "Tactile hallucinations are a minority feature in PD psychosis, not the usual AD form."
+  ],
+  "whyNotPages": [
+   "524",
+   "524",
+   "524",
+   "",
+   "525"
+  ],
+  "why": "In AD, delusions outnumber hallucinations and are most often **persecutory** (theft, infidelity) or misidentification, whereas visual hallucinations typify the Lewy body dementias."
+ },
+ "q12-42": {
+  "pages": "527",
+  "whyNot": [
+   "The psychosis network involves excess downstream **dopamine** activity, not low striatal dopamine.",
+   "Acetylcholine in the thalamus is not part of the model; the problem is glutamate and 5HT2A drive.",
+   "",
+   "Cerebellar degeneration is not part of the psychosis network.",
+   "The problem is excitatory **5HT2A** stimulation, not 5HT1A overstimulation."
+  ],
+  "whyNotPages": [
+   "526",
+   "526",
+   "",
+   "526",
+   "527"
+  ],
+  "why": "Loss of GABA interneurons leaves 5HT2A-driven glutamate output unchecked, and excess glutamate release in the **visual cortex** is hypothesized to produce visual hallucinations."
+ },
+ "q12-43": {
+  "pages": "527",
+  "whyNot": [
+   "",
+   "Mania is not an approval the book lists; pimavanserin is approved for Parkinson's disease psychosis.",
+   "Only positive trials in dementia-related psychosis of all causes are described; approval is for PD psychosis.",
+   "Alzheimer psychosis is not an approved use in the book; pimavanserin is approved for PD psychosis.",
+   "Pimavanserin's approved use here is PD psychosis; schizophrenia is covered by D2-based agents."
+  ],
+  "whyNotPages": [
+   "",
+   "527",
+   "527",
+   "527",
+   "527"
+  ],
+  "why": "Pimavanserin, a selective **5HT2A antagonist**, is approved for Parkinson's disease psychosis; the book reports positive trials in all-cause dementia psychosis, but the FDA later declined both that and the narrower Alzheimer indication (see the update note)."
+ },
+ "q12-44": {
+  "pages": "528",
+  "whyNot": [
+   "Thalamic output is what the filter **restricts**; top-down inhibition is not driven by thalamus to cortex.",
+   "",
+   "The hippocampus-to-amygdala link is not part of the thalamic-filter model.",
+   "Locus coeruleus to cortex is a **bottom-up** norepinephrine arousal output of the amygdala.",
+   "Amygdala to VTA is a bottom-up limbic route that releases dopamine and worsens the filter."
+  ],
+  "whyNotPages": [
+   "529",
+   "",
+   "529",
+   "531",
+   "531"
+  ],
+  "why": "Cortical glutamate neurons release glutamate in the **striatum**, which drives GABA release onto the thalamus and filters sensory and emotional input; loss of this brake produces agitation."
+ },
+ "q12-45": {
+  "pages": "530",
+  "whyNot": [
+   "H1 antagonism is not among the five actions the book lists for brexpiprazole.",
+   "M1 antagonism is not among brexpiprazole's listed actions in this model.",
+   "Brexpiprazole is not a reuptake inhibitor; SSRIs and SNRIs are a separate approach.",
+   "NMDA antagonism is the mechanism of **dextromethorphan**, not brexpiprazole.",
+   ""
+  ],
+  "whyNotPages": [
+   "530",
+   "530",
+   "530",
+   "533",
+   ""
+  ],
+  "why": "Beyond D2 and 5HT1A partial agonism and 5HT2A antagonism, brexpiprazole blocks **α1 and α2** adrenergic receptors, dampening locus coeruleus norepinephrine arousal on pyramidal dendrites."
+ },
+ "q12-46": {
+  "pages": "533",
+  "whyNot": [
+   "D2 partial agonism belongs to **brexpiprazole**, not dextromethorphan–bupropion.",
+   "",
+   "5HT2A antagonism is how pimavanserin and brexpiprazole act, not this combination.",
+   "GABA-A modulation is not described for this combination.",
+   "Cholinesterase inhibitors give little behavioral benefit outside Lewy body dementias."
+  ],
+  "whyNotPages": [
+   "530",
+   "",
+   "527",
+   "533",
+   "530"
+  ],
+  "why": "Dextromethorphan's **NMDA antagonism** is thought to quell the excess glutamate output of the agitation network, while bupropion adds NDRI action and inhibits CYP450 2D6."
+ },
+ "q12-47": {
+  "pages": "530",
+  "whyNot": [
+   "Gabapentin is mentioned as a possible second-line option, not one to avoid.",
+   "Carbamazepine has shown perhaps the best efficacy among unapproved agents, though with risks.",
+   "SSRIs and SNRIs are considered first-line pharmacological options by many experts.",
+   "",
+   "β blockers are listed among second-line options."
+  ],
+  "whyNotPages": [
+   "530",
+   "530",
+   "530",
+   "",
+   "530"
+  ],
+  "why": "The book places **benzodiazepines** (along with valproate, topiramate and oxcarbazepine) among agents not to use for agitation, and sedatives also raise aspiration pneumonia risk."
+ },
+ "q12-48": {
+  "pages": "534",
+  "whyNot": [
+   "Far too large; the increase is about double.",
+   "Opposite direction: MDD history raises risk rather than lowering it.",
+   "Not true; a history of MDD is linked to higher dementia risk, especially vascular.",
+   "Tenfold matches APOE4 homozygosity, not depression history.",
+   ""
+  ],
+  "whyNotPages": [
+   "534",
+   "534",
+   "534",
+   "499",
+   ""
+  ],
+  "why": "A history of major depression doubles dementia risk, particularly vascular dementia, and depression with late-life onset may be a prodromal sign of AD."
+ },
+ "q12-49": {
+  "pages": "535",
+  "whyNot": [
+   "Weight gain is not raised in the book as the citalopram–escitalopram difference.",
+   "Hepatotoxicity is not the cited difference between the two.",
+   "",
+   "Hyperprolactinemia is not the cited difference between the two.",
+   "Agranulocytosis is not the cited difference between the two."
+  ],
+  "whyNotPages": [
+   "535",
+   "535",
+   "",
+   "535",
+   "535"
+  ],
+  "why": "Citalopram prolongs the QT interval, whereas escitalopram may offer similar efficacy without that problem, an important consideration in elderly dementia patients."
+ },
+ "q12-50": {
+  "pages": "536",
+  "whyNot": [
+   "",
+   "Lithium is not discussed for PBA; the book names dextromethorphan with quinidine.",
+   "Memantine is used for cognition in AD, not approved for PBA.",
+   "Pimavanserin is for PD psychosis, not emotional expression disorders.",
+   "Donepezil is a cholinesterase inhibitor for memory, not for PBA."
+  ],
+  "whyNotPages": [
+   "",
+   "536",
+   "516",
+   "527",
+   "510"
+  ],
+  "why": "Dextromethorphan with quinidine treats PBA, presumably through NMDA glutamate and σ receptor actions; quinidine is the CYP450 2D6 inhibitor in the combination."
+ },
+ "q12-51": {
+  "pages": "536",
+  "whyNot": [
+   "The cerebellum is not part of the ABC model of apathy.",
+   "The occipital cortex is not part of the ABC model.",
+   "DLPFC dysfunction underlies **cognitive** apathy, not affective apathy.",
+   "",
+   "Motor areas and DMPFC underlie **behavioral** apathy, not affective apathy."
+  ],
+  "whyNotPages": [
+   "536",
+   "536",
+   "536",
+   "",
+   "536"
+  ],
+  "why": "In the ABC model, **affective apathy** (emotional blunting, altered social interaction) is tied to ventromedial prefrontal and orbitofrontal dysfunction; behavioral involves motor areas and DMPFC, cognitive the DLPFC."
+ },
+ "q12-52": {
+  "pages": "537",
+  "whyNot": [
+   "Pain can drive behavior problems, but the book does not trace apathy to pain.",
+   "Apathy does not resolve spontaneously; it is among the most persistent symptoms.",
+   "Excess serotonin is not the cause; dopaminergic and cholinergic systems are implicated.",
+   "Dopamine agonists, not D2 blockers, are among the suggested options.",
+   ""
+  ],
+  "whyNotPages": [
+   "537",
+   "536",
+   "537",
+   "537",
+   ""
+  ],
+  "why": "Apathy is a disorder of **motivation**, not depression: guilt, worthlessness and hopelessness are typically absent, so antidepressants have little target to act on."
+ },
+ "q12-53": {
+  "pages": "499",
+  "whyNot": [
+   "",
+   "Blood-count risk (**neutropenia**) is the clozapine warning, not one attached to anti-amyloid antibodies.",
+   "**QT prolongation** is the concern with citalopram and D2 blockers in elderly dementia patients, not these antibodies.",
+   "**Serotonin syndrome** comes from combining MAOIs with serotonin reuptake blockers, not from antibodies.",
+   "Liver failure is not their warning; the boxed warning concerns **brain edema and microbleeds** seen on imaging."
+  ],
+  "whyNotPages": [
+   "",
+   "224",
+   "535",
+   "338",
+   "499"
+  ],
+  "why": "From the app's post-book update notes: lecanemab and donanemab carry a boxed warning for **ARIA**, brain edema or microbleeds on MRI, with higher risk in APOE4 carriers. The book itself lists anti-amyloid antibodies only as a disease-modifying approach."
+ }
+}
