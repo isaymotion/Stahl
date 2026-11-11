@@ -1741,3 +1741,25 @@ a.ref-chip:hover { background: color-mix(in srgb, var(--m-clin) 12%, transparent
   .cmp-cheat { display: block; margin: 4px 0 0; }
 }
 .filter[aria-pressed="true"] .muted { color: inherit; opacity: .75; }
+
+/* ---------- R7 wrong-answer rationales ---------- */
+.choice__body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.whynot { display: flex; gap: 8px; align-items: flex-start; justify-content: space-between; margin: 2px 0 0; font: 400 .88rem/1.45 var(--sans); color: var(--ink-3); }
+.whynot strong { font-weight: 700; color: var(--ink-2); }
+.whynot.is-mine { color: var(--bad); }
+.whynot.is-mine strong { color: var(--bad); }
+.whynot .pg-chip { flex: none; margin-top: 1px; }
+.pg-chip { font-size: .7rem; padding: 3px 7px; }
+.choices--static .whynot--other { display: none; }
+.choices--static.wn-open .whynot--other { display: flex; }
+.whynot-tg { align-self: flex-start; margin-top: 4px; }
+.face__why .pg-chip, .teach__why .pg-chip { margin-left: 4px; }
+.teach__answer .whynot { font: 400 clamp(1rem, 1.6vw, 1.3rem)/1.45 var(--sans); color: #FFB4A8; margin: 0 0 .6em; }
+.teach__answer .whynot strong { color: #FFB4A8; }
+.teach__answer .teach__why { margin: 0; font: 400 clamp(1.1rem, 1.9vw, 1.6rem)/1.5 var(--serif); color: #fff; }
+.teach__answer .pg-chip { color: #cfe; border-color: rgba(255,255,255,.35); }
+.teach__others { margin-top: .8em; padding-top: .6em; border-top: 1px solid rgba(255,255,255,.15); }
+.teach__others .whynot { color: rgba(255,255,255,.82); }
+.teach__others .whynot strong { color: #fff; }
+.teach__discuss { margin-top: .9em; }
+@media (max-width: 640px) { .whynot { display: block; font-size: .84rem; } .whynot .pg-chip { margin: 0 0 0 6px; vertical-align: 1px; } .choices--static.wn-open .whynot--other { display: block; } }

@@ -9,6 +9,36 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "29.0.0",
+    "date": "2026-11-11",
+    "title": "Why each wrong answer is wrong (Chapters 9\u201313)",
+    "summary": "Every board question in Chapters 9\u201313 now explains each wrong choice and links to the book page it comes from.",
+    "items": [
+      {
+        "type": "feature",
+        "text": "Board questions in Chapters 9\u201313 carry a short reason for every wrong choice, with the book page beside it. In exam review each wrong choice shows its reason, and the one you picked stands out; on a practice card the reason for your answer appears first, with \u201cWhy not the others\u201d for the rest; in teaching mode the room\u2019s answer gets its reason and a button opens the others for discussion.",
+        "href": "#/exam",
+        "link": "Take an exam"
+      },
+      {
+        "type": "content",
+        "text": "Page chips on the answer and on each reason open the study-guide section that teaches that page.",
+        "ch": "ch09"
+      },
+      {
+        "type": "content",
+        "text": "Explanations in Chapters 9\u201313 that were only a few words are now full sentences: 210 of the 230 questions were rewritten, and every one names its book page.",
+        "ch": "ch13"
+      },
+      {
+        "type": "correction",
+        "text": "Chapter 12: the pimavanserin question\u2019s explanation kept post-book FDA decisions in the question itself; those now stay in the labeled update box, where post-2021 facts belong.",
+        "ch": "ch12",
+        "href": "#/c/ch12/guide/s12-psychosis"
+      }
+    ]
+  },
+  {
     "version": "28.0.0",
     "date": "2026-11-11",
     "title": "Drug-class cheat sheets",

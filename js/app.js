@@ -1003,7 +1003,7 @@
         var right = st.chosen === c.answer;
         var verdict = st.chosen == null ? '<p class="verdict">Answer</p>' :
           '<p class="verdict ' + (right ? 'is-right">Correct' : 'is-wrong">Not quite. You chose ' + LETTERS[st.chosen]) + '</p>';
-        back = verdict + (st.chosen != null ? confNote(st.conf, right) : '') + '<p class="face__recap">' + fmt(c.q) + '</p>' + choiceList(c.choices, c.answer, st.chosen) + '<p class="face__why">' + fmt(c.why) + '</p>';
+        back = verdict + (st.chosen != null ? confNote(st.conf, right) : '') + '<p class="face__recap">' + fmt(c.q) + '</p>' + choiceList(c, st.chosen) + whyBlock(c);
       } else {
         front = '<p class="face__q">' + fmt(c.q) + '</p><p class="face__hint">Tap the card or press Space to see the answer.</p>';
         back = '<p class="face__q face__q--small">' + fmt(c.q) + '</p><p class="face__a">' + fmt(c.a) + '</p>' + (c.why ? '<p class="face__why">' + fmt(c.why) + '</p>' : '');
@@ -1044,7 +1044,9 @@
 
       var fc = area.querySelector('#fc');
       fc.addEventListener('click', function (e) {
-        if (e.target.closest('.gl, .face__topic')) return;
+        if (e.target.closest('.gl, .face__topic, .pg-chip')) return;
+        var tg = e.target.closest('.whynot-tg');
+        if (tg) { toggleWhyNot(tg); return; }
         var cb = e.target.closest('[data-conf]');
         if (cb) { setConf(cb.getAttribute('data-conf')); return; }
         var b = e.target.closest('[data-choice]');
@@ -1059,12 +1061,22 @@
       bind('#next-m', advanceMistake);
       area.querySelectorAll('[data-rate]').forEach(function (b) { b.addEventListener('click', function () { rate(parseInt(b.getAttribute('data-rate'), 10)); }); });
     }
-    function choiceList(choices, answer, chosen) {
-      return '<ul class="choices choices--static">' + choices.map(function (ch2, i) {
+    function choiceList(c, chosen) {
+      var answer = c.answer, wn = hasWhyNot(c), others = 0;
+      var list = '<ul class="choices choices--static' + (wn && store.get('whyNotOpen', false) ? ' wn-open' : '') + '">' + c.choices.map(function (ch2, i) {
         var cls = i === answer ? ' is-correct' : (i === chosen ? ' is-wrong' : '');
         var note = i === answer ? '<span class="choice__note">Correct answer</span>' : (i === chosen ? '<span class="choice__note">Your answer</span>' : '');
-        return '<li><div class="choice' + cls + '"><span class="choice__key">' + LETTERS[i] + '</span><span>' + fmt(ch2) + note + '</span></div></li>';
+        var line = i === answer ? '' : whyNotLine(c, i, i === chosen);
+        if (line && i !== chosen) { others++; line = line.replace('class="whynot', 'class="whynot whynot--other'); }
+        return '<li><div class="choice' + cls + '"><span class="choice__key">' + LETTERS[i] + '</span><span class="choice__body"><span>' + fmt(ch2) + note + '</span>' + line + '</span></div></li>';
       }).join('') + '</ul>';
+      return list + (others ? '<button class="btn btn--small whynot-tg" type="button" aria-expanded="' + !!store.get('whyNotOpen', false) + '" data-n="' + others + '">' + (store.get('whyNotOpen', false) ? 'Hide the other reasons' : (chosen != null && chosen !== answer ? 'Why not the others (' + others + ')' : 'Why not the wrong answers (' + others + ')')) + '</button>' : '');
+    }
+    function toggleWhyNot(b) {
+      var open = !store.get('whyNotOpen', false); store.set('whyNotOpen', open);
+      var ul = b.previousElementSibling; if (ul) ul.classList.toggle('wn-open', open);
+      b.setAttribute('aria-expanded', String(open));
+      b.textContent = open ? 'Hide the other reasons' : (/is-wrong/.test(ul ? ul.innerHTML : '') ? 'Why not the others (' : 'Why not the wrong answers (') + b.getAttribute('data-n') + ')';
     }
     function bind(sel, fn) { var el = area.querySelector(sel); if (el) el.addEventListener('click', fn); }
     function setConf(v) {
@@ -1726,6 +1738,37 @@
     document.title = 'Exam results — Stahl Study Companion';
   }
 
+  /* ---------- wrong-answer rationales (R7) ----------
+     Board questions may carry `pages` (where the right answer is taught), `whyNot` (one line per choice, '' at the
+     answer) and `whyNotPages` (book page per wrong choice). Page chips open the study-guide section holding that page. */
+  function chapterOfPage(n) {
+    var m = null;
+    SP.manifest.forEach(function (c) { var r = String(c.pages || '').split(/[–-]/).map(Number); if (n >= r[0] && n <= (r[1] || r[0])) m = c; });
+    return m;
+  }
+  function sectionOfPage(ch, n) {
+    var hit = null;
+    ((ch && ch.guide && ch.guide.parts) || []).forEach(function (pt) {
+      pt.sections.forEach(function (s) { if (hit || !s.pages) return; var r = String(s.pages).split(/[–-]/).map(Number); if (n >= r[0] && n <= (r[1] || r[0])) hit = s; });
+    });
+    return hit;
+  }
+  function pageChip(p, withCh) {
+    if (!p) return '';
+    var n = parseInt(String(p), 10), m = chapterOfPage(n), ch = m && m.ready ? chapter(m.id) : null, s = ch ? sectionOfPage(ch, n) : null;
+    var label = (withCh && m ? 'Ch ' + m.number + ' · ' : '') + 'p' + p;
+    if (!ch) return '<span class="ref-chip pg-chip">' + esc(label) + '</span>';
+    return '<a class="ref-chip pg-chip" href="#/c/' + ch.id + '/guide' + (s ? '/' + s.id : '') + '" title="Open the Chapter ' + m.number + ' study guide' + (s ? ': ' + esc(s.title) : '') + '">' + esc(label) + '</a>';
+  }
+  function whyNotLine(c, i, mine, label) {
+    var w = c.whyNot && c.whyNot[i];
+    if (!w) return '';
+    return '<p class="whynot' + (mine ? ' is-mine' : '') + '"><span><strong>' + (label || 'Why not:') + '</strong> ' + fmt(w) + '</span>' + pageChip((c.whyNotPages || [])[i]) + '</p>';
+  }
+  function hasWhyNot(c) { return !!(c && c.whyNot && c.whyNot.some(function (w) { return w; })); }
+  /* the answer explanation with its page chip */
+  function whyBlock(c, cls) { return '<p class="' + (cls || 'face__why') + '">' + fmt(c.why) + (c.pages ? ' ' + pageChip(c.pages, true) : '') + '</p>'; }
+
   function renderExamReview(id, which, n) {
     var ex = findExam(id);
     if (!ex) { renderMissing(); return; }
@@ -1738,14 +1781,14 @@
     var choices = x.o.map(function (orig, i) {
       var cls = orig === c.answer ? ' is-correct' : (orig === x.a ? ' is-wrong' : '');
       var note = orig === c.answer ? '<span class="choice__note">Correct answer</span>' : (orig === x.a ? '<span class="choice__note">Your answer</span>' : '');
-      return '<li><div class="choice' + cls + '"><span class="choice__key">' + LETTERS[i] + '</span><span>' + fmt(c.choices[orig]) + note + '</span></div></li>';
+      return '<li><div class="choice' + cls + '"><span class="choice__key">' + LETTERS[i] + '</span><span class="choice__body"><span>' + fmt(c.choices[orig]) + note + '</span>' + (orig === c.answer ? '' : whyNotLine(c, orig, orig === x.a)) + '</span></div></li>';
     }).join('');
     var base = '#/exam/review/' + id + '/' + which + '/';
     var html = '<div class="wrap page exam-review">' +
       '<header class="page__head"><p class="crumb"><a href="#/exam/results/' + id + '">Back to results</a></p><h1>' + (which === 'all' ? 'All questions' : which === 'sure' ? 'Confident misses' : 'Questions you missed') + '</h1></header>' +
       '<div class="exam-q review-q"><p class="exam-q__meta">Question ' + (n + 1) + ' of ' + list.length + ', Chapter ' + r.ch.number + ', ' + esc(c.tag || '') + (topicOf(x.k) ? ' · <a href="#/topics/' + topicOf(x.k) + '">' + esc(TOPIC[topicOf(x.k)].label) + '</a>' : '') + '</p>' +
         '<p class="verdict ' + (ok ? 'is-right">Correct' : x.a == null ? 'is-wrong">Not answered' : 'is-wrong">Incorrect') + (x.c ? '<span class="verdict__conf"> · you marked ' + esc({ sure: 'sure', unsure: 'unsure', guess: 'guessing' }[x.c]) + '</span>' : '') + '</p>' + (x.a != null ? confNote(x.c, ok) : '') +
-        '<p class="exam-q__stem">' + fmt(c.q) + '</p><ul class="choices choices--static">' + choices + '</ul><p class="face__why">' + fmt(c.why) + '</p>' +
+        '<p class="exam-q__stem">' + fmt(c.q) + '</p><ul class="choices choices--static">' + choices + '</ul>' + whyBlock(c) +
         '<p class="report-row">' + reportLink('Chapter ' + r.ch.number + ' board question ' + c.id + (c.tag ? ' (' + c.tag + ')' : '')) + '</p>' +
         '<div class="card-nav"><a class="btn' + (n ? '' : ' is-disabled') + '" ' + (n ? 'href="' + base + (n - 1) + '"' : 'aria-disabled="true"') + '>Previous</a>' +
         '<a class="btn btn--solid" href="' + (n < list.length - 1 ? base + (n + 1) : '#/exam/results/' + id) + '">' + (n < list.length - 1 ? 'Next' : 'Back to results') + '</a></div></div>' +
@@ -2243,10 +2286,11 @@
     return 'Ch ' + it.ch.number + ' · ' + ty + (extra && it.kind !== 'hyt' ? ' · ' + extra : '');
   }
   /* one line per slide for the end-of-session review and its PDF (keeps **bold** markup) */
-  function teachReviewText(it) {
+  function teachReviewText(it, pick) {
     switch (it.kind) {
       case 'hy': return richText(it.text);
-      case 'mcq': return richText(it.c.q) + ' → **' + LETTERS[it.c.answer] + '. ' + plain(it.c.choices[it.c.answer]) + '**';
+      case 'mcq': return richText(it.c.q) + ' → **' + LETTERS[it.c.answer] + '. ' + plain(it.c.choices[it.c.answer]) + '**' + (it.c.pages ? ' (p' + it.c.pages + ')' : '') +
+        (pick != null && pick !== it.c.answer && it.c.whyNot && it.c.whyNot[pick] ? '. Room chose ' + LETTERS[pick] + ': ' + richText(it.c.whyNot[pick]) : '');
       case 'case': return '**' + it.title + ':** ' + richText(it.point || '');
       case 'drug': return 'Name that drug → **' + it.d.name + '**' + (it.d.nbn ? ' (' + plain(it.d.nbn) + ')' : '');
       default: return richText(it.c.q) + ' → ' + richText(it.c.a);
@@ -2387,7 +2431,7 @@
     function save() { store.set('teach', S); }
     function blanksOf(it) { var m = String(it.text).match(/\*\*(.+?)\*\*/g); return m ? m.length : 0; }
     function cluesOf(it) { if (!it._clues) it._clues = drugClues(it.d, S.seed); return it._clues; }
-    function fresh() { st = { revealed: false, picked: null, shown: 0 }; }
+    function fresh() { st = { revealed: false, picked: null, shown: 0, others: false }; }
     function revealable(it) { return !!it && it.kind !== 'hyt' && !(it.kind === 'hy' && !blanksOf(it)); }
     function isDone(it) {
       if (it.kind === 'hy') return st.shown >= blanksOf(it);
@@ -2428,7 +2472,10 @@
           var cls = st.revealed ? (i === c.answer ? ' is-correct' : (i === st.picked ? ' is-wrong' : ' is-dim')) : (i === st.picked ? ' is-picked' : '');
           return '<li><button type="button" class="tchoice' + cls + '" data-pick="' + i + '"' + (st.revealed ? ' disabled' : '') + ' aria-pressed="' + (i === st.picked) + '"><span class="tchoice__key">' + LETTERS[i] + '</span><span>' + fmt(ch2) + '</span></button></li>';
         }).join('') + '</ul>' +
-        (st.revealed ? '<div class="teach__answer"><p class="teach__label">Answer: ' + LETTERS[c.answer] + (st.picked == null ? '' : st.picked === c.answer ? ', the group got it' : ', the group chose ' + LETTERS[st.picked]) + '</p><p>' + fmt(c.why) + '</p></div>' : '');
+        (st.revealed ? '<div class="teach__answer"><p class="teach__label">Answer: ' + LETTERS[c.answer] + (st.picked == null ? '' : st.picked === c.answer ? ', the group got it' : ', the group chose ' + LETTERS[st.picked]) + '</p>' +
+          (st.picked != null && st.picked !== c.answer ? whyNotLine(c, st.picked, true, 'Why not ' + LETTERS[st.picked] + ':') : '') + whyBlock(c, 'teach__why') +
+          (hasWhyNot(c) ? (st.others ? '<div class="teach__others">' + c.choices.map(function (x, i) { return i === c.answer || i === st.picked ? '' : whyNotLine(c, i, false, 'Why not ' + LETTERS[i] + ':'); }).join('') + '</div>' :
+            '<button type="button" class="tbtn tbtn--small teach__discuss" id="t-others">Discuss the other choices (' + c.choices.filter(function (x, i) { return i !== c.answer && i !== st.picked && c.whyNot[i]; }).length + ')</button>') : '') + '</div>' : '');
       } else if (k === 'case') {
         body = '<h2 class="teach__title">' + esc(it.title) + '</h2><p class="teach__stem">' + fmt(it.text) + '</p>' +
           (st.revealed ? '<div class="teach__answer"><p class="teach__label">Teaching point</p><p>' + fmt(it.point || '') + '</p></div>' : '<p class="teach__prompt">What mechanism is at work, and what does this vignette teach?</p>');
@@ -2476,6 +2523,7 @@
       box.querySelectorAll('[data-pick]').forEach(function (b) {
         b.addEventListener('click', function () { var i = parseInt(b.getAttribute('data-pick'), 10); st.picked = st.picked === i ? null : i; draw(); });
       });
+      var tOth = box.querySelector('#t-others'); if (tOth) tOth.addEventListener('click', function () { st.others = true; draw(); });
       box.querySelectorAll('[data-blank]').forEach(function (b) {
         b.addEventListener('click', function () { var i = parseInt(b.getAttribute('data-blank'), 10); if (i >= st.shown) { st.shown = i + 1; afterReveal(); } });
       });
@@ -2512,7 +2560,7 @@
       if (S.teams) headline = sc.a === sc.b ? 'It’s a tie, ' + sc.a + '–' + sc.b : (sc.a > sc.b ? 'Team A' : 'Team B') + ' wins, ' + Math.max(sc.a, sc.b) + '–' + Math.min(sc.a, sc.b);
       else { var ok = 0; S.order.forEach(function (id) { if (S.res[id] === 1) ok++; }); headline = marked ? 'The room got ' + ok + ' of ' + marked : 'Session complete'; }
       function list(ids) {
-        return '<ol class="tend__list">' + ids.map(function (id) { var it = cat.byId[id]; return '<li><span class="tend__meta">' + esc(teachMeta(it)) + '</span><span>' + fmt(teachReviewText(it)) + '</span></li>'; }).join('') + '</ol>';
+        return '<ol class="tend__list">' + ids.map(function (id) { var it = cat.byId[id]; return '<li><span class="tend__meta">' + esc(teachMeta(it)) + '</span><span>' + fmt(teachReviewText(it, (S.pk || {})[id])) + '</span></li>'; }).join('') + '</ol>';
       }
       var again = miss.concat(flg);
       box.innerHTML = barHTMLs(null) +
@@ -2538,8 +2586,8 @@
       if (pdfB) pdfB.addEventListener('click', function () {
         var msg = box.querySelector('#t-msg'); pdfB.disabled = true; pdfB.textContent = 'Creating…';
         var topics = [];
-        if (miss.length) topics.push({ topic: 'What the group missed', items: miss.map(function (id) { return teachReviewText(cat.byId[id]); }) });
-        if (flg.length) topics.push({ topic: 'Flagged to revisit', items: flg.map(function (id) { return teachReviewText(cat.byId[id]); }) });
+        if (miss.length) topics.push({ topic: 'What the group missed', items: miss.map(function (id) { return teachReviewText(cat.byId[id], (S.pk || {})[id]); }) });
+        if (flg.length) topics.push({ topic: 'Flagged to revisit', items: flg.map(function (id) { return teachReviewText(cat.byId[id], (S.pk || {})[id]); }) });
         var chNums = {}; S.order.forEach(function (id) { var it = cat.byId[id]; if (it) chNums[it.ch.number] = 1; });
         var chList = Object.keys(chNums).map(Number).sort(function (a, b) { return a - b; });
         loadPdf().then(function (P) {
@@ -2559,7 +2607,7 @@
     function afterReveal() {
       var it = cur();
       if (isDone(it)) stopTimer();
-      if (it.kind === 'mcq' && st.revealed && st.picked != null && !S.teams) { S.res[it.id] = st.picked === it.c.answer ? 1 : 0; save(); }
+      if (it.kind === 'mcq' && st.revealed && st.picked != null) { S.pk = S.pk || {}; S.pk[it.id] = st.picked; if (!S.teams) S.res[it.id] = st.picked === it.c.answer ? 1 : 0; save(); }
       draw();
       var a = box.querySelector('.teach__tally') || box.querySelector('.teach__answer'); if (a) a.scrollIntoView({ block: 'nearest', behavior: reduceMotion() ? 'auto' : 'smooth' });
     }
@@ -3543,7 +3591,7 @@
       });
       DECKS.forEach(function (d) {
         (ch[d.key] || []).forEach(function (c) {
-          var text = plain(c.q) + ' ' + (c.choices ? c.choices.map(plain).join(' ') + ' ' : '') + plain(c.a || '') + ' ' + plain(c.why || '');
+          var text = plain(c.q) + ' ' + (c.choices ? c.choices.map(plain).join(' ') + ' ' : '') + plain(c.a || '') + ' ' + plain(c.why || '') + (c.whyNot ? ' ' + c.whyNot.map(plain).join(' ') : '');
           INDEX.push({ ch: ch, kind: d.key, title: c.tag || d.short, text: text, front: plain(c.q), href: '#/c/' + ch.id + '/cards/' + d.key + '/' + c.id });
         });
       });
