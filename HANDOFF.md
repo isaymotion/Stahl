@@ -48,7 +48,7 @@ python3 -u tests/r2_practice.py                         # confidence, topics, ex
 ```
 Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.email="isaymotion@gmail.com" commit -m "…" && git push origin main`.
 
-## 6. Status (as of 2026-11-10, main = ba73af3, version 27.0.0)
+## 6. Status (as of 2026-11-11, main = ba73af3, version 27.0.0)
 | Area | State |
 |---|---|
 | Chapters 1–13 | Done: 247 guide sections, 1,102 high-yield points, 726 mech / 268 drug / 200 clinical cards, 608 board questions, 469 glossary terms |
@@ -60,6 +60,7 @@ Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.
 
 ## 7. Next steps: agreed release plan (owner approved all A + B, order B1 → B4, 2026-11-09)
 Next version **28.0.0** (R6). One release = one changelog id + SW bump + full test run + push + update this table.
+R6 starting point (design is Claude's call; ask the owner only if the layout choice is genuinely ambiguous): one cheat sheet per drug type in `data/db/families.js` (17), built from the library fields (class, mechanism, key targets with `s`, uses, sideEffects + via, pearls, nbn) rather than new book text, so no PDF needed. Suggested: route `#/cheat/<familyId>` linked from the drug-type filter in Compare/Drug DB and from each drug page's "Same class" box; side-by-side table of the class's drugs with the highest-yield rows; "Download PDF" via the existing `js/pdf.js` two-column writer (see the chapter PDF generator for the API). Add a test `tests/r6_cheat.py` (all 17 routes render, PDF builds, phone 390) and add the routes to `tools/routes.py`.
 
 | # | Release | Items | Book PDF? | Status |
 |---|---|---|---|---|
