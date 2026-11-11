@@ -3,7 +3,7 @@ window.APP_META = {
   name: 'Stahl Study Companion',
   short: 'Stahl',
   tagline: 'Essential Psychopharmacology companion',
-  version: '30.0.0',
+  version: '31.0.0',
   repo: 'Stahl',
   attribution: 'App created by Isabella Navarro, MD. Latest version November 2026. isaymotion@gmail.com'
 };

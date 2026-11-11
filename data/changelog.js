@@ -9,6 +9,41 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "31.0.0",
+    "date": "2026-11-11",
+    "title": "Two-step vignettes for Chapters 1\u20137",
+    "summary": "90 new clinical cases, each in two linked questions: step two builds on the correct answer to step one. In practice, exams and teaching mode.",
+    "items": [
+      {
+        "type": "feature",
+        "text": "New deck on Chapters 1\u20137: Two-step vignettes (10 each for Chapters 1\u20133, 15 each for 4\u20137). Answer step 1, see why, then continue to step 2, which tells you what happened next. Every choice has its reason and book page, as with board questions.",
+        "ch": "ch05",
+        "href": "#/c/ch05/cards/vignettes",
+        "link": "Try Chapter 5"
+      },
+      {
+        "type": "feature",
+        "text": "Exams can include the vignettes (on by default; untick \u201cInclude two-step vignettes\u201d to leave them out). Each vignette counts as two questions, and step 1 locks once you move on to step 2.",
+        "href": "#/exam",
+        "link": "Take an exam"
+      },
+      {
+        "type": "feature",
+        "text": "Teaching mode has a Two-step vignettes slide type and preset: the room answers step 1, you reveal it, then Next step shows step 2. Each step is scored, and both appear in the end-of-session review and PDF.",
+        "href": "#/teach",
+        "link": "Open teaching mode"
+      },
+      {
+        "type": "feature",
+        "text": "Vignettes join daily review, My mistakes, topics, the weak-spot map and search, like every other card."
+      },
+      {
+        "type": "correction",
+        "text": "Daily review on phones: a long topic label no longer makes the flashcard wider than the screen."
+      }
+    ]
+  },
+  {
     "version": "30.0.0",
     "date": "2026-11-11",
     "title": "Why each wrong answer is wrong \u2014 now every chapter",

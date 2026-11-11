@@ -10,6 +10,8 @@ SP.add = function (id, key, value) {
 };
 SP.BOOK = "Stahl’s Essential Psychopharmacology, 5th ed.";
 SP.CHAPTER_FILES = ['guide', 'highyield', 'cards-mech', 'cards-drugs', 'cards-clinical', 'cards-cases', 'glossary'];
+/* chapters that have two-step vignettes (R9: Ch 1–7; R10 adds Ch 8–13) */
+SP.VIGNETTE_FILES = SP.CHAPTER_FILES.concat(['cards-vignettes']);
 
 SP.manifest = [
   {
@@ -17,49 +19,49 @@ SP.manifest = [
     title: 'Chemical Neurotransmission',
     short: 'Chemical neurotransmission',
     summary: 'The anatomically and chemically addressed nervous system; classic, retrograde and volume neurotransmission; excitation–secretion coupling; the four signal transduction cascades from first messenger to gene; immediate early and late genes; epigenetics; and RNA splicing and interference.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch02', number: 2, ready: true, pages: '29–50',
     title: 'Transporters, Receptors, and Enzymes as Targets of Psychopharmacological Drug Action',
     short: 'Transporters, receptors and enzymes',
     summary: 'The five molecular targets of psychotropic drugs; SLC transporter families, SERT/NET/DAT and how SSRIs and stimulants block them; vesicular transporters and VMAT2 inhibitors; G-protein-linked receptors and the agonist spectrum; enzyme inhibitors, GSK-3 and lithium; and CYP450 metabolism and pharmacogenomics.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch03', number: 3, ready: true, pages: '51–76',
     title: 'Ion Channels as Targets of Psychopharmacological Drug Action',
     short: 'Ion channels',
     summary: 'Ligand-gated (ionotropic) channels: pentameric GABA-A, nicotinic, 5HT3 and glycine receptors and tetrameric glutamate receptors; the drugs of Table 3-2; the agonist spectrum, five channel states and nicotine; PAMs and NAMs; and voltage-sensitive sodium and calcium channels, α2δ, snares and excitation–secretion coupling.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch04', number: 4, ready: true, pages: '77–158',
     title: 'Psychosis, Schizophrenia, and the Neurotransmitter Networks Dopamine, Serotonin, and Glutamate',
     short: 'Psychosis and schizophrenia',
     summary: 'Psychosis as a syndrome and its three hypotheses; the dopamine network (synthesis, D1–D5, five pathways, direct and indirect motor loops, the mesostriatal hub); glutamate recycling, glycine and D-serine, NMDA hypofunction at GABA interneurons; serotonin synthesis, autoreceptors and receptor-by-receptor network effects; 5HT2A in hallucinogen, Parkinson’s and dementia psychosis; and schizophrenia’s five dimensions, violence, causes and course.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch05', number: 5, ready: true, pages: '159–243',
     title: 'Targeting Dopamine and Serotonin Receptors for Psychosis, Mood, and Beyond: So-Called “Antipsychotics”',
     short: 'So-called “antipsychotics”',
     summary: 'D2 blockade pathway by pathway: antipsychotic action, secondary negative symptoms, prolactin and motor side effects; tardive dyskinesia and VMAT2 inhibitors; first-generation D2 antagonists; how 5HT2A antagonism, D2 partial agonism and 5HT1A partial agonism change the picture; mania, depression, agitation, sedation and cardiometabolic risk; binding profiles of the pines, dones, pips and rip; and future mechanisms (TAAR1, muscarinic).',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch06', number: 6, ready: true, pages: '244–282',
     title: 'Mood Disorders and the Neurotransmitter Networks Norepinephrine and γ-Aminobutyric Acid (GABA)',
     short: 'Mood disorders, NE and GABA',
     summary: 'The mood spectrum, mixed features and telling unipolar from bipolar depression; the norepinephrine neuron and α2 brake; GABA and its GABA-A subtypes for phasic and tonic inhibition and neuroactive steroids; the monoamine, receptor and neuroplasticity hypotheses with BDNF, the HPA axis, neuroinflammation and circadian rhythms; and matching each mood symptom to a circuit for symptom-based treatment.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch07', number: 7, ready: true, pages: '283–358',
     title: 'Treatments for Mood Disorders: So-Called “Antidepressants” and “Mood Stabilizers”',
     short: 'Antidepressants and mood stabilizers',
     summary: 'Response versus remission and why relapse grows with each step; treating and stabilizing from above and below; SSRIs and their delayed 5HT1A cascade, SPARIs, SNRIs and their prefrontal dopamine boost, bupropion, agomelatine, mirtazapine, trazodone and vortioxetine; neuroactive steroids, ketamine and esketamine; augmentation, combinations, TCAs and MAOIs; serotonin/dopamine agents, lithium and anticonvulsants across the bipolar spectrum; and dextromethorphan, dextromethadone and hallucinogen-assisted psychotherapy.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch08', number: 8, ready: true, pages: '359–378',

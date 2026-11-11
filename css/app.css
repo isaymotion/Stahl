@@ -1763,3 +1763,35 @@ a.ref-chip:hover { background: color-mix(in srgb, var(--m-clin) 12%, transparent
 .teach__others .whynot strong { color: #fff; }
 .teach__discuss { margin-top: .9em; }
 @media (max-width: 640px) { .whynot { display: block; font-size: .84rem; } .whynot .pg-chip { margin: 0 0 0 6px; vertical-align: 1px; } .choices--static.wn-open .whynot--other { display: block; } }
+/* 31.0.0: flashcard grid track must not grow to the nowrap topic chip */
+.flashcard { grid-template-columns: minmax(0, 1fr); }
+.face, .face__top > * { min-width: 0; }
+/* 31.0.0: two-step vignettes */
+:root { --m-vig: #0F7C86; }
+:root[data-theme="dark"] { --m-vig: #5CC6CF; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --m-vig: #5CC6CF; } }
+.c-vig { --c: var(--m-vig); }
+.vig__stem { font: 400 1.04rem/1.6 var(--serif); margin: 0 0 14px; padding: 12px 14px; background: color-mix(in srgb, var(--m-vig) 8%, var(--surface)); border-left: 3px solid var(--m-vig); border-radius: 6px; }
+.vig__stem--recap { font-size: .95rem; color: var(--ink-2); }
+.vig__step { margin: 4px 0 6px; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; color: var(--m-vig); }
+.vig__lead { margin: 12px 0 10px; font: italic 400 1.02rem/1.55 var(--serif); color: var(--ink); }
+.vig__res { margin: 6px 0; font-size: .95rem; }
+.vig__res.is-right b { color: var(--good); }
+.vig__res.is-wrong b { color: var(--bad); }
+.vig__mine { color: var(--ink-3); }
+.vig__done { margin-top: 10px; }
+.vig__go { margin: 16px 0 0; }
+.vig__prev { padding: 8px 12px; border: 1px dashed var(--rule); border-radius: 6px; }
+.vig__prev .vig__step { color: var(--ink-3); }
+.vig__pq { margin: 0; font-size: .92rem; color: var(--ink-2); }
+.vig__rev { margin-top: 18px; padding-top: 12px; border-top: 1px solid var(--rule); }
+.vig__note { margin: 10px 0 0; font-size: .86rem; color: var(--ink-3); }
+.vig__gate { margin: 14px 0; padding: 14px; border: 1px dashed var(--m-vig); border-radius: 8px; }
+.vig__gate p { margin: 0 0 10px; }
+.exam-q .vig__stem { font-size: 1rem; }
+.qn--vig { box-shadow: inset 0 -3px 0 var(--m-vig); }
+.teach__vstem { opacity: .92; font-size: .92em; }
+.teach__vprev { margin: .4em 0; font-size: .85em; }
+.teach__vlead { font-style: italic; }
+/* vignette cards: only the visible face sets the height (the back holds two full reviews) */
+.flashcard.is-vig:not(.is-flipped) .face--back, .flashcard.is-vig.is-flipped .face--front { position: absolute; inset: 0; overflow: hidden; }

@@ -46,7 +46,8 @@
     { key: 'mech', label: 'Mechanism cards', short: 'Mechanisms', css: 'mech', deck: true, blurb: 'Neuroscience, receptors and how drugs act.' },
     { key: 'drugs', label: 'Drug cards', short: 'Drugs', css: 'drug', deck: true, blurb: 'Agents, binding profiles and side effects.' },
     { key: 'clinical', label: 'Clinical cards', short: 'Clinical', css: 'clin', deck: true, blurb: 'Symptoms, circuits and treatment strategy.' },
-    { key: 'cases', label: 'Board questions', short: 'Board questions', css: 'case', deck: true, blurb: 'Single-best-answer questions with explanations.' }
+    { key: 'cases', label: 'Board questions', short: 'Board questions', css: 'case', deck: true, blurb: 'Single-best-answer questions with explanations.' },
+    { key: 'vignettes', label: 'Two-step vignettes', short: 'Vignettes', css: 'vig', deck: true, blurb: 'A clinical case in two linked questions: step two builds on step one.' }
   ];
   var DECKS = MODES.filter(function (m) { return m.deck; });
   function modeBy(k) { for (var i = 0; i < MODES.length; i++) if (MODES[i].key === k) return MODES[i]; return null; }
@@ -133,6 +134,7 @@
       DECKS.forEach(function (d) {
         (ch[d.key] || []).forEach(function (c, i) {
           var key = ch.id + '/' + d.key + '/' + c.id;
+          if (isVig(c) && c.q == null) c.q = c.stem;
           var rec = { key: key, ch: ch, deck: d, c: c, i: i };
           CARDS[key] = rec; CARD_LIST.push(rec);
         });
@@ -140,6 +142,18 @@
     });
   }
   function deckKeys(ch, deckKey) { return (ch[deckKey] || []).map(function (c) { return ch.id + '/' + deckKey + '/' + c.id; }); }
+  /* Two-step vignettes (31.0.0): { id, tag, stem, steps: [q1, q2] }, each step a board-question object
+     ({ q, choices, answer, why, pages, whyNot, whyNotPages }; step 2 also has `lead`). Step 2 always follows
+     the correct step-1 answer. One card key per vignette; in exams each step is its own scored item ({k, s}). */
+  function isVig(c) { return !!(c && c.steps); }
+  function isQuestion(c) { return !!(c && (c.choices || c.steps)); }
+  function qWeight(k) { var r = CARDS[k]; return r && isVig(r.c) ? r.c.steps.length : 1; }
+  function examQ(x) { var c = CARDS[x.k].c; return x.s != null && c.steps ? c.steps[x.s] : c; }
+  function vigConf(confs) {       // one confidence for the whole vignette: sure only if every answered step was sure
+    var cs = confs.filter(function (x) { return x; });
+    if (!cs.length) return null;
+    return cs.indexOf('guess') > -1 ? 'guess' : cs.every(function (x) { return x === 'sure'; }) ? 'sure' : 'unsure';
+  }
 
   /* ---------- spaced repetition ----------
      Each reviewed card stores { i: interval in days, e: ease, r: successful reps, l: lapses, d: due day }.
@@ -264,7 +278,7 @@
     var keys = topicKeys(id), s = { id: id, total: keys.length, q: 0, tried: 0, sum: 0, mastered: 0, started: 0, sureMiss: 0, due: 0, chs: {} };
     keys.forEach(function (k) {
       var r = CARDS[k]; s.chs[r.ch.number] = 1;
-      if (r.deck.key === 'cases') s.q++;
+      if (r.deck.key === 'cases' || r.deck.key === 'vignettes') s.q += qWeight(k);
       var sc = itemScore(k); if (sc != null) { s.tried++; s.sum += sc; }
       var st = cardStatus(k); if (st !== 'new') s.started++; if (st === 'mastered') s.mastered++;
       if (isConfidentMiss(k)) s.sureMiss++;
@@ -576,7 +590,7 @@
     hist.forEach(function (rec, hi) {
       (rec.items || []).forEach(function (x) {
         var r = CARDS[x.k]; if (!r || x.a == null) return;
-        var ok = x.a === r.c.answer ? 1 : 0;
+        var ok = x.a === examQ(x).answer ? 1 : 0;
         var b = byCh[r.ch.id] || (byCh[r.ch.id] = { right: 0, n: 0 });
         b.n++; b.right += ok; all.n++; all.right += ok;
         if (hi < 5) { recent.n++; recent.right += ok; }
@@ -973,7 +987,20 @@
      o.after    called after every change (to refresh tallies) */
   var LETTERS = 'ABCDE';
   function Player(area, o) {
-    var st = { pos: o.pos || 0, flipped: false, chosen: null, conf: null };
+    var st = { pos: o.pos || 0, flipped: false, chosen: null, conf: null, step: 0, picks: [null, null], confs: [null, null] };
+    function resetSt() { st.flipped = false; st.chosen = null; st.conf = null; st.step = 0; st.picks = [null, null]; st.confs = [null, null]; }
+    function vigRight(c) { var n = 0; c.steps.forEach(function (s, i) { if (st.picks[i] === s.answer) n++; }); return n; }
+    function okNow(c) { return isVig(c) ? vigRight(c) === c.steps.length : st.chosen === c.answer; }
+    function choiceButtons(q) {
+      return '<ul class="choices">' + q.choices.map(function (ch2, i) {
+        return '<li><button class="choice" type="button" data-choice="' + i + '"><span class="choice__key">' + LETTERS[i] + '</span><span>' + fmt(ch2) + '</span></button></li>';
+      }).join('') + '</ul>';
+    }
+    function vigResLine(q, p) {
+      var ok = p === q.answer;
+      return '<p class="vig__res ' + (p == null ? 'is-skip' : ok ? 'is-right' : 'is-wrong') + '"><b>' + (p == null ? 'Not answered.' : ok ? 'Correct.' : 'Not quite.') + '</b> Answer: ' + LETTERS[q.answer] + '. ' + fmt(q.choices[q.answer]) + (p != null && !ok ? ' <span class="vig__mine">You chose ' + LETTERS[p] + '.</span>' : '') + '</p>';
+    }
+    function vigStep(n) { return '<p class="vig__step">Step ' + n + ' of 2</p>'; }
     var stats = { rated: 0, again: 0, right: 0, wrong: 0, cleared: 0 };
 
     function cur() { return CARDS[o.queue[st.pos]]; }
@@ -989,14 +1016,35 @@
       if (!o.queue.length || st.pos >= o.queue.length) {
         area.innerHTML = o.done(stats);
         var again = area.querySelector('[data-restart]');
-        if (again) again.addEventListener('click', function () { st.pos = 0; st.flipped = false; st.chosen = null; st.conf = null; draw(); });
+        if (again) again.addEventListener('click', function () { st.pos = 0; resetSt(); draw(); });
         var rr = area.querySelector('[data-rerender]');
         if (rr) rr.addEventListener('click', function () { route(); });
         return;
       }
-      var r = cur(), c = r.c, key = r.key, isCase = !!c.choices;
+      var r = cur(), c = r.c, key = r.key, isCase = isQuestion(c), vig = isVig(c);
       var front, back;
-      if (isCase) {
+      if (vig) {
+        var s0 = c.steps[0], s1 = c.steps[1], p0 = st.picks[0];
+        front = '<p class="vig__stem">' + fmt(c.stem) + '</p>';
+        if (st.step === 0) {
+          front += vigStep(1) + '<p class="face__q">' + fmt(s0.q) + '</p>' + (p0 == null ?
+            (confAsk() ? confChips(st.conf) : '') + choiceButtons(s0) + '<p class="face__hint">Step 2 builds on the correct answer to step 1.</p>' :
+            '<div class="vig__done">' + vigResLine(s0, p0) + (p0 !== s0.answer ? whyNotLine(s0, p0, true) : '') + whyBlock(s0) + '</div>' +
+            '<p class="vig__go"><button class="btn btn--solid" type="button" id="vig-next">Continue to step 2</button></p>');
+        } else {
+          front += '<div class="vig__prev"><p class="vig__step">Step 1</p><p class="vig__pq">' + fmt(s0.q) + '</p>' + vigResLine(s0, p0) + '</div>' +
+            '<p class="vig__lead">' + fmt(s1.lead) + '</p>' + vigStep(2) + '<p class="face__q">' + fmt(s1.q) + '</p>' +
+            (confAsk() ? confChips(st.conf) : '') + choiceButtons(s1) + '<p class="face__hint">Choose an answer to see the full review.</p>';
+        }
+        var nRight = vigRight(c), anyPick = st.picks.some(function (x) { return x != null; });
+        var vVerdict = !anyPick ? '<p class="verdict">Answers</p>' : nRight === c.steps.length ? '<p class="verdict is-right">Both steps right</p>' :
+          '<p class="verdict is-wrong">' + (nRight ? 'One of two steps right' : 'Neither step right') + '</p>';
+        back = vVerdict + '<p class="vig__stem vig__stem--recap">' + fmt(c.stem) + '</p>' + c.steps.map(function (q, i) {
+          var p = st.picks[i];
+          return '<section class="vig__rev"><p class="vig__step">Step ' + (i + 1) + '</p>' + (q.lead ? '<p class="vig__lead">' + fmt(q.lead) + '</p>' : '') +
+            '<p class="face__recap">' + fmt(q.q) + '</p>' + (p != null ? confNote(st.confs[i], p === q.answer) : '') + choiceList(q, p) + whyBlock(q) + '</section>';
+        }).join('');
+      } else if (isCase) {
         front = '<p class="face__q">' + fmt(c.q) + '</p>' + (confAsk() ? confChips(st.conf) : '') + '<ul class="choices">' + c.choices.map(function (ch2, i) {
           return '<li><button class="choice" type="button" data-choice="' + i + '"><span class="choice__key">' + LETTERS[i] + '</span><span>' + fmt(ch2) + '</span></button></li>';
         }).join('') + '</ul><p class="face__hint">' + (confAsk() ? 'Optional: mark how sure you are first, then choose an answer.' : 'Choose an answer to turn the card.') + '</p>';
@@ -1017,11 +1065,12 @@
       if (!st.flipped) {
         controls = '<button class="btn btn--solid" type="button" id="flip">' + (isCase ? 'Show answer' : 'Flip card') + '</button>';
       } else if (o.mode === 'mistakes') {
-        var ok = st.chosen === c.answer;
+        var ok = okNow(c);
         controls = '<p class="cleared ' + (ok ? 'is-right' : 'is-wrong') + '">' + (ok ? 'Cleared from your mistakes.' : 'This question stays in your mistakes.') + '</p><button class="btn btn--solid" type="button" id="next-m">Next question</button>';
       } else {
         var s = SRS[key];
-        var suggest = isCase && st.chosen != null ? (st.chosen === c.answer ? (st.conf && st.conf !== 'sure' ? 2 : 3) : 1) : 0;
+        var suggest = vig ? (st.picks.some(function (x) { return x != null; }) ? [1, 2, 3][vigRight(c)] - (vigRight(c) === 2 && vigConf(st.confs) && vigConf(st.confs) !== 'sure' ? 1 : 0) : 0) :
+          isCase && st.chosen != null ? (st.chosen === c.answer ? (st.conf && st.conf !== 'sure' ? 2 : 3) : 1) : 0;
         controls = '<div class="rate" role="group" aria-label="How well did you know this?">' + [[1, 'Again'], [2, 'Hard'], [3, 'Good'], [4, 'Easy']].map(function (g) {
           return '<button class="btn rate__b rate__b--' + g[0] + (suggest === g[0] ? ' is-suggested' : '') + '" type="button" data-rate="' + g[0] + '"><span>' + g[1] + '</span><small>' + ivLabel(srsNext(s, g[0]).i) + '</small></button>';
         }).join('') + '</div>';
@@ -1029,7 +1078,7 @@
       var canPrev = !o.consume && st.pos > 0;
       var canNext = !o.consume && st.pos < o.queue.length - 1;
       area.innerHTML =
-        '<div class="stage"><div class="flashcard' + (st.flipped ? ' is-flipped' : '') + '" id="fc" tabindex="0" role="group" aria-roledescription="flashcard" aria-label="Card ' + (st.pos + 1) + ' of ' + o.queue.length + (st.flipped ? ', answer side' : ', question side') + '">' +
+        '<div class="stage"><div class="flashcard' + (st.flipped ? ' is-flipped' : '') + (vig ? ' is-vig' : '') + '" id="fc" tabindex="0" role="group" aria-roledescription="flashcard" aria-label="Card ' + (st.pos + 1) + ' of ' + o.queue.length + (st.flipped ? ', answer side' : ', question side') + '">' +
           '<div class="face face--front c-' + r.deck.css + '"' + (st.flipped ? ' aria-hidden="true"' : '') + '>' + top + front + '</div>' +
           '<div class="face face--back c-' + r.deck.css + '"' + (st.flipped ? '' : ' aria-hidden="true"') + '>' + top + back + '</div>' +
         '</div></div>' +
@@ -1039,12 +1088,13 @@
           '<div class="card-nav__main">' + controls + '</div>' +
           (o.consume ? '' : '<button class="btn" type="button" id="next"' + (canNext ? '' : ' disabled') + '>Next</button>') +
         '</div>' +
-        (st.flipped ? '<p class="report-row">' + reportLink('Chapter ' + r.ch.number + ' ' + r.deck.short + ' card ' + c.id + (c.tag ? ' (' + c.tag + ')' : ''), '#/c/' + r.ch.id + '/cards/' + r.deck.key + '/' + c.id) + '</p>' : '');
-      area.querySelectorAll('.face').forEach(function (f) { linkTerms(f, { skip: '.choice, .face__top, .verdict' }); });
+        (st.flipped ? '<p class="report-row">' + reportLink('Chapter ' + r.ch.number + ' ' + (vig ? 'vignette' : r.deck.short + ' card') + ' ' + c.id + (c.tag ? ' (' + c.tag + ')' : ''), '#/c/' + r.ch.id + '/cards/' + r.deck.key + '/' + c.id) + '</p>' : '');
+      area.querySelectorAll('.face').forEach(function (f) { linkTerms(f, { skip: '.choice, .face__top, .verdict, .vig__res' }); });
 
       var fc = area.querySelector('#fc');
       fc.addEventListener('click', function (e) {
         if (e.target.closest('.gl, .face__topic, .pg-chip')) return;
+        if (e.target.closest('#vig-next')) { vigNext(); return; }
         var tg = e.target.closest('.whynot-tg');
         if (tg) { toggleWhyNot(tg); return; }
         var cb = e.target.closest('[data-conf]');
@@ -1057,7 +1107,7 @@
       });
       bind('#prev', function () { go(-1); });
       bind('#next', function () { go(1); });
-      bind('#flip', function () { if (isCase && !st.flipped) { st.flipped = true; st.chosen = null; draw(); refocus(); } else flip(); });
+      bind('#flip', function () { if (isCase && !st.flipped) { st.flipped = true; st.chosen = null; if (vig) st.step = 1; draw(); refocus(); } else flip(); });
       bind('#next-m', advanceMistake);
       area.querySelectorAll('[data-rate]').forEach(function (b) { b.addEventListener('click', function () { rate(parseInt(b.getAttribute('data-rate'), 10)); }); });
     }
@@ -1084,9 +1134,17 @@
       area.querySelectorAll('.face--front [data-conf]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-conf') === st.conf)); });
     }
     function flip() { st.flipped = !st.flipped; draw(); refocus(); }
+    function vigNext() { if (st.step === 0 && st.picks[0] != null) { st.step = 1; st.conf = null; draw(); refocus(); } }
     function choose(i) {
-      var r = cur(); st.chosen = i; st.flipped = true;
-      var ok = i === r.c.answer;
+      var r = cur();
+      if (isVig(r.c)) {
+        if (st.picks[st.step] != null) return;
+        st.picks[st.step] = i; st.confs[st.step] = st.conf;
+        if (st.step < r.c.steps.length - 1) { draw(); refocus(); return; }
+        st.chosen = i; st.flipped = true; st.conf = vigConf(st.confs);
+        if (st.confs.some(function (cf, j) { return cf === 'sure' && st.picks[j] !== r.c.steps[j].answer; })) st.conf = 'sure';
+      } else { st.chosen = i; st.flipped = true; }
+      var ok = okNow(r.c);
       if (ok) stats.right++; else stats.wrong++;
       if (!ok && st.conf === 'sure') stats.sureMiss = (stats.sureMiss || 0) + 1;
       recordAttempt(r.key, ok, st.conf);
@@ -1099,14 +1157,14 @@
     function go(d) {
       var np = st.pos + d;
       if (np < 0 || np >= o.queue.length) return;
-      st.pos = np; st.flipped = false; st.chosen = null; st.conf = null; draw(); refocus();
+      st.pos = np; resetSt(); draw(); refocus();
     }
     function rate(g) {
       var r = cur(); if (!r) return;
       rateCard(r.key, g);
-      if (!r.c.choices) recordAttempt(r.key, g > 1, g === 1 ? null : g === 2 ? 'unsure' : 'sure');
+      if (!isQuestion(r.c)) recordAttempt(r.key, g > 1, g === 1 ? null : g === 2 ? 'unsure' : 'sure');
       stats.rated++; if (g === 1) stats.again++;
-      st.flipped = false; st.chosen = null; st.conf = null;
+      resetSt();
       if (o.consume) {
         var k = o.queue.splice(st.pos, 1)[0];
         if (g === 1) o.queue.splice(Math.min(st.pos + 4, o.queue.length), 0, k);
@@ -1116,7 +1174,7 @@
       draw(); refocus();
     }
     function advanceMistake() {
-      st.flipped = false; st.chosen = null; st.conf = null;
+      resetSt();
       o.queue.splice(st.pos, 1);
       draw(); refocus();
     }
@@ -1130,15 +1188,17 @@
       if (k === ' ' || k === 'Enter') {
         if (e.target.closest && e.target.closest('button, a, .gl') && e.target.id !== 'fc') return;
         if (o.mode === 'mistakes' && st.flipped) { e.preventDefault(); advanceMistake(); return; }
+        if (isVig(c) && !st.flipped) { if (st.step === 0 && st.picks[0] != null) { e.preventDefault(); vigNext(); } return; }
         if (c.choices && !st.flipped) return;
         e.preventDefault(); flip();
       } else if (k === 'ArrowRight') {
         if (o.mode === 'mistakes' && st.flipped) { e.preventDefault(); advanceMistake(); }
         else if (!o.consume) { e.preventDefault(); go(1); }
       } else if (k === 'ArrowLeft' && !o.consume) { e.preventDefault(); go(-1); }
-      else if (c.choices && !st.flipped && /^[a-e]$/i.test(k)) {
-        var i = 'abcde'.indexOf(k.toLowerCase()); if (i < c.choices.length) { e.preventDefault(); choose(i); }
-      } else if (c.choices && !st.flipped && confAsk() && /^[sug]$/i.test(k)) {
+      else if (isQuestion(c) && !st.flipped && /^[a-e]$/i.test(k)) {
+        var qq = isVig(c) ? c.steps[st.step] : c, i = 'abcde'.indexOf(k.toLowerCase());
+        if (i < qq.choices.length && !(isVig(c) && st.picks[st.step] != null)) { e.preventDefault(); choose(i); }
+      } else if (isQuestion(c) && !st.flipped && confAsk() && /^[sug]$/i.test(k)) {
         e.preventDefault(); setConf({ s: 'sure', u: 'unsure', g: 'guess' }[k.toLowerCase()]);
       } else if (st.flipped && o.mode !== 'mistakes' && /^[1-4]$/.test(k)) { e.preventDefault(); rate(parseInt(k, 10)); }
     }
@@ -1193,7 +1253,7 @@
           '</select></label>' +
         '</div><div class="deck-bar__right">' + '<a class="btn btn--small" href="#/teach" id="opt-teach">Present in teaching mode</a>' + '<button class="link-btn" type="button" id="opt-reset">Reset this deck</button></div></div>' +
         '<div class="tally" id="tally"></div>' +
-        '<div id="card-area" aria-live="polite"></div>' + kbdHelp(deck.key === 'cases') +
+        '<div id="card-area" aria-live="polite"></div>' + kbdHelp(deck.key === 'cases' || deck.key === 'vignettes') +
       '</div>';
     setView(key, html, null, { keepScroll: view.key === key });
     document.title = 'Ch ' + ch.number + ' ' + deck.label.toLowerCase() + ' — Stahl Study Companion';
@@ -1220,7 +1280,7 @@
       S.mode = e.target.value; store.set('deckPrefs', { mode: S.mode }); build(); start();
     });
     var tl = main.querySelector('#opt-teach');
-    if (tl) tl.addEventListener('click', function () { var tp = teachPrefs(); tp.chs = [ch.id]; tp.counts = {}; tp.counts[deck.key === 'cases' ? 'mcq' : deck.key] = 'all'; tp.order = 'order'; tp.timer = 0; store.set('teachPrefs', tp); });
+    if (tl) tl.addEventListener('click', function () { var tp = teachPrefs(); tp.chs = [ch.id]; tp.counts = {}; tp.counts[deck.key === 'cases' ? 'mcq' : deck.key === 'vignettes' ? 'vig' : deck.key] = 'all'; tp.order = 'order'; tp.timer = 0; store.set('teachPrefs', tp); });
     main.querySelector('#opt-reset').addEventListener('click', function () {
       if (!window.confirm('Clear the review schedule for every card in this deck? They will all become new cards again.')) return;
       keys.forEach(function (k) { delete SRS[k]; }); saveSRS(); updateNavBadges(); build(); start();
@@ -1467,11 +1527,15 @@
 
   /* ---------- exam mode ---------- */
   var SECS_PER_Q = 90;
+  function examVig() { return store.get('examVig', true); }
+  function examDeck(d) { return d === 'cases' || (d === 'vignettes' && examVig()); }
   function caseKeys(chIds) {
     var out = [];
-    chIds.forEach(function (id) { var ch = chapter(id); if (ch) out = out.concat(deckKeys(ch, 'cases')); });
+    chIds.forEach(function (id) { var ch = chapter(id); if (ch) { out = out.concat(deckKeys(ch, 'cases')); if (examVig()) out = out.concat(deckKeys(ch, 'vignettes')); } });
     return out;
   }
+  function weightOf(keys) { var n = 0; keys.forEach(function (k) { n += qWeight(k); }); return n; }
+  function takeQ(keys, n) { var out = [], w = 0; for (var i = 0; i < keys.length && w < n; i++) { out.push(keys[i]); w += qWeight(keys[i]); } return out; }
   function renderExamSetup() {
     var chs = allChapters();
     var active = store.get('exam', null);
@@ -1482,7 +1546,7 @@
     if (prefs.count == null) prefs.count = 20;
     if (prefs.timed == null) prefs.timed = true;
     if (['chapters', 'topics', 'mistakes'].indexOf(prefs.by) < 0) prefs.by = 'chapters';
-    var mkQ = mistakeKeys().filter(function (k) { return CARDS[k].deck.key === 'cases'; });
+    var mkQ = mistakeKeys().filter(function (k) { return examDeck(CARDS[k].deck.key); });
     var mkSure = mkQ.filter(function (k) { return MISTAKES[k].sure; }).length;
     var weak = weakestTopics(3);
     var tStats = {}; TOPICS.forEach(function (tp) { tStats[tp.id] = topicStats(tp.id); });
@@ -1502,7 +1566,7 @@
       '<form class="exam-form" id="ex-form" onsubmit="return false">' +
         '<fieldset><legend>Build the exam from</legend><div class="seg seg--src">' + srcSeg + '</div></fieldset>' +
         '<fieldset data-src="chapters"><legend>Chapters</legend>' + chs.map(function (ch) {
-          return '<label class="check"><input type="checkbox" name="ch" value="' + ch.id + '"' + (prefs.chapters.indexOf(ch.id) > -1 ? ' checked' : '') + '> Chapter ' + ch.number + ': ' + esc(ch.short || ch.title) + ' <span class="muted">(' + (ch.cases || []).length + ' questions)</span></label>';
+          return '<label class="check"><input type="checkbox" name="ch" value="' + ch.id + '"' + (prefs.chapters.indexOf(ch.id) > -1 ? ' checked' : '') + '> Chapter ' + ch.number + ': ' + esc(ch.short || ch.title) + ' <span class="muted">(' + (ch.cases || []).length + ' questions' + ((ch.vignettes || []).length ? ', ' + plural(ch.vignettes.length, 'vignette') : '') + ')</span></label>';
         }).join('') + '</fieldset>' +
         '<fieldset data-src="topics"><legend>Topics</legend><p class="muted fs-note">Each topic pulls questions from every chapter that covers it, so one exam mixes chapters.' +
           (weak.length ? '' : ' Your strength per topic appears here once you have answered a few questions on it.') + '</p>' +
@@ -1519,6 +1583,7 @@
           '<label><input type="radio" name="timed" value="1"' + (prefs.timed ? ' checked' : '') + '><span>Timed</span></label>' +
           '<label><input type="radio" name="timed" value="0"' + (!prefs.timed ? ' checked' : '') + '><span>Untimed</span></label>' +
         '</div></fieldset>' +
+        '<label class="check"><input type="checkbox" id="ex-vig"' + (examVig() ? ' checked' : '') + '> Include two-step vignettes (Chapters 1\u20137 so far). Each counts as two questions; step 1 locks when you move on to step 2.</label>' +
         '<label class="check"><input type="checkbox" id="ex-conf"' + (confAsk() ? ' checked' : '') + '> Ask how sure I am on each question (sure, unsure, guessing). Confident misses are flagged in the results.</label>' +
         '<p class="exam-form__sum" id="ex-sum"></p>' +
         '<button class="btn btn--solid" type="button" id="ex-start">Start exam</button>' +
@@ -1539,16 +1604,16 @@
       var rel = form.querySelector('#ex-related');
       var r = { by: by, chapters: checked('ch'), topics: checked('tp'), count: count, timed: timed, related: rel ? rel.checked : false, first: [], rest: [] };
       if (by === 'chapters') r.rest = caseKeys(r.chapters);
-      else if (by === 'topics') r.topics.forEach(function (id) { r.rest = r.rest.concat(topicKeys(id, function (d) { return d === 'cases'; })); });
+      else if (by === 'topics') r.topics.forEach(function (id) { r.rest = r.rest.concat(topicKeys(id, examDeck)); });
       else {
         r.first = mkQ.slice();
         if (r.related) {
           var seen = {}; mkQ.forEach(function (k) { seen[k] = 1; });
           var tps = {}; mkQ.forEach(function (k) { var tp = topicOf(k); if (tp) tps[tp] = 1; });
-          Object.keys(tps).forEach(function (id) { topicKeys(id, function (d) { return d === 'cases'; }).forEach(function (k) { if (!seen[k]) { seen[k] = 1; r.rest.push(k); } }); });
+          Object.keys(tps).forEach(function (id) { topicKeys(id, examDeck).forEach(function (k) { if (!seen[k]) { seen[k] = 1; r.rest.push(k); } }); });
         }
       }
-      r.pool = r.first.length + r.rest.length;
+      r.pool = weightOf(r.first) + weightOf(r.rest);
       r.n = count ? Math.min(count, r.pool) : r.pool;
       return r;
     }
@@ -1569,18 +1634,25 @@
     });
     main.querySelector('#ex-tp-none').addEventListener('click', function () { form.querySelectorAll('input[name=tp]').forEach(function (i) { i.checked = false; }); summary(); });
     main.querySelector('#ex-conf').addEventListener('change', function (e) { store.set('confAsk', e.target.checked); });
+    main.querySelector('#ex-vig').addEventListener('change', function (e) { store.set('examVig', e.target.checked); renderExamSetup(); });
     main.querySelector('#ex-start').addEventListener('click', function () {
       var r = read(); if (!r.pool) return;
       if (store.get('exam', null) && !window.confirm('Starting a new exam discards the one in progress. Continue?')) return;
       store.set('examPrefs', { by: r.by, chapters: r.by === 'chapters' ? r.chapters : prefs.chapters, topics: r.by === 'topics' ? r.topics : prefs.topics, count: r.count, timed: r.timed, related: r.related });
-      var picks = shuffle(r.first.slice()).slice(0, r.n);
-      picks = shuffle(picks.concat(shuffle(r.rest.slice()).slice(0, r.n - picks.length)));
+      var picks = takeQ(shuffle(r.first.slice()), r.n);
+      picks = shuffle(picks.concat(takeQ(shuffle(r.rest.slice()), r.n - weightOf(picks))));
+      var items = [];
+      picks.forEach(function (k) {
+        var c = CARDS[k].c;
+        if (isVig(c)) c.steps.forEach(function (q, si) { items.push({ k: k, s: si, o: shuffle(q.choices.map(function (_, i) { return i; })), a: null, f: false }); });
+        else items.push({ k: k, o: shuffle(c.choices.map(function (_, i) { return i; })), a: null, f: false });
+      });
       var chIds = r.by === 'chapters' ? r.chapters : chs.filter(function (ch) { return picks.some(function (k) { return CARDS[k].ch.id === ch.id; }); }).map(function (ch) { return ch.id; });
       var exam = {
         id: 'e' + Date.now().toString(36), at: Date.now(), chapters: chIds, timed: r.timed,
         src: { by: r.by, topics: r.by === 'topics' ? r.topics : undefined, related: r.by === 'mistakes' ? r.related : undefined }, conf: confAsk(),
-        limit: r.timed ? r.n * SECS_PER_Q : 0, cur: 0,
-        items: picks.map(function (k) { return { k: k, o: shuffle(CARDS[k].c.choices.map(function (_, i) { return i; })), a: null, f: false }; })
+        limit: r.timed ? items.length * SECS_PER_Q : 0, cur: 0,
+        items: items
       };
       store.set('exam', exam);
       location.hash = '#/exam/run';
@@ -1619,32 +1691,46 @@
     document.title = 'Exam in progress — Stahl Study Companion';
     function save() { store.set('exam', ex); }
     function remaining() { return ex.limit - (Date.now() - ex.at) / 1000; }
+    /* vignette steps: item s:1 follows its s:0 item; leaving an answered step 1 locks it (lk), step 2 opens only then */
+    function gated(i) { var x = ex.items[i]; return x.s > 0 && !(ex.items[i - 1] && ex.items[i - 1].lk); }
+    function frozen(i) { var x = ex.items[i]; return !!x.lk || gated(i); }
+    function goTo(i) {
+      if (i < 0 || i >= ex.items.length || i === ex.cur) return;
+      var x = ex.items[ex.cur];
+      if (x.s === 0 && x.a != null && !x.lk && ex.items[ex.cur + 1] && ex.items[ex.cur + 1].k === x.k) x.lk = true;
+      ex.cur = i; save(); draw();
+    }
     function draw() {
-      var it = ex.items[ex.cur], r = CARDS[it.k], c = r.c;
+      var it = ex.items[ex.cur], r = CARDS[it.k], c = examQ(it), vg = it.s != null, fz = frozen(ex.cur), gt = gated(ex.cur);
       main.querySelector('#ex-pos').innerHTML = '<span class="lg">Question </span>' + (ex.cur + 1) + ' of ' + ex.items.length;
       var flag = main.querySelector('#ex-flag');
       flag.setAttribute('aria-pressed', String(it.f)); flag.textContent = it.f ? 'Flagged' : 'Flag';
       main.querySelector('#ex-q').innerHTML =
-        '<p class="exam-q__meta">Chapter ' + r.ch.number + '</p><p class="exam-q__stem">' + fmt(c.q) + '</p>' +
+        '<p class="exam-q__meta">Chapter ' + r.ch.number + (vg ? ' · Two-step vignette, step ' + (it.s + 1) + ' of ' + r.c.steps.length : '') + '</p>' +
+        (vg ? '<p class="exam-q__stem vig__stem">' + fmt(r.c.stem) + '</p>' : '') +
+        (gt ? '<div class="vig__gate"><p>Answer step 1 of this vignette first. Step 2 builds on its answer, so step 1 locks once you move on.</p><button class="btn" type="button" data-go="' + (ex.cur - 1) + '">Go to step 1</button></div>' :
+        (vg && c.lead ? '<p class="vig__lead">' + fmt(c.lead) + '</p>' : '') +
+        '<p class="exam-q__stem">' + fmt(c.q) + '</p>' +
         '<ul class="choices" role="radiogroup" aria-label="Answer choices">' + it.o.map(function (orig, i) {
           var on = it.a === orig;
-          return '<li><button class="choice' + (on ? ' is-picked' : '') + '" type="button" role="radio" aria-checked="' + on + '" data-pick="' + orig + '"><span class="choice__key">' + LETTERS[i] + '</span><span>' + fmt(c.choices[orig]) + '</span></button></li>';
-        }).join('') + '</ul>' + (ex.conf ? confChips(it.c || null, true) : '') +
+          return '<li><button class="choice' + (on ? ' is-picked' : '') + '" type="button" role="radio" aria-checked="' + on + '"' + (fz ? ' disabled' : '') + ' data-pick="' + orig + '"><span class="choice__key">' + LETTERS[i] + '</span><span>' + fmt(c.choices[orig]) + '</span></button></li>';
+        }).join('') + '</ul>' + (ex.conf && !fz ? confChips(it.c || null, true) : '') +
+        (it.lk ? '<p class="vig__note">Locked: you have moved on to step 2.</p>' : vg && it.s === 0 ? '<p class="vig__note">Moving on locks this answer, because step 2 reveals it.</p>' : '')) +
         '<div class="card-nav"><button class="btn" type="button" id="ex-prev"' + (ex.cur ? '' : ' disabled') + '>Previous</button>' +
         '<button class="btn btn--solid" type="button" id="ex-next">' + (ex.cur < ex.items.length - 1 ? 'Next' : 'Review and submit') + '</button></div>';
-      linkTerms(main.querySelector('.exam-q__stem'));
+      main.querySelectorAll('.exam-q__stem, .vig__lead').forEach(function (el) { linkTerms(el); });
       main.querySelector('#ex-nav').innerHTML = ex.items.map(function (x, i) {
-        return '<button type="button" class="qn' + (x.a != null ? ' is-answered' : '') + (x.f ? ' is-flagged' : '') + (i === ex.cur ? ' is-current' : '') + '" data-go="' + i + '" aria-label="Question ' + (i + 1) + (x.a != null ? ', answered' : '') + (x.f ? ', flagged' : '') + '"' + (i === ex.cur ? ' aria-current="step"' : '') + '>' + (i + 1) + '</button>';
+        return '<button type="button" class="qn' + (x.s != null ? ' qn--vig' + (x.s ? ' qn--s2' : '') : '') + (x.a != null ? ' is-answered' : '') + (x.f ? ' is-flagged' : '') + (i === ex.cur ? ' is-current' : '') + '" data-go="' + i + '" aria-label="Question ' + (i + 1) + (x.a != null ? ', answered' : '') + (x.f ? ', flagged' : '') + '"' + (i === ex.cur ? ' aria-current="step"' : '') + '>' + (i + 1) + '</button>';
       }).join('');
       main.querySelectorAll('[data-pick]').forEach(function (b) {
-        b.addEventListener('click', function () { it.a = parseInt(b.getAttribute('data-pick'), 10); save(); draw(); });
+        b.addEventListener('click', function () { if (fz) return; it.a = parseInt(b.getAttribute('data-pick'), 10); save(); draw(); });
       });
-      main.querySelectorAll('[data-go]').forEach(function (b) { b.addEventListener('click', function () { ex.cur = parseInt(b.getAttribute('data-go'), 10); save(); draw(); }); });
+      main.querySelectorAll('[data-go]').forEach(function (b) { b.addEventListener('click', function () { goTo(parseInt(b.getAttribute('data-go'), 10)); }); });
       main.querySelectorAll('#ex-q [data-conf]').forEach(function (b) { b.addEventListener('click', function () { setExConf(b.getAttribute('data-conf')); }); });
-      main.querySelector('#ex-prev').addEventListener('click', function () { if (ex.cur) { ex.cur--; save(); draw(); } });
-      main.querySelector('#ex-next').addEventListener('click', function () { if (ex.cur < ex.items.length - 1) { ex.cur++; save(); draw(); } else submit(false); });
+      main.querySelector('#ex-prev').addEventListener('click', function () { goTo(ex.cur - 1); });
+      main.querySelector('#ex-next').addEventListener('click', function () { if (ex.cur < ex.items.length - 1) goTo(ex.cur + 1); else submit(false); });
     }
-    function setExConf(v) { var it = ex.items[ex.cur]; it.c = it.c === v ? null : v; save(); draw(); }
+    function setExConf(v) { if (frozen(ex.cur)) return; var it = ex.items[ex.cur]; it.c = it.c === v ? null : v; save(); draw(); }
     function tick() {
       var el = main.querySelector('#ex-clock'); if (!el) return;
       if (!ex.limit) { el.textContent = 'Untimed, ' + fmtClock((Date.now() - ex.at) / 1000) + ' elapsed'; return; }
@@ -1663,14 +1749,20 @@
       clearInterval(timer);
       var score = 0;
       var fromMistakes = ex.src && ex.src.by === 'mistakes';
+      var byKey = {}, order = [];
       ex.items.forEach(function (x) {
-        var ok = x.a === CARDS[x.k].c.answer;
-        if (x.a != null) recordAttempt(x.k, ok, x.c);
-        if (ok) { score++; if (fromMistakes && MISTAKES[x.k]) clearMistake(x.k); } else addMistake(x.k, 'exam', x.a != null ? x.c : null);
+        var ok = x.a === examQ(x).answer; if (ok) score++;
+        var g = byKey[x.k]; if (!g) { g = byKey[x.k] = { ok: true, any: false, confs: [], sureMiss: false }; order.push(x.k); }
+        if (!ok) g.ok = false; if (x.a != null) { g.any = true; g.confs.push(x.c || null); if (!ok && x.c === 'sure') g.sureMiss = true; }
+      });
+      order.forEach(function (k) {   // one attempt and at most one mistake per card key (a vignette counts once here)
+        var g = byKey[k], cf = g.sureMiss ? 'sure' : (g.confs.length > 1 ? vigConf(g.confs) : g.confs[0]);
+        if (g.any) recordAttempt(k, g.ok, cf);
+        if (g.ok) { if (fromMistakes && MISTAKES[k]) clearMistake(k); } else addMistake(k, 'exam', g.any ? cf : null);
       });
       var used = Math.round((Date.now() - ex.at) / 1000);
       if (ex.limit) used = Math.min(used, ex.limit);
-      var rec = { id: ex.id, at: ex.at, chapters: ex.chapters, src: ex.src, conf: ex.conf, timed: ex.timed, limit: ex.limit, used: used, expired: !!expired, score: score, total: ex.items.length, items: ex.items.map(function (x) { var o = { k: x.k, o: x.o, a: x.a, f: x.f }; if (x.c) o.c = x.c; return o; }) };
+      var rec = { id: ex.id, at: ex.at, chapters: ex.chapters, src: ex.src, conf: ex.conf, timed: ex.timed, limit: ex.limit, used: used, expired: !!expired, score: score, total: ex.items.length, items: ex.items.map(function (x) { var o = { k: x.k, o: x.o, a: x.a, f: x.f }; if (x.c) o.c = x.c; if (x.s != null) o.s = x.s; return o; }) };
       var hist = store.get('examHistory', []);
       hist.unshift(rec); store.set('examHistory', hist.slice(0, 20));
       store.del('exam');
@@ -1682,9 +1774,9 @@
       if (e.target.matches && e.target.matches('input, textarea, select')) return;
       if (e.metaKey || e.ctrlKey || e.altKey) return;
       var it = ex.items[ex.cur];
-      if (/^[a-e]$/i.test(e.key)) { var i = 'abcde'.indexOf(e.key.toLowerCase()); if (i < it.o.length) { e.preventDefault(); it.a = it.o[i]; save(); draw(); } }
-      else if (e.key === 'ArrowRight' && ex.cur < ex.items.length - 1) { e.preventDefault(); ex.cur++; save(); draw(); }
-      else if (e.key === 'ArrowLeft' && ex.cur > 0) { e.preventDefault(); ex.cur--; save(); draw(); }
+      if (/^[a-e]$/i.test(e.key)) { var i = 'abcde'.indexOf(e.key.toLowerCase()); if (i < it.o.length && !frozen(ex.cur)) { e.preventDefault(); it.a = it.o[i]; save(); draw(); } }
+      else if (e.key === 'ArrowRight' && ex.cur < ex.items.length - 1) { e.preventDefault(); goTo(ex.cur + 1); }
+      else if (e.key === 'ArrowLeft' && ex.cur > 0) { e.preventDefault(); goTo(ex.cur - 1); }
       else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); it.f = !it.f; save(); draw(); }
       else if (ex.conf && /^[sug]$/i.test(e.key)) { e.preventDefault(); setExConf({ s: 'sure', u: 'unsure', g: 'guess' }[e.key.toLowerCase()]); }
     }
@@ -1702,7 +1794,7 @@
     var items = ex.items.filter(function (x) { return CARDS[x.k]; });
     var byTopic = {}, byCh = {}, topicHref = {}, byConf = {}, sureMiss = 0;
     items.forEach(function (x) {
-      var r = CARDS[x.k], ok = x.a === r.c.answer;
+      var r = CARDS[x.k], ok = x.a === examQ(x).answer;
       var tpId = topicOf(x.k), t = tpId ? TOPIC[tpId].label : 'Ch ' + r.ch.number + ', ' + (r.c.tag || 'General');
       if (tpId) topicHref[t] = '#/topics/' + tpId;
       (byTopic[t] = byTopic[t] || { n: 0, ok: 0 }).n++; if (ok) byTopic[t].ok++;
@@ -1720,7 +1812,7 @@
         return '<tr><th scope="row">' + label + '</th><td>' + v.ok + ' of ' + v.n + '</td><td class="bar-cell"><span class="score-bar"><span style="width:' + p + '%" class="' + (p >= 70 ? 'is-good' : p >= 50 ? 'is-mid' : 'is-low') + '"></span></span><span class="score-pct">' + p + '%</span></td></tr>';
       }).join('');
     }
-    var missed = items.filter(function (x) { return x.a !== CARDS[x.k].c.answer; }).length;
+    var missed = items.filter(function (x) { return x.a !== examQ(x).answer; }).length;
     var p = pct(ex.score, ex.total);
     var html = '<div class="wrap page exam-results">' +
       '<header class="page__head"><p class="crumb"><a href="#/exam">Exam mode</a></p><h1>Exam results</h1><p>' + fmtDate(ex.at) + (ex.expired ? '. Time ran out and the exam was submitted automatically.' : '.') + '</p></header>' +
@@ -1773,10 +1865,10 @@
     var ex = findExam(id);
     if (!ex) { renderMissing(); return; }
     var items = ex.items.filter(function (x) { return CARDS[x.k]; });
-    var list = which === 'all' ? items : which === 'sure' ? items.filter(function (x) { return x.c === 'sure' && x.a != null && x.a !== CARDS[x.k].c.answer; }) : items.filter(function (x) { return x.a !== CARDS[x.k].c.answer; });
+    var list = which === 'all' ? items : which === 'sure' ? items.filter(function (x) { return x.c === 'sure' && x.a != null && x.a !== examQ(x).answer; }) : items.filter(function (x) { return x.a !== examQ(x).answer; });
     if (!list.length) { location.hash = '#/exam/results/' + id; return; }
     n = Math.max(0, Math.min(n || 0, list.length - 1));
-    var x = list[n], r = CARDS[x.k], c = r.c;
+    var x = list[n], r = CARDS[x.k], c = examQ(x), vg = x.s != null;
     var ok = x.a === c.answer;
     var choices = x.o.map(function (orig, i) {
       var cls = orig === c.answer ? ' is-correct' : (orig === x.a ? ' is-wrong' : '');
@@ -1786,10 +1878,11 @@
     var base = '#/exam/review/' + id + '/' + which + '/';
     var html = '<div class="wrap page exam-review">' +
       '<header class="page__head"><p class="crumb"><a href="#/exam/results/' + id + '">Back to results</a></p><h1>' + (which === 'all' ? 'All questions' : which === 'sure' ? 'Confident misses' : 'Questions you missed') + '</h1></header>' +
-      '<div class="exam-q review-q"><p class="exam-q__meta">Question ' + (n + 1) + ' of ' + list.length + ', Chapter ' + r.ch.number + ', ' + esc(c.tag || '') + (topicOf(x.k) ? ' · <a href="#/topics/' + topicOf(x.k) + '">' + esc(TOPIC[topicOf(x.k)].label) + '</a>' : '') + '</p>' +
+      '<div class="exam-q review-q"><p class="exam-q__meta">Question ' + (n + 1) + ' of ' + list.length + ', Chapter ' + r.ch.number + ', ' + esc(r.c.tag || '') + (vg ? ' · vignette step ' + (x.s + 1) + ' of ' + r.c.steps.length : '') + (topicOf(x.k) ? ' · <a href="#/topics/' + topicOf(x.k) + '">' + esc(TOPIC[topicOf(x.k)].label) + '</a>' : '') + '</p>' +
         '<p class="verdict ' + (ok ? 'is-right">Correct' : x.a == null ? 'is-wrong">Not answered' : 'is-wrong">Incorrect') + (x.c ? '<span class="verdict__conf"> · you marked ' + esc({ sure: 'sure', unsure: 'unsure', guess: 'guessing' }[x.c]) + '</span>' : '') + '</p>' + (x.a != null ? confNote(x.c, ok) : '') +
+        (vg ? '<p class="exam-q__stem vig__stem">' + fmt(r.c.stem) + '</p>' + (c.lead ? '<p class="vig__lead">' + fmt(c.lead) + '</p>' : '') : '') +
         '<p class="exam-q__stem">' + fmt(c.q) + '</p><ul class="choices choices--static">' + choices + '</ul>' + whyBlock(c) +
-        '<p class="report-row">' + reportLink('Chapter ' + r.ch.number + ' board question ' + c.id + (c.tag ? ' (' + c.tag + ')' : '')) + '</p>' +
+        '<p class="report-row">' + reportLink('Chapter ' + r.ch.number + (vg ? ' vignette ' + r.c.id + ' step ' + (x.s + 1) : ' board question ' + r.c.id) + (r.c.tag ? ' (' + r.c.tag + ')' : '')) + '</p>' +
         '<div class="card-nav"><a class="btn' + (n ? '' : ' is-disabled') + '" ' + (n ? 'href="' + base + (n - 1) + '"' : 'aria-disabled="true"') + '>Previous</a>' +
         '<a class="btn btn--solid" href="' + (n < list.length - 1 ? base + (n + 1) : '#/exam/results/' + id) + '">' + (n < list.length - 1 ? 'Next' : 'Back to results') + '</a></div></div>' +
       '</div>';
@@ -2164,6 +2257,7 @@
     { k: 'drugs', label: 'Drug cards', unit: 'card', css: 'drug', hint: 'Question on screen; reveal shows the answer.' },
     { k: 'clinical', label: 'Clinical cards', unit: 'card', css: 'clin', hint: 'Question on screen; reveal shows the answer.' },
     { k: 'mcq', label: 'Board questions', unit: 'question', css: 'case', hint: 'Single best answer; mark the group’s choice, then reveal the answer and explanation.' },
+    { k: 'vig', label: 'Two-step vignettes', unit: 'two-step vignette', css: 'vig', hint: 'A clinical case in two linked board questions. Mark the group’s choice and reveal step 1; Next step (or Space) then shows what happened next and step 2. Each step is scored.' },
     { k: 'case', label: 'Clinical vignettes', unit: 'vignette', css: 'guide', hint: 'Short vignettes from the study guides; reveal shows the teaching point.' },
     { k: 'drug', label: 'Name that drug', unit: 'mystery drug', css: 'drug', hint: 'Clues from the drug library appear one at a time (mechanism, binding profile, a side effect, a use) until someone names the drug. Narrow it to one drug type below.' }
   ];
@@ -2171,6 +2265,7 @@
   var TEACH_TIMERS = [[0, 'Off'], [10, '10 s'], [20, '20 s'], [30, '30 s'], [60, '60 s']];
   var TEACH_PRESETS = [
     { id: 'mcq', label: 'Board questions', counts: { mcq: 'all' }, order: 'order', timer: 0 },
+    { id: 'vig', label: 'Two-step vignettes', counts: { vig: 'all' }, order: 'order', timer: 0 },
     { id: 'case', label: 'Clinical vignettes', counts: { 'case': 'all' }, order: 'order', timer: 0 },
     { id: 'hy', label: 'High-yield lecture', counts: { hy: 'all' }, order: 'order', timer: 0 },
     { id: 'cards', label: 'Flashcards', counts: { mech: 'all', drugs: 'all', clinical: 'all' }, order: 'shuffle', timer: 0 },
@@ -2219,6 +2314,7 @@
         (ch[k] || []).forEach(function (c) { add(cat[k], { id: k + ':' + ch.id + '/' + c.id, kind: k, ch: ch, c: c }); });
       });
       (ch.cases || []).forEach(function (c) { add(cat.mcq, { id: 'mcq:' + ch.id + '/' + c.id, kind: 'mcq', ch: ch, c: c }); });
+      (ch.vignettes || []).forEach(function (c) { add(cat.vig, { id: 'vig:' + ch.id + '/' + c.id, kind: 'vig', ch: ch, c: c }); });
       if (ch.guide) ch.guide.parts.forEach(function (pt) {
         pt.sections.forEach(function (s) {
           s.blocks.forEach(function (b, i) {
@@ -2276,6 +2372,7 @@
     if (it.kind === 'hyt') return 'Topic: ' + it.topic;
     if (it.kind === 'hy') return plain(it.text);
     if (it.kind === 'case') return it.title;
+    if (it.kind === 'vig') return plain(it.c.stem);
     if (it.kind === 'drug') return 'Mystery drug (' + familyOf(it.d).label + ')';
     return plain(it.c.q);
   }
@@ -2292,6 +2389,11 @@
       case 'mcq': return richText(it.c.q) + ' → **' + LETTERS[it.c.answer] + '. ' + plain(it.c.choices[it.c.answer]) + '**' + (it.c.pages ? ' (p' + it.c.pages + ')' : '') +
         (pick != null && pick !== it.c.answer && it.c.whyNot && it.c.whyNot[pick] ? '. Room chose ' + LETTERS[pick] + ': ' + richText(it.c.whyNot[pick]) : '');
       case 'case': return '**' + it.title + ':** ' + richText(it.point || '');
+      case 'vig': return (it.c.tag ? '**' + it.c.tag + ':** ' : '') + richText(it.c.stem) + ' ' + it.c.steps.map(function (q, i) {
+        var pk = Array.isArray(pick) ? pick[i] : null;
+        return 'Step ' + (i + 1) + ': ' + richText(q.q) + ' → **' + LETTERS[q.answer] + '. ' + plain(q.choices[q.answer]) + '**' + (q.pages ? ' (p' + q.pages + ')' : '') +
+          (pk != null && pk !== q.answer && q.whyNot && q.whyNot[pk] ? '. Room chose ' + LETTERS[pk] + ': ' + richText(q.whyNot[pk]) : '');
+      }).join(' ');
       case 'drug': return 'Name that drug → **' + it.d.name + '**' + (it.d.nbn ? ' (' + plain(it.d.nbn) + ')' : '');
       default: return richText(it.c.q) + ' → ' + richText(it.c.a);
     }
@@ -2431,16 +2533,33 @@
     function save() { store.set('teach', S); }
     function blanksOf(it) { var m = String(it.text).match(/\*\*(.+?)\*\*/g); return m ? m.length : 0; }
     function cluesOf(it) { if (!it._clues) it._clues = drugClues(it.d, S.seed); return it._clues; }
-    function fresh() { st = { revealed: false, picked: null, shown: 0, others: false }; }
+    function fresh() { st = { revealed: false, picked: null, shown: 0, others: false, step: 0 }; }
+    /* room marks and team points: one value per slide, or an array with one value per step for two-step vignettes */
+    function resList(id) { var v = S.res[id]; return v === undefined ? [] : Array.isArray(v) ? v.filter(function (x) { return x != null; }) : [v]; }
+    function teamList(id) { var v = S.team[id]; return !v ? [] : Array.isArray(v) ? v.filter(function (x) { return x; }) : [v]; }
+    function stepVal(o, id) { var v = o[id]; return Array.isArray(v) ? v[st.step] : undefined; }
+    function setStepVal(o, id, val) { var v = Array.isArray(o[id]) ? o[id] : [null, null]; v[st.step] = v[st.step] === val ? null : val; if (v.every(function (x) { return x == null; })) delete o[id]; else o[id] = v; }
+    function nextStep() { var it = cur(); if (!it || it.kind !== 'vig' || st.step || !st.revealed) return; st.step = 1; st.revealed = false; st.picked = null; st.others = false; draw(); startTimer(); var stg = box.querySelector('.teach__stage'); if (stg) stg.scrollTop = 0; }
+    function mcqHTML(c) {
+      return '<ul class="teach__choices">' + c.choices.map(function (ch2, i) {
+          var cls = st.revealed ? (i === c.answer ? ' is-correct' : (i === st.picked ? ' is-wrong' : ' is-dim')) : (i === st.picked ? ' is-picked' : '');
+          return '<li><button type="button" class="tchoice' + cls + '" data-pick="' + i + '"' + (st.revealed ? ' disabled' : '') + ' aria-pressed="' + (i === st.picked) + '"><span class="tchoice__key">' + LETTERS[i] + '</span><span>' + fmt(ch2) + '</span></button></li>';
+        }).join('') + '</ul>' +
+        (st.revealed ? '<div class="teach__answer"><p class="teach__label">Answer: ' + LETTERS[c.answer] + (st.picked == null ? '' : st.picked === c.answer ? ', the group got it' : ', the group chose ' + LETTERS[st.picked]) + '</p>' +
+          (st.picked != null && st.picked !== c.answer ? whyNotLine(c, st.picked, true, 'Why not ' + LETTERS[st.picked] + ':') : '') + whyBlock(c, 'teach__why') +
+          (hasWhyNot(c) ? (st.others ? '<div class="teach__others">' + c.choices.map(function (x, i) { return i === c.answer || i === st.picked ? '' : whyNotLine(c, i, false, 'Why not ' + LETTERS[i] + ':'); }).join('') + '</div>' :
+            '<button type="button" class="tbtn tbtn--small teach__discuss" id="t-others">Discuss the other choices (' + c.choices.filter(function (x, i) { return i !== c.answer && i !== st.picked && c.whyNot[i]; }).length + ')</button>') : '') + '</div>' : '');
+    }
     function revealable(it) { return !!it && it.kind !== 'hyt' && !(it.kind === 'hy' && !blanksOf(it)); }
     function isDone(it) {
       if (it.kind === 'hy') return st.shown >= blanksOf(it);
       if (it.kind === 'drug') return st.revealed;
+      if (it.kind === 'vig') return st.revealed && st.step === it.c.steps.length - 1;
       return st.revealed;
     }
     function scoreText() {
-      if (S.teams) { var a = 0, b = 0; Object.keys(S.team).forEach(function (k) { if (S.team[k] === 'a') a++; if (S.team[k] === 'b') b++; }); return { a: a, b: b }; }
-      var n = 0, ok = 0; Object.keys(S.res).forEach(function (k) { if (cat.byId[k]) { n++; if (S.res[k]) ok++; } });
+      if (S.teams) { var a = 0, b = 0; Object.keys(S.team).forEach(function (k) { teamList(k).forEach(function (t) { if (t === 'a') a++; if (t === 'b') b++; }); }); return { a: a, b: b }; }
+      var n = 0, ok = 0; Object.keys(S.res).forEach(function (k) { if (cat.byId[k]) resList(k).forEach(function (v) { n++; if (v) ok++; }); });
       return n ? 'Room ' + ok + '/' + n : '';
     }
     function hyHTML(it) {
@@ -2467,15 +2586,12 @@
       if (atEnd()) return drawEnd();
       var it = cur(), k = it.kind, body = '', done = isDone(it);
       if (k === 'mcq') {
-        var c = it.c;
-        body = '<p class="teach__stem">' + fmt(c.q) + '</p><ul class="teach__choices">' + c.choices.map(function (ch2, i) {
-          var cls = st.revealed ? (i === c.answer ? ' is-correct' : (i === st.picked ? ' is-wrong' : ' is-dim')) : (i === st.picked ? ' is-picked' : '');
-          return '<li><button type="button" class="tchoice' + cls + '" data-pick="' + i + '"' + (st.revealed ? ' disabled' : '') + ' aria-pressed="' + (i === st.picked) + '"><span class="tchoice__key">' + LETTERS[i] + '</span><span>' + fmt(ch2) + '</span></button></li>';
-        }).join('') + '</ul>' +
-        (st.revealed ? '<div class="teach__answer"><p class="teach__label">Answer: ' + LETTERS[c.answer] + (st.picked == null ? '' : st.picked === c.answer ? ', the group got it' : ', the group chose ' + LETTERS[st.picked]) + '</p>' +
-          (st.picked != null && st.picked !== c.answer ? whyNotLine(c, st.picked, true, 'Why not ' + LETTERS[st.picked] + ':') : '') + whyBlock(c, 'teach__why') +
-          (hasWhyNot(c) ? (st.others ? '<div class="teach__others">' + c.choices.map(function (x, i) { return i === c.answer || i === st.picked ? '' : whyNotLine(c, i, false, 'Why not ' + LETTERS[i] + ':'); }).join('') + '</div>' :
-            '<button type="button" class="tbtn tbtn--small teach__discuss" id="t-others">Discuss the other choices (' + c.choices.filter(function (x, i) { return i !== c.answer && i !== st.picked && c.whyNot[i]; }).length + ')</button>') : '') + '</div>' : '');
+        body = '<p class="teach__stem">' + fmt(it.c.q) + '</p>' + mcqHTML(it.c);
+      } else if (k === 'vig') {
+        var vq = it.c.steps[st.step], v0 = it.c.steps[0];
+        body = '<p class="teach__kicker">Two-step vignette · Step ' + (st.step + 1) + ' of ' + it.c.steps.length + (it.c.tag ? ' · ' + esc(it.c.tag) : '') + '</p><p class="teach__stem teach__vstem">' + fmt(it.c.stem) + '</p>' +
+          (st.step ? '<p class="teach__vprev"><span class="teach__label">Step 1 answer:</span> ' + LETTERS[v0.answer] + '. ' + fmt(v0.choices[v0.answer]) + '</p><p class="teach__stem teach__vlead">' + fmt(vq.lead || '') + '</p>' : '') +
+          '<p class="teach__stem">' + fmt(vq.q) + '</p>' + mcqHTML(vq);
       } else if (k === 'case') {
         body = '<h2 class="teach__title">' + esc(it.title) + '</h2><p class="teach__stem">' + fmt(it.text) + '</p>' +
           (st.revealed ? '<div class="teach__answer"><p class="teach__label">Teaching point</p><p>' + fmt(it.point || '') + '</p></div>' : '<p class="teach__prompt">What mechanism is at work, and what does this vignette teach?</p>');
@@ -2496,10 +2612,10 @@
         body = '<p class="teach__kicker">' + esc(teachTypeBy(k).label) + (it.c.tag ? ' · ' + esc(it.c.tag) : '') + '</p><p class="teach__stem">' + fmt(it.c.q) + '</p>' +
           (st.revealed ? '<div class="teach__answer"><p class="teach__label">Answer</p><p>' + fmt(it.c.a) + '</p></div>' : '');
       }
-      var scoreable = done && revealable(it) && (S.teams || k !== 'mcq');
+      var scoreable = (k === 'vig' ? st.revealed && S.teams : done && revealable(it) && (S.teams || k !== 'mcq'));
       var scoreHTML = '';
       if (scoreable && S.teams) {
-        var w = S.team[it.id];
+        var w = k === 'vig' ? stepVal(S.team, it.id) : S.team[it.id];
         scoreHTML = '<div class="teach__tally" role="group" aria-label="Who gets the point?"><span>Point to:</span>' +
           '<button type="button" class="tbtn tbtn--small tteam-btn--a' + (w === 'a' ? ' is-on' : '') + '" data-team="a">Team A</button><button type="button" class="tbtn tbtn--small tteam-btn--b' + (w === 'b' ? ' is-on' : '') + '" data-team="b">Team B</button><button type="button" class="tbtn tbtn--small' + (w === 'none' ? ' is-on is-miss' : '') + '" data-team="none">Nobody</button></div>';
       } else if (scoreable) {
@@ -2509,6 +2625,7 @@
       }
       var revealLabel = k === 'hy' ? (st.shown >= blanksOf(it) ? 'Hide facts' : st.shown ? 'Reveal next fact' : 'Reveal first fact')
         : k === 'drug' ? (st.revealed ? 'Hide the drug' : Math.max(1, st.shown) < cluesOf(it).length ? 'Next clue' : 'Reveal the drug')
+        : k === 'vig' && st.revealed && !st.step ? 'Next step'
         : st.revealed ? 'Hide answer' : k === 'case' ? 'Reveal teaching point' : 'Reveal answer';
       var last = S.pos === S.order.length - 1;
       box.innerHTML = barHTMLs(it) +
@@ -2518,7 +2635,7 @@
           (revealable(it) ? '<button class="tbtn tbtn--solid" type="button" id="t-reveal">' + revealLabel + '</button>' : '') +
           ((k === 'hy' && blanksOf(it) > 1 && st.shown < blanksOf(it)) || (k === 'drug' && !st.revealed && Math.max(1, st.shown) < cluesOf(it).length) ? '<button class="tbtn" type="button" id="t-all">' + (k === 'drug' ? 'Reveal the drug' : 'Reveal all') + '</button>' : '') +
           '<button class="tbtn' + (revealable(it) ? '' : ' tbtn--solid') + '" type="button" id="t-next">' + (last ? 'Finish' : 'Next') + '</button></div>' +
-        '<p class="teach__keys" aria-hidden="true">Space reveal · ← → move · ' + (k === 'mcq' && !S.teams ? 'A–E mark the group’s answer · ' : S.teams ? '1 / 2 / 0 award the point · ' : 'Y got it · N missed · ') + 'R flag · + text size · ' + (S.timer ? 'P pause · ' : '') + 'F full screen · Esc close</p>';
+        '<p class="teach__keys" aria-hidden="true">Space reveal · ← → move · ' + ((k === 'mcq' || k === 'vig') && !S.teams ? 'A–E mark the group’s answer · ' : S.teams ? '1 / 2 / 0 award the point · ' : 'Y got it · N missed · ') + 'R flag · + text size · ' + (S.timer ? 'P pause · ' : '') + 'F full screen · Esc close</p>';
       if (k !== 'hy' && k !== 'drug') linkTerms(box.querySelector('.teach__inner'), { skip: '.tchoice__key, .teach__label, .teach__kicker, .teach__tally' });
       box.querySelectorAll('[data-pick]').forEach(function (b) {
         b.addEventListener('click', function () { var i = parseInt(b.getAttribute('data-pick'), 10); st.picked = st.picked === i ? null : i; draw(); });
@@ -2548,17 +2665,17 @@
     function missedIds() {
       return S.order.filter(function (id) {
         if (!cat.byId[id] || cat.byId[id].kind === 'hyt') return false;
-        return S.teams ? S.team[id] === 'none' : S.res[id] === 0;
+        return S.teams ? teamList(id).indexOf('none') > -1 : resList(id).indexOf(0) > -1;
       });
     }
     function flaggedIds() { return S.order.filter(function (id) { return S.flags[id] && cat.byId[id]; }); }
     function drawEnd() {
       stopTimer();
       var miss = missedIds(), flg = flaggedIds().filter(function (id) { return miss.indexOf(id) < 0; });
-      var marked = S.order.filter(function (id) { return S.teams ? S.team[id] : S.res[id] !== undefined; }).length;
+      var marked = 0; S.order.forEach(function (id) { if (cat.byId[id]) marked += (S.teams ? teamList(id) : resList(id)).length; });
       var sc = scoreText(), headline;
       if (S.teams) headline = sc.a === sc.b ? 'It’s a tie, ' + sc.a + '–' + sc.b : (sc.a > sc.b ? 'Team A' : 'Team B') + ' wins, ' + Math.max(sc.a, sc.b) + '–' + Math.min(sc.a, sc.b);
-      else { var ok = 0; S.order.forEach(function (id) { if (S.res[id] === 1) ok++; }); headline = marked ? 'The room got ' + ok + ' of ' + marked : 'Session complete'; }
+      else { var ok = 0; S.order.forEach(function (id) { resList(id).forEach(function (v) { if (v === 1) ok++; }); }); headline = marked ? 'The room got ' + ok + ' of ' + marked : 'Session complete'; }
       function list(ids) {
         return '<ol class="tend__list">' + ids.map(function (id) { var it = cat.byId[id]; return '<li><span class="tend__meta">' + esc(teachMeta(it)) + '</span><span>' + fmt(teachReviewText(it, (S.pk || {})[id])) + '</span></li>'; }).join('') + '</ol>';
       }
@@ -2600,14 +2717,19 @@
       box.querySelector('.teach__stage').scrollTop = 0;
     }
 
-    function mark(v) { var id = cur().id; if (S.res[id] === v) delete S.res[id]; else S.res[id] = v; save(); draw(); }
-    function award(t) { var id = cur().id; if (S.team[id] === t) delete S.team[id]; else S.team[id] = t; save(); draw(); }
+    function mark(v) { var id = cur().id; if (cur().kind === 'vig') setStepVal(S.res, id, v); else if (S.res[id] === v) delete S.res[id]; else S.res[id] = v; save(); draw(); }
+    function award(t) { var id = cur().id; if (cur().kind === 'vig') setStepVal(S.team, id, t); else if (S.team[id] === t) delete S.team[id]; else S.team[id] = t; save(); draw(); }
     function flag() { var it = cur(); if (!it) return; if (S.flags[it.id]) delete S.flags[it.id]; else S.flags[it.id] = 1; save(); draw(); }
     function bump() { size = (size + 1) % TEACH_SIZES.length; store.set('teachSize', size); draw(); }
     function afterReveal() {
       var it = cur();
-      if (isDone(it)) stopTimer();
+      if (isDone(it) || (it.kind === 'vig' && st.revealed)) stopTimer();
       if (it.kind === 'mcq' && st.revealed && st.picked != null) { S.pk = S.pk || {}; S.pk[it.id] = st.picked; if (!S.teams) S.res[it.id] = st.picked === it.c.answer ? 1 : 0; save(); }
+      if (it.kind === 'vig' && st.revealed && st.picked != null) {
+        S.pk = S.pk || {}; var pk = Array.isArray(S.pk[it.id]) ? S.pk[it.id] : [null, null]; pk[st.step] = st.picked; S.pk[it.id] = pk;
+        if (!S.teams) { var rv = Array.isArray(S.res[it.id]) ? S.res[it.id] : [null, null]; rv[st.step] = st.picked === it.c.steps[st.step].answer ? 1 : 0; S.res[it.id] = rv; }
+        save();
+      }
       draw();
       var a = box.querySelector('.teach__tally') || box.querySelector('.teach__answer'); if (a) a.scrollIntoView({ block: 'nearest', behavior: reduceMotion() ? 'auto' : 'smooth' });
     }
@@ -2615,6 +2737,7 @@
       var it = cur();
       if (!revealable(it)) return go(1);
       if (it.kind === 'hy') { if (st.shown >= blanksOf(it)) { st.shown = 0; draw(); return; } st.shown++; }
+      else if (it.kind === 'vig' && st.revealed && !st.step) { nextStep(); return; }
       else if (it.kind === 'drug') {
         if (st.revealed) { st.revealed = false; draw(); return; }
         var n = Math.max(1, st.shown);
@@ -2676,12 +2799,12 @@
       else if ((e.key === ' ' || e.key === 'Enter') && !onBtn) { e.preventDefault(); toggle(); }
       else if (e.key === 'p' || e.key === 'P') { e.preventDefault(); pause(); }
       else if ((e.key === 'r' || e.key === 'R') && it.kind !== 'hyt') { e.preventDefault(); flag(); }
-      else if (it.kind === 'mcq' && !st.revealed && /^[a-e]$/i.test(e.key)) {
+      else if ((it.kind === 'mcq' || it.kind === 'vig') && !st.revealed && /^[a-e]$/i.test(e.key)) {
         var i = 'abcde'.indexOf(e.key.toLowerCase());
-        if (i < it.c.choices.length) { e.preventDefault(); st.picked = st.picked === i ? null : i; draw(); }
+        if (i < (it.kind === 'vig' ? it.c.steps[st.step] : it.c).choices.length) { e.preventDefault(); st.picked = st.picked === i ? null : i; draw(); }
       }
-      else if (S.teams && isDone(it) && revealable(it) && /^[120]$/.test(e.key)) { e.preventDefault(); award({ '1': 'a', '2': 'b', '0': 'none' }[e.key]); }
-      else if (!S.teams && it.kind !== 'mcq' && isDone(it) && revealable(it) && /^[yn]$/i.test(e.key)) { e.preventDefault(); mark(e.key.toLowerCase() === 'y' ? 1 : 0); }
+      else if (S.teams && (isDone(it) || (it.kind === 'vig' && st.revealed)) && revealable(it) && /^[120]$/.test(e.key)) { e.preventDefault(); award({ '1': 'a', '2': 'b', '0': 'none' }[e.key]); }
+      else if (!S.teams && it.kind !== 'mcq' && it.kind !== 'vig' && isDone(it) && revealable(it) && /^[yn]$/i.test(e.key)) { e.preventDefault(); mark(e.key.toLowerCase() === 'y' ? 1 : 0); }
     }
     function onFs() { var b = box.querySelector('#t-fs'); if (b) b.textContent = isFullscreen() ? 'Exit full screen' : 'Full screen'; }
     document.addEventListener('keydown', onKey);
@@ -3565,6 +3688,7 @@
     drugs: { label: 'Drug card', css: 'drug' },
     clinical: { label: 'Clinical card', css: 'clin' },
     cases: { label: 'Board question', css: 'case' },
+    vignettes: { label: 'Two-step vignette', css: 'vig' },
     glossary: { label: 'Glossary', css: 'gloss' },
     drug: { label: 'Drug', css: 'drug' },
     nt: { label: 'Neurotransmitter', css: 'mech' },
@@ -3591,7 +3715,8 @@
       });
       DECKS.forEach(function (d) {
         (ch[d.key] || []).forEach(function (c) {
-          var text = plain(c.q) + ' ' + (c.choices ? c.choices.map(plain).join(' ') + ' ' : '') + plain(c.a || '') + ' ' + plain(c.why || '') + (c.whyNot ? ' ' + c.whyNot.map(plain).join(' ') : '');
+          var qText = function (q) { return plain(q.lead || '') + ' ' + plain(q.q) + ' ' + (q.choices ? q.choices.map(plain).join(' ') + ' ' : '') + plain(q.a || '') + ' ' + plain(q.why || '') + (q.whyNot ? ' ' + q.whyNot.map(plain).join(' ') : ''); };
+          var text = isVig(c) ? plain(c.stem) + ' ' + c.steps.map(qText).join(' ') : qText(c);
           INDEX.push({ ch: ch, kind: d.key, title: c.tag || d.short, text: text, front: plain(c.q), href: '#/c/' + ch.id + '/cards/' + d.key + '/' + c.id });
         });
       });
