@@ -9,6 +9,24 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "28.0.0",
+    "date": "2026-11-11",
+    "title": "Drug-class cheat sheets",
+    "summary": "One sheet per type of drug (17), built from the drug database, each with a two-column PDF.",
+    "items": [
+      {
+        "type": "feature",
+        "text": "Cheat sheets: what each class shares (targets most of its drugs act on, chapters), a binding-strength grid for classes where the book gives strengths (antipsychotics, SSRIs and SNRIs, NMDA antagonists), and a drug-by-drug table of key targets, uses, side effects with the reason, and pearls. Choose Key points or Everything, and filter by subgroup.",
+        "href": "#/cheat",
+        "link": "Cheat sheets"
+      },
+      {
+        "type": "feature",
+        "text": "Download any sheet as a two-column PDF (A4 or Letter) that uses the largest type that keeps it to the fewest pages. Each drug page's Same class box, the drug database's type filter and Compare now link to the matching sheet, and search finds them."
+      }
+    ]
+  },
+  {
     "version": "27.0.0",
     "date": "2026-11-10",
     "title": "Drug library: anxiety, pain, sleep, ADHD, dementia and addiction drugs in more depth",

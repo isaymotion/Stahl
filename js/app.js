@@ -339,6 +339,7 @@
       case 'nt': return p[1] ? renderNT(p[1]) : renderNTs();
       case 'targets': return p[1] ? renderTarget(p[1]) : renderTargets();
       case 'compare': return renderCompare(p.slice(1).join('/'));
+      case 'cheat': return p[1] ? renderCheat(p[1]) : renderCheats();
       case 'circuits': return renderCircuits(p[1]);
       case 'nbn': return renderNbN();
       case 'updates': return renderUpdates();
@@ -402,6 +403,7 @@
     { key: 'nt', tkey: 'nav.nt', href: '#/nt', label: 'Neurotransmitters', blurb: 'Synthesis, termination, receptors, pathways and the drugs that act on each.', css: 'mech' },
     { key: 'targets', tkey: 'nav.targets', href: '#/targets', label: 'Receptors & targets', blurb: 'Receptors, transporters, enzymes and channels, and what hitting each one does.', css: 'guide' },
     { key: 'compare', tkey: 'nav.compare', href: '#/compare', label: 'Compare drugs', blurb: 'Two or three agents side by side.', css: 'case' },
+    { key: 'cheat', tkey: 'nav.cheat', href: '#/cheat', label: 'Cheat sheets', blurb: 'One sheet per drug type: shared targets, binding at a glance, uses, side effects, pearls. Prints as a PDF.', css: 'drug' },
     { key: 'circuits', tkey: 'nav.circuits', href: '#/circuits', label: 'Symptoms & circuits', blurb: 'Symptom → malfunctioning circuit → targeted mechanism.', css: 'clin' },
     { key: 'nbn', tkey: 'nav.nbn', href: '#/nbn', label: 'Nomenclature (NbN)', blurb: 'Traditional class names mapped to mechanism-based names.', css: 'hy' },
     { key: 'glossary', tkey: 'nav.glossary', href: '#/glossary', label: 'Glossary', blurb: 'Terms defined in the chapters, tap-to-define everywhere.', css: 'gloss' },
@@ -727,8 +729,8 @@
 
   /* ---------- library hub ---------- */
   function renderLibrary() {
-    var counts = { drugs: (SP.drugs || []).length, nt: (SP.nts || []).length, targets: (SP.targets || []).length, circuits: (SP.circuits || []).length, glossary: (SP.glossary || []).length, updates: collectUpdates().length, nbn: (SP.drugs || []).filter(function (d) { return d.nbn; }).length, compare: (SP.drugs || []).length, monitoring: (SP.monitoring || []).length };
-    var unit = { drugs: 'agent', nt: 'messenger', targets: 'target', circuits: 'symptom map', glossary: 'term', updates: 'update', nbn: 'mapped agent', compare: 'agent', monitoring: 'checklist' };
+    var counts = { drugs: (SP.drugs || []).length, nt: (SP.nts || []).length, targets: (SP.targets || []).length, circuits: (SP.circuits || []).length, glossary: (SP.glossary || []).length, updates: collectUpdates().length, nbn: (SP.drugs || []).filter(function (d) { return d.nbn; }).length, compare: (SP.drugs || []).length, monitoring: (SP.monitoring || []).length, cheat: (SP.drugFamilies || []).filter(function (f) { return familyCounts()[f.id]; }).length };
+    var unit = { drugs: 'agent', nt: 'messenger', targets: 'target', circuits: 'symptom map', glossary: 'term', updates: 'update', nbn: 'mapped agent', compare: 'agent', monitoring: 'checklist', cheat: 'drug type' };
     var html = '<div class="wrap page"><header class="page__head"><h1>Reference library</h1><p>Cross-linked databases built from all 13 chapters. Every entry cites the chapter and book pages it comes from; anything from outside the book is boxed as a post-publication update.</p></header>' +
       '<div class="tools tools--lib">' + LIBRARY.map(function (l) {
         return '<a class="tool tool--lib c-' + l.css + '" href="' + l.href + '"><span class="tool__name">' + esc(l.label) + '</span><span class="tool__meta">' + esc(l.blurb) + '</span><span class="tool__ch">' + plural(counts[l.key] || 0, unit[l.key]) + (l.key === 'compare' ? ' to compare' : '') + '</span></a>';
@@ -2769,7 +2771,7 @@
       (drugs.length ? '<div class="lib-tools"><label class="gloss__search"><span class="sr-only">Filter drugs</span><input type="search" id="dq" placeholder="Filter by name, brand or class" value="' + esc(prefs.q) + '" autocomplete="off"></label>' +
         '<label class="select"><span>Drug type</span><select id="dg"><option value="all">All types</option>' + fams.map(function (f) { return '<option value="' + f.id + '"' + (prefs.g === f.id ? ' selected' : '') + '>' + esc(f.label) + '</option>'; }).join('') + '</select></label>' +
         '<label class="select"><span>Acts at</span><select id="dt"><option value="all">Any target</option>' + Object.keys(tUsed).sort(function (a, b) { return targetName(a).localeCompare(targetName(b)); }).map(function (t) { return '<option value="' + esc(t) + '"' + (prefs.t === t ? ' selected' : '') + '>' + esc(targetName(t)) + '</option>'; }).join('') + '</select></label>' +
-        '<a class="btn btn--small" href="#/compare">Compare drugs</a></div>' +
+        '<a class="btn btn--small" href="#/compare">Compare drugs</a><a class="btn btn--small" id="dcheat" href="#/cheat">Cheat sheets</a></div>' +
         '<p class="gloss__count" id="dcount"></p><ul class="drug-grid" id="dlist"></ul>'
         : emptyLib('drugs', 'Drug entries begin with Chapter 2 (transporters, receptors and enzymes as drug targets) and fill in with every clinical chapter.')) + '</div>';
     setView('drugs', html);
@@ -2790,6 +2792,7 @@
           '<span class="drug-card__cls">' + esc(d.cls || d.group || '') + '</span><span class="drug-card__mech">' + esc(plain(d.short || d.mechanism || '').slice(0, 120)) + '</span></a></li>';
       }).join('');
       main.querySelector('#dcount').textContent = plural(shown.length, 'agent') + (shown.length < drugs.length ? ' of ' + drugs.length : '');
+      var cl = main.querySelector('#dcheat'); if (cl) { cl.setAttribute('href', g === 'all' ? '#/cheat' : '#/cheat/' + g); cl.textContent = g === 'all' ? 'Cheat sheets' : 'Cheat sheet'; }
     }
     ['#dq', '#dg', '#dt'].forEach(function (sel) { main.querySelector(sel).addEventListener(sel === '#dq' ? 'input' : 'change', draw); });
     draw();
@@ -2823,8 +2826,210 @@
   }
   function relatedDrugsHTML(d) {
     var same = (SP.drugs || []).filter(function (x) { return x.id !== d.id && x.group && x.group === d.group; }).slice(0, 10);
-    if (!same.length) return '';
-    return '<h2>Same class</h2><ul class="side-links">' + same.map(function (x) { return '<li><a href="#/drugs/' + x.id + '">' + esc(x.name) + '</a></li>'; }).join('') + '</ul>';
+    var fam = familyOf(d), cheat = famById(fam.id) ? '<p class="side-cheat"><a class="btn btn--small" href="#/cheat/' + fam.id + '">Cheat sheet: ' + esc(fam.label) + '</a></p>' : '';
+    if (!same.length) return cheat ? '<h2>Same class</h2>' + cheat : '';
+    return '<h2>Same class</h2><ul class="side-links">' + same.map(function (x) { return '<li><a href="#/drugs/' + x.id + '">' + esc(x.name) + '</a></li>'; }).join('') + '</ul>' + cheat;
+  }
+
+  /* ---------- drug-class cheat sheets (28.0.0) ----------
+     One sheet per drug type in SP.drugFamilies, built only from the library fields (class, NbN name,
+     binding profile, uses, side effects, pearls), so it stays in step with the drug database.
+     Routes: #/cheat (index) and #/cheat/<familyId>. "Key points" trims each drug to its highest-yield rows. */
+  var CHEAT_KEY = { targets: 4, uses: 3, se: 3, pearls: 2 };
+  function famById(id) { return (SP.drugFamilies || []).filter(function (f) { return f.id === id; })[0] || null; }
+  function famDrugs(f) {
+    var ix = famIndex();
+    return (SP.drugs || []).filter(function (d) { return familyOf(d).id === f.id; }).sort(function (a, b) {
+      var ga = has(ix.order, a.group) && ix.groups[a.group] === f ? ix.order[a.group] : 99, gb = has(ix.order, b.group) && ix.groups[b.group] === f ? ix.order[b.group] : 99;
+      return ga - gb || a.name.localeCompare(b.name);
+    });
+  }
+  function sortedTargets(d) {
+    return (d.targets || []).map(function (x, i) { return { x: x, i: i }; }).sort(function (a, b) {
+      var sa = a.x.s == null ? -1 : a.x.s, sb = b.x.s == null ? -1 : b.x.s; return sb - sa || a.i - b.i;
+    }).map(function (o) { return o.x; });
+  }
+  function cheatRows(d, full) {
+    function cut(arr, n) { arr = arr || []; return { list: full ? arr : arr.slice(0, n), more: full ? 0 : Math.max(0, arr.length - n) }; }
+    return { targets: cut(sortedTargets(d), CHEAT_KEY.targets), uses: cut(d.uses, CHEAT_KEY.uses), se: cut(d.sideEffects, CHEAT_KEY.se), pearls: cut(d.pearls, CHEAT_KEY.pearls) };
+  }
+  function famChapters(ds) {
+    var seen = {}; ds.forEach(function (d) { (d.chapters || []).forEach(function (c) { seen[c.ch] = 1; }); });
+    return Object.keys(seen).map(function (id) { return planned(id); }).filter(Boolean).sort(function (a, b) { return a.number - b.number; });
+  }
+  // targets that at least half of the class (and at least two drugs) act on, with the most common action
+  function sharedTargets(ds) {
+    var c = {};
+    ds.forEach(function (d) {
+      var done = {};
+      (d.targets || []).forEach(function (x) {
+        if (done[x.t]) return; done[x.t] = 1;
+        var e = c[x.t] = c[x.t] || { t: x.t, n: 0, acts: {} };
+        e.n++; var a = actionOf(x.action).label; e.acts[a] = (e.acts[a] || 0) + 1;
+      });
+    });
+    var need = Math.max(2, Math.ceil(ds.length / 2));
+    return Object.keys(c).map(function (k) { return c[k]; }).filter(function (e) { return e.n >= need; }).sort(function (a, b) { return b.n - a.n || targetName(a.t).localeCompare(targetName(b.t)); })
+      .map(function (e) {
+        var ks = Object.keys(e.acts).sort(function (a, b) { return e.acts[b] - e.acts[a]; });
+        e.action = ks[0]; e.same = e.acts[ks[0]];
+        e.other = ks.slice(1).map(function (k) { return k.toLowerCase() + ' ' + e.acts[k]; }).join(', ');
+        return e;
+      });
+  }
+  function famGroups(f, ds) {
+    var out = [];
+    f.groups.concat(ds.map(function (d) { return d.group; })).forEach(function (g) {
+      if (!g || out.some(function (o) { return o.g === g; })) return;
+      var n = ds.filter(function (d) { return d.group === g; }).length;
+      if (n) out.push({ g: g, n: n });
+    });
+    return out;
+  }
+  function dots(s) { return s == null ? '' : '<span class="sdots" aria-label="strength ' + s + ' of 4">' + [1, 2, 3, 4].map(function (i) { return '<i' + (i <= s ? ' class="on"' : '') + '></i>'; }).join('') + '</span>'; }
+  function targetText(x) { var a = actionOf(x.action); return targetName(x.t) + ' ' + a.label.toLowerCase() + (x.s != null ? ' (' + x.s + '/4)' : ''); }
+  function seText(x) { return x.e + (x.via ? ' (' + x.via + ')' : ''); }
+
+  function renderCheats() {
+    var fams = (SP.drugFamilies || []).map(function (f) { return { f: f, ds: famDrugs(f) }; }).filter(function (o) { return o.ds.length; });
+    var html = '<div class="wrap page">' + libHead(null, null, 'Drug-class cheat sheets', 'One sheet per type of drug: what the class shares, binding at a glance, and each agent’s key targets, uses, side effects and pearls. Every sheet prints as a two-column PDF. Built from the drug database, so page references live on each drug’s entry.') +
+      '<ul class="cheat-grid">' + fams.map(function (o) {
+        var gs = famGroups(o.f, o.ds);
+        return '<li><a class="cheat-card" href="#/cheat/' + o.f.id + '"><span class="cheat-card__name">' + esc(o.f.label) + '</span><span class="cheat-card__meta">' + plural(o.ds.length, 'drug') + ' · ' + famChapters(o.ds).map(function (c) { return 'Ch ' + c.number; }).join(', ') + '</span>' +
+          '<span class="cheat-card__groups">' + esc(gs.map(function (g) { return g.g; }).join(' · ')) + '</span></a></li>';
+      }).join('') + '</ul></div>';
+    setView('cheats', html);
+    document.title = 'Cheat sheets — ' + APP;
+  }
+
+  function cheatPdfSpec(f, ds, prefs, glance) {
+    var full = prefs.detail === 'all', chs = famChapters(ds);
+    var topics = [{ topic: 'Class at a glance', items: glance }];
+    ds.forEach(function (d) {
+      var r = cheatRows(d, full), items = [];
+      items.push('*' + (d.cls || d.group || '') + '*' + (d.nbn ? '. NbN: ' + d.nbn : ''));
+      if (d.short) items.push('**Mechanism:** ' + d.short);
+      if (r.targets.list.length) items.push('**Key targets:** ' + r.targets.list.map(targetText).join('; ') + (r.targets.more ? '; +' + r.targets.more + ' more' : ''));
+      if (r.uses.list.length) items.push('**Uses:** ' + r.uses.list.join('; '));
+      if (r.se.list.length) items.push('**Side effects:** ' + r.se.list.map(seText).join('; '));
+      r.pearls.list.forEach(function (p) { items.push('Pearl: ' + p); });
+      topics.push({ topic: d.name + (d.brand ? ' (' + d.brand + ')' : ''), items: items.map(richText) });
+    });
+    return {
+      paper: prefs.paper, footer: ATTRIBUTION, title: f.label + ' cheat sheet', minPt: 7, maxPt: 9.5,
+      chapters: [{ kicker: 'Drug-class cheat sheet' + (full ? '' : ' (key points)'), title: f.label, source: [BOOK, chs.length ? (chs.length > 1 ? 'Chapters ' : 'Chapter ') + chs.map(function (c) { return c.number; }).join(', ') : ''],
+        running: f.label + ' cheat sheet', topics: topics }]
+    };
+  }
+
+  function renderCheat(id) {
+    var f = famById(id);
+    if (!f) return renderMissing();
+    var ds = famDrugs(f);
+    if (!ds.length) return renderMissing();
+    var prefs = store.get('cheatPrefs', { detail: 'key', paper: 'a4', g: 'all' });
+    if (prefs.detail !== 'all') prefs.detail = 'key';
+    if (!PAPER[prefs.paper]) prefs.paper = 'a4';
+    var groups = famGroups(f, ds), chs = famChapters(ds), shared = sharedTargets(ds);
+    var gFilter = prefs.gf && prefs.gf[f.id] && groups.some(function (g) { return g.g === prefs.gf[f.id]; }) ? prefs.gf[f.id] : 'all';
+    var glance = [];
+    glance.push('**' + plural(ds.length, 'drug') + '**' + (groups.length > 1 ? ': ' + groups.map(function (g) { return g.g + ' ' + g.n; }).join(', ') : ''));
+    if (shared.length) glance.push('**Shared targets:** ' + shared.slice(0, 6).map(function (e) { return targetName(e.t) + ' ' + e.action.toLowerCase() + ' (' + e.same + '/' + ds.length + (e.other ? '; also ' + e.other : '') + ')'; }).join('; '));
+    else glance.push('**Shared targets:** none common to half the class; the agents work by different mechanisms.');
+    // binding matrix: drugs with any described strength × targets used by 2+ of them
+    var mx = ds.filter(function (d) { return (d.targets || []).some(function (x) { return x.s != null; }); });
+    var matrix = '';
+    if (mx.length >= 3) {
+      var tc = {}; mx.forEach(function (d) { (d.targets || []).forEach(function (x) { if (x.s != null) tc[x.t] = (tc[x.t] || 0) + 1; }); });
+      var cols = Object.keys(tc).filter(function (k) { return tc[k] >= 2; }).sort(function (a, b) { return tc[b] - tc[a] || targetName(a).localeCompare(targetName(b)); }).slice(0, 12);
+      if (cols.length >= 2) matrix = '<section class="lib-sec"><h2>Binding at a glance</h2><p class="muted cheat-note">The ' + plural(mx.length, 'agent') + ' whose binding strength the book describes. Darker = stronger (1–4); colour = action; blank = not described as acting there.</p>' +
+        '<div class="table-wrap cheat-mx"><table><thead><tr><th scope="col">Drug</th>' + cols.map(function (c) { return '<th scope="col"><a href="#/targets/' + c + '">' + esc(targetName(c)) + '</a></th>'; }).join('') + '</tr></thead><tbody>' +
+        mx.map(function (d) {
+          return '<tr><th scope="row"><a href="#/drugs/' + d.id + '">' + esc(d.name) + '</a></th>' + cols.map(function (c) {
+            var x = null; (d.targets || []).forEach(function (y) { if (y.t === c) x = y; });
+            if (!x) return '<td></td>';
+            var a = actionOf(x.action);
+            return '<td><span class="mx mx--' + a.css + (x.s == null ? ' mx--unk' : ' mx--s' + Math.max(1, Math.min(4, x.s))) + '" title="' + esc(a.label + (x.s != null ? ', strength ' + x.s + ' of 4' : ', strength not described')) + '">' + (x.s != null ? x.s : '?') + '</span></td>';
+          }).join('') + '</tr>';
+        }).join('') + '</tbody></table></div>' +
+        '<p class="profile__key"><span class="pkey pkey--block"></span>Blocks or inhibits <span class="pkey pkey--stim"></span>Stimulates <span class="pkey pkey--partial"></span>Partial agonist <span class="pkey pkey--mod"></span>Modulates</p></section>';
+    }
+    function seg(name, opts, cur) {
+      return '<div class="seg" role="radiogroup">' + opts.map(function (o) { return '<label><input type="radio" name="' + name + '" value="' + o[0] + '"' + (o[0] === cur ? ' checked' : '') + '><span>' + o[1] + '</span></label>'; }).join('') + '</div>';
+    }
+    var html = '<div class="wrap page lib-page c-drug cheat-page">' +
+      libHead('#/cheat', 'Cheat sheets', esc(f.label), null, '<a class="btn btn--small" href="#/compare/' + f.id + '">Compare</a><a class="btn btn--small" href="#cheat-pdf" id="cheat-jump">PDF</a>') +
+      '<section class="cheat-glance"><dl class="kv">' +
+        '<dt>Drugs</dt><dd>' + plural(ds.length, 'agent') + (groups.length > 1 ? ' in ' + groups.length + ' subgroups' : '') + '</dd>' +
+        '<dt>Discussed in</dt><dd><span class="ref-chips">' + chs.map(function (c) { return chRef({ ch: c.id }); }).join('') + '</span></dd>' +
+        '<dt>Shared targets</dt><dd>' + (shared.length ? '<ul class="cheat-shared">' + shared.slice(0, 6).map(function (e) {
+          return '<li><a href="#/targets/' + e.t + '">' + esc(targetName(e.t)) + '</a> <span class="muted">' + esc(e.action.toLowerCase()) + ', ' + e.same + ' of ' + ds.length + (e.other ? ' (also ' + esc(e.other) + ')' : '') + '</span></li>';
+        }).join('') + '</ul>' : '<span class="muted">None common to half the class: these agents work by different mechanisms.</span>') + '</dd>' +
+      '</dl></section>' + matrix +
+      '<section class="lib-sec"><h2>Drug by drug</h2>' +
+        '<div class="cheat-tools"><div class="handout-tools__row"><span class="handout-tools__label">Detail</span>' + seg('detail', [['key', 'Key points'], ['all', 'Everything']], prefs.detail) + '</div>' +
+        (groups.length > 1 ? '<div class="fam-chips" role="group" aria-label="Subgroup"><button type="button" class="filter" data-cg="all" aria-pressed="' + (gFilter === 'all') + '">All <span class="muted">' + ds.length + '</span></button>' +
+          groups.map(function (g) { return '<button type="button" class="filter" data-cg="' + esc(g.g) + '" aria-pressed="' + (gFilter === g.g) + '">' + esc(g.g) + ' <span class="muted">' + g.n + '</span></button>'; }).join('') + '</div>' : '') +
+        '</div><div id="cheat-body"></div></section>' +
+      '<section class="lib-sec handout-tools" id="cheat-pdf"><h2>Download PDF</h2><p class="muted cheat-note">A two-column sheet of this class with the detail level chosen above (all subgroups). The type size is the largest that keeps it to the fewest pages.</p>' +
+        '<div class="handout-tools__row"><span class="handout-tools__label">Paper</span>' + seg('paper', [['a4', 'A4'], ['letter', 'Letter']], prefs.paper) + '</div>' +
+        '<div class="handout-tools__go"><button class="btn btn--solid" type="button" id="cheat-print">Create PDF</button><p class="handout-fit" id="cheat-fit" aria-live="polite"></p></div></section>' +
+      '<p class="report-row">' + reportLink('Cheat sheet, ' + f.label, '#/cheat/' + f.id) + '</p></div>';
+    setView('cheat:' + f.id, html);
+    document.title = f.label + ' cheat sheet — ' + APP;
+    var body = main.querySelector('#cheat-body'), fit = main.querySelector('#cheat-fit'), btn = main.querySelector('#cheat-print');
+    var alive = true;
+    function cell(label, inner) { return '<td data-label="' + label + '">' + inner + '</td>'; }
+    function more(n) { return n ? '<li class="muted">+' + n + ' more on the drug page</li>' : ''; }
+    function draw() {
+      var full = prefs.detail === 'all', cur = null, rows = '';
+      ds.filter(function (d) { return gFilter === 'all' || d.group === gFilter; }).forEach(function (d) {
+        if (groups.length > 1 && gFilter === 'all' && d.group !== cur) { cur = d.group; rows += '<tr class="table-group"><td colspan="5">' + esc(cur || 'Other') + '</td></tr>'; }
+        var r = cheatRows(d, full);
+        rows += '<tr><th scope="row"><a href="#/drugs/' + d.id + '">' + esc(d.name) + '</a>' + (d.brand ? '<span class="muted cheat-brand">' + esc(d.brand) + '</span>' : '') + (d.nbn ? '<small>' + fmt(d.nbn) + '</small>' : '') + '</th>' +
+          cell('Key targets', r.targets.list.length ? '<ul class="cheat-t">' + r.targets.list.map(function (x) { var a = actionOf(x.action); return '<li><span class="cheat-t__n">' + esc(targetName(x.t)) + '</span> <span class="act act--' + a.css + '">' + esc(a.label) + '</span> ' + dots(x.s) + '</li>'; }).join('') + more(r.targets.more) + '</ul>' : '<span class="muted">—</span>') +
+          cell('Uses', r.uses.list.length ? '<ul>' + r.uses.list.map(function (u) { return '<li>' + fmt(u) + '</li>'; }).join('') + more(r.uses.more) + '</ul>' : '<span class="muted">—</span>') +
+          cell('Side effects (why)', r.se.list.length ? '<ul>' + r.se.list.map(function (x) { return '<li>' + fmt(x.e) + (x.via ? ' <span class="muted">— ' + fmt(x.via) + '</span>' : '') + '</li>'; }).join('') + more(r.se.more) + '</ul>' : '<span class="muted">—</span>') +
+          cell('Pearls', r.pearls.list.length ? '<ul>' + r.pearls.list.map(function (p) { return '<li>' + fmt(p) + '</li>'; }).join('') + more(r.pearls.more) + '</ul>' : '<span class="muted">—</span>') + '</tr>';
+      });
+      body.innerHTML = '<div class="table-wrap cheat-table"><table><thead><tr><th scope="col">Drug</th><th scope="col">Key targets</th><th scope="col">Uses</th><th scope="col">Side effects (why)</th><th scope="col">Pearls</th></tr></thead><tbody>' + rows + '</tbody></table></div>';
+      linkTerms(body);
+    }
+    function spec() { return cheatPdfSpec(f, ds, prefs, glance); }
+    function planFit(P) { var s = spec(), first = P.layout(s, s.minPt); s.maxPages = first.count; return { s: s, pl: P.plan(s) }; }
+    function refresh() {
+      btn.disabled = true; fit.className = 'handout-fit'; fit.textContent = 'Checking the fit…';
+      return loadPdf().then(function (P) {
+        if (!alive) return;
+        var r = planFit(P); btn.disabled = false;
+        fit.textContent = plural(r.pl.count, 'page') + ' at ' + (Math.round(r.pl.size * 10) / 10) + ' pt (' + (prefs.detail === 'all' ? 'everything' : 'key points') + ').';
+      }).catch(function (e) { fit.className = 'handout-fit is-warn'; fit.textContent = pdfErrorMsg(e); btn.disabled = false; });
+    }
+    main.querySelectorAll('input[name=detail], input[name=paper]').forEach(function (i) {
+      i.addEventListener('change', function () { prefs[i.name] = i.value; store.set('cheatPrefs', prefs); if (i.name === 'detail') draw(); refresh(); });
+    });
+    main.querySelectorAll('[data-cg]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        gFilter = b.getAttribute('data-cg'); prefs.gf = prefs.gf || {}; prefs.gf[f.id] = gFilter; store.set('cheatPrefs', prefs);
+        main.querySelectorAll('[data-cg]').forEach(function (x) { x.setAttribute('aria-pressed', String(x === b)); });
+        draw();
+      });
+    });
+    main.querySelector('#cheat-jump').addEventListener('click', function (e) { e.preventDefault(); main.querySelector('#cheat-pdf').scrollIntoView({ block: 'start', behavior: 'smooth' }); });
+    btn.addEventListener('click', function () {
+      if (btn.disabled) return;
+      var label = btn.textContent; btn.disabled = true; btn.textContent = 'Creating…';
+      loadPdf().then(function (P) {
+        var r = planFit(P);
+        return P.generate(r.s).then(function (out) {
+          P.save(out.blob, 'Stahl-cheat-sheet-' + f.id + (prefs.detail === 'all' ? '-full' : '') + '.pdf');
+          fit.className = 'handout-fit'; fit.textContent = 'PDF created (' + plural(out.pages, 'page') + '). Check your downloads or share sheet.';
+        });
+      }).catch(function (e) { fit.className = 'handout-fit is-warn'; fit.textContent = pdfErrorMsg(e); })
+        .then(function () { btn.textContent = label; btn.disabled = false; });
+    });
+    draw(); refresh();
+    view.cleanup = function () { alive = false; };
   }
 
   /* ---------- neurotransmitters ---------- */
@@ -2975,7 +3180,7 @@
         '</tbody></table></div>';
     }
     var html = '<div class="wrap page">' + libHead(null, null, 'Compare drugs', 'Choose up to three agents. Rows line up so differences in mechanism, binding and side effects stand out.') +
-      '<div class="cmp-filter"><p class="cmp-filter__label">Filter by drug type</p>' + familyChips(fam, familyCounts(), 'data-fam') + '</div>' +
+      '<div class="cmp-filter"><p class="cmp-filter__label">Filter by drug type' + (fam !== 'all' && famById(fam) ? ' <a class="cmp-cheat" href="#/cheat/' + fam + '">Cheat sheet for ' + esc(famById(fam).label) + ' →</a>' : '') + '</p>' + familyChips(fam, familyCounts(), 'data-fam') + '</div>' +
       '<div class="lib-tools cmp-pick"><label class="gloss__search"><span class="sr-only">Search drugs</span><input type="search" id="cmp-q" placeholder="Type to narrow the lists" autocomplete="off"></label>' + sel(0) + sel(1) + sel(2) + '</div>' +
       (table || '<div class="empty"><h2>Pick a drug to start</h2><p>Comparisons work best within a class, for example two SSRIs or two partial agonists.</p></div>') + '</div>';
     setView('compare:' + fam + ':' + ids.join(','), html);
@@ -3317,7 +3522,8 @@
     nt: { label: 'Neurotransmitter', css: 'mech' },
     target: { label: 'Target', css: 'guide' },
     circuit: { label: 'Symptom & circuit', css: 'clin' },
-    monitoring: { label: 'Monitoring', css: 'upd' }
+    monitoring: { label: 'Monitoring', css: 'upd' },
+    cheat: { label: 'Cheat sheet', css: 'drug' }
   };
   function buildIndex() {
     INDEX = [];
@@ -3348,6 +3554,7 @@
     (SP.nts || []).forEach(function (n) { INDEX.push({ ch: null, kind: 'nt', title: n.name + (n.abbr ? ' (' + n.abbr + ')' : ''), text: plain([n.summary, n.family, (n.facts || []).map(function (f) { return f.text; }).join(' ')].join(' ')), href: '#/nt/' + n.id }); });
     (SP.targets || []).forEach(function (t) { INDEX.push({ ch: null, kind: 'target', title: t.name, text: plain([t.family, t.summary, (t.facts || []).map(function (f) { return f.text; }).join(' ')].join(' ')), href: '#/targets/' + t.id }); });
     (SP.circuits || []).forEach(function (c) { INDEX.push({ ch: null, kind: 'circuit', title: c.symptom + ' (' + c.disorder + ')', text: plain([c.circuit, (c.nts || []).join(' '), (c.treat || []).join(' ')].join(' ')), href: '#/circuits/' + c.id }); });
+    (SP.drugFamilies || []).forEach(function (f) { var ds = famDrugs(f); if (ds.length) INDEX.push({ ch: null, kind: 'cheat', title: f.label + ' cheat sheet', text: plain([f.groups.join(' '), ds.map(function (d) { return d.name; }).join(' ')].join(' ')), href: '#/cheat/' + f.id }); });
     (SP.monitoring || []).forEach(function (m) { INDEX.push({ ch: null, kind: 'monitoring', title: m.name + ' monitoring', text: plain([m.intro || '', (m.rows || []).map(function (r) { return r.param; }).join(', '), (m.bookWhy || []).map(function (w) { return w.text; }).join(' ')].join(' ')), href: '#/monitoring/' + m.id }); });
     INDEX.forEach(function (e) { e.lc = e.text.toLowerCase(); e.lt = e.title.toLowerCase(); });
   }
