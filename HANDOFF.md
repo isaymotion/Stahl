@@ -51,7 +51,7 @@ Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.
 
 ## 6. Status (as of 2026-11-11, main = b5534ea, version 28.0.0)
 
-**Not yet pushed (2026-11-11):** the R6 session could not push (`isaymotion/Stahl` was not in that session's authorized repos). `main` b5534ea and the `dev-tools` commit exist only as the bundle `stahl-r6.bundle` sent in that chat. Before new work: either push from the owner's machine (`git fetch stahl-r6.bundle main:r6 && git push origin r6:main`, same for `dev-tools`), or give the next session push access and re-create from the bundle. Check `git log origin/main -1` shows b5534ea.
+Pushed 2026-11-11 (main b5534ea, dev-tools 6bf8e12).
 
 | Area | State |
 |---|---|
@@ -74,7 +74,7 @@ R7 starting point: B2 wrong-answer rationales for Ch 9–13 board questions (`ca
 | R3 | Library depth 1 | B1: Ch 4–5 drugs (antipsychotics) | yes | **done 25.0.0** (68 pearls/32 drugs; see R3 method below) |
 | R4 | Library depth 2 | B1: Ch 6–7 drugs (mood, antidepressants) | yes | **done 26.0.0** (78 pearls/37 drugs; `work/r4/`) |
 | R5 | Library depth 3 | B1: Ch 8–13 + remaining drugs | yes | **done 27.0.0** (125 pearls + 61 SEs/55 drugs; `work/r5/`) |
-| R6 | Cheat sheets | A5 drug-class cheat sheets + PDF (built on R3–R5) | no | **done 28.0.0** (17 sheets, binding grid, PDF; push pending, see section 6) |
+| R6 | Cheat sheets | A5 drug-class cheat sheets + PDF (built on R3–R5) | no | **done 28.0.0** (17 sheets, binding grid, PDF) |
 | R7 | Rationales 1 | B2: why-each-wrong-answer + page ref, Ch 9–13 | yes | pending |
 | R8 | Rationales 2 | B2: same, Ch 1–8 | yes | pending |
 | R9 | Vignettes 1 | B2: ~15 two-step vignettes/ch, Ch 1–7 | yes | pending |
