@@ -104,4 +104,4 @@ Reference (original wording of the items):
 - New cards/questions need a topic: add keys to `work/r2/topic_map.json` and rebuild `data/topics.js`, or they drop out of topics and exam-by-topic.
 
 ## 9. Files to re-attach
-- `Stahls_Essential_Psychopharmacology_5th_ed.pdf`: needed for any content work (B1, B2, Ch 8/9 depth, cheat-sheet facts). Not needed for pure feature work (A1–A4, A6, A7, B3 mechanics, B4).
+- `Stahls_Essential_Psychopharmacology_5th_ed.pdf`: needed for content work (R7–R10 rationales and vignettes, R13 Ch 8/9 depth). Not needed for R6 (cheat sheets come from the library), R11, R12 or R14. After attaching, re-extract pages with the command in the R3 method line (extracted text is never committed: copyrighted).
