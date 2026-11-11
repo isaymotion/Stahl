@@ -9,6 +9,31 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "30.0.0",
+    "date": "2026-11-11",
+    "title": "Why each wrong answer is wrong \u2014 now every chapter",
+    "summary": "Chapters 1\u20138 join the rest: all 608 board questions in the app now explain each wrong choice and cite the book page.",
+    "items": [
+      {
+        "type": "feature",
+        "text": "Board questions in Chapters 1\u20138 (378 of them) now carry a reason for every wrong choice with the book page beside it, the same as Chapters 9\u201313. Every board question in the app is now covered: 2,432 reasons in all.",
+        "href": "#/exam",
+        "link": "Take an exam"
+      },
+      {
+        "type": "content",
+        "text": "Explanations in Chapters 1\u20138 that were only a few words are now full sentences: 117 questions were rewritten, and every question names the page that teaches its answer.",
+        "ch": "ch06"
+      },
+      {
+        "type": "correction",
+        "text": "Chapter 2: the CYP450 question now notes that the book\u2019s own figure caption says \u201cfive\u201d enzymes and then names six.",
+        "ch": "ch02",
+        "href": "#/c/ch02/guide"
+      }
+    ]
+  },
+  {
     "version": "29.0.0",
     "date": "2026-11-11",
     "title": "Why each wrong answer is wrong (Chapters 9\u201313)",
