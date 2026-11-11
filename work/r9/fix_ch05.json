@@ -1,0 +1,10 @@
+{ "v5-10": { "steps": { "1": {
+    "lead": "Clozapine is started and works well, and the team explains to her family which safety checks it requires.",
+    "q": "Which complication requires her blood counts to be monitored for as long as she takes clozapine?",
+    "choices": ["Neutropenia", "Seizures", "Paralytic ileus", "Orthostatic hypotension", "Weight gain and dyslipidemia"],
+    "answer": 0,
+    "why": "**Neutropenia** is a rare but potentially fatal complication of clozapine, so blood counts are checked throughout treatment; finger-stick, point-of-care testing now eases that burden.",
+    "pages": "224–225",
+    "whyNot": ["", "Seizure risk climbs with **higher doses**; it guides dosing but is not what the blood count tracks.", "Ileus grows out of **anticholinergic** constipation, so bowel habits, not blood counts, are what to watch.", "Orthostasis is a **cardiovascular** effect checked with blood pressure readings, not with blood counts.", "Metabolic harm is followed with weight and **lipids**, not with the blood count that tracks neutrophils."],
+    "whyNotPages": ["", "224", "225", "224", "224"] } } },
+  "v5-11": { "steps": { "1": { "pages": "227" } } } }

@@ -1,0 +1,23 @@
+{
+ "v7-06": {
+  "steps": {
+   "1": {
+    "why": "**Lurasidone** works as well in bipolar depression with mixed features as without them, is the one agent proven in a large trial of mixed-feature depression without inducing mania, and causes little weight gain."
+   }
+  }
+ },
+ "v7-08": {
+  "steps": {
+   "1": {
+    "lead": "She does not reach remission, and olanzapine, another 5HT2C antagonist, is added to her fluoxetine."
+   }
+  }
+ },
+ "v7-14": {
+  "steps": {
+   "0": {
+    "why": "**Cariprazine** is a D3/D2/5HT1A partial agonist and, with blonanserin, one of only two agents whose D3 affinity so exceeds dopamine's that it competes well at clinical doses."
+   }
+  }
+ }
+}

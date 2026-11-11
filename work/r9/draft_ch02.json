@@ -1,0 +1,632 @@
+[
+ {
+  "id": "v2-01",
+  "tag": "Transporters",
+  "topic": "transporters",
+  "stem": "A 34-year-old woman with a major depressive episode is started on fluoxetine. Her resident wants to recall exactly where the drug acts and how it alters neurotransmission before explaining it to her. The resident sketches the neuronal membrane and the site where the drug binds.",
+  "steps": [
+   {
+    "q": "To which kind of molecular target does fluoxetine bind?",
+    "choices": [
+     "A twelve-transmembrane-region presynaptic transporter",
+     "A seven-transmembrane-region G-protein-linked receptor",
+     "A ligand-gated ion channel with four transmembrane regions",
+     "A voltage-gated ion channel with six transmembrane regions",
+     "A hepatic enzyme that converts substrate into product"
+    ],
+    "answer": 0,
+    "why": "Fluoxetine blocks the **serotonin transporter (SERT)**, a protein that crosses the membrane twelve times and recaptures released serotonin. About a third of psychotropic drugs act on such transporters.",
+    "pages": "29–30",
+    "whyNot": [
+     "",
+     "That structure is typical of receptors coupled to **G proteins**, which are a separate target class; SERT is a transporter, not a receptor.",
+     "Ligand-gated channels are a different target class, to be covered in the next chapter, and are not the site of an SSRI.",
+     "Voltage-sensitive channels form another class with six regions; SERT does not have that structure.",
+     "Enzymes are a separate, smaller target class; SERT is a **transporter**, not an enzyme."
+    ],
+    "whyNotPages": [
+     "",
+     "30",
+     "30",
+     "30",
+     "30"
+    ]
+   },
+   {
+    "lead": "Fluoxetine is confirmed to act at SERT, the presynaptic serotonin transporter, and the resident now asks how the drug engages that protein.",
+    "q": "How does fluoxetine interact with SERT?",
+    "choices": [
+     "It binds an allosteric site and is not itself transported",
+     "It binds the substrate site and is carried into the neuron",
+     "It binds the substrate site and is stored in vesicles",
+     "It binds the sodium pump and removes the sodium gradient",
+     "It binds as a false substrate and triggers serotonin release"
+    ],
+    "answer": 0,
+    "why": "SSRIs bind a site other than the one used by serotonin, so they are **allosteric**; they are not carried into the neuron. Binding lowers SERT affinity for serotonin and prevents its recapture.",
+    "pages": "33",
+    "whyNot": [
+     "",
+     "SSRIs do not occupy the **substrate site** and are not transported; that describes a false substrate.",
+     "Vesicular storage involves **VMAT**, and SSRIs neither bind the substrate site nor enter the neuron.",
+     "The **sodium–potassium ATPase** supplies the gradient; SSRIs act at the transporter itself, not the pump.",
+     "Triggering release by transport is the behavior of **MDMA**, a false substrate of SERT, not of fluoxetine."
+    ],
+    "whyNotPages": [
+     "",
+     "33",
+     "33",
+     "32–33",
+     "31"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2-02",
+  "tag": "Stimulant targets",
+  "topic": "transporters",
+  "stem": "A 12-year-old boy with ADHD does well on methylphenidate but develops appetite loss. His physician considers an amphetamine preparation instead and reviews which molecular targets each drug engages, to judge whether the switch changes the pharmacology.",
+  "steps": [
+   {
+    "q": "Which targets does methylphenidate act on?",
+    "choices": [
+     "DAT and NET at the presynaptic membrane",
+     "SERT and the vesicular transporter VMAT2",
+     "GAT1 and the glutamate transporters",
+     "Dopamine D2 receptors and VMAT2",
+     "Monoamine oxidase and acetylcholinesterase"
+    ],
+    "answer": 0,
+    "why": "Methylphenidate, like cocaine, blocks the presynaptic **dopamine and norepinephrine transporters** and only those; its action mirrors the way SSRIs work at SERT.",
+    "pages": "34–35",
+    "whyNot": [
+     "",
+     "Methylphenidate is not described as a **serotonin** transporter drug, and it does not act on vesicular transporters.",
+     "These are **GABA and glutamate** transporters; methylphenidate acts on monoamine transporters.",
+     "Methylphenidate does not bind **VMAT2**, and its D2 effects are indirect through raised dopamine.",
+     "Those **enzymes** are targets of other drug classes, not of methylphenidate."
+    ],
+    "whyNotPages": [
+     "",
+     "35",
+     "34",
+     "35",
+     "40"
+    ]
+   },
+   {
+    "lead": "Methylphenidate acts only at DAT and NET, as does cocaine, while amphetamine is considered for the switch.",
+    "q": "Beyond the two targets shared with methylphenidate, which additional target does amphetamine engage?",
+    "choices": [
+     "VMAT2, as a transported substrate",
+     "The GABA transporter GAT1",
+     "The synaptic vesicle protein SV2A",
+     "Glycogen synthase kinase-3",
+     "The vesicular acetylcholine transporter"
+    ],
+    "answer": 0,
+    "why": "Amphetamine has two kinds of targets: the plasma membrane monoamine transporters and also the **vesicular monoamine transporter**, where it is a transported substrate rather than an inhibitor.",
+    "pages": "35",
+    "whyNot": [
+     "",
+     "**GAT1** is blocked by tiagabine, not by amphetamine.",
+     "**SV2A** is the binding site of levetiracetam, an anticonvulsant, not of amphetamine.",
+     "**GSK-3** is an enzyme linked to lithium, not to stimulant action.",
+     "VAChT handles **acetylcholine** and is not known to be targeted by any drug in use."
+    ],
+    "whyNotPages": [
+     "",
+     "34",
+     "35",
+     "48",
+     "35"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2-03",
+  "tag": "False substrates",
+  "topic": "transporters",
+  "stem": "A 22-year-old man is brought to the emergency department after taking MDMA at a dance event. He is euphoric, sweaty and talkative. The physician reviews how this drug enters serotonin neurons and what it then does to the serotonin system.",
+  "steps": [
+   {
+    "q": "By which route does MDMA mainly enter serotonin neurons?",
+    "choices": [
+     "Hitchhiking on SERT as a false substrate",
+     "Binding a 5HT2A receptor and being internalized",
+     "Passive diffusion that needs no protein",
+     "Uptake into glia by an excitatory amino acid transporter",
+     "Transport by the vesicular acetylcholine transporter"
+    ],
+    "answer": 0,
+    "why": "SERT has substantial affinity for MDMA as well as for serotonin, so the drug is **carried in through SERT**, much as other transportable amines ride on monoamine transporters.",
+    "pages": "31–32",
+    "whyNot": [
+     "",
+     "Receptors are not the entry route; MDMA is a **transporter substrate**, not a drug internalized by a receptor.",
+     "Monoamine entry is an **energy-requiring, sodium-coupled** process rather than passive diffusion.",
+     "**EAATs** carry glutamate and aspartate, not MDMA.",
+     "**VAChT** is a vesicular protein for acetylcholine and not a plasma membrane route."
+    ],
+    "whyNotPages": [
+     "",
+     "40",
+     "33",
+     "31",
+     "31"
+    ]
+   },
+   {
+    "lead": "MDMA is carried into the neuron by SERT and causes serotonin release, so the physician turns to what that released serotonin does at its receptors.",
+    "q": "Which receptor action is thought to underlie the empathogen effect that follows the serotonin release?",
+    "choices": [
+     "Agonist action at 5HT2A/2C receptors",
+     "Antagonist action at 5HT2A receptors",
+     "Partial agonism at 5HT1A somatodendritic sites",
+     "Antagonist action at alpha 1 receptors",
+     "Agonist action at GABA-B receptors"
+    ],
+    "answer": 0,
+    "why": "MDMA releases serotonin, which acts indirectly as an agonist at **5HT2A/2C receptors**; this is the basis of its use in experimental PTSD treatment alongside psychotherapy.",
+    "pages": "40",
+    "whyNot": [
+     "",
+     "Antagonism is the action of antipsychotics at 5HT2A; MDMA raises serotonin and so has **agonist** effects.",
+     "The 5HT1A autoreceptor agonism in the table follows **SSRI/SNRI** reuptake inhibition, not MDMA release.",
+     "Alpha 1 antagonism produces **orthostasis and improved nightmares**, not an empathogen effect.",
+     "GABA-B agonism is linked to **cataplexy and pain** actions, not to serotonin release."
+    ],
+    "whyNotPages": [
+     "",
+     "39–40",
+     "40",
+     "39",
+     "39"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2-04",
+  "tag": "Vesicular transporters",
+  "topic": "transporters",
+  "stem": "A 58-year-old man with tardive dyskinesia after years of antipsychotic therapy starts valbenazine. His resident asks which transporter the drug blocks, and then why a neurotransmitter that has no reuptake transporter is still affected by that block.",
+  "steps": [
+   {
+    "q": "Which transporter does valbenazine inhibit?",
+    "choices": [
+     "VMAT2 in the synaptic vesicle membrane",
+     "DAT in the presynaptic membrane",
+     "VAChT in the cholinergic vesicle",
+     "The proton pump on the vesicle",
+     "VIAAT in the GABA vesicle"
+    ],
+    "answer": 0,
+    "why": "Tetrabenazine and its derivatives, including valbenazine, inhibit **VMAT2**, the vesicular transporter that packs monoamines into synaptic vesicles.",
+    "pages": "35",
+    "whyNot": [
+     "",
+     "DAT sits on the **plasma membrane** and is blocked by stimulants, not by valbenazine.",
+     "**VAChT** packages acetylcholine, and no drug in use is known to target it.",
+     "The proton pump supplies the energy; the drug acts on the **transporter** itself.",
+     "**VIAAT** packages GABA and is not known to be targeted by any drug."
+    ],
+    "whyNotPages": [
+     "",
+     "34",
+     "35",
+     "35",
+     "35"
+    ]
+   },
+   {
+    "lead": "Valbenazine inhibits VMAT2, which stores serotonin, norepinephrine and dopamine and also a fourth amine.",
+    "q": "Which amine, besides the three monoamines, is stored by VMAT2 and has no presynaptic reuptake transporter, so that it is inactivated enzymatically?",
+    "choices": [
+     "Histamine",
+     "Acetylcholine",
+     "Glutamate",
+     "GABA",
+     "Glycine"
+    ],
+    "answer": 0,
+    "why": "VMAT2 also loads **histamine** into vesicles, yet histamine seems to lack a presynaptic transporter, so its inactivation is thought to depend entirely on enzymes.",
+    "pages": "35",
+    "whyNot": [
+     "",
+     "Acetylcholine uses **VAChT** for storage and has a choline precursor transporter, not VMAT2.",
+     "Glutamate is stored by **vGluT** and is recaptured by EAAT transporters.",
+     "GABA is stored by **VIAAT** and has GAT1–4 transporters for reuptake.",
+     "Glycine has **GlyT1 and GlyT2** transporters and is not stored by VMAT2."
+    ],
+    "whyNotPages": [
+     "",
+     "35",
+     "35",
+     "34",
+     "34"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2-05",
+  "tag": "GABA transporter",
+  "topic": "gaba",
+  "stem": "A 41-year-old woman with focal seizures has an anticonvulsant added that selectively blocks a presynaptic transporter, raising synaptic concentrations of an inhibitory neurotransmitter. The resident is asked to name the drug's target and a possible benefit outside epilepsy.",
+  "steps": [
+   {
+    "q": "Which transporter is blocked by tiagabine?",
+    "choices": [
+     "GAT1",
+     "EAAT2",
+     "GlyT1",
+     "SV2A",
+     "VIAAT"
+    ],
+    "answer": 0,
+    "why": "The key presynaptic GABA transporter is **GAT1**, and tiagabine selectively blocks it, so synaptic GABA rises; no other clinical inhibitor of this transporter exists.",
+    "pages": "34",
+    "whyNot": [
+     "",
+     "**EAAT** transporters carry glutamate, and no clinical drug is known to block them.",
+     "**GlyT1** carries glycine; agents for it are only in trials for schizophrenia.",
+     "**SV2A** is a vesicle protein bound by levetiracetam, not a plasma membrane GABA transporter.",
+     "**VIAAT** is the vesicular GABA transporter, not known to be a drug target."
+    ],
+    "whyNotPages": [
+     "",
+     "34",
+     "34",
+     "35",
+     "35"
+    ]
+   },
+   {
+    "lead": "Tiagabine's blockade of GAT1 raises GABA in the synapse, and the resident asks what other conditions that could help.",
+    "q": "Besides seizures, for which condition could the raised synaptic GABA be therapeutic?",
+    "choices": [
+     "Anxiety",
+     "ADHD",
+     "Psychotic mania",
+     "Narcolepsy with cataplexy",
+     "Parkinson's disease psychosis"
+    ],
+    "answer": 0,
+    "why": "Increased synaptic **GABA** from GAT1 blockade may help anxiety, sleep disorders and pain in addition to the anticonvulsant action.",
+    "pages": "34",
+    "whyNot": [
+     "",
+     "ADHD treatment relies on **DAT and NET** blockade, not on GABA enhancement.",
+     "The book links GAT1 blockade to **anxiety, sleep and pain**, not to mania.",
+     "Cataplexy is tied to **GABA-B agonism** at a receptor, not to raising GABA via GAT1.",
+     "Psychosis in Parkinson's disease is tied to **5HT2A** drugs, not to GABA transporters."
+    ],
+    "whyNotPages": [
+     "",
+     "34",
+     "34",
+     "39",
+     "39"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2-06",
+  "tag": "Partial agonists",
+  "topic": "receptors",
+  "stem": "A new drug acts at a receptor that signals through G proteins. In a dopamine-poor brain region it raises signal output above baseline, while in a dopamine-rich region the same compound lowers output, though never to zero. Its maximal effect stays the same however high the dose goes.",
+  "steps": [
+   {
+    "q": "Which pharmacological action best describes this drug?",
+    "choices": [
+     "Partial agonist",
+     "Full agonist",
+     "Silent antagonist",
+     "Inverse agonist",
+     "Allosteric reuptake inhibitor"
+    ],
+    "answer": 0,
+    "why": "A **partial agonist** has an intrinsic set point: it raises activity when full agonist is absent but turns it down when full agonist is abundant, which is why it is called a stabilizer.",
+    "pages": "43–44",
+    "whyNot": [
+     "",
+     "A full agonist would drive output to its **maximum** and would not lower output in a dopamine-rich region.",
+     "A silent antagonist has **no activity of its own**, so it would not raise output where agonist is lacking.",
+     "An inverse agonist pushes activity **below baseline** everywhere, rather than raising it anywhere.",
+     "Allosteric reuptake inhibition describes a **transporter** effect and is not a receptor action."
+    ],
+    "whyNotPages": [
+     "",
+     "37–38",
+     "41",
+     "44",
+     "33"
+    ]
+   },
+   {
+    "lead": "The compound is a partial agonist, which differs from a full agonist in how its effect behaves as the dose rises.",
+    "q": "In the dopamine-poor region, what happens to signal output if the dose is raised further?",
+    "choices": [
+     "Output stays at the drug's own set point",
+     "Output rises toward the full agonist level",
+     "Output falls below the baseline level",
+     "Output returns to the baseline level",
+     "Output keeps climbing in proportion to dose"
+    ],
+    "answer": 0,
+    "why": "The molecule carries a built-in **set point**, so no dose produces more than that fixed level of activity, like a dimmer preset that cannot be raised.",
+    "pages": "44",
+    "whyNot": [
+     "",
+     "Reaching full-agonist output would make it a **full agonist**, which a partial agonist cannot do.",
+     "Falling below baseline is a property of an **inverse agonist**, not a partial agonist.",
+     "Returning to baseline is what a **silent antagonist** does; a partial agonist sits above baseline.",
+     "Dose-proportional growth ignores the **ceiling** built into the molecule."
+    ],
+    "whyNotPages": [
+     "",
+     "43",
+     "44",
+     "41",
+     "44"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2-07",
+  "tag": "Inverse agonists",
+  "topic": "receptors",
+  "stem": "A 70-year-old man with Parkinson's disease has frightening visual hallucinations. The team chooses a drug acting at the 5HT2A receptor, perhaps as an inverse agonist instead of a plain antagonist. A trainee asks how an inverse agonist differs functionally from a silent antagonist.",
+  "steps": [
+   {
+    "q": "What distinguishes an inverse agonist from a silent antagonist?",
+    "choices": [
+     "It lowers activity below the level seen without any agonist",
+     "It raises activity above the level seen without any agonist",
+     "It blocks agonists but leaves baseline activity unchanged",
+     "It produces activity that is intermediate between agonist and none",
+     "It prevents the neurotransmitter from being recaptured"
+    ],
+    "answer": 0,
+    "why": "An inverse agonist stabilizes the receptor in an inactive form and so shuts down even **constitutive activity**, while a silent antagonist only returns the receptor to baseline.",
+    "pages": "44",
+    "whyNot": [
+     "",
+     "Raising activity is what **agonists** do; an inverse agonist does the opposite.",
+     "That describes a **silent antagonist**, which leaves constitutive activity as it is.",
+     "That is a **partial agonist**, which sits between full agonist and baseline.",
+     "Recapture is a **transporter** process, unrelated to receptor conformation."
+    ],
+    "whyNotPages": [
+     "",
+     "37",
+     "41",
+     "43",
+     "33"
+    ]
+   },
+   {
+    "lead": "The drug is an inverse agonist, defined by suppression of baseline constitutive activity, and the student asks about a brain area where receptors are sparse.",
+    "q": "In a cortical region with very low receptor density, what is the likely effect of the inverse agonist?",
+    "choices": [
+     "It behaves like a plain antagonist",
+     "It acts like a full agonist",
+     "It acts like a partial agonist",
+     "It produces large reductions in signal output",
+     "It becomes a false substrate for SERT"
+    ],
+    "answer": 0,
+    "why": "With few receptors, constitutive activity may be too small to detect, so reducing it has little visible effect and the drug **looks like an antagonist**.",
+    "pages": "44",
+    "whyNot": [
+     "",
+     "Full agonist action requires turning **signal transduction on**, which an inverse agonist never does.",
+     "Partial agonism means **raising** activity above baseline, which an inverse agonist cannot do.",
+     "A large fall needs **detectable constitutive activity**, which is absent when density is low.",
+     "False substrate behavior applies to **transporters**, not receptors."
+    ],
+    "whyNotPages": [
+     "",
+     "44",
+     "43",
+     "44",
+     "31"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2-08",
+  "tag": "Receptor side effects",
+  "topic": "receptors",
+  "stem": "A 47-year-old man starts a medicine that blocks a norepinephrine receptor subtype. At the first dose he feels dizzy on standing, and his blood pressure drops when he rises from a chair.",
+  "steps": [
+   {
+    "q": "Blockade of which receptor best explains his orthostatic hypotension?",
+    "choices": [
+     "Alpha 1 adrenergic receptor",
+     "Alpha 2 adrenergic receptor",
+     "Histamine H3 receptor",
+     "Muscarinic M1 receptor",
+     "Serotonin 5HT7 receptor"
+    ],
+    "answer": 0,
+    "why": "Antagonism at **alpha 1** receptors is the receptor action linked to orthostatic hypotension, and possibly sedation, in the book's table of direct drug actions.",
+    "pages": "39",
+    "whyNot": [
+     "",
+     "Alpha 2 antagonism is linked to **antidepressant** actions, and alpha 2 agonism to ADHD benefits.",
+     "H3 antagonism improves **daytime sleepiness** and does not explain falling blood pressure.",
+     "M1 antagonism causes **sedation and memory problems**, not orthostasis.",
+     "5HT7 antagonism may be **pro-cognitive and antidepressant**, not hypotensive."
+    ],
+    "whyNotPages": [
+     "",
+     "39",
+     "40",
+     "40",
+     "39"
+    ]
+   },
+   {
+    "lead": "Alpha 1 receptor blockade is identified as the cause of his orthostatic hypotension, which raises the question of its possible benefits.",
+    "q": "The same alpha 1 blockade may also be put to therapeutic use in which situation?",
+    "choices": [
+     "Nightmares",
+     "Cataplexy",
+     "Insomnia from circadian delay",
+     "Parkinsonism from antipsychotics",
+     "Neuropathic pain from fibromyalgia"
+    ],
+    "answer": 0,
+    "why": "Alpha 1 antagonism is listed as helping **nightmares** and agitation in Alzheimer disease, so one receptor action can give both a side effect and a benefit.",
+    "pages": "39",
+    "whyNot": [
+     "",
+     "Cataplexy is tied to **GABA-B agonism**, not alpha 1 blockade.",
+     "Circadian insomnia is linked to **melatonin MT1/MT2 agonists**, not alpha 1 antagonists.",
+     "Reduced parkinsonism is linked to **5HT2A antagonism and 5HT1A partial agonism**.",
+     "Pain relief in fibromyalgia is tied to **GABA-B agonism** or transporter inhibitors here."
+    ],
+    "whyNotPages": [
+     "",
+     "39",
+     "39",
+     "39",
+     "39"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2-09",
+  "tag": "GSK-3",
+  "topic": "mood-stabilizers",
+  "stem": "A 29-year-old woman with bipolar disorder responds to lithium. A student notes that very few psychotropic drugs target enzymes and asks which enzyme lithium is thought to inhibit, and what that inhibition could do inside neurons.",
+  "steps": [
+   {
+    "q": "Which enzyme is lithium thought to inhibit to help produce its mood-stabilizing effect?",
+    "choices": [
+     "Glycogen synthase kinase-3",
+     "Monoamine oxidase",
+     "Acetylcholinesterase",
+     "CYP2D6",
+     "Sodium–potassium ATPase"
+    ],
+    "answer": 0,
+    "why": "Lithium can inhibit **GSK-3**, a downstream phosphoprotein enzyme in neurotrophic signaling, and this may contribute to its antimanic and mood-stabilizing action.",
+    "pages": "48",
+    "whyNot": [
+     "",
+     "**MAO** is the target of MAO inhibitors for mood disorders, not lithium.",
+     "**Acetylcholinesterase** inhibitors are used for dementia, not for lithium's actions.",
+     "**CYP2D6** is a drug-metabolizing enzyme, relevant to pharmacokinetics rather than lithium's mechanism.",
+     "The sodium pump supplies the gradient for transporters; it is not described as a lithium target."
+    ],
+    "whyNotPages": [
+     "",
+     "48",
+     "48",
+     "49",
+     "32"
+    ]
+   },
+   {
+    "lead": "Lithium is thought to inhibit GSK-3, a phosphoprotein enzyme that some growth factors use to promote cell death.",
+    "q": "What outcome could GSK-3 inhibition produce in the neuron?",
+    "choices": [
+     "Neuroprotective action and long-term plasticity",
+     "Promotion of apoptotic cell death",
+     "Faster reuptake of monoamines",
+     "Inactivation of CYP450 enzymes",
+     "Block of voltage-gated channels"
+    ],
+    "answer": 0,
+    "why": "Because some signals use GSK-3 to promote cell death, inhibiting it could be **neuroprotective** and support long-term plasticity, possibly adding to mood stabilization.",
+    "pages": "48",
+    "whyNot": [
+     "",
+     "Promoting cell death is what **GSK-3 activity** does; inhibiting the enzyme should oppose that.",
+     "Reuptake depends on **transporters**, not on this kinase.",
+     "CYP450 enzymes are a **separate system** for drug metabolism and are not affected by GSK-3 inhibition.",
+     "Channels are covered in a different chapter and are not described as the result of GSK-3 inhibition."
+    ],
+    "whyNotPages": [
+     "",
+     "48",
+     "31",
+     "49",
+     "29"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v2-10",
+  "tag": "CYP450",
+  "topic": "pk-interactions",
+  "stem": "A 36-year-old woman with depression takes a standard dose of a drug metabolized by a CYP450 enzyme. Adherence is confirmed, yet she has had no benefit after several weeks, and a blood level drawn at steady state is below the therapeutic range.",
+  "steps": [
+   {
+    "q": "Which metabolizer status best explains her poor response?",
+    "choices": [
+     "Ultra-rapid metabolizer",
+     "Poor metabolizer",
+     "Intermediate metabolizer",
+     "Extensive metabolizer",
+     "Pharmacodynamic receptor insensitivity"
+    ],
+    "answer": 0,
+    "why": "Elevated enzyme activity in an **ultra-rapid metabolizer** clears the drug quickly, giving subtherapeutic levels and poor efficacy at standard doses.",
+    "pages": "49–50",
+    "whyNot": [
+     "",
+     "Poor metabolizers have **reduced** enzyme activity and tend toward high drug levels and side effects.",
+     "Intermediate metabolizers have **reduced activity** and are at risk of elevated levels, not low ones.",
+     "Extensive metabolizers are the **normal** group for whom standard doses are set.",
+     "A low blood level points to **pharmacokinetics** rather than a target-level pharmacodynamic problem."
+    ],
+    "whyNotPages": [
+     "",
+     "49",
+     "49",
+     "49",
+     "49"
+    ]
+   },
+   {
+    "lead": "The clinician suspects ultra-rapid metabolism, meaning elevated CYP450 activity is clearing the drug before it can work.",
+    "q": "Which approach would best confirm the suspected metabolizer status in this resistant patient?",
+    "choices": [
+     "Genotyping combined with therapeutic drug monitoring",
+     "Genotyping alone without any drug level",
+     "Repeating the same dose for further weeks",
+     "Switching to a drug of the same class by default",
+     "Measuring receptor occupancy by imaging"
+    ],
+    "answer": 0,
+    "why": "Pharmacogenomic testing paired with **therapeutic drug monitoring** checks predicted enzyme type against actual blood levels and helps in treatment-resistant patients.",
+    "pages": "50",
+    "whyNot": [
+     "",
+     "Genotype alone predicts the enzyme type but does not **verify** it against the measured blood concentration.",
+     "More time at the same dose ignores the **subtherapeutic level** already documented.",
+     "A default switch does not address **why** levels were low, and the same enzyme may still apply.",
+     "The book describes **genetic and blood-level testing**, not imaging, to confirm metabolizer type."
+    ],
+    "whyNotPages": [
+     "",
+     "50",
+     "49–50",
+     "50",
+     "50"
+    ]
+   }
+  ]
+ }
+]

@@ -1,0 +1,5 @@
+{ "v6-13": { "steps": { "1": { "choices": { "2": "Melatonin early in the morning" },
+    "whyNot": { "2": "The book times **melatonin** for the early evening, not the morning, and light remains the stronger synchronizer." },
+    "whyNotPages": { "2": "275" } } } },
+  "v6-15": { "steps": { "1": { "pages": "280–281",
+    "why": "Her low energy, interest and alertness are linked to **dopamine** with some norepinephrine, so the symptom-based approach matches them with agents that **boost NE and/or DA**, as for fatigue and poor concentration." } } } }

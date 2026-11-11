@@ -1,0 +1,632 @@
+[
+ {
+  "id": "v3-01",
+  "tag": "Partial agonists",
+  "topic": "ion-channels",
+  "stem": "A 46-year-old man who smokes a pack a day starts varenicline to quit. At follow-up he reports that cigarettes feel less rewarding, and that his craving between cigarettes has also faded. His clinician explains that the drug acts at a ligand-gated ion channel for acetylcholine.",
+  "steps": [
+   {
+    "q": "At which receptor, and with what pharmacological action, does varenicline act?",
+    "choices": [
+     "Alpha4 beta2 nicotinic receptor, as a partial agonist",
+     "Alpha4 beta2 nicotinic receptor, as a full agonist",
+     "GABAA benzodiazepine site, as a full agonist",
+     "NMDA open-channel site, as an antagonist",
+     "Serotonin 5HT3 receptor, as an antagonist"
+    ],
+    "answer": 0,
+    "why": "Varenicline is listed as a **partial agonist** at the **alpha4 beta2 nicotinic** channel and is used for smoking cessation. It opens the channel more than rest does, but less than a full agonist would.",
+    "pages": "55",
+    "whyNot": [
+     "",
+     "A full agonist would open the channel maximally; the book lists varenicline as a **partial** agonist.",
+     "That describes benzodiazepines at GABAA sites, which are full agonists used as anxiolytics, not a smoking-cessation drug.",
+     "That is the target of ketamine and PCP-type antagonists, not of a nicotinic drug.",
+     "Antagonism at 5HT3 applies to antiemetics and to mirtazapine or vortioxetine, not to varenicline."
+    ],
+    "whyNotPages": [
+     "",
+     "55",
+     "55",
+     "55",
+     "55"
+    ]
+   },
+   {
+    "lead": "Varenicline is therefore a partial agonist at the nicotinic channel. The clinician now explains why it can both ease abstinence symptoms and blunt the reward from a cigarette.",
+    "q": "How does a partial agonist behave when abundant full agonist is present, compared with when full agonist is absent?",
+    "choices": [
+     "Net antagonist when full agonist is abundant; net agonist when it is absent",
+     "Net agonist in both situations",
+     "Net antagonist in both situations",
+     "Net agonist when full agonist is abundant; net antagonist when it is absent",
+     "Silent in both situations, like a neutral antagonist"
+    ],
+    "answer": 0,
+    "why": "A partial agonist **boosts** channel opening when full agonist is lacking, yet **blunts** it when full agonist is plentiful. That dual behavior is why partial agonists are called **stabilizers**.",
+    "pages": "59–60",
+    "whyNot": [
+     "",
+     "With abundant full agonist, the partial agonist lowers output, so it acts as a **net antagonist** there, not an agonist.",
+     "Without full agonist, it raises opening above the resting state, which is a **net agonist** action.",
+     "This is reversed: it is the **agonist** when the full agonist is absent and the antagonist when it is plentiful.",
+     "A silent antagonist leaves opening at the resting level; a partial agonist shifts opening relative to rest."
+    ],
+    "whyNotPages": [
+     "",
+     "60",
+     "60",
+     "59",
+     "57"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v3-02",
+  "tag": "Allosteric modulation",
+  "topic": "gaba",
+  "stem": "A 31-year-old woman with panic disorder takes a benzodiazepine, and her anxiety eases within the hour. In a teaching demonstration, her psychiatrist shows that at the drug's own site on the GABAA receptor, the compound produces almost no chloride flux without GABA, but markedly increases flux when GABA is bound.",
+  "steps": [
+   {
+    "q": "How is a ligand with this behavior classified?",
+    "choices": [
+     "Positive allosteric modulator",
+     "Negative allosteric modulator",
+     "Silent antagonist at the GABA site",
+     "Inverse agonist at the GABA site",
+     "Partial agonist at the GABA site"
+    ],
+    "answer": 0,
+    "why": "The drug binds a site other than GABA's, does little alone, and **amplifies** GABA's chloride flux once GABA is bound. That behavior defines a **positive allosteric modulator**.",
+    "pages": "65",
+    "whyNot": [
+     "",
+     "Opposite direction: a **NAM** reduces what the neurotransmitter does, whereas here the GABA effect is amplified.",
+     "A silent antagonist leaves opening at the resting level, so it could not **enhance** GABA's action.",
+     "An inverse agonist would close the channel below resting; this compound works at a different site from GABA's.",
+     "Benzodiazepines bind **elsewhere** on the complex, not at the site where the neurotransmitter binds."
+    ],
+    "whyNotPages": [
+     "",
+     "65",
+     "57",
+     "61",
+     "65"
+    ]
+   },
+   {
+    "lead": "The compound is a positive allosteric modulator at the benzodiazepine site. The psychiatrist then describes an experimental ligand that occupies that same site but acts as an inverse agonist.",
+    "q": "What would a ligand binding that same site as an inverse agonist be expected to do?",
+    "choices": [
+     "Reduce chloride conduction, with panic attacks and seizures",
+     "Increase chloride conduction, with deeper sedation and sleep",
+     "Leave chloride conduction unchanged, since the site is silent without GABA",
+     "Reduce chloride conduction, with muscle relaxation and amnesia",
+     "Increase chloride conduction, with improved memory and less anxiety"
+    ],
+    "answer": 0,
+    "why": "At one allosteric site, the effect flips depending on if the ligand is a full agonist versus an **inverse agonist**. The inverse agonist acts as a **NAM**, cutting chloride flux and causing panic, seizures and some memory gain.",
+    "pages": "66",
+    "whyNot": [
+     "",
+     "Opposite direction: those are benzodiazepine full agonist effects, and an inverse agonist **diminishes** chloride conduction.",
+     "An inverse agonist acts as a NAM and does reduce GABA-driven flux when GABA is present.",
+     "Muscle relaxation and amnesia are effects of the **full agonist**; the inverse agonist gives opposite clinical effects.",
+     "Opposite direction: increased chloride flux is the agonist action, while improved memory with panic and seizures is the inverse agonist pattern."
+    ],
+    "whyNotPages": [
+     "",
+     "66",
+     "65",
+     "65",
+     "66"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v3-03",
+  "tag": "NMDA channel",
+  "topic": "glutamate",
+  "stem": "A 38-year-old woman with treatment-resistant depression and recent suicidal thoughts receives ketamine in a monitored setting. Her psychiatrist notes that the drug binds at a site inside the channel of a glutamate receptor and can reach that site only under a particular condition of the channel.",
+  "steps": [
+   {
+    "q": "Under which condition can ketamine reach its site and block the channel?",
+    "choices": [
+     "When the channel is open",
+     "When the channel is in its resting state",
+     "When the channel has been desensitized by prolonged agonist",
+     "When a positive allosteric modulator occupies its site",
+     "When an inverse agonist has closed and inactivated it"
+    ],
+    "answer": 0,
+    "why": "Ketamine and PCP bind inside the channel and can enter only while it is **open**, so they stop glutamate and glycine from keeping the channel open.",
+    "pages": "66",
+    "whyNot": [
+     "",
+     "A resting channel opens only infrequently, so ketamine cannot count on access; it needs an **open** channel.",
+     "Desensitization is an adaptive state after long agonist exposure and is not the access condition for ketamine.",
+     "PAMs boost agonist action; ketamine is a NAM-type blocker and needs no PAM present.",
+     "A closed, inactivated channel offers no open pore to enter, and ketamine requires an **open** channel."
+    ],
+    "whyNotPages": [
+     "",
+     "66",
+     "63",
+     "65",
+     "61"
+    ]
+   },
+   {
+    "lead": "Ketamine therefore blocks NMDA channels at an open-channel site. The psychiatrist's father has Alzheimer disease, and another NMDA-directed drug is considered for him.",
+    "q": "Which drug acts at a different NMDA channel site and is pro-cognitive in Alzheimer disease?",
+    "choices": [
+     "Memantine",
+     "Dextromethorphan",
+     "Phencyclidine",
+     "Allopregnanolone",
+     "Varenicline"
+    ],
+    "answer": 0,
+    "why": "Memantine is listed at the **magnesium site** of NMDA channels and is pro-cognitive in Alzheimer disease, whereas ketamine, PCP and dextromethorphan share the **open-channel** site.",
+    "pages": "55",
+    "whyNot": [
+     "",
+     "It shares the open-channel site with ketamine and PCP, and is listed for agitation in Alzheimer disease.",
+     "Phencyclidine is a dissociative hallucinogen that blocks the same open-channel site as ketamine.",
+     "That neuroactive steroid acts at GABAA neurosteroid sites, not at NMDA channels.",
+     "A nicotinic partial agonist for smoking cessation, not an NMDA channel blocker."
+    ],
+    "whyNotPages": [
+     "",
+     "55",
+     "55",
+     "55",
+     "55"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v3-04",
+  "tag": "Channel states",
+  "topic": "ion-channels",
+  "stem": "In a laboratory preparation, a ligand-gated channel is exposed to an agonist for a few minutes, and its response recovers within moments of washout. In a second preparation the agonist stays on for hours, and after washout the response remains absent for hours.",
+  "steps": [
+   {
+    "q": "Which state explains the lasting unresponsiveness in the second preparation?",
+    "choices": [
+     "Inactivation",
+     "Simple desensitization",
+     "The resting state",
+     "Neutral antagonist binding",
+     "Constitutive activity"
+    ],
+    "answer": 0,
+    "why": "Hours of agonist exposure move the channel from **desensitization** into **inactivation**. This state does not reverse promptly on washout; recovery takes hours.",
+    "pages": "63",
+    "whyNot": [
+     "",
+     "Simple desensitization reverses fairly quickly once agonist is removed, as in the first preparation.",
+     "The resting state is sensitive to new agonist exposure, so it would not stay unresponsive.",
+     "An antagonist returns the channel to the resting state, which still responds to agonist.",
+     "Constitutive activity is occasional opening without agonist, not a prolonged loss of response."
+    ],
+    "whyNotPages": [
+     "",
+     "63",
+     "63",
+     "57",
+     "57"
+    ]
+   },
+   {
+    "lead": "The second preparation shows inactivation. The same sequence occurs at nicotinic receptors when a smoker draws on a cigarette, whereas acetylcholine seldom causes it.",
+    "q": "Why does the natural neurotransmitter at nicotinic receptors rarely produce this state, unlike nicotine?",
+    "choices": [
+     "Acetylcholinesterase rapidly hydrolyzes acetylcholine",
+     "Acetylcholine is only a partial agonist and cannot desensitize channels",
+     "Acetylcholine binds only at allosteric sites",
+     "A reuptake transporter quickly clears acetylcholine",
+     "Acetylcholine opens the channel only when a PAM is present"
+    ],
+    "answer": 0,
+    "why": "Acetylcholine is broken down fast by **acetylcholinesterase**, so it seldom lingers long enough to desensitize or inactivate its receptors. Nicotine escapes this enzyme.",
+    "pages": "63–64",
+    "whyNot": [
+     "",
+     "The reason given is enzymatic breakdown, not partial agonism; sustained agonist exposure is what drives desensitization.",
+     "Acetylcholine binds the agonist site; allosteric sites are for modulators with little activity of their own.",
+     "Acetylcholine is cleared by **hydrolysis**, not by a transporter, according to the discussion of nicotinic receptors.",
+     "Acetylcholine opens its channel by itself; a PAM only boosts the action of a bound agonist."
+    ],
+    "whyNotPages": [
+     "",
+     "64",
+     "65",
+     "64",
+     "65"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v3-05",
+  "tag": "Agonist spectrum",
+  "topic": "receptors",
+  "stem": "A pharmacology resident tests a new compound on a ligand-gated ion channel. Applied alone, it leaves the frequency of channel opening at its baseline value. Added during agonist exposure, it returns the channel to that baseline. The resident must classify the compound.",
+  "steps": [
+   {
+    "q": "How should the compound be classified?",
+    "choices": [
+     "Neutral (silent) antagonist",
+     "Inverse agonist",
+     "Partial agonist",
+     "Positive allosteric modulator",
+     "Full agonist"
+    ],
+    "answer": 0,
+    "why": "A compound with no effect alone that reverses an agonist is a **silent antagonist**. It holds the channel in the **resting state**, identical to having no ligand bound.",
+    "pages": "57",
+    "whyNot": [
+     "",
+     "An inverse agonist would push opening below baseline and stabilize an inactive state, which this compound does not do alone.",
+     "A partial agonist raises opening above the resting state on its own, so baseline alone would not result.",
+     "Allosteric modulators work only alongside the neurotransmitter and enhance or reduce it; they do not simply reverse an agonist.",
+     "A full agonist opens the channel maximally by itself, not at baseline."
+    ],
+    "whyNotPages": [
+     "",
+     "62",
+     "57",
+     "65",
+     "57"
+    ]
+   },
+   {
+    "lead": "The compound is a silent antagonist. Even with it bound, the resident still records occasional, infrequent openings of the channel.",
+    "q": "What accounts for the occasional openings that persist even with the compound bound?",
+    "choices": [
+     "Constitutive activity of the resting state",
+     "Desensitization of the channel",
+     "A positive allosteric modulator effect",
+     "Partial agonism by the compound itself",
+     "Excitation–secretion coupling"
+    ],
+    "answer": 0,
+    "why": "The resting channel is not fully shut, so it opens now and then without agonist. This **constitutive activity** continues with an antagonist bound, which does not block it.",
+    "pages": "57",
+    "whyNot": [
+     "",
+     "Desensitization is an adaptive state after prolonged agonist exposure, not the cause of openings without agonist.",
+     "PAMs do nothing unless the neurotransmitter is bound, so they cannot explain openings at rest.",
+     "Partial agonism would mean the compound itself changed opening frequency, but a silent antagonist does not.",
+     "That process converts an impulse into transmitter release at the terminal, not a single channel's resting behavior."
+    ],
+    "whyNotPages": [
+     "",
+     "63",
+     "65",
+     "57",
+     "73"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v3-06",
+  "tag": "Neurosteroids",
+  "topic": "gaba",
+  "stem": "A 28-year-old woman develops severe depression two weeks after delivery. Her team chooses allopregnanolone, a neuroactive steroid, rather than a benzodiazepine, which fits her profile less well. The pharmacist reviews where on the GABAA receptor complex the steroid acts.",
+  "steps": [
+   {
+    "q": "Which GABAA binding site does allopregnanolone target?",
+    "choices": [
+     "Neurosteroid site on GABAA",
+     "Benzodiazepine site on GABAA",
+     "Non-benzodiazepine PAM site on GABAA",
+     "Magnesium site on NMDA receptors",
+     "Serotonin 5HT3 receptor site"
+    ],
+    "answer": 0,
+    "why": "Allopregnanolone targets the **neurosteroid sites** on GABAA, which are insensitive to benzodiazepines. It is listed for postpartum depression, and as a rapid-acting antidepressant.",
+    "pages": "55",
+    "whyNot": [
+     "",
+     "Benzodiazepines use their own GABAA site; the steroid acts at a **benzodiazepine-insensitive** site.",
+     "Non-benzodiazepine PAM sites are the ones used by Z drugs such as zolpidem, which are hypnotics.",
+     "That is memantine's target in Alzheimer disease and is not a GABAA site.",
+     "A serotonin ionotropic site blocked by antiemetics, not a GABAA site."
+    ],
+    "whyNotPages": [
+     "",
+     "55",
+     "55",
+     "55",
+     "55"
+    ]
+   },
+   {
+    "lead": "Allopregnanolone acts at the neurosteroid site on GABAA, which benzodiazepines do not influence. The pharmacist contrasts its action with that of a benzodiazepine.",
+    "q": "What pharmacological action and type of inhibition does that site mediate?",
+    "choices": [
+     "Full agonist, tonic inhibition",
+     "Full agonist, phasic inhibition",
+     "Partial agonist, tonic inhibition",
+     "Antagonist, phasic inhibition",
+     "Inverse agonist, tonic inhibition"
+    ],
+    "answer": 0,
+    "why": "At neurosteroid sites the steroid is a **full agonist** giving **tonic** inhibition, whereas benzodiazepines and Z drugs give **phasic** inhibition at their own sites.",
+    "pages": "55",
+    "whyNot": [
+     "",
+     "Phasic inhibition is the type listed for benzodiazepines and Z drugs; neurosteroid sites are listed with tonic.",
+     "The book lists a **full**, not partial, agonist action at this site.",
+     "Antagonism is listed for NMDA and 5HT3 targets; here the steroid acts as a full agonist.",
+     "An inverse agonist does the opposite of an agonist, reducing channel activity, which is not this drug's action."
+    ],
+    "whyNotPages": [
+     "",
+     "55",
+     "55",
+     "55",
+     "62"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v3-07",
+  "tag": "Channel structure",
+  "topic": "ion-channels",
+  "stem": "A 52-year-old woman with depression has persistent nausea during chemotherapy. An antiemetic that blocks serotonin 5HT3 receptors helps, and her psychiatrist mentions that mirtazapine and vortioxetine also block this receptor. A trainee asks how this ligand-gated channel is built.",
+  "steps": [
+   {
+    "q": "How is a 5HT3 receptor assembled?",
+    "choices": [
+     "Five subunits, each crossing the membrane four times",
+     "Four subunits, each with three transmembrane regions and a re-entrant loop",
+     "Four subunits, each with six transmembrane segments",
+     "A single protein with a central pore and no separate subunits",
+     "Four subunits, each with four full transmembrane regions"
+    ],
+    "answer": 0,
+    "why": "The 5HT3 receptor is **pentameric**: five subunits, each crossing the membrane four times, form the channel in the middle.",
+    "pages": "53",
+    "whyNot": [
+     "",
+     "That describes **tetrameric** glutamate channels, not 5HT3.",
+     "Six segments per subunit describes voltage-sensitive channels, a different class from ligand-gated channels.",
+     "Ligand-gated channels are assembled from several subunits; the pentameric type uses **five**.",
+     "Four subunits is the tetrameric count, and tetrameric subunits have three full regions plus a loop."
+    ],
+    "whyNotPages": [
+     "",
+     "54",
+     "67",
+     "53",
+     "54"
+    ]
+   },
+   {
+    "lead": "The 5HT3 receptor is built from five subunits, each crossing the membrane four times. The trainee asks which other drug target is built the same way.",
+    "q": "Which other target of psychotropic drugs shares this architecture?",
+    "choices": [
+     "GABAA receptor",
+     "NMDA receptor",
+     "AMPA receptor",
+     "Kainate receptor",
+     "Voltage-sensitive sodium channel"
+    ],
+    "answer": 0,
+    "why": "GABAA, nicotinic, 5HT3 and certain glycine receptors are all **pentameric**, whereas AMPA, kainate and NMDA glutamate receptors are **tetrameric**.",
+    "pages": "53–54",
+    "whyNot": [
+     "",
+     "NMDA is a **tetrameric** glutamate receptor with four subunits.",
+     "AMPA is a **tetrameric** glutamate receptor, with GluR1–4 subunits.",
+     "Kainate is also a **tetrameric** glutamate receptor, built from GluR5–7 and KA1–2 subunits.",
+     "That is a voltage-sensitive channel, built from four linked subunits of six segments, in a different class."
+    ],
+    "whyNotPages": [
+     "",
+     "54",
+     "56",
+     "56",
+     "67"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v3-08",
+  "tag": "Calcium channel",
+  "topic": "ion-channels",
+  "stem": "A 44-year-old man with neuropathic pain is started on gabapentin. His neurologist explains that the drug acts on a presynaptic voltage-sensitive calcium channel, which normally helps turn an electrical impulse into neurotransmitter release.",
+  "steps": [
+   {
+    "q": "Which component of this channel does gabapentin bind?",
+    "choices": [
+     "The α2δ protein",
+     "The cytoplasmic snare loop between subunits II and III",
+     "Transmembrane segment 4, the voltmeter",
+     "The extracellular loop acting as an ionic filter",
+     "The pore inactivator plug"
+    ],
+    "answer": 0,
+    "why": "The **α2δ** protein flanking the α1 pore is the target of pregabalin and gabapentin, and it may help regulate how the channel opens and closes.",
+    "pages": "71",
+    "whyNot": [
+     "",
+     "That loop is the snare that hooks the channel to synaptic vesicles; it is not the gabapentin site.",
+     "Segment 4 detects voltage changes across the membrane and is not where gabapentin binds.",
+     "That loop filters which ion enters, passing only calcium; it is not described as the gabapentin site.",
+     "The pore inactivator is a feature of **sodium** channels; calcium channels have no such plug."
+    ],
+    "whyNotPages": [
+     "",
+     "71",
+     "67",
+     "67",
+     "70–71"
+    ]
+   },
+   {
+    "lead": "Gabapentin binds the α2δ protein of presynaptic N and P/Q calcium channels and interferes with how they open. The neurologist then explains what this does at the terminal.",
+    "q": "What happens to the synaptic vesicle and release when calcium entry is reduced?",
+    "choices": [
+     "The vesicle stays tethered to the channel, and release falls",
+     "The vesicle detaches and fuses more readily, so release rises",
+     "The vesicle fuses normally, because sodium entry alone is enough",
+     "A plug closes the channel, so release is unchanged",
+     "The postsynaptic channel desensitizes, so release is unchanged"
+    ],
+    "answer": 0,
+    "why": "Calcium entry normally drives vesicle docking and fusion. If the channel cannot open, the vesicle stays **tethered** and **transmitter release** is curbed, which helps in pain or seizures.",
+    "pages": "73",
+    "whyNot": [
+     "",
+     "Opposite direction: without calcium entry the vesicle does not dock and merge, so release falls rather than rises.",
+     "Sodium entry only opens the calcium channel; it is **calcium** that triggers docking and fusion.",
+     "Calcium channels have a vesicle snare, not a plug, and release is reduced rather than unchanged.",
+     "The effect is presynaptic: less calcium means less release, not a postsynaptic desensitization."
+    ],
+    "whyNotPages": [
+     "",
+     "73",
+     "73",
+     "71",
+     "73"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v3-09",
+  "tag": "Calcium channels",
+  "topic": "ion-channels",
+  "stem": "A 60-year-old man with hypertension takes a dihydropyridine calcium channel blocker, which lowers his blood pressure by acting on a voltage-sensitive calcium channel subtype in vascular smooth muscle. A resident asks whether that subtype also exists in the brain.",
+  "steps": [
+   {
+    "q": "Which voltage-sensitive calcium channel subtype is the target?",
+    "choices": [
+     "L-type",
+     "N-type",
+     "P/Q-type",
+     "R-type",
+     "T-type"
+    ],
+    "answer": 0,
+    "why": "The **L channel** is a voltage-sensitive calcium channel found in the CNS and on vascular smooth muscle, where **dihydropyridine** blockers lower blood pressure.",
+    "pages": "71",
+    "whyNot": [
+     "",
+     "N channels sit on nerve terminals and regulate transmitter release; vascular smooth muscle is credited to L.",
+     "P/Q channels are presynaptic and regulate release, not the vascular subtype.",
+     "R channels are listed at nerve terminals for transmitter release, not for vascular muscle.",
+     "T channels are listed in cell bodies and dendrites for pacemaking; vascular smooth muscle belongs to L."
+    ],
+    "whyNotPages": [
+     "",
+     "71",
+     "71",
+     "72",
+     "72"
+    ]
+   },
+   {
+    "lead": "The target is the L-type channel, which is present in the CNS as well as in vascular smooth muscle. The resident asks what it does in neurons.",
+    "q": "Where in neurons does this subtype sit, and what function does the book list for it?",
+    "choices": [
+     "Cell bodies and dendrites; gene expression and synaptic integration",
+     "Nerve terminals; transmitter release",
+     "Cell bodies and dendrites; pacemaking and repetitive firing",
+     "Nerve terminals; pacemaking and repetitive firing",
+     "Axons; carrying the impulse toward the terminal"
+    ],
+    "answer": 0,
+    "why": "L channels sit on **cell bodies and dendrites** and are tied to **gene expression** and synaptic integration, unlike nerve-terminal channels that govern release.",
+    "pages": "72",
+    "whyNot": [
+     "",
+     "That pairing describes N, P/Q and R channels at nerve terminals, not L channels.",
+     "That pairing describes T channels, listed for pacemaking and repetitive firing.",
+     "This mixes location and function; terminal channels govern release, and pacemaking belongs to T channels.",
+     "Voltage-sensitive sodium channels, not calcium channels, carry the impulse along the axon."
+    ],
+    "whyNotPages": [
+     "",
+     "72",
+     "72",
+     "72",
+     "73"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v3-10",
+  "tag": "Neurotransmission",
+  "topic": "neurotransmission",
+  "stem": "A 22-year-old man with a first seizure is being taught how an impulse moves through glutamate neurons. His neurologist notes that anticonvulsants may act on several ion channels along the pathway, and traces the signal from the cell body of neuron A toward neuron B.",
+  "steps": [
+   {
+    "q": "Which channel type carries the action potential along the axon of neuron A?",
+    "choices": [
+     "Voltage-sensitive sodium channels",
+     "Voltage-sensitive calcium channels",
+     "Pentameric ligand-gated chloride channels",
+     "Tetrameric ligand-gated glutamate channels",
+     "Voltage-sensitive potassium channels"
+    ],
+    "answer": 0,
+    "why": "The impulse travels the axon as a chain of **voltage-sensitive sodium channels** opening one after another, like a burning fuse, until it reaches the terminal.",
+    "pages": "73",
+    "whyNot": [
+     "",
+     "Calcium channels wait at the axon terminal, where calcium entry triggers vesicle release.",
+     "Ligand-gated channels respond to neurotransmitter, not to the voltage that carries the impulse along the axon.",
+     "Glutamate ionotropic channels sit postsynaptically on neuron B; they do not propagate the axonal impulse.",
+     "Potassium channels help restore the baseline electrical state after the action potential, not carry it forward."
+    ],
+    "whyNotPages": [
+     "",
+     "73",
+     "73",
+     "76",
+     "67"
+    ]
+   },
+   {
+    "lead": "Voltage-sensitive sodium channels carry the impulse to the terminal, where calcium channels release glutamate onto neuron B. Neuron B must now translate that chemical message back into electrical changes.",
+    "q": "After glutamate is released, what additional phenomenon do ligand-gated channels on neuron B produce to change its function?",
+    "choices": [
+     "Long-term potentiation",
+     "Desensitization of voltage-sensitive sodium channels",
+     "Constitutive activity at rest",
+     "Inverse agonism by glutamate",
+     "Excitation–secretion coupling"
+    ],
+    "answer": 0,
+    "why": "Glutamate acting on **ligand-gated channels** in neuron B is converted into **long-term potentiation**, altering that neuron's function, besides setting up a new impulse through VSSCs.",
+    "pages": "76",
+    "whyNot": [
+     "",
+     "Desensitization is an adaptive state of receptors under prolonged agonist, not the glutamate-driven signal described for neuron B.",
+     "Constitutive activity is infrequent opening without agonist, not a change caused by glutamate.",
+     "Glutamate is the neurotransmitter and acts as an agonist, not an inverse agonist.",
+     "That is the presynaptic conversion of an impulse into release, which occurs in neuron A."
+    ],
+    "whyNotPages": [
+     "",
+     "63",
+     "57",
+     "62",
+     "73"
+    ]
+   }
+  ]
+ }
+]

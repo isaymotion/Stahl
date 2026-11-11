@@ -1,0 +1,632 @@
+[
+ {
+  "id": "v1-01",
+  "tag": "Retrograde signaling",
+  "topic": "neurotransmission",
+  "stem": "A seminar slide shows a postsynaptic neuron that manufactures endocannabinoids and releases them onto CB1 receptors found on the presynaptic terminal. A patient in the audience asks whether the brain really makes its own marijuana-like chemicals.",
+  "steps": [
+   {
+    "q": "What type of neurotransmission does this slide illustrate?",
+    "choices": [
+     "Classic anterograde neurotransmission",
+     "Retrograde neurotransmission",
+     "Volume neurotransmission",
+     "Excitation–secretion coupling",
+     "Axoaxonic neurotransmission"
+    ],
+    "answer": 1,
+    "why": "Messengers made in the **postsynaptic** neuron that signal back to the presynaptic neuron, such as endocannabinoids acting on **CB1**, are **retrograde** neurotransmitters, running opposite to classic flow.",
+    "pages": "6",
+    "whyNot": [
+     "That runs presynaptic to postsynaptic, the opposite of this slide, where the messenger travels **backward** across the synapse.",
+     "",
+     "Volume transmission needs no synapse and spills to distant receptors; here the messenger returns across the synapse to the **presynaptic** neuron.",
+     "That is the **presynaptic** conversion of an electrical impulse into chemical release, not postsynaptic talk-back.",
+     "That names a structural synapse type, axon onto axon, not a direction of chemical signaling."
+    ],
+    "whyNotPages": [
+     "6",
+     "",
+     "6",
+     "6",
+     "1"
+    ]
+   },
+   {
+    "lead": "Retrograde signaling is confirmed. Endocannabinoids are only one retrograde messenger; another type is released from postsynaptic sites and ends up acting on the presynaptic neuron's genome.",
+    "q": "Which retrograde messenger is released postsynaptically, taken up into presynaptic vesicles, and carried back to the cell nucleus?",
+    "choices": [
+     "Nitric oxide",
+     "Nerve growth factor",
+     "β-endorphin",
+     "Endocannabinoids",
+     "Dopamine"
+    ],
+    "answer": 1,
+    "why": "**Nerve growth factor** is released from postsynaptic sites, enters the presynaptic neuron, and rides retrograde transport to the nucleus, where it interacts with the **genome**.",
+    "pages": "6–7",
+    "whyNot": [
+     "Nitric oxide is a gas that diffuses into the presynaptic membrane to act on **cGMP**-sensitive targets, not via vesicles to the nucleus.",
+     "",
+     "That is the brain's own **morphine**, not a retrograde messenger carried to the nucleus.",
+     "These diffuse to presynaptic **CB1** receptors and act there; they are not carried to the nucleus.",
+     "Dopamine is a monoamine released from presynaptic terminals; the book does not describe it as a retrograde messenger."
+    ],
+    "whyNotPages": [
+     "6",
+     "",
+     "5",
+     "6",
+     "6"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v1-02",
+  "tag": "Volume transmission",
+  "topic": "neurotransmission",
+  "stem": "A first-year resident notes that a drug acting on dopamine receptors changes cortical function in a patient with schizophrenia, even at receptor sites that lie away from any synapse. The attending says a feature of how this region handles dopamine lets the transmitter wander from its release site.",
+  "steps": [
+   {
+    "q": "Which feature of the prefrontal cortex allows dopamine to spill beyond its synapse?",
+    "choices": [
+     "Scarce dopamine reuptake pumps",
+     "Abundant dopamine reuptake pumps",
+     "Exclusively axoaxonic contacts",
+     "No dopamine receptors on dendrites",
+     "Retrograde cannabinoid signaling"
+    ],
+    "answer": 0,
+    "why": "Few **dopamine transporters** in the prefrontal cortex mean little reuptake, so dopamine **spills over** and diffuses to nearby receptors; the striatum, rich in pumps, is different.",
+    "pages": "8",
+    "whyNot": [
+     "",
+     "Abundant pumps characterize the **striatum**, where they limit spillover; that is the opposite of the prefrontal cortex.",
+     "Axoaxonic contacts are a synapse type; the spillover described here occurs where **no synapse** exists.",
+     "Dopamine receptors, including **D1**, sit on neighboring dendrites there; the issue is pump scarcity, not receptor absence.",
+     "Retrograde cannabinoid signaling runs from postsynaptic to presynaptic neurons; it does not explain dopamine reaching extrasynaptic receptors."
+    ],
+    "whyNotPages": [
+     "",
+     "8",
+     "1",
+     "8",
+     "6"
+    ]
+   },
+   {
+    "lead": "Dopamine reuptake pumps are scarce in the prefrontal cortex, so dopamine readily spills from its synapse. A dopamine-receptor drug is now added to the patient's regimen.",
+    "q": "Where would a newly added dopamine-receptor drug be able to act?",
+    "choices": [
+     "Only at receptors directly opposite release sites",
+     "At any matching receptor within diffusion range, synaptic or not",
+     "Only at receptors on the presynaptic terminal",
+     "Only at receptors on the soma",
+     "At receptors for any transmitter that diffuses nearby"
+    ],
+    "answer": 1,
+    "why": "Volume transmission means a drug acts at **every compatible receptor** within the diffusion radius, not just synaptically innervated ones, so spillover sites are reached too.",
+    "pages": "7–8",
+    "whyNot": [
+     "That limits action to **synaptic** sites; the book says drugs act wherever relevant receptors exist, not only where innervated.",
+     "",
+     "The receptors in the example lie on postsynaptic dendrites and neighboring neurons; nothing restricts the drug to the **presynaptic** terminal.",
+     "Receptors on neighboring dendrites and neurons are also reached; nothing confines the drug's action to the **soma**.",
+     "A receptor that cannot recognize the transmitter is not activated even if diffusion reaches it; **matching** is required."
+    ],
+    "whyNotPages": [
+     "8",
+     "",
+     "8",
+     "8",
+     "7"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v1-03",
+  "tag": "Autoreceptors",
+  "topic": "neurotransmission",
+  "stem": "A lecturer points to the top of a monoamine neuron, where the soma and dendrites sit. There is no synapse and there are no synaptic vesicles there, yet receptors on this part of the cell still receive monoamine released from the neuron's own dendrites.",
+  "steps": [
+   {
+    "q": "Which mechanism delivers the monoamine to these receptors?",
+    "choices": [
+     "Volume neurotransmission",
+     "Classic synaptic neurotransmission",
+     "Excitation–secretion coupling",
+     "Retrograde neurotransmission",
+     "Axosomatic neurotransmission"
+    ],
+    "answer": 0,
+    "why": "Release from dendrites onto the neuron's own receptors needs no synapse or vesicles; it is **volume** (nonsynaptic diffusion) neurotransmission, so not all chemical signaling is synaptic.",
+    "pages": "8",
+    "whyNot": [
+     "",
+     "Classic transmission is synaptic, using vesicles at a presynaptic terminal; the text stresses there is **no synapse** here.",
+     "That converts an impulse into vesicle release at the **axon terminal**, not leakage from dendrites onto the neuron's own receptors.",
+     "Retrograde messengers travel from postsynaptic to presynaptic neuron; here a neuron's dendrites act on **its own** receptors.",
+     "Axosomatic synapses are axon-to-soma **synaptic** contacts; the situation described lacks any synapse."
+    ],
+    "whyNotPages": [
+     "",
+     "8",
+     "8",
+     "6",
+     "1"
+    ]
+   },
+   {
+    "lead": "The monoamine leaks from the neuron's dendrites onto its own somatodendritic autoreceptors by volume transmission, a mechanism the book links to the action of many antidepressants.",
+    "q": "What is the effect on the neuron when monoamine binds these somatodendritic autoreceptors?",
+    "choices": [
+     "Inhibition of neurotransmitter release from the axonal end",
+     "Enhanced release from the axonal end",
+     "Stimulation of impulse flow from top to bottom",
+     "Retrograde release of nerve growth factor",
+     "Direct opening of sodium channels at the terminal"
+    ],
+    "answer": 0,
+    "why": "Somatodendritic **autoreceptors** inhibit release from the axonal end, so monoamine reaching them from dendrites **dampens impulse flow** through the neuron.",
+    "pages": "8–9",
+    "whyNot": [
+     "",
+     "Opposite direction: autoreceptors **dampen** release at the axonal end; they do not enhance it.",
+     "Opposite direction: autoreceptor binding **inhibits** impulse flow through the neuron, top to bottom.",
+     "Nerve growth factor is a retrograde messenger from postsynaptic to presynaptic neurons, unrelated to autoreceptor feedback.",
+     "Sodium channels carry the action potential; autoreceptor input is described as **inhibitory**, not channel opening."
+    ],
+    "whyNotPages": [
+     "",
+     "9",
+     "9",
+     "6",
+     "9"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v1-04",
+  "tag": "Excitation–secretion",
+  "topic": "ion-channels",
+  "stem": "A student reads that an electrical impulse travels along an axon through sodium entry, yet something different must happen at the presynaptic terminal for the message to cross the synapse to the next neuron.",
+  "steps": [
+   {
+    "q": "Which channels opening at the terminal allow the neuron to release its stored transmitter?",
+    "choices": [
+     "Voltage-sensitive calcium channels",
+     "Voltage-sensitive sodium channels only",
+     "Cytoplasmic hormone receptors",
+     "CB1 receptor-linked channels",
+     "Ligand-gated channels on postsynaptic dendrites"
+    ],
+    "answer": 0,
+    "why": "The arriving impulse opens **voltage-sensitive calcium channels** at the terminal; calcium entry makes anchored vesicles spill transmitter, while sodium channels carry the impulse along the axon.",
+    "pages": "9",
+    "whyNot": [
+     "",
+     "Sodium entry carries the impulse along the axon; at the terminal, **calcium** channel opening couples to vesicle release.",
+     "Cytoplasmic hormone receptors form nuclear complexes acting on genes; they play no part in vesicle release.",
+     "CB1 is a presynaptic receptor for retrograde endocannabinoids, not the route by which an arriving impulse triggers release.",
+     "Those transduce a chemical message into an electrical one in the **postsynaptic** neuron, the reverse of this step."
+    ],
+    "whyNotPages": [
+     "",
+     "9",
+     "11",
+     "6",
+     "9"
+    ]
+   },
+   {
+    "lead": "Voltage-sensitive calcium channels at the terminal are blocked in this thought experiment, while sodium channels along the axon still conduct the impulse normally.",
+    "q": "What is the expected result?",
+    "choices": [
+     "The impulse arrives, but vesicles fail to release transmitter",
+     "The impulse fails to travel along the axon",
+     "Vesicles release normally because sodium is sufficient",
+     "Postsynaptic channels open without any transmitter",
+     "Nitric oxide takes over transmission"
+    ],
+    "answer": 0,
+    "why": "Without calcium entry the vesicles cannot **release** their contents, so electrical-to-chemical conversion (**excitation–secretion coupling**) fails even though the action potential arrives.",
+    "pages": "9",
+    "whyNot": [
+     "",
+     "Axonal conduction depends on sodium channels, which are working here; the block affects only the **terminal**.",
+     "Sodium triggers conduction only; **calcium** inflow is what makes anchored vesicles release, so release would not be normal.",
+     "Postsynaptic channels open when transmitter binds; with no release there is no **ligand** to open them.",
+     "Nitric oxide is a postsynaptic-to-presynaptic messenger; it cannot substitute for presynaptic **release**."
+    ],
+    "whyNotPages": [
+     "",
+     "9",
+     "9",
+     "9",
+     "6"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v1-05",
+  "tag": "Kinase vs phosphatase",
+  "topic": "neurotransmission",
+  "stem": "A research team studies a postsynaptic neuron that receives two inputs at once. One transmitter engages a seven-transmembrane receptor linked to cAMP, and a second opens a ligand-gated channel so that calcium floods in. The team counts phosphate groups on downstream proteins.",
+  "steps": [
+   {
+    "q": "What third-messenger enzyme does the cAMP arm of this model activate?",
+    "choices": [
+     "Protein kinase",
+     "Phosphatase",
+     "Transcription factor",
+     "RNA polymerase",
+     "Hormone-response element"
+    ],
+    "answer": 0,
+    "why": "cAMP activates a third-messenger **protein kinase** that tags fourth-messenger proteins with phosphate groups, in contrast to the calcium arm, which uses a phosphatase.",
+    "pages": "13",
+    "whyNot": [
+     "",
+     "A phosphatase is the third messenger on the **calcium** arm, removing phosphates rather than adding them.",
+     "A transcription factor such as CREB is reached further downstream, as a fourth messenger acted on by the kinase.",
+     "RNA polymerase transcribes a gene's coding region once activated; it acts at the gene, far past the third messenger.",
+     "Hormone-response elements are gene sites bound by hormone–nuclear receptor complexes, not part of the cAMP pathway."
+    ],
+    "whyNotPages": [
+     "",
+     "10",
+     "21",
+     "18",
+     "17"
+    ]
+   },
+   {
+    "lead": "The cAMP arm activates protein kinase A, which adds phosphate groups to proteins. Meanwhile calcium entering through the channel activates the phosphatase calcineurin on the same neuron.",
+    "q": "What does the calcium-activated phosphatase calcineurin do to the proteins the kinase has tagged?",
+    "choices": [
+     "It removes their phosphate groups",
+     "It adds a second phosphate to amplify the effect",
+     "It synthesizes more cAMP",
+     "It phosphorylates CREB directly",
+     "It frees the kinase's regulatory units"
+    ],
+    "answer": 0,
+    "why": "**Calcineurin** strips phosphates from the phosphoproteins the kinase tagged, so the two enzymes oppose each other and their **balance** sets the downstream activity.",
+    "pages": "15",
+    "whyNot": [
+     "",
+     "Adding phosphate is the **kinase's** job; calcineurin removes phosphate, opposing it.",
+     "Adenylate cyclase makes cAMP, upstream of the kinase; calcineurin acts on **phosphoproteins**.",
+     "Calcium-activated **CaMK**, a kinase, phosphorylates CREB; calcineurin is a different enzyme.",
+     "That is what two cAMP molecules do to the kinase's regulatory units, not a phosphatase action."
+    ],
+    "whyNotPages": [
+     "",
+     "15",
+     "12",
+     "17",
+     "13"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v1-06",
+  "tag": "G proteins and CREB",
+  "topic": "receptors",
+  "stem": "A neurotransmitter binds a postsynaptic receptor that has seven transmembrane regions, and the receptor changes shape. Investigators want the order of events leading to the second messenger cAMP and, eventually, to gene expression in that neuron.",
+  "steps": [
+   {
+    "q": "Which element binds the reshaped receptor next?",
+    "choices": [
+     "G protein",
+     "Adenylate cyclase directly",
+     "Protein kinase A",
+     "CREB",
+     "A hormone–nuclear receptor complex"
+    ],
+    "answer": 0,
+    "why": "Once the transmitter alters the receptor's shape, the **G protein** binds it and itself changes conformation, readying it to bind the enzyme that synthesizes the second messenger.",
+    "pages": "12",
+    "whyNot": [
+     "",
+     "The enzyme binds only after the G protein has changed shape; it joins the **complex** last.",
+     "Protein kinase A is activated later, once cAMP exists; it is a **third** messenger.",
+     "CREB is a nuclear transcription factor reached much later in the cascade.",
+     "That complex belongs to the **hormone** cascade, forming in the cytoplasm, not at a seven-transmembrane receptor."
+    ],
+    "whyNotPages": [
+     "",
+     "12",
+     "13",
+     "17",
+     "17"
+    ]
+   },
+   {
+    "lead": "The G protein binds the reshaped receptor, then the enzyme adenylate cyclase, and cAMP is formed, activating its protein kinase.",
+    "q": "After protein kinase A is activated, how does it switch on a gene?",
+    "choices": [
+     "It enters the nucleus and phosphorylates CREB",
+     "It binds the enhancer and activates RNA polymerase directly",
+     "It binds hormone-response elements",
+     "It activates Ras to start a neurotrophin kinase chain",
+     "It cleaves hairpin RNAs with dicer"
+    ],
+    "answer": 0,
+    "why": "Activated protein kinase A travels into the nucleus and puts a phosphate on **CREB**, a transcription factor, which then activates the nearby gene.",
+    "pages": "17",
+    "whyNot": [
+     "",
+     "Transcription factors bind the regulatory region once phosphorylated; the kinase acts on the **transcription factor**, not directly on polymerase.",
+     "Hormone-response elements are bound by hormone–nuclear receptor complexes, a different cascade from the cAMP route.",
+     "Ras belongs to the **neurotrophin** cascade, which has its own kinases; the cAMP route acts through CREB.",
+     "Dicer processes hairpin RNAs in the cytoplasm during RNA interference, unrelated to cAMP signaling."
+    ],
+    "whyNotPages": [
+     "",
+     "18",
+     "17",
+     "17",
+     "27"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v1-07",
+  "tag": "Hormone cascade",
+  "topic": "genes-development",
+  "stem": "A 41-year-old woman takes estrogen therapy. Her clinician explains that steroid hormones also act inside neurons, and a student asks how this differs from a neurotransmitter binding a receptor on the neuron's surface.",
+  "steps": [
+   {
+    "q": "Where does the hormone find its receptor, and what forms?",
+    "choices": [
+     "A cytoplasmic receptor, forming a hormone–nuclear receptor complex",
+     "A seven-transmembrane receptor coupled to a G protein",
+     "A ligand-gated ion channel admitting calcium",
+     "A neurotrophin receptor starting a Ras–Raf kinase chain",
+     "A presynaptic CB1 receptor for retrograde messengers"
+    ],
+    "answer": 0,
+    "why": "Steroid hormones such as estrogen enter the neuron and bind **cytoplasmic** receptors, forming a **hormone–nuclear receptor complex**, unlike neurotransmitters that bind receptors on the membrane.",
+    "pages": "17",
+    "whyNot": [
+     "",
+     "That is the neurotransmitter route producing cAMP; steroid hormones instead enter the neuron and bind **inside** it.",
+     "That is another neurotransmitter-triggered cascade; hormones such as estrogen cross into the neuron rather than opening channels.",
+     "Neurotrophins, not steroids, initiate the kinase cascade that begins with **Ras**.",
+     "CB1 binds endocannabinoids made postsynaptically, which is unrelated to steroid hormone action."
+    ],
+    "whyNotPages": [
+     "",
+     "11",
+     "11",
+     "17",
+     "6"
+    ]
+   },
+   {
+    "lead": "The hormone has bound its cytoplasmic receptor, so a hormone–nuclear receptor complex has formed inside the neuron.",
+    "q": "What does this complex do next to change neuronal function?",
+    "choices": [
+     "It enters the nucleus, binds hormone-response elements, and acts as a transcription factor",
+     "It activates adenylate cyclase at the inner membrane",
+     "It phosphorylates CREB through calcium/calmodulin kinase",
+     "It joins Fos and Jun as a leucine zipper",
+     "It is exported to the cytoplasm and cut by dicer"
+    ],
+    "answer": 0,
+    "why": "The complex moves to the **nucleus**, finds **hormone-response elements** in genes, and itself acts as a transcription factor to activate nearby genes.",
+    "pages": "17",
+    "whyNot": [
+     "",
+     "Adenylate cyclase belongs to the G-protein cascade; the hormone complex acts at the **genome**, not the membrane.",
+     "CaMK is a kinase of the ion-channel cascade; the hormone complex acts directly on genes instead.",
+     "Fos–Jun leucine zippers are products of **immediate early genes**, not formed by hormone complexes.",
+     "Exportin and dicer process hairpin RNAs in RNA interference, not hormone complexes."
+    ],
+    "whyNotPages": [
+     "",
+     "12",
+     "12",
+     "21",
+     "27"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v1-08",
+  "tag": "Early genes",
+  "topic": "genes-development",
+  "stem": "In a research slice, nuclear proteins appear in a stimulated neuron within about 15 minutes of neurotransmitter exposure and fade within an hour at most. These proteins are themselves transcription factors, and two of them pair up.",
+  "steps": [
+   {
+    "q": "Which class of genes produces these rapid, short-lived products?",
+    "choices": [
+     "Immediate early genes",
+     "Late genes",
+     "Genes silenced by methylated promoters",
+     "Genes targeted by hormone–nuclear complexes",
+     "Genes for neurotransmitter enzymes only"
+    ],
+    "answer": 0,
+    "why": "**Immediate early genes** such as cFos and cJun are rapid responders: their nuclear protein products start within 15 minutes and last only about a half hour to an hour.",
+    "pages": "21",
+    "whyNot": [
+     "",
+     "Late genes are switched on **afterward** by early gene products, and their products act for hours to days.",
+     "Methylated promoter regions keep genes **silenced**, so no RNA or protein is made, the opposite of rapid expression.",
+     "That cascade begins with a cytoplasmic hormone complex, not neurotransmitter-driven nuclear proteins that quickly fade.",
+     "Early genes make transcription factors; enzymes and receptors are typical products of **late** genes."
+    ],
+    "whyNotPages": [
+     "",
+     "20",
+     "24",
+     "17",
+     "20"
+    ]
+   },
+   {
+    "lead": "These are the products of immediate early genes. Two of them, Fos and Jun, combine and return to the genome to find another gene.",
+    "q": "What does the Fos–Jun partnership do?",
+    "choices": [
+     "It forms a leucine zipper transcription factor that switches on late genes",
+     "It strips phosphates from fourth-messenger phosphoproteins",
+     "It donates methyl groups to compact chromatin",
+     "It synthesizes cAMP at the inner membrane",
+     "It carries nerve growth factor to the nucleus"
+    ],
+    "answer": 0,
+    "why": "Fos and Jun partner to form a **leucine zipper** transcription factor that returns to the genome and activates **late genes**, which can encode enzymes, receptors, or growth factors.",
+    "pages": "21",
+    "whyNot": [
+     "",
+     "That is a phosphatase's job; Fos and Jun are nuclear transcription factors acting on **genes**.",
+     "Methyl groups come from SAMe via L-methylfolate and DNMT enzymes; Fos and Jun activate genes rather than silence them.",
+     "Adenylate cyclase makes cAMP; Fos and Jun are nuclear proteins acting much farther downstream.",
+     "Nerve growth factor is carried back by retrograde transport; Fos and Jun are made and work **inside** the nucleus."
+    ],
+    "whyNotPages": [
+     "",
+     "15",
+     "24",
+     "12",
+     "21"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v1-09",
+  "tag": "Epigenetics",
+  "topic": "genes-development",
+  "stem": "A mature cortical neuron is exposed to chronic stress. Chromatin analysis shows that the promoter of a previously active gene is now wrapped tightly, with methylated DNA and deacetylated histones, and no transcription factor can reach it.",
+  "steps": [
+   {
+    "q": "What is the expected consequence for this gene?",
+    "choices": [
+     "It is silenced and no RNA or protein is made",
+     "It is expressed at higher levels",
+     "Its mRNA undergoes alternative splicing instead",
+     "It becomes an immediate early gene",
+     "Its transcription factors bind more tightly"
+    ],
+    "answer": 0,
+    "why": "Methylated DNA and deacetylated histones **compress chromatin**, like a closed gate, so transcription factors cannot reach the promoter and the gene is **silenced**.",
+    "pages": "24",
+    "whyNot": [
+     "",
+     "Opposite direction: compacted chromatin blocks access, whereas **acetylation** and demethylation open it for expression.",
+     "Splicing is a step after transcription, rearranging mRNA; here transcription is blocked before any **mRNA** forms.",
+     "Immediate early genes respond rapidly to neurotransmission; a compacted promoter gives no access, so no early expression.",
+     "Compression denies transcription factors **access** to promoters; they cannot bind more tightly."
+    ],
+    "whyNotPages": [
+     "",
+     "24",
+     "26",
+     "24",
+     "24"
+    ]
+   },
+   {
+    "lead": "Methylation and deacetylation have silenced a previously active gene in this stressed neuron, and investigators want to know how the silencing could be reversed.",
+    "q": "Which pair of changes would reopen the chromatin so this gene could be expressed again?",
+    "choices": [
+     "Demethylation and histone acetylation",
+     "DNA methylation by DNMT3 and histone deacetylation by HDACs",
+     "Methylation and histone acetylation",
+     "Deacetylation and demethylation",
+     "Maintenance methylation by DNMT1 and histone methylation"
+    ],
+    "answer": 0,
+    "why": "**Demethylation** and **acetylation** do the opposite of silencing: they decompress chromatin, as an opened gate would, letting transcription factors reach the promoter and activate the gene.",
+    "pages": "24–25",
+    "whyNot": [
+     "",
+     "Those are the same changes that silenced the gene, so they would keep chromatin **compressed**.",
+     "Methylation still **closes** the gate; only demethylation, together with acetylation, does the opposite.",
+     "Deacetylation compresses chromatin and silences, offsetting the **demethylation** in this pairing.",
+     "DNMT1 preserves methylation and keeps genes quiet; histone methylation also silences, so this adds **silencing**."
+    ],
+    "whyNotPages": [
+     "",
+     "24",
+     "24",
+     "24",
+     "24"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v1-10",
+  "tag": "RNA interference",
+  "topic": "genes-development",
+  "stem": "A seminar discusses a class of noncoding RNA that is transcribed from DNA but never translated. Each molecule folds into a hairpin loop, is exported from the nucleus by exportin, and is chopped into pieces in the cytoplasm.",
+  "steps": [
+   {
+    "q": "Which class of RNA is being described?",
+    "choices": [
+     "Small hairpin RNA (microRNA)",
+     "Messenger RNA",
+     "Transfer RNA",
+     "Ribosomal RNA",
+     "Small nuclear RNA"
+    ],
+    "answer": 0,
+    "why": "Noncoding **small hairpin RNAs** (microRNA, interfering RNA) form hairpin loops, leave the nucleus via exportin, and are cut in the cytoplasm by dicer instead of being translated.",
+    "pages": "27",
+    "whyNot": [
+     "",
+     "Messenger RNA is translated into protein, and may be spliced; these molecules are never translated.",
+     "Transfer RNA is a different noncoding class; the book ties hairpin loops, exportin and **dicer** to small hairpin RNAs.",
+     "Ribosomal RNA is a different noncoding class; hairpin loops cut by **dicer** are described for small hairpin RNAs.",
+     "Small nuclear RNA is a different noncoding class; hairpin loops, exportin and **dicer** belong to small hairpin RNAs."
+    ],
+    "whyNotPages": [
+     "",
+     "26",
+     "27",
+     "27",
+     "27"
+    ]
+   },
+   {
+    "lead": "After dicer cuts these RNAs into small pieces, the pieces attach to RISC, a protein complex that then latches onto messenger RNA.",
+    "q": "What is the functional result for the targeted messenger RNA?",
+    "choices": [
+     "Its protein synthesis is inhibited",
+     "Its translation is increased",
+     "It is spliced to yield additional protein variants",
+     "Transcription factors are phosphorylated by a kinase",
+     "The target gene's histones are acetylated"
+    ],
+    "answer": 0,
+    "why": "Dicer fragments bind **RISC**, which binds mRNA and **blocks protein synthesis**; the book suggests this could one day silence a faulty gene product, as in Huntington's disease.",
+    "pages": "27–28",
+    "whyNot": [
+     "",
+     "Opposite direction: RISC binding **inhibits** protein synthesis rather than boosting it.",
+     "Splicing reorganizes the primary transcript to give several proteins; RISC binding instead **blocks** protein synthesis.",
+     "Phosphorylating transcription factors is a signal-cascade step upstream of transcription, not what RISC does to **mRNA**.",
+     "Histone acetylation opens chromatin at the gene in the nucleus; RISC acts later, on **mRNA**."
+    ],
+    "whyNotPages": [
+     "",
+     "27",
+     "26",
+     "18",
+     "24"
+    ]
+   }
+  ]
+ }
+]
