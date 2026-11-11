@@ -1,0 +1,774 @@
+{
+ "q3-01": {
+  "pages": "51",
+  "whyNot": [
+   "That is just another name for a ligand-gated channel, which also forms the ion channel and is the same complex.",
+   "",
+   "That is the standard name for channels opened by neurotransmitter ligands, so it describes the same complex.",
+   "Ionotropic receptor is a synonym for the ligand-gated channel, the same receptor/channel complex.",
+   "Ion-channel-linked receptor is yet another synonym for the same ligand-gated complex, not a different class."
+  ],
+  "whyNotPages": [
+   "51",
+   "",
+   "51",
+   "51",
+   "51"
+  ]
+ },
+ "q3-02": {
+  "pages": "53",
+  "whyNot": [
+   "Too high: the book puts ligand-gated channel drugs at only about **one fifth** of psychotropics, not a third.",
+   "Too high: only about a **fifth** of psychotropic drugs act at these receptors, far below half.",
+   "",
+   "Too low: about a **fifth**, not a tenth, of psychotropic drugs act at ligand-gated channels.",
+   "Far too high: ligand-gated channels account for about a **fifth** of psychotropic drugs, not two-thirds."
+  ],
+  "whyNotPages": [
+   "53",
+   "53",
+   "",
+   "53",
+   "53"
+  ]
+ },
+ "q3-03": {
+  "pages": "53",
+  "whyNot": [
+   "That describes a slower route: **G-protein** receptors can act with delay while waiting for gene and cellular changes.",
+   "Nuclear hormone receptors are not what the chapter links to immediate anxiolytic or hypnotic onset.",
+   "A **transporter** is not the site where benzodiazepines act; they act on a ligand-gated chloride channel.",
+   "A **CYP450** enzyme handles drug metabolism and does not mediate the clinical effect of a benzodiazepine.",
+   ""
+  ],
+  "whyNotPages": [
+   "53",
+   "53",
+   "65",
+   "65",
+   ""
+  ]
+ },
+ "q3-04": {
+  "pages": "53",
+  "whyNot": [
+   "A single large protein is wrong: pentameric channels are built from **five** separate subunits around a central pore.",
+   "Four subunits with a re-entrant loop describes the **tetrameric** glutamate channels, not pentameric ones.",
+   "Seven transmembrane regions is the **G-protein-linked** receptor design, not a pentameric ion channel subunit.",
+   "",
+   "Four subunits is the **tetrameric** count, and six segments describes voltage-sensitive channel subunits, not pentameric ones."
+  ],
+  "whyNotPages": [
+   "53",
+   "54",
+   "53",
+   "",
+   "67"
+  ]
+ },
+ "q3-05": {
+  "pages": "54",
+  "whyNot": [
+   "",
+   "This glycine receptor is a **pentameric** channel, listed alongside GABA-A, nicotinic and 5HT3 in the pentameric table.",
+   "The α4β2 nicotinic receptor is **pentameric**, like all acetylcholine nicotinic channels in the pentameric table.",
+   "GABA-A is the classic **pentameric** channel, built from five subunits with four transmembrane regions each.",
+   "The 5HT3 receptor is a serotonin channel of the **pentameric** family, with five subunits."
+  ],
+  "whyNotPages": [
+   "",
+   "53",
+   "53",
+   "53",
+   "53"
+  ]
+ },
+ "q3-06": {
+  "pages": "54",
+  "whyNot": [
+   "Seven transmembrane regions is the design of **G-protein-linked** receptors, not of ionotropic glutamate subunits.",
+   "",
+   "Four full transmembrane regions is the **pentameric** subunit design, which glutamate subunits lack.",
+   "They do have transmembrane regions: **three** full ones, plus a re-entrant loop that lines the channel.",
+   "Six segments with a voltmeter describes **voltage-sensitive** channel subunits, not ionotropic glutamate receptors."
+  ],
+  "whyNotPages": [
+   "53",
+   "",
+   "54",
+   "54",
+   "67"
+  ]
+ },
+ "q3-07": {
+  "pages": "56",
+  "whyNot": [
+   "",
+   "NMDA subunits are **NMDAR1, NMDAR2A–D and NMDAR3A**, a different set from GluR1–4.",
+   "GABA-A is a **pentameric** chloride channel with its own subunits such as alpha and gamma, not a glutamate receptor.",
+   "Kainate subunits are **GluR5–7 and KA1–2**, so GluR1–4 does not define it.",
+   "mGluR is a **G-protein-linked** metabotropic glutamate receptor, not one of the ionotropic subunit families listed."
+  ],
+  "whyNotPages": [
+   "",
+   "56",
+   "53",
+   "56",
+   "56"
+  ]
+ },
+ "q3-08": {
+  "pages": "55",
+  "whyNot": [
+   "GABA-A PAM action is how **benzodiazepines** work; varenicline instead targets nicotinic receptors.",
+   "Varenicline acts at **α4β2**, and it is a partial, not full, agonist; α7 is not its listed target.",
+   "A pure antagonist would not stimulate the receptor at all; varenicline is a **partial agonist**.",
+   "5HT3 antagonism is the action of **mirtazapine, vortioxetine** and antiemetics, not of varenicline.",
+   ""
+  ],
+  "whyNotPages": [
+   "55",
+   "55",
+   "57",
+   "55",
+   ""
+  ],
+  "why": "Varenicline is a **partial agonist at α4β2 nicotinic receptors**: it gives modest stimulation yet blunts the fuller nicotine effect, which supports smoking cessation."
+ },
+ "q3-09": {
+  "pages": "55",
+  "whyNot": [
+   "GABA-B is a different receptor; Z drugs act at **GABA-A** nonbenzodiazepine sites, as listed in the table.",
+   "NMDA open-channel sites bind **PCP, ketamine** and similar agents, not hypnotics such as zolpidem.",
+   "Benzodiazepine-insensitive neurosteroid sites are targeted by **allopregnanolone**, not by the Z drugs.",
+   "",
+   "Orexin receptors are not part of this chapter's table; Z drugs act at **GABA-A** instead."
+  ],
+  "whyNotPages": [
+   "55",
+   "55",
+   "55",
+   "",
+   "55"
+  ]
+ },
+ "q3-10": {
+  "pages": "55",
+  "whyNot": [
+   "Memantine acts at **NMDA** channel and Mg++ sites for Alzheimer disease, not at GABA-A neurosteroid sites.",
+   "Diazepam works at the **benzodiazepine** site, which is not the insensitive neurosteroid site, and it lacks the postpartum use.",
+   "",
+   "Varenicline is a **nicotinic** partial agonist for smoking cessation, not a GABA-A drug.",
+   "Zolpidem acts at **nonbenzodiazepine PAM** sites mediating phasic inhibition, not at the neurosteroid sites."
+  ],
+  "whyNotPages": [
+   "55",
+   "55",
+   "",
+   "55",
+   "55"
+  ]
+ },
+ "q3-11": {
+  "pages": "55",
+  "whyNot": [
+   "",
+   "GABA-A PAM action is the mechanism of **benzodiazepines** and Z drugs, not of memantine.",
+   "5HT3 antagonism belongs to **mirtazapine and vortioxetine**, not to memantine.",
+   "α2δ binding is the target of **pregabalin and gabapentin** at calcium channels, not of memantine.",
+   "Memantine blocks a glutamate channel; acetylcholinesterase inhibition is a different enzyme mechanism not described for it here."
+  ],
+  "whyNotPages": [
+   "",
+   "55",
+   "55",
+   "71",
+   "55"
+  ],
+  "why": "Memantine is an **NMDA antagonist** at the NAM channel/Mg++ sites; this dampening of glutamate-channel activity is what the table links to pro-cognitive effects in Alzheimer disease."
+ },
+ "q3-12": {
+  "pages": "55",
+  "whyNot": [
+   "Dextromethadone is listed among the **open-channel** NMDA antagonists, so it is not the exception.",
+   "",
+   "PCP is listed as an **open-channel** NMDA antagonist, so it does not fit as the exception.",
+   "Ketamine is listed at the **open-channel** site, so it is not the exception.",
+   "Dextromethorphan is listed at the **open-channel** site, so it is not the exception."
+  ],
+  "whyNotPages": [
+   "55",
+   "",
+   "55",
+   "55",
+   "55"
+  ]
+ },
+ "q3-13": {
+  "pages": "55",
+  "whyNot": [
+   "Bupropion and trazodone are not listed as **5HT3** antagonists in the table.",
+   "Ketamine and esketamine are **NMDA** channel blockers, not 5HT3 antagonists.",
+   "Fluoxetine and sertraline are not listed as **5HT3** antagonists in the table.",
+   "",
+   "Lithium and valproate are not listed in the ligand-gated channel table as **5HT3** antagonists."
+  ],
+  "whyNotPages": [
+   "55",
+   "55",
+   "55",
+   "",
+   "55"
+  ],
+  "why": "Mirtazapine and vortioxetine are the antidepressants listed as **5HT3 antagonists**; blocking this serotonin ligand-gated channel is tied to antidepressant and pro-cognitive actions."
+ },
+ "q3-14": {
+  "pages": "56",
+  "whyNot": [
+   "An antagonist returns the channel to its **resting** state and cannot make it open more than a full agonist does.",
+   "An inverse agonist does the **opposite**, closing the channel and stabilizing it in an inactive state.",
+   "",
+   "Desensitization is a state where the receptor **stops responding** to the agonist, so opening is reduced, not increased.",
+   "A partial agonist opens the channel **less** than a full agonist, not more."
+  ],
+  "whyNotPages": [
+   "57",
+   "57",
+   "",
+   "63",
+   "57"
+  ],
+  "why": "A full agonist opens the channel as often as its own site allows; opening beyond that needs a **positive allosteric modulator** acting at a second site."
+ },
+ "q3-15": {
+  "pages": "57",
+  "whyNot": [
+   "Maximal opening is what a **full agonist** produces, not an antagonist acting alone.",
+   "Inactivation is the state stabilized by an **inverse agonist** or by long agonist exposure, not by a silent antagonist.",
+   "Antagonists leave the channel at rest, which is **not fully closed**, so infrequent opening continues.",
+   "Desensitization follows **prolonged agonist** exposure, whereas a silent antagonist changes nothing from baseline.",
+   ""
+  ],
+  "whyNotPages": [
+   "57",
+   "62",
+   "57",
+   "63",
+   ""
+  ]
+ },
+ "q3-16": {
+  "pages": "61",
+  "whyNot": [
+   "Desensitization comes from prolonged **agonist** exposure, not from adding an antagonist to an inverse agonist.",
+   "Opening cannot fall further, since the inverse agonist has already closed the channel; the antagonist **reverses** it.",
+   "",
+   "Maximal opening is the full agonist effect; an antagonist only restores **resting** frequency.",
+   "Something does change: the antagonist displaces the inverse agonist and **increases** opening."
+  ],
+  "whyNotPages": [
+   "63",
+   "61",
+   "",
+   "57",
+   "61"
+  ]
+ },
+ "q3-17": {
+  "pages": "62",
+  "whyNot": [
+   "",
+   "Opening is the effect of an **agonist**, whereas inverse agonists close the channel.",
+   "Desensitization is an adaptive state from **prolonged agonist** exposure, not the inverse agonist state.",
+   "The resting state is the one stabilized by a silent **antagonist**, not by an inverse agonist.",
+   "Full activation is the **agonist** end of the spectrum, the opposite of inverse agonism."
+  ],
+  "whyNotPages": [
+   "",
+   "57",
+   "63",
+   "62",
+   "57"
+  ]
+ },
+ "q3-18": {
+  "pages": "59",
+  "whyNot": [
+   "A net agonist effect appears when natural agonist is **absent**, not when levels are high.",
+   "A partial agonist produces **less** opening than a full agonist, so it cannot act as one.",
+   "Inverse agonism would push the channel below resting; a partial agonist only reduces opening **toward its own level**.",
+   "",
+   "A PAM boosts a bound neurotransmitter; a partial agonist binds the **agonist site** itself."
+  ],
+  "whyNotPages": [
+   "60",
+   "59",
+   "59",
+   "",
+   "65"
+  ]
+ },
+ "q3-19": {
+  "pages": "63",
+  "whyNot": [
+   "The resting state is a **responsive** state with infrequent opening, not a loss of response to bound agonist.",
+   "Open is the **active** state, with ion flow; here the receptor has stopped responding.",
+   "Allosteric modulation involves ligands at a **different site** boosting or reducing the neurotransmitter, not unresponsiveness.",
+   "Constitutive activity is the **occasional opening** that occurs even without agonist, not unresponsiveness.",
+   ""
+  ],
+  "whyNotPages": [
+   "63",
+   "63",
+   "65",
+   "57",
+   ""
+  ]
+ },
+ "q3-20": {
+  "pages": "63",
+  "whyNot": [
+   "There is a difference: inactivation follows **hours** of agonist exposure, while desensitization comes sooner and reverses quickly.",
+   "",
+   "Inactivation does **not** reverse instantly; recovery takes hours, unlike early desensitization.",
+   "Inactivation reduces responsiveness and does not **increase** ion flow.",
+   "The chapter describes inactivation at **ligand-gated** channels (and in sodium channels), not only at G-protein receptors."
+  ],
+  "whyNotPages": [
+   "63",
+   "",
+   "63",
+   "63",
+   "68"
+  ]
+ },
+ "q3-21": {
+  "pages": "63–64",
+  "whyNot": [
+   "Nicotine acts at the agonist site as a drug, not an allosteric one; the difference lies in **hydrolysis**.",
+   "Acetylcholine is the **natural full agonist**, not a partial agonist.",
+   "Acetylcholine **does** bind nicotinic receptors, which are named for responding to it.",
+   "",
+   "Nicotine is an **agonist** at nicotinic receptors, not an inverse agonist."
+  ],
+  "whyNotPages": [
+   "64",
+   "63",
+   "63",
+   "",
+   "64"
+  ]
+ },
+ "q3-22": {
+  "pages": "64",
+  "whyNot": [
+   "That is the time for **desensitization** (about one cigarette); the inactivation lasts longer.",
+   "Several days is far too long; inactivation lasts about the **interval** between cigarettes.",
+   "A few seconds is not supported; the text refers to the time of a **cigarette** and the interval between them.",
+   "Inactivation is **not permanent** and reverts over time after the agonist is gone.",
+   ""
+  ],
+  "whyNotPages": [
+   "64",
+   "64",
+   "64",
+   "63",
+   ""
+  ]
+ },
+ "q3-23": {
+  "pages": "65",
+  "whyNot": [
+   "",
+   "They act at **ligand-gated** channels as discussed here, not only on voltage-gated channels.",
+   "They bind at a **different site** from the neurotransmitter, hence allosteric.",
+   "PAMs boost and NAMs reduce the transmitter's action, so they are **not** always inverse agonists.",
+   "They have little or no activity **alone**, so they cannot open the channel by themselves."
+  ],
+  "whyNotPages": [
+   "",
+   "65",
+   "65",
+   "65",
+   "65"
+  ]
+ },
+ "q3-24": {
+  "pages": "65",
+  "whyNot": [
+   "Benzodiazepines act at **GABA-A** chloride channels, not sodium channels.",
+   "",
+   "GABA transaminase inhibition is an **enzyme** mechanism, not how benzodiazepines amplify GABA-A signaling.",
+   "GABA reuptake blockade acts at a **transporter**, not at the GABA-A complex where benzodiazepines act.",
+   "Benzodiazepines bind a **different site** elsewhere on the complex, not GABA's own site."
+  ],
+  "whyNotPages": [
+   "65",
+   "",
+   "65",
+   "65",
+   "65"
+  ]
+ },
+ "q3-25": {
+  "pages": "65",
+  "whyNot": [
+   "Blocking convulsions is a listed **clinical effect** of benzodiazepine action.",
+   "Reducing anxiety is a listed **clinical effect** of benzodiazepine action.",
+   "",
+   "Muscle relaxation is a listed **clinical effect** of benzodiazepine action.",
+   "Inducing sleep is a listed **clinical effect** of benzodiazepine action."
+  ],
+  "whyNotPages": [
+   "65",
+   "65",
+   "",
+   "65",
+   "65"
+  ]
+ },
+ "q3-26": {
+  "pages": "66",
+  "whyNot": [
+   "",
+   "Anticonvulsant action is the effect of a benzodiazepine **full agonist**; an inverse agonist does the opposite.",
+   "Sedation and muscle relaxation are **agonist** effects, not those of an inverse agonist.",
+   "Amnesia is a full agonist effect; the inverse agonist causes **some memory improvement**.",
+   "Anxiolysis comes from **agonists**; inverse agonists instead produce panic."
+  ],
+  "whyNotPages": [
+   "",
+   "66",
+   "65",
+   "66",
+   "66"
+  ]
+ },
+ "q3-27": {
+  "pages": "66",
+  "whyNot": [
+   "The glycine site is not where ketamine acts; it binds **inside** the channel instead.",
+   "",
+   "The α2δ subunit is the target of **pregabalin and gabapentin** at voltage-sensitive calcium channels.",
+   "Ketamine acts at a ligand-gated channel, not by reducing release through **VSSCs**.",
+   "Ketamine is a **NAM** at a site within the channel, not a competitor at glutamate's own site."
+  ],
+  "whyNotPages": [
+   "66",
+   "",
+   "71",
+   "66",
+   "66"
+  ]
+ },
+ "q3-28": {
+  "pages": "67",
+  "whyNot": [
+   "Vesicle fusion comes **later**, after calcium has entered the terminal.",
+   "Chloride influx through GABA-A is a **ligand-gated** event, not part of the action potential sequence described.",
+   "",
+   "Potassium re-entry occurs last, during **recovery** after the action potential.",
+   "Calcium influx follows sodium by a few **milliseconds**, so it is second."
+  ],
+  "whyNotPages": [
+   "73",
+   "67",
+   "",
+   "67",
+   "67"
+  ]
+ },
+ "q3-29": {
+  "pages": "67",
+  "whyNot": [
+   "Segment 1 has no voltmeter role in the text; **segment 4** detects the charge difference.",
+   "The β subunit is a possible **regulatory** protein, not the charge-sensing part.",
+   "The loop between segments 5 and 6 is the **ionic filter**, not the voltmeter.",
+   "",
+   "The III–IV cytoplasmic loop carries the **pore inactivator** plug of sodium channels, not the voltmeter."
+  ],
+  "whyNotPages": [
+   "67",
+   "68",
+   "67",
+   "",
+   "67"
+  ],
+  "why": "Transmembrane **segment 4** senses the charge difference across the membrane, acting like a voltmeter that signals the rest of the channel to begin opening or closing."
+ },
+ "q3-30": {
+  "pages": "67",
+  "whyNot": [
+   "That cytoplasmic loop in sodium channels carries the **pore inactivator**, not the ionic filter.",
+   "Snare proteins connect the calcium channel to **synaptic vesicles**, not filtering ions.",
+   "α2δ is an accessory protein at calcium channels and the target of **pregabalin and gabapentin**, not the filter.",
+   "Segment 4 is the **voltmeter**, not the filter.",
+   ""
+  ],
+  "whyNotPages": [
+   "67",
+   "72",
+   "71",
+   "67",
+   ""
+  ]
+ },
+ "q3-31": {
+  "pages": "67",
+  "whyNot": [
+   "No γ subunit location is given for the plug; it sits on the **III–IV** loop.",
+   "The II–III loop of the calcium channel is a **snare**; the sodium channel plug is elsewhere.",
+   "Segment 4 is the **voltmeter**, not the plug.",
+   "The I–II loop is not where the plug sits; it is on the **III–IV** connector.",
+   ""
+  ],
+  "whyNotPages": [
+   "71",
+   "71",
+   "67",
+   "67",
+   ""
+  ]
+ },
+ "q3-32": {
+  "pages": "68",
+  "whyNot": [
+   "Desensitized is a ligand-gated state; this describes **voltage-sensitive** sodium channels.",
+   "Closed and inactivated is the **third** state, when conformational changes have shut the channel as well.",
+   "",
+   "Open is the state with **maximum** ion flow, which the plug prevents.",
+   "Resting is not described as the plugged state here; the plug causes **inactivation**."
+  ],
+  "whyNotPages": [
+   "63",
+   "68",
+   "",
+   "68",
+   "68"
+  ]
+ },
+ "q3-33": {
+  "pages": "70–71",
+  "whyNot": [
+   "",
+   "Benzodiazepines bind at **GABA-A** receptors, not at this calcium channel loop.",
+   "The voltmeter is **segment 4** of each subunit, not this connecting loop.",
+   "The ionic filter is the **5–6 extracellular loop**, not the II–III loop.",
+   "A pore inactivator is on the **sodium** channel III–IV loop; calcium channels lack one."
+  ],
+  "whyNotPages": [
+   "",
+   "65",
+   "67",
+   "70",
+   "67"
+  ]
+ },
+ "q3-34": {
+  "pages": "71",
+  "whyNot": [
+   "The β unit is a cytoplasmic partner protein, not the **α2δ** target of these drugs.",
+   "Segment 4 is the **voltmeter**, not a drug target for these anticonvulsants.",
+   "The α1 pore is the channel itself; these drugs bind the accessory **α2δ** protein.",
+   "",
+   "The γ unit spans the membrane but is not the **α2δ** target of these drugs."
+  ],
+  "whyNotPages": [
+   "71",
+   "67",
+   "71",
+   "",
+   "71"
+  ],
+  "why": "Pregabalin and gabapentin bind the **α2δ protein** that flanks the α1 pore of voltage-sensitive calcium channels, which may influence how the channel opens and closes."
+ },
+ "q3-35": {
+  "pages": "71",
+  "whyNot": [
+   "L-type channels are mainly on cell bodies, dendrites and vascular smooth muscle, not the **presynaptic** release channels.",
+   "",
+   "T-type channels sit on cell bodies and dendrites and are linked to **pacemaking**.",
+   "R and T channels are not the subtypes the book highlights for presynaptic **release** in this context.",
+   "L and T channels are **not** the presynaptic transmitter-release subtypes of interest."
+  ],
+  "whyNotPages": [
+   "72",
+   "",
+   "72",
+   "72",
+   "72"
+  ]
+ },
+ "q3-36": {
+  "pages": "71",
+  "whyNot": [
+   "R-type channels are not the vascular subtype; **L-type** is the one on vascular smooth muscle.",
+   "",
+   "P/Q channels are **presynaptic** release channels, not the vascular smooth muscle target.",
+   "T-type channels are on cell bodies and dendrites for **pacemaking**, not vascular tone.",
+   "N-type channels are **presynaptic** release channels, not the vascular target."
+  ],
+  "whyNotPages": [
+   "71",
+   "",
+   "72",
+   "72",
+   "72"
+  ],
+  "why": "**L-type** channels sit on vascular smooth muscle, where they help regulate blood pressure; dihydropyridine calcium channel blockers act there as antihypertensives."
+ },
+ "q3-37": {
+  "pages": "72",
+  "whyNot": [
+   "",
+   "Synaptotagmin is one of the four snare proteins shown in the figure.",
+   "Synaptobrevin is one of the four snare proteins shown in the figure.",
+   "Syntaxin is one of the four snare proteins shown in the figure.",
+   "SNAP 25 is one of the four snare proteins shown in the figure."
+  ],
+  "whyNotPages": [
+   "",
+   "72",
+   "72",
+   "72",
+   "72"
+  ]
+ },
+ "q3-38": {
+  "pages": "73",
+  "whyNot": [
+   "VSSC activation is not the point; the effect is on **calcium** channels at the terminal.",
+   "GABA-A receptors are ligand-gated chloride channels and are not part of this **presynaptic** mechanism.",
+   "MAO inhibition is an **enzyme** mechanism and unrelated to blocking calcium channel opening.",
+   "Blocking these channels would **decrease**, not increase, release.",
+   ""
+  ],
+  "whyNotPages": [
+   "73",
+   "73",
+   "73",
+   "73",
+   ""
+  ]
+ },
+ "q3-39": {
+  "pages": "73",
+  "whyNot": [
+   "The sodium wave detected by the VSSC comes **before** the irreversible point.",
+   "The action potential leaving the soma is an **earlier** step, along the axon.",
+   "",
+   "Postsynaptic receptor binding occurs **after** release, on the other side of the synapse.",
+   "Vesicle refilling is not the trigger; the **calcium** entry step is."
+  ],
+  "whyNotPages": [
+   "73",
+   "73",
+   "",
+   "76",
+   "73"
+  ]
+ },
+ "q3-40": {
+  "pages": "76",
+  "whyNot": [
+   "MAO inhibition is an enzyme action and is not a result of **glutamate** acting at these channels.",
+   "VSSCs propagate the impulse; the chapter does not describe **desensitization** of them as this outcome.",
+   "Endocannabinoid release is not described in this chapter, which points to **long-term potentiation**.",
+   "",
+   "Vesicular packaging happens in the **presynaptic** neuron, not as a postsynaptic effect."
+  ],
+  "whyNotPages": [
+   "76",
+   "76",
+   "76",
+   "",
+   "76"
+  ]
+ },
+ "q3-41": {
+  "pages": "71",
+  "whyNot": [
+   "Transporters are a different protein class and do not form these **calcium-permeable** channels.",
+   "VSCCs are a separate class, which is why the term calcium channel is too **general**.",
+   "G-protein-linked receptors act through signal transduction rather than forming ion channels.",
+   "",
+   "Enzymes are not channels, so they are not the class these receptors belong to."
+  ],
+  "whyNotPages": [
+   "71",
+   "71",
+   "53",
+   "",
+   "53"
+  ]
+ },
+ "q3-42": {
+  "pages": "55",
+  "whyNot": [
+   "Constitutive activity is the **occasional opening** of channels without agonist, not a type of GABA-A inhibition.",
+   "Tonic inhibition is mediated at **neurosteroid** sites, which are benzodiazepine-insensitive.",
+   "",
+   "Volume transmission is not a GABA-A inhibition type listed in the table.",
+   "Retrograde signaling is not a GABA-A inhibition type listed in the table."
+  ],
+  "whyNotPages": [
+   "57",
+   "55",
+   "",
+   "55",
+   "55"
+  ]
+ },
+ "q3-43": {
+  "pages": "55",
+  "whyNot": [
+   "",
+   "Postpartum depression is listed for **neuroactive steroids**, not for NMDA open-channel antagonists.",
+   "Smoking cessation is the use of **varenicline**, a nicotinic partial agonist.",
+   "Chemotherapy-induced emesis is listed for **5HT3 antagonists**, not for NMDA antagonists.",
+   "Cataplexy is not listed in Table 3-2 for any of these ligand-gated channel agents."
+  ],
+  "whyNotPages": [
+   "",
+   "55",
+   "55",
+   "55",
+   "55"
+  ]
+ },
+ "q3-44": {
+  "pages": "70",
+  "whyNot": [
+   "They do not act identically; most probably have **multiple sites** on several channel types.",
+   "",
+   "CYP450 enzymes concern drug metabolism, not the channel actions the chapter links to anticonvulsant uses.",
+   "Half-life is not the explanation offered; the chapter points to varied **sites of action**.",
+   "Anticonvulsants act at **ion channels** (sodium and calcium), not only G-protein receptors."
+  ],
+  "whyNotPages": [
+   "70",
+   "",
+   "70",
+   "70",
+   "70"
+  ]
+ },
+ "q3-45": {
+  "pages": "54",
+  "whyNot": [
+   "Voltage-gated channels are a different class; this question concerns **pentameric** ligand-gated channels.",
+   "Inverse agonism is not the explanation; selectivity comes from **subunit** composition.",
+   "Desensitization is a state after prolonged agonist exposure, not the basis of drug selectivity.",
+   "CYP450 is a metabolism pathway, not how drugs select **receptor subtypes**.",
+   ""
+  ],
+  "whyNotPages": [
+   "53",
+   "54",
+   "63",
+   "54",
+   ""
+  ]
+ }
+}

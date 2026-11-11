@@ -1,0 +1,1043 @@
+{
+ "q7-01": {
+  "pages": "284",
+  "whyNot": [
+   "Recurrence means depression **returning** after the patient has recovered, not a drop in scores during acute treatment.",
+   "",
+   "Remission requires essentially all symptoms to clear; a score of 14 still leaves a lot, so this is only a **half-reduction**.",
+   "Recovery is remission **sustained** beyond the first several months, which cannot be judged after only 8 weeks.",
+   "Relapse is depression **coming back** before full remission or soon after it, the opposite of this improvement."
+  ],
+  "whyNotPages": [
+   "285",
+   "",
+   "285",
+   "285",
+   "285"
+  ]
+ },
+ "q7-02": {
+  "pages": "285",
+  "whyNot": [
+   "Relapse is a return before full remission or within the first months after it; three years after recovery is **too late** for that.",
+   "Partial response describes some **improvement** during treatment, not depression returning after a full recovery.",
+   "",
+   "Nonresponse means no meaningful improvement **during** treatment, whereas this patient had already fully recovered.",
+   "Treatment resistance describes illness that **persists** through successive treatments, not a return after full recovery."
+  ],
+  "whyNotPages": [
+   "285",
+   "284",
+   "",
+   "284",
+   "286"
+  ]
+ },
+ "q7-03": {
+  "pages": "285",
+  "whyNot": [
+   "**2–4 weeks** is shorter than any phase in the book; acute treatment alone is listed as 6–12 weeks.",
+   "**Lifelong** is not one of the phases shown; the last phase, maintenance, is described as lasting one or more years.",
+   "**6–12 weeks** is the acute treatment phase, which comes before continuation rather than being it.",
+   "**One or more years** is the maintenance phase that follows continuation, not the continuation phase itself.",
+   ""
+  ],
+  "whyNotPages": [
+   "285",
+   "285",
+   "285",
+   "285",
+   ""
+  ]
+ },
+ "q7-04": {
+  "pages": "286",
+  "whyNot": [
+   "**One-quarter** understates it; about one-third already remit on the first treatment, so the total after four must be higher.",
+   "**Nine-tenths** overstates it; each added trial yields fewer remitters, so the cumulative figure stalls well short of this.",
+   "**One-half** is too low; the cumulative remission after four sequential monotherapies reaches roughly two-thirds.",
+   "",
+   "**One-third** is the remission rate after the first treatment only, not the cumulative figure after four trials."
+  ],
+  "whyNotPages": [
+   "286",
+   "286",
+   "286",
+   "",
+   "286"
+  ]
+ },
+ "q7-05": {
+  "pages": "286",
+  "whyNot": [
+   "",
+   "Painful physical complaints are among the **most common** persisting symptoms in nonremitters, so they are not the least common.",
+   "**Fatigue** is listed with insomnia and pain among the most common residual symptoms, not the least common.",
+   "**Insomnia** is one of the leading residual symptoms after treatment, so it is not among the rarest.",
+   "**Problems concentrating** is on the list of common residual symptoms, along with lack of interest, not the least common."
+  ],
+  "whyNotPages": [
+   "",
+   "286",
+   "286",
+   "286",
+   "286"
+  ]
+ },
+ "q7-06": {
+  "pages": "287",
+  "whyNot": [
+   "**10%** greatly understates it; relapse after remission climbs with each added treatment step toward about 70%.",
+   "",
+   "**33%** is the relapse rate for remitters after the **first** treatment (at 12 months), not after four steps.",
+   "**90%** overstates it; the highest figure shown for relapse after four treatments is about 70%.",
+   "**50%** is an intermediate value; relapse keeps rising with additional steps, reaching about 70% by the fourth."
+  ],
+  "whyNotPages": [
+   "287",
+   "",
+   "287",
+   "287",
+   "287"
+  ]
+ },
+ "q7-07": {
+  "pages": "288",
+  "whyNot": [
+   "",
+   "**Treating from above** reduces current manic symptoms; it says nothing about preventing depressive episodes.",
+   "The FDA position in the book is that **no such thing** as a mood stabilizer exists; the book uses mechanism-based phrases instead.",
+   "**Stabilizing from above** means preventing relapse or recurrence of mania, the opposite pole from depression.",
+   "**Treating from below** means reducing existing bipolar depression symptoms, not preventing later episodes."
+  ],
+  "whyNotPages": [
+   "",
+   "288",
+   "288",
+   "288",
+   "288"
+  ]
+ },
+ "q7-08": {
+  "pages": "291",
+  "whyNot": [
+   "Upregulated 5HT1A autoreceptors characterize the **depressed** state before treatment; therapeutic onset follows their downregulation instead.",
+   "SERT blockade is immediate, but serotonin does not rise much at axon terminals early, so it cannot explain the **delay**.",
+   "Postsynaptic receptor desensitization comes last and tracks tolerance to **side effects**, not therapeutic onset.",
+   "**MAO-A** is the enzyme MAOIs inhibit; SSRIs act at the serotonin transporter, not by changing MAO activity.",
+   ""
+  ],
+  "whyNotPages": [
+   "290",
+   "291",
+   "291",
+   "338",
+   ""
+  ]
+ },
+ "q7-09": {
+  "pages": "291",
+  "whyNot": [
+   "The striatum is a projection area; serotonin rises there **later**, after autoreceptors desensitize and firing is disinhibited.",
+   "The first rise described is in the **brain's** raphe; gut serotonin matters mainly for side effects via 5HT3 receptors.",
+   "Terminal areas such as the prefrontal cortex see the rise only **after** a delay, once neuronal impulse flow turns on.",
+   "",
+   "The hippocampus is another terminal region, so its serotonin increase is **delayed** compared with the cell-body area."
+  ],
+  "whyNotPages": [
+   "291",
+   "311",
+   "292",
+   "",
+   "291"
+  ]
+ },
+ "q7-10": {
+  "pages": "293",
+  "whyNot": [
+   "**Citalopram** is distinguished by its R enantiomer interfering at SERT, not by 5HT2C antagonism or an activating profile.",
+   "**Paroxetine** is more calming or sedating early on because of anticholinergic action, the opposite of what this patient needs.",
+   "",
+   "**Fluvoxamine** is distinguished by σ1 receptor binding and anxiolytic properties, not 5HT2C antagonism.",
+   "**Escitalopram** is the pure S enantiomer whose actions are almost entirely explained by SERT inhibition, without 5HT2C antagonism."
+  ],
+  "whyNotPages": [
+   "295",
+   "294",
+   "",
+   "295",
+   "296"
+  ]
+ },
+ "q7-11": {
+  "pages": "294",
+  "whyNot": [
+   "",
+   "**Escitalopram** is the SSRI whose effects are almost entirely explained by pure SERT inhibition, with no NOS action named.",
+   "**Fluoxetine** adds 5HT2C antagonism and weak NET inhibition, features tied to activation rather than NOS inhibition.",
+   "**Fluvoxamine** is distinguished by σ1 receptor binding, a different secondary property from NOS inhibition.",
+   "**Sertraline** is distinguished by weak DAT inhibition and σ1 binding, not nitric oxide synthase inhibition."
+  ],
+  "whyNotPages": [
+   "",
+   "296",
+   "293",
+   "295",
+   "294"
+  ]
+ },
+ "q7-12": {
+  "pages": "294",
+  "whyNot": [
+   "**Escitalopram** acts almost purely through SERT inhibition, so it has no distinguishing DAT component.",
+   "",
+   "**Paroxetine** adds muscarinic anticholinergic action, weak NET inhibition and NOS inhibition, not DAT inhibition.",
+   "**Citalopram** is distinguished by its R enantiomer, which carries weak antihistamine properties and may interfere with SERT.",
+   "**Fluvoxamine** is distinguished by potent σ1 binding, not dopamine transporter inhibition."
+  ],
+  "whyNotPages": [
+   "296",
+   "",
+   "294",
+   "295",
+   "295"
+  ],
+  "why": "**Sertraline** has weak DAT inhibition on top of SERT blockade, plus σ1 binding; the DAT action is controversial but may help energy, motivation and concentration."
+ },
+ "q7-13": {
+  "pages": "296",
+  "whyNot": [
+   "Escitalopram acts almost purely through **SERT**; adding NET inhibition is what SNRIs do, not this drug.",
+   "Citalopram is not an MAO inhibitor; its quirk is a **mixture** of enantiomers, one of which interferes with SERT.",
+   "**5HT1A partial agonism** is the added property of vilazodone, not of escitalopram.",
+   "",
+   "Escitalopram is not a prodrug; it is simply the pure, **active S enantiomer** of citalopram."
+  ],
+  "whyNotPages": [
+   "296",
+   "295",
+   "296",
+   "",
+   "296"
+  ]
+ },
+ "q7-14": {
+  "pages": "295",
+  "whyNot": [
+   "**Fluoxetine** is distinguished by 5HT2C antagonism and a long half-life, not by σ1 binding.",
+   "**Citalopram** is a mixture of R and S enantiomers, with antihistamine properties in the R form, not σ1 potency.",
+   "",
+   "**Escitalopram** is the pure S enantiomer whose pharmacology is almost entirely SERT inhibition.",
+   "**Paroxetine** adds anticholinergic, weak NET and NOS actions, and is not the OCD-oriented, σ1-potent agent."
+  ],
+  "whyNotPages": [
+   "293",
+   "295",
+   "",
+   "296",
+   "294"
+  ]
+ },
+ "q7-15": {
+  "pages": "296",
+  "whyNot": [
+   "**NET inhibition** is the added property that defines SNRIs, not SPARIs.",
+   "**MT1/MT2 agonism** is the signature of agomelatine, a melatonin agonist.",
+   "**5HT2C antagonism** characterizes fluoxetine, mirtazapine and agomelatine rather than vilazodone.",
+   "**α2 antagonism** is the main action of mirtazapine, which blocks no transporter.",
+   ""
+  ],
+  "whyNotPages": [
+   "298",
+   "306",
+   "293",
+   "309",
+   ""
+  ],
+  "why": "Vilazodone is a **SPARI**: it blocks SERT and also partially stimulates 5HT1A, which speeds and strengthens the autoreceptor desensitization behind antidepressant action."
+ },
+ "q7-16": {
+  "pages": "301",
+  "whyNot": [
+   "Dopamine release through **VMAT2** inhibition is how amphetamine and MDMA act, not SNRIs.",
+   "SNRIs do not inhibit **DAT** except at doses beyond the clinical range, and few DATs exist in the cortex anyway.",
+   "",
+   "SNRIs act at transporters; **D2 blockade** belongs to the serotonin/dopamine antagonist drugs.",
+   "**COMT** does degrade cortical dopamine, but SNRIs are not described as inhibiting it; they block NET."
+  ],
+  "whyNotPages": [
+   "356",
+   "301",
+   "",
+   "342",
+   "301"
+  ]
+ },
+ "q7-17": {
+  "pages": "302",
+  "whyNot": [
+   "",
+   "Opposite direction: a 2D6 inhibitor **blocks** conversion to desvenlafaxine, so there is less of it and less NET inhibition.",
+   "**Milnacipran** is a separate drug, not a metabolite of venlafaxine.",
+   "Venlafaxine itself is potent at **SERT** even at low doses, so SERT inhibition is preserved.",
+   "The ratio is **variable**, shifting with 2D6 inhibitors, inducers and genetic polymorphisms."
+  ],
+  "whyNotPages": [
+   "",
+   "302",
+   "303",
+   "302",
+   "299"
+  ]
+ },
+ "q7-18": {
+  "pages": "303",
+  "whyNot": [
+   "**Duloxetine** treats depression as well as pain, so it is not the one excluded from depression.",
+   "**Venlafaxine** is used for depression and several anxiety disorders, not as a fibromyalgia-only drug.",
+   "**Levomilnacipran** is the active enantiomer of milnacipran developed for unipolar depression in the US.",
+   "",
+   "**Desvenlafaxine** is the venlafaxine metabolite developed as its own antidepressant, not a fibromyalgia-only drug."
+  ],
+  "whyNotPages": [
+   "302",
+   "302",
+   "303",
+   "",
+   "302"
+  ],
+  "why": "**Milnacipran** is approved for fibromyalgia but not unipolar depression in the US; in Europe the situation is reversed, with approval for depression only."
+ },
+ "q7-19": {
+  "pages": "303",
+  "whyNot": [
+   "**5HT2C antagonism** is a property of fluoxetine, mirtazapine and agomelatine, not milnacipran.",
+   "SNRIs, including milnacipran, do not inhibit **DAT** at clinical doses.",
+   "Opposite: robust NET inhibition may cause **more** sweating and urinary hesitancy than other SNRIs.",
+   "Milnacipran is dosed **twice daily** because of a shorter half-life; once-weekly dosing is a fluoxetine option.",
+   ""
+  ],
+  "whyNotPages": [
+   "293",
+   "301",
+   "303",
+   "303",
+   ""
+  ]
+ },
+ "q7-20": {
+  "pages": "302",
+  "whyNot": [
+   "**Mirtazapine** blocks no transporter; the pain-without-depression evidence came from an SNRI, not this multireceptor drug.",
+   "",
+   "**Escitalopram** is an SSRI, and SNRIs have shown clear efficacy in pain where SSRIs have not.",
+   "**Trazodone** is a SARI known for hypnotic use at low doses, not for pain-and-depression studies.",
+   "**Bupropion** is an NDRI aimed at reduced positive affect, not the drug behind the pain findings."
+  ],
+  "whyNotPages": [
+   "308",
+   "",
+   "299",
+   "311",
+   "306"
+  ]
+ },
+ "q7-21": {
+  "pages": "304",
+  "whyNot": [
+   "**80–90%** is roughly the SERT occupancy SSRIs need; bupropion's DAT occupancy is far lower.",
+   "**50–60%** is closer to the DAT occupancy of abusable stimulants or ADHD drugs, much higher than bupropion's.",
+   "**Nearly 100%** is not what PET shows; bupropion is only a weak DAT inhibitor.",
+   "",
+   "PET shows a **small but real** fraction occupied, and bupropion is described as a weak DAT inhibitor."
+  ],
+  "whyNotPages": [
+   "305",
+   "305",
+   "304",
+   "",
+   "304"
+  ]
+ },
+ "q7-23": {
+  "pages": "306",
+  "whyNot": [
+   "",
+   "Bupropion is generally **activating**; residual insomnia is instead handled with a hypnotic such as low-dose trazodone.",
+   "Psychotic depression is where sertraline and fluvoxamine may have an edge via **σ1**, not bupropion.",
+   "Reuptake inhibitors can cause activation and **mania** in mixed features, which serotonin/dopamine blockers are preferred for.",
+   "Anxiety and guilt represent the **opposite** end of the symptom spectrum from reduced positive affect."
+  ],
+  "whyNotPages": [
+   "",
+   "311",
+   "294",
+   "342",
+   "306"
+  ]
+ },
+ "q7-22": {
+  "pages": "305",
+  "whyNot": [
+   "Slow, sustained occupancy of 50% or more, especially with controlled-release forms, is **less abusable** and suits ADHD treatment.",
+   "Cocaine acts by blocking **DAT**, so occupancy is certainly not absent.",
+   "Slow, low occupancy of 10–20% is the pattern suggested for **bupropion**, which is not known to be abusable.",
+   "Reinforcing stimulants such as cocaine owe their effect to high-impact **DAT** inhibition, not to NET-only action.",
+   ""
+  ],
+  "whyNotPages": [
+   "306",
+   "305",
+   "306",
+   "294",
+   ""
+  ],
+  "why": "Abusable stimulants such as cocaine hit **DATs fast, hard and briefly** (50% or more occupied quickly), producing euphoria and reinforcement, unlike slow, low occupancy."
+ },
+ "q7-24": {
+  "pages": "306",
+  "whyNot": [
+   "**α2 plus H1 antagonism** describes part of mirtazapine, not a melatonin-based drug.",
+   "",
+   "**NMDA antagonism** is the proposed mechanism of ketamine, not agomelatine.",
+   "**5HT1A agonism with 5HT3 antagonism** is part of vortioxetine's profile, alongside SERT inhibition.",
+   "Both halves are wrong: agomelatine is an **agonist** at MT1/MT2 and does not inhibit SERT."
+  ],
+  "whyNotPages": [
+   "308",
+   "",
+   "329",
+   "315",
+   "306"
+  ],
+  "why": "Agomelatine is a **melatonin MT1/MT2 agonist** and a **5HT2C** antagonist, resetting circadian rhythms while disinhibiting dopamine and norepinephrine release in the prefrontal cortex."
+ },
+ "q7-25": {
+  "pages": "309",
+  "whyNot": [
+   "**5HT1A** stimulation is the added action of vilazodone-type drugs, not how mirtazapine works.",
+   "Mirtazapine, unlike nearly every other antidepressant, blocks **no** monoamine transporter.",
+   "",
+   "Blocking **5HT1B/D** autoreceptors is an action attributed to vortioxetine, not mirtazapine.",
+   "**MAO-A** inhibition is the mechanism of MAOIs, which are a different class entirely."
+  ],
+  "whyNotPages": [
+   "296",
+   "308",
+   "",
+   "318",
+   "338"
+  ],
+  "why": "Mirtazapine blocks no transporter; its **α2 antagonism** removes norepinephrine's brake on serotonin neurons (heteroreceptors) and on its own release, so both 5HT and NE rise."
+ },
+ "q7-26": {
+  "pages": "309",
+  "whyNot": [
+   "",
+   "An SNRI with a **stimulant** is one of the arousal combinations, aimed at fatigue and low energy.",
+   "An SSRI plus **bupropion** is a triple-action combination, not the one named for rocket fuel.",
+   "**Olanzapine–fluoxetine** is a combination of an antipsychotic with an SSRI, approved in some countries.",
+   "**Lithium** with a tricyclic is an older augmentation approach, unrelated to this name."
+  ],
+  "whyNotPages": [
+   "",
+   "335",
+   "333",
+   "326",
+   "332"
+  ],
+  "why": "**California rocket fuel** pairs an SNRI's transporter blockade with mirtazapine's **α2 antagonism**, two synergistic ways to increase serotonin and norepinephrine release."
+ },
+ "q7-27": {
+  "pages": "309",
+  "whyNot": [
+   "**5HT1A agonism** is not what separates mianserin from mirtazapine; the only difference is the added α1 effect.",
+   "",
+   "**D2 antagonism** belongs to antipsychotics, not to the mianserin and mirtazapine profile.",
+   "**MT1 agonism** is the signature of agomelatine.",
+   "Like mirtazapine, mianserin blocks **no** reuptake pump; SERT inhibition is not its extra feature."
+  ],
+  "whyNotPages": [
+   "308",
+   "",
+   "343",
+   "306",
+   "308"
+  ]
+ },
+ "q7-28": {
+  "pages": "311",
+  "whyNot": [
+   "**Astrocytes** are not where the book places 5HT3 receptors; it locates them on GABA interneurons.",
+   "**Microglia** are never named as 5HT3 sites; the relevant brain receptors sit on GABA interneurons.",
+   "",
+   "Norepinephrine terminals carry **α2** autoreceptors; the 5HT3 effect acts indirectly through GABA.",
+   "5HT3 receptors are not on ACh neurons; they are **excitatory** receptors on GABA cells that in turn inhibit ACh neurons."
+  ],
+  "whyNotPages": [
+   "311",
+   "311",
+   "",
+   "310",
+   "313"
+  ]
+ },
+ "q7-29": {
+  "pages": "315",
+  "whyNot": [
+   "**SERT** is not saturated at hypnotic doses; it is recruited only at the higher antidepressant range.",
+   "**MT1/MT2** are melatonin receptors, the targets of agomelatine, not trazodone.",
+   "Trazodone has no **D2** action and stimulates, rather than blocks, 5HT1A receptors.",
+   "",
+   "**NET and DAT** inhibition describe bupropion-type drugs, not trazodone."
+  ],
+  "whyNotPages": [
+   "315",
+   "306",
+   "314",
+   "",
+   "303"
+  ]
+ },
+ "q7-30": {
+  "pages": "316",
+  "whyNot": [
+   "SARIs **block** 5HT2A rather than stimulate it, which is why side effects tied to that receptor are avoided.",
+   "Serotonin is still free to act at **5HT1A**, which carries the antidepressant effect, so that receptor is not blocked.",
+   "SARIs are not **MAO** inhibitors; MAOIs are a separate drug class.",
+   "Trazodone does inhibit **SERT** at antidepressant doses; the sparing of side effects comes from receptor blockade.",
+   ""
+  ],
+  "whyNotPages": [
+   "316",
+   "316",
+   "338",
+   "311",
+   ""
+  ]
+ },
+ "q7-31": {
+  "pages": "311",
+  "whyNot": [
+   "**Seizures** are linked in the book to peak levels of immediate-release bupropion, not nefazodone.",
+   "**QTc prolongation** is tied to higher doses of citalopram.",
+   "**Stevens–Johnson syndrome** is the rare serious rash risk of lamotrigine.",
+   "**Bone marrow** suppression is a carbamazepine concern in the book, not nefazodone's.",
+   ""
+  ],
+  "whyNotPages": [
+   "306",
+   "296",
+   "352",
+   "350",
+   ""
+  ],
+  "why": "**Nefazodone** is a SARI that has fallen out of common use because of rare **liver toxicity**, despite its robust 5HT2A antagonist action."
+ },
+ "q7-32": {
+  "pages": "317",
+  "whyNot": [
+   "**Language** is not one of the four domains described: attention, executive function, memory and processing speed.",
+   "**IQ** is not much improved by drug treatment, and the book contrasts it with the more treatable cognitive symptoms.",
+   "",
+   "**Memory** is one domain the test touches, but the DSST is described as most prominently measuring processing speed.",
+   "**Visual acuity** is a sensory function, not one of the cognitive domains the DSST assesses."
+  ],
+  "whyNotPages": [
+   "317",
+   "316",
+   "",
+   "317",
+   "317"
+  ],
+  "why": "The DSST samples several cognitive domains but most strongly taps **processing speed** (Ringo, the drummer, in the Fab Four), and vortioxetine outperformed other antidepressants on it."
+ },
+ "q7-33": {
+  "pages": "318",
+  "whyNot": [
+   "",
+   "**H1 antagonism** is a feature of mirtazapine and tricyclics, tied to sedation and weight gain, not vortioxetine's standout action.",
+   "Vortioxetine is a **SERT** inhibitor, not a NET inhibitor.",
+   "**MAO-B** inhibition is relevant to Parkinson's treatment, not to vortioxetine.",
+   "**D2 antagonism** belongs to serotonin/dopamine blockers such as quetiapine, not vortioxetine."
+  ],
+  "whyNotPages": [
+   "",
+   "308",
+   "315",
+   "338",
+   "343"
+  ],
+  "why": "Among vortioxetine's several actions, **5HT3 antagonism** is one of the most potent, disinhibiting downstream release of acetylcholine, dopamine and norepinephrine."
+ },
+ "q7-34": {
+  "pages": "322",
+  "whyNot": [
+   "**GABA-B** is not the target; the book describes neuroactive steroids as acting at GABA-A receptors.",
+   "**SERT** inhibition is the SSRI mechanism; neuroactive steroids act on GABA receptors instead.",
+   "Benzodiazepines act at these receptors yet lack antidepressant action, so they are **not** the likely target.",
+   "",
+   "**NMDA** receptors are the proposed target of ketamine, not of neuroactive steroids."
+  ],
+  "whyNotPages": [
+   "321",
+   "289",
+   "322",
+   "",
+   "329"
+  ]
+ },
+ "q7-35": {
+  "pages": "320",
+  "whyNot": [
+   "Brexanolone is not an oral 14-day course; the **oral** allopregnanolone analogue SAGE-217 is still in testing.",
+   "",
+   "No **depot** is described; the idea is to restore neuroactive steroid levels quickly with a continuous infusion.",
+   "The **intranasal** product in this chapter is esketamine, which is for treatment-resistant depression.",
+   "A single injection would not match the long infusion the book says gives patients time to adjust, so it is not **brexanolone**."
+  ],
+  "whyNotPages": [
+   "322",
+   "",
+   "321",
+   "331",
+   "321"
+  ],
+  "why": "**Brexanolone** is a cyclodextrin-based form of allopregnanolone given as a **60-hour continuous IV infusion**, restoring neuroactive steroid levels that fall sharply after delivery."
+ },
+ "q7-36": {
+  "pages": "325",
+  "whyNot": [
+   "Genotyping is **coupled** with plasma drug levels in the book, so it does not replace them.",
+   "",
+   "Testing is described as most helpful **after** several first-line treatments have failed or not been tolerated.",
+   "It concerns **many** drug-metabolizing enzymes and pharmacodynamic genes, not only the MAOIs.",
+   "Responses are not all-or-none, so testing cannot **guarantee** one right drug for the individual."
+  ],
+  "whyNotPages": [
+   "323",
+   "",
+   "323",
+   "323",
+   "325"
+  ],
+  "why": "Genetic results **shift the odds** of response, nonresponse or side effects but do not dictate a single drug; the book calls this adding to the weight of the evidence."
+ },
+ "q7-37": {
+  "pages": "326",
+  "whyNot": [
+   "",
+   "**NMDA antagonism** is the proposed mechanism of ketamine, not of this antipsychotic–SSRI pair.",
+   "Opposite direction: **α2 antagonism**, not agonism, is the action linked to antidepressant release.",
+   "**MAO** inhibition belongs to the MAOI class, not to olanzapine or fluoxetine.",
+   "**D3** partial agonism is cariprazine's distinctive feature, not olanzapine–fluoxetine's."
+  ],
+  "whyNotPages": [
+   "",
+   "329",
+   "309",
+   "338",
+   "343"
+  ]
+ },
+ "q7-38": {
+  "pages": "326",
+  "whyNot": [
+   "**D2 antagonism** accounts for quetiapine's schizophrenia and mania approvals, not its NET inhibition.",
+   "Conversion by **2D6** to desvenlafaxine describes venlafaxine, not quetiapine.",
+   "**H1 antagonism** is tied to sedation and weight gain, not to NET inhibition.",
+   "The parent compound's profile covers other receptors; the book credits its **metabolite** for the NET action.",
+   ""
+  ],
+  "whyNotPages": [
+   "326",
+   "302",
+   "309",
+   "326",
+   ""
+  ],
+  "why": "Quetiapine's NET inhibition is attributed to its active metabolite **norquetiapine**, which, with 5HT2C antagonism, helps explain its antidepressant augmenting action."
+ },
+ "q7-39": {
+  "pages": "328",
+  "whyNot": [
+   "Conventional D2 blockers lack robust **α1 plus 5HT2A** antagonism, so they are not the lowest-parkinsonism group.",
+   "**Aripiprazole** and cariprazine are partial agonists, and aripiprazole is associated with akathisia rather than the lowest parkinsonism.",
+   "",
+   "**Risperidone** and paliperidone are not among the agents the book names for the lowest parkinsonism.",
+   "**Lurasidone** and ziprasidone are not among the agents the book names for the lowest parkinsonism."
+  ],
+  "whyNotPages": [
+   "328",
+   "327",
+   "",
+   "328",
+   "328"
+  ],
+  "why": "Agents with robust **α1 and 5HT2A antagonism** disinhibit nigrostriatal dopamine release into the motor striatum, offsetting D2 blockade and lowering drug-induced parkinsonism."
+ },
+ "q7-40": {
+  "pages": "328–329",
+  "whyNot": [
+   "**SERT** is a weak ketamine target; the leading hypothesis centers on glutamate receptors.",
+   "**5HT2A** agonism is the hallucinogen mechanism of psilocybin, not ketamine's antidepressant target.",
+   "The **glycine** site is not named; the book places ketamine's action inside the open channel.",
+   "",
+   "The **benzodiazepine** site of GABA-A is where neuroactive steroids and benzodiazepines act, not ketamine."
+  ],
+  "whyNotPages": [
+   "329",
+   "358",
+   "329",
+   "",
+   "322"
+  ]
+ },
+ "q7-41": {
+  "pages": "330",
+  "whyNot": [
+   "**mGluR2** is not part of the mTOR hypothesis; the glutamate burst acts on AMPA receptors.",
+   "**NMDA** receptors are blocked by ketamine, so they are not the receptors stimulated by the burst.",
+   "**Kainate** receptors are not named in the hypothesis; AMPA receptors are.",
+   "",
+   "**GABA-B** receptors are not part of the mTOR hypothesis described."
+  ],
+  "whyNotPages": [
+   "330",
+   "330",
+   "330",
+   "",
+   "330"
+  ]
+ },
+ "q7-42": {
+  "pages": "331",
+  "whyNot": [
+   "Esketamine is given **intranasally** and is itself active, not an oral prodrug.",
+   "Esketamine is the **S**, not the R, enantiomer, and it is given intranasally, whereas intravenous ketamine is racemic.",
+   "",
+   "**Dextromethorphan** is a separate NMDA antagonist under study, not the source of esketamine.",
+   "**Deuteration** was applied to dextromethorphan in the book, not to ketamine."
+  ],
+  "whyNotPages": [
+   "331",
+   "328",
+   "",
+   "354",
+   "354"
+  ]
+ },
+ "q7-43": {
+  "pages": "334",
+  "whyNot": [
+   "",
+   "**SSRI plus buspirone** adds 5HT1A partial agonism, an approach similar to vilazodone, not extra norepinephrine.",
+   "An **SSRI** plus an NDRI gives a single boost to all three monoamines, not a double norepinephrine boost.",
+   "**SSRI plus mirtazapine** is not the combination shown; the figures pair mirtazapine with an SNRI.",
+   "An SNRI with **modafinil** gives single boosts to serotonin, norepinephrine and dopamine."
+  ],
+  "whyNotPages": [
+   "",
+   "333",
+   "334",
+   "334",
+   "335"
+  ]
+ },
+ "q7-44": {
+  "pages": "336–337",
+  "whyNot": [
+   "**H1** antagonism causes sedation and weight gain, not death in overdose.",
+   "",
+   "**5HT2A** antagonism may contribute to the therapeutic profile of some tricyclics, not overdose toxicity.",
+   "**SERT** inhibition is a therapeutic action of some tricyclics, not the cause of overdose lethality.",
+   "**α1** antagonism causes orthostatic hypotension and dizziness, not the lethal overdose syndrome."
+  ],
+  "whyNotPages": [
+   "336",
+   "",
+   "336",
+   "335",
+   "336"
+  ]
+ },
+ "q7-45": {
+  "pages": "335",
+  "whyNot": [
+   "**Desipramine** is one of the tricyclics more selective for NET inhibition.",
+   "**Nortriptyline** is among the tricyclics that favor NET inhibition over SERT.",
+   "**Maprotiline** is listed with the NET-selective group, not as a potent serotonin reuptake inhibitor.",
+   "**Protriptyline** is also named among the NET-selective tricyclics.",
+   ""
+  ],
+  "whyNotPages": [
+   "335",
+   "336",
+   "335",
+   "336",
+   ""
+  ],
+  "why": "**Clomipramine** has equal or greater SERT inhibition than NET inhibition and anti-OCD efficacy; the other listed tricyclics are more NET-selective."
+ },
+ "q7-46": {
+  "pages": "338",
+  "whyNot": [
+   "**MAO-B** is present in the brain, along with MAO-A, so absence is not the reason.",
+   "",
+   "MAO-B also handles dopamine and trace amines; tyramine is a substrate of **both** forms.",
+   "MAOIs inhibit an **enzyme**, not the serotonin transporter, so this misdescribes them.",
+   "Reversibility is not the reason; what matters is that **MAO-A** still clears serotonin, norepinephrine and dopamine."
+  ],
+  "whyNotPages": [
+   "338",
+   "",
+   "337",
+   "337",
+   "338"
+  ],
+  "why": "**MAO-B** handles serotonin and norepinephrine only at high concentrations, and **MAO-A** keeps clearing dopamine, so selective MAO-B blockade adds little antidepressant effect."
+ },
+ "q7-47": {
+  "pages": "337",
+  "whyNot": [
+   "**Iproniazid** was the anti-tuberculosis drug that first revealed MAOI antidepressant action; no amphetamine metabolites are described for it.",
+   "**Tranylcypromine** is itself modeled on amphetamine's structure, rather than being metabolized to those compounds.",
+   "**Phenelzine** is listed only as an irreversible MAOI, with no amphetamine metabolites described.",
+   "",
+   "**Isocarboxazid** is likewise listed only as an irreversible MAOI, without amphetamine-like metabolites."
+  ],
+  "whyNotPages": [
+   "336",
+   "337",
+   "337",
+   "",
+   "337"
+  ],
+  "why": "**Selegiline** turns into l-amphetamine and l-methamphetamine in the body, adding amphetamine-like dopamine release; tranylcypromine instead has an amphetamine-like structure itself."
+ },
+ "q7-48": {
+  "pages": "338",
+  "whyNot": [
+   "**Smoking** is not an interaction named in the book; the two dangerous kinds involve sympathomimetic or serotonergic drugs.",
+   "**Caffeine** is not described as an MAOI problem; the book highlights sympathomimetic and serotonin reuptake inhibitor interactions.",
+   "**Alcohol** is not the interaction the book emphasizes; drug combinations that raise blood pressure or cause serotonin syndrome matter more.",
+   "**Grapefruit juice** is not named; the dietary issue discussed is tyramine, which the book rates below drug interactions.",
+   ""
+  ],
+  "whyNotPages": [
+   "338",
+   "338",
+   "338",
+   "338",
+   ""
+  ]
+ },
+ "q7-49": {
+  "pages": "343",
+  "whyNot": [
+   "**Quetiapine** is approved for bipolar depression and for mania, so it is not the exception.",
+   "**Ziprasidone** is listed for mania and maintenance, not for bipolar depression.",
+   "",
+   "**Cariprazine** is approved for both acute mania and bipolar depression.",
+   "**Aripiprazole** is approved for mania but, per the book, not for bipolar depression, the reverse of this pattern."
+  ],
+  "whyNotPages": [
+   "343",
+   "326",
+   "",
+   "345",
+   "327"
+  ]
+ },
+ "q7-50": {
+  "pages": "343",
+  "whyNot": [
+   "",
+   "**Asenapine** has evidence for mania with mixed features, but no large unipolar mixed-features trial is described.",
+   "**Olanzapine** has post hoc support for mania with mixed features of depression; depression with mixed features of mania is unstudied for it.",
+   "**Aripiprazole** is not approved for bipolar depression and has no such trial described.",
+   "**Quetiapine** has only post hoc support in mania with mixed depressive features; the reverse condition remains unstudied."
+  ],
+  "whyNotPages": [
+   "",
+   "326",
+   "343",
+   "327",
+   "343"
+  ],
+  "why": "**Lurasidone** has the sole large multicenter randomized study of unipolar depression with mixed features among these drugs, and it worked well without triggering mania."
+ },
+ "q7-51": {
+  "pages": "344–345",
+  "whyNot": [
+   "The **substantia nigra** is the nigrostriatal motor circuit tied to α1 antagonism; D3 action for mood is in the VTA.",
+   "The **spinal** cord is not part of the mesocortical explanation; the relevant D3 autoreceptors sit in the VTA.",
+   "The prefrontal cortex has **few** D3 receptors, so postsynaptic cortical D3 blockade cannot explain it.",
+   "",
+   "The **pituitary** is not part of the explanation; the key D3 autoreceptors are on VTA dopamine cell bodies."
+  ],
+  "whyNotPages": [
+   "328",
+   "344",
+   "345",
+   "",
+   "344"
+  ]
+ },
+ "q7-52": {
+  "pages": "342",
+  "whyNot": [
+   "The lack of benefit is not limited to **clozapine**; it applies to serotonin/dopamine blockers in schizophrenia generally.",
+   "The reason given is no clear added **efficacy**, not toxicity.",
+   "It is standard in **mania**, not schizophrenia, where the add-on is not clearly useful.",
+   "In mania they are added to prevent relapse, but this is not a **requirement** for schizophrenia maintenance.",
+   ""
+  ],
+  "whyNotPages": [
+   "342",
+   "342",
+   "342",
+   "342",
+   ""
+  ],
+  "why": "Lithium and valproate are added to serotonin/dopamine blockers in mania to boost response and prevent relapse, but in **schizophrenia** they do not clearly add efficacy, so it is not done."
+ },
+ "q7-53": {
+  "pages": "345",
+  "whyNot": [
+   "",
+   "**Adenylate cyclase** is not among the candidates; the book names inositol monophosphatase, G proteins, GSK-3 and protein kinase C.",
+   "**MAO** is the target of the MAOI antidepressants, not of lithium.",
+   "**Tyrosine hydroxylase** is not named; lithium's candidates are signal transduction sites.",
+   "**COMT** degrades dopamine that diffuses away in the prefrontal cortex; it is not a lithium target."
+  ],
+  "whyNotPages": [
+   "",
+   "346",
+   "337",
+   "346",
+   "301"
+  ]
+ },
+ "q7-54": {
+  "pages": "346",
+  "whyNot": [
+   "**Bone marrow** toxicity is a carbamazepine concern and rash a lamotrigine one, not lithium's long-term issues.",
+   "**Liver and pancreas** warnings are listed for valproate, not lithium.",
+   "",
+   "**Retina and cochlea** are not mentioned; lithium's listed effects are GI, weight, tremor, plus thyroid and kidney.",
+   "**Heart and lungs** are not named for lithium; cardiac concerns in the chapter relate to tricyclic overdose."
+  ],
+  "whyNotPages": [
+   "350",
+   "350",
+   "",
+   "346",
+   "337"
+  ]
+ },
+ "q7-55": {
+  "pages": "347",
+  "whyNot": [
+   "**Treating from above** is lamotrigine's weakest column, marked only +/−.",
+   "",
+   "Lamotrigine does work in bipolar disorder, since it is approved for preventing **recurrence** of both poles.",
+   "Lamotrigine is **not** approved for mania, and the slow titration makes acute antimanic benefit hard to show.",
+   "Lamotrigine is an anticonvulsant but also has strong **bipolar** actions per the table."
+  ],
+  "whyNotPages": [
+   "347",
+   "",
+   "350",
+   "350",
+   "347"
+  ]
+ },
+ "q7-56": {
+  "pages": "350",
+  "whyNot": [
+   "**Lamotrigine** is generally well tolerated apart from rash, not marked by 3A4 induction or marrow suppression.",
+   "",
+   "**Oxcarbazepine** has less marrow toxicity and fewer 3A4 interactions than the answer drug.",
+   "**Topiramate** is linked to weight loss and sedation, not 3A4 induction or marrow suppression.",
+   "**Valproate** needs blood count monitoring but is not the one with notable **3A4** induction."
+  ],
+  "whyNotPages": [
+   "350",
+   "",
+   "352",
+   "352",
+   "350"
+  ]
+ },
+ "q7-57": {
+  "pages": "349",
+  "whyNot": [
+   "Inhibition of **MARCKS** is one of valproate's described signaling actions, so it is not the exception.",
+   "Inhibition of **PKC** is also described for valproate, so it is not the exception.",
+   "",
+   "Activation of **BCL2** is listed among valproate's neuroprotective signals, so it is not the exception.",
+   "Activation of **ERK** is listed among valproate's plasticity-promoting signals, so it is not the exception."
+  ],
+  "whyNotPages": [
+   "349",
+   "349",
+   "",
+   "349",
+   "349"
+  ],
+  "why": "Valproate, like lithium, may **inhibit** GSK-3 (along with PKC and MARCKS), so describing GSK-3 as activated is the false item; ERK and BCL2 are the activated signals."
+ },
+ "q7-58": {
+  "pages": "352",
+  "whyNot": [
+   "**α2δ** binding is the target of gabapentin and pregabalin, not oxcarbazepine.",
+   "Direct **GABA-T** inhibition is a proposed valproate-type action, not oxcarbazepine's main one.",
+   "The book describes a **monohydroxy** derivative, not an epoxide metabolite, as the active form.",
+   "",
+   "Oxcarbazepine is structurally related to carbamazepine but becomes **licarbazepine**, not carbamazepine."
+  ],
+  "whyNotPages": [
+   "352",
+   "348",
+   "352",
+   "",
+   "352"
+  ]
+ },
+ "q7-59": {
+  "pages": "353–354",
+  "whyNot": [
+   "",
+   "**Seizure** risk with bupropion relates to peak levels of immediate-release forms, not to this pairing.",
+   "**σ1** binding is a dextromethorphan property, not bupropion's reason for being paired.",
+   "Dextromethorphan is the **NMDA antagonist**; bupropion is not an NMDA agonist.",
+   "Bupropion **inhibits** 2D6; CYP3A4 induction is a carbamazepine property."
+  ],
+  "whyNotPages": [
+   "",
+   "306",
+   "354",
+   "353",
+   "350"
+  ]
+ },
+ "q7-60": {
+  "pages": "358",
+  "whyNot": [
+   "Selective **D2** antagonists do not reverse psilocybin's effects in humans, so dopamine agonism is not the link.",
+   "**5HT3** antagonism is an antidepressant mechanism of vortioxetine and mirtazapine, not psilocybin's.",
+   "**Kappa-opioid** agonism is not linked to psilocybin; the book ties it to serotonin 5HT2A receptors.",
+   "**NMDA** antagonism is ketamine's proposed target, not psilocybin's hallucinogenic mechanism.",
+   ""
+  ],
+  "whyNotPages": [
+   "358",
+   "311",
+   "358",
+   "329",
+   ""
+  ],
+  "why": "Psilocybin is predominantly a **5HT2A agonist**; its effects in humans are reversed by 5HT2A antagonists but not by selective D2 antagonists, pointing away from dopamine."
+ }
+}

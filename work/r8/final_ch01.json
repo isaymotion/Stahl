@@ -1,0 +1,768 @@
+{
+ "q1-01": {
+  "pages": "1",
+  "whyNot": [
+   "That describes terminals formed as an axon passes along its length, not an axon-to-axon contact at the initial segment.",
+   "",
+   "That is an axon contacting another neuron's **soma**, not its axon.",
+   "The book lists no such type; the types it gives are axodendritic, axosomatic and axoaxonic.",
+   "That is an axon contacting a **dendrite**, the familiar pattern, not another axon."
+  ],
+  "whyNotPages": [
+   "2",
+   "",
+   "1",
+   "1",
+   "1"
+  ]
+ },
+ "q1-02": {
+  "pages": "1",
+  "whyNot": [
+   "Nothing in the book ties asymmetry to excitatory transmitters; it concerns the **direction** of communication.",
+   "The cleft is not described as lopsided; asymmetry means presynaptic and postsynaptic elements differ and signaling runs one way.",
+   "",
+   "Asymmetry means the two sides differ structurally, so they are not defined by sharing one transmitter.",
+   "The book places receptors on **both** sides of the cleft, so this is not what asymmetric means."
+  ],
+  "whyNotPages": [
+   "1",
+   "5",
+   "",
+   "1",
+   "5"
+  ]
+ },
+ "q1-03": {
+  "pages": "5",
+  "whyNot": [
+   "Vesicles **store** the transmitter, ready for release; they do not supply the energy.",
+   "The nucleus sits in the soma, the cell's command center, not at the terminal supplying energy.",
+   "Spines are dendritic structures that receive information, not an energy source in the terminal.",
+   "That refers to proteins and scaffolding in the cleft that reinforce the connection, not energy supply.",
+   ""
+  ],
+  "whyNotPages": [
+   "5",
+   "2",
+   "2",
+   "5",
+   ""
+  ],
+  "why": "Energy for neurotransmission in the presynaptic neuron comes from its **mitochondria** (Figure 1-4). Vesicles only store the transmitter, ready to be released when the neuron fires."
+ },
+ "q1-04": {
+  "pages": "4",
+  "whyNot": [
+   "Impulses inside a neuron are electrical, but the step **between** neurons is chemical.",
+   "Signaling inside the neuron is electrical, so this is wrong for the within-neuron half.",
+   "This is **reversed**: electrical inside the neuron, chemical across the synapse.",
+   "",
+   "Between neurons the message is converted to a **chemical** signal at the synapse rather than staying electrical."
+  ],
+  "whyNotPages": [
+   "4",
+   "4",
+   "4",
+   "",
+   "6"
+  ]
+ },
+ "q1-05": {
+  "pages": "5",
+  "whyNot": [
+   "",
+   "Serotonin is among the six named systems, so it is not the exception.",
+   "GABA is among the six named systems, so it is not the exception.",
+   "Glutamate is among the six named systems, so it is not the exception.",
+   "Acetylcholine is among the six named systems, so it is not the exception."
+  ],
+  "whyNotPages": [
+   "",
+   "5",
+   "5",
+   "5",
+   "5"
+  ]
+ },
+ "q1-06": {
+  "pages": "5",
+  "whyNot": [
+   "Nerve growth factor is a neurotrophic factor acting as a retrograde messenger, not the brain's morphine.",
+   "",
+   "Nitric oxide is a gaseous retrograde messenger, not the brain's morphine.",
+   "Neuropeptides are only mentioned briefly as other messengers; the book names β-endorphin as the brain's morphine.",
+   "The book pairs the brain's own **marijuana** (endocannabinoids) with cannabinoid receptors, not morphine."
+  ],
+  "whyNotPages": [
+   "6",
+   "",
+   "6",
+   "5",
+   "5"
+  ]
+ },
+ "q1-07": {
+  "pages": "6",
+  "whyNot": [
+   "",
+   "Fluoxetine preceded clarification of the **serotonin transporter**, not benzodiazepine receptors.",
+   "Morphine preceded discovery of **β-endorphin**; marijuana was the drug that preceded cannabinoid receptors.",
+   "Amitriptyline preceded clarification of the **serotonin transporter**; morphine is the drug paired with β-endorphin.",
+   "Diazepam preceded **benzodiazepine receptors**; the serotonin transporter goes with antidepressants like Prozac."
+  ],
+  "whyNotPages": [
+   "",
+   "6",
+   "6",
+   "6",
+   "6"
+  ]
+ },
+ "q1-08": {
+  "pages": "6",
+  "whyNot": [
+   "The book gives no promise that combinations lower side effects; its rationale is **circuit input** from many transmitters.",
+   "Gene expression speed is not the argument here; the point is that circuits have multiple neurotransmitter inputs.",
+   "Opposite: drugs act wherever relevant receptors exist, not just at synapses, so this is not the rationale.",
+   "Receptor desensitization is not given as the reason; the reason is multiple neurotransmitter inputs to circuits.",
+   ""
+  ],
+  "whyNotPages": [
+   "6",
+   "6",
+   "8",
+   "6",
+   ""
+  ]
+ },
+ "q1-09": {
+  "pages": "6",
+  "whyNot": [
+   "Dopamine is a classic presynaptic transmitter; in the PFC it spills over by volume diffusion, not retrograde signaling.",
+   "Glutamate is a standard anterograde transmitter, not one of the retrograde messengers named.",
+   "cAMP is an intracellular **second messenger** inside the postsynaptic neuron, not a messenger crossing back.",
+   "",
+   "Nerve growth factor is retrograde but travels to the presynaptic **nucleus**, not to CB1 receptors."
+  ],
+  "whyNotPages": [
+   "8",
+   "6",
+   "11",
+   "",
+   "6"
+  ]
+ },
+ "q1-10": {
+  "pages": "6",
+  "whyNot": [
+   "Anandamide is not described; the book's retrograde cannabinoid story involves **endocannabinoids** acting at CB1 receptors, not a gas.",
+   "The book names only one gaseous retrograde messenger, and carbon monoxide is not it.",
+   "",
+   "The book names only one gaseous retrograde messenger, and hydrogen sulfide is not it.",
+   "Adenosine is not described as a retrograde gas in the book, which names **nitric oxide** alone."
+  ],
+  "whyNotPages": [
+   "6",
+   "6",
+   "",
+   "6",
+   "6"
+  ]
+ },
+ "q1-11": {
+  "pages": "6",
+  "whyNot": [
+   "",
+   "Nitric oxide diffuses into the presynaptic membrane to act on **cGMP-sensitive** targets, not the nucleus.",
+   "Calcium is a second messenger entering through ion channels, not a retrograde messenger to the genome.",
+   "CREB is a nuclear **transcription factor** activated by phosphorylation, not a retrograde messenger.",
+   "Endocannabinoids diffuse back to presynaptic **CB1 receptors**; they are not carried to the nucleus."
+  ],
+  "whyNotPages": [
+   "",
+   "6",
+   "11",
+   "17",
+   "6"
+  ]
+ },
+ "q1-12": {
+  "pages": "7",
+  "whyNot": [
+   "Signal transduction is the intracellular cascade of messengers inside the receiving neuron, not diffusion to distant receptors.",
+   "",
+   "Axoaxonic describes a synapse between two axons, whereas this scenario involves **no synapse**.",
+   "Retrograde runs from postsynaptic back to presynaptic neuron **at** the synapse.",
+   "Excitation–secretion coupling converts an electrical impulse into a chemical release at the terminal."
+  ],
+  "whyNotPages": [
+   "10",
+   "",
+   "1",
+   "6",
+   "8"
+  ]
+ },
+ "q1-13": {
+  "pages": "8",
+  "whyNot": [
+   "PFC dopamine is released at synapses; it escapes because of too few **transporters**, not dendritic release.",
+   "Dopamine is a chemical messenger, not a gas; the cited reason is the lack of reuptake pumps.",
+   "Synapses there do have vesicles; the key difference is the scarcity of **reuptake pumps**.",
+   "",
+   "**Opposite**: abundant transporters describe the striatum, where dopamine action is quickly terminated."
+  ],
+  "whyNotPages": [
+   "8",
+   "8",
+   "8",
+   "",
+   "8"
+  ]
+ },
+ "q1-14": {
+  "pages": "8",
+  "whyNot": [
+   "The book contrasts the PFC only with the **striatum** for dopamine reuptake pumps, not the cerebellum.",
+   "The book contrasts the PFC only with the **striatum**, not the amygdala.",
+   "",
+   "The book contrasts the PFC only with the **striatum**, not the hypothalamus.",
+   "The book contrasts the PFC only with the **striatum**, not the hippocampus."
+  ],
+  "whyNotPages": [
+   "8",
+   "8",
+   "",
+   "8",
+   "8"
+  ]
+ },
+ "q1-15": {
+  "pages": "8",
+  "whyNot": [
+   "Opposite: these autoreceptors **inhibit** release from the axon terminal.",
+   "They act at somatodendritic sites with no synapse involved, so they are not restricted to axoaxonic synapses.",
+   "Their activator is monoamine released from **dendrites**, not endocannabinoids.",
+   "Opposite: dendritic release works here without any **synapse or vesicle**.",
+   ""
+  ],
+  "whyNotPages": [
+   "8",
+   "8",
+   "9",
+   "8",
+   ""
+  ]
+ },
+ "q1-16": {
+  "pages": "8",
+  "whyNot": [
+   "Opposite: volume spread lets transmitter reach more receptors, so it does not block drug binding.",
+   "Receptors are involved in classic synaptic transmission too; volume neurotransmission is just one extra route.",
+   "",
+   "Opposite: drugs act at relevant receptors **even where no synapse** exists.",
+   "Drugs reach receptors across tissue, and that diffusion is the point of volume neurotransmission."
+  ],
+  "whyNotPages": [
+   "7",
+   "7",
+   "",
+   "8",
+   "7"
+  ]
+ },
+ "q1-17": {
+  "pages": "9",
+  "whyNot": [
+   "",
+   "Sodium entry through axon channels carries the action potential along the axon, but calcium at the terminal triggers release.",
+   "Chloride is not part of excitation–secretion coupling in the book.",
+   "Magnesium is not named in the book as a trigger for vesicle release.",
+   "Potassium is not named in the book as the trigger for vesicle release."
+  ],
+  "whyNotPages": [
+   "",
+   "9",
+   "9",
+   "9",
+   "9"
+  ]
+ },
+ "q1-18": {
+  "pages": "9",
+  "whyNot": [
+   "That describes signal transduction ending in gene expression inside the receiving neuron, not coupling at the terminal.",
+   "Retrograde release is signaling from postsynaptic to presynaptic neuron, a different process.",
+   "Phosphorylating CREB is a nuclear step in the cascade, not coupling at the terminal.",
+   "",
+   "Hormone binding to a nuclear receptor belongs to the hormone-linked cascade, not excitation–secretion coupling."
+  ],
+  "whyNotPages": [
+   "17",
+   "6",
+   "17",
+   "",
+   "17"
+  ]
+ },
+ "q1-19": {
+  "pages": "10",
+  "whyNot": [
+   "Cleft size is not what sets the net effect; the kinase–phosphatase balance does.",
+   "The order of binding does not decide the outcome; it depends on the **balance** of the two activities.",
+   "Synapse count is not the stated determinant; the figure says kinase versus phosphatase balance.",
+   "CREB is a downstream transcription factor, not what decides the kinase–phosphatase balance.",
+   ""
+  ],
+  "whyNotPages": [
+   "10",
+   "10",
+   "10",
+   "17",
+   ""
+  ]
+ },
+ "q1-20": {
+  "pages": "10",
+  "whyNot": [
+   "Cell phone towers are the book's analogy for volume neurotransmission, not for signal cascades.",
+   "",
+   "Special ops troops are the book's analogy for immediate early genes.",
+   "A loaded gun is the book's analogy for neurotransmitter packaged in the presynaptic terminal.",
+   "Movie editing is the book's analogy for alternative splicing of mRNA."
+  ],
+  "whyNotPages": [
+   "7",
+   "",
+   "19",
+   "1",
+   "26"
+  ]
+ },
+ "q1-21": {
+  "pages": "10",
+  "whyNot": [
+   "Opposite: initial events take **under a second**; only the downstream effects take hours to days.",
+   "Gene expression takes hours after receptor occupancy, not milliseconds.",
+   "Initial events are quick, but downstream effects persist for **days** or longer.",
+   "",
+   "Effects outlast neurotransmitter binding, since downstream messengers can last for days or a lifetime."
+  ],
+  "whyNotPages": [
+   "10",
+   "28",
+   "10",
+   "",
+   "10"
+  ]
+ },
+ "q1-22": {
+  "pages": "11",
+  "whyNot": [
+   "The ion-channel cascade is neurotransmitter-triggered, but the neurotrophin cascade is triggered by **neurotrophins**.",
+   "The hormone cascade starts with **hormones** and the neurotrophin cascade with neurotrophins.",
+   "Only two of the four are triggered by neurotransmitters, not all of them.",
+   "The G-protein cascade qualifies, but the hormone-linked cascade is triggered by **hormones**.",
+   ""
+  ],
+  "whyNotPages": [
+   "11",
+   "11",
+   "11",
+   "11",
+   ""
+  ]
+ },
+ "q1-23": {
+  "pages": "17",
+  "whyNot": [
+   "",
+   "Ras and Raf belong to the **neurotrophin** cascade of kinases.",
+   "Calcineurin is a **phosphatase**, and cGMP is not the second messenger here.",
+   "That pairing (cAMP, protein kinase A) is the **G-protein-linked** system.",
+   "The hormone–receptor complex binding hormone-response elements is the **hormone** cascade."
+  ],
+  "whyNotPages": [
+   "",
+   "17",
+   "15",
+   "17",
+   "17"
+  ]
+ },
+ "q1-24": {
+  "pages": "17",
+  "whyNot": [
+   "Adenylate cyclase activation is part of the **G-protein** system at the membrane, not a steroid hormone route.",
+   "",
+   "Ras–Raf–MEK belongs to the **neurotrophin** cascade, not the hormone cascade.",
+   "Opening calcium channels is the **ion-channel** cascade triggered by neurotransmitters.",
+   "Exportin moves hairpin RNA to the cytoplasm; it does not handle hormone-receptor complexes."
+  ],
+  "whyNotPages": [
+   "14",
+   "",
+   "17",
+   "11",
+   "27"
+  ]
+ },
+ "q1-25": {
+  "pages": "17",
+  "whyNot": [
+   "The hormone cascade uses a hormone–receptor complex and hormone-response elements, not this kinase series.",
+   "The G-protein cascade runs through cAMP and protein kinase A.",
+   "",
+   "Epigenetics concerns chromatin modification, not this kinase series.",
+   "The ion-channel cascade runs through calcium and CaMK."
+  ],
+  "whyNotPages": [
+   "17",
+   "11",
+   "",
+   "23",
+   "17"
+  ]
+ },
+ "q1-26": {
+  "pages": "11",
+  "whyNot": [
+   "",
+   "The DNA-binding step belongs to the hormone–receptor complex; G-protein receptors are membrane proteins spanning the membrane seven times.",
+   "The count is **seven**, not twelve, transmembrane regions.",
+   "The book gives no five-subunit pore for these receptors; the defining feature is **seven** transmembrane regions.",
+   "The book describes no single-pass kinase receptor here; the defining feature is **seven** transmembrane regions."
+  ],
+  "whyNotPages": [
+   "",
+   "17",
+   "11",
+   "11",
+   "11"
+  ]
+ },
+ "q1-27": {
+  "pages": "14",
+  "whyNot": [
+   "That complex belongs to the hormone cascade and acts on genes, not on cAMP synthesis.",
+   "",
+   "The ternary complex still lacks the **enzyme**; the enzyme is what makes cAMP.",
+   "The binary complex still needs a **G protein** and then the enzyme.",
+   "Fos–Jun is a leucine zipper transcription factor acting on late genes, not making cAMP."
+  ],
+  "whyNotPages": [
+   "17",
+   "",
+   "14",
+   "14",
+   "20"
+  ]
+ },
+ "q1-28": {
+  "pages": "15",
+  "whyNot": [
+   "cAMP acts on the kinase's regulatory units, not on DNA beside its gene.",
+   "Calcium channels are not the target; cAMP binds the **regulatory** units.",
+   "",
+   "Phosphorylation is what the active kinase does to others; cAMP activates it by binding.",
+   "Removing phosphates is the job of **phosphatases**, not the way cAMP activates the kinase."
+  ],
+  "whyNotPages": [
+   "15",
+   "15",
+   "",
+   "15",
+   "15"
+  ]
+ },
+ "q1-29": {
+  "pages": "15",
+  "whyNot": [
+   "DNMT1 is a DNA methyltransferase that keeps DNA methylation, not a phosphatase.",
+   "Protein kinase A is a **kinase** that adds phosphates, the opposite action.",
+   "CaMK is a **kinase**, not the phosphatase activated here.",
+   "",
+   "Adenylate cyclase is the enzyme that makes cAMP, not a phosphatase."
+  ],
+  "whyNotPages": [
+   "24",
+   "15",
+   "17",
+   "",
+   "12"
+  ]
+ },
+ "q1-30": {
+  "pages": "17",
+  "whyNot": [
+   "Calcium can instead activate CREB through calmodulin-dependent kinases.",
+   "It also activates **kinases**, such as CaMK, not only phosphatases.",
+   "It also activates **phosphatases**, such as calcineurin, not only kinases.",
+   "Hormone-response elements belong to the hormone cascade, not to calcium.",
+   ""
+  ],
+  "whyNotPages": [
+   "17",
+   "17",
+   "17",
+   "17",
+   ""
+  ]
+ },
+ "q1-31": {
+  "pages": "15",
+  "whyNot": [
+   "Histones are proteins that DNA wraps around in nucleosomes, not a transcription factor.",
+   "A G protein links the receptor to an enzyme at the membrane; CREB works in the nucleus.",
+   "CREB acts in the nucleus on genes, a later step than second messengers like cAMP or calcium.",
+   "Retrograde messengers like NO and NGF travel back across synapses; CREB acts in the nucleus.",
+   ""
+  ],
+  "whyNotPages": [
+   "23",
+   "11",
+   "17",
+   "6",
+   ""
+  ]
+ },
+ "q1-32": {
+  "pages": "18",
+  "whyNot": [
+   "Histone deacetylases **silence** genes by compacting chromatin; they do not transcribe.",
+   "Dicer chops hairpin RNA in the cytoplasm for RNA interference.",
+   "",
+   "DNA methyltransferase adds methyl groups to DNA and **silences** genes.",
+   "Adenylate cyclase makes the second messenger cAMP, not RNA."
+  ],
+  "whyNotPages": [
+   "24",
+   "27",
+   "",
+   "24",
+   "12"
+  ]
+ },
+ "q1-33": {
+  "pages": "19",
+  "whyNot": [
+   "",
+   "Late genes are those activated **after** by the Fos–Jun leucine zipper product.",
+   "Noncoding RNAs regulate gene expression and are a separate topic from early genes.",
+   "Neurotrophins are first messengers of a separate kinase cascade, not genes.",
+   "Histone methyltransferases are enzymes silencing genes via epigenetics, not early genes."
+  ],
+  "whyNotPages": [
+   "",
+   "21",
+   "27",
+   "17",
+   "24"
+  ]
+ },
+ "q1-34": {
+  "pages": "21",
+  "whyNot": [
+   "Early-gene products are far quicker and shorter-lived: about 15 minutes in, an hour at most.",
+   "One minute in and a full day is wrong on both counts for Fos and Jun.",
+   "Onset is minutes, not seconds, and the products fade within an hour, not days.",
+   "",
+   "Fos and Jun are brief; the lifelong effects come from **late genes**, not these products."
+  ],
+  "whyNotPages": [
+   "21",
+   "21",
+   "21",
+   "",
+   "21"
+  ]
+ },
+ "q1-35": {
+  "pages": "23",
+  "whyNot": [
+   "The late gene product is the **seventh** messenger.",
+   "",
+   "cAMP is the **second** messenger.",
+   "Protein kinase is the **third** messenger.",
+   "Fos and Jun are the **fifth** messengers; their pairing makes the sixth."
+  ],
+  "whyNotPages": [
+   "23",
+   "",
+   "23",
+   "23",
+   "20"
+  ]
+ },
+ "q1-36": {
+  "pages": "23",
+  "whyNot": [
+   "Opposite: gene expression is **not fixed**; learning and experience change it.",
+   "",
+   "The book says behavior also modifies genes, so influence runs **both ways**.",
+   "Psychotherapy acts through changes in gene expression and synaptic connections, not volume neurotransmission.",
+   "Opposite: drugs, learning, the environment and psychotherapy can all alter gene expression."
+  ],
+  "whyNotPages": [
+   "23",
+   "",
+   "23",
+   "23",
+   "23"
+  ]
+ },
+ "q1-37": {
+  "pages": "24",
+  "whyNot": [
+   "",
+   "DNMT3 does de novo DNA methylation, which **silences** genes.",
+   "Histone methylation compacts chromatin and **silences** genes.",
+   "Histone deacetylation compresses chromatin and **silences** genes.",
+   "DNA methylation **silences** genes, the opposite effect."
+  ],
+  "whyNotPages": [
+   "",
+   "24",
+   "24",
+   "24",
+   "24"
+  ]
+ },
+ "q1-38": {
+  "pages": "24",
+  "whyNot": [
+   "cAMP activates protein kinase A; it is not a methyl donor.",
+   "Glutamate and GABA are neurotransmitters, not methyl donors.",
+   "HDACs **remove** acetyl groups, and acetyl-CoA is not the methyl donor.",
+   "Calcium acts through calmodulin to activate kinases, not to donate methyl groups.",
+   ""
+  ],
+  "whyNotPages": [
+   "15",
+   "5",
+   "24",
+   "17",
+   ""
+  ]
+ },
+ "q1-39": {
+  "pages": "24",
+  "whyNot": [
+   "Calcineurin is a **phosphatase** that removes phosphates, not a methylation maintainer.",
+   "Histone demethylase **reverses** histone methylation, not maintain DNA methylation.",
+   "",
+   "DNMT3 does **de novo** methylation of previously active genes, not maintenance.",
+   "HDAC removes acetyl groups from histones; it does not maintain DNA methylation."
+  ],
+  "whyNotPages": [
+   "15",
+   "24",
+   "",
+   "24",
+   "24"
+  ]
+ },
+ "q1-40": {
+  "pages": "24",
+  "whyNot": [
+   "Therapeutic drug action is given as a **favorable** epigenetic outcome.",
+   "Psychotherapy is listed among experiences that change the epigenome, with therapeutic improvement as the favorable result.",
+   "Spatial memory formation is the book's example of a **favorable** change.",
+   "",
+   "The initial epigenetic pattern set in development gives each neuron its lifelong identity, not an unfavorable outcome."
+  ],
+  "whyNotPages": [
+   "24",
+   "24",
+   "24",
+   "",
+   "24"
+  ]
+ },
+ "q1-41": {
+  "pages": "23",
+  "whyNot": [
+   "A kinase dimer with regulatory units is how an inactive protein kinase is configured.",
+   "Mitochondrial DNA is not part of nucleosomes; the book describes **histones** wrapped by DNA.",
+   "RNA is not the nucleosome core; nucleosomes contain **histones** and DNA.",
+   "",
+   "Transcription factors bind regulatory regions of genes, not make up nucleosomes."
+  ],
+  "whyNotPages": [
+   "13",
+   "23",
+   "23",
+   "",
+   "18"
+  ]
+ },
+ "q1-42": {
+  "pages": "26",
+  "whyNot": [
+   "Volume neurotransmission is diffusion without a synapse, unrelated to making more proteins than genes.",
+   "RNA interference **blocks** translation of mRNA; it does not multiply protein types.",
+   "",
+   "DNA methylation silences genes rather than generating protein diversity.",
+   "Retrograde transport carries factors like NGF to the nucleus, not creating protein variants."
+  ],
+  "whyNotPages": [
+   "7",
+   "27",
+   "",
+   "24",
+   "6"
+  ]
+ },
+ "q1-43": {
+  "pages": "27",
+  "whyNot": [
+   "",
+   "Calcineurin is a **phosphatase**, unrelated to RNA processing.",
+   "RISC is the complex that **receives** the small pieces and inhibits translation.",
+   "Exportin **moves** the hairpin RNA out to the cytoplasm before dicer cuts it.",
+   "RNA polymerase **transcribes** DNA into RNA in the nucleus."
+  ],
+  "whyNotPages": [
+   "",
+   "15",
+   "27",
+   "27",
+   "18"
+  ]
+ },
+ "q1-44": {
+  "pages": "28",
+  "whyNot": [
+   "Vesicle release is a step in excitation–secretion coupling, not the ultimate purpose.",
+   "",
+   "Receptor binding is only the start; the ultimate goal is the genome-level conversation.",
+   "Ion channel opening lasts milliseconds and is an early event, not the ultimate function.",
+   "Action potentials are the electrical stage of classic transmission, not its ultimate function."
+  ],
+  "whyNotPages": [
+   "9",
+   "",
+   "28",
+   "28",
+   "9"
+  ]
+ },
+ "q1-45": {
+  "pages": "28",
+  "whyNot": [
+   "RNA interference is a future therapeutic idea, not where most current drugs act.",
+   "Direct action on genes is projected for **future** drugs, not most current ones.",
+   "The book does not say current drugs act chiefly on mitochondria; it cites transmitters, enzymes and receptors.",
+   "Transcription factors are not named as the main current target; receptors are.",
+   ""
+  ],
+  "whyNotPages": [
+   "28",
+   "28",
+   "28",
+   "28",
+   ""
+  ]
+ }
+}

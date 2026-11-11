@@ -1,0 +1,791 @@
+{
+ "q6-01": {
+  "pages": "244",
+  "whyNot": [
+   "That is one of the other symptoms in the list of four-or-more extras, so it is **not** the required core symptom.",
+   "",
+   "Suicidal thoughts are an optional criterion symptom, not one of the two **core** symptoms that must be present.",
+   "Sleep disturbance is just one of the additional symptoms, not a **required** one.",
+   "Guilt or worthlessness belongs to the optional group of extra symptoms, not the **core** pair."
+  ],
+  "whyNotPages": [
+   "245",
+   "",
+   "245",
+   "245",
+   "245"
+  ],
+  "why": "A major depressive episode needs five symptoms in total, and the anchor must be either **depressed mood** or **loss of interest**; the remaining four come from the other listed symptoms."
+ },
+ "q6-02": {
+  "pages": "244–245",
+  "whyNot": [
+   "Two is too few; manic criteria ask for **three** extras with elevated mood and one more when irritable.",
+   "Three is the count when mood is **elevated**, not when it is only irritable.",
+   "",
+   "Five is the count for a depressive episode overall, not the extra symptoms for **mania**.",
+   "Mood alone never suffices; additional symptoms are always **required** for a manic episode."
+  ],
+  "whyNotPages": [
+   "245",
+   "245",
+   "",
+   "244",
+   "244"
+  ],
+  "why": "Mania needs elevated or irritable mood plus extra symptoms: **three** if mood is elevated, but **four** when mood is only irritable, since irritability is less specific."
+ },
+ "q6-03": {
+  "pages": "244",
+  "whyNot": [
+   "That defines **bipolar I**, which requires a full manic episode.",
+   "Psychosis during depression sits in the middle of the psychosis-mood continuum; it does not define **bipolar II**.",
+   "Mixed features are a modifier of episodes, and are not the definition of **bipolar II**.",
+   "Recurrent depression alone is **unipolar** major depressive disorder.",
+   ""
+  ],
+  "whyNotPages": [
+   "247",
+   "249",
+   "248",
+   "246",
+   ""
+  ],
+  "why": "Bipolar II requires at least one **hypomanic** episode plus at least one **major depressive** episode; a full manic episode would make it bipolar I instead."
+ },
+ "q6-04": {
+  "pages": "248",
+  "whyNot": [
+   "Racing thoughts are counted, as the flight-of-ideas item on the **mixed-features** list.",
+   "Pressured speech is counted, under the item for being more talkative or feeling pushed to keep talking.",
+   "Inflated self-esteem or grandiosity is on the counted **mixed-features** list.",
+   "",
+   "Decreased need for sleep is counted on the **mixed-features** list."
+  ],
+  "whyNotPages": [
+   "248",
+   "248",
+   "248",
+   "",
+   "248"
+  ]
+ },
+ "q6-05": {
+  "pages": "250",
+  "whyNot": [
+   "",
+   "None is wrong; the book says a large share of bipolar II patients are first labeled **unipolar**.",
+   "About 15% is far below the book's estimate of **up to 60%**.",
+   "About 5% badly understates the problem; the estimate is **up to 60%**.",
+   "About 90% overshoots; the book says **up to 60%**."
+  ],
+  "whyNotPages": [
+   "",
+   "250",
+   "250",
+   "250",
+   "250"
+  ],
+  "why": "Depressed bipolar II patients are often first called unipolar, in as many as **60%**, because past hypomania is pleasant and goes unreported; over a third of unipolar patients are later re-diagnosed."
+ },
+ "q6-06": {
+  "pages": "250",
+  "whyNot": [
+   "Late onset is the opposite; the clues point to **early** onset before age 25.",
+   "",
+   "A single long episode is the opposite; bipolar depression tends toward **shorter** episodes, more of them.",
+   "Psychotic symptoms favor bipolar depression, so their **absence** does not point that way.",
+   "Family history and comorbid substance abuse both favor **bipolar**; their absence does not."
+  ],
+  "whyNotPages": [
+   "250",
+   "",
+   "250",
+   "250",
+   "250"
+  ]
+ },
+ "q6-07": {
+  "pages": "251",
+  "whyNot": [
+   "",
+   "The phrase for family history is \"Who's your daddy?\", not **Where's your mama?**",
+   "Postpartum symptoms are not what the question refers to; it is about an outside **informant**.",
+   "Prenatal history is not the point; the aim is a second source on **manic symptoms**.",
+   "Attachment style is not discussed; the question seeks an outside **informant** history."
+  ],
+  "whyNotPages": [
+   "",
+   "251",
+   "251",
+   "251",
+   "251"
+  ],
+  "why": "Patients often lack insight and under-report manic symptoms, so a close informant such as a mother or spouse may supply a past history that helps establish a **bipolar** spectrum diagnosis."
+ },
+ "q6-08": {
+  "pages": "251",
+  "whyNot": [
+   "Family history matters greatly; the book calls it a **robust** risk factor for bipolar disorder.",
+   "Two-fold understates the book's figure of **8- to 10-fold**.",
+   "Fifty-fold greatly overshoots the figure of **8- to 10-fold**.",
+   "One hundred-fold greatly overshoots the figure of **8- to 10-fold**.",
+   ""
+  ],
+  "whyNotPages": [
+   "251",
+   "251",
+   "251",
+   "251",
+   ""
+  ],
+  "why": "Having a first-degree relative with bipolar disorder raises risk about **8- to 10-fold** over the general population, arguably the most reliable risk marker for bipolar depression."
+ },
+ "q6-09": {
+  "pages": "251",
+  "whyNot": [
+   "A 100% rise per symptom is far above the stated **30%** increase.",
+   "A 300% rise per symptom is far above the stated **30%** increase.",
+   "Three percent is far below the stated increase of **30%** per symptom.",
+   "",
+   "Risk clearly changes; even subthreshold manic symptoms are **strongly** linked to conversion."
+  ],
+  "whyNotPages": [
+   "251",
+   "251",
+   "251",
+   "",
+   "251"
+  ],
+  "why": "Even subthreshold manic symptoms in a depressed patient predict later bipolar conversion, with each added symptom raising risk by roughly **30%**."
+ },
+ "q6-10": {
+  "pages": "251",
+  "whyNot": [
+   "Mixed features raise suicidality; they do not lower it, so a **decrease** is the wrong direction.",
+   "There is a clear change, as mixed features **compound** suicide risk.",
+   "",
+   "A tenfold decrease is the wrong direction; mixed features **increase** risk.",
+   "Suicidality goes **up**, not down, when mixed features are present."
+  ],
+  "whyNotPages": [
+   "251",
+   "251",
+   "",
+   "251",
+   "251"
+  ],
+  "why": "Non-euphoric manic symptoms such as agitation, impulsivity and irritability combined with depression raise the risk of suicidality **fourfold** in both unipolar and bipolar depression."
+ },
+ "q6-11": {
+  "pages": "251",
+  "whyNot": [
+   "",
+   "Tricyclics are classic monoamine reuptake inhibitors, which the book says are **not** first-line here.",
+   "SNRIs are monoamine reuptake inhibitors, so they are **not** the first-line choice here.",
+   "Benzodiazepines are not named for mixed features; the book points to Chapter 5 agents.",
+   "SSRIs are reuptake inhibitors, which the book says are **not** first-line for mixed features."
+  ],
+  "whyNotPages": [
+   "",
+   "251",
+   "251",
+   "251",
+   "251"
+  ],
+  "why": "Mixed features are not first treated with standard reuptake inhibitors; instead **serotonin/dopamine antagonists or partial agonists**, the drugs used for psychosis in Chapter 5, are favored."
+ },
+ "q6-12": {
+  "pages": "251",
+  "whyNot": [
+   "The figure is stated: bipolar suicide rates are **higher**, not unknown.",
+   "",
+   "Rates are **higher**, not lower, in bipolar than in unipolar depression.",
+   "Rates are not equal; bipolar depression carries about **twice** the risk.",
+   "Ten times lower is the wrong direction; the risk is **higher** in bipolar illness."
+  ],
+  "whyNotPages": [
+   "251",
+   "",
+   "251",
+   "251",
+   "251"
+  ],
+  "why": "Bipolar depression carries **twice** the suicide rate of unipolar depression, and up to 20 times that of the general population, which is why early recognition of bipolar illness matters."
+ },
+ "q6-13": {
+  "pages": "253",
+  "whyNot": [
+   "DOPA decarboxylase converts **DOPA** into dopamine, the step before norepinephrine.",
+   "COMT is a **catabolic** enzyme that breaks down norepinephrine, not one that makes it.",
+   "Tyrosine hydroxylase turns **tyrosine** into DOPA; it is the first, rate-limiting step.",
+   "",
+   "MAO-B is a **destructive** enzyme for norepinephrine, not a synthetic one."
+  ],
+  "whyNotPages": [
+   "253",
+   "253",
+   "253",
+   "",
+   "253"
+  ],
+  "why": "The last synthetic step in a noradrenergic neuron is **dopamine β-hydroxylase**, which turns dopamine, itself just a precursor in these cells, into norepinephrine."
+ },
+ "q6-14": {
+  "pages": "254",
+  "whyNot": [
+   "α1 receptors are **postsynaptic** only.",
+   "β2 receptors are **postsynaptic**; β receptors do not act as autoreceptors.",
+   "",
+   "β3 receptors are **postsynaptic** only.",
+   "β1 receptors are **postsynaptic** only, not autoreceptors."
+  ],
+  "whyNotPages": [
+   "254",
+   "254",
+   "",
+   "254",
+   "254"
+  ],
+  "why": "All NE receptor types can be postsynaptic, but **α2** receptors are the only ones that also sit on the presynaptic terminal and on the cell body and dendrites as autoreceptors."
+ },
+ "q6-15": {
+  "pages": "255",
+  "whyNot": [
+   "NET is blocked by reuptake inhibitors, not by blocking the **α2 autoreceptor**.",
+   "It does have an effect; removing the brake changes **release**.",
+   "Release goes **up**, not down, when the autoreceptor brake is removed.",
+   "MAO is inhibited by a different class of drug, not by α2 blockade.",
+   ""
+  ],
+  "whyNotPages": [
+   "255",
+   "255",
+   "255",
+   "255",
+   ""
+  ],
+  "why": "Presynaptic α2 autoreceptors normally switch off further NE release, so an antagonist at them **cuts the brake cable** and lets more norepinephrine be released."
+ },
+ "q6-16": {
+  "pages": "258",
+  "whyNot": [
+   "Glycine is not the precursor; **GABA transaminase** is the enzyme that inactivates GABA.",
+   "Glutamine is not GABA's direct precursor; in the book **glutamate** is converted by GAD.",
+   "",
+   "Tyrosine is the precursor of **norepinephrine**, via tyrosine hydroxylase, not of GABA.",
+   "Serine is converted to **glycine** by SHMT in the glutamate system, not into GABA."
+  ],
+  "whyNotPages": [
+   "258",
+   "258",
+   "",
+   "253",
+   "99"
+  ],
+  "why": "GABA is made from the amino acid **glutamate** by glutamic acid decarboxylase (**GAD**), while GABA transaminase inactivates it, so glutamate is both the precursor and the excitatory counterpart."
+ },
+ "q6-17": {
+  "pages": "258",
+  "whyNot": [
+   "",
+   "GABA-A is a ligand-gated **chloride channel**, not G-protein-linked.",
+   "GABA-C is also a ligand-gated **ion channel**, not G-protein-linked.",
+   "One of the receptors listed is G-protein-linked: **GABA-B**.",
+   "Only one type is G-protein-linked; GABA-A and GABA-C are **ion channels**."
+  ],
+  "whyNotPages": [
+   "",
+   "258",
+   "258",
+   "258",
+   "258"
+  ],
+  "why": "Of the three major GABA receptor types, **GABA-B** is coupled to G proteins, while GABA-A and GABA-C are ligand-gated ion channels forming chloride pores."
+ },
+ "q6-18": {
+  "pages": "259",
+  "whyNot": [
+   "A δ subunit makes the receptor **benzodiazepine-insensitive** and extrasynaptic.",
+   "Benzodiazepine-sensitive receptors do contain **β subunits**, two of them.",
+   "α4 or α6 subunits confer **insensitivity** to benzodiazepines.",
+   "",
+   "A ρ subunit belongs to the **GABA-C** type, which is separate from benzodiazepine-sensitive GABA-A."
+  ],
+  "whyNotPages": [
+   "259",
+   "259",
+   "259",
+   "",
+   "258"
+  ],
+  "why": "Benzodiazepine sensitivity needs two β units, a **γ2 or γ3** subunit and two **α1, α2 or α3** units; the benzodiazepine binds between the γ and α subunits."
+ },
+ "q6-19": {
+  "pages": "262",
+  "whyNot": [
+   "Anxiety is tied to **α2 and α3** subunits, not α1.",
+   "Tonic inhibition comes from extrasynaptic **δ-containing** receptors, which are benzodiazepine-insensitive.",
+   "Epilepsy is linked to abnormal γ2, α2 or δ expression, not to **α1** as such.",
+   "Neurosteroids bind the **α/δ** site of benzodiazepine-insensitive receptors, not the α1 type.",
+   ""
+  ],
+  "whyNotPages": [
+   "262",
+   "263",
+   "262",
+   "263",
+   ""
+  ],
+  "why": "Benzodiazepine-sensitive receptors with **α1** subunits are the presumed targets of sedative-hypnotics and regulate sleep, whereas those with α2 or α3 subunits are linked to anxiety."
+ },
+ "q6-20": {
+  "pages": "263",
+  "whyNot": [
+   "Ionotropic glutamate receptors are excitatory and unrelated to **GABA-A** tonic inhibition.",
+   "",
+   "Synaptic γ2 receptors, which are benzodiazepine-sensitive, mediate **phasic** rather than tonic inhibition.",
+   "Autoreceptors regulate release of a neurotransmitter; they do not mediate **tonic** inhibition.",
+   "G-protein-linked receptors are **GABA-B**, not the GABA-A receptors responsible for tonic inhibition."
+  ],
+  "whyNotPages": [
+   "259",
+   "",
+   "261",
+   "255",
+   "258"
+  ]
+ },
+ "q6-21": {
+  "pages": "262",
+  "whyNot": [
+   "Without GABA, a benzodiazepine does not **close** the channel; it simply has no action.",
+   "It cannot open the channel by itself, because it needs **GABA** to work.",
+   "Desensitization is not described; without GABA the drug just does **nothing**.",
+   "",
+   "It does not behave as an inverse agonist; that class **closes** channels, and benzodiazepines here are positive modulators."
+  ],
+  "whyNotPages": [
+   "262",
+   "262",
+   "262",
+   "",
+   "57"
+  ],
+  "why": "A benzodiazepine is a positive allosteric modulator that only amplifies GABA's effect, so with **no GABA** present it leaves the chloride channel unchanged."
+ },
+ "q6-22": {
+  "pages": "261",
+  "whyNot": [
+   "Physostigmine is not discussed in the book; the **benzodiazepine-site antagonist** is the reversal agent named.",
+   "Dantrolene is described for **neuroleptic malignant syndrome**, not benzodiazepine reversal.",
+   "Naloxone is a **μ-opioid** antagonist and does not act at the benzodiazepine site.",
+   "Glucagon is not mentioned in the book as a reversal agent for **benzodiazepines**.",
+   ""
+  ],
+  "whyNotPages": [
+   "263",
+   "170",
+   "393",
+   "263",
+   ""
+  ],
+  "why": "Flumazenil is a neutral antagonist at the **benzodiazepine site** of GABA-A, so it can reverse the sedation of a full-agonist benzodiazepine taken in overdose or given for anesthesia."
+ },
+ "q6-23": {
+  "pages": "263",
+  "whyNot": [
+   "",
+   "β and δ is wrong; the neurosteroid site lies next to the **α** subunit, not the β one.",
+   "γ and α is where **benzodiazepines** bind, not neuroactive steroids.",
+   "ρ and θ are not described as a binding site; the steroid site is **α/δ**.",
+   "α and β is where **GABA itself** binds, not neuroactive steroids."
+  ],
+  "whyNotPages": [
+   "",
+   "263",
+   "261",
+   "260",
+   "261"
+  ],
+  "why": "Benzodiazepine-insensitive extrasynaptic receptors have one binding site for neuroactive steroids at the interface of **α and δ** subunits, distinct from the GABA site and the benzodiazepine site."
+ },
+ "q6-24": {
+  "pages": "263–264",
+  "whyNot": [
+   "Thyroid failure is not proposed; the book's idea involves loss of **neuroactive steroids** at delivery.",
+   "",
+   "Increased dopamine is not the proposed trigger; **tonic inhibition** is lost after delivery.",
+   "Excess serotonin is not proposed; the book describes a **neurosteroid** drop.",
+   "A prolactin rise is not the trigger given; the hypothesis centers on **neurosteroid** loss."
+  ],
+  "whyNotPages": [
+   "264",
+   "",
+   "264",
+   "264",
+   "264"
+  ],
+  "why": "Neuroactive steroids are high in pregnancy, then fall precipitously at delivery, which may suddenly remove **tonic inhibition** and trigger a major depressive episode, a plausible but unproven theory."
+ },
+ "q6-25": {
+  "pages": "264",
+  "whyNot": [
+   "Absent α2 receptors are not a postmortem finding in the book; the **5HT2** increase is.",
+   "Decreased striatal D2 receptors are not cited; the consistent finding is in **serotonin** receptors.",
+   "",
+   "Elevated GABA-B receptors are not cited; the consistent finding is **5HT2**.",
+   "Increased NET density is not cited; the consistent finding is about **5HT2** receptors."
+  ],
+  "whyNotPages": [
+   "264",
+   "264",
+   "",
+   "264",
+   "264"
+  ],
+  "why": "Postmortem studies of people who died by suicide consistently show more **serotonin 2 receptors** in frontal cortex, which is some support for the receptor hypothesis but not direct proof."
+ },
+ "q6-26": {
+  "pages": "266",
+  "whyNot": [
+   "",
+   "Drug absorption is quick; the delay is not explained by it, since monoamines rise **almost immediately**.",
+   "An immediate monoamine rise happens at once, so it cannot explain the **weeks-long delay**.",
+   "Plasma half-life is not the explanation offered; **receptor and growth factor** changes follow the clinical timing.",
+   "MAO induction is not described as the explanation; the book points to **downregulation** and BDNF."
+  ],
+  "whyNotPages": [
+   "",
+   "266",
+   "266",
+   "266",
+   "266"
+  ],
+  "why": "Monoamines rise soon after dosing, but benefit takes weeks, matching the slower **downregulation of receptors** and downstream **BDNF** synthesis rather than any immediate drug effect."
+ },
+ "q6-27": {
+  "pages": "266",
+  "whyNot": [
+   "Serotonin syndrome is not linked to downregulation in the book's discussion.",
+   "",
+   "Weight gain is not tied to receptor downregulation in the book.",
+   "Hyperprolactinemia is a dopamine-blockade effect from Chapter 5, not tied to **receptor downregulation**.",
+   "Withdrawal seizures are not tied to receptor downregulation in this chapter."
+  ],
+  "whyNotPages": [
+   "266",
+   "",
+   "266",
+   "165",
+   "266"
+  ],
+  "why": "The delayed downregulation of receptors lines up with onset of antidepressant action and also with **tolerance** to some early side effects of the drugs."
+ },
+ "q6-28": {
+  "pages": "266",
+  "whyNot": [
+   "Receptor upregulation is a hypothesized feature of depression, not the point of **irreversibility**.",
+   "The first episode has not been shown to cause **irreversible** change in the book.",
+   "",
+   "Loss of dendritic spines is the synapse-loss stage, which may still be **reversible**.",
+   "Loss of BDNF expression is an early step and can be reversed by trophic **restoration**."
+  ],
+  "whyNotPages": [
+   "265",
+   "266",
+   "",
+   "266",
+   "266"
+  ],
+  "why": "The progression runs from lost synaptic maintenance to lost synapses and spines and finally to lost neurons; capture at the **synapse** stage may be reversible, but dead neurons are not."
+ },
+ "q6-29": {
+  "pages": "270",
+  "whyNot": [
+   "The opposite occurs; atrophy removes the hippocampus's **brake** and the axis becomes overactive.",
+   "Feedback sensitivity is reduced, as the HPA axis becomes **insensitive** to feedback in depression.",
+   "Cortisol is **elevated** in depression, not low.",
+   "",
+   "BDNF is reduced, not raised, by stress and **atrophy**."
+  ],
+  "whyNotPages": [
+   "270",
+   "270",
+   "271",
+   "",
+   "268"
+  ],
+  "why": "The hippocampus and amygdala normally restrain the HPA axis, so stress-induced atrophy removes that inhibition, leaving **overactivity** with excess glucocorticoid and feedback insensitivity."
+ },
+ "q6-30": {
+  "pages": "270",
+  "whyNot": [
+   "Vasopressin 1B receptors are **listed** as targets in testing.",
+   "Glucocorticoid receptors are **listed** as targets in testing.",
+   "CRF receptors are **listed** as targets in testing.",
+   "",
+   "One of the listed options is not a target, so \"none of the above\" cannot hold: **mineralocorticoid synthase** is absent from the book's list."
+  ],
+  "whyNotPages": [
+   "270",
+   "270",
+   "270",
+   "",
+   "270"
+  ],
+  "why": "The HPA-axis agents in testing target **CRF** receptors, **vasopressin 1B** receptors and **glucocorticoid** receptors; mineralocorticoid synthase is not among them."
+ },
+ "q6-31": {
+  "pages": "270",
+  "whyNot": [
+   "Glucocorticoids come from the **adrenal gland** via the HPA axis, not from microglia.",
+   "Melatonin is made by the **pineal gland**, not by activated microglia.",
+   "Neuroactive steroids are made by glia in the GABA system, not released by microglia as a **cytokine** signal.",
+   "BDNF is a growth factor that is **reduced** in this hypothesis, not released by activated microglia.",
+   ""
+  ],
+  "whyNotPages": [
+   "270",
+   "275",
+   "261",
+   "272",
+   ""
+  ],
+  "why": "Stress, obesity and similar factors activate microglia, which release **proinflammatory cytokines** that call monocytes and macrophages in, causing oxidative stress and synaptic and neuronal damage."
+ },
+ "q6-32": {
+  "pages": "271",
+  "whyNot": [
+   "Depression usually shows a phase **delay**, not an advance, and not in all patients.",
+   "Cortisol is **elevated** across the day, not low.",
+   "",
+   "Temperature swings are **flattened**, not exaggerated.",
+   "BDNF falls in depression and normally **peaks at night**, so it is not increased."
+  ],
+  "whyNotPages": [
+   "271",
+   "274",
+   "",
+   "274",
+   "271"
+  ],
+  "why": "In depression there is typically a sleep-wake phase delay, a flattened temperature cycle, raised cortisol all day and a **missing nighttime melatonin spike**."
+ },
+ "q6-33": {
+  "pages": "275",
+  "whyNot": [
+   "",
+   "The raphe is the origin of **serotonergic** projections, not the light-signaling relay.",
+   "The nucleus accumbens is a reward region, not the target of the **retinohypothalamic** tract.",
+   "The amygdala is a limbic emotion node, not the clock that light **resets**.",
+   "The locus coeruleus is the source of **noradrenergic** ascending fibers, not the circadian clock."
+  ],
+  "whyNotPages": [
+   "",
+   "279",
+   "277",
+   "277",
+   "279"
+  ],
+  "why": "Light travels via the retinohypothalamic tract to the hypothalamic **suprachiasmatic nucleus**, which then instructs the pineal gland to stop making melatonin, resetting the body clock."
+ },
+ "q6-34": {
+  "pages": "273–274",
+  "whyNot": [
+   "Age at first episode is not the correlate given; **past** episodes track with the impairment.",
+   "The correlate is the **burden of past illness**, not a physical measure; body mass is discussed with metabolic risk, not cognition.",
+   "The book says it does **not** relate to the current episode's severity.",
+   "",
+   "Antidepressant dose is not stated to correlate with **cognitive** impairment."
+  ],
+  "whyNotPages": [
+   "273",
+   "273",
+   "274",
+   "",
+   "273"
+  ],
+  "why": "Cognitive dysfunction tracks the **number and duration** of earlier episodes rather than current severity, which hints that each episode may leave cumulative damage."
+ },
+ "q6-35": {
+  "pages": "274",
+  "whyNot": [
+   "Normal aging is not the comparison offered; the book uses **sleep loss** and alcohol.",
+   "",
+   "Mild hypoglycemia is not part of the book's comparison.",
+   "Delirium is not the comparison; the book uses **sleep deprivation** and intoxication.",
+   "Moderate dementia is not the comparison; the book uses **everyday** impairment states."
+  ],
+  "whyNotPages": [
+   "274",
+   "",
+   "274",
+   "274",
+   "274"
+  ],
+  "why": "Residual cognitive impairment is likened to being sleep-deprived, legally drunk, or on a large dose of a sedating benzodiazepine or antihistamine, which shows how disabling it is."
+ },
+ "q6-36": {
+  "pages": "267",
+  "whyNot": [
+   "STAT3 is not the transcription factor named; the book names **CREB**.",
+   "",
+   "This tumor-suppressor protein is not mentioned; the cascades converge on **CREB**.",
+   "c-Myc is not mentioned; the cascades converge on **CREB**.",
+   "NF-κB is not mentioned; the cascades converge on **CREB**."
+  ],
+  "whyNotPages": [
+   "276",
+   "",
+   "276",
+   "276",
+   "276"
+  ],
+  "why": "Several signaling cascades triggered by antidepressants each activate **CREB**, a transcription factor that switches on plasticity genes such as BDNF, supporting synapses and neuron survival."
+ },
+ "q6-37": {
+  "pages": "277",
+  "whyNot": [
+   "",
+   "The spinal cord is linked to **physical fatigue** and psychomotor symptoms, not sleep or appetite.",
+   "The dorsolateral prefrontal cortex is tied to **concentration**, not sleep or appetite.",
+   "The nucleus accumbens is tied to **interest and pleasure**, not sleep or appetite.",
+   "The cerebellum is linked to **psychomotor** function, not sleep or appetite."
+  ],
+  "whyNotPages": [
+   "",
+   "277",
+   "281",
+   "277",
+   "277"
+  ],
+  "why": "On the symptom-circuit map, **sleep** and **appetite** disturbances are assigned to the hypothalamus, which regulates arousal and feeding."
+ },
+ "q6-38": {
+  "pages": "281",
+  "whyNot": [
+   "The thalamus is not the node given for concentration; the book uses the **prefrontal cortex**.",
+   "The amygdala is linked to guilt, mood and suicidality, not **concentration**.",
+   "The spinal cord is linked to physical **fatigue**, not concentration.",
+   "The hypothalamus is linked to **sleep and appetite**, not concentration.",
+   ""
+  ],
+  "whyNotPages": [
+   "281",
+   "277",
+   "277",
+   "277",
+   ""
+  ],
+  "why": "Concentration problems are assigned to the **dorsolateral prefrontal cortex**, a region whose information processing is regulated by norepinephrine and dopamine."
+ },
+ "q6-39": {
+  "pages": "278",
+  "whyNot": [
+   "Serotonin dysfunction is linked mainly to **increased negative affect**, not reduced positive affect.",
+   "GABA is not the neurotransmitter assigned to **positive affect** in this model.",
+   "",
+   "Glutamate is not the neurotransmitter assigned to **positive affect** in this model.",
+   "Histamine is tied to **sleep**, not to positive affect."
+  ],
+  "whyNotPages": [
+   "278",
+   "278",
+   "",
+   "278",
+   "281"
+  ],
+  "why": "Diffuse **dopamine** dysfunction mainly drives reduced positive affect such as loss of joy, interest and energy, with norepinephrine possibly also involved, while serotonin drives negative affect."
+ },
+ "q6-40": {
+  "pages": "279",
+  "whyNot": [
+   "Sleep is regulated by ascending projections, not by the **descending** spinal pathways.",
+   "Psychosis is linked to dopamine, not to **descending** NE and 5HT projections.",
+   "Appetite is assigned to the hypothalamus, not to **descending** spinal projections.",
+   "",
+   "Mood is regulated by the **ascending** projections, not the descending spinal ones."
+  ],
+  "whyNotPages": [
+   "279",
+   "279",
+   "277",
+   "",
+   "279"
+  ],
+  "why": "Norepinephrine and serotonin send fibers down the spinal cord to modulate **pain** pathways, while their ascending projections handle mood, arousal, cognition, anxiety and sleep."
+ },
+ "q6-41": {
+  "pages": "281–282",
+  "whyNot": [
+   "Stimulants raise **NE or DA**, which the book assigns to fatigue and concentration, not sleep.",
+   "Boosting NE or DA is for **fatigue and concentration**, not insomnia.",
+   "Blocking GABA is the **opposite** of what helps sleep; the book boosts GABA.",
+   "",
+   "Raising the SSRI dose is not the algorithm's answer; insomnia calls for **different** mechanisms."
+  ],
+  "whyNotPages": [
+   "281",
+   "281",
+   "281",
+   "",
+   "282"
+  ],
+  "why": "Insomnia involves a different circuit than fatigue, regulated by serotonin, GABA and histamine, so treatment **boosts GABA** or **blocks serotonin or histamine** rather than boosting NE or DA."
+ },
+ "q6-42": {
+  "pages": "280",
+  "whyNot": [
+   "Weight gain, mania and anxiety are not the most common **residual** symptoms.",
+   "Guilt, psychosis and suicidality are not listed as the commonest **residual** symptoms.",
+   "",
+   "Hallucinations and delusions are not the commonest residual symptoms in major depression.",
+   "Agitation, pain and psychosis are not the commonest **residual** symptoms."
+  ],
+  "whyNotPages": [
+   "280",
+   "280",
+   "",
+   "280",
+   "280"
+  ],
+  "why": "The residual symptoms that most often persist after treatment are **sleep disturbance, poor concentration and fatigue**, which is why the algorithm targets them individually."
+ },
+ "q6-43": {
+  "pages": "249",
+  "whyNot": [
+   "",
+   "Schizophrenia sits at the psychosis end and mania at the mood end, not the **middle**.",
+   "Brief psychotic disorder and delusional disorder are on the **psychosis** side, not in the middle.",
+   "Bipolar II and cyclothymia sit toward the **mood** end of the continuum.",
+   "Dysthymia and MDD sit at the **mood** end, not between psychosis and mood."
+  ],
+  "whyNotPages": [
+   "",
+   "249",
+   "249",
+   "249",
+   "249"
+  ],
+  "why": "The continuum model runs from pure psychosis to pure mood disorder, with **psychotic depression** and **schizoaffective disorder** positioned in the middle."
+ },
+ "q6-44": {
+  "pages": "278–279",
+  "whyNot": [
+   "Monoamines are present; the issue is that their activity is **inconsistent**, not absent.",
+   "",
+   "Glutamate and GABA are found **throughout** the brain, so GABA is not the only affected system.",
+   "Glutamate is not stated to be always high; the problem is **mixed** activity across a node.",
+   "Receptors are not destroyed; the point is neurons in the same node behave **differently**."
+  ],
+  "whyNotPages": [
+   "278",
+   "",
+   "277",
+   "279",
+   "279"
+  ],
+  "why": "Within one node, some neurons may be up, others down, others normal and others swinging, so treatment must **stabilize** circuits and not just raise or lower activity."
+ }
+}

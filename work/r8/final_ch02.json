@@ -1,0 +1,772 @@
+{
+ "q2-01": {
+  "pages": "29–30",
+  "whyNot": [
+   "Half is too high; transporters and G-protein receptors each account for roughly a third, with the rest at other targets.",
+   "",
+   "Ten percent is roughly the share targeting **enzymes**, not G-protein-linked receptors.",
+   "Two-thirds overshoots; G-protein receptors share the total with **transporters**, enzymes and ion channels.",
+   "Five percent is far too low for a target class that is among the **most common**."
+  ],
+  "whyNotPages": [
+   "30",
+   "",
+   "30",
+   "30",
+   "30"
+  ]
+ },
+ "q2-02": {
+  "pages": "30",
+  "whyNot": [
+   "Four spans describe **ligand-gated** ion channels, not neurotransmitter transporters.",
+   "Six spans describe **voltage-gated** ion channels, not transporters.",
+   "",
+   "Seven spans is the pattern of **G-protein-linked** receptors, not transporters.",
+   "Two is not the span count of any of the five target classes in the book's figure."
+  ],
+  "whyNotPages": [
+   "30",
+   "30",
+   "",
+   "30",
+   "30"
+  ]
+ },
+ "q2-03": {
+  "pages": "29",
+  "whyNot": [
+   "The book gives no regulatory reason; the motive is a modern movement toward naming drugs by **mechanism** rather than indication.",
+   "Names follow pharmacological **mechanism** (for example, serotonin transport inhibitor), not chemical structure.",
+   "Grouping is by mechanism, not by side effects; the complaint concerns indication-based names.",
+   "Potency ranking is not the stated basis; the new names reflect **mechanism** instead of use.",
+   ""
+  ],
+  "whyNotPages": [
+   "29",
+   "29",
+   "29",
+   "29",
+   ""
+  ]
+ },
+ "q2-04": {
+  "pages": "31",
+  "whyNot": [
+   "SLC32 holds the **vesicular** inhibitory amino acid transporter, which sits in vesicle membranes rather than at the presynaptic membrane.",
+   "SLC18 holds the **vesicular** monoamine and acetylcholine transporters, which load vesicles instead of recapturing transmitter.",
+   "SLC17 holds the vesicular **glutamate** transporters, vGluT1–3.",
+   "",
+   "SLC1 is the family of high-affinity **glutamate** transporters (EAAT1–5), not the monoamine carriers."
+  ],
+  "whyNotPages": [
+   "31",
+   "31",
+   "33",
+   "",
+   "31"
+  ]
+ },
+ "q2-05": {
+  "pages": "31",
+  "whyNot": [
+   "",
+   "SLC18 holds the **vesicular** monoamine transporters and VAChT, not the GABA vesicular carrier.",
+   "SLC1 is the plasma-membrane **glutamate** transporter family, not a vesicular one.",
+   "SLC6 holds plasma-membrane reuptake carriers for monoamines, GABA, glycine and choline, not VIAAT.",
+   "SLC17 holds the vesicular **glutamate** transporters, not the one for GABA."
+  ],
+  "whyNotPages": [
+   "",
+   "33",
+   "31",
+   "31",
+   "33"
+  ],
+  "why": "**VIAAT**, the vesicular inhibitory amino acid transporter that packages GABA, belongs to SLC32; the other vesicular families are SLC18 (monoamines, acetylcholine) and SLC17 (glutamate)."
+ },
+ "q2-06": {
+  "pages": "31",
+  "whyNot": [
+   "Cocaine **blocks** DAT and NET; it is not listed as a false substrate of SERT.",
+   "",
+   "Amphetamine is a false substrate at **NET and DAT**, not at SERT.",
+   "Nicotine does not appear among the monoamine transporter substrates in the book's table.",
+   "Morphine does not appear among the monoamine transporter substrates in the book's table."
+  ],
+  "whyNotPages": [
+   "34",
+   "",
+   "31",
+   "31",
+   "31"
+  ]
+ },
+ "q2-07": {
+  "pages": "31–32",
+  "whyNot": [
+   "",
+   "SERT takes up **MDMA** in addition to serotonin, not dopamine.",
+   "VAChT is the **vesicular** acetylcholine transporter, not a presynaptic monoamine carrier.",
+   "GAT1 is a **GABA** transporter, selectively blocked by tiagabine.",
+   "EAAT2 is a **glutamate** transporter in the SLC1 family, not a monoamine carrier."
+  ],
+  "whyNotPages": [
+   "",
+   "32",
+   "31",
+   "34",
+   "31"
+  ]
+ },
+ "q2-08": {
+  "pages": "32–33",
+  "whyNot": [
+   "cAMP is a **second messenger** in G-protein signaling, not the energy source for transport.",
+   "A proton pump energizes **vesicular** transporters inside the vesicle, not plasma-membrane reuptake.",
+   "Calcium influx at the terminal triggers vesicle **release**, rather than powering reuptake.",
+   "Turning glutamate into glutamine is the fate of glial glutamate, unrelated to energizing monoamine reuptake.",
+   ""
+  ],
+  "whyNotPages": [
+   "12",
+   "35",
+   "9",
+   "34",
+   ""
+  ]
+ },
+ "q2-09": {
+  "pages": "33",
+  "whyNot": [
+   "Nothing in the book has SSRIs destroying SERT; they **inhibit** it from a separate site.",
+   "The sodium pump is the enzyme powering transport; SSRIs act on **SERT** itself.",
+   "That describes a false substrate such as MDMA; SSRIs avoid the substrate site and are never carried in.",
+   "",
+   "SSRIs act at **SERT** on the plasma membrane; emptying vesicles is not their mechanism."
+  ],
+  "whyNotPages": [
+   "32",
+   "32",
+   "31",
+   "",
+   "33"
+  ]
+ },
+ "q2-10": {
+  "pages": "33",
+  "whyNot": [
+   "The analogy depicts **SERT**; VMAT2 is a different, vesicular transporter.",
+   "SSRI binding is the allosteric **front seat** of the wagon, not the tires.",
+   "",
+   "Potassium leaves as countertransport once the tires are inflated; it is not what flat tires depict.",
+   "Chloride is cotransported in most cases, yet the tires track **sodium** binding."
+  ],
+  "whyNotPages": [
+   "35",
+   "33",
+   "",
+   "33",
+   "33"
+  ]
+ },
+ "q2-11": {
+  "pages": "34",
+  "whyNot": [
+   "",
+   "MAO inhibition is the **enzyme** mechanism of MAO inhibitors, not how these stimulants act.",
+   "GAT1 inhibition is the action of **tiagabine** at the GABA transporter.",
+   "D2 partial agonism is a **receptor** action of some antipsychotics, not a transporter effect.",
+   "5HT2A antagonism is a **receptor** action listed for antipsychotic-type effects, not a stimulant mechanism."
+  ],
+  "whyNotPages": [
+   "",
+   "48",
+   "34",
+   "39",
+   "39"
+  ],
+  "why": "All three act at the dopamine and norepinephrine **transporters**, enhancing monoamine action at the synapse; amphetamine also has a second target in the vesicular transporter VMAT."
+ },
+ "q2-12": {
+  "pages": "35",
+  "whyNot": [
+   "Tiagabine selectively blocks the **GAT1** GABA transporter and has no VMAT action.",
+   "",
+   "Methylphenidate acts only at the monoamine **transporters**, not VMAT.",
+   "Cocaine acts only at the monoamine **transporters**, not VMAT.",
+   "Fluoxetine is an SSRI acting at **SERT**, with no vesicular target."
+  ],
+  "whyNotPages": [
+   "34",
+   "",
+   "35",
+   "35",
+   "33"
+  ]
+ },
+ "q2-13": {
+  "pages": "34",
+  "whyNot": [
+   "PTSD is among the trauma- and stress-related disorders these drugs are used for, so it is not the exception.",
+   "Neuropathic pain in fibromyalgia is a listed use of these drugs, so it is not the exception.",
+   "Panic disorder is one of the **anxiety** disorders these drugs treat, so it is not the exception.",
+   "",
+   "OCD is a listed use of these drugs, so it is not the exception."
+  ],
+  "whyNotPages": [
+   "34",
+   "34",
+   "34",
+   "",
+   "34"
+  ]
+ },
+ "q2-14": {
+  "pages": "34",
+  "whyNot": [
+   "GABA transaminase is an **enzyme** that inactivates GABA; tiagabine acts at the transporter instead.",
+   "GABA-B agonism is a receptor action listed for cataplexy and pain, not tiagabine's.",
+   "",
+   "SV2A is the vesicle protein bound by **levetiracetam**, not tiagabine.",
+   "VIAAT is the **vesicular** GABA carrier, and no clinical drug is known to target it."
+  ],
+  "whyNotPages": [
+   "258",
+   "39",
+   "",
+   "35",
+   "35"
+  ]
+ },
+ "q2-15": {
+  "pages": "34",
+  "whyNot": [
+   "Glia do not turn glutamate into **GABA** in this route; the product is glutamine.",
+   "Uptake into glia is a **recycling** route for reuse, not disposal.",
+   "MAO inhibition is a mood-disorder drug mechanism; it is not how recaptured glutamate is processed.",
+   "VMAT2 stores monoamines and histamine in **neuronal** vesicles; it is not a glutamate-recycling step.",
+   ""
+  ],
+  "whyNotPages": [
+   "34",
+   "34",
+   "48",
+   "35",
+   ""
+  ]
+ },
+ "q2-16": {
+  "pages": "35",
+  "whyNot": [
+   "Seven spans marks **G-protein** receptors; SLC1 and SLC6 transporters are both 12-span proteins.",
+   "Reversed: SLC1 skips chloride, and potassium is nearly always countertransported.",
+   "",
+   "Proton pumps energize **vesicular** transporters; SLC1 transporters sit at the plasma membrane and cotransport sodium.",
+   "Vesicular glutamate carriers are vGluT1–3 in SLC17; SLC1 transporters are plasma-membrane **EAATs**."
+  ],
+  "whyNotPages": [
+   "30",
+   "35",
+   "",
+   "35",
+   "31"
+  ]
+ },
+ "q2-17": {
+  "pages": "35",
+  "whyNot": [
+   "",
+   "Dopamine has its own presynaptic reuptake carrier, **DAT**.",
+   "Glutamate is recaptured by **EAAT** transporters and is not packaged by VMAT2.",
+   "Serotonin has **SERT** for presynaptic reuptake.",
+   "Acetylcholine is packaged by **VAChT**, not VMAT2."
+  ],
+  "whyNotPages": [
+   "",
+   "31",
+   "34",
+   "31",
+   "31"
+  ]
+ },
+ "q2-18": {
+  "pages": "35",
+  "whyNot": [
+   "Diffusion is one of the real inactivation routes for neuropeptides, so it cannot be the exception.",
+   "Sequestration is one of the real inactivation routes for neuropeptides, so it cannot be the exception.",
+   "",
+   "Enzymatic destruction is one of the real inactivation routes for neuropeptides, so it cannot be the exception.",
+   "This fails because one listed route, **presynaptic reuptake**, is not used for neuropeptides."
+  ],
+  "whyNotPages": [
+   "35",
+   "35",
+   "",
+   "35",
+   "35"
+  ]
+ },
+ "q2-19": {
+  "pages": "35",
+  "whyNot": [
+   "That is how **plasma-membrane** reuptake carriers work; vesicles rely on a proton pump instead.",
+   "Concentrating transmitter against a gradient needs **energy**, which the vesicle supplies with a proton ATPase.",
+   "Retrograde transport is not how vesicles are filled; a transporter in the vesicle membrane does it.",
+   "Calcium-triggered fusion is vesicle **release** at the terminal, not loading of transmitter.",
+   ""
+  ],
+  "whyNotPages": [
+   "32",
+   "35",
+   "35",
+   "9",
+   ""
+  ]
+ },
+ "q2-20": {
+  "pages": "35",
+  "whyNot": [
+   "NMDA is a **ligand-gated** ion channel receptor, not a vesicle protein.",
+   "",
+   "GAT1 is the **GABA** transporter blocked by tiagabine.",
+   "vGluT1 is a vesicular **glutamate** transporter, which no drug is known to target.",
+   "VMAT2 is the vesicular **monoamine** transporter inhibited by tetrabenazine and relatives."
+  ],
+  "whyNotPages": [
+   "56",
+   "",
+   "34",
+   "35",
+   "35"
+  ]
+ },
+ "q2-21": {
+  "pages": "35",
+  "whyNot": [
+   "Methylphenidate blocks the plasma-membrane monoamine **transporters**, not VMAT2.",
+   "Tiagabine blocks **GAT1**, a GABA transporter, and is an anticonvulsant.",
+   "Levetiracetam binds **SV2A**, a vesicle protein, and is an anticonvulsant.",
+   "",
+   "Lithium is linked to possible **GSK-3** inhibition, not VMAT2."
+  ],
+  "whyNotPages": [
+   "35",
+   "34",
+   "35",
+   "",
+   "48"
+  ]
+ },
+ "q2-22": {
+  "pages": "36",
+  "whyNot": [
+   "Voltage-gated channels are the target of only about **ten percent** of psychotropic drugs.",
+   "SV2A binding is a single-drug (levetiracetam) action, far from the most common.",
+   "Enzymes are targeted by only a **minority**, about ten percent.",
+   "No drug in clinical practice is known to block **glutamate** transporters.",
+   ""
+  ],
+  "whyNotPages": [
+   "30",
+   "35",
+   "30",
+   "34",
+   ""
+  ]
+ },
+ "q2-23": {
+  "pages": "37",
+  "whyNot": [
+   "",
+   "Desensitization is not described as a baseline phenomenon in this chapter; the stem describes spontaneous signaling with no agonist.",
+   "Inverse agonism is a drug effect that **reduces** constitutive activity; the stem involves no drug.",
+   "Allosteric modulation means a drug acting at a site other than the transmitter site; no drug is present here.",
+   "Partial agonism needs a drug stimulating the receptor a little; the stem has none."
+  ],
+  "whyNotPages": [
+   "",
+   "37",
+   "44",
+   "36",
+   "43"
+  ]
+ },
+ "q2-24": {
+  "pages": "41",
+  "whyNot": [
+   "Maximal signaling is the action of a **full agonist**, which antagonists block.",
+   "",
+   "Antagonists act at **receptors**; enzymes have inhibitors, not antagonists.",
+   "Lowering activity below baseline describes an **inverse agonist**; antagonists leave constitutive activity untouched.",
+   "Treating antagonists as opposites of agonists is a misconception; the functional opposite is the **inverse agonist**."
+  ],
+  "whyNotPages": [
+   "37",
+   "",
+   "45",
+   "44",
+   "36"
+  ]
+ },
+ "q2-25": {
+  "pages": "44",
+  "whyNot": [
+   "A silent antagonist only returns the receptor to **baseline**, no lower.",
+   "A full agonist drives signaling to its **maximum**.",
+   "",
+   "An indirect agonist boosts transmitter levels, for example by blocking reuptake, and so **raises** signaling.",
+   "A partial agonist raises signaling above baseline when no full agonist is present."
+  ],
+  "whyNotPages": [
+   "41",
+   "37",
+   "",
+   "41",
+   "43"
+  ]
+ },
+ "q2-26": {
+  "pages": "44",
+  "whyNot": [
+   "",
+   "With abundant full agonist, a partial agonist still changes output by lowering it toward its **set point**.",
+   "Net agonist behavior occurs when little full agonist is present, the dark-room case.",
+   "Dropping below baseline is **inverse agonist** behavior; a partial agonist stops at its own intermediate level.",
+   "Maximal signaling belongs to a **full agonist**; a partial agonist cannot exceed its set point."
+  ],
+  "whyNotPages": [
+   "",
+   "44",
+   "44",
+   "44",
+   "44"
+  ]
+ },
+ "q2-27": {
+  "pages": "44",
+  "whyNot": [
+   "Dose does not change a drug's class on the **agonist spectrum**; the set point is built into the molecule.",
+   "",
+   "Irreversibility is a property of suicide **enzyme inhibitors**, not of partial agonist dosing.",
+   "Abolishing constitutive activity is what an **inverse agonist** does.",
+   "A higher dose cannot **brighten** the light beyond the molecule's preset level."
+  ],
+  "whyNotPages": [
+   "44",
+   "",
+   "46",
+   "44",
+   "44"
+  ]
+ },
+ "q2-28": {
+  "pages": "43",
+  "whyNot": [
+   "Stabilizing refers to tuning **signal output**, not to controlling receptor production.",
+   "CYP450 enzymes handle drug **metabolism**, a pharmacokinetic matter unrelated to the stabilizer label.",
+   "",
+   "Irreversible binding is a trait of suicide **enzyme inhibitors**, not what earns the stabilizer label.",
+   "The label concerns **receptor signaling** between too much and too little, not blood pressure."
+  ],
+  "whyNotPages": [
+   "43",
+   "49",
+   "",
+   "46",
+   "43"
+  ]
+ },
+ "q2-29": {
+  "pages": "44",
+  "whyNot": [
+   "A **full agonist** raises signaling to maximum whatever the receptor density.",
+   "Releasing transmitter is a transporter-level action, not a receptor effect on constitutive activity.",
+   "A **partial agonist** still raises signaling from baseline, unlike an inverse agonist with nothing to remove.",
+   "",
+   "Enzyme inhibitors block substrate conversion, a different mechanism from changing **receptor conformation**."
+  ],
+  "whyNotPages": [
+   "37",
+   "40",
+   "43",
+   "",
+   "45"
+  ]
+ },
+ "q2-30": {
+  "pages": "40",
+  "whyNot": [
+   "M4 **agonism** is listed as antipsychotic, not as a sedating action.",
+   "D2 antagonism is listed as **antipsychotic and antimanic**, without sedation or weight gain.",
+   "5HT1A partial agonism is listed as **anxiolytic** and as a booster of SSRI effects, not for sedation and weight gain.",
+   "α1 blockade is listed for orthostatic hypotension and possibly sedation, not weight gain or anxiety and insomnia.",
+   ""
+  ],
+  "whyNotPages": [
+   "40",
+   "39",
+   "39",
+   "39",
+   ""
+  ]
+ },
+ "q2-31": {
+  "pages": "40",
+  "whyNot": [
+   "MT1/MT2 are **melatonin** receptors, where agonism improves insomnia and circadian rhythms.",
+   "α2 antagonism is listed as **antidepressant**, and α2 agonism as helping ADHD.",
+   "5HT2C antagonism is listed as **antidepressant**, not as an anticholinergic effect.",
+   "H1 antagonism causes **sedation and weight gain**, not these peripheral anticholinergic effects.",
+   ""
+  ],
+  "whyNotPages": [
+   "39",
+   "39",
+   "39",
+   "40",
+   ""
+  ],
+  "why": "Blockade of **M2/M3** muscarinic receptors produces dry mouth, blurred vision, constipation and urinary retention, the classic peripheral anticholinergic side effects."
+ },
+ "q2-32": {
+  "pages": "39",
+  "whyNot": [
+   "D2 antagonism is listed as **antipsychotic and antimanic**, not for orthostatic hypotension.",
+   "H3 antagonism or inverse agonism helps **daytime sleepiness**, not blood pressure.",
+   "",
+   "α2 antagonism is listed as **antidepressant**, and α2 agonism helps ADHD.",
+   "GABA-B is targeted by an **agonist** for cataplexy and pain, with no hypotension listed."
+  ],
+  "whyNotPages": [
+   "39",
+   "40",
+   "",
+   "39",
+   "39"
+  ]
+ },
+ "q2-33": {
+  "pages": "39",
+  "whyNot": [
+   "",
+   "H3 antagonism or inverse agonism is listed for **daytime sleepiness**.",
+   "5HT2A **agonism** is listed as psychotomimetic, plus experimental treatment of refractory depression.",
+   "M2/3 antagonism is listed for **anticholinergic** side effects such as dry mouth, not antipsychotic action.",
+   "D2 is listed as antagonist or **partial** agonist for antipsychotic effect, not full agonist."
+  ],
+  "whyNotPages": [
+   "",
+   "40",
+   "39",
+   "40",
+   "39"
+  ]
+ },
+ "q2-34": {
+  "pages": "39",
+  "whyNot": [
+   "Hypnotic effects are listed for **orexin** antagonism, with melatonin agonism improving insomnia.",
+   "Cataplexy treatment is listed under **GABA-B** agonism.",
+   "Antidepressant action is listed for α2 **antagonism**, the opposite direction.",
+   "",
+   "Antipsychotic actions are listed for D2, 5HT2A and M4 actions, not α2 agonism."
+  ],
+  "whyNotPages": [
+   "40",
+   "39",
+   "39",
+   "",
+   "39"
+  ]
+ },
+ "q2-35": {
+  "pages": "39",
+  "whyNot": [
+   "H1 **antagonism** is listed for anxiety and insomnia, with sedation as a side effect.",
+   "",
+   "5HT1A **partial** agonism is listed as anxiolytic and as an SSRI booster.",
+   "Orexin receptor **antagonism** is a hypnotic for insomnia, the opposite goal from treating sleepiness.",
+   "MT1 agonism is listed for **insomnia** and circadian rhythm improvement."
+  ],
+  "whyNotPages": [
+   "40",
+   "",
+   "39",
+   "40",
+   "39"
+  ]
+ },
+ "q2-36": {
+  "pages": "40",
+  "whyNot": [
+   "M1 stimulation is indirect via **acetylcholinesterase inhibition** for cognition, not via SSRIs.",
+   "",
+   "H1 is targeted directly by **antagonists**, for anxiety, insomnia, sedation and weight gain.",
+   "α1 is targeted directly by **antagonists**, not indirectly by SSRIs.",
+   "Indirect dopamine receptor stimulation is credited to **stimulants** like methylphenidate and amphetamine, not SSRIs."
+  ],
+  "whyNotPages": [
+   "40",
+   "",
+   "40",
+   "39",
+   "40"
+  ]
+ },
+ "q2-37": {
+  "pages": "40",
+  "whyNot": [
+   "",
+   "MT2 is a **melatonin** receptor targeted directly by agonists for insomnia.",
+   "D2 is targeted directly by antagonists or partial agonists, or indirectly by **stimulants**, not cholinesterase inhibitors.",
+   "GABA-B is targeted directly by **agonists** for cataplexy and pain.",
+   "H3 is targeted directly by **antagonists** for daytime sleepiness."
+  ],
+  "whyNotPages": [
+   "",
+   "39",
+   "40",
+   "39",
+   "40"
+  ],
+  "why": "Acetylcholinesterase inhibitors raise acetylcholine itself, which then indirectly stimulates **M1** (and possibly M2–M5) receptors, supporting cognition in Alzheimer disease."
+ },
+ "q2-38": {
+  "pages": "46",
+  "whyNot": [
+   "Partial agonism is a **receptor** concept; suicide inhibitors act on enzymes.",
+   "Irreversible inhibitors act on **enzymes**, not G-protein receptors.",
+   "Inhibitors **reduce** enzyme activity; they never increase it.",
+   "Displacement by substrate describes a **reversible** inhibitor; an irreversible one cannot be shoved off.",
+   ""
+  ],
+  "whyNotPages": [
+   "45",
+   "46",
+   "46",
+   "47",
+   ""
+  ]
+ },
+ "q2-39": {
+  "pages": "47",
+  "whyNot": [
+   "Receptor density governs whether **constitutive** activity is detectable at G-protein receptors, not enzyme competition.",
+   "Genotype alters **CYP450** activity, but it is not what decides substrate versus inhibitor binding.",
+   "",
+   "Constitutive activity is spontaneous signaling by **receptors**, unrelated to enzyme competition.",
+   "Membrane potential relates to **voltage-gated** channels, not to substrate competition at an enzyme."
+  ],
+  "whyNotPages": [
+   "37",
+   "49",
+   "",
+   "37",
+   "30"
+  ]
+ },
+ "q2-40": {
+  "pages": "48",
+  "whyNot": [
+   "GSK-3 is one of the three targeted enzymes, since lithium may inhibit it, so it is not the exception.",
+   "MAO is one of the three targeted enzymes, so it is not the exception.",
+   "",
+   "Acetylcholinesterase is one of the three targeted enzymes, so it is not the exception.",
+   "This fails because **adenylate cyclase** is not one of the three enzymes named as drug targets."
+  ],
+  "whyNotPages": [
+   "48",
+   "48",
+   "",
+   "48",
+   "48"
+  ]
+ },
+ "q2-41": {
+  "pages": "48",
+  "whyNot": [
+   "GSK-3 is an **enzyme** (a kinase) in signaling, not a G-protein-linked receptor.",
+   "GSK-3 is a signaling **kinase**; it does not make serotonin.",
+   "Loading dopamine into vesicles is the job of **VMAT2**, a transporter.",
+   "",
+   "Metabolizing most psychotropic drugs is the role of **CYP450** enzymes."
+  ],
+  "whyNotPages": [
+   "48",
+   "48",
+   "35",
+   "",
+   "49"
+  ]
+ },
+ "q2-42": {
+  "pages": "49",
+  "whyNot": [
+   "The agonist spectrum describes **pharmacodynamic** receptor actions, not pharmacokinetics.",
+   "Drug actions at receptor targets are **pharmacodynamics**, the book's main emphasis.",
+   "",
+   "Signal transduction cascades are a **pharmacodynamic** topic covered in Chapter 1.",
+   "Genetic variants of targets belong to **pharmacogenomics**, a different concept."
+  ],
+  "whyNotPages": [
+   "36",
+   "49",
+   "",
+   "12",
+   "29"
+  ]
+ },
+ "q2-43": {
+  "pages": "49",
+  "whyNot": [
+   "",
+   "CYP2C19 is one of the six highlighted enzymes, so it is not the exception.",
+   "CYP1A2 is one of the six highlighted enzymes, so it is not the exception.",
+   "CYP2D6 is one of the six highlighted enzymes, so it is not the exception.",
+   "CYP3A4 is one of the six highlighted enzymes, so it is not the exception."
+  ],
+  "whyNotPages": [
+   "",
+   "49",
+   "49",
+   "49",
+   "49"
+  ],
+  "why": "The enzymes shown are **1A2, 2B6, 2D6, 2C9, 2C19 and 3A4**; CYP2E1, though one of many known CYP450 enzymes, is not among them. Note the book's own figure caption says \"five\" and then names six."
+ },
+ "q2-44": {
+  "pages": "49–50",
+  "whyNot": [
+   "That pattern belongs to **ultra-rapid** metabolizers, who have elevated enzyme activity.",
+   "",
+   "Reduced enzyme activity raises, rather than lowers, the chance of **elevated levels** and side effects.",
+   "The book ties metabolizer status to drug **levels** and interactions, not to onset speed.",
+   "Poor metabolizers differ from the **extensive** metabolizers for whom standard doses are set."
+  ],
+  "whyNotPages": [
+   "50",
+   "",
+   "49",
+   "49",
+   "49"
+  ]
+ },
+ "q2-45": {
+  "pages": "50",
+  "whyNot": [
+   "Stopping every drug is not the approach; the book describes testing genes and measuring **drug levels**.",
+   "Doubling doses ignores that some variant carriers need **less** than standard doses.",
+   "Therapeutic drug monitoring actually **measures** blood levels, confirming what genetic testing predicts.",
+   "Irreversible inhibitors are an **enzyme-inhibition** concept, not a strategy for managing metabolism.",
+   ""
+  ],
+  "whyNotPages": [
+   "50",
+   "50",
+   "50",
+   "46",
+   ""
+  ]
+ }
+}

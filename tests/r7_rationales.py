@@ -3,7 +3,7 @@
 import asyncio, os
 from playwright.async_api import async_playwright
 BASE = os.environ.get('STAHL_BASE', 'http://localhost:8766').rstrip('/') + '/'
-CHS = os.environ.get('CHS', 'ch09 ch10 ch11 ch12 ch13').split()
+CHS = os.environ.get('CHS', 'ch01 ch02 ch03 ch04 ch05 ch06 ch07 ch08 ch09 ch10 ch11 ch12 ch13').split()
 OUT = '/tmp/r7'; os.makedirs(OUT, exist_ok=True)
 ERR = []
 def check(ok, msg):

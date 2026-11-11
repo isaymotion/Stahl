@@ -1,0 +1,900 @@
+{
+ "q5-01": {
+  "pages": "161",
+  "whyNot": [
+   "5HT2A antagonism was added in later agents; chlorpromazine's antipsychotic effect comes from **D2** blockade instead.",
+   "",
+   "Chlorpromazine does have **antihistamine** activity, which is why it was tried, but that property does not produce its antipsychotic effect.",
+   "Muscarinic blockade causes dry mouth, blurred vision and ileus, so it is a **side-effect** property, not the antipsychotic mechanism.",
+   "α1 blockade accounts for orthostasis and sedation; it is an off-target **side effect**, not the antipsychotic mechanism."
+  ],
+  "whyNotPages": [
+   "183",
+   "",
+   "161",
+   "181",
+   "181"
+  ]
+ },
+ "q5-02": {
+  "pages": "161–162",
+  "whyNot": [
+   "Tuberoinfundibular blockade raises **prolactin** (galactorrhea, amenorrhea); it does not cause apathy and anhedonia.",
+   "Nigrostriatal D2 blockade produces **motor** effects like parkinsonism, akathisia and dystonia, not loss of pleasure and drive.",
+   "",
+   "Cortical 5HT2A antagonism tends to **improve** negative symptoms by raising prefrontal dopamine, so it would not explain this apathy.",
+   "Anticholinergic effects are dry mouth, constipation and cognitive slowing, not a selective loss of motivation and pleasure."
+  ],
+  "whyNotPages": [
+   "164",
+   "165",
+   "",
+   "187",
+   "169"
+  ]
+ },
+ "q5-03": {
+  "pages": "162–163",
+  "whyNot": [
+   "Adding another D2 antagonist piles more blockade onto the reward pathway and would **worsen** the apathy.",
+   "A higher dose blocks more receptors and would **deepen** the secondary negative symptoms rather than relieve them.",
+   "Anticholinergics treat drug-induced **parkinsonism** by rebalancing acetylcholine and dopamine; they do not address reward-pathway blockade.",
+   "A VMAT2 inhibitor treats **tardive dyskinesia** by lowering dopamine, which does not restore motivation.",
+   ""
+  ],
+  "whyNotPages": [
+   "162",
+   "162",
+   "167",
+   "174",
+   ""
+  ]
+ },
+ "q5-04": {
+  "pages": "164–165",
+  "whyNot": [
+   "Bone demineralization is a listed possible result of high prolactin, especially after menopause, so it is not the exception.",
+   "**Amenorrhea** is a listed consequence of prolactin elevation in women, so it is not the exception.",
+   "**Galactorrhea** (breast secretions) is a listed consequence of hyperprolactinemia, so it is not the exception.",
+   "",
+   "**Gynecomastia**, breast enlargement, is a listed prolactin-related effect in men, so it is not the exception."
+  ],
+  "whyNotPages": [
+   "165",
+   "165",
+   "165",
+   "",
+   "165"
+  ]
+ },
+ "q5-05": {
+  "pages": "167",
+  "whyNot": [
+   "",
+   "Blocking NMDA receptors is the proposed action of **amantadine**, a treatment for parkinsonism, not how D2 blockade causes it.",
+   "Chronic D2 blockade upregulates **D2** receptors in the indirect pathway, which relates to tardive dyskinesia rather than parkinsonism.",
+   "Dopamine normally suppresses acetylcholine release, so blockade **increases** release rather than inhibiting it.",
+   "Depleting vesicular dopamine is what **VMAT2 inhibitors** do to treat tardive dyskinesia; D2 blockers do not do this."
+  ],
+  "whyNotPages": [
+   "",
+   "169",
+   "170",
+   "167",
+   "174"
+  ]
+ },
+ "q5-06": {
+  "pages": "169",
+  "whyNot": [
+   "VMAT2 inhibitors treat **tardive** dyskinesia, a late-onset problem, and are not the fix for acute dystonia.",
+   "",
+   "A higher dose adds more D2 blockade; dystonia is relieved by an **anticholinergic** injection instead.",
+   "Propranolol, a β-blocker, is an option for **akathisia**, not for acute dystonia.",
+   "Dantrolene is a muscle relaxant used in **neuroleptic malignant syndrome**, not for an acute dystonic reaction."
+  ],
+  "whyNotPages": [
+   "174",
+   "",
+   "169",
+   "169",
+   "169"
+  ]
+ },
+ "q5-07": {
+  "pages": "169",
+  "whyNot": [
+   "",
+   "β-blockers are named as an effective option for akathisia, so they are not the exception.",
+   "**Benzodiazepines** are named as an effective option for akathisia, so they are not the exception.",
+   "5HT2A antagonists are said to be helpful for akathisia, so they are not the exception.",
+   "One listed class is the exception: **anticholinergics** are not particularly effective for akathisia, so not all of them work."
+  ],
+  "whyNotPages": [
+   "",
+   "169",
+   "169",
+   "169",
+   "169"
+  ]
+ },
+ "q5-08": {
+  "pages": "169–170",
+  "whyNot": [
+   "Valbenazine is a VMAT2 inhibitor for **tardive dyskinesia**, not a treatment for neuroleptic malignant syndrome.",
+   "Anticholinergics treat parkinsonism and dystonia; this emergency calls for **withdrawing** the D2 blocker, not continuing it.",
+   "More haloperidol deepens the D2 blockade behind this syndrome; the blocker must be **withdrawn**.",
+   "A second D2 antagonist adds the same blockade and would **worsen** the emergency.",
+   ""
+  ],
+  "whyNotPages": [
+   "176",
+   "169",
+   "169",
+   "169",
+   ""
+  ]
+ },
+ "q5-09": {
+  "pages": "169",
+  "whyNot": [
+   "VMAT2 inhibition is how tetrabenazine-type drugs treat **tardive dyskinesia**, not amantadine's proposed action.",
+   "D2 antagonism is what **causes** drug-induced parkinsonism; amantadine is not a D2 blocker.",
+   "M1 antagonism is the action of anticholinergics such as benztropine, whereas amantadine **lacks** anticholinergic properties.",
+   "",
+   "5HT2A antagonism lessens parkinsonism in drugs that also block D2; it is not amantadine's proposed mechanism."
+  ],
+  "whyNotPages": [
+   "174",
+   "169",
+   "167",
+   "",
+   "187"
+  ]
+ },
+ "q5-10": {
+  "pages": "170",
+  "whyNot": [
+   "About 25% is the cumulative rate by five years (or the elderly first-year risk), not the **annual** incidence.",
+   "A figure of 0.5% is far too low; the annual rate is about ten times higher.",
+   "",
+   "Half of patients is far above the annual incidence given; yearly risk is **about 5%**.",
+   "The book does not give 15%; about 5% yearly accumulates to roughly 25% by five years."
+  ],
+  "whyNotPages": [
+   "170",
+   "170",
+   "",
+   "170",
+   "170"
+  ]
+ },
+ "q5-11": {
+  "pages": "170–173",
+  "whyNot": [
+   "",
+   "Too much \"stop\" is the **acute** blockade picture causing parkinsonism; TD flips to too much \"go\".",
+   "The hypothesis centers on **D2** receptors in the indirect pathway, not loss of D1 receptors in the direct pathway.",
+   "Serotonin depletion is not part of the hypothesis; TD reflects dopamine-receptor **plasticity** in the motor striatum.",
+   "Excess acetylcholine from disinhibited striatal neurons explains drug-induced **parkinsonism**, not TD."
+  ],
+  "whyNotPages": [
+   "",
+   "172",
+   "173",
+   "170",
+   "167"
+  ]
+ },
+ "q5-12": {
+  "pages": "174",
+  "whyNot": [
+   "NMS is a rare acute complication of D2 **blockade**, not a result of withdrawing the blocker.",
+   "",
+   "Rapid resolution is unlikely; reversal is expected mainly if the blocker is stopped **soon** after onset.",
+   "Parkinsonism arises from acute \"stop\" under D2 blockade; removing the blocker does not create it.",
+   "Most patients do change: unopposed dopamine at supersensitive receptors makes movements **worse**."
+  ],
+  "whyNotPages": [
+   "169",
+   "",
+   "174",
+   "172",
+   "174"
+  ]
+ },
+ "q5-13": {
+  "pages": "170",
+  "whyNot": [
+   "Akathisia is acute motor restlessness from D2 blockade, not a learned striatal plasticity change.",
+   "The book draws no link between essential tremor and TD; the parallel it draws is **levodopa** dyskinesia.",
+   "Acute dystonia appears early, often on first exposure, and answers to an anticholinergic injection; it is not plasticity.",
+   "",
+   "NMS is a rare, acute, possibly toxic complication of D2 blockade, not a **plasticity** disorder."
+  ],
+  "whyNotPages": [
+   "169",
+   "170",
+   "169",
+   "",
+   "169"
+  ]
+ },
+ "q5-14": {
+  "pages": "174–175",
+  "whyNot": [
+   "Reversible, VMAT2-only inhibition describes the tetrabenazine-type drugs, which cause **fewer** peripheral effects.",
+   "CYP2D6 inactivates tetrabenazine's metabolites; it is unrelated to reserpine's peripheral actions at **VMAT1**.",
+   "",
+   "Reserpine inhibits central VMAT2 too; its extra peripheral effects come from also blocking **VMAT1**.",
+   "Reserpine depletes monoamines by blocking vesicular transporters, not by blocking D2 receptors."
+  ],
+  "whyNotPages": [
+   "174",
+   "175",
+   "",
+   "174",
+   "174"
+  ],
+  "why": "Reserpine irreversibly inhibits both **VMAT1** and VMAT2, and VMAT1 sits in the periphery too, so it causes more peripheral effects than the reversible VMAT2-only tetrabenazine."
+ },
+ "q5-15": {
+  "pages": "175",
+  "whyNot": [
+   "MAO degrades dopamine left unprotected in the neuron after VMAT2 inhibition; it does not activate tetrabenazine.",
+   "Hydrolysis is how **valbenazine** sheds its valine; tetrabenazine is reduced to dihydro metabolites instead.",
+   "**CYP2D6** inactivates the active dihydro metabolites rather than forming them.",
+   "COMT does not appear in tetrabenazine's metabolism; one enzyme activates it and **CYP2D6** inactivates the products.",
+   ""
+  ],
+  "whyNotPages": [
+   "175",
+   "176",
+   "175",
+   "175",
+   ""
+  ]
+ },
+ "q5-16": {
+  "pages": "176",
+  "whyNot": [
+   "Amantadine is a weak NMDA antagonist for parkinsonism, not a tetrabenazine derivative.",
+   "Deutetrabenazine is tetrabenazine with **deuterium**, dosed twice daily, not a valine-linked once-daily form.",
+   "",
+   "Tetrabenazine itself yields four active metabolites and needs **three-times-daily** dosing.",
+   "Reserpine irreversibly inhibits VMAT1 and VMAT2 and is unrelated to a valine linkage."
+  ],
+  "whyNotPages": [
+   "169",
+   "176",
+   "",
+   "175",
+   "174"
+  ],
+  "why": "**Valbenazine** is hydrolyzed to valine and +α-tetrabenazine, then converted to the single +α-dihydro metabolite, the most selective VMAT2 inhibitor; slow hydrolysis allows once-daily dosing."
+ },
+ "q5-17": {
+  "pages": "175–176",
+  "whyNot": [
+   "",
+   "Deuteration changes how CYP2D6 handles the drug; it does not add **D2** antagonism.",
+   "VMAT1 inhibition belongs to **reserpine**, and deuteration does not change which transporter is hit.",
+   "Tetrabenazine-type VMAT2 inhibition is already reversible; deuteration alters **metabolism**, not binding.",
+   "Deuteration **lowers** peak plasma levels, which reduces peak-dose side effects."
+  ],
+  "whyNotPages": [
+   "",
+   "175",
+   "174",
+   "174",
+   "176"
+  ]
+ },
+ "q5-18": {
+  "pages": "175–176",
+  "whyNot": [
+   "Tetrabenazine is approved for **Huntington's** chorea; TD approval belongs to deutetrabenazine and valbenazine.",
+   "Tetrabenazine is not a prodrug of valbenazine; it is itself the inactive **prodrug** converted by carbonyl reductase.",
+   "Its short half-life means **three-times-daily** dosing; once-daily dosing describes valbenazine.",
+   "",
+   "Its labeling concern is mood: **depression** and suicidality in Huntington patients, which the deuterated and valine forms avoid."
+  ],
+  "whyNotPages": [
+   "175",
+   "175",
+   "175",
+   "",
+   "175"
+  ]
+ },
+ "q5-19": {
+  "pages": "181",
+  "whyNot": [
+   "D2 blockade drives antipsychotic action and motor effects; these other effects arise from **additional** receptors.",
+   "5HT2A and 5HT1A actions come with newer agents and tend to **reduce** side effects.",
+   "D3 and D4 are dopamine receptors; the book blames **muscarinic, histamine and α1** binding for these effects.",
+   "NET and SERT are reuptake transporters, not the **receptors** the book blames for these first-generation side effects.",
+   ""
+  ],
+  "whyNotPages": [
+   "181",
+   "183",
+   "181",
+   "181",
+   ""
+  ]
+ },
+ "q5-20": {
+  "pages": "181",
+  "whyNot": [
+   "Haloperidol is among the most **potent** D2 antagonists; the difference in parkinsonism comes from anticholinergic action.",
+   "",
+   "D2 partial agonism belongs to the **pips and rip**; haloperidol is a D2 antagonist.",
+   "VMAT2 inhibition is how tetrabenazine-type drugs treat TD; haloperidol is a **D2 antagonist**.",
+   "5HT2A antagonism would **reduce** parkinsonism, and it is only a weak property for haloperidol."
+  ],
+  "whyNotPages": [
+   "202",
+   "",
+   "239",
+   "174",
+   "204"
+  ]
+ },
+ "q5-21": {
+  "pages": "183",
+  "whyNot": [
+   "Table 5-1 lists perphenazine only as **high potency**, with no Tourette or QTc comment.",
+   "Fluphenazine is listed as high potency with a **depot** form, with no Tourette or QTc comment.",
+   "Loxapine appears in the table without any Tourette syndrome or **QTc** comment.",
+   "",
+   "Trifluoperazine is listed simply as **high potency**, with no Tourette or QTc comment."
+  ],
+  "whyNotPages": [
+   "183",
+   "183",
+   "183",
+   "",
+   "183"
+  ],
+  "why": "**Pimozide** is the Table 5-1 agent flagged for Tourette syndrome and QTc issues; it is high potency and considered second line."
+ },
+ "q5-22": {
+  "pages": "186–187",
+  "whyNot": [
+   "Anticholinergic drugs, not 5HT2A blockers, reduce acetylcholine action; 5HT2A antagonism works through **dopamine** release.",
+   "VMAT2 inhibition depletes dopamine and treats **tardive dyskinesia**; it does not mitigate parkinsonism.",
+   "5HT2A antagonism does not strengthen D2 blockade; it **opposes** it by adding dopamine in the motor striatum.",
+   "Cutting glutamate drive to the emotional-striatum route relieves **positive** symptoms; the motor benefit runs through the substantia nigra.",
+   ""
+  ],
+  "whyNotPages": [
+   "187",
+   "174",
+   "187",
+   "186",
+   ""
+  ]
+ },
+ "q5-23": {
+  "pages": "184–185",
+  "whyNot": [
+   "",
+   "Serotonin's pituitary role concerns **prolactin** release at lactotroph receptors, not antipsychotic action.",
+   "That is the nigrostriatal route, which eases **motor** side effects rather than adding antipsychotic action.",
+   "Striatal cholinergic interneurons underlie parkinsonism and its anticholinergic treatment, not 5HT2A antipsychotic wiring.",
+   "The VTA GABA route supplies **mesocortical** dopamine, relevant to negative and cognitive symptoms rather than positive ones."
+  ],
+  "whyNotPages": [
+   "",
+   "188",
+   "186",
+   "167",
+   "186"
+  ]
+ },
+ "q5-24": {
+  "pages": "183",
+  "whyNot": [
+   "The book names Parkinson's and dementia-related psychosis for 5HT2A-alone treatment; it does not name **stimulant** psychosis.",
+   "",
+   "The book does not list **delirium** among conditions treated by 5HT2A antagonism alone.",
+   "Treatment-resistant schizophrenia is the niche of **clozapine**, a drug that also acts at D2 and other receptors.",
+   "Mania responds to drugs with **D2** antagonist or partial agonist properties, not to 5HT2A blockade alone."
+  ],
+  "whyNotPages": [
+   "183",
+   "",
+   "183",
+   "223",
+   "195"
+  ]
+ },
+ "q5-25": {
+  "pages": "187–188",
+  "whyNot": [
+   "Upregulated D2 receptors are what chronic blockade produces in the motor striatum (**TD**), not a prolactin-lowering mechanism.",
+   "Dopamine already inhibits prolactin; 5HT2A antagonism works by removing **serotonin's** stimulation, not by raising pituitary dopamine.",
+   "",
+   "VMAT2 inhibition treats TD by lowering dopamine and has no role in prolactin control in the book.",
+   "No prolactin-receptor blockade is involved; the effect is at lactotroph **serotonin** receptors that stimulate release."
+  ],
+  "whyNotPages": [
+   "170",
+   "188",
+   "",
+   "174",
+   "188"
+  ]
+ },
+ "q5-26": {
+  "pages": "192",
+  "whyNot": [
+   "",
+   "Close to full agonists describes the **Parkinson's** partial agonists, which would worsen psychosis.",
+   "A midway position would be too agonistic; partial agonists for psychosis sit near the **antagonist** end.",
+   "Inverse agonism is a preclinical description of **5HT2A** antagonists, not of D2 partial agonists.",
+   "D2 partial agonists bind the receptor itself and give intermediate output; they are not **allosteric** modulators."
+  ],
+  "whyNotPages": [
+   "",
+   "192",
+   "192",
+   "183",
+   "191"
+  ]
+ },
+ "q5-27": {
+  "pages": "193",
+  "whyNot": [
+   "Marked prolactin elevation was not the issue; partial agonists tend to **lower** prolactin.",
+   "",
+   "Neutropenia is a **clozapine** concern, not the reason OPC4392 was dropped.",
+   "It did bind D2, and it was structurally related to **aripiprazole** and brexpiprazole.",
+   "It produced little in the way of **motor** side effects."
+  ],
+  "whyNotPages": [
+   "193",
+   "",
+   "224",
+   "193",
+   "193"
+  ],
+  "why": "OPC4392 had too much intrinsic agonism: it helped negative symptoms with few motor effects but also **activated and worsened positive symptoms**, so it was never marketed."
+ },
+ "q5-28": {
+  "pages": "193",
+  "whyNot": [
+   "Benztropine is an anticholinergic for parkinsonism and has no D2 partial agonist action to lower prolactin.",
+   "Tetrabenazine is a VMAT2 inhibitor used for chorea, not a **D2 partial agonist** acting at lactotrophs.",
+   "",
+   "Risperidone raises prolactin even at **low doses**, so it would worsen the problem.",
+   "Haloperidol is a potent D2 **antagonist**, which raises prolactin rather than lowering it."
+  ],
+  "whyNotPages": [
+   "167",
+   "175",
+   "",
+   "235",
+   "164"
+  ]
+ },
+ "q5-29": {
+  "pages": "193",
+  "whyNot": [
+   "The accelerator is **5HT2A** receptor stimulation; 5HT1A partial agonism is the brake.",
+   "An ignition switch does not appear in the analogy, which uses an accelerator and a **brake**.",
+   "A parking brake is not part of the analogy; the pairing is accelerator and **brake**.",
+   "",
+   "Changing gears is not the analogy; the book contrasts the **accelerator** with the brake."
+  ],
+  "whyNotPages": [
+   "193",
+   "193",
+   "193",
+   "",
+   "193"
+  ]
+ },
+ "q5-30": {
+  "pages": "195",
+  "whyNot": [
+   "Essentially all D2 blockers treat mania, but the book says this is not their **most common** use.",
+   "Agitation in dementia is a **controversial**, limited use because efficacy is unclear and a safety warning exists.",
+   "Insomnia use, such as low-dose quetiapine, is occasional and is not the most common indication.",
+   "Schizophrenia is the original indication, but the book says depression is where these drugs are most often prescribed.",
+   ""
+  ],
+  "whyNotPages": [
+   "195",
+   "197",
+   "227",
+   "195",
+   ""
+  ],
+  "why": "The book says the most common use of these agents is **unipolar and bipolar depression**, at lower doses, rather than psychosis or mania."
+ },
+ "q5-31": {
+  "pages": "195",
+  "whyNot": [
+   "Under 10% is far too low; psychosis doses aim for roughly **80%**.",
+   "About 40% falls below the **60–80%** range needed for antipsychotic action.",
+   "Full occupancy is not required; roughly **80%** is the target.",
+   "About 20% is far too low to treat psychosis; the target is near 80%.",
+   ""
+  ],
+  "whyNotPages": [
+   "195",
+   "201",
+   "195",
+   "195",
+   ""
+  ],
+  "why": "Drugs for psychosis are dosed so that roughly **80%** of emotional-striatum D2 receptors are blocked (about 60–80%), while depression doses are lower and likely insufficient for robust D2 blockade."
+ },
+ "q5-32": {
+  "pages": "198",
+  "whyNot": [
+   "Risperidone and asenapine are in the **moderate**-risk tier, not the high-risk group.",
+   "Ziprasidone and cariprazine are both in the **low**-risk group.",
+   "",
+   "Aripiprazole and lurasidone are both in the **low**-risk group.",
+   "Lumateperone and pimavanserin are both in the **low**-risk group."
+  ],
+  "whyNotPages": [
+   "198",
+   "198",
+   "",
+   "198",
+   "198"
+  ]
+ },
+ "q5-33": {
+  "pages": "198",
+  "whyNot": [
+   "",
+   "5HT2A antagonism is not the cause of this early triglyceride rise; weight gain is tied to **H1** and 5HT2C.",
+   "The book does not invoke hypothyroidism; it attributes this effect to a hypothesized **receptor X**.",
+   "The quick rise on starting and fall on stopping a drug points to a real **drug effect**, not lab error.",
+   "H1-mediated appetite increase causes **weight gain**, a separate and slower route than this early insulin resistance."
+  ],
+  "whyNotPages": [
+   "",
+   "198",
+   "197",
+   "198",
+   "198"
+  ]
+ },
+ "q5-34": {
+  "pages": "198",
+  "whyNot": [
+   "5HT1A and 5HT2A actions are linked to mood benefit and side-effect mitigation, not **weight gain**.",
+   "NET and SERT inhibition are candidate **antidepressant** mechanisms, not weight-gain mechanisms.",
+   "D2 and D3 antagonism relate to antipsychotic effect, prolactin and motor effects rather than **appetite**.",
+   "",
+   "α2 antagonism is an antidepressant candidate, and M4 **agonism** is a future antipsychotic route, not a weight-gain pair."
+  ],
+  "whyNotPages": [
+   "195",
+   "195",
+   "164",
+   "",
+   "242"
+  ]
+ },
+ "q5-35": {
+  "pages": "200–201",
+  "whyNot": [
+   "Family history is a fixed factor checked at baseline; the prescriber cannot **change** it.",
+   "",
+   "Ethnicity is a fixed trait, not one of the book's manageable factors, which are drug choice and lifestyle.",
+   "Age is listed with genetics among the **unmanageable** factors.",
+   "Genetic makeup is listed among the **unmanageable** factors."
+  ],
+  "whyNotPages": [
+   "199",
+   "",
+   "201",
+   "200",
+   "200"
+  ]
+ },
+ "q5-36": {
+  "pages": "201",
+  "whyNot": [
+   "Position on the strip reflects binding **potency**, not whether a receptor is an agonist target.",
+   "",
+   "Left of D2 means **more** potent binding, not less.",
+   "The strips depict **antipsychotic** doses; occupancy at depression doses is lower.",
+   "Receptors binding within an order of magnitude of D2 can be **clinically relevant** at antipsychotic doses."
+  ],
+  "whyNotPages": [
+   "201",
+   "",
+   "201",
+   "201",
+   "201"
+  ],
+  "why": "On a binding strip, receptors left of the D2 line bind more potently than D2, so they are occupied at **60% or more** when a drug is dosed for antipsychotic effect."
+ },
+ "q5-37": {
+  "pages": "219",
+  "whyNot": [
+   "",
+   "These are D2-focused agents without the wide 5HT2A–D2 gap; the lowest occupancy goes to **widest** separation.",
+   "Aripiprazole, brexpiprazole and cariprazine bind D2 as potently as or more than 5HT2A, so there is no wide **separation**.",
+   "These dones bind 5HT2A as or more potently than D2, but their separation is not the **widest**.",
+   "Potent D2 antagonists like these need occupancy of **60%** or more for antipsychotic action."
+  ],
+  "whyNotPages": [
+   "",
+   "219",
+   "206",
+   "206",
+   "201"
+  ],
+  "why": "Drugs with the widest gap between 5HT2A and D2 binding, namely **lumateperone, quetiapine and clozapine**, need the least D2 occupancy, in fact below 60%, at antipsychotic doses."
+ },
+ "q5-38": {
+  "pages": "207",
+  "whyNot": [
+   "Risperidone's most potent property is **5HT2A** antagonism, not 5HT1A partial agonism.",
+   "Lurasidone's standout properties are high-affinity **5HT7** and 5HT2A binding; 5HT1A affinity is only moderate.",
+   "Olanzapine is a 5HT2A/D2 antagonist whose binding is not led by **5HT1A** partial agonism.",
+   "Cariprazine's most distinguishing property is **D3** partial agonism rather than its 5HT1A action.",
+   ""
+  ],
+  "whyNotPages": [
+   "222",
+   "236",
+   "225",
+   "240",
+   ""
+  ],
+  "why": "On the 5HT1A binding figure, brexpiprazole is the drug for which 5HT1A partial agonism is its **single most potent** binding property."
+ },
+ "q5-39": {
+  "pages": "208",
+  "whyNot": [
+   "Aripiprazole is shown with **no** monoamine transporter binding.",
+   "Among the pines, only quetiapine has relevant reuptake inhibition, so **clozapine** is not the answer.",
+   "",
+   "Among the pines, only quetiapine has relevant reuptake inhibition, so **olanzapine** is not the answer.",
+   "Iloperidone is notable for potent **α1** antagonism and a simple SDA-like profile, not SERT binding."
+  ],
+  "whyNotPages": [
+   "208",
+   "208",
+   "",
+   "208",
+   "225"
+  ]
+ },
+ "q5-40": {
+  "pages": "223",
+  "whyNot": [
+   "Clozapine does **not** raise prolactin.",
+   "Clozapine carries the **highest** metabolic risk among these drugs.",
+   "It occupies **fewer** D2 receptors than other drugs for psychosis, not more.",
+   "",
+   "It causes little in the way of motor effects, does not seem to cause TD and may even **treat** it."
+  ],
+  "whyNotPages": [
+   "223",
+   "198",
+   "223",
+   "",
+   "223"
+  ]
+ },
+ "q5-41": {
+  "pages": "224",
+  "whyNot": [
+   "**Myocarditis** is listed in Table 5-2, so it is not the exception.",
+   "**Neutropenia** heads the Table 5-2 list, so it is not the exception.",
+   "**Seizures** are listed in Table 5-2, so they are not the exception.",
+   "",
+   "**Sialorrhea**, excess salivation, is listed in Table 5-2, so it is not the exception."
+  ],
+  "whyNotPages": [
+   "224",
+   "224",
+   "224",
+   "",
+   "224"
+  ],
+  "why": "Clozapine is a notable exception among these drugs: it **does not raise prolactin**, so hyperprolactinemia does not appear in its Table 5-2 list of side effects needing expert management."
+ },
+ "q5-42": {
+  "pages": "227",
+  "whyNot": [
+   "VMAT2 inhibition is how tetrabenazine-type drugs treat **tardive dyskinesia**, not a quetiapine property.",
+   "Quetiapine is a D2 **antagonist** without particularly potent D2 binding, and partial agonism is not its mood mechanism.",
+   "",
+   "NMDA antagonism is the proposed action of **amantadine**, not of norquetiapine.",
+   "MAO is an enzyme that degrades monoamines and is not among norquetiapine's listed **actions**."
+  ],
+  "whyNotPages": [
+   "174",
+   "219",
+   "",
+   "169",
+   "227"
+  ]
+ },
+ "q5-43": {
+  "pages": "227",
+  "whyNot": [
+   "",
+   "α2 antagonism contributes at the mid-range **antidepressant** dose, not at 50 mg.",
+   "D2 antagonism matters at the high **antipsychotic** doses, up to about 800 mg.",
+   "NET inhibition is part of the **antidepressant** dose profile around 300 mg.",
+   "5HT1A partial agonism belongs to the **antidepressant** dose range, not the low hypnotic dose."
+  ],
+  "whyNotPages": [
+   "",
+   "220",
+   "220",
+   "220",
+   "220"
+  ],
+  "why": "At 50 mg only quetiapine's most potent property, **H1 antagonism**, is meaningful, giving a sleep effect (\"Baby Bear\"); this use is not approved and carries metabolic risk."
+ },
+ "q5-44": {
+  "pages": "232–233",
+  "whyNot": [
+   "Stomach acid and food are not the stated reason; swallowed asenapine is simply **not absorbed**.",
+   "",
+   "Potency is not the issue; the limit is oral-cavity surface area, which restricts **dose size**.",
+   "Asenapine is active itself, not a prodrug; swallowing fails because absorption does not occur.",
+   "Esophagitis is not mentioned; the listed sublingual side effect is oral **hypoesthesia**."
+  ],
+  "whyNotPages": [
+   "233",
+   "",
+   "232",
+   "232",
+   "233"
+  ]
+ },
+ "q5-45": {
+  "pages": "235",
+  "whyNot": [
+   "Iloperidone has potent **α1** antagonism and a long half-life; it is not a risperidone metabolite.",
+   "Ziprasidone is a short-acting 5HT2A/D2 antagonist taken **with food**, not risperidone's metabolite.",
+   "Lumateperone is a separate 5HT2A/D2 antagonist with very high **5HT2A** affinity.",
+   "Lurasidone is a distinct 5HT2A/D2 antagonist with high **5HT7** affinity, not a risperidone metabolite.",
+   ""
+  ],
+  "whyNotPages": [
+   "236",
+   "236",
+   "237",
+   "236",
+   ""
+  ]
+ },
+ "q5-46": {
+  "pages": "236",
+  "whyNot": [
+   "D2 partial agonism belongs to **aripiprazole**-type drugs; iloperidone is a 5HT2A/D2 antagonist.",
+   "",
+   "H1 antagonism brings weight gain and sedation rather than **orthostatic** dizziness.",
+   "5HT2C antagonism is tied to weight gain and mood effects, not **orthostasis**.",
+   "Muscarinic blockade causes dry mouth, blurred vision and constipation, not a drop in **blood pressure**."
+  ],
+  "whyNotPages": [
+   "239",
+   "",
+   "181",
+   "198",
+   "169"
+  ],
+  "why": "Iloperidone's most distinguishing pharmacological property is potent **α1** antagonism, which causes orthostatic hypotension and sedation, so it is titrated slowly over several days."
+ },
+ "q5-47": {
+  "pages": "236",
+  "whyNot": [
+   "It is short acting and taken more than once **daily**, not weekly.",
+   "Dosing is more than once a day, not **bedtime** only.",
+   "Food is **required**, so an empty stomach is the reverse of the instruction.",
+   "",
+   "Sublingual dosing is the route for **asenapine**, not ziprasidone."
+  ],
+  "whyNotPages": [
+   "236",
+   "236",
+   "236",
+   "",
+   "233"
+  ],
+  "why": "Ziprasidone is short acting and needs more than one dose daily, and it must be taken **with food**."
+ },
+ "q5-48": {
+  "pages": "240",
+  "whyNot": [
+   "Selective 5HT2A antagonism is the hallmark of **pimavanserin**, not cariprazine.",
+   "M1 antagonism is a side-effect property (dry mouth, ileus) and not what sets cariprazine apart.",
+   "Moderate SERT binding is noted for **lumateperone**, not cariprazine.",
+   "Potent H1 antagonism brings sedation and weight gain, whereas cariprazine has very low **metabolic** risk.",
+   ""
+  ],
+  "whyNotPages": [
+   "240",
+   "181",
+   "237",
+   "240",
+   ""
+  ],
+  "why": "Cariprazine's most distinctive property is potent **D3 partial agonism**, which may help negative symptoms; it was shown superior to D2/5HT2A antagonist treatment for negative symptoms."
+ },
+ "q5-49": {
+  "pages": "240",
+  "whyNot": [
+   "D2 partial agonism is the property of **aripiprazole**, brexpiprazole and cariprazine.",
+   "Binding D3 above dopamine's own affinity describes **cariprazine** and blonanserin, which still act at D2.",
+   "",
+   "VMAT2 inhibitors treat **tardive dyskinesia**, not psychosis.",
+   "Muscarinic agonism describes **xanomeline**, which is still under investigation."
+  ],
+  "whyNotPages": [
+   "239",
+   "241",
+   "",
+   "174",
+   "242"
+  ]
+ },
+ "q5-50": {
+  "pages": "241–242",
+  "whyNot": [
+   "",
+   "NMDA blockade is not the TAAR1 mechanism; the proposed route is **heterodimerization** with D2.",
+   "Avoiding **direct** D2 blockade is the point of TAAR1 agonists.",
+   "Drugs for psychosis **block** 5HT2A receptors; TAAR1 agonists do not stimulate them.",
+   "VMAT2 inhibition lowers dopamine to treat **TD**; it is not how TAAR1 agonists work."
+  ],
+  "whyNotPages": [
+   "",
+   "241",
+   "242",
+   "183",
+   "174"
+  ]
+ },
+ "q5-51": {
+  "pages": "242",
+  "whyNot": [
+   "The aim is not more D2 antagonism; xanomeline acts through **muscarinic** receptors.",
+   "Trospium is an **anticholinergic** that stays out of the brain, not a 5HT2A blocker.",
+   "Xanomeline itself supplies the central M4/M1 agonism; trospium **does not enter** the brain.",
+   "",
+   "Trospium blocks peripheral M2/M3 effects; the book does not tie it to **CYP2D6** metabolism."
+  ],
+  "whyNotPages": [
+   "242",
+   "242",
+   "242",
+   "",
+   "242"
+  ]
+ },
+ "q5-52": {
+  "pages": "241",
+  "whyNot": [
+   "Serotonin is a stored, released neurotransmitter, whereas trace amines are present only in **trace** amounts.",
+   "Acetylcholine is a classical neurotransmitter, not one of the five trace amines in the table.",
+   "Dopamine is a classical neurotransmitter; trace amines form when the **tyrosine hydroxylase** step is omitted.",
+   "Histamine is a neurotransmitter and is not among the five **trace amines** listed.",
+   ""
+  ],
+  "whyNotPages": [
+   "241",
+   "241",
+   "241",
+   "241",
+   ""
+  ]
+ }
+}

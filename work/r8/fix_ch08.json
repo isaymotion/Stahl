@@ -1,0 +1,9 @@
+{
+ "q8-28": {"whyNot": {"0": "Stimulants raise arousal; the agents said to blunt consolidation are those that damp the **noradrenergic** surge around the trauma.",
+                      "3": "SSRIs and buspirone belong to the treatment of **established** anxiety and PTSD, not to the hours-after-trauma window."}},
+ "q8-32": {"whyNot": {"0": "Anticholinergics are not an anxiolytic class here; the book's panic treatments are SSRIs and SNRIs, benzodiazepines and **α2δ ligands**.",
+                      "1": "Stimulants are not among the book's panic treatments, which are SSRIs and SNRIs, benzodiazepines and **α2δ ligands**.",
+                      "3": "Conventional antipsychotics are not in the book's panic list; the neglected but powerful option it names is the **MAOIs**."}},
+ "q8-31": {"whyNot": {"1": "Lithium is a mood stabilizer in the book, not one of the off-label anxiety agents such as mirtazapine, trazodone or **sedating antihistamines**.",
+                      "2": "Methylphenidate is a stimulant for ADHD; the off-label anxiety list runs to sedating agents such as **hydroxyzine**."}}
+}

@@ -1,0 +1,8 @@
+- q8-06: whyNot distractors 0-2 are broad; keyed answer fine.
+- q8-12: stem relies on Figures 8-14 vs 8-15 (figure labels only); CRF/HPA vs dopamine. Fine but figure-dependent.
+- q8-13: "tonic extrasynaptic delta receptors" distractor is taught in Ch 6, not Ch 8; rationale written from p366 (phasic) only.
+- q8-18: p370 spells the drug "prazocin"; the why uses "prazosin".
+- q8-20: the keyed answer is a hypothesis in the book ("hypothetically").
+- q8-25: "sensitization", "habituation", "kindling" are not discussed in Ch 8; rationales say what the book names instead (renewal).
+- Thin book coverage for distractors in q8-16, q8-28, q8-31, q8-32 (book silent on the named wrong options; rationales say they are not listed).
+- q8-17/q8-35: p377 PTSD notes certain SSRIs are approved; fine.

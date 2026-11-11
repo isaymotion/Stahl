@@ -1,0 +1,895 @@
+{
+ "q4-01": {
+  "pages": "77",
+  "whyNot": [
+   "Negative symptoms are a secondary feature; the hallmark symptoms are the **positive** ones, delusions and hallucinations.",
+   "",
+   "Psychosis is a **syndrome** found across many disorders, not a specific diagnosis in schemes such as DSM or ICD.",
+   "Psychosis also accompanies mania, depression, dementia and drug-induced states, so it does not **always** mean schizophrenia.",
+   "Delusions plus hallucinations are enough to qualify; **negative** symptoms are an optional extra, not a requirement."
+  ],
+  "whyNotPages": [
+   "77",
+   "",
+   "77",
+   "156",
+   "77"
+  ]
+ },
+ "q4-02": {
+  "pages": "78",
+  "whyNot": [
+   "Disorganized/excited psychosis features conceptual disorganization, disorientation and **excitement**, not persecutory beliefs and praising voices.",
+   "Depressive psychosis shows psychomotor retardation, apathy and anxious self-**blame**, the opposite of hostile grandiosity.",
+   "",
+   "Catatonia is not one of the three psychosis clusters; rigid postures are a motor disturbance that can accompany **any** type.",
+   "Delirium is not one of the three clusters described; this paranoid, grandiose, hostile picture defines the **paranoid** type."
+  ],
+  "whyNotPages": [
+   "78",
+   "78",
+   "",
+   "78",
+   "78"
+  ]
+ },
+ "q4-03": {
+  "pages": "78",
+  "whyNot": [
+   "Conceptual disorganization means irrelevant or incoherent answers, drifting and neologisms, not loss of orientation.",
+   "Grandiose expansiveness means superiority, praising voices and a divine mission, seen in schizophrenia and **manic** psychosis.",
+   "Psychomotor retardation is slowed speech and movement within **depressive** psychosis, not loss of orientation.",
+   "Hostile belligerence is irritability, blame and suspicion toward others, not **disorientation** in time.",
+   ""
+  ],
+  "whyNotPages": [
+   "78",
+   "78",
+   "78",
+   "78",
+   ""
+  ]
+ },
+ "q4-04": {
+  "pages": "79",
+  "whyNot": [
+   "Ketamine is an **NMDA** antagonist causing mostly visual hallucinations with paranoid delusions and no insight.",
+   "PCP is another **NMDA** antagonist with paranoid delusions and absent insight, unlike the insightful psychedelic picture.",
+   "Cocaine is a stimulant (**D2** agonist) giving auditory hallucinations, paranoid delusions and no insight.",
+   "",
+   "Amphetamine releases dopamine, producing a **paranoid** psychosis with auditory hallucinations and no insight."
+  ],
+  "whyNotPages": [
+   "79",
+   "79",
+   "79",
+   "",
+   "79"
+  ]
+ },
+ "q4-05": {
+  "pages": "79",
+  "whyNot": [
+   "",
+   "Psilocybin is a psychedelic acting as a **5HT2A** agonist, not an NMDA antagonist.",
+   "LSD works through **5HT2A** agonism; D2 agonism is the proposed mechanism for the stimulants.",
+   "Cocaine is a psychostimulant whose psychosis is proposed to arise from **D2** agonism, not 5HT2A agonism.",
+   "PCP is an **NMDA** antagonist; D2 blockade is how antipsychotic drugs treat psychosis, not how PCP causes it."
+  ],
+  "whyNotPages": [
+   "",
+   "79",
+   "79",
+   "79",
+   "79"
+  ]
+ },
+ "q4-06": {
+  "pages": "79",
+  "whyNot": [
+   "**Visual** hallucinations are the main type with dissociative anesthetics and psychedelics, not with stimulants.",
+   "",
+   "The table lists **auditory** hallucinations as the main type; no tactile-only pattern is given.",
+   "Stimulants cause hallucinations as well, mainly auditory, alongside paranoid delusions, so delusions are not the only feature.",
+   "**Olfactory** hallucinations are not the main type for stimulants; the table gives auditory."
+  ],
+  "whyNotPages": [
+   "79",
+   "",
+   "79",
+   "79",
+   "79"
+  ]
+ },
+ "q4-07": {
+  "pages": "80",
+  "whyNot": [
+   "",
+   "DOPA decarboxylase is the **second** enzyme, turning DOPA into dopamine, so it is not the rate-limiting step.",
+   "Tryptophan hydroxylase belongs to **serotonin** synthesis, converting tryptophan to 5HTP.",
+   "COMT inactivates dopamine outside the neuron; it has no role in **synthesis**.",
+   "MAO-B destroys excess dopamine inside the neuron; it is a breakdown enzyme, not a synthetic one."
+  ],
+  "whyNotPages": [
+   "",
+   "80",
+   "114",
+   "80",
+   "80"
+  ],
+  "why": "**Tyrosine hydroxylase (TOH)** performs the first and rate-limiting step, turning tyrosine into DOPA; DOPA decarboxylase then completes dopamine synthesis."
+ },
+ "q4-08": {
+  "pages": "80",
+  "whyNot": [
+   "D-amino acid oxidase destroys **D-serine** at glutamate synapses; it does not inactivate dopamine.",
+   "DATs are **sparse** in prefrontal cortex, so reuptake is not the main route of inactivation there.",
+   "Glutaminase converts glutamine into glutamate in neurons; it is part of **glutamate** recycling, not dopamine inactivation.",
+   "VMAT2 packs dopamine into vesicles for **storage**; it does not clear dopamine from the synapse.",
+   ""
+  ],
+  "whyNotPages": [
+   "99",
+   "80",
+   "97",
+   "80",
+   ""
+  ]
+ },
+ "q4-09": {
+  "pages": "81",
+  "whyNot": [
+   "D3 is D2-like, but D5 is **D1-like**, so this pairing is mixed up.",
+   "D2-like receptors are **inhibitory** and negatively linked to adenylate cyclase.",
+   "D2 belongs to the **D2-like** group; only D1 and D5 are D1-like.",
+   "",
+   "D4 is **D2-like**, grouped with D2 and D3, and is inhibitory."
+  ],
+  "whyNotPages": [
+   "81",
+   "81",
+   "81",
+   "",
+   "81"
+  ]
+ },
+ "q4-10": {
+  "pages": "81–82",
+  "whyNot": [
+   "Striatal terminals carry DATs either way; the difference lies in **autoreceptor** sensitivity, not in DAT absence.",
+   "D2 autoreceptors are **inhibitory**, like all D2-like receptors; excitation would not make dopamine accumulate.",
+   "",
+   "D3 is inhibitory and negatively linked to adenylate cyclase, a **G-protein-type** receptor, not a ligand-gated channel.",
+   "D3 also acts **presynaptically** as an autoreceptor; it is not confined to postsynaptic sites."
+  ],
+  "whyNotPages": [
+   "84",
+   "81",
+   "",
+   "81",
+   "82"
+  ],
+  "why": "The D3 autoreceptor is **more sensitive** to dopamine, so it switches off release at a lower concentration; the less sensitive D2 lets dopamine build up higher first."
+ },
+ "q4-11": {
+  "pages": "83–84",
+  "whyNot": [
+   "",
+   "Mesocortical terminals have **few** autoreceptors; D2/D3 autoreceptors on terminals mark mesostriatal neurons.",
+   "The main postsynaptic receptor in prefrontal cortex is **D1**; D2 is sparse there.",
+   "Wide diffusion to D1 receptors means **volume** neurotransmission does occur in prefrontal cortex.",
+   "Dense DATs are a **striatal** feature; prefrontal terminals have relatively few."
+  ],
+  "whyNotPages": [
+   "",
+   "83",
+   "84",
+   "84",
+   "80"
+  ]
+ },
+ "q4-12": {
+  "pages": "85",
+  "whyNot": [
+   "The thalamic dopamine pathway has no known role in **prolactin** control, and its function is still unclear.",
+   "",
+   "Nigrostriatal D2 blockade produces **motor** effects such as drug-induced parkinsonism, not breast enlargement.",
+   "Mesolimbic D2 blockade is the intended action against **positive** symptoms, not the source of gynecomastia.",
+   "Mesocortical dopamine relates to cognition, affect and negative symptoms, not **prolactin**."
+  ],
+  "whyNotPages": [
+   "87",
+   "",
+   "89",
+   "90",
+   "86"
+  ],
+  "why": "D2 blockade in the **tuberoinfundibular** pathway removes dopamine's tonic brake on **prolactin**, and the resulting high prolactin can cause gynecomastia or galactorrhea."
+ },
+ "q4-13": {
+  "pages": "95",
+  "whyNot": [
+   "Nigrostriatal activity is believed **normal** in untreated schizophrenia; deficiency there causes parkinsonism.",
+   "Tuberoinfundibular function is thought to be relatively **preserved** in untreated schizophrenia.",
+   "The mesolimbic pathway is hypothesized to be **hyperactive**, driving positive symptoms.",
+   "",
+   "No abnormal functioning of the **thalamic** pathway in schizophrenia has been shown."
+  ],
+  "whyNotPages": [
+   "87",
+   "85",
+   "90",
+   "",
+   "87"
+  ]
+ },
+ "q4-14": {
+  "pages": "86–87",
+  "whyNot": [
+   "That describes the **mesolimbic** pathway, which runs VTA to accumbens and mediates reward rather than a thalamic role.",
+   "No evidence indicates abnormal function of this pathway in **schizophrenia**.",
+   "",
+   "The **nigrostriatal** pathway belongs to the extrapyramidal system; the thalamic pathway is separate.",
+   "A pituitary projection controlling prolactin is the **tuberoinfundibular** pathway."
+  ],
+  "whyNotPages": [
+   "86",
+   "87",
+   "",
+   "87",
+   "86"
+  ]
+ },
+ "q4-15": {
+  "pages": "87",
+  "whyNot": [
+   "Dopamine at D2 **inhibits** the stop pathway rather than stimulating it.",
+   "The indirect pathway is populated by **D2** receptors, not D3.",
+   "**D1** receptors populate the direct go pathway, not the indirect stop pathway.",
+   "D1 sits in the **direct** pathway and stimulates the go signal; it does not inhibit it.",
+   ""
+  ],
+  "whyNotPages": [
+   "87",
+   "88",
+   "87",
+   "87",
+   ""
+  ]
+ },
+ "q4-16": {
+  "pages": "87",
+  "whyNot": [
+   "Locus coeruleus is a **norepinephrine** center, not a target of the striatal motor pathway.",
+   "That is the route of the **indirect** pathway, which reaches GPi through GPe and the subthalamic nucleus.",
+   "",
+   "The substantia nigra compacta is the **origin** of nigrostriatal dopamine, not a target of the direct pathway.",
+   "The VTA is the origin of mesolimbic and **mesocortical** dopamine, not a target here."
+  ],
+  "whyNotPages": [
+   "102",
+   "87",
+   "",
+   "87",
+   "86"
+  ]
+ },
+ "q4-17": {
+  "pages": "89",
+  "whyNot": [
+   "",
+   "Chronic D2 **blockade** in this pathway is hypothesized to cause tardive dyskinesia, not levodopa dyskinesia.",
+   "5HT2A upregulation is linked to **Parkinson's disease psychosis**, not levodopa-induced movements.",
+   "Mesolimbic hypodopaminergia is linked to anhedonia and apathy, not **hyperkinetic** movements.",
+   "NMDA hypofunction is a theory of **psychosis**, not of levodopa dyskinesia."
+  ],
+  "whyNotPages": [
+   "",
+   "89",
+   "133",
+   "90",
+   "95"
+  ]
+ },
+ "q4-18": {
+  "pages": "89",
+  "whyNot": [
+   "EPS is the more familiar label, but the book calls it the less accurate one.",
+   "**Akathisia** is a form of restlessness that dopamine deficiency may produce, not the name for drug-induced parkinsonism.",
+   "**Tardive dyskinesia** is a hyperkinetic disorder from chronic D2 blockade, distinct from parkinsonism.",
+   "",
+   "Neuroleptic malignant syndrome is a rare, potentially fatal reaction with rigidity and fever, not the name for parkinsonism."
+  ],
+  "whyNotPages": [
+   "89",
+   "88",
+   "89",
+   "",
+   "169"
+  ]
+ },
+ "q4-19": {
+  "pages": "90",
+  "whyNot": [
+   "Delusions and hallucinations arise from too **much** mesolimbic dopamine, the opposite direction.",
+   "Galactorrhea comes from **tuberoinfundibular** disruption that raises prolactin.",
+   "Tics are tied to **hyperactivity** of the nigrostriatal pathway, not mesolimbic deficiency.",
+   "Chorea reflects too much **nigrostriatal** dopamine, not too little mesolimbic dopamine.",
+   ""
+  ],
+  "whyNotPages": [
+   "90",
+   "85",
+   "89",
+   "89",
+   ""
+  ]
+ },
+ "q4-20": {
+  "pages": "92–93",
+  "whyNot": [
+   "No abnormality of the **thalamic** dopamine pathway has been shown in schizophrenia, and imaging pointed elsewhere.",
+   "",
+   "Imaging did not find the expected excess **uniquely** in the ventral striatum.",
+   "The pituitary is the target of **tuberoinfundibular** neurons, which are relatively preserved in untreated schizophrenia.",
+   "Prefrontal cortex is the mesocortical target, where dopamine is hypothesized to be **low**, not high."
+  ],
+  "whyNotPages": [
+   "87",
+   "",
+   "92",
+   "85",
+   "95"
+  ]
+ },
+ "q4-21": {
+  "pages": "94–95",
+  "whyNot": [
+   "Positive symptoms are tied to excess **mesolimbic** dopamine, not a mesocortical deficit.",
+   "Cognitive symptoms relate to the **DLPFC** branch, whereas the VMPFC branch involves affect.",
+   "Motor control belongs to the **nigrostriatal** pathway, not the mesocortical projection to prefrontal cortex.",
+   "",
+   "Prolactin rise follows **tuberoinfundibular** D2 blockade, not mesocortical deficiency."
+  ],
+  "whyNotPages": [
+   "95",
+   "95",
+   "87",
+   "",
+   "85"
+  ]
+ },
+ "q4-22": {
+  "pages": "96–97",
+  "whyNot": [
+   "COMT breaks down dopamine; glutamate is cleared by **transporters**, not enzymatic destruction.",
+   "DAT is **specific** to dopamine and does not take up glutamate.",
+   "MAO degrades monoamines, whereas glutamate's action ends by **reuptake** through EAATs.",
+   "Glia convert glutamate into **glutamine**; GAD is the GABA neurons' own synthetic enzyme.",
+   ""
+  ],
+  "whyNotPages": [
+   "97",
+   "80",
+   "97",
+   "96",
+   ""
+  ]
+ },
+ "q4-23": {
+  "pages": "97",
+  "whyNot": [
+   "",
+   "SHMT interconverts serine and glycine in glia; it does not **make** glutamate.",
+   "Serine racemase makes **D-serine** from L-serine in glia, a cotransmitter, not glutamate.",
+   "D-amino acid oxidase **destroys** D-serine; it plays no part in regenerating glutamate.",
+   "Glutamine synthetase works in **glia**, turning glutamate into glutamine, the opposite step."
+  ],
+  "whyNotPages": [
+   "",
+   "98",
+   "98",
+   "99",
+   "96"
+  ]
+ },
+ "q4-24": {
+  "pages": "98",
+  "whyNot": [
+   "Synaptic glycine is cleared by **transporter** reuptake, not by an enzyme in the cleft.",
+   "",
+   "EAATs clear **glutamate** into glia; glycine has its own transporters.",
+   "D-amino acid oxidase destroys **D-serine**, a different cotransmitter.",
+   "GlyT2 returns glycine to **glycine neurons**, so it is not the main terminator at glutamate synapses."
+  ],
+  "whyNotPages": [
+   "98",
+   "",
+   "96",
+   "99",
+   "98"
+  ],
+  "why": "Glial **GlyT1**, working inward, is the main way synaptic glycine is cleared at glutamate synapses, while GlyT2 instead recaptures glycine into glycine neurons."
+ },
+ "q4-25": {
+  "pages": "99",
+  "whyNot": [
+   "COMT inactivates **dopamine**; it does not act on D-serine.",
+   "Serine racemase **makes** D-serine from L-serine rather than inactivating it.",
+   "",
+   "MAO-B degrades **monoamines** such as serotonin and dopamine, not D-serine.",
+   "SHMT interconverts serine and **glycine**; it is not the D-serine inactivating enzyme."
+  ],
+  "whyNotPages": [
+   "80",
+   "98",
+   "",
+   "114",
+   "98"
+  ]
+ },
+ "q4-26": {
+  "pages": "100",
+  "whyNot": [
+   "",
+   "AMPA receptors are postsynaptic **ionotropic** channels for fast sodium-driven excitation, not G-protein autoreceptors.",
+   "**Group I** receptors sit mainly postsynaptically and strengthen excitatory responses.",
+   "Kainate receptors are ligand-gated channels mediating fast excitation, not **metabotropic**.",
+   "NMDA receptors are ligand-gated **calcium** channels, not metabotropic autoreceptors."
+  ],
+  "whyNotPages": [
+   "",
+   "101",
+   "100",
+   "101",
+   "101"
+  ],
+  "why": "**Group II** (mGluR2, 3) and **group III** (mGluR4, 6, 7, 8) can sit presynaptically as autoreceptors that curb glutamate release, so agonists may lower release."
+ },
+ "q4-27": {
+  "pages": "101",
+  "whyNot": [
+   "Glycine or D-serine binding is one of the **three** things that must coincide for the channel to open.",
+   "",
+   "Depolarization is **required**, because it clears the magnesium plug.",
+   "Plug removal is **required** for opening, and it is the step that depolarization accomplishes.",
+   "Glutamate occupying its own site is the **first** of the coincident requirements."
+  ],
+  "whyNotPages": [
+   "101",
+   "",
+   "101",
+   "101",
+   "101"
+  ]
+ },
+ "q4-28": {
+  "pages": "105",
+  "whyNot": [
+   "Dopamine is made from **tyrosine** in dopamine neurons; NMDA calcium entry does not drive its synthesis.",
+   "Glutamine synthesis occurs in **glia** from glutamate, unrelated to NMDA calcium influx.",
+   "",
+   "Prolactin release is governed by **tuberoinfundibular** dopamine, not NMDA calcium entry.",
+   "Fast sodium-mediated depolarization comes from **AMPA** and kainate receptors, not NMDA calcium entry."
+  ],
+  "whyNotPages": [
+   "80",
+   "96",
+   "",
+   "85",
+   "101"
+  ]
+ },
+ "q4-29": {
+  "pages": "102",
+  "whyNot": [
+   "Inhibition of monoamine release comes from the **indirect** route through brainstem GABA interneurons.",
+   "Cortico-brainstem glutamate neurons are **excitatory**; NMDA blockade is a ketamine or PCP action.",
+   "These neurons are a key **regulator** of neurotransmitter release, so the effect is substantial.",
+   "",
+   "Releasing GABA is the job of the intervening **interneurons** in the indirect route, not of the direct glutamate neurons."
+  ],
+  "whyNotPages": [
+   "102",
+   "102",
+   "102",
+   "",
+   "102"
+  ]
+ },
+ "q4-30": {
+  "pages": "106",
+  "whyNot": [
+   "Raphe serotonin neurons are brainstem **targets** of cortical glutamate input, not the proposed site of dysfunction.",
+   "The hypothesis places the defect at cortical **GABA interneurons**, not in the cerebellum.",
+   "Pituitary events involve prolactin and **tuberoinfundibular** dopamine, unrelated to this hypothesis.",
+   "Striatal cholinergic interneurons are not the proposed site; the hypothesis concerns cortical **GABA** interneurons.",
+   ""
+  ],
+  "whyNotPages": [
+   "102",
+   "106",
+   "85",
+   "106",
+   ""
+  ]
+ },
+ "q4-31": {
+  "pages": "106",
+  "whyNot": [
+   "NMDA receptors on **GABA interneurons** are hypofunctional, rather than absent from pyramidal neurons.",
+   "The compensatory change is an **increase** in α2 GABA-A receptors, not a loss.",
+   "GABA release is **reduced**, since hypofunctional interneurons fail to inhibit pyramidal neurons.",
+   "GAD67 activity is **decreased**, not increased.",
+   ""
+  ],
+  "whyNotPages": [
+   "106",
+   "106",
+   "108",
+   "106",
+   ""
+  ]
+ },
+ "q4-32": {
+  "pages": "109",
+  "whyNot": [
+   "D2 blockade is how antipsychotics act; ketamine acts at **NMDA** receptors.",
+   "5HT2A **upregulation** is linked to Parkinson's disease psychosis, not ketamine.",
+   "",
+   "That describes **schizophrenia**, where NMDA hypofunction is programmed neurodevelopmentally.",
+   "Loss of serotonin terminals occurs in **Parkinson's disease**, not with ketamine."
+  ],
+  "whyNotPages": [
+   "79",
+   "133",
+   "",
+   "109",
+   "133"
+  ]
+ },
+ "q4-33": {
+  "pages": "111",
+  "whyNot": [
+   "",
+   "The key feature is the intervening **GABA interneuron** in the VTA, not missing NMDA receptors on these glutamate neurons.",
+   "Glutamate neurons release **glutamate**, not dopamine; dopamine neurons are their targets.",
+   "D1 blockade is not part of this circuit, whose effect runs through **VTA GABA**.",
+   "Direct excitation is the route to **mesostriatal** dopamine neurons, raising dopamine and positive symptoms."
+  ],
+  "whyNotPages": [
+   "",
+   "111",
+   "111",
+   "111",
+   "111"
+  ]
+ },
+ "q4-34": {
+  "pages": "112",
+  "whyNot": [
+   "DAT is the dopamine **reuptake** pump; this mechanism runs through glutamate and GABA, not transporter blockade.",
+   "Prolactin is controlled by **tuberoinfundibular** dopamine, not by this hippocampal circuit.",
+   "Hippocampal neurons release **glutamate**, not dopamine; the dopamine rise comes from disinhibited VTA neurons.",
+   "",
+   "5HT2A stimulation belongs to the **serotonin** hypothesis, not hippocampal NMDA hypofunction."
+  ],
+  "whyNotPages": [
+   "80",
+   "85",
+   "112",
+   "",
+   "132"
+  ]
+ },
+ "q4-35": {
+  "pages": "114",
+  "whyNot": [
+   "Glutaminase and glutamine synthetase are the **glutamate** recycling enzymes.",
+   "",
+   "AAADC acts **second**, not first; tryptophan hydroxylase comes before it.",
+   "MAO-B and COMT **break down** monoamines; they do not make serotonin.",
+   "Tyrosine hydroxylase and DOPA decarboxylase make **dopamine** from tyrosine."
+  ],
+  "whyNotPages": [
+   "97",
+   "",
+   "114",
+   "80",
+   "80"
+  ],
+  "why": "Serotonin is built from tryptophan: tryptophan hydroxylase forms 5HTP, and AAADC then converts 5HTP into **5HT**."
+ },
+ "q4-36": {
+  "pages": "119",
+  "whyNot": [
+   "5HT3 is a postsynaptic receptor on **GABA interneurons**, not a somatodendritic autoreceptor.",
+   "",
+   "5HT6 is a **postsynaptic** receptor tied to acetylcholine release and cognition.",
+   "5HT1B/D is the **terminal** autoreceptor on the axon, giving negative feedback.",
+   "**5HT1A** is the somatodendritic negative-feedback autoreceptor, the opposite of feed-forward."
+  ],
+  "whyNotPages": [
+   "125",
+   "",
+   "130",
+   "119",
+   "119"
+  ]
+ },
+ "q4-37": {
+  "pages": "119",
+  "whyNot": [
+   "",
+   "D2 autoreceptors regulate **dopamine** neurons, not the serotonin neurons targeted by reuptake blockers.",
+   "Postsynaptic 5HT2C receptors excite **GABA interneurons** and inhibit downstream release, and are not cited for this action.",
+   "5HT3 receptors mediate nausea in the CTZ and inhibit **acetylcholine** and norepinephrine release.",
+   "Terminal 5HT1B/D autoreceptors shut off release at the **axon**; the antidepressant mechanism is tied to somatodendritic 5HT1A."
+  ],
+  "whyNotPages": [
+   "",
+   "81",
+   "125",
+   "125",
+   "119"
+  ],
+  "why": "Reuptake blockers are thought to act by desensitizing and downregulating the **somatodendritic 5HT1A** autoreceptors, which normally slow serotonin neuron firing and release."
+ },
+ "q4-38": {
+  "pages": "121–122",
+  "whyNot": [
+   "The GABA disinhibition has clear downstream effects on **norepinephrine**, dopamine and acetylcholine.",
+   "5HT1A is **inhibitory**, so it reduces GABA release rather than increasing it.",
+   "The affected targets are norepinephrine, dopamine and acetylcholine neurons, through **reduced** GABA, not a direct block of glutamate.",
+   "That is the 5HT2C or 5HT3 pattern, where GABA interneurons are **excited** and inhibit downstream release.",
+   ""
+  ],
+  "whyNotPages": [
+   "125",
+   "125",
+   "125",
+   "125",
+   ""
+  ]
+ },
+ "q4-39": {
+  "pages": "125",
+  "whyNot": [
+   "5HT2A agonists cause **hallucinogenic** psychosis; antagonists are the useful antipsychotic action.",
+   "5HT1B receptors **inhibit** release from NE, DA, HA and ACh terminals; antagonists are used for depression.",
+   "",
+   "5HT6 antagonists are proposed as **pro-cognitive** agents, not obesity treatments.",
+   "5HT7 antagonists are used for **psychosis and mood**, not obesity."
+  ],
+  "whyNotPages": [
+   "125",
+   "125",
+   "",
+   "130",
+   "131"
+  ],
+  "why": "**5HT2C** agonists can treat obesity, whereas 5HT2C antagonists are the ones used for psychosis and mood; the receptor sits mostly on GABA interneurons and restrains downstream release."
+ },
+ "q4-40": {
+  "pages": "125",
+  "whyNot": [
+   "5HT7 receptors inhibit cortical **glutamate** output through GABA interneurons, with no CTZ role described.",
+   "D1 is a **dopamine** receptor linked to excitation, not the serotonin receptor of the CTZ.",
+   "5HT2A receptors are excitatory cortical receptors that can raise or lower **glutamate** and are targets in psychosis.",
+   "",
+   "5HT1A receptors are **inhibitory**, somatodendritic or on GABA interneurons, not the CTZ nausea receptor."
+  ],
+  "whyNotPages": [
+   "130",
+   "81",
+   "125",
+   "",
+   "121"
+  ],
+  "why": "Centrally mediated nausea and vomiting involve **5HT3** receptors in the brainstem chemoreceptor trigger zone, a site outside the blood-brain barrier."
+ },
+ "q4-41": {
+  "pages": "125",
+  "whyNot": [
+   "5HT6 is postsynaptic and tied to **acetylcholine** release and cognition, not dual glutamate effects.",
+   "5HT1B receptors **inhibit** release of NE, DA, HA and ACh from presynaptic terminals.",
+   "5HT2B is a somatodendritic **feed-forward** receptor on serotonin neurons, not a dual glutamate regulator.",
+   "",
+   "5HT3 receptors excite **GABA interneurons**, so they only reduce downstream release."
+  ],
+  "whyNotPages": [
+   "130",
+   "125",
+   "119",
+   "",
+   "125"
+  ]
+ },
+ "q4-42": {
+  "pages": "133",
+  "whyNot": [
+   "NMDA hypofunction is the **glutamate** theory; Parkinson's psychosis is explained through serotonin loss and 5HT2A upregulation.",
+   "Parkinson's disease **loses** nigrostriatal dopamine terminals; the psychosis is tied to serotonin, not cortical dopamine excess.",
+   "",
+   "COMT **inactivates** prefrontal dopamine; excess COMT is not the proposed cause of this psychosis.",
+   "D1 is the main postsynaptic dopamine receptor in cortex; the proposed upregulation is of **5HT2A**, not D1."
+  ],
+  "whyNotPages": [
+   "133",
+   "133",
+   "",
+   "80",
+   "133"
+  ]
+ },
+ "q4-43": {
+  "pages": "136",
+  "whyNot": [
+   "",
+   "Dopamine is involved **downstream**, since excess glutamate drives mesolimbic dopamine hyperactivity.",
+   "Upregulation is the mechanism proposed for **Parkinson's** psychosis; dementia involves lost GABA inhibition instead.",
+   "D2 blockers **harm** these patients, with higher stroke and death risk in Alzheimer disease.",
+   "**Delusions** are often more common in dementia, and VTA glutamate drive also produces auditory hallucinations."
+  ],
+  "whyNotPages": [
+   "",
+   "141",
+   "134",
+   "131",
+   "157"
+  ]
+ },
+ "q4-44": {
+  "pages": "141",
+  "whyNot": [
+   "Referential content occurs but is **less** common than persecutory.",
+   "",
+   "Grandiose themes occur but are not the **most** frequent content.",
+   "Religious themes are among the other contents, less frequent than **persecutory** ones.",
+   "Somatic delusions are another possible theme, not the **commonest**."
+  ],
+  "whyNotPages": [
+   "141",
+   "",
+   "141",
+   "141",
+   "141"
+  ]
+ },
+ "q4-45": {
+  "pages": "142",
+  "whyNot": [
+   "Alogia, poverty of speech, is **one of** the five classic negative symptoms.",
+   "Asociality, reduced social drive, is **one of** the classic negative symptoms.",
+   "Avolition, reduced motivation, is **one of** the classic negative symptoms.",
+   "Anhedonia, reduced ability to feel pleasure, is **one of** the classic negative symptoms.",
+   ""
+  ],
+  "whyNotPages": [
+   "142",
+   "142",
+   "142",
+   "142",
+   ""
+  ]
+ },
+ "q4-46": {
+  "pages": "144",
+  "whyNot": [
+   "Cognitive symptoms map to the **dorsolateral** prefrontal cortex; the ventromedial region is linked to affect.",
+   "",
+   "Affective symptoms map to the **ventromedial** prefrontal cortex, not the dorsolateral.",
+   "Negative symptoms map to **mesocortical** and prefrontal regions, not the thalamus.",
+   "Positive symptoms map to the **mesolimbic** pathway; the orbitofrontal cortex goes with aggression."
+  ],
+  "whyNotPages": [
+   "95",
+   "",
+   "95",
+   "144",
+   "144"
+  ]
+ },
+ "q4-47": {
+  "pages": "146–147",
+  "whyNot": [
+   "Instrumental is another name for **organized** violence, the second most frequent type, planned and without autonomic arousal.",
+   "Predatory likewise labels **organized** violence, which is less frequent than impulsive violence.",
+   "Psychotic violence, driven by command hallucinations or delusions, is actually the **least** common type.",
+   "",
+   "Organized violence is planned and cold-blooded, and it is **less** frequent than impulsive violence."
+  ],
+  "whyNotPages": [
+   "147",
+   "147",
+   "146",
+   "",
+   "147"
+  ]
+ },
+ "q4-48": {
+  "pages": "150",
+  "whyNot": [
+   "Polygenic risk scores account for only **part** of the risk; environment supplies the rest.",
+   "Risk genes serve varied functions, including ion channels and transcription factors, not only **dopamine receptors**.",
+   "The book describes a prevalence of about 1% **worldwide**, not tenfold variation between countries.",
+   "Genes do not code for illness directly, and no **single** causative gene is expected.",
+   ""
+  ],
+  "whyNotPages": [
+   "150",
+   "150",
+   "141",
+   "148",
+   ""
+  ]
+ },
+ "q4-49": {
+  "pages": "154",
+  "whyNot": [
+   "Synapses form fastest between birth and age 6; adolescence is when **elimination** peaks.",
+   "Myelination **continues** throughout life rather than stopping at puberty.",
+   "",
+   "Neurons are mostly formed **before birth**, so dopamine neurons first forming in adolescence is not the explanation.",
+   "NMDA receptors already operate in **childhood** synapses; the issue is weak synapses lost during adolescent elimination."
+  ],
+  "whyNotPages": [
+   "151",
+   "151",
+   "",
+   "151",
+   "151"
+  ]
+ },
+ "q4-50": {
+  "pages": "155",
+  "whyNot": [
+   "",
+   "Negative and cognitive symptoms tend to become **pervasive** over time rather than resolve.",
+   "Responsiveness is robust at first break but **declines** with later episodes.",
+   "The described downhill course involves declining response and tissue loss, not **conversion** to another disorder.",
+   "Imaging shows progressive **tissue loss** with repeated episodes, not normalization."
+  ],
+  "whyNotPages": [
+   "",
+   "155",
+   "155",
+   "155",
+   "155"
+  ]
+ },
+ "q4-51": {
+  "pages": "157",
+  "whyNot": [
+   "PDP appears **later in the course** of Parkinson's disease, whereas adolescence is the typical onset of schizophrenia.",
+   "D2 blockers **worsen** movement in Parkinson's disease; PDP is treated through 5HT2A antagonism.",
+   "PDP hallucinations tend to be **visual**; auditory predominance is typical of schizophrenia.",
+   "",
+   "PDP delusions tend toward persecution or jealousy, such as theft or infidelity, rather than **grandiosity**."
+  ],
+  "whyNotPages": [
+   "133",
+   "131",
+   "157",
+   "",
+   "157"
+  ]
+ },
+ "q4-52": {
+  "pages": "157",
+  "whyNot": [
+   "Catatonia is listed among general positive symptoms of schizophrenia; the book singles out **delusions** for Alzheimer disease.",
+   "Neologisms belong to **conceptual disorganization** in psychosis, not the main Alzheimer symptom.",
+   "Auditory hallucinations typify **schizophrenia**, whereas delusions outnumber hallucinations in many dementias.",
+   "Visual hallucinations are characteristic of **PDP** and Lewy body dementia, not the commonest Alzheimer symptom.",
+   ""
+  ],
+  "whyNotPages": [
+   "142",
+   "78",
+   "141",
+   "157",
+   ""
+  ]
+ }
+}
