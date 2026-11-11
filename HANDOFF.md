@@ -44,23 +44,28 @@ timeout 600 python3 tools/routes.py http://localhost:8766 /tmp/shots | grep '!!'
 python3 -u tests/overflow.py ; python3 -u tests/tabbar.py   # expect widths 390, ERRORS: []
 python3 -u tests/r1_home.py                             # progress panel, report links, iOS hint; ERRORS: []
 python3 -u tests/r2_practice.py                         # confidence, topics, exam by topic/mistakes, phone 390; ERRORS: []
+python3 -u tests/r6_cheat.py                            # 17 cheat sheets, PDFs, links, phone 390; ERRORS: []
 (cd ../stahl && node ../stahl-dev/tests/audit.js)       # content-depth table
 ```
 Publish: `cd stahl && git add -A && git -c user.name="Isabella Navarro" -c user.email="isaymotion@gmail.com" commit -m "…" && git push origin main`.
 
-## 6. Status (as of 2026-11-11, main = ba73af3, version 27.0.0)
+## 6. Status (as of 2026-11-11, main = b5534ea, version 28.0.0)
+
+**Not yet pushed (2026-11-11):** the R6 session could not push (`isaymotion/Stahl` was not in that session's authorized repos). `main` b5534ea and the `dev-tools` commit exist only as the bundle `stahl-r6.bundle` sent in that chat. Before new work: either push from the owner's machine (`git fetch stahl-r6.bundle main:r6 && git push origin r6:main`, same for `dev-tools`), or give the next session push access and re-create from the bundle. Check `git log origin/main -1` shows b5534ea.
+
 | Area | State |
 |---|---|
 | Chapters 1–13 | Done: 247 guide sections, 1,102 high-yield points, 726 mech / 268 drug / 200 clinical cards, 608 board questions, 469 glossary terms |
 | Library | 183 drugs, 105 targets, 16 NTs, 83 circuits, 17 drug types. B1 pass done (R3–R5): 271 pearls + 65 side effects added; 63 drugs still have no pearls because the book has nothing more on them |
 | QoL pass | Done: phone home layout, two-column PDF generator (chapter + all chapters), Compare drug-type filters, NbN by class, auto-hiding tab bar, phone overflow fixes, SW cache-prefix fix |
 | Teaching mode | Done: session builder (6 presets, multi-chapter, counts, order), high-yield blanks, flashcards, board Qs, vignettes, Name that drug, countdown, room/two-team scoring, flags, text size, end-of-session review + PDF |
-| Since 10-26 | 20.0.0 Monitoring checklists (`#/monitoring`), 21.0.0 Text size (Aa), 22.0.0 Design refresh (semver changelog, About page, match-device theme, Tagalog draft strings), 23.0.0 = R1, 24.0.0 = R2, 25.0.0 = R3, 26.0.0 = R4, 27.0.0 = R5 |
+| Since 10-26 | 20.0.0 Monitoring checklists (`#/monitoring`), 21.0.0 Text size (Aa), 22.0.0 Design refresh (semver changelog, About page, match-device theme, Tagalog draft strings), 23.0.0 = R1, 24.0.0 = R2, 25.0.0 = R3, 26.0.0 = R4, 27.0.0 = R5, 28.0.0 = R6 |
+| Cheat sheets (R6) | `#/cheat` index + `#/cheat/<familyId>` (17), section "drug-class cheat sheets" in `js/app.js` before the NT section. Built only from library fields: at-a-glance (subgroups, chapters, shared targets = targets ≥ half the class and ≥2 drugs act on, majority action with "also …" for others), binding grid (only if ≥3 drugs have `s`: antipsychotics, SSRI/SNRI, NMDA; columns = targets with `s` in ≥2 drugs, max 12), drug-by-drug table (Key points = `CHEAT_KEY` 4 targets/3 uses/3 SEs/2 pearls, or Everything; subgroup chips; stacks to cards under 640px). PDF via `cheatPdfSpec` → `js/pdf.js` (pages = layout count at 7 pt, then `plan` enlarges up to 9.5 pt). Prefs `cheatPrefs` {detail, paper, gf[fam]}. Links: drug page Same class box (`.side-cheat`), drug DB `#dcheat`, Compare `.cmp-cheat`, library tile `nav.cheat`, search kind `cheat`. CSS block at end of `app.css` (`.cheat-*`, `.act`, `.mx`, `.sdots`). Test `tests/r6_cheat.py`. |
 | Practice engine (R2) | `data/topics.js`: 28 topics (`SP.topics`), all 1,802 items mapped (`SP.topicMap`, key `chNN/deck/id`); edit `work/r2/topics_vocab.json` + `topic_map.json`, then `node tools/build_topics.js ../stahl`. localStorage `att` = per-item last 8 outcomes (upper = right; S/U/G = sure/unsure/guess, R/W = no rating); `confAsk` pref; `MISTAKES[k].sure`. Routes `#/topics`, `#/topics/<id>`, `#/topics/<id>/cards`, `#/exam/topic/<id>`, `#/exam/mistakes`. Topic strength needs ≥5 practised items. |
 
 ## 7. Next steps: agreed release plan (owner approved all A + B, order B1 → B4, 2026-11-09)
-Next version **28.0.0** (R6). One release = one changelog id + SW bump + full test run + push + update this table.
-R6 starting point (design is Claude's call; ask the owner only if the layout choice is genuinely ambiguous): one cheat sheet per drug type in `data/db/families.js` (17), built from the library fields (class, mechanism, key targets with `s`, uses, sideEffects + via, pearls, nbn) rather than new book text, so no PDF needed. Suggested: route `#/cheat/<familyId>` linked from the drug-type filter in Compare/Drug DB and from each drug page's "Same class" box; side-by-side table of the class's drugs with the highest-yield rows; "Download PDF" via the existing `js/pdf.js` two-column writer (see the chapter PDF generator for the API). Add a test `tests/r6_cheat.py` (all 17 routes render, PDF builds, phone 390) and add the routes to `tools/routes.py`.
+Next version **29.0.0** (R7). One release = one changelog id + SW bump + full test run + push + update this table.
+R7 starting point: B2 wrong-answer rationales for Ch 9–13 board questions (`cards-cases.js`: add a per-choice rationale + page ref; needs the book PDF re-attached and pages re-extracted, see R3 method). Decide the data shape first (e.g. `whyNot: [5 strings]` with `''` at the answer index) and how the exam review shows it; then subagents draft per chapter, lead verifies. Reuse the 8-word verbatim check.
 
 | # | Release | Items | Book PDF? | Status |
 |---|---|---|---|---|
@@ -69,7 +74,7 @@ R6 starting point (design is Claude's call; ask the owner only if the layout cho
 | R3 | Library depth 1 | B1: Ch 4–5 drugs (antipsychotics) | yes | **done 25.0.0** (68 pearls/32 drugs; see R3 method below) |
 | R4 | Library depth 2 | B1: Ch 6–7 drugs (mood, antidepressants) | yes | **done 26.0.0** (78 pearls/37 drugs; `work/r4/`) |
 | R5 | Library depth 3 | B1: Ch 8–13 + remaining drugs | yes | **done 27.0.0** (125 pearls + 61 SEs/55 drugs; `work/r5/`) |
-| R6 | Cheat sheets | A5 drug-class cheat sheets + PDF (built on R3–R5) | no | pending |
+| R6 | Cheat sheets | A5 drug-class cheat sheets + PDF (built on R3–R5) | no | **done 28.0.0** (17 sheets, binding grid, PDF; push pending, see section 6) |
 | R7 | Rationales 1 | B2: why-each-wrong-answer + page ref, Ch 9–13 | yes | pending |
 | R8 | Rationales 2 | B2: same, Ch 1–8 | yes | pending |
 | R9 | Vignettes 1 | B2: ~15 two-step vignettes/ch, Ch 1–7 | yes | pending |
@@ -102,6 +107,7 @@ Reference (original wording of the items):
 - Segmented radios (`.seg`): the hidden input sits over its label, so Playwright clicks on `input + span` time out; click `label:has(input[...])`.
 - `store` caches prefs in memory: after setting localStorage in a test, `reload()` (a hash change is not enough).
 - New cards/questions need a topic: add keys to `work/r2/topic_map.json` and rebuild `data/topics.js`, or they drop out of topics and exam-by-topic.
+- Drug families: the `other` family also catches drugs whose `group` is in no family (`familyOf` fallback), so its sheet can hold more than its listed groups.
 
 ## 9. Files to re-attach
 - `Stahls_Essential_Psychopharmacology_5th_ed.pdf`: needed for content work (R7–R10 rationales and vignettes, R13 Ch 8/9 depth). Not needed for R6 (cheat sheets come from the library), R11, R12 or R14. After attaching, re-extract pages with the command in the R3 method line (extracted text is never committed: copyrighted).
