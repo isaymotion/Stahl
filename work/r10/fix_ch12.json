@@ -1,0 +1,57 @@
+{
+ "v12-08": {
+  "steps": {
+   "1": {
+    "pages": "510"
+   }
+  }
+ },
+ "v12-09": {
+  "steps": {
+   "1": {
+    "whyNot": {
+     "2": "Brexpiprazole is a multimodal serotonin–dopamine agent aimed at **agitation**, not a memory drug."
+    }
+   }
+  }
+ },
+ "v12-10": {
+  "steps": {
+   "0": {
+    "whyNot": {
+     "4": "This combination targets the agitation network, but reversible causes are looked for **first**, before any drug."
+    }
+   }
+  }
+ },
+ "v12-11": {
+  "steps": {
+   "1": {
+    "whyNot": {
+     "4": "Dextromethorphan–bupropion acts on **glutamate** in the agitation network, not on 5HT2A in the psychosis network."
+    }
+   }
+  }
+ },
+ "v12-13": {
+  "stem": "An 80-year-old woman with moderate Alzheimer disease is restless, screams, and strikes caregivers. She has no hallucinations or delusions. Her psychiatrist discusses a drug for agitation in AD that combines D2 and 5HT1A partial agonism, 5HT2A antagonism, and α1 and α2 blockade.",
+  "steps": {
+   "0": {
+    "why": "**Brexpiprazole** combines D2 and 5HT1A partial agonism, 5HT2A antagonism, and unusual α1 and α2 blockade; the book proposes that these actions together calm the **agitation** network in AD."
+   }
+  }
+ },
+ "v12-14": {
+  "stem": "An 84-year-old man with moderate Alzheimer disease is aggressive and restless in the evenings despite a year of memantine for memory. His psychiatrist considers adding dextromethorphan combined with bupropion for the agitation."
+ },
+ "v12-15": {
+  "steps": {
+   "1": {
+    "whyNot": {
+     "1": "This pairs dextromethorphan with **bupropion**, aimed at depression and agitation; the quinidine pairing is the one approved for PBA.",
+     "2": "Brexpiprazole is a serotonin–dopamine agent used for psychosis, depression and **agitation**, not for PBA."
+    }
+   }
+  }
+ }
+}

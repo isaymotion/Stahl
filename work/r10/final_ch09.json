@@ -1,0 +1,632 @@
+[
+ {
+  "id": "v9-01",
+  "tag": "Central sensitization",
+  "topic": "pain",
+  "stem": "A 62-year-old man had shingles on his left chest wall that healed two months ago. He still reports burning pain and pain from light clothing in that band of skin, although no active lesion or tissue damage is found. The pain is considered neuropathic.",
+  "steps": [
+   {
+    "q": "Which process is thought to maintain his pain at the level of the spinal cord?",
+    "choices": [
+     "Segmental central sensitization",
+     "Suprasegmental sensitization confined to the thalamus",
+     "Ongoing nociceptor activation by tissue injury",
+     "Excess noxious signaling by Aβ fibers",
+     "Gray-matter loss in the temporal cortex"
+    ],
+    "answer": 0,
+    "why": "After nerve injury or disease, plastic changes can keep pain going once tissue has healed. At the spinal cord level this is **segmental central sensitization**, the mechanism behind shingles and diabetic neuropathic pain.",
+    "pages": "385",
+    "whyNot": [
+     "",
+     "That occurs in brain sites such as thalamus and cortex, not at the spinal cord level asked about.",
+     "His tissue has healed, so this describes **acute nociceptive pain**, not a self-sustaining neuropathic state.",
+     "**Aβ fibers** respond only to non-noxious stimuli such as light touch and vibration.",
+     "That is a reported structural finding in chronic pain, not the spinal mechanism of shingles pain."
+    ],
+    "whyNotPages": [
+     "",
+     "386",
+     "382",
+     "381",
+     "389"
+    ]
+   },
+   {
+    "lead": "Pregabalin is started to target this segmental sensitization, and he notices no numbness or loss of normal touch.",
+    "q": "Why does it relieve pain without blunting normal sensation?",
+    "choices": [
+     "It binds mainly open-channel calcium channels, the most active ones",
+     "It blocks open and closed calcium channels equally",
+     "It blocks voltage-sensitive sodium channels like lidocaine",
+     "It stimulates μ-opioid receptors on primary afferents",
+     "It boosts descending norepinephrine by blocking reuptake"
+    ],
+    "answer": 0,
+    "why": "These drugs favor the **open-channel** form of the calcium channel, so they quiet busy, sensitized circuits and leave channels in uninvolved neurons alone, which preserves normal neurotransmission.",
+    "pages": "398–399",
+    "whyNot": [
+     "",
+     "The closed conformation is not bound, so normal neurotransmission in uninvolved neurons is not disrupted.",
+     "That is how **local anesthetics** work; α2δ ligands act on calcium channels instead.",
+     "That describes **opioids**, not an α2δ ligand acting at the calcium channel subunit.",
+     "That is the **SNRI** mechanism; this drug acts on the α2δ subunit."
+    ],
+    "whyNotPages": [
+     "",
+     "399",
+     "381",
+     "390",
+     "393"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v9-02",
+  "tag": "Descending inhibition",
+  "topic": "pain",
+  "stem": "A 38-year-old woman with major depression reports back aches, stomach pain, and joint discomfort. Examination and imaging show no tissue injury, and her clinician suspects that ordinary bodily input is reaching her awareness as pain.",
+  "steps": [
+   {
+    "q": "Which mechanism is hypothesized to explain her symptoms?",
+    "choices": [
+     "Deficient descending inhibition no longer masks irrelevant input",
+     "Excess descending inhibition amplifies nociceptive signals",
+     "Overactive Aβ fibers carry noxious signals",
+     "Surplus endogenous opioid release in the periaqueductal gray",
+     "Ongoing C-fiber activation from joint tissue injury"
+    ],
+    "answer": 0,
+    "why": "Descending serotonin and norepinephrine pathways normally mask irrelevant input from muscles, joints, and gut. When that inhibition is **deficient**, normal input may be perceived as pain.",
+    "pages": "393",
+    "whyNot": [
+     "",
+     "Opposite direction: more inhibition would **reduce** the pain signal, not increase it.",
+     "**Aβ fibers** respond to non-noxious stimuli, and the problem here is missing masking, not extra fiber activity.",
+     "More **opioid release** would dull pain; the hypothesis involves too little inhibition.",
+     "No injury is found, so the proposal is a **central** problem, not peripheral nociceptor drive."
+    ],
+    "whyNotPages": [
+     "",
+     "393",
+     "381",
+     "393",
+     "393"
+    ]
+   },
+   {
+    "lead": "She is treated with an SNRI instead of an SSRI to boost both descending pathways.",
+    "q": "Why are SSRIs less consistently useful for pain than SNRIs?",
+    "choices": [
+     "Serotonin both inhibits and facilitates pain signaling in the dorsal horn",
+     "SSRIs act as opioid antagonists",
+     "The dorsal horn has no serotonin receptors",
+     "SSRIs cannot reach the descending raphe pathway",
+     "Serotonin inhibits afferents only through α2 receptors"
+    ],
+    "answer": 0,
+    "why": "Serotonin inhibits via **5HT1B/D** receptors but also facilitates via 5HT3 receptors, so raising only serotonin is inconsistent, while SNRIs add norepinephrine and are proven in several pain states.",
+    "pages": "390",
+    "whyNot": [
+     "",
+     "SSRIs are not described as **opioid antagonists**; their issue is serotonin's mixed spinal actions.",
+     "The dorsal horn does have **5HT1B/D** and 5HT3 receptors, which is exactly the problem.",
+     "Serotonin neurons from the raphe project to the spinal cord, and SSRIs raise serotonin there.",
+     "**α2** adrenoceptors are the norepinephrine route; serotonin acts at 5HT1B/D and 5HT3."
+    ],
+    "whyNotPages": [
+     "",
+     "390",
+     "390",
+     "390",
+     "390"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v9-03",
+  "tag": "Descending inhibition",
+  "topic": "pain",
+  "stem": "A 27-year-old soldier keeps running to cover for several minutes after a shrapnel wound to his leg and feels little pain. Later, in the safety of a medical tent, the wound begins to hurt intensely.",
+  "steps": [
+   {
+    "q": "Which system best explains the initial lack of pain?",
+    "choices": [
+     "Limbic activation of descending inhibition releasing opioids, serotonin, and norepinephrine",
+     "Descending serotonin acting at excitatory 5HT3 receptors",
+     "Peripheral sensitization of the injured nerve",
+     "Loss of C-fiber conduction from the wound",
+     "Endogenous blockade of voltage-sensitive sodium channels"
+    ],
+    "answer": 0,
+    "why": "Severe injury or danger activates descending inhibition through limbic structures, releasing endogenous **opioids**, serotonin, and norepinephrine. This dulls pain so he can escape.",
+    "pages": "393",
+    "whyNot": [
+     "",
+     "Excitatory **5HT3** receptors mediate facilitation, which would increase rather than dull the pain.",
+     "Peripheral sensitization **amplifies** pain signals, the opposite of what he experienced.",
+     "The wound still sends input; descending **inhibition** reduces how much reaches the brain.",
+     "The book credits **descending monoamine and opioid** pathways, not a local sodium channel block."
+    ],
+    "whyNotPages": [
+     "",
+     "390",
+     "382",
+     "393",
+     "381"
+    ]
+   },
+   {
+    "lead": "The descending inhibition that dulled his pain withdraws once he reaches safety, and the injury becomes very painful.",
+    "q": "What replaces the inhibition once he is safe?",
+    "choices": [
+     "Descending facilitation",
+     "Stronger endogenous opioid release",
+     "Loss of nociceptive input from the dorsal horn",
+     "Selective gray-matter gain in the DLPFC",
+     "Activation of Aβ fibers by the wound"
+    ],
+    "answer": 0,
+    "why": "On return to safety, **descending facilitation** takes over from inhibition, increasing awareness of the injury and forcing rest of the injured part.",
+    "pages": "393",
+    "whyNot": [
+     "",
+     "That is the earlier phase; more opioid release would keep **dulling** his pain.",
+     "The dorsal horn still relays input; the change is in the descending **balance**.",
+     "Gray-matter changes are tied to chronic pain, not minute-to-minute shifts after an injury.",
+     "**Aβ fibers** respond only to non-noxious stimuli and do not drive this pain."
+    ],
+    "whyNotPages": [
+     "",
+     "393",
+     "393",
+     "389",
+     "381"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v9-04",
+  "tag": "Fibromyalgia symptoms",
+  "topic": "pain",
+  "stem": "A 45-year-old woman with fibromyalgia takes duloxetine. She still has trouble concentrating, little interest in activities, mental slowness she calls fog, and heavy physical tiredness in her limbs.",
+  "steps": [
+   {
+    "q": "Which symptom-to-circuit pairing matches the book's fibromyalgia symptom map?",
+    "choices": [
+     "Fog and mental fatigue to the DLPFC; physical fatigue to striatum and spinal cord",
+     "Fog to the hypothalamus; physical fatigue to the amygdala",
+     "Fog to the thalamus; physical fatigue to the DLPFC",
+     "Fog to the amygdala; physical fatigue to the hypothalamus",
+     "Fog to the orbital frontal cortex; physical fatigue to the thalamus"
+    ],
+    "answer": 0,
+    "why": "Poor concentration and mental fatigue are tied to **dorsolateral prefrontal cortex**, while physical fatigue is tied to the striatum and spinal cord.",
+    "pages": "389",
+    "whyNot": [
+     "",
+     "The hypothalamus relates to **sleep and appetite**, and the amygdala to anxiety and mood.",
+     "The thalamus carries **pain** transmission, and the DLPFC handles concentration, not physical fatigue.",
+     "The amygdala relates to **anxiety and depressed mood**, not concentration.",
+     "The orbital frontal cortex relates to **depressed mood**, and the thalamus to pain."
+    ],
+    "whyNotPages": [
+     "",
+     "389",
+     "389",
+     "389",
+     "389"
+    ]
+   },
+   {
+    "lead": "Her mental and physical fatigue are matched to prefrontal and striatal circuits, and her duloxetine is continued.",
+    "q": "What strategy does the book describe for her fatigue?",
+    "choices": [
+     "Augmenting the SNRI with modafinil, a stimulant, or bupropion",
+     "Adding a benzodiazepine to the SNRI",
+     "Adding an SSRI to the SNRI",
+     "Adding an opioid to the SNRI",
+     "Adding trazodone to the SNRI"
+    ],
+    "answer": 0,
+    "why": "For physical and mental fatigue, an SNRI can be **augmented** with modafinil, a stimulant, or bupropion, which target the dopamine and norepinephrine circuits tied to energy.",
+    "pages": "400",
+    "whyNot": [
+     "",
+     "A **benzodiazepine** is a sleep aid in this chapter, not a treatment for daytime fatigue.",
+     "Another serotonin-only drug is not described for fatigue, and **SSRIs** are inconsistent for pain.",
+     "Opiates are **not proven effective** in fibromyalgia and are not listed for fatigue.",
+     "**Trazodone** is listed for sleep disturbance, not for physical or mental fatigue."
+    ],
+    "whyNotPages": [
+     "",
+     "400",
+     "390",
+     "390",
+     "400"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v9-05",
+  "tag": "Fibromyalgia treatment",
+  "topic": "pain",
+  "stem": "A 50-year-old man with fibromyalgia has had only partial pain relief on an SNRI. He also reports anxiety and nonrestorative sleep, and his clinician wants additive pain relief without stopping the SNRI.",
+  "steps": [
+   {
+    "q": "Which addition has anecdotal support for additive pain benefit?",
+    "choices": [
+     "An α2δ ligand such as pregabalin or gabapentin",
+     "An SSRI",
+     "An opioid analgesic",
+     "Bupropion",
+     "A benzodiazepine"
+    ],
+    "answer": 0,
+    "why": "The two classes are not well studied together, but α2δ ligands plus SNRIs are often combined empirically and anecdotally give **additive** pain relief.",
+    "pages": "399–400",
+    "whyNot": [
+     "",
+     "SSRIs are **not consistently useful** for pain, so they do not add reliable benefit.",
+     "Opiates are **not proven effective** in fibromyalgia.",
+     "**Bupropion** is described for cognitive and fatigue symptoms, not as an additive pain agent.",
+     "**Benzodiazepines** are noted for sleep disturbance, not for pain relief."
+    ],
+    "whyNotPages": [
+     "",
+     "390",
+     "390",
+     "400",
+     "400"
+    ]
+   },
+   {
+    "lead": "Pregabalin is added to his SNRI, and the clinician expects each class to help different accompanying symptoms.",
+    "q": "Beyond pain, which symptoms may the new drug help?",
+    "choices": [
+     "Anxiety and the slow-wave sleep disorder",
+     "Depressed mood and fog",
+     "Executive problems and physical fatigue",
+     "Appetite change and psychomotor slowing",
+     "Fog and fatigue only"
+    ],
+    "answer": 0,
+    "why": "α2δ ligands may reduce **anxiety** and improve slow-wave sleep in fibromyalgia, whereas SNRIs cover depression, anxiety, fatigue, and cognitive symptoms.",
+    "pages": "400",
+    "whyNot": [
+     "",
+     "Depression and fog are mainly assigned to the **SNRI** in this discussion.",
+     "Executive problems and fatigue are described as **SNRI** targets, sometimes with augmenters.",
+     "Appetite change and slowing are not named as **α2δ** targets in the book.",
+     "Those are **SNRI** targets, not the added benefits of the calcium channel ligand."
+    ],
+    "whyNotPages": [
+     "",
+     "400",
+     "400",
+     "400",
+     "400"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v9-06",
+  "tag": "Fibromyalgia mechanism",
+  "topic": "pain",
+  "stem": "A 44-year-old woman has had widespread pain, fatigue, and unrefreshing sleep for years. Examination shows tenderness but no structural pathology in muscles or joints, and no injury preceded the symptoms. Her clinician suspects altered pain processing in the brain.",
+  "steps": [
+   {
+    "q": "Which process is hypothesized to underlie her condition?",
+    "choices": [
+     "Suprasegmental central sensitization",
+     "Segmental central sensitization at one spinal level",
+     "Peripheral sensitization after inflammation",
+     "Acute nociceptive activation of C fibers",
+     "Aβ fiber hyperexcitability"
+    ],
+    "answer": 0,
+    "why": "Plastic changes in brain sites, especially thalamus and cortex, can sensitize pain circuits without any trigger. This **suprasegmental** process is thought to underlie fibromyalgia.",
+    "pages": "386",
+    "whyNot": [
+     "",
+     "That occurs within the spinal cord and is linked to conditions like **shingles**, not brain-originating pain.",
+     "No inflammation or injury is found, and the chapter emphasizes **central** rather than peripheral sensitization.",
+     "Acute nociception needs a **noxious stimulus**, and she has no tissue injury.",
+     "**Aβ fibers** carry non-noxious input and are not the proposed source."
+    ],
+    "whyNotPages": [
+     "",
+     "385",
+     "382",
+     "382",
+     "381"
+    ]
+   },
+   {
+    "lead": "Her sensitization is thought to involve excessive release of excitatory transmitter in the thalamus and cortex.",
+    "q": "Which drug action best counters excess excitatory release at that site?",
+    "choices": [
+     "Binding the α2δ subunit of N- and P/Q-type calcium channels",
+     "Blocking peripheral voltage-sensitive sodium channels",
+     "Activating presynaptic μ-opioid receptors on Aβ fibers",
+     "Blocking dopamine reuptake in the striatum",
+     "Antagonizing postsynaptic 5HT1B/D receptors"
+    ],
+    "answer": 0,
+    "why": "In thalamus and cortex, glutamate release depends on N- and P/Q-type calcium channels, which α2δ ligands bind to reduce calcium influx and **excitatory** release.",
+    "pages": "395",
+    "whyNot": [
+     "",
+     "That is a **local anesthetic** peripheral mechanism and does not target thalamic and cortical release.",
+     "**Aβ fibers** do not express μ-opioid receptors, and opiates are not proven in fibromyalgia.",
+     "Striatal dopamine relates to physical **fatigue**, not excess excitatory release in pain circuits.",
+     "Blocking those inhibitory receptors would **reduce** inhibition rather than the excess release."
+    ],
+    "whyNotPages": [
+     "",
+     "381",
+     "390",
+     "389",
+     "390"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v9-07",
+  "tag": "Brain changes in pain",
+  "topic": "pain",
+  "stem": "A 55-year-old man with years of chronic low back pain notes difficulty planning and sustaining attention along with constant pain. A researcher mentions reported structural brain changes in patients like him.",
+  "steps": [
+   {
+    "q": "In which regions has reduced gray-matter density been reported in chronic back pain?",
+    "choices": [
+     "Prefrontal cortex and thalamus",
+     "Hippocampus only",
+     "Occipital cortex and cerebellum",
+     "Striatum and nucleus accumbens",
+     "Hypothalamus and raphe nuclei"
+    ],
+    "answer": 0,
+    "why": "Chronic back pain has been linked to decreased **prefrontal** and thalamic gray-matter density, regions involved in the brake on pain and in executive functioning.",
+    "pages": "388",
+    "whyNot": [
+     "",
+     "Hippocampal atrophy is the stress and depression finding, while pain reports involve **different regions**.",
+     "Visual cortex and cerebellum are not named in the pain gray-matter findings.",
+     "Striatum and accumbens are linked to **fatigue and interest**, not reported gray-matter loss.",
+     "Hypothalamus relates to **sleep and appetite** in the symptom map, not reported loss."
+    ],
+    "whyNotPages": [
+     "",
+     "390",
+     "388",
+     "389",
+     "389"
+    ]
+   },
+   {
+    "lead": "Reduced prefrontal gray matter is hypothesized to weaken the cortico-thalamic brake on pain and impair executive function.",
+    "q": "Which neurotransmitter's regulation of this circuit is hypothetically deficient?",
+    "choices": [
+     "Dopamine",
+     "Serotonin",
+     "Endorphin",
+     "Substance P",
+     "Glycine"
+    ],
+    "answer": 0,
+    "why": "Weakened prefrontal function in chronic pain is linked to deficient **dopamine** regulation of the DLPFC circuit, which could explain the executive difficulties and fibro-fog.",
+    "pages": "390",
+    "whyNot": [
+     "",
+     "Serotonin is the descending inhibitory pathway transmitter, not the DLPFC regulator named here.",
+     "Endorphins act at **μ-opioid** receptors to inhibit afferents, not to regulate DLPFC function.",
+     "Substance P is a dorsal horn **nociceptive** transmitter, not a prefrontal regulator.",
+     "Glycine is a dorsal horn **inhibitory** transmitter, not tied to executive function."
+    ],
+    "whyNotPages": [
+     "",
+     "390",
+     "390",
+     "383",
+     "383"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v9-08",
+  "tag": "Pain assessment",
+  "topic": "pain",
+  "stem": "A 33-year-old woman with major depression and generalized anxiety reports daily neck and back pain. Her mood has improved with treatment, but she has not reached full remission.",
+  "steps": [
+   {
+    "q": "How do modern psychopharmacologists increasingly regard pain assessment?",
+    "choices": [
+     "As a psychiatric vital sign needing routine evaluation",
+     "As a nonspecific outcome that needs no targeted treatment",
+     "As a purely neurological concern",
+     "As a formal diagnostic criterion of major depression",
+     "As a symptom that always remits when mood improves"
+    ],
+    "answer": 0,
+    "why": "Pain is increasingly treated as a **vital sign** that is routinely evaluated, since eliminating it is needed for full remission of many psychiatric disorders.",
+    "pages": "381",
+    "whyNot": [
+     "",
+     "That is the older view of centrally mediated pain, which is no longer considered adequate.",
+     "Pain with emotional symptoms was once labeled **psychiatric**, but it is now seen as one shared symptom.",
+     "The book notes pain is **not** a formal diagnostic feature of depression.",
+     "Pain in these disorders **persists** unless targeted, so improvement of mood alone may not clear it."
+    ],
+    "whyNotPages": [
+     "",
+     "380",
+     "387",
+     "387",
+     "381"
+    ]
+   },
+   {
+    "lead": "Pain is now assessed as a vital sign, and an SNRI or α2δ ligand is started early rather than waiting.",
+    "q": "What benefit is hoped for from treating her pain early and aggressively?",
+    "choices": [
+     "Intercepting central sensitization before it is durably imprinted",
+     "Replacing descending inhibition with facilitation",
+     "Blocking Aβ fiber transmission of touch",
+     "Permanently lowering dorsal horn neurotransmitter supply",
+     "Making mood treatment unnecessary"
+    ],
+    "answer": 0,
+    "why": "Treating early may stop painful experiences from imprinting on the CNS, **intercepting** central sensitization and possibly preventing chronic pain and a worse course.",
+    "pages": "399",
+    "whyNot": [
+     "",
+     "Facilitation **increases** pain awareness, so it is not a goal of therapy.",
+     "**Aβ fibers** carry touch, and the aim is to spare normal sensation.",
+     "The aim is to stop sensitization developing, not to deplete **transmitters** permanently.",
+     "Pain relief supports **full remission** alongside mood treatment, not in place of it."
+    ],
+    "whyNotPages": [
+     "",
+     "393",
+     "390",
+     "399",
+     "381"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v9-09",
+  "tag": "Nociceptive pain",
+  "topic": "pain",
+  "stem": "A 29-year-old man sprains his ankle and, the same week, has a tooth extracted. His pain comes from activation of primary afferent neurons with no nerve damage, and he is given an anti-inflammatory drug.",
+  "steps": [
+   {
+    "q": "Where do NSAIDs presumably act to reduce this pain?",
+    "choices": [
+     "Peripherally, on input from primary afferent neurons",
+     "At μ-opioid receptors in the periaqueductal gray",
+     "On descending serotonin neurons from the raphe",
+     "At the α2δ subunit in thalamic calcium channels",
+     "At NK1 receptors in the dorsal horn"
+    ],
+    "answer": 0,
+    "why": "For pain such as a sprain or extraction, NSAIDs presumably act **peripherally** to reduce input from primary afferent neurons.",
+    "pages": "382",
+    "whyNot": [
+     "",
+     "That is an **opioid** site of action, not an NSAID mechanism.",
+     "Descending raphe neurons are modulated by **SNRIs**, not by NSAIDs.",
+     "The α2δ site belongs to **gabapentin and pregabalin**, drugs for neuropathic pain.",
+     "Substance P acts at NK receptors, but NSAIDs act peripherally at afferent input."
+    ],
+    "whyNotPages": [
+     "",
+     "390",
+     "393",
+     "398",
+     "383"
+    ]
+   },
+   {
+    "lead": "Peripheral NSAID action is not enough when he later fractures a bone, so an opioid analgesic that acts centrally is added, and his sense of light touch stays normal.",
+    "q": "Why does it spare normal touch while relieving pain?",
+    "choices": [
+     "Aβ fibers lack μ-opioid receptors",
+     "It acts only on peripheral nerve endings",
+     "It blocks all sodium channels",
+     "Touch is carried by C fibers",
+     "It raises descending norepinephrine"
+    ],
+    "answer": 0,
+    "why": "Aβ fibers carry touch but do not express **μ-opioid receptors**, so opioid analgesics can spare normal sensory input.",
+    "pages": "390",
+    "whyNot": [
+     "",
+     "Opioids act on **central** μ receptors, as in the spinal cord and periaqueductal gray.",
+     "Blocking sodium channels is how **local anesthetics** act, and they remove all sensation.",
+     "Touch is carried by **Aβ fibers**, and C fibers carry noxious input.",
+     "That is an **SNRI** effect and is unrelated to opioid receptors."
+    ],
+    "whyNotPages": [
+     "",
+     "382",
+     "381",
+     "381",
+     "393"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v9-10",
+  "tag": "Descending NE",
+  "topic": "pain",
+  "stem": "A 36-year-old woman with fibromyalgia has joint and muscle pain without injury, thought to reflect deficient descending norepinephrine inhibition. Her pharmacologist reviews how these neurons dampen input from primary afferents.",
+  "steps": [
+   {
+    "q": "Through which receptor does norepinephrine inhibit transmitter release from primary afferents?",
+    "choices": [
+     "Presynaptic α2 adrenoceptors",
+     "α1 adrenoceptors",
+     "β1 adrenoceptors",
+     "5HT3 receptors",
+     "D2 receptors"
+    ],
+    "answer": 0,
+    "why": "Descending noradrenergic neurons inhibit release from primary afferents through inhibitory **α2 adrenoceptors**, helping mask irrelevant input.",
+    "pages": "390",
+    "whyNot": [
+     "",
+     "The inhibitory action in the dorsal horn is not through **α1** receptors.",
+     "**β1** receptors are not described in the dorsal horn pain pathway.",
+     "**5HT3** receptors are excitatory serotonin receptors that enhance release.",
+     "Dopamine **D2** receptors are not part of this descending spinal mechanism."
+    ],
+    "whyNotPages": [
+     "",
+     "390",
+     "390",
+     "390",
+     "390"
+    ]
+   },
+   {
+    "lead": "Descending norepinephrine acts at one inhibitory receptor type, so a drug that stimulates that receptor directly is considered.",
+    "q": "Which drug could exploit this receptor directly in some patients?",
+    "choices": [
+     "Clonidine",
+     "Pregabalin",
+     "Lidocaine",
+     "Naloxone",
+     "Modafinil"
+    ],
+    "answer": 0,
+    "why": "Because the inhibition runs through α2 adrenoceptors, a direct-acting **α2 agonist** such as clonidine can relieve pain in some patients.",
+    "pages": "390",
+    "whyNot": [
+     "",
+     "Pregabalin acts at the **α2δ** subunit of calcium channels, not at α2 adrenoceptors.",
+     "Lidocaine blocks voltage-sensitive **sodium** channels peripherally.",
+     "Naloxone is a **μ-opioid antagonist** and would block, not mimic, this inhibition.",
+     "Modafinil is described for fatigue and cognition, not as an α2 agonist."
+    ],
+    "whyNotPages": [
+     "",
+     "398",
+     "381",
+     "393",
+     "400"
+    ]
+   }
+  ]
+ }
+]

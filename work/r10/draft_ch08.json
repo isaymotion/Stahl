@@ -1,0 +1,632 @@
+[
+ {
+  "id": "v8-01",
+  "tag": "Worry circuit",
+  "topic": "circuits",
+  "stem": "A 34-year-old woman describes months of relentless catastrophic thinking and apprehensive anticipation about work and family, with only occasional abrupt surges of panic or phobic fear. She sleeps poorly and tires easily. Her clinician wants to link her predominant complaint to a brain circuit before choosing a drug.",
+  "steps": [
+   {
+    "q": "Which circuit is hypothesized to underlie her predominant symptom?",
+    "choices": [
+     "Cortico-striato-thalamo-cortical loops from the prefrontal cortex",
+     "Amygdala connections to the periaqueductal gray",
+     "Amygdala connections to the parabrachial nucleus",
+     "Amygdala connections to the hypothalamus",
+     "Hippocampal connections that retrieve traumatic memories"
+    ],
+    "answer": 0,
+    "why": "Her main symptom is **worry** (catastrophic thinking, apprehensive expectation), which the book ties to **CSTC loops** running through the prefrontal cortex; fear and panic belong to amygdala circuits.",
+    "pages": "365",
+    "whyNot": [
+     "",
+     "That route drives **motor** responses such as fight, flight or freezing, not ruminative worry.",
+     "That route alters **breathing** during fear, causing shortness of breath, not catastrophic thinking.",
+     "That route governs **endocrine** output through the HPA axis and cortisol, not apprehensive thoughts.",
+     "That pathway fuels **re-experiencing** of trauma, as in PTSD, rather than generalized apprehension."
+    ],
+    "whyNotPages": [
+     "",
+     "364",
+     "364",
+     "364",
+     "365"
+    ]
+   },
+   {
+    "lead": "Because her worry reflects overactive CSTC loops, an SSRI is started.",
+    "q": "Through what action would the SSRI be expected to reduce her worry?",
+    "choices": [
+     "Raising serotonin input to prefrontal, striatal and thalamic neurons of the loop, which can inhibit its output",
+     "Blocking release of glutamate through presynaptic N and P/Q calcium channels",
+     "Enhancing inhibitory GABA interneurons through benzodiazepine sites on GABAA receptors",
+     "Blocking postsynaptic α1 receptors to dampen noradrenergic input to the loop",
+     "Boosting NMDA receptor activation to strengthen extinction-related synapses"
+    ],
+    "answer": 0,
+    "why": "Serotonin neurons innervate every element of the **CSTC loop** and can have an **inhibitory** effect on its output, so more serotonin input is the proposed way SSRIs quiet worry.",
+    "pages": "368–369",
+    "whyNot": [
+     "",
+     "That is the proposed action of **α2δ ligands** such as pregabalin, not of a serotonin reuptake inhibitor.",
+     "That is how **benzodiazepines** act, by enhancing phasic GABA inhibition rather than by serotonin.",
+     "That mechanism relates to **nightmares and hyperarousal**, a noradrenergic target rather than the serotonergic one.",
+     "That is an experimental way to **facilitate extinction** during exposure therapy, not an SSRI mechanism."
+    ],
+    "whyNotPages": [
+     "",
+     "368",
+     "366",
+     "370",
+     "375"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v8-02",
+  "tag": "GAD, bridging",
+  "topic": "gaba",
+  "stem": "A 29-year-old man with generalized anxiety disorder has no history of alcohol or other substance misuse. His clinician plans to start an SSRI but expects the first weeks to be difficult, since the drug may feel activating and will take time to work.",
+  "steps": [
+   {
+    "q": "Which short-term strategy is most appropriate alongside starting the SSRI?",
+    "choices": [
+     "A short course of a benzodiazepine",
+     "A norepinephrine transporter inhibitor",
+     "An α1 antagonist at bedtime",
+     "A daily β blocker",
+     "An opioid"
+    ],
+    "answer": 0,
+    "why": "In patients who do not misuse substances, a brief **benzodiazepine** can cover the start of an SSRI, which is often **activating**, hard to tolerate early and slow in onset.",
+    "pages": "377",
+    "whyNot": [
+     "",
+     "A **NET inhibitor** can transiently worsen anxiety early in treatment, so it does not bridge the start.",
+     "An **α1 antagonist** at night is the unique PTSD nightmare treatment, not a bridge in GAD.",
+     "A **β blocker** suits very discrete performance anxiety rather than generalized, persistent worry.",
+     "**Opioids** appear only in the context of blunting fear consolidation right after trauma."
+    ],
+    "whyNotPages": [
+     "",
+     "370",
+     "378",
+     "377",
+     "375"
+    ]
+   },
+   {
+    "lead": "A benzodiazepine is added, and within days he feels calmer, well before the SSRI could be expected to act.",
+    "q": "What best explains why he feels calmer within days, long before the SSRI would help?",
+    "choices": [
+     "Acute occupancy of benzodiazepine receptors, with no delay for receptor adaptation",
+     "Downregulation of postsynaptic β1 receptors over weeks",
+     "Adaptive changes at 5HT1A receptors after sustained stimulation",
+     "Blockade of excitatory glutamate release by α2δ binding",
+     "Strengthening of extinction synapses through NMDA receptor activation"
+    ],
+    "answer": 0,
+    "why": "Benzodiazepines act **acutely** by occupying their receptors and boosting phasic GABA inhibition, unlike serotonergic agents whose benefit needs **adaptive** receptor changes.",
+    "pages": "370",
+    "whyNot": [
+     "",
+     "That slow **β1 downregulation** is the delayed effect of sustained NET inhibition, not of a benzodiazepine.",
+     "Such **adaptive** 5HT1A events explain the delayed onset of buspirone and antidepressants.",
+     "That is the **α2δ ligand** mechanism, which is distinct from the GABA-based action here.",
+     "That is an **experimental** strategy paired with exposure therapy, not a benzodiazepine effect."
+    ],
+    "whyNotPages": [
+     "",
+     "370",
+     "370",
+     "368",
+     "375"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v8-03",
+  "tag": "Fear conditioning",
+  "topic": "anxiety-trauma",
+  "stem": "A 31-year-old teacher had an unexpected panic attack while presenting at a staff meeting. Since then she feels intense panic on walking into any meeting and has begun to avoid them. She asks why the fear now seems automatic.",
+  "steps": [
+   {
+    "q": "Which process best describes how her fear response was acquired?",
+    "choices": [
+     "Fear conditioning",
+     "Fear extinction",
+     "Reconsolidation of a retrieved memory",
+     "Renewal of extinguished fear",
+     "Hippocampal re-experiencing of a traumatic event"
+    ],
+    "answer": 0,
+    "why": "Panic linked to a social setting **teaches** the patient to panic in that setting again; this learned association is **fear conditioning**, embedded in amygdala glutamate synapses.",
+    "pages": "372",
+    "whyNot": [
+     "",
+     "That is the opposite process, **new learning** that suppresses a fear response, so it cannot explain a growing fear.",
+     "That describes a consolidated memory turning **labile** on retrieval, not the initial acquisition of fear.",
+     "That is the **return** of fear after successful extinction, which has not occurred here.",
+     "That is PTSD-type **re-experiencing** of trauma stored in the hippocampus, not panic tied to a setting."
+    ],
+    "whyNotPages": [
+     "",
+     "374",
+     "376",
+     "374",
+     "366"
+    ]
+   },
+   {
+    "lead": "Her fear is recognized as fear conditioning, which is not readily reversed but can be inhibited by new learning.",
+    "q": "How does exposure-based therapy engage the opposing process?",
+    "choices": [
+     "Repeated safe exposure builds new extinction learning, in which VMPFC and hippocampal input suppresses amygdala fear output",
+     "Repeated safe exposure erases the original synaptic changes so the memory is forgotten",
+     "Repeated safe exposure blocks NMDA receptors so glutamate synapses in the amygdala weaken",
+     "Repeated safe exposure raises cortisol through the HPA axis to blunt amygdala activity",
+     "Repeated safe exposure downregulates β1 receptors on locus coeruleus neurons"
+    ],
+    "answer": 0,
+    "why": "Presenting the feared stimulus repeatedly without harm lets prefrontal and hippocampal input **learn a safe context** and inhibit the amygdala; the original memory is **suppressed, not removed**.",
+    "pages": "374",
+    "whyNot": [
+     "",
+     "The book stresses that the conditioned **memory remains**; extinction inhibits it rather than reversing it.",
+     "The experimental idea is the opposite: **boosting** NMDA action so extinction synapses strengthen.",
+     "**Cortisol** is a fear output of HPA activation, not a mechanism that suppresses conditioned fear.",
+     "**β1 downregulation** is the delayed effect of sustained NET inhibition by a drug, not of exposure."
+    ],
+    "whyNotPages": [
+     "",
+     "374",
+     "375",
+     "364",
+     "370"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v8-04",
+  "tag": "Extinction, renewal",
+  "topic": "anxiety-trauma",
+  "stem": "A 27-year-old man with a phobia completed exposure therapy in his therapist's office and no longer reacted to the feared stimulus there. Weeks later he met the same stimulus in an unfamiliar workplace and felt intense fear again.",
+  "steps": [
+   {
+    "q": "What is this phenomenon called?",
+    "choices": [
+     "Renewal",
+     "Consolidation",
+     "Reconsolidation",
+     "Stress sensitization",
+     "Fear conditioning from scratch"
+    ],
+    "answer": 0,
+    "why": "Conditioned fear can return when the old stimulus appears in a **context different** from the one in which suppression was learned; this return is called **renewal**.",
+    "pages": "374",
+    "whyNot": [
+     "",
+     "That is the **initial** molecular fixing of a fear memory when fear is first conditioned.",
+     "That is the **restoring** of a retrieved, labile memory, not the return of fear in a new setting.",
+     "That is increased circuit **vulnerability** from earlier exposure to stressors such as child abuse.",
+     "He already had extinction in the office; the book calls the return of that fear **renewal**, not new conditioning."
+    ],
+    "whyNotPages": [
+     "",
+     "375",
+     "376",
+     "372",
+     "374"
+    ]
+   },
+   {
+    "lead": "His fear is renewal after extinction, which arises because extinction learning stays tied to the setting where it was learned.",
+    "q": "Which research approach is aimed at fixing the limitation behind this problem?",
+    "choices": [
+     "Using contextual cues to strengthen extinction so that it generalizes to other settings",
+     "Running all future sessions only in the original office",
+     "Giving a benzodiazepine before each session to suppress amygdala output",
+     "Giving a β blocker right after the trauma to block consolidation",
+     "Stopping exposure and relying on drugs to erase the memory"
+    ],
+    "answer": 0,
+    "why": "Because the hippocampus remembers the context of extinction, gains stay **context-specific**; studies are exploring **contextual cues** to strengthen extinction so it carries beyond the office.",
+    "pages": "374–375",
+    "whyNot": [
+     "",
+     "That would keep extinction **context-bound**, the very limitation causing his relapse.",
+     "Benzodiazepines **suppress** fear output rather than strengthen extinction, and do not fix generalization.",
+     "That targets the **initial consolidation** of trauma memory, not extinction already achieved in therapy.",
+     "Current drugs only **suppress** the fear response and do not erase the learning behind it."
+    ],
+    "whyNotPages": [
+     "",
+     "374",
+     "374",
+     "375",
+     "372"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v8-05",
+  "tag": "PTSD, nightmares",
+  "topic": "norepinephrine",
+  "stem": "A 38-year-old veteran with PTSD is stable on an SSRI but still has trauma nightmares and nighttime hyperarousal. He drinks heavily on weekends and mentions that a previous clinician prescribed a benzodiazepine for sleep.",
+  "steps": [
+   {
+    "q": "Which medication does the book describe as a unique PTSD treatment for his nightmares?",
+    "choices": [
+     "An α1 antagonist given at night",
+     "A benzodiazepine",
+     "A norepinephrine transporter inhibitor",
+     "An α2δ ligand",
+     "A 5HT1A partial agonist"
+    ],
+    "answer": 0,
+    "why": "Nightmares and hyperarousal are linked to excess noradrenergic activity, and an **α1 antagonist at night** is singled out as a **unique** PTSD treatment for nightmares.",
+    "pages": "378",
+    "whyNot": [
+     "",
+     "**Benzodiazepines** need caution in PTSD: limited trial evidence and frequent alcohol or other substance misuse.",
+     "**NET inhibitors** reduce fear and worry only after delayed receptor adaptation and can worsen anxiety at first.",
+     "**α2δ ligands** block glutamate release in fear and worry circuits, not specifically nightmares.",
+     "**Buspirone**-type agents are recognized for generalized anxiety disorder, not for PTSD nightmares."
+    ],
+    "whyNotPages": [
+     "",
+     "378",
+     "370",
+     "368",
+     "370"
+    ]
+   },
+   {
+    "lead": "An α1 antagonist is prescribed at night in addition to the SSRI.",
+    "q": "What is its presumed mechanism of action?",
+    "choices": [
+     "Blocking excess norepinephrine input onto postsynaptic α1 receptors in fear circuits",
+     "Blocking release of glutamate through presynaptic calcium channels",
+     "Enhancing phasic GABA inhibition at postsynaptic GABAA receptors",
+     "Downregulating postsynaptic β1 receptors through sustained transporter inhibition",
+     "Enhancing serotonin input to the amygdala through partial agonism"
+    ],
+    "answer": 0,
+    "why": "Locus coeruleus **noradrenergic overdrive** onto α1 and β1 receptors is thought to produce nightmares and hyperarousal; an **α1 blocker** counters that input.",
+    "pages": "370–371",
+    "whyNot": [
+     "",
+     "That is how **α2δ ligands** work, a different target from noradrenergic receptors.",
+     "That is the **benzodiazepine** mechanism, which the book cautions about in PTSD.",
+     "That is the delayed effect of a **NET inhibitor**, a different noradrenergic strategy.",
+     "That describes **5HT1A** drugs such as buspirone, which act on serotonin rather than norepinephrine."
+    ],
+    "whyNotPages": [
+     "",
+     "368",
+     "366",
+     "371",
+     "370"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v8-06",
+  "tag": "GAD, augmentation",
+  "topic": "ion-channels",
+  "stem": "A 45-year-old woman in the United States has generalized anxiety disorder. She is stable on an SSRI but has only partial relief and is not in remission. Benzodiazepines previously did not suit her, so her clinician looks for another add-on.",
+  "steps": [
+   {
+    "q": "Which add-on does the book describe as useful for a partial responder like her?",
+    "choices": [
+     "An α2δ ligand",
+     "A monoamine oxidase inhibitor",
+     "An agent enhancing NMDA action during exposure",
+     "A β blocker",
+     "An α1 antagonist"
+    ],
+    "answer": 0,
+    "why": "**α2δ ligands** work differently from SSRIs and benzodiazepines, so they suit patients who do poorly on those drugs and can be **combined** with SSRIs in **partial responders**.",
+    "pages": "368",
+    "whyNot": [
+     "",
+     "**MAOIs** are the neglected option for **treatment-resistant panic**, not the add-on named for GAD partial responders.",
+     "That is an **experimental** strategy for extinction learning, not an established add-on.",
+     "**β blockers** are for very discrete types of social anxiety such as performance anxiety.",
+     "**α1 antagonists** are used at night for PTSD nightmares, not for GAD."
+    ],
+    "whyNotPages": [
+     "",
+     "377",
+     "375",
+     "377",
+     "378"
+    ]
+   },
+   {
+    "lead": "Pregabalin, an α2δ ligand, is chosen as the add-on to her SSRI.",
+    "q": "How would this use be characterized in her country?",
+    "choices": [
+     "Off-label augmentation, since these ligands are approved for anxiety elsewhere but not in the US",
+     "On-label, since they are approved in the US for anxiety",
+     "Contraindicated, since α2δ ligands cannot be combined with SSRIs",
+     "Investigational, since they lack proven anxiolytic action",
+     "Limited to PTSD, where certain SSRIs are approved"
+    ],
+    "answer": 0,
+    "why": "The book says pregabalin and gabapentin are approved for anxiety in Europe and some other countries but **not in the US**, where they serve as **off-label** augmenting agents.",
+    "pages": "377",
+    "whyNot": [
+     "",
+     "That is wrong for the US: approval for anxiety exists in **other countries**, not there.",
+     "The book explicitly says they can be **combined** with SSRIs or SNRIs in partial responders.",
+     "They have shown **anxiolytic** actions in social anxiety and panic disorder, so they are not merely investigational.",
+     "The book mentions **approval** of certain SSRIs for PTSD, not of α2δ ligands."
+    ],
+    "whyNotPages": [
+     "",
+     "377",
+     "368",
+     "368",
+     "377"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v8-07",
+  "tag": "Early trauma",
+  "topic": "norepinephrine",
+  "stem": "A 42-year-old woman is brought to the emergency department after a severe car crash with serious injuries. She is frightened but has no psychiatric diagnosis, and the team hopes to lower her risk of later PTSD by acting immediately.",
+  "steps": [
+   {
+    "q": "Which drug class given soon after the trauma may block consolidation of the fear memory?",
+    "choices": [
+     "A β-adrenergic blocker",
+     "An SSRI",
+     "A benzodiazepine",
+     "An α2δ ligand",
+     "A 5HT1A partial agonist"
+    ],
+    "answer": 0,
+    "why": "Giving a **β blocker** right after an acute trauma may blunt the **initial conditioning** of the traumatic memory and lower the chance of PTSD.",
+    "pages": "375",
+    "whyNot": [
+     "",
+     "An **SSRI** relieves established anxiety after delayed adaptation and is not described as blocking consolidation.",
+     "A **benzodiazepine** acutely blunts amygdala output; the book does not link it to blocking consolidation.",
+     "An **α2δ ligand** reduces glutamate release in fear circuits, not memory consolidation.",
+     "A **5HT1A** agent such as buspirone acts after a delay on established symptoms."
+    ],
+    "whyNotPages": [
+     "",
+     "370",
+     "366",
+     "368",
+     "370"
+    ]
+   },
+   {
+    "lead": "A β blocker is given in the emergency department, and weeks later her therapist deliberately reactivates the crash memory during sessions.",
+    "q": "What further action of this drug class is proposed once a consolidated memory is reactivated in therapy?",
+    "choices": [
+     "Disrupting reconsolidation of the labile, retrieved fear memory",
+     "Permanently erasing the extinction memory",
+     "Boosting NMDA-driven potentiation at extinction synapses",
+     "Increasing glutamate release in the lateral amygdala",
+     "Strengthening the original fear conditioning"
+    ],
+    "answer": 0,
+    "why": "A retrieved memory becomes **labile** and needs **protein synthesis** to be restored; β blockers may **disrupt reconsolidation**, helping the patient to weaken the memory.",
+    "pages": "376",
+    "whyNot": [
+     "",
+     "The proposed effect is to weaken the **fear memory**, not to erase extinction learning.",
+     "That is a separate **experimental** approach to facilitating extinction, not the β blocker action.",
+     "More glutamate efficiency is how fear is **conditioned**, the opposite of the aim here.",
+     "That is the **opposite direction**: the goal is to weaken, not reinforce, the conditioned memory."
+    ],
+    "whyNotPages": [
+     "",
+     "374",
+     "375",
+     "372",
+     "376"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v8-08",
+  "tag": "Panic, resistant",
+  "topic": "anxiety-trauma",
+  "stem": "A 36-year-old woman has panic disorder with unexpected attacks and avoids crowded places. Trials of an SSRI, an SNRI, a benzodiazepine and an α2δ ligand each failed to produce remission, so her clinician reconsiders older options.",
+  "steps": [
+   {
+    "q": "Which older drug class does the book say should be considered when other agents have failed?",
+    "choices": [
+     "Monoamine oxidase inhibitors",
+     "β blockers",
+     "α1 antagonists",
+     "Buspirone",
+     "NMDA-enhancing agents"
+    ],
+    "answer": 0,
+    "why": "The book calls **MAOIs** much neglected yet capable of **powerful efficacy** in panic, to be considered in treatment-resistant panic when other agents fail.",
+    "pages": "377",
+    "whyNot": [
+     "",
+     "**β blockers** are for very discrete social anxiety such as performance anxiety, not resistant panic.",
+     "**α1 antagonists** are the unique night-time treatment for PTSD nightmares.",
+     "**Buspirone** is recognized for generalized anxiety disorder, not for the other anxiety subtypes.",
+     "These are **experimental** agents timed to exposure therapy, not established treatment."
+    ],
+    "whyNotPages": [
+     "",
+     "377",
+     "378",
+     "370",
+     "375"
+    ]
+   },
+   {
+    "lead": "A monoamine oxidase inhibitor is chosen because the other agents failed, but she still avoids crowded places.",
+    "q": "Which added approach would address her avoidance of crowded places?",
+    "choices": [
+     "Cognitive behavioral therapy with exposure",
+     "A nighttime α1 antagonist",
+     "A β blocker with a benzodiazepine",
+     "Alcohol before entering crowds",
+     "An opioid after each attack"
+    ],
+    "answer": 0,
+    "why": "**CBT** can augment or replace drugs in panic disorder, correcting cognitive distortions and, through **exposure**, reducing phobic avoidance.",
+    "pages": "377",
+    "whyNot": [
+     "",
+     "An **α1 antagonist** at night is the PTSD nightmare treatment, not a remedy for phobic avoidance.",
+     "That combination is for very **discrete** performance anxiety, not panic with phobic avoidance.",
+     "Alcohol is **effective** short-term in social anxiety but obviously should not be used; patients may abuse it.",
+     "**Opioids** are discussed only as blunting fear consolidation right after trauma."
+    ],
+    "whyNotPages": [
+     "",
+     "378",
+     "377",
+     "377",
+     "375"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v8-09",
+  "tag": "Performance anxiety",
+  "topic": "anxiety-trauma",
+  "stem": "A 26-year-old violinist feels intense fear only when performing before audiences and is comfortable otherwise. She has no history of substance misuse and is seeking a targeted treatment for these performances.",
+  "steps": [
+   {
+    "q": "Which treatment does the book suggest for this very discrete type of social anxiety?",
+    "choices": [
+     "A β blocker, sometimes with a benzodiazepine",
+     "A monoamine oxidase inhibitor",
+     "An α1 antagonist at night",
+     "Buspirone",
+     "An NMDA-enhancing agent during exposure"
+    ],
+    "answer": 0,
+    "why": "For very **discrete** social anxiety, such as performance anxiety, **β blockers**, sometimes combined with a benzodiazepine, can help some patients.",
+    "pages": "377",
+    "whyNot": [
+     "",
+     "**MAOIs** are the neglected option for resistant panic; evidence for older antidepressants in social anxiety is thin.",
+     "**α1 antagonists** are used at night for PTSD nightmares.",
+     "**Buspirone** is recognized for generalized anxiety disorder, not other subtypes.",
+     "That is an **experimental** extinction-facilitating strategy, not a routine treatment."
+    ],
+    "whyNotPages": [
+     "",
+     "377",
+     "378",
+     "370",
+     "375"
+    ]
+   },
+   {
+    "lead": "She starts a β blocker for performances, and she also admits she has been drinking before them.",
+    "q": "She admits she has been drinking before performances. How should her clinician regard this?",
+    "choices": [
+     "It is effective in the short term but should not be used, and many patients misuse it before seeking treatment",
+     "It is an acceptable adjunct to the β blocker",
+     "It is the preferred first-line option for social anxiety",
+     "It works by enhancing extinction learning",
+     "It is harmless because the anxiety is performance-only"
+    ],
+    "answer": 0,
+    "why": "The book notes alcohol is **quite effective** for social anxiety symptoms yet should **not be used**; many patients abuse it before finding safer, better treatment.",
+    "pages": "377",
+    "whyNot": [
+     "",
+     "The book says it is **unsuitable** to use, so it cannot be an acceptable adjunct.",
+     "Safer options such as **SSRIs, SNRIs, α2δ ligands and CBT** are preferred instead.",
+     "Its anxiolysis is **suppressive**; extinction needs new learning, as with exposure therapy.",
+     "Its use is **risky** because patients with social anxiety often misuse alcohol."
+    ],
+    "whyNotPages": [
+     "",
+     "377",
+     "377",
+     "374",
+     "377"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v8-10",
+  "tag": "Symptom-based",
+  "topic": "circuits",
+  "stem": "A 40-year-old man meets criteria for a major depressive episode and also has prominent fear and worry, poor sleep, fatigue and poor concentration, but does not qualify for a separate anxiety disorder. A resident asks whether his drug plan must differ from that of a depressed patient with a full comorbid anxiety disorder.",
+  "steps": [
+   {
+    "q": "What does the book suggest?",
+    "choices": [
+     "Drug treatment may differ little, since the symptoms overlap and many of the same agents treat them",
+     "Treatment must be strictly diagnosis-specific, since the brain is organized by DSM categories",
+     "Antidepressants should be avoided until a formal anxiety disorder is diagnosed",
+     "Only benzodiazepines are suited to anxiety symptoms outside an anxiety disorder",
+     "A mood stabilizer is required whenever anxiety accompanies depression"
+    ],
+    "answer": 0,
+    "why": "The book argues the treatments may differ little across these presentations, because the symptoms overlap and the same drugs, including antidepressants, treat many of them.",
+    "pages": "361",
+    "whyNot": [
+     "",
+     "The book says the brain is organized by **circuits**, not the DSM, so diagnosis need not dictate the drug.",
+     "Drugs for **depression** are leading treatments for anxiety disorders, so they need no formal diagnosis first.",
+     "Benzodiazepines are only **one** option, alongside SSRIs, SNRIs, buspirone and α2δ ligands.",
+     "The book names **antidepressants** and anxiolytics, not mood stabilizers, for this overlap."
+    ],
+    "whyNotPages": [
+     "",
+     "361",
+     "368",
+     "377",
+     "361"
+    ]
+   },
+   {
+    "lead": "Treatment may differ little, so the team takes a symptom-based approach and lists his fear, worry, insomnia, fatigue and poor concentration.",
+    "q": "What is the next step in that approach?",
+    "choices": [
+     "Match each symptom to its malfunctioning circuit and regulating neurotransmitters, then combine drugs rationally",
+     "Select one drug by the DSM label and avoid combining agents",
+     "Treat only the core depressive symptoms and ignore fear and worry",
+     "Wait for symptoms to evolve into a full anxiety disorder",
+     "Choose the drug with the strongest sedative effect"
+    ],
+    "answer": 0,
+    "why": "Symptoms are deconstructed, **matched to circuits** regulated by specific neurotransmitters, and drugs are combined to improve information processing and reach **remission**.",
+    "pages": "361–362",
+    "whyNot": [
+     "",
+     "The book favors a **symptom-based** strategy rather than a diagnosis-bound, single-drug plan.",
+     "Fear and worry are **core** anxiety symptoms that are targeted, not ignored.",
+     "Waiting is not advised; the approach acts on **current symptoms** rather than the final label.",
+     "Sedation is not the organizing principle; **circuit and neurotransmitter** matching is."
+    ],
+    "whyNotPages": [
+     "",
+     "361",
+     "360",
+     "361",
+     "361"
+    ]
+   }
+  ]
+ }
+]

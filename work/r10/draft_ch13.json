@@ -1,0 +1,947 @@
+[
+ {
+  "id": "v13-01",
+  "tag": "Circuits",
+  "topic": "impulse-compulsive",
+  "stem": "A 38-year-old man began placing bets at a casino for the thrill of winning. Over several years he has needed larger stakes and cannot stop despite mounting debts. Now he feels pulled to drive to the casino whenever he passes it, even though he says gambling no longer feels enjoyable.",
+  "steps": [
+   {
+    "q": "Which circuit most likely drove his behavior in the early, reward-seeking phase?",
+    "choices": [
+     "The ventral striatum–thalamus–VMPFC/ACC loop",
+     "The dorsal striatum–thalamus–OFC loop",
+     "The ventral striatum–thalamus–OFC loop",
+     "The dorsal striatum–thalamus–VMPFC/ACC loop",
+     "The top-down prefrontal response inhibition system"
+    ],
+    "answer": 0,
+    "why": "Early reward-driven acts rely on the **ventral striatal loop** (ventral striatum, thalamus, then VMPFC and ACC). The compulsive habit loop is a separate, dorsal circuit.",
+    "pages": "540",
+    "whyNot": [
+     "",
+     "That is the **compulsive** habit loop, which takes over later rather than driving early reward-seeking.",
+     "That mixes the loops; the OFC belongs to the **dorsal** habit circuit, not the ventral reward loop.",
+     "The VMPFC and ACC pair with the **ventral** striatum; the dorsal striatum connects to the OFC.",
+     "That system **restrains** impulses; impulsive acts arise when it is inadequate or overcome by the bottom-up loop."
+    ],
+    "whyNotPages": [
+     "",
+     "540",
+     "540",
+     "540",
+     "540"
+    ]
+   },
+   {
+    "lead": "That ventral loop drove his early betting. Years later he gambles almost automatically when he sees the casino, with little enjoyment of the outcome.",
+    "q": "What change best explains his current behavior?",
+    "choices": [
+     "Top-down orbitofrontal inhibition has strengthened and now restrains him",
+     "The ventral loop now responds more strongly to winning",
+     "Control has migrated from the ventral loop to the dorsal habit loop",
+     "His gambling has become goal-directed and guided by expected outcomes",
+     "Control has migrated from the dorsal to the ventral circuit"
+    ],
+    "answer": 2,
+    "why": "Repetition engages neuroplastic changes that move control **dorsally**, so an impulsive act becomes a cue-triggered habit that no longer depends on its payoff.",
+    "pages": "540",
+    "whyNot": [
+     "Opposite: compulsions arise when top-down inhibition is **inadequate** or overcome, not when it grows stronger.",
+     "Ventral dopamine neurons **stop** responding to the primary reward; cue responses shift to the dorsal striatum.",
+     "",
+     "Goal-directed acts depend on wanting the outcome; **habits** are triggered by stimuli and insensitive to outcome.",
+     "Opposite direction: dorsal-to-ventral reversal is the **treatment goal**, not what happens as addiction develops."
+    ],
+    "whyNotPages": [
+     "540",
+     "544",
+     "",
+     "539",
+     "540"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-02",
+  "tag": "Stimulants",
+  "topic": "addiction",
+  "stem": "A 22-year-old student with ADHD takes his prescribed oral stimulant as directed and never feels euphoric. After a friend shows him how to crush tablets and snort the powder, he describes an intense rush and begins doing this repeatedly.",
+  "steps": [
+   {
+    "q": "What best explains the stronger reinforcing effect of snorting?",
+    "choices": [
+     "Abrupt, massive dopamine transporter blockade in the mesolimbic reward circuit",
+     "A steady rise in tonic dopamine release in the prefrontal cortex",
+     "Added blockade of the serotonin transporter by amphetamine",
+     "Moderate DAT and NET occupancy in the prefrontal cortex",
+     "Slower absorption that prolongs the dopamine rise"
+    ],
+    "answer": 0,
+    "why": "Fast brain entry produces sudden, large **DAT blockade** in the mesolimbic circuit, mimicking phasic dopamine firing; oral dosing enters slowly and is far less reinforcing.",
+    "pages": "544–545",
+    "whyNot": [
+     "",
+     "Steady tonic levels at moderate occupancy are the **therapeutic** ADHD pattern, not the reinforcing one.",
+     "Serotonin transporter inhibition is a feature of **cocaine**; amphetamine acts mainly on DAT and NET.",
+     "That moderate occupancy underlies the **therapeutic** effects, not the reinforcing high.",
+     "Opposite: **slower** entry reduces reinforcement, which is why oral use is less abused."
+    ],
+    "whyNotPages": [
+     "",
+     "544",
+     "545",
+     "544",
+     "544"
+    ]
+   },
+   {
+    "lead": "The abrupt surges are what he keeps seeking, and within months his use is daily. He now craves between doses and feels sleepy and anhedonic when not using.",
+    "q": "Which dopamine pattern best fits his state between doses?",
+    "choices": [
+     "Exaggerated phasic bursts even without a dose",
+     "Normal tonic and phasic firing, with craving from other systems",
+     "Sustained high tonic firing that causes euphoria",
+     "Residual tonic firing with loss of pleasurable phasic firing",
+     "Permanent loss of dopamine neurons, called burn-out"
+    ],
+    "answer": 3,
+    "why": "With chronic use, reward conditioning leaves **craving** between doses and only residual tonic firing; the pleasurable phasic bursts are lost, so higher doses are chased.",
+    "pages": "545",
+    "whyNot": [
+     "Pleasurable phasic firing occurs with early doses; later it is **lost** between doses.",
+     "Craving here is tied to altered dopamine firing, with tonic firing left and the phasic signal **absent**.",
+     "Euphoria needs **phasic** firing; between doses he is sleepy and anhedonic, not elated.",
+     "",
+     "Burn-out is a **later** stage of enduring depletion; interdose craving and anhedonia reflect earlier stages."
+    ],
+    "whyNotPages": [
+     "545",
+     "545",
+     "546",
+     "",
+     "546"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-03",
+  "tag": "Nicotine",
+  "topic": "addiction",
+  "stem": "A 46-year-old man with schizophrenia smokes about a pack a day. He has tried nicotine patches several times but kept smoking on top of them. He now asks for a medication that eases withdrawal and also makes any cigarette he does smoke unrewarding.",
+  "steps": [
+   {
+    "q": "Which medication best fits his request?",
+    "choices": [
+     "Bupropion",
+     "Varenicline",
+     "Nicotine nasal spray",
+     "Acamprosate",
+     "Naltrexone"
+    ],
+    "answer": 1,
+    "why": "Varenicline is a selective **α4β2 partial agonist**: it supplies enough stimulation to ease withdrawal while competing with nicotine, so a lapse is much less rewarding.",
+    "pages": "551–552",
+    "whyNot": [
+     "It adds dopamine to ease craving, but patients can still **smoke over** it and keep the habit going.",
+     "",
+     "Other nicotine routes give steady nicotine that eases craving, yet patients can **smoke over** them too.",
+     "It targets **glutamate** overexcitation in alcohol withdrawal and has no role at nicotinic receptors.",
+     "It is a **μ-opioid antagonist** used for alcohol and opioid dependence, not a nicotinic agent."
+    ],
+    "whyNotPages": [
+     "553",
+     "",
+     "551",
+     "556",
+     "556"
+    ]
+   },
+   {
+    "lead": "Varenicline is started. Two weeks later, despite the plan, he smokes a cigarette.",
+    "q": "What is the expected effect of that cigarette?",
+    "choices": [
+     "Little reinforcement, because varenicline binds with higher affinity than nicotine",
+     "Full reinforcement, because nicotine displaces varenicline",
+     "Stronger reward from amplified phasic dopamine release",
+     "An aversive reaction from acetaldehyde buildup",
+     "Precipitated withdrawal from nicotinic antagonism"
+    ],
+    "answer": 0,
+    "why": "Varenicline's higher receptor affinity leaves nicotine unable to **compete**, so smoking brings little reward and repeated lapses can extinguish the habit.",
+    "pages": "573–574",
+    "whyNot": [
+     "",
+     "Opposite: varenicline has **higher** affinity, so nicotine cannot displace it as it can with other treatments.",
+     "Varenicline **reduces** the dopamine reward of smoking by competing with nicotine at α4β2 receptors.",
+     "That aversion belongs to **disulfiram** with alcohol, not to a nicotinic partial agonist.",
+     "It is a **partial agonist** that stimulates some neurotransmission, easing rather than precipitating withdrawal."
+    ],
+    "whyNotPages": [
+     "",
+     "573",
+     "552",
+     "556",
+     "552"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-04",
+  "tag": "Alcohol",
+  "topic": "addiction",
+  "stem": "A 41-year-old woman drinks heavily most evenings and says the first few drinks give her a distinct lift. She uses no opioids. She wants to cut down but does not feel ready to commit to complete abstinence, and she asks what medication could help.",
+  "steps": [
+   {
+    "q": "Which medication best targets the way alcohol rewards her?",
+    "choices": [
+     "Naltrexone",
+     "Acamprosate",
+     "Disulfiram",
+     "Varenicline",
+     "Buprenorphine"
+    ],
+    "answer": 0,
+    "why": "Alcohol's reinforcement partly runs through **opioid synapses** in the VTA, so a μ-opioid antagonist such as naltrexone blunts the high of heavy drinking.",
+    "pages": "555–556",
+    "whyNot": [
+     "",
+     "It eases glutamate overexcitation and GABA deficiency after alcohol is withdrawn; it does not block the **reward** of drinking.",
+     "It works by **aversion**, inhibiting aldehyde dehydrogenase so acetaldehyde builds up, not by blunting reward.",
+     "It is a nicotinic partial agonist for **smoking cessation**, not for alcohol's opioid-linked reward.",
+     "It is a μ-opioid **partial agonist** for opioid dependence, not an antagonist that blocks alcohol's reward."
+    ],
+    "whyNotPages": [
+     "",
+     "556",
+     "556",
+     "551",
+     "560"
+    ]
+   },
+   {
+    "lead": "Naltrexone is prescribed. She asks whether she should wait to take it until she has stopped drinking completely.",
+    "q": "Which advice fits the extinction approach to using it?",
+    "choices": [
+     "Take it only during strict abstinence",
+     "Start it only after detoxification and deprivation have removed craving",
+     "Take it about an hour before drinking, so alcohol loses its rewarding effect and the habit extinguishes",
+     "Take a dose that produces an aversive flushing reaction with each drink",
+     "Use it briefly to replace alcohol's GABA and glutamate effects in withdrawal"
+    ],
+    "answer": 2,
+    "why": "The aim is pharmacological **extinction**: when drinking no longer rewards, the conditioned habit weakens. Antagonists work best paired with drinking, poorly during abstinence.",
+    "pages": "573",
+    "whyNot": [
+     "Opioid antagonists are relatively **ineffective** when given during abstinence; extinction needs drinking while blocked.",
+     "Deprivation does not stop craving; it actually **increases** later drinking.",
+     "",
+     "That aversive flushing reaction is **disulfiram's** action, not naltrexone's.",
+     "That substitution-like action describes **acamprosate**, not an opioid antagonist."
+    ],
+    "whyNotPages": [
+     "573",
+     "573",
+     "",
+     "556",
+     "556"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-05",
+  "tag": "Alcohol",
+  "topic": "addiction",
+  "stem": "A 52-year-old man stops drinking abruptly after many years of heavy daily use. Over the next days he becomes restless, tremulous, and sleepless, and he asks why he feels worse without alcohol than with it.",
+  "steps": [
+   {
+    "q": "Which adaptive imbalance best explains his withdrawal state?",
+    "choices": [
+     "Excess GABA inhibition with reduced glutamate excitation",
+     "Glutamate overexcitation with GABA deficiency",
+     "Excess μ-opioid signaling from endogenous opioid release",
+     "Acetaldehyde accumulation from blocked metabolism",
+     "Nicotinic receptor desensitization causing dopamine loss"
+    ],
+    "answer": 1,
+    "why": "Chronic alcohol adaptations leave a brain tilted toward **glutamate** overactivity and **GABA** deficiency once the drug is withdrawn.",
+    "pages": "556",
+    "whyNot": [
+     "That is alcohol's **acute** effect; withdrawal reverses it.",
+     "",
+     "Opioid release explains alcohol's **reinforcing** effect in the VTA, not withdrawal hyperexcitability.",
+     "Acetaldehyde buildup is the **disulfiram** reaction, which requires drinking while on that drug.",
+     "Receptor desensitization and craving describe **nicotine**, not alcohol withdrawal."
+    ],
+    "whyNotPages": [
+     "554",
+     "",
+     "555",
+     "556",
+     "548"
+    ]
+   },
+   {
+    "lead": "To counter that imbalance, acamprosate is added to his treatment program.",
+    "q": "Which action best explains how it helps?",
+    "choices": [
+     "Reducing glutamate release, probably by blocking mGluR receptors",
+     "Blocking μ-opioid receptors to blunt the reward of drinking",
+     "Irreversibly inhibiting aldehyde dehydrogenase",
+     "Positive allosteric modulation of benzodiazepine-sensitive GABA-A receptors",
+     "Partial agonism at α4β2 nicotinic receptors"
+    ],
+    "answer": 0,
+    "why": "Acamprosate seems to block **mGluR** receptors (mGlu5, perhaps mGlu2), curbing glutamate release; effects on NMDA and GABA are likely secondary.",
+    "pages": "556",
+    "whyNot": [
+     "",
+     "That is **naltrexone's** mechanism, aimed at reward rather than withdrawal overexcitation.",
+     "That is **disulfiram**, which creates an aversive reaction when alcohol is taken.",
+     "That describes **benzodiazepines**; acamprosate's GABA effects seem downstream of its mGluR actions.",
+     "That is **varenicline's** action in smoking cessation, unrelated to alcohol withdrawal."
+    ],
+    "whyNotPages": [
+     "",
+     "556",
+     "556",
+     "554",
+     "551"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-06",
+  "tag": "Opioids",
+  "topic": "addiction",
+  "stem": "A 34-year-old man injects street heroin daily and wants to stop. He asks for a daily oral medication, dispensed at a clinic, that can fully suppress his withdrawal symptoms and replace injecting with a known dose.",
+  "steps": [
+   {
+    "q": "Which medication best fits this request?",
+    "choices": [
+     "Methadone",
+     "Buprenorphine",
+     "Naltrexone",
+     "Lofexidine",
+     "Naloxone"
+    ],
+    "answer": 0,
+    "why": "Methadone is a **full μ agonist**, taken orally and usually dispensed daily at a clinic, and it can suppress withdrawal completely.",
+    "pages": "560",
+    "whyNot": [
+     "",
+     "It is a μ **partial** agonist with weaker agonist effects, given sublingually and often dispensed as a multi-day supply.",
+     "It is a μ **antagonist**; in an opioid-dependent person it can precipitate withdrawal rather than suppress it.",
+     "It is an **α2 agonist** that eases autonomic signs of withdrawal; it does not replace the opioid.",
+     "It is a short-acting **antagonist** that reverses acute opioid effects, not a substitution treatment."
+    ],
+    "whyNotPages": [
+     "",
+     "560",
+     "560",
+     "561",
+     "560"
+    ]
+   },
+   {
+    "lead": "Methadone is started and he does well for many months. He then stops it abruptly.",
+    "q": "How will his withdrawal compare with heroin withdrawal?",
+    "choices": [
+     "More intense and shorter, peaking within 1.5–3 days and ending in about 10 days",
+     "Equally intense and equally long, since both are full agonists",
+     "None, because maintenance on a full agonist never causes dependence",
+     "Less intense but longer, peaking at 3–4 days and lasting 2 weeks or more",
+     "Less intense than heroin, peaking near 72 hours and lasting about a week"
+    ],
+    "answer": 3,
+    "why": "Because methadone has a long half-life, its withdrawal is **milder but prolonged**, peaking at 72–96 hours and lasting 14 days or more.",
+    "pages": "561",
+    "whyNot": [
+     "That describes **heroin and morphine**, short-half-life agents with sharper, briefer withdrawal.",
+     "Withdrawal intensity and duration track **half-life**, not just agonist efficacy.",
+     "Chronic opioids cause **dependence**, so stopping methadone produces a withdrawal syndrome.",
+     "",
+     "That is the **buprenorphine** pattern, not the longer methadone course."
+    ],
+    "whyNotPages": [
+     "561",
+     "561",
+     "560",
+     "",
+     "562"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-07",
+  "tag": "Opioids",
+  "topic": "addiction",
+  "stem": "A 29-year-old woman with opioid use disorder after prescription pain pills lives far from the nearest clinic and cannot attend daily. She is already in early, mild withdrawal and wants a treatment she can take at home with a few days' supply.",
+  "steps": [
+   {
+    "q": "Which medication best fits her situation?",
+    "choices": [
+     "Methadone",
+     "Buprenorphine, taken sublingually",
+     "Oral naltrexone",
+     "Naloxone alone",
+     "Lofexidine"
+    ],
+    "answer": 1,
+    "why": "Buprenorphine is a μ **partial agonist** that works well once mild withdrawal has begun, and it can be dispensed as a multi-day outpatient supply.",
+    "pages": "560",
+    "whyNot": [
+     "It is a full agonist usually given **daily at a clinic**, which she cannot do.",
+     "",
+     "It is a μ **antagonist** that can precipitate withdrawal in someone dependent on opioids.",
+     "It is a short-acting antagonist for **reversing** acute opioid effects, not a take-home maintenance drug.",
+     "It is an **α2 agonist** easing autonomic withdrawal signs; it does not substitute for the opioid."
+    ],
+    "whyNotPages": [
+     "560",
+     "",
+     "560",
+     "560",
+     "561"
+    ]
+   },
+   {
+    "lead": "She is given the sublingual product that combines buprenorphine with naloxone. Staff worry that someone might dissolve and inject it.",
+    "q": "What is expected if the combination product is injected?",
+    "choices": [
+     "No high, and possibly precipitated withdrawal",
+     "An intense rush, because buprenorphine is fully absorbed by injection",
+     "Added respiratory depression from the naloxone",
+     "Sustained euphoria from slowed absorption",
+     "No change, because naloxone is inactive outside sublingual use"
+    ],
+    "answer": 0,
+    "why": "Naloxone is not absorbed sublingually, so it is silent as prescribed, but by injection it is **active** and blocks the high, which discourages diversion.",
+    "pages": "560",
+    "whyNot": [
+     "",
+     "Injected naloxone **blocks** the effect, so the expected result is no rush.",
+     "Naloxone is an **antagonist** that opposes opioid effects rather than adding to them.",
+     "The combination is designed to give **no high** when injected.",
+     "Naloxone is inactive sublingually but **active by injection**, which is the point of adding it."
+    ],
+    "whyNotPages": [
+     "",
+     "560",
+     "560",
+     "560",
+     "560"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-08",
+  "tag": "Opioids",
+  "topic": "addiction",
+  "stem": "A 36-year-old man with opioid use disorder is undergoing supervised withdrawal from methadone. He is sweating, tachycardic, and tremulous, with piloerection, and he asks for a non-opioid medicine for these autonomic signs.",
+  "steps": [
+   {
+    "q": "Which medication best addresses these signs?",
+    "choices": [
+     "Lofexidine",
+     "Naloxone",
+     "Acamprosate",
+     "Bupropion",
+     "Disulfiram"
+    ],
+    "answer": 0,
+    "why": "Lofexidine is an **α2-adrenergic agonist** that reduces autonomic hyperactivity during opioid withdrawal and helps detoxification.",
+    "pages": "561",
+    "whyNot": [
+     "",
+     "It is an opioid antagonist that would **precipitate** withdrawal in a dependent person, worsening his symptoms.",
+     "It dampens glutamate release in **alcohol** withdrawal and does not treat autonomic signs of opioid withdrawal.",
+     "It is an NDRI used in **smoking cessation** to give back some dopamine, not for opioid autonomic signs.",
+     "It is an **aversive** agent for alcohol that blocks aldehyde dehydrogenase, with no role here."
+    ],
+    "whyNotPages": [
+     "",
+     "560",
+     "556",
+     "553",
+     "556"
+    ]
+   },
+   {
+    "lead": "Lofexidine is started and eases the autonomic signs, yet his withdrawal is still expected to drag on.",
+    "q": "Which addition would shorten the duration of his withdrawal?",
+    "choices": [
+     "A second α2 agonist such as clonidine",
+     "Naltrexone",
+     "Bupropion",
+     "Varenicline",
+     "Acamprosate"
+    ],
+    "answer": 1,
+    "why": "An α2 agonist alone lowers **intensity** but not duration; adding a μ antagonist like naltrexone shortens the course as well.",
+    "pages": "561–562",
+    "whyNot": [
+     "Same class: it would lower **intensity** but not duration.",
+     "",
+     "It is a **smoking cessation** drug that supplies dopamine; it has no stated effect on opioid withdrawal duration.",
+     "It is a **nicotinic** partial agonist, with no role in shortening opioid withdrawal.",
+     "It targets **alcohol**-related glutamate hyperactivity, not opioid withdrawal duration."
+    ],
+    "whyNotPages": [
+     "562",
+     "",
+     "553",
+     "551",
+     "556"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-09",
+  "tag": "Opioids",
+  "topic": "opioid-cannabinoid",
+  "stem": "A 31-year-old man with opioid use disorder finished detoxification, then returned to street heroin each time he stopped his oral naltrexone, usually when cravings peaked. He is impulsive and wants an option that does not depend on a daily decision.",
+  "steps": [
+   {
+    "q": "Which option best addresses this pattern?",
+    "choices": [
+     "Oral naltrexone at a higher daily dose",
+     "Drug-free residential rehabilitation for 30–90 days",
+     "Once-monthly injectable naltrexone",
+     "A direct taper from buprenorphine to abstinence",
+     "Maintenance with lofexidine"
+    ],
+    "answer": 2,
+    "why": "A monthly depot gives steady drug levels and one decision every 30 days, so an impulsive patient **cannot readily stop** it in order to relapse.",
+    "pages": "561",
+    "whyNot": [
+     "Oral dosing still means **fluctuating** levels and a daily decision, which is where he fails.",
+     "Relapse after such stays is **very high**, estimated at 60–80% within a month.",
+     "",
+     "It is theoretically possible but **rarely successful** long term.",
+     "It eases autonomic signs of **withdrawal**; it is not a relapse-prevention maintenance drug."
+    ],
+    "whyNotPages": [
+     "563",
+     "561",
+     "",
+     "561",
+     "561"
+    ]
+   },
+   {
+    "lead": "Injectable naltrexone is given. A few weeks later, tempted, he injects street heroin.",
+    "q": "What is the most likely result, and what happens if it is repeated?",
+    "choices": [
+     "A normal rush, because heroin out-competes naltrexone",
+     "No high, and repeated failed attempts weaken the conditioned habit",
+     "A blunted high that strengthens the habit with each try",
+     "Intense dysphoria from precipitated withdrawal, acting as aversion",
+     "Less craving but no change in the habit, since extinction needs abstinence"
+    ],
+    "answer": 1,
+    "why": "Heroin acts at the blocked **μ receptors**, so no high occurs. Each failed attempt teaches that injecting is no longer rewarding, extinguishing the habit.",
+    "pages": "573",
+    "whyNot": [
+     "The antagonist **blocks** the high, which is why the habit can extinguish.",
+     "",
+     "Failed attempts **weaken** the conditioned response rather than strengthen it.",
+     "The mechanism described is **lost reward and extinction**, not aversion.",
+     "Here extinction comes from **using and failing** to get high."
+    ],
+    "whyNotPages": [
+     "573",
+     "",
+     "573",
+     "573",
+     "573"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-10",
+  "tag": "Cannabis",
+  "topic": "opioid-cannabinoid",
+  "stem": "A 19-year-old man who smokes high-potency cannabis daily reports hearing voices that comment on him and a sense of being watched. His friends say the cannabis he buys is much stronger than what was sold years ago.",
+  "steps": [
+   {
+    "q": "Which feature of the cannabis best explains his psychosis risk?",
+    "choices": [
+     "High THC content with little CBD",
+     "A high proportion of CBD relative to THC",
+     "Exposure to pure CBD",
+     "Peripheral CB2 stimulation of immune cells",
+     "An anxiogenic action of CBD"
+    ],
+    "answer": 0,
+    "why": "Modern cannabis has more THC and less CBD, and that combination carries a **higher risk** of hallucinations, delusions, anxiety, and memory impairment.",
+    "pages": "563",
+    "whyNot": [
+     "",
+     "More CBD is linked to a **lower** risk of hallucinations and delusions.",
+     "Pure CBD may have **antipsychotic** and anxiolytic effects rather than cause psychosis.",
+     "CB2 receptors sit mostly on **immune cells**; the psychotic risk is tied to THC potency.",
+     "CBD is **anxiolytic** rather than anxiogenic; the anxiogenic compound is THC."
+    ],
+    "whyNotPages": [
+     "",
+     "563",
+     "563",
+     "563",
+     "565"
+    ]
+   },
+   {
+    "lead": "His cannabis is high in THC and low in CBD. His clinician discusses what a strain relatively richer in CBD would do.",
+    "q": "Compared with his current cannabis, what would a CBD-rich strain be expected to do?",
+    "choices": [
+     "Lower the risk of hallucinations, delusions, and acute memory impairment",
+     "Raise hallucination risk because CBD adds psychoactive effects",
+     "Bring forward the age of onset of psychotic disorder",
+     "Increase amygdalar activity and anxiety",
+     "Make no difference, since CBD is inactive at CB1"
+    ],
+    "answer": 0,
+    "why": "Higher CBD content offsets THC: it is linked to **lower** risk of hallucinations, delusions, and memory impairment, and CBD itself is anxiolytic.",
+    "pages": "566",
+    "whyNot": [
+     "",
+     "CBD is **not** psychoactive; higher CBD content lowers that risk.",
+     "Higher CBD content is linked to a **later** age of onset.",
+     "High CBD **reduces** amygdalar activity and is anxiolytic.",
+     "Despite its unclear mechanism, higher CBD content **is** linked to lower risk."
+    ],
+    "whyNotPages": [
+     "",
+     "565",
+     "566",
+     "566",
+     "563"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-11",
+  "tag": "Hallucinogens",
+  "topic": "serotonin",
+  "stem": "A 22-year-old woman takes an unlabeled tablet at a party. An hour later she sees trails behind moving objects and says colors seem to make sounds. She is fully alert and oriented but frightened she is losing her mind, with a fast heart rate and raised blood pressure.",
+  "steps": [
+   {
+    "q": "Which receptor action best explains these effects?",
+    "choices": [
+     "Agonism at 5HT2A receptors",
+     "Agonism at dopamine D2 receptors",
+     "Antagonism at NMDA receptors",
+     "Reversal of the serotonin transporter",
+     "Blockade of the dopamine transporter"
+    ],
+    "answer": 0,
+    "why": "Hallucinogens such as psilocybin, LSD, and mescaline act mainly as **5HT2A agonists**, producing illusions and altered perception with clear consciousness.",
+    "pages": "568",
+    "whyNot": [
+     "",
+     "5HT2A antagonists, but **not** D2 antagonists, reverse hallucinogen effects, pointing away from dopamine D2.",
+     "That produces a **dissociative** state with catalepsy and amnesia rather than psychedelic illusions.",
+     "That is **MDMA's** route, giving emotional closeness rather than this psychedelic picture.",
+     "That underlies **stimulant** effects, which mimic psychosis more genuinely than hallucinogens."
+    ],
+    "whyNotPages": [
+     "",
+     "568",
+     "570",
+     "569",
+     "569"
+    ]
+   },
+   {
+    "lead": "The drug is a 5HT2A agonist. When she takes the same dose again a few days later, its effect is much weaker.",
+    "q": "What is the hypothesized basis for this change?",
+    "choices": [
+     "Desensitization of 5HT2A receptors",
+     "Upregulation of 5HT2A receptors",
+     "Dopamine depletion and axonal degeneration",
+     "Upregulation of α4β2 nicotinic receptors",
+     "Adaptation of μ-opioid receptors with dorsal migration of control"
+    ],
+    "answer": 0,
+    "why": "Hallucinogens can produce tolerance after a single dose, thought to reflect **desensitization** of the 5HT2A receptors they stimulate.",
+    "pages": "568",
+    "whyNot": [
+     "",
+     "Opposite direction: tolerance is attributed to **desensitization**, not more receptors.",
+     "That is the **burn-out** state of chronic stimulant abuse.",
+     "That adaptation belongs to chronic **nicotine** exposure.",
+     "That describes **opioid** dependence, not hallucinogen tolerance."
+    ],
+    "whyNotPages": [
+     "",
+     "568",
+     "546",
+     "548",
+     "560"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-12",
+  "tag": "Empathogens",
+  "topic": "addiction",
+  "stem": "A 20-year-old man at an all-night dance party takes a drug and soon reports euphoria, closeness to others, and heightened sociability. Hours later he is hot and dehydrated after dancing for hours in a crowded room.",
+  "steps": [
+   {
+    "q": "At which target does the drug act most selectively?",
+    "choices": [
+     "The serotonin transporter",
+     "The dopamine transporter",
+     "The 5HT2A receptor as a direct agonist",
+     "The NMDA receptor",
+     "The α4β2 nicotinic receptor"
+    ],
+    "answer": 0,
+    "why": "MDMA, a synthetic amphetamine derivative, acts more selectively on the **serotonin transporter** than on DAT or NET, producing closeness and euphoria.",
+    "pages": "569",
+    "whyNot": [
+     "",
+     "That is more characteristic of **amphetamine**, whereas MDMA favors the serotonin transporter.",
+     "MDMA acts mainly through released serotonin; direct 5HT2A agonism marks the **hallucinogens**.",
+     "NMDA antagonism characterizes **dissociatives** like PCP and ketamine.",
+     "That is the **nicotine** target relevant to smoking, not to this drug."
+    ],
+    "whyNotPages": [
+     "",
+     "569",
+     "568",
+     "569",
+     "548"
+    ]
+   },
+   {
+    "lead": "The drug is MDMA, which enters the serotonin terminal as a transporter pseudosubstrate. A clinician asks how its effects could be blocked.",
+    "q": "Which pretreatment would be expected to block its effects?",
+    "choices": [
+     "An SSRI",
+     "Bupropion",
+     "Naltrexone",
+     "Lofexidine",
+     "Varenicline"
+    ],
+    "answer": 0,
+    "why": "MDMA rides the transporter into the serotonin terminal to release serotonin, so an **SSRI** occupying the transporter can block its actions.",
+    "pages": "569",
+    "whyNot": [
+     "",
+     "It inhibits **DAT and NET**, not the serotonin transporter, so it would not block MDMA's entry.",
+     "It is a **μ-opioid** antagonist and does not compete at the serotonin transporter.",
+     "It is an **α2 agonist** for opioid withdrawal and has no action at the serotonin transporter.",
+     "It is a **nicotinic** partial agonist with no action at the serotonin transporter."
+    ],
+    "whyNotPages": [
+     "",
+     "553",
+     "556",
+     "561",
+     "551"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-13",
+  "tag": "Dissociatives",
+  "topic": "glutamate",
+  "stem": "A 26-year-old man is brought in after using a club drug. He is agitated and staggering, with slurred speech, vertical nystagmus, and paranoid delusions, and he alternates between excitement and stupor.",
+  "steps": [
+   {
+    "q": "Which drug is the most likely cause?",
+    "choices": [
+     "Phencyclidine",
+     "LSD",
+     "MDMA",
+     "Psilocybin",
+     "Cocaine"
+    ],
+    "answer": 0,
+    "why": "PCP, an **NMDA antagonist**, causes staggering gait, slurred speech, a distinctive vertical nystagmus, and catatonia with paranoia.",
+    "pages": "571",
+    "whyNot": [
+     "",
+     "Hallucinogen intoxication usually keeps a **clear** level of consciousness with illusions, without these signs.",
+     "It gives emotional closeness and **serotonin** release, not catatonia and vertical nystagmus.",
+     "It is a 5HT2A agonist producing illusions with **clear consciousness** rather than ataxia and nystagmus.",
+     "It can cause paranoia, but **vertical nystagmus** is a unique feature of PCP."
+    ],
+    "whyNotPages": [
+     "",
+     "568",
+     "569",
+     "568",
+     "571"
+    ]
+   },
+   {
+    "lead": "Phencyclidine intoxication is confirmed. Overnight his temperature climbs and he has a seizure.",
+    "q": "Which additional complication should be anticipated in overdose?",
+    "choices": [
+     "Rhabdomyolysis",
+     "Spontaneous recurrence of symptoms weeks later",
+     "Freezing of the lungs",
+     "Flushing and hypotension from acetaldehyde",
+     "Piloerection with craving and dysphoria"
+    ],
+    "answer": 0,
+    "why": "With PCP overdose, coma, extremely high temperature, seizures, and **muscle breakdown** (rhabdomyolysis) can occur.",
+    "pages": "571",
+    "whyNot": [
+     "",
+     "Such **flashbacks** are mostly reported with LSD-type hallucinogens.",
+     "That danger is described for **freon** inhalants.",
+     "That is the **disulfiram–alcohol** reaction.",
+     "Those are signs of **opioid withdrawal**."
+    ],
+    "whyNotPages": [
+     "",
+     "568",
+     "547",
+     "556",
+     "560"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-14",
+  "tag": "Binge eating",
+  "topic": "impulse-compulsive",
+  "stem": "A 33-year-old woman seeks help for depression. On direct questioning she reports eating unusually large amounts in short periods several times a week, feeling out of control and very distressed afterward. She is not underweight.",
+  "steps": [
+   {
+    "q": "Which medication is the only one currently approved for this eating problem?",
+    "choices": [
+     "Lisdexamfetamine",
+     "Topiramate",
+     "Naltrexone",
+     "An SSRI",
+     "Acamprosate"
+    ],
+    "answer": 0,
+    "why": "Lisdexamfetamine, the amphetamine prodrug met in the ADHD chapter, is the single approved drug; the other agents are used **off-label**.",
+    "pages": "575",
+    "whyNot": [
+     "",
+     "It is used **off-label** with limited efficacy and side effects, not approved.",
+     "It is used **off-label** for this condition and is not approved for it.",
+     "Antidepressants are used **off-label** with limited efficacy in this disorder.",
+     "It targets **alcohol** withdrawal glutamate excess, not binge eating."
+    ],
+    "whyNotPages": [
+     "",
+     "575",
+     "575",
+     "575",
+     "556"
+    ]
+   },
+   {
+    "lead": "Lisdexamfetamine is started and her binge frequency falls. She asks whether it simply reduces her appetite.",
+    "q": "Which explanation does the chapter favor for its benefit?",
+    "choices": [
+     "Stimulant-induced striatal neuroplasticity that may reverse the shift of control from ventral to dorsal circuits",
+     "Suppression of appetite",
+     "Blockade of μ-opioid receptors to blunt food reward",
+     "Reduced glutamate release",
+     "Inhibition of the serotonin transporter"
+    ],
+    "answer": 0,
+    "why": "Appetite no longer drives compulsive bingeing; stimulants promote **striatal neuroplasticity**, which may help reverse the migration of eating habits to dorsal control.",
+    "pages": "575",
+    "whyNot": [
+     "",
+     "The chapter doubts this: appetite no longer really drives **compulsive** binge eating.",
+     "That is the logic of **naltrexone** in alcohol and opioid dependence, not of a stimulant.",
+     "That is **acamprosate's** proposed mechanism in alcohol withdrawal.",
+     "Amphetamines act chiefly on **DAT and NET**, not the serotonin transporter."
+    ],
+    "whyNotPages": [
+     "",
+     "575",
+     "556",
+     "556",
+     "545"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v13-15",
+  "tag": "OCD",
+  "topic": "impulse-compulsive",
+  "stem": "A 30-year-old woman spends hours each day washing her hands and checking locks. She knows the rituals are excessive and says she does not want what they achieve, yet she feels an intense urge to carry them out whenever she sees a door or a sink.",
+  "steps": [
+   {
+    "q": "Which model best fits her rituals?",
+    "choices": [
+     "Cue-triggered habits from the dorsal striatum–thalamus–OFC loop",
+     "Goal-directed acts chosen to reduce anxiety",
+     "A ventral striatum–thalamus–VMPFC/ACC impulsive loop",
+     "Excess top-down cortical inhibition",
+     "A dorsal striatum–thalamus–VMPFC/ACC loop"
+    ],
+    "answer": 0,
+    "why": "The rituals are best seen as **habits** set off by environmental cues, from the dorsal loop with inefficient OFC processing and poor cognitive flexibility.",
+    "pages": "576",
+    "whyNot": [
+     "",
+     "The chapter proposes **habits** from stimuli instead of goal-directed attempts to relieve anxiety.",
+     "That loop drives **reward-seeking impulsivity**, whereas compulsive habits sit in the dorsal circuit.",
+     "Patients cannot **inhibit** their compulsive responses, so control is too weak, not too strong.",
+     "That mixes loops; the dorsal striatum connects with the **OFC**, not the VMPFC and ACC."
+    ],
+    "whyNotPages": [
+     "",
+     "576",
+     "540",
+     "576",
+     "540"
+    ]
+   },
+   {
+    "lead": "Her rituals are thought to be cue-triggered habits from the dorsal loop. Her clinician asks which treatment could change that circuit itself.",
+    "q": "Which treatment is thought to reverse that circuit, rather than only suppress it?",
+    "choices": [
+     "An SSRI at standard dose",
+     "Clomipramine",
+     "SSRI augmentation with a serotonin–dopamine blocker",
+     "Exposure with response prevention",
+     "Lithium augmentation of an SSRI"
+    ],
+    "answer": 3,
+    "why": "Exposure with response prevention is thought to shift control **back from dorsal to ventral**; benefit persists after stopping, unlike serotonergic drugs.",
+    "pages": "577",
+    "whyNot": [
+     "Serotonergic drugs seem to **suppress** the circuit; gains fade when stopped.",
+     "It is a second-line **serotonergic** agent, so it suppresses rather than reverses.",
+     "It is a **drug** strategy for SSRI failure, not a reversal of habit circuitry.",
+     "",
+     "It is pharmacological **augmentation**, with no stated ability to reverse the circuit."
+    ],
+    "whyNotPages": [
+     "577",
+     "577",
+     "577",
+     "",
+     "577"
+    ]
+   }
+  ]
+ }
+]

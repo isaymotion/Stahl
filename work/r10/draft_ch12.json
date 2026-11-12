@@ -1,0 +1,947 @@
+[
+ {
+  "id": "v12-01",
+  "tag": "MCI",
+  "topic": "dementia",
+  "stem": "A 71-year-old retired teacher reports that over two years she has struggled to recall names, find the right word, and concentrate. She still manages her finances, drives, and cooks without help. Her mood and sleep are reported as fine, and she has no pain complaints.",
+  "steps": [
+   {
+    "q": "What is the most appropriate term for her presentation?",
+    "choices": [
+     "Mild cognitive impairment",
+     "All-cause dementia",
+     "Presymptomatic stage 1 Alzheimer disease",
+     "Delirium",
+     "Vascular dementia"
+    ],
+    "answer": 0,
+    "why": "Subjective memory complaints with **preserved daily function** and no psychiatric or sleep explanation fit **MCI**, a mild decline that does not yet significantly impair activities of daily living.",
+    "pages": "487–488",
+    "whyNot": [
+     "",
+     "Dementia requires decline that **interferes with usual activities**, and her daily functioning is intact.",
+     "Stage 1 AD is **asymptomatic** with intact cognition, whereas she has clear complaints.",
+     "Dementia criteria exclude delirium, and nothing in this gradual, function-preserving picture suggests it.",
+     "Vascular dementia is tied to stroke or cardiovascular disease and is a **dementia** with functional decline, none of which is described."
+    ],
+    "whyNotPages": [
+     "",
+     "487",
+     "500",
+     "487",
+     "491"
+    ]
+   },
+   {
+    "lead": "Mild cognitive impairment is diagnosed. An amyloid PET scan then shows no Aβ deposition in her brain.",
+    "q": "What does this finding most likely mean?",
+    "choices": [
+     "Her symptoms probably have a cause other than Alzheimer disease that needs evaluation",
+     "She is in presymptomatic stage 1 Alzheimer disease",
+     "She has stage 3 Alzheimer disease with dementia",
+     "Her risk of progressing to dementia within a year is about half",
+     "The scan is unreliable because amyloid PET cannot detect early disease"
+    ],
+    "answer": 0,
+    "why": "About half of MCI patients lack Aβ deposition and presumably have a **non-AD cause**, such as depression or another dementia-causing disorder, so that cause should be pursued.",
+    "pages": "502",
+    "whyNot": [
+     "",
+     "Stage 1 means cognitively normal **with** Aβ on PET; she has symptoms and a negative scan.",
+     "Almost all patients with clinically probable AD dementia show **heavy** Aβ deposition, which her scan lacks.",
+     "That one-year figure applies to **Aβ-positive** MCI, and hers is amyloid negative.",
+     "Aβ PET does detect amyloid even at the **presymptomatic** stage, so a negative scan is informative."
+    ],
+    "whyNotPages": [
+     "",
+     "500",
+     "502",
+     "502",
+     "499"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-02",
+  "tag": "Vascular dementia",
+  "topic": "dementia",
+  "stem": "A 74-year-old man with long-standing hypertension, diabetes, and heavy smoking had a stroke five months ago. Since then his family describes slowed thinking, difficulty switching between tasks, and poor working memory. His recall of verbal information remains relatively good.",
+  "steps": [
+   {
+    "q": "Which type of dementia best fits this picture?",
+    "choices": [
+     "Vascular dementia",
+     "Alzheimer disease",
+     "Dementia with Lewy bodies",
+     "Behavioral variant frontotemporal dementia",
+     "Parkinson disease dementia"
+    ],
+    "answer": 0,
+    "why": "Slow processing, poor mental flexibility, better-preserved verbal memory, and decline within months of a **stroke** point to **vascular dementia**, especially with his cardiovascular risk factors.",
+    "pages": "488",
+    "whyNot": [
+     "",
+     "AD typically opens with **short-term memory loss** and disorientation rather than slowed processing.",
+     "DLB brings visual hallucinations, spontaneous parkinsonism, and cognitive fluctuations, none of which are described.",
+     "bvFTD begins with personality and behavior change such as apathy and disinhibition, not processing-speed slowing.",
+     "PDD follows established **Parkinson disease** with motor symptoms first, which is not part of this history."
+    ],
+    "whyNotPages": [
+     "",
+     "488",
+     "488",
+     "488",
+     "494"
+    ]
+   },
+   {
+    "lead": "Vascular dementia is diagnosed, and MRI and FDG PET are obtained to document it.",
+    "q": "Which pair of imaging findings is most expected?",
+    "choices": [
+     "White-matter hyperintensities on MRI with subcortical and sensorimotor hypometabolism on FDG PET",
+     "Hippocampal atrophy on MRI with temporo-parietal hypometabolism on FDG PET",
+     "Medial temporal atrophy on MRI with frontotemporal hypometabolism on FDG PET",
+     "Medial temporal atrophy on MRI with parieto-occipital hypometabolism on FDG PET",
+     "Normal MRI with hypometabolism confined to the association cortex on FDG PET"
+    ],
+    "answer": 0,
+    "why": "Vascular dementia shows increasing **white-matter hyperintensities** on MRI, and FDG PET shows low uptake in subcortical and sensorimotor regions while association cortex is relatively spared.",
+    "pages": "491",
+    "whyNot": [
+     "",
+     "Hippocampal atrophy with posterior temporo-parietal hypometabolism is the **AD** pattern.",
+     "Frontotemporal hypometabolism is the pattern of **frontotemporal degeneration**.",
+     "Parieto-occipital plus temporo-parietal hypometabolism marks **Lewy body** dementias.",
+     "Opposite direction: vascular dementia **spares** association cortex relative to subcortical areas, and white-matter change appears on MRI."
+    ],
+    "whyNotPages": [
+     "",
+     "490",
+     "489",
+     "489",
+     "491"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-03",
+  "tag": "Lewy body",
+  "topic": "dementia",
+  "stem": "A 77-year-old woman has had one year of progressive memory trouble. Her husband describes vivid, well-formed visions of children in the house, marked day-to-day swings in alertness, and new slowness and rigidity that began around the same time as the forgetfulness. She also acts out her dreams at night.",
+  "steps": [
+   {
+    "q": "What is the most likely diagnosis?",
+    "choices": [
+     "Dementia with Lewy bodies",
+     "Parkinson disease dementia",
+     "Alzheimer disease",
+     "Vascular dementia",
+     "Behavioral variant frontotemporal dementia"
+    ],
+    "answer": 0,
+    "why": "Fluctuating attention, recurrent well-formed visual hallucinations, and spontaneous parkinsonism are core features, and dementia arising alongside parkinsonism supports **DLB** over PDD.",
+    "pages": "493–494",
+    "whyNot": [
+     "",
+     "PDD is diagnosed only when motor symptoms precede dementia by **a year or more**, whereas hers arose together.",
+     "AD usually shows **short-term memory loss** first, with hallucinations and parkinsonism less prominent early.",
+     "Vascular dementia follows a stroke and features slowed processing, not hallucinations with fluctuating attention.",
+     "bvFTD begins with personality change, apathy, and disinhibition rather than hallucinations and parkinsonism."
+    ],
+    "whyNotPages": [
+     "",
+     "494",
+     "488",
+     "488",
+     "488"
+    ]
+   },
+   {
+    "lead": "DLB is confirmed. Non-drug measures have not controlled her distressing behavioral symptoms, so drug options are reviewed.",
+    "q": "Which drug class may help her behavioral symptoms, unlike in most other dementias?",
+    "choices": [
+     "A cholinesterase inhibitor",
+     "Valproate",
+     "A benzodiazepine",
+     "Topiramate",
+     "Oxcarbazepine"
+    ],
+    "answer": 0,
+    "why": "Cholinesterase inhibitors give little benefit for most behavioral symptoms of dementia, with the **exception of Lewy body dementias**, which is the form she has.",
+    "pages": "530",
+    "whyNot": [
+     "",
+     "The book lists valproate among agents **not** to rely on as second-line options for agitation, whatever the dementia type.",
+     "Benzodiazepines are also excluded, and sedation raises the risk of **aspiration pneumonia** in dementia.",
+     "Topiramate sits on the same excluded list and has no special advantage in Lewy body disease.",
+     "Oxcarbazepine is excluded too; **carbamazepine** is the relative that showed the most efficacy among unapproved drugs."
+    ],
+    "whyNotPages": [
+     "",
+     "530",
+     "524",
+     "530",
+     "530"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-04",
+  "tag": "Apathy",
+  "topic": "dementia",
+  "stem": "A 73-year-old man with Alzheimer disease has become passive over a year. He no longer starts activities, shows little emotion, and has lost interest in his hobbies. He denies guilt, worthlessness, or hopelessness, and his wife is exhausted from prompting him for everything.",
+  "steps": [
+   {
+    "q": "Which description best fits his presentation?",
+    "choices": [
+     "Apathy rather than depression",
+     "Major depressive episode",
+     "Agitation",
+     "Pseudobulbar affect",
+     "Disinhibition"
+    ],
+    "answer": 0,
+    "why": "Reduced motivation, goal-directed behavior, and emotional responsiveness define **apathy**; guilt, worthlessness, and hopelessness, the **hallmarks of depression**, are typically absent.",
+    "pages": "536–537",
+    "whyNot": [
+     "",
+     "Depression would bring guilt, worthlessness, and hopelessness, which he denies.",
+     "Agitation is excess motor activity or aggression, **opposite** to this loss of spontaneous behavior.",
+     "PBA is uncontrolled crying or laughing out of proportion to context, not diminished emotional expression.",
+     "Disinhibition is loss of restraint, a **separate** feature of bvFTD, and the reverse of lost initiative."
+    ],
+    "whyNotPages": [
+     "",
+     "537",
+     "537",
+     "535",
+     "488"
+    ]
+   },
+   {
+    "lead": "The symptom is apathy, and his Alzheimer disease is otherwise mild.",
+    "q": "Which drug class is a first-line consideration for his symptom?",
+    "choices": [
+     "A cholinesterase inhibitor",
+     "An SSRI",
+     "A benzodiazepine",
+     "Pimavanserin",
+     "Dextromethorphan–quinidine"
+    ],
+    "answer": 0,
+    "why": "In AD, **cholinesterase inhibitors** may help apathy and are a first-line consideration, although they may work better for preventing it than for treating it once present.",
+    "pages": "537",
+    "whyNot": [
+     "",
+     "SSRIs are suggested for **FTD**, and antidepressants fare poorly here because apathy is not depression.",
+     "Sedation would deepen his passivity, and the book names benzodiazepines among sedatives that raise aspiration risk.",
+     "Pimavanserin blocks 5HT2A in the **psychosis** network and is not a treatment for apathy.",
+     "Dextromethorphan–quinidine is approved for **pseudobulbar affect**, not apathy."
+    ],
+    "whyNotPages": [
+     "",
+     "537",
+     "524",
+     "527",
+     "536"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-05",
+  "tag": "Frontotemporal",
+  "topic": "dementia",
+  "stem": "A 58-year-old accountant has become blunt and apathetic over two years, makes crude remarks at work, and eats sweets compulsively. He has lost sympathy for his family and does not see his behavior as a problem. He recalls recent events well when cued, and his visuospatial skills are intact.",
+  "steps": [
+   {
+    "q": "Which pattern of atrophy is most likely?",
+    "choices": [
+     "Insula, anterior cingulate, prefrontal cortex, thalamus, and striatum",
+     "Thalamus, caudate nucleus, and hippocampus with Lewy body accumulation",
+     "Posterior temporo-parietal cortex with glucose hypometabolism",
+     "Widespread subcortical white-matter hyperintensities",
+     "Entorhinal cortex and hippocampus as the main finding"
+    ],
+    "answer": 0,
+    "why": "Progressive personality change, hyperorality, compulsions, and cue-sensitive memory describe **bvFTD**, with atrophy of frontal and anterior temporal cortex, insula, cingulate, striatum, and thalamus.",
+    "pages": "494–495",
+    "whyNot": [
+     "",
+     "That is the hypothesized substrate of **Parkinson disease dementia**, not bvFTD.",
+     "Posterior hypometabolism is the **AD** pattern on FDG PET.",
+     "White-matter hyperintensities characterize **vascular** dementia on MRI.",
+     "Entorhinal and hippocampal volume loss is typical of **AD**, whose early memory loss is not cue-responsive."
+    ],
+    "whyNotPages": [
+     "",
+     "493",
+     "490",
+     "491",
+     "491"
+    ]
+   },
+   {
+    "lead": "The atrophy pattern confirms behavioral variant FTD. He is restless and sleeps poorly at night, and his behaviors are escalating.",
+    "q": "Which drug is the best choice at a low dose given once at night?",
+    "choices": [
+     "Trazodone",
+     "Donepezil",
+     "Lorazepam",
+     "Valproate",
+     "Haloperidol"
+    ],
+    "answer": 0,
+    "why": "**Trazodone**, dosed once nightly at a low dose, can improve sleep without daytime effects and may help other behavioral symptoms more in FTD than in AD.",
+    "pages": "535",
+    "whyNot": [
+     "",
+     "Cholinesterase inhibitors give little benefit for most behavioral symptoms except in **Lewy body** dementias.",
+     "Benzodiazepines are not among the book's preferred options, and sedation raises aspiration risk.",
+     "Valproate is listed among agents **not** advised as alternatives for agitation in dementia.",
+     "Haloperidol is a D2 blocker under a **boxed warning** for stroke and death in dementia."
+    ],
+    "whyNotPages": [
+     "",
+     "530",
+     "530",
+     "530",
+     "524"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-06",
+  "tag": "Alzheimer stages",
+  "topic": "dementia",
+  "stem": "A 68-year-old woman enrolled in a research study has no memory complaints and performs normally on cognitive testing. Her mother had Alzheimer disease. An amyloid PET scan shows moderate Aβ deposition.",
+  "steps": [
+   {
+    "q": "How is she best classified?",
+    "choices": [
+     "Presymptomatic stage 1 Alzheimer disease",
+     "MCI due to Alzheimer disease (stage 2)",
+     "Dementia due to Alzheimer disease (stage 3)",
+     "Normal aging, with no implications from the scan",
+     "Early frontotemporal degeneration"
+    ],
+    "answer": 0,
+    "why": "A cognitively normal person with Aβ on PET is considered to have **presymptomatic AD** (asymptomatic amyloidosis); about a quarter of normal elderly controls are Aβ positive.",
+    "pages": "499–500",
+    "whyNot": [
+     "",
+     "Stage 2 requires **MCI symptoms** plus evidence of neurodegeneration, and she has neither.",
+     "Stage 3 requires clinically evident dementia, and she is cognitively normal.",
+     "The book calls this presymptomatic AD, noting the fuse may already be **lit**, though not every Aβ-positive person declines.",
+     "Aβ is an **AD biomarker**, and FTD is distinguished from AD by its absence."
+    ],
+    "whyNotPages": [
+     "",
+     "502",
+     "502",
+     "500",
+     "494"
+    ]
+   },
+   {
+    "lead": "She has presymptomatic stage 1 Alzheimer disease, and a lumbar puncture is performed as part of the study.",
+    "q": "What CSF Aβ level is expected, and why?",
+    "choices": [
+     "Low, because Aβ is accumulating in brain tissue rather than exiting",
+     "High, because production of Aβ exceeds its clearance into CSF",
+     "Normal, because CSF Aβ falls only once dementia develops",
+     "High, because neuronal death releases stored Aβ into CSF",
+     "Normal, because only CSF tau is abnormal at this stage"
+    ],
+    "answer": 0,
+    "why": "In stage 1, Aβ accumulates in brain tissue instead of exiting, so **CSF Aβ is low**; raised CSF tau comes later, marking neurodegeneration.",
+    "pages": "500",
+    "whyNot": [
+     "",
+     "Opposite direction: CSF Aβ is **reduced**, not raised, in stage 1.",
+     "Reduced CSF Aβ is already present at stage 1, long before dementia.",
+     "Neurodegeneration belongs to stage 2 and is marked by **tau**, while CSF Aβ is low rather than high.",
+     "CSF Aβ is itself a stage 1 marker alongside amyloid PET, whereas tau tracks later neurodegeneration."
+    ],
+    "whyNotPages": [
+     "",
+     "500",
+     "500",
+     "502",
+     "500"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-07",
+  "tag": "Amyloid cascade",
+  "topic": "dementia",
+  "stem": "A research team reports a trial of an oral drug designed to cut Aβ production by inhibiting an enzyme in the amyloidogenic pathway of amyloid precursor protein processing. Biomarkers confirmed that the drug engaged its target. All participants had MCI or clinically diagnosed Alzheimer disease, and none improved.",
+  "steps": [
+   {
+    "q": "Which enzyme makes the first cleavage of APP in that pathway?",
+    "choices": [
+     "β-secretase",
+     "α-secretase",
+     "γ-secretase",
+     "Choline acetyltransferase",
+     "Butyrylcholinesterase"
+    ],
+    "answer": 0,
+    "why": "In the amyloidogenic route **β-secretase** makes the initial cut, and γ-secretase then makes the next one, releasing Aβ peptides of 38 to 43 amino acids.",
+    "pages": "497",
+    "whyNot": [
+     "",
+     "**α-secretase** cuts inside the Aβ sequence in the non-amyloidogenic route, which precludes Aβ production.",
+     "**γ-secretase** makes the second cut, after β-secretase, generating the Aβ peptides.",
+     "**ChAT** makes acetylcholine from choline and acetyl coenzyme A and does not process APP.",
+     "**BuChE** breaks down acetylcholine and does not process APP."
+    ],
+    "whyNotPages": [
+     "",
+     "497",
+     "497",
+     "505",
+     "505"
+    ]
+   },
+   {
+    "lead": "The β-secretase inhibitor acted on its target but did not help. The team asks how defenders of the amyloid cascade hypothesis interpret this.",
+    "q": "How do remaining supporters of the amyloid cascade hypothesis explain such failures?",
+    "choices": [
+     "Treatment came too late, after damage had become irreversible, and must begin before symptoms",
+     "Aβ is merely a marker of neuronal death, like a tombstone",
+     "Aβ-targeting drugs never engage the secretase enzymes involved",
+     "The trial should have enrolled only APOE4 carriers",
+     "The drug missed Aβ43, which is the most common isoform"
+    ],
+    "answer": 0,
+    "why": "Supporters argue that enrolled patients had progressed too far, so anti-Aβ therapy must start at the earliest Aβ accumulation, **before MCI** or clinical AD appears.",
+    "pages": "499",
+    "whyNot": [
+     "",
+     "That is the **skeptics'** view, in which Aβ is an epiphenomenon rather than the cause.",
+     "Opposite direction: many drugs **do** engage Aβ-related targets, and the problem is lack of benefit.",
+     "The book ties the failures to timing and disease stage, not to genotype selection.",
+     "**Aβ40** is the most common isoform, whereas Aβ43 is relatively rare."
+    ],
+    "whyNotPages": [
+     "",
+     "499",
+     "499",
+     "499",
+     "497"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-08",
+  "tag": "Cholinesterase inhibitors",
+  "topic": "acetylcholine",
+  "stem": "A 79-year-old woman with moderately advanced Alzheimer disease starts a cholinesterase inhibitor chosen partly because it also blocks the enzyme found in glia, whose activity rises as cortical neurons die and gliosis develops.",
+  "steps": [
+   {
+    "q": "Which drug was chosen?",
+    "choices": [
+     "Rivastigmine",
+     "Donepezil",
+     "Galantamine",
+     "Memantine",
+     "Pimavanserin"
+    ],
+    "answer": 0,
+    "why": "**Rivastigmine** inhibits glial BuChE as well as AChE, and because BuChE activity rises with gliosis, this second action may matter more in later disease.",
+    "pages": "510",
+    "whyNot": [
+     "",
+     "Donepezil is a selective AChE inhibitor **without** BuChE inhibition.",
+     "Galantamine pairs AChE inhibition with **nicotinic allosteric modulation**, not a BuChE rationale.",
+     "Memantine is an **NMDA antagonist**, not a cholinesterase inhibitor.",
+     "Pimavanserin is a 5HT2A antagonist for **psychosis**, with no cholinesterase action."
+    ],
+    "whyNotPages": [
+     "",
+     "510",
+     "514",
+     "516",
+     "527"
+    ]
+   },
+   {
+    "lead": "Within days of starting oral rivastigmine she has nausea and vomiting, and her prescriber switches her to the transdermal form.",
+    "q": "Why is the patch expected to help?",
+    "choices": [
+     "It lowers peak drug levels and improves delivery, reducing peripheral cholinesterase blockade in the gut",
+     "It removes AChE inhibition altogether and leaves only BuChE blockade",
+     "It blocks muscarinic receptors in the gut, offsetting the extra acetylcholine",
+     "It converts the drug from a pseudoirreversible to a reversible inhibitor",
+     "It confines the drug to glial BuChE inside the brain"
+    ],
+    "answer": 0,
+    "why": "Transdermal delivery probably optimizes drug delivery and lowers peak concentrations, so there is less **peripheral AChE and BuChE inhibition** causing GI effects.",
+    "pages": "514",
+    "whyNot": [
+     "",
+     "Rivastigmine still inhibits **both** AChE and BuChE; the benefit is lower peripheral exposure.",
+     "The patch contains no receptor blocker; the GI effects arise from **raised peripheral ACh** and are eased by lower peaks.",
+     "Pseudoirreversible binding is a property of the **drug itself**, regardless of formulation.",
+     "The patch still acts on peripheral enzymes, and its benefit comes from reduced **peak concentrations**."
+    ],
+    "whyNotPages": [
+     "",
+     "510",
+     "510",
+     "510",
+     "514"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-09",
+  "tag": "Alzheimer treatment",
+  "topic": "glutamate",
+  "stem": "An 82-year-old man with Alzheimer disease improved modestly on donepezil two years ago. Despite good adherence his memory has declined again, and imaging shows progressive neuronal loss in neocortex and hippocampus.",
+  "steps": [
+   {
+    "q": "Why is the benefit of his cholinesterase inhibitor fading?",
+    "choices": [
+     "Cholinergic receptor targets are lost as neurons die, so extra acetylcholine has little to act on",
+     "Basal forebrain cholinergic neurons regenerate, so the compensation is no longer needed",
+     "Peripheral AChE in the gut absorbs most of the dose",
+     "Donepezil begins inhibiting BuChE and loses selectivity",
+     "Excess glutamate from interneuron loss inactivates AChE"
+    ],
+    "answer": 0,
+    "why": "Early on, postsynaptic cholinergic targets survive, so more ACh helps; later neocortical and hippocampal neurons die and the **receptor targets are lost**, so AChE inhibitors lose effect.",
+    "pages": "510",
+    "whyNot": [
+     "",
+     "Opposite direction: cholinergic neurons are **lost** progressively, not regenerated.",
+     "Peripheral AChE explains **GI side effects**, not loss of central benefit.",
+     "Donepezil is selective for **AChE without BuChE** inhibition, and that does not change.",
+     "The book attributes the fading to loss of **receptor targets**, not to glutamate inactivating AChE."
+    ],
+    "whyNotPages": [
+     "",
+     "510",
+     "510",
+     "510",
+     "510"
+    ]
+   },
+   {
+    "lead": "Because the cholinergic approach is running out of targets, his physician adds a second drug acting on a different neurotransmitter system.",
+    "q": "Which add-on best matches the book's rationale?",
+    "choices": [
+     "Memantine",
+     "Pimavanserin",
+     "Brexpiprazole",
+     "Dextromethorphan–quinidine",
+     "Trazodone"
+    ],
+    "answer": 0,
+    "why": "**Memantine** acts through glutamate, a mechanism very different from cholinesterase inhibition, and is usually given together with a cholinesterase inhibitor for additive results.",
+    "pages": "518",
+    "whyNot": [
+     "",
+     "Pimavanserin blocks 5HT2A in the **psychosis** network and does not target memory.",
+     "Brexpiprazole is a multimodal agent in testing for **agitation**, not a memory drug.",
+     "Dextromethorphan–quinidine is approved for **pseudobulbar affect**, not memory decline.",
+     "Trazodone is an antidepressant and **sleep** agent in dementia, not a cognitive enhancer."
+    ],
+    "whyNotPages": [
+     "",
+     "527",
+     "530",
+     "534",
+     "535"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-10",
+  "tag": "Agitation",
+  "topic": "dementia",
+  "stem": "An 83-year-old woman with Alzheimer disease living in a care home has become restless over two weeks, pacing, pushing staff away, and refusing help with bathing. She has had no hallucinations or delusions. Staff ask for a sedative.",
+  "steps": [
+   {
+    "q": "What should be done first?",
+    "choices": [
+     "Look for reversible precipitants such as pain, infection, or an over-stimulating environment",
+     "Start haloperidol",
+     "Start lorazepam",
+     "Start quetiapine",
+     "Start dextromethorphan–bupropion"
+    ],
+    "answer": 0,
+    "why": "Before any drug, reversible precipitants such as **pain**, medication effects, undiagnosed illness, or a provocative setting should be handled non-pharmacologically.",
+    "pages": "523",
+    "whyNot": [
+     "",
+     "Haloperidol is a D2 blocker reserved for cautious off-label use after risk-benefit review, with a **boxed warning**.",
+     "Benzodiazepines are excluded from the book's alternatives, and sedation raises **aspiration pneumonia** risk.",
+     "The book names risperidone, olanzapine, aripiprazole, and haloperidol for cautious use, **not quetiapine**.",
+     "This combination is still in late-stage **testing** and is not approved for agitation in AD."
+    ],
+    "whyNotPages": [
+     "",
+     "524",
+     "524",
+     "524",
+     "533"
+    ]
+   },
+   {
+    "lead": "A painful pressure area is treated and the environment is calmed, but her agitation persists and non-drug measures fall short.",
+    "q": "Which drug approach do many experts consider first-line?",
+    "choices": [
+     "An SSRI or SNRI",
+     "Valproate",
+     "A benzodiazepine",
+     "Topiramate",
+     "Oxcarbazepine"
+    ],
+    "answer": 0,
+    "why": "With no approved agent, many experts consider **SSRIs and SNRIs** first-line for agitation and aggression in dementia, though they help only some patients.",
+    "pages": "530",
+    "whyNot": [
+     "",
+     "Valproate is named among agents **not** recommended as alternatives to D2 blockers.",
+     "Benzodiazepines are likewise excluded, and sedation and unsteady gait add to the harm.",
+     "Topiramate is excluded along with valproate and the benzodiazepines.",
+     "Carbamazepine, not **oxcarbazepine**, showed the most efficacy among unapproved options, and oxcarbazepine is excluded."
+    ],
+    "whyNotPages": [
+     "",
+     "530",
+     "530",
+     "530",
+     "530"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-11",
+  "tag": "Dementia psychosis",
+  "topic": "psychosis",
+  "stem": "A 77-year-old woman with Alzheimer disease has for three months believed that neighbors are stealing from her and has seen strangers in her kitchen. She is otherwise calm and cooperative. Evaluation excludes delirium and another mental illness.",
+  "steps": [
+   {
+    "q": "Which symptom domain best describes this?",
+    "choices": [
+     "Dementia-related psychosis",
+     "Agitation",
+     "Apathy",
+     "Pseudobulbar affect",
+     "Mild cognitive impairment"
+    ],
+    "answer": 0,
+    "why": "Delusions or hallucinations that begin after cognitive decline, last at least a month, and are not explained by delirium define dementia-related **psychosis**, distinct from agitation.",
+    "pages": "522",
+    "whyNot": [
+     "",
+     "Agitation means excessive motor activity or verbal or physical aggression, and she is **calm**.",
+     "Apathy is diminished motivation and goal-directed behavior, whereas she has **productive** symptoms.",
+     "PBA is uncontrolled crying or laughing out of proportion, not delusions and hallucinations.",
+     "MCI is mild decline without psychosis and without significant functional impact."
+    ],
+    "whyNotPages": [
+     "",
+     "522",
+     "536",
+     "535",
+     "487"
+    ]
+   },
+   {
+    "lead": "Dementia-related psychosis is confirmed. Because D2 blockers carry a boxed warning in dementia, the team wants a drug that targets the psychosis network without blocking dopamine receptors.",
+    "q": "Which agent is the best mechanistic match?",
+    "choices": [
+     "Pimavanserin",
+     "Donepezil",
+     "Memantine",
+     "Brexpiprazole",
+     "Dextromethorphan–bupropion"
+    ],
+    "answer": 0,
+    "why": "**Pimavanserin**, a selective 5HT2A antagonist, lowers serotonin's excitatory drive on surviving glutamate neurons that lost GABA inhibition, without blocking dopamine receptors.",
+    "pages": "526–527",
+    "whyNot": [
+     "",
+     "Donepezil raises ACh in the **memory** network and does not target psychosis.",
+     "Memantine is an NMDA antagonist aimed at **memory** and cognition.",
+     "Brexpiprazole is a multimodal agent studied for **agitation**, with a mortality warning in dementia-related psychosis.",
+     "Dextromethorphan–bupropion is in testing for the **agitation** network."
+    ],
+    "whyNotPages": [
+     "",
+     "504",
+     "504",
+     "530",
+     "504"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-12",
+  "tag": "Psychosis network",
+  "topic": "psychosis",
+  "stem": "A 74-year-old man with dementia with Lewy bodies sees vivid children and animals in his room but holds no fixed false beliefs. Neuropathology in such patients shows Lewy bodies and loss of cortical GABAergic interneurons.",
+  "steps": [
+   {
+    "q": "What is the net effect of losing these interneurons on cortical glutamate neurons?",
+    "choices": [
+     "They become hyperactive because 5HT2A excitation is no longer countered by GABA inhibition",
+     "They become hypoactive because serotonin input is lost",
+     "They are unchanged because NMDA receptors stay blocked by magnesium",
+     "They are quieted by compensatory GABA release from surviving interneurons",
+     "They become hypoactive because dopamine input rises"
+    ],
+    "answer": 0,
+    "why": "With GABA brakes lost, stimulation of excitatory **5HT2A receptors** is unopposed, producing a net increase in glutamatergic neurotransmission in the cortical psychosis network.",
+    "pages": "526–527",
+    "whyNot": [
+     "",
+     "Serotonin input is preserved and excitatory; it is the **inhibition** that is lost.",
+     "The resting magnesium block does not prevent the net **rise** in glutamate transmission here.",
+     "Degeneration removes inhibitory interneurons, so compensatory GABA release is not the result.",
+     "Dopamine hyperactivity is a **downstream** consequence of glutamate excess, not its cause."
+    ],
+    "whyNotPages": [
+     "",
+     "527",
+     "519",
+     "527",
+     "526"
+    ]
+   },
+   {
+    "lead": "With GABA inhibition lost, his cortical glutamate neurons are hyperactive. His hallucinations are specifically visual.",
+    "q": "Where does excess glutamate release most likely produce his hallucinations?",
+    "choices": [
+     "Visual cortex",
+     "Ventral tegmental area",
+     "Raphe nucleus",
+     "Amygdala",
+     "Basal forebrain"
+    ],
+    "answer": 0,
+    "why": "Excess glutamate release in the **visual cortex** is hypothesized to cause visual hallucinations, whereas excess release into the VTA drives delusions and auditory hallucinations.",
+    "pages": "527",
+    "whyNot": [
+     "",
+     "Glutamate excess at the VTA drives mesolimbic dopamine, linked to **delusions** and auditory hallucinations.",
+     "The raphe is the source of serotonin projections, not where glutamate excess generates hallucinations.",
+     "The amygdala is a **limbic** driver in the agitation network, not the visual hallucination site.",
+     "The basal forebrain is the origin of cholinergic **memory** projections."
+    ],
+    "whyNotPages": [
+     "",
+     "527",
+     "526",
+     "528",
+     "510"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-13",
+  "tag": "Agitation",
+  "topic": "dementia",
+  "stem": "An 80-year-old woman with moderate Alzheimer disease is restless, screams, and strikes caregivers. She has no hallucinations or delusions. Her psychiatrist discusses a drug in late-stage testing for agitation in AD that combines D2 and 5HT1A partial agonism, 5HT2A antagonism, and α1 and α2 blockade.",
+  "steps": [
+   {
+    "q": "Which drug is this?",
+    "choices": [
+     "Brexpiprazole",
+     "Pimavanserin",
+     "Memantine",
+     "Donepezil",
+     "Dextromethorphan–bupropion"
+    ],
+    "answer": 0,
+    "why": "**Brexpiprazole** combines D2 and 5HT1A partial agonism, 5HT2A antagonism, and unusual α1 and α2 blockade, and is in late-stage testing for agitation in AD.",
+    "pages": "530",
+    "whyNot": [
+     "",
+     "Pimavanserin is a **selective** 5HT2A antagonist aimed at psychosis.",
+     "Memantine is a low-affinity **NMDA** open-channel blocker.",
+     "Donepezil is a selective **AChE** inhibitor.",
+     "Dextromethorphan–bupropion pairs an NMDA antagonist with an **NDRI**, not partial agonism."
+    ],
+    "whyNotPages": [
+     "",
+     "527",
+     "516",
+     "510",
+     "533"
+    ]
+   },
+   {
+    "lead": "Brexpiprazole carries a warning for increased mortality in dementia-related psychosis, so the prescriber considers how to dose it.",
+    "q": "What does the book suggest about dosing for agitation in AD?",
+    "choices": [
+     "Doses lower than those used for schizophrenia may give a greater safety margin",
+     "Doses used in schizophrenia are needed for robust effect",
+     "Doses above those used in schizophrenia are needed to reach the agitation network",
+     "The mortality warning is waived because the drug is a partial agonist",
+     "A cholinesterase inhibitor should always be added to offset the risk"
+    ],
+    "answer": 0,
+    "why": "Despite the mortality warning, doses **below those used in schizophrenia** may give a wider safety margin, since its multiple actions work together against agitation.",
+    "pages": "530",
+    "whyNot": [
+     "",
+     "The book points to **lower** doses, not schizophrenia-level dosing, for the safety margin.",
+     "Higher doses would be the opposite of the suggested safety strategy.",
+     "The book states the **warning** exists for this drug in dementia-related psychosis.",
+     "Cholinesterase inhibitors give little benefit for most behavioral symptoms outside Lewy body dementias."
+    ],
+    "whyNotPages": [
+     "",
+     "530",
+     "530",
+     "530",
+     "530"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-14",
+  "tag": "Glutamate",
+  "topic": "glutamate",
+  "stem": "An 84-year-old man with moderate Alzheimer disease is aggressive and restless in the evenings despite a year of memantine for memory. His psychiatrist considers dextromethorphan combined with bupropion, which is in late-stage testing for agitation in AD.",
+  "steps": [
+   {
+    "q": "Which action is thought to account for benefit against agitation?",
+    "choices": [
+     "NMDA receptor antagonism",
+     "Norepinephrine and dopamine reuptake blockade",
+     "5HT1A partial agonism",
+     "Cholinesterase inhibition",
+     "5HT2A antagonism"
+    ],
+    "answer": 0,
+    "why": "The book considers **NMDA antagonism** by dextromethorphan the likely route, quieting excess excitatory glutamate output from the agitation network.",
+    "pages": "533",
+    "whyNot": [
+     "",
+     "Bupropion is an NDRI and CYP2D6 inhibitor, but the **NMDA** action is the one proposed to quell agitation.",
+     "5HT1A partial agonism is part of **brexpiprazole's** profile, not this combination.",
+     "Cholinesterase inhibitors give little benefit for most behavioral symptoms except in Lewy body dementias.",
+     "5HT2A antagonism is how **pimavanserin** acts on the psychosis network."
+    ],
+    "whyNotPages": [
+     "",
+     "533",
+     "530",
+     "530",
+     "527"
+    ]
+   },
+   {
+    "lead": "NMDA receptor antagonism by dextromethorphan is the proposed mechanism. The family notes that he already takes memantine, another NMDA antagonist, without any calming effect.",
+    "q": "Why would memantine alone not be expected to relieve the agitation?",
+    "choices": [
+     "It is a relatively weak, low-potency NMDA blocker and has not been systematically tested in agitation",
+     "It blocks only closed NMDA channels, which are inactive in agitation",
+     "It acts on the cholinergic system, not on glutamate",
+     "It is so potent that it shuts down glutamate transmission and causes psychosis",
+     "It has no NMDA action at memory doses"
+    ],
+    "answer": 0,
+    "why": "Memantine has proven useful for cognition but has not been systematically tested in agitation, and its low potency may explain the lack of anecdotal benefit.",
+    "pages": "533",
+    "whyNot": [
+     "",
+     "Memantine blocks the channel only while it is **open**, hence its description as an open-channel antagonist.",
+     "Memantine's action is on **glutamate NMDA receptors**, unlike cholinesterase inhibitors.",
+     "Its low affinity means it lacks the **psychotomimetic** effects of PCP or ketamine.",
+     "Memantine is an NMDA antagonist at memory doses; it is simply less potent than dextromethorphan."
+    ],
+    "whyNotPages": [
+     "",
+     "516",
+     "516",
+     "518",
+     "533"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v12-15",
+  "tag": "Pseudobulbar affect",
+  "topic": "dementia",
+  "stem": "A 62-year-old man with amyotrophic lateral sclerosis has sudden, brief bursts of uncontrollable crying, often set off by trivial events and out of proportion to how he feels. Between episodes his mood is neutral, he enjoys his usual activities, and he reports no guilt or hopelessness.",
+  "steps": [
+   {
+    "q": "Which diagnosis best fits?",
+    "choices": [
+     "Pseudobulbar affect",
+     "Major depressive episode",
+     "Apathy",
+     "Agitation",
+     "Hypomania"
+    ],
+    "answer": 0,
+    "why": "Uncontrolled crying or laughing inconsistent with mood, in a neurodegenerative illness, is **pseudobulbar affect**, a disorder of affect expression rather than a mood disorder.",
+    "pages": "535–536",
+    "whyNot": [
+     "",
+     "Depression would show sustained low mood with guilt or hopelessness, which he denies.",
+     "Apathy is reduced emotional responsiveness, the **opposite** of exaggerated outbursts.",
+     "Agitation is excess motor activity or aggression, not brief crying disproportionate to mood.",
+     "Hypomania is an elevated mood state and does not describe mood-incongruent crying."
+    ],
+    "whyNotPages": [
+     "",
+     "537",
+     "537",
+     "522",
+     "535"
+    ]
+   },
+   {
+    "lead": "Pseudobulbar affect is diagnosed, and the family asks which treatment has been approved for it.",
+    "q": "Which drug is approved for this condition?",
+    "choices": [
+     "Dextromethorphan–quinidine",
+     "Dextromethorphan–bupropion",
+     "Brexpiprazole",
+     "Pimavanserin",
+     "Memantine"
+    ],
+    "answer": 0,
+    "why": "**Dextromethorphan combined with quinidine** is approved for PBA, presumably acting at NMDA glutamate and σ receptors.",
+    "pages": "536",
+    "whyNot": [
+     "",
+     "This pairing is still in late-stage **testing** for depression and AD agitation, not approved for PBA.",
+     "Brexpiprazole is approved for **schizophrenia and depression** and is in testing for agitation.",
+     "Pimavanserin is a 5HT2A antagonist approved for **Parkinson disease psychosis**.",
+     "Memantine is an NMDA antagonist for **memory** and cognition in AD."
+    ],
+    "whyNotPages": [
+     "",
+     "534",
+     "533",
+     "527",
+     "518"
+    ]
+   }
+  ]
+ }
+]

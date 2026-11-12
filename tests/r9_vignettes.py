@@ -1,11 +1,11 @@
 # R9 two-step vignettes: data shape, practice (step 1 locks, continue, step 2, review of both), exam (two items per
 # vignette, step 2 gated until step 1 locks, locked step 1, scoring per step, review shows stem + lead), teaching mode
 # (step 1 reveal -> Next step -> step 2, per-step room marks, end review), search, phone 390 overflow.
-# Usage: CHS="ch05" python3 -u tests/r9_vignettes.py   (defaults to ch01-ch07)
+# Usage: CHS="ch05" python3 -u tests/r9_vignettes.py   (defaults to all 13 chapters)
 import asyncio, os, json
 from playwright.async_api import async_playwright
 BASE = os.environ.get('STAHL_BASE', 'http://localhost:8766').rstrip('/') + '/'
-CHS = os.environ.get('CHS', 'ch01 ch02 ch03 ch04 ch05 ch06 ch07').split()
+CHS = os.environ.get('CHS', ' '.join('ch%02d' % i for i in range(1, 14))).split()
 OUT = '/tmp/r9'; os.makedirs(OUT, exist_ok=True)
 ERR = []
 def check(ok, msg):

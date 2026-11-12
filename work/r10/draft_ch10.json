@@ -1,0 +1,947 @@
+[
+ {
+  "id": "v10-01",
+  "tag": "Histamine",
+  "topic": "sleep",
+  "stem": "A 58-year-old woman has trouble staying asleep. Over-the-counter diphenhydramine helps her fall asleep but leaves her with dry mouth, constipation, and blurred vision. She has no depression and wants a prescription hypnotic that blocks histamine at H1 receptors without these muscarinic effects.",
+  "steps": [
+   {
+    "q": "Which hypnotic is the best choice?",
+    "choices": [
+     "Doxepin at a very low dose",
+     "Diphenhydramine at a higher dose",
+     "Quetiapine at a low dose",
+     "Chlorpromazine at a low dose",
+     "A low dose of another tricyclic antidepressant"
+    ],
+    "answer": 0,
+    "why": "Doxepin at hypnotic doses of 1–6 mg is quite selective for **H1 receptors**, so it promotes sleep without the muscarinic blockade or monoamine reuptake inhibition that appear at antidepressant doses.",
+    "pages": "426–427",
+    "whyNot": [
+     "",
+     "Diphenhydramine also blocks **M1** receptors, which produces the dry mouth, constipation, and blurred vision she already has.",
+     "Quetiapine has **anticholinergic** actions alongside its potent antihistamine properties, so it would not spare her muscarinic complaints.",
+     "Chlorpromazine is another potent antihistamine that also carries **anticholinergic** actions, which she wants to avoid.",
+     "Tricyclics other than doxepin share the **anticholinergic** profile described for this group, even when used at low doses."
+    ],
+    "whyNotPages": [
+     "",
+     "426",
+     "425",
+     "425",
+     "425"
+    ]
+   },
+   {
+    "lead": "Low-dose doxepin works well for her sleep. Her prescriber then wonders how the same drug acts at the much larger doses used for depression.",
+    "q": "Which action is added at antidepressant doses?",
+    "choices": [
+     "Serotonin and norepinephrine reuptake inhibition",
+     "Dopamine D2 receptor blockade",
+     "Orexin 1 and 2 receptor blockade",
+     "Positive allosteric modulation of GABAA receptors",
+     "Melatonin MT1 and MT2 receptor agonism"
+    ],
+    "answer": 0,
+    "why": "At **antidepressant doses** doxepin inhibits serotonin and norepinephrine reuptake and also blocks M1 and α1 receptors, losing the selectivity that makes low doses a clean H1 hypnotic.",
+    "pages": "426–427",
+    "whyNot": [
+     "",
+     "Doxepin's added actions at high dose are on **transporters** and on M1, H1, and α1 receptors, not on D2 receptors.",
+     "Orexin blockade is the mechanism of **DORAs** such as suvorexant, a different drug class.",
+     "Positive allosteric modulation of **GABAA** receptors defines benzodiazepines and Z drugs, not doxepin.",
+     "MT1/MT2 agonism belongs to **ramelteon** and tasimelteon, not to doxepin."
+    ],
+    "whyNotPages": [
+     "",
+     "427",
+     "423",
+     "421",
+     "439"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-02",
+  "tag": "Histamine",
+  "topic": "histamine-orexin",
+  "stem": "A 29-year-old woman with narcolepsy has constant daytime sleepiness and sleep attacks. Her prescriber wants a wake-promoting drug that is not a controlled substance and that works by increasing histamine release rather than by raising dopamine or norepinephrine.",
+  "steps": [
+   {
+    "q": "Which drug should be chosen?",
+    "choices": [
+     "Pitolisant",
+     "Solriamfetol",
+     "Sodium oxybate",
+     "Amphetamine",
+     "Armodafinil"
+    ],
+    "answer": 0,
+    "why": "**Pitolisant** blocks presynaptic **H3 autoreceptors**, removing the brake on histamine release; it is approved for narcolepsy and has no known abuse potential.",
+    "pages": "444",
+    "whyNot": [
+     "",
+     "**Solriamfetol** works by reuptake inhibition of norepinephrine and dopamine, not by increasing histamine release.",
+     "**Sodium oxybate** acts at GHB and GABAB receptors and is a scheduled, tightly regulated drug.",
+     "**Amphetamine** raises dopamine and norepinephrine and is a controlled substance with high abuse and diversion potential.",
+     "**Armodafinil** acts predominantly as a dopamine transporter inhibitor rather than at histamine autoreceptors."
+    ],
+    "whyNotPages": [
+     "",
+     "444",
+     "447",
+     "442",
+     "443"
+    ]
+   },
+   {
+    "lead": "Pitolisant is started and her sleepiness improves. After a few days she feels jittery and has trouble falling asleep.",
+    "q": "What best explains these new symptoms?",
+    "choices": [
+     "Disinhibited histamine release overactivating arousal circuits",
+     "Dopamine release caused by VMAT2 inhibition",
+     "Rebound after stimulation of GABAB receptors",
+     "Progressive loss of orexin neurons in the lateral hypothalamus",
+     "Accumulating adenosine raising the homeostatic sleep drive"
+    ],
+    "answer": 0,
+    "why": "Blocking **H3 autoreceptors** lets more histamine act at H1 receptors, so the drug can be **overly activating** and produce anxiety or insomnia.",
+    "pages": "444",
+    "whyNot": [
+     "",
+     "VMAT2 inhibition with dopamine release is a property of **amphetamine**, not of pitolisant.",
+     "GABAB partial agonism is how **sodium oxybate** acts; pitolisant is an H3 antagonist.",
+     "Loss of orexin neurons is the underlying neuropathology of the **narcolepsy** itself, not a new drug effect.",
+     "**Adenosine** buildup raises sleep drive, which would cause drowsiness, not hyperarousal."
+    ],
+    "whyNotPages": [
+     "",
+     "442",
+     "446",
+     "435",
+     "408"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-03",
+  "tag": "Narcolepsy",
+  "topic": "histamine-orexin",
+  "stem": "A 19-year-old college student falls asleep suddenly in lectures despite long nights of sleep. When he laughs hard, his knees buckle and he slumps without losing awareness. He also describes vivid hallucinations on waking up.",
+  "steps": [
+   {
+    "q": "Which brain change most likely underlies this syndrome?",
+    "choices": [
+     "Degeneration of orexin-producing cells in the lateral hypothalamus",
+     "Degeneration of histamine neurons in the tuberomammillary nucleus",
+     "Failure of GABA neurons in the ventrolateral preoptic area",
+     "Loss of noradrenergic neurons in the locus coeruleus",
+     "Destruction of serotonergic neurons in the raphe nuclei"
+    ],
+    "answer": 0,
+    "why": "In narcolepsy with **cataplexy**, **orexin neurons** of the lateral hypothalamus are largely lost, so wakefulness is no longer stabilized and sleep intrudes into the day.",
+    "pages": "435",
+    "whyNot": [
+     "",
+     "The **tuberomammillary nucleus** makes histamine and receives orexin input, but its loss is not the substrate identified for narcolepsy.",
+     "The **VLPO** is the GABA sleep-promoting center, whose role is to inhibit wake centers rather than stabilize wakefulness.",
+     "The **locus coeruleus** is a norepinephrine center driven by orexin, not the identified site of cell loss in narcolepsy.",
+     "The **raphe nuclei** release serotonin under orexin's influence, and are not the identified site of degeneration."
+    ],
+    "whyNotPages": [
+     "",
+     "408",
+     "413",
+     "413",
+     "413"
+    ]
+   },
+   {
+    "lead": "Narcolepsy with cataplexy is suspected, but his CSF orexin level returns within the normal range.",
+    "q": "Which other finding would still support the diagnosis?",
+    "choices": [
+     "Two or more sleep-onset REM periods with a short sleep latency on the MSLT",
+     "Fewer than two sleep-onset REM periods with a short sleep latency",
+     "Low CSF histamine with preserved orexin",
+     "Repeated apneas with oxygen desaturation on polysomnography",
+     "A prolonged sleep latency on the MSLT"
+    ],
+    "answer": 0,
+    "why": "Orexin levels are often normal, so the diagnosis can rest on **sleep-onset REM periods**: two or more on the MSLT, or one on polysomnography, plus a short latency of 8 minutes or less.",
+    "pages": "435",
+    "whyNot": [
+     "",
+     "Fewer than two such periods with short latency matches **idiopathic hypersomnia** criteria, not narcolepsy.",
+     "Low CSF histamine may occur in **idiopathic hypersomnia**, where orexin is typically unaffected.",
+     "Apneas with desaturation define **obstructive sleep apnea**, a secondary cause of sleepiness.",
+     "Narcolepsy shows a **short** sleep latency of 8 minutes or less, not a prolonged one."
+    ],
+    "whyNotPages": [
+     "",
+     "435",
+     "435",
+     "432",
+     "435"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-04",
+  "tag": "PK",
+  "topic": "pk-interactions",
+  "stem": "A 52-year-old man takes triazolam nightly. He falls asleep within minutes but wakes at about 3 a.m. and cannot return to sleep. He has no pain, mood symptoms, or sleep apnea, and his prescriber reviews the drug's pharmacokinetics.",
+  "steps": [
+   {
+    "q": "What is the most likely pharmacokinetic explanation?",
+    "choices": [
+     "Receptor occupancy falls below the sleep threshold before the desired wake time",
+     "Receptor occupancy never reaches the threshold needed for sleep onset",
+     "Receptor occupancy stays above the sleep threshold after the desired wake time",
+     "Repeated nightly dosing has caused accumulation of the parent drug",
+     "Rising endogenous orexin is displacing the drug from its receptors"
+    ],
+    "answer": 0,
+    "why": "Triazolam's ultra-short half-life makes it a “too cold” hypnotic: levels drop below the sleep threshold early, so sleep maintenance is lost and he wakes before the desired time.",
+    "pages": "429",
+    "whyNot": [
+     "",
+     "That is a problem of **sleep onset**, and he falls asleep quickly.",
+     "That pattern causes **next-day hangover**, typical of moderately long half-lives, not early waking.",
+     "**Accumulation** occurs with ultra-long half-life drugs such as flurazepam, not with a very short-acting one.",
+     "Competition from endogenous **orexin** applies to DORAs; no endogenous ligand competes at the benzodiazepine site."
+    ],
+    "whyNotPages": [
+     "",
+     "429",
+     "429",
+     "428",
+     "430"
+    ]
+   },
+   {
+    "lead": "The explanation is that his drug levels drop below the sleep threshold too early in the night.",
+    "q": "Which change fits the book's reasoning?",
+    "choices": [
+     "Switch to a drug that stays above the threshold longer",
+     "Give the dose earlier in the evening",
+     "Take the dose together with a meal",
+     "Lower the dose",
+     "Switch to a drug with an even shorter duration of action"
+    ],
+    "answer": 0,
+    "why": "When a patient does not sleep long enough, levels are lost too soon, so the logic is a higher dose or a drug with a **longer time above threshold**.",
+    "pages": "429",
+    "whyNot": [
+     "",
+     "Earlier dosing is the fix for slow **sleep onset** or morning grogginess; here the drug already wears off too early.",
+     "Food can delay absorption, which bears on **onset**, and would not extend the time above threshold.",
+     "Lowering the dose is the remedy for **morning grogginess** and would shorten the time above threshold further.",
+     "A shorter duration of action would lose the threshold even **sooner**, worsening the early awakening."
+    ],
+    "whyNotPages": [
+     "",
+     "429–430",
+     "429",
+     "430",
+     "430"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-05",
+  "tag": "PK",
+  "topic": "pk-interactions",
+  "stem": "A 79-year-old woman has taken flurazepam nightly for three weeks. She now feels sedated and unsteady during the day and fell in the bathroom yesterday. Her sleep itself is better, and she has had no new medication or illness.",
+  "steps": [
+   {
+    "q": "Which explanation best fits the daytime impairment?",
+    "choices": [
+     "Accumulation of an ultra-long half-life drug keeps levels above the threshold for days",
+     "Drug levels of an ultra-short half-life agent fading before morning",
+     "Selective action at extrasynaptic δ-containing GABAA receptors",
+     "Competition from rising orexin reversing receptor blockade each morning",
+     "Failure of the drug to reach the sleep threshold at onset"
+    ],
+    "answer": 0,
+    "why": "Flurazepam has an ultra-long half-life, so nightly use makes the drug **accumulate** and stay above the sleep threshold, causing impairment and fall risk, particularly in the elderly.",
+    "pages": "428",
+    "whyNot": [
+     "",
+     "Fading early is the problem of ultra-short agents like **triazolam**, and would cause early waking, not daytime sedation.",
+     "**δ-containing** GABAA receptors are extrasynaptic and insensitive to benzodiazepines, so flurazepam does not act there.",
+     "Orexin competition applies to **DORAs**, not to GABAA positive allosteric modulators.",
+     "Missing the threshold at onset would cause **slow sleep onset**, not daytime sedation."
+    ],
+    "whyNotPages": [
+     "",
+     "429",
+     "422",
+     "430",
+     "429"
+    ]
+   },
+   {
+    "lead": "Flurazepam is stopped. Her prescriber wants a hypnotic whose time above the sleep threshold is close to the ideal of about 8 hours.",
+    "q": "Which drug is the better choice?",
+    "choices": [
+     "Eszopiclone",
+     "Temazepam",
+     "Zaleplon",
+     "Quazepam",
+     "Mirtazapine"
+    ],
+    "answer": 0,
+    "why": "**Eszopiclone** is among the examples that stay above threshold for roughly 8 hours, the “just right” Goldilocks profile that avoids both accumulation and early wear-off.",
+    "pages": "428",
+    "whyNot": [
+     "",
+     "Temazepam is moderately long-acting, so levels may persist past waking and cause **hangover**.",
+     "Zaleplon has a half-life of only 1–3 hours, so it **wears off** before the time to awaken.",
+     "Quazepam is another **ultra-long** half-life benzodiazepine with the same accumulation problem.",
+     "Mirtazapine belongs with the moderately long half-life group that can leave **hangover** effects."
+    ],
+    "whyNotPages": [
+     "",
+     "429",
+     "429",
+     "428",
+     "429"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-06",
+  "tag": "DORAs",
+  "topic": "sleep",
+  "stem": "A 48-year-old man has trouble sleeping. Years ago a benzodiazepine gave him rebound insomnia when stopped and an unsteady gait that led to a fall. He wants a hypnotic that helps both falling and staying asleep without acting through GABA.",
+  "steps": [
+   {
+    "q": "Which drug is the best fit?",
+    "choices": [
+     "Suvorexant",
+     "Zolpidem",
+     "Eszopiclone",
+     "Zaleplon",
+     "Temazepam"
+    ],
+    "answer": 0,
+    "why": "**Suvorexant**, a dual orexin receptor antagonist, blocks orexin's wake-stabilizing signal instead of boosting GABA, improving sleep onset and maintenance without dependence, withdrawal, rebound, or falls.",
+    "pages": "423",
+    "whyNot": [
+     "",
+     "**Zolpidem** is a GABAA positive allosteric modulator, so it works by the very mechanism he wants to avoid.",
+     "**Eszopiclone** also enhances GABA at GABAA receptors, the route that carries benzodiazepine-type liabilities.",
+     "**Zaleplon** is a Z drug acting at GABAA receptors and is very short-acting, so it would not support sleep maintenance.",
+     "**Temazepam** is itself a benzodiazepine, the class that caused his rebound insomnia and fall."
+    ],
+    "whyNotPages": [
+     "",
+     "421",
+     "423",
+     "429",
+     "423"
+    ]
+   },
+   {
+    "lead": "Suvorexant is started. He sleeps well but feels drowsy the next morning.",
+    "q": "Which adjustment fits best?",
+    "choices": [
+     "Lower the dose",
+     "Raise the dose",
+     "Move the dose later at night",
+     "Switch to a drug with a longer duration above the threshold",
+     "Continue unchanged because DORAs cannot cause carryover"
+    ],
+    "answer": 0,
+    "why": "Carryover means drug levels still sit near the sleep threshold at waking, so the book points to a **lower dose** of the DORA; such next-morning effects have been noted in practice.",
+    "pages": "430",
+    "whyNot": [
+     "",
+     "A **higher dose** is the proposed remedy for early-morning awakening and would deepen next-morning carryover.",
+     "Later dosing would keep levels higher at waking; the book's timing fix for grogginess is **earlier** dosing.",
+     "A longer duration above threshold helps patients who **wake too early**, not those who are groggy.",
+     "Carryover effects have been noted **sometimes** in clinical practice with DORAs."
+    ],
+    "whyNotPages": [
+     "",
+     "430",
+     "430",
+     "429–430",
+     "430"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-07",
+  "tag": "DORAs",
+  "topic": "histamine-orexin",
+  "stem": "A 55-year-old woman takes suvorexant at bedtime. She falls asleep readily and sleeps soundly through the first half of the night, but she wakes around 4 a.m. and stays awake. Her prescriber wonders why the drug seems to fade so early.",
+  "steps": [
+   {
+    "q": "Which mechanism most plausibly explains this?",
+    "choices": [
+     "Rising endogenous orexin competes with the falling drug at orexin receptors",
+     "Rising endogenous GABA competes with the drug at the benzodiazepine site",
+     "Rising endogenous histamine overrides the drug at H1 receptors",
+     "Adenosine buildup overrides the drug's blockade as the night proceeds",
+     "Tolerance from adaptation of α1-containing GABAA receptors"
+    ],
+    "answer": 0,
+    "why": "DORAs are **reversible** inhibitors, and orexin levels rise toward morning as drug levels fall, so orexin competes for the receptors and lifts the blockade.",
+    "pages": "423",
+    "whyNot": [
+     "",
+     "No known **endogenous ligand** acts at the GABA PAM site to compete with such drugs, and suvorexant is not a GABAA drug.",
+     "Endogenous histamine, serotonin, and norepinephrine are unlikely to reach levels that **reverse** antagonist binding by hypnotics.",
+     "**Adenosine** builds during wakefulness and declines with sleep; it does not compete at orexin receptors.",
+     "α1 adaptation is tied to tolerance with **GABAA PAM** hypnotics, which suvorexant is not."
+    ],
+    "whyNotPages": [
+     "",
+     "430",
+     "430",
+     "413",
+     "423"
+    ]
+   },
+   {
+    "lead": "Competition from rising orexin against falling drug levels is the explanation.",
+    "q": "Which adjustment is theoretically suited?",
+    "choices": [
+     "Raise the dose",
+     "Lower the dose",
+     "Switch to the DORA with the longer plasma half-life",
+     "Take the dose earlier in the evening",
+     "Take the dose with a large meal"
+    ],
+    "answer": 0,
+    "why": "A higher DORA dose would help **early-morning awakening**, because blockade has to hold up against the morning rise in orexin.",
+    "pages": "430",
+    "whyNot": [
+     "",
+     "A lower dose is considered for **carryover** the next morning, the opposite problem.",
+     "DORA **half-lives** are not clinically relevant, since orexin levels as well as drug levels set net blockade.",
+     "Earlier dosing is advised for morning grogginess and would leave even less drug on board by **4 a.m.**",
+     "Food can delay absorption of some agents, which would not help the drug persist into the early morning."
+    ],
+    "whyNotPages": [
+     "",
+     "430",
+     "430",
+     "430",
+     "429"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-08",
+  "tag": "Trazodone",
+  "topic": "sleep",
+  "stem": "A 41-year-old woman with major depression and insomnia is given a low dose of immediate-release trazodone at bedtime. She sleeps better and notices no morning hangover or tolerance. The team wants to understand why this drug works as a hypnotic.",
+  "steps": [
+   {
+    "q": "Which actions underlie its hypnotic effect?",
+    "choices": [
+     "Blockade of 5HT2A, α1-adrenergic, and H1 receptors",
+     "Positive allosteric modulation of α1-containing GABAA receptors",
+     "Blockade of orexin 1 and orexin 2 receptors",
+     "Agonism at MT1 and MT2 melatonin receptors",
+     "Blockade of presynaptic H3 autoreceptors"
+    ],
+    "answer": 0,
+    "why": "Trazodone blocks **5HT2A, α1, and H1** receptors, reducing arousal rather than enhancing sleep drive; the 5HT2A blockade specifically adds slow-wave sleep.",
+    "pages": "424–425",
+    "whyNot": [
+     "",
+     "That is how **benzodiazepines and Z drugs** work, by enhancing sleep drive; trazodone instead reduces arousal.",
+     "Orexin blockade defines **DORAs**; trazodone is a separate arousal-reducing agent.",
+     "MT1/MT2 agonism is the mechanism of **ramelteon** and tasimelteon.",
+     "H3 blockade would **increase** histamine release and promote wakefulness, the opposite effect."
+    ],
+    "whyNotPages": [
+     "",
+     "424",
+     "424",
+     "439",
+     "403"
+    ]
+   },
+   {
+    "lead": "Her depression persists. Because trazodone's 5HT2A, α1, and H1 blockade is sedating, her prescriber considers raising it to antidepressant doses.",
+    "q": "What approach allows antidepressant dosing to be tolerated?",
+    "choices": [
+     "A once-daily controlled-release formulation that keeps levels below the sedative range",
+     "An immediate-release formulation given two or three times daily",
+     "A single immediate-release dose taken only at bedtime",
+     "Combination with a benzodiazepine to blunt daytime sedation",
+     "Addition of low-dose doxepin to offset the daytime drowsiness"
+    ],
+    "answer": 0,
+    "why": "For antidepressant action the dose must rise, and a **once-daily controlled-release** form gives levels that clear the antidepressant requirement but stay under the sedation range.",
+    "pages": "425",
+    "whyNot": [
+     "",
+     "Short-acting trazodone given two or three times daily at high dose was the original approach and caused **daytime sedation**.",
+     "A single low immediate-release bedtime dose is the **hypnotic** use and wears off by morning, too little for antidepressant action.",
+     "A benzodiazepine is a GABAA PAM with tolerance and withdrawal risks, and it is not what makes high-dose trazodone tolerable.",
+     "Low-dose doxepin is an **H1** hypnotic that would add more sedation, not offset it."
+    ],
+    "whyNotPages": [
+     "",
+     "425",
+     "425",
+     "422",
+     "426"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-09",
+  "tag": "Circadian",
+  "topic": "sleep",
+  "stem": "A 34-year-old woman who is totally blind reports that her sleep times keep drifting later and later. She has insomnia at night and sleepiness by day, in cycles, and no other medical illness.",
+  "steps": [
+   {
+    "q": "What mechanism best explains her pattern?",
+    "choices": [
+     "A free-running internal clock that light cannot entrain",
+     "A PER2 mutation shifting the clock earlier",
+     "A rotating work schedule that overlaps her usual sleep time",
+     "Loss of orexin neurons in the lateral hypothalamus",
+     "Failure to switch off arousal circuits at night"
+    ],
+    "answer": 0,
+    "why": "Without light input through the **retinohypothalamic tract** to the suprachiasmatic nucleus, her internal clock **free-runs**, giving irregular sleep timing with both insomnia and sleepiness.",
+    "pages": "438",
+    "whyNot": [
+     "",
+     "A **PER2** mutation is linked to familial advanced sleep phase, with consistently early sleep timing, not drifting.",
+     "Misalignment from a rotating schedule defines **shift work disorder**, which needs a work schedule overlapping sleep time.",
+     "Orexin neuron loss causes **narcolepsy**, with sleep intrusions rather than a drifting sleep schedule.",
+     "Failure to switch off arousal circuits describes **insomnia** hyperarousal, not circadian drift."
+    ],
+    "whyNotPages": [
+     "",
+     "435",
+     "436",
+     "435",
+     "418"
+    ]
+   },
+   {
+    "lead": "Her clinician diagnoses non-24-hour sleep–wake disorder and prescribes tasimelteon to synchronize her clock.",
+    "q": "Which receptor action is thought to underlie this retraining effect?",
+    "choices": [
+     "MT2 receptor agonism",
+     "Activity at the MT3 site",
+     "5HT2C receptor antagonism",
+     "OX2 receptor antagonism",
+     "H3 autoreceptor antagonism"
+    ],
+    "answer": 0,
+    "why": "Tasimelteon is an MT1/MT2 agonist, and its power to retrain the circadian clock is thought to come from **MT2** receptors, which mediate phase shifting in the SCN.",
+    "pages": "439–440",
+    "whyNot": [
+     "",
+     "The **MT3** site is the enzyme NRH–quinone oxidoreductase 2, probably not involved in sleep physiology.",
+     "**5HT2C** antagonism belongs to agomelatine, an antidepressant outside the US, not tasimelteon.",
+     "**OX2** antagonism is how DORAs reduce arousal, not how tasimelteon resets the clock.",
+     "**H3** blockade, as with pitolisant, promotes wakefulness by releasing histamine."
+    ],
+    "whyNotPages": [
+     "",
+     "439",
+     "439",
+     "423",
+     "444"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-10",
+  "tag": "Circadian",
+  "topic": "sleep",
+  "stem": "A 16-year-old girl cannot fall asleep until about 4 a.m. and is very hard to wake before early afternoon, so she misses morning classes. When she can follow her natural schedule, her sleep length and quality are normal.",
+  "steps": [
+   {
+    "q": "Which disorder fits best?",
+    "choices": [
+     "Delayed sleep phase disorder",
+     "Advanced sleep phase disorder",
+     "Non-24-hour sleep–wake disorder",
+     "Shift work disorder",
+     "Idiopathic hypersomnia"
+    ],
+    "answer": 0,
+    "why": "She cannot fall asleep until early morning and wakes late, yet sleep duration and quality are normal: the picture of **delayed sleep phase disorder**, the most common circadian rhythm disorder.",
+    "pages": "438",
+    "whyNot": [
+     "",
+     "Advanced sleep phase disorder causes **early** bedtime and waking, the reverse of her pattern.",
+     "Non-24-hour disorder primarily affects **blind** individuals and produces drifting, irregular timing.",
+     "Shift work disorder requires a **work schedule** that overlaps the usual time for sleep.",
+     "Idiopathic hypersomnia features constant **daytime sleepiness** with non-refreshing sleep, not a delayed schedule."
+    ],
+    "whyNotPages": [
+     "",
+     "435",
+     "438",
+     "436",
+     "435"
+    ]
+   },
+   {
+    "lead": "Delayed sleep phase disorder is diagnosed, and her clinician plans to reset her clock with timed circadian treatments.",
+    "q": "Which timing of circadian treatments is appropriate?",
+    "choices": [
+     "Bright light in the morning and melatonin in the evening",
+     "Bright light in the early evening and melatonin in the early morning",
+     "Bright light late at night and melatonin in the evening",
+     "Bright light in the morning and melatonin in the early morning",
+     "Tasimelteon each morning without any light exposure"
+    ],
+    "answer": 0,
+    "why": "To pull a delayed clock earlier, use **morning bright light** with **evening melatonin**, taken at the desired bedtime to shift phase and facilitate sleep onset.",
+    "pages": "438–439",
+    "whyNot": [
+     "",
+     "Early-evening light with early-morning melatonin is the schedule for **advanced** sleep phase disorder.",
+     "The book places bright light for delayed phase in the **morning**, not late at night.",
+     "Melatonin for phase delay is taken at the desired **evening** bedtime, not in the early morning.",
+     "Tasimelteon is marketed for **non-24-hour** disorder, and the book pairs light with melatonin for delayed phase."
+    ],
+    "whyNotPages": [
+     "",
+     "439",
+     "438",
+     "439",
+     "439"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-11",
+  "tag": "Hypersomnia",
+  "topic": "sleep",
+  "stem": "A 37-year-old nurse works rotating night shifts. For several months she has been overwhelmingly sleepy during shifts and cannot sleep well by day. A sleep diary shows misalignment with her work schedule, and no other sleep, medical, or psychiatric disorder explains it.",
+  "steps": [
+   {
+    "q": "Which wake-promoting drug is approved for this condition?",
+    "choices": [
+     "Modafinil",
+     "Methylphenidate",
+     "Dextroamphetamine",
+     "Pitolisant",
+     "Sodium oxybate"
+    ],
+    "answer": 0,
+    "why": "**Modafinil** and armodafinil are approved for **shift work disorder** and as adjuncts in sleep apnea, which are not labeled uses of amphetamine or methylphenidate.",
+    "pages": "443",
+    "whyNot": [
+     "",
+     "**Methylphenidate** is approved for narcolepsy sleepiness but not for shift work disorder, though used off-label.",
+     "**Dextroamphetamine** is likewise approved for narcolepsy, not for shift work disorder.",
+     "**Pitolisant** is approved for narcolepsy and acts by H3 blockade.",
+     "**Sodium oxybate** is approved for cataplexy and sleepiness in narcolepsy and works by improving slow-wave sleep at night."
+    ],
+    "whyNotPages": [
+     "",
+     "441",
+     "441",
+     "444",
+     "447"
+    ]
+   },
+   {
+    "lead": "Modafinil is chosen. Her prescriber also considers its R enantiomer, armodafinil, hoping for simpler dosing.",
+    "q": "How does armodafinil's profile differ from racemic modafinil?",
+    "choices": [
+     "Later peak, longer half-life, and higher levels 6–14 hours after dosing",
+     "Earlier peak, shorter half-life, and lower levels late in the day",
+     "Greater inhibition of VMAT2, producing dopamine release",
+     "Direct blockade of H3 autoreceptors to release histamine",
+     "Stronger binding to the norepinephrine transporter than to the dopamine transporter"
+    ],
+    "answer": 0,
+    "why": "Armodafinil peaks later, lasts longer, and gives higher plasma levels 6–14 hours after dosing, which may remove the **second daily dose** often needed with modafinil.",
+    "pages": "443",
+    "whyNot": [
+     "",
+     "That is the opposite of its pharmacokinetics; armodafinil is slower to peak and **longer lasting**.",
+     "VMAT2 inhibition is a property of **amphetamine**; modafinil and armodafinil act predominantly at DAT.",
+     "H3 autoreceptor blockade is the mechanism of **pitolisant**.",
+     "Both enantiomers act predominantly on the **dopamine transporter**, not the norepinephrine transporter."
+    ],
+    "whyNotPages": [
+     "",
+     "443",
+     "442",
+     "444",
+     "443"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-12",
+  "tag": "Hypersomnia",
+  "topic": "sleep",
+  "stem": "A 52-year-old obese man is evaluated for daytime sleepiness. His wife reports loud snoring, he has hypertension and a neck circumference over 17 inches, and he has felt low and uninterested lately. He sleeps poorly at night and dozes off at work.",
+  "steps": [
+   {
+    "q": "Which condition is the likeliest secondary cause of his sleepiness?",
+    "choices": [
+     "Obstructive sleep apnea",
+     "Narcolepsy with cataplexy",
+     "Idiopathic hypersomnia",
+     "Delayed sleep phase disorder",
+     "Advanced sleep phase disorder"
+    ],
+    "answer": 0,
+    "why": "Loud snoring, obesity, hypertension, a thick neck, and daytime sleepiness are classic **OSA** features, and OSA is among the most common secondary causes of hypersomnia.",
+    "pages": "434",
+    "whyNot": [
+     "",
+     "Narcolepsy is a **central** disorder with sleep attacks and cataplexy, without this airway-related profile.",
+     "**Idiopathic hypersomnia** features long or normal sleep that is non-refreshing, not snoring and hypertension.",
+     "Delayed sleep phase disorder causes late sleep timing with otherwise **normal** sleep quality and duration.",
+     "Advanced sleep phase disorder causes early sleep timing with **adequate** total sleep and quality."
+    ],
+    "whyNotPages": [
+     "",
+     "432",
+     "432",
+     "438",
+     "435"
+    ]
+   },
+   {
+    "lead": "Overnight polysomnography confirms obstructive sleep apnea as the cause of his sleepiness, and treatment is now being planned.",
+    "q": "What is the first-line treatment?",
+    "choices": [
+     "Continuous positive airway pressure",
+     "An oral appliance",
+     "Bilevel positive airway pressure",
+     "Modafinil as monotherapy",
+     "Surgery to correct airway anatomy"
+    ],
+    "answer": 0,
+    "why": "**Continuous positive airway pressure** is the first-line therapy for OSA; the other approaches come in when patients find it intolerable or need add-on help.",
+    "pages": "443",
+    "whyNot": [
+     "",
+     "Oral appliances are an option for patients who find CPAP **intolerable**.",
+     "**BPAP** is another alternative when CPAP is not tolerated, not the first-line choice.",
+     "Modafinil is approved as an **adjunct** to airway treatment, and is used alone only off-label.",
+     "Surgery aims at physical attributes and is reserved for patients who find **CPAP** intolerable."
+    ],
+    "whyNotPages": [
+     "",
+     "443",
+     "443",
+     "443",
+     "443"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-13",
+  "tag": "Wake agents",
+  "topic": "sleep",
+  "stem": "A 31-year-old woman with narcolepsy has persistent sleepiness. Amphetamine made her anxious and raised her blood pressure. Her prescriber wants a norepinephrine and dopamine reuptake inhibitor that is less abusable and has a short half-life, so a morning dose wears off by bedtime.",
+  "steps": [
+   {
+    "q": "Which drug fits best?",
+    "choices": [
+     "Solriamfetol",
+     "Armodafinil",
+     "Pitolisant",
+     "Sodium oxybate",
+     "Methylphenidate"
+    ],
+    "answer": 0,
+    "why": "**Solriamfetol** inhibits norepinephrine and dopamine reuptake, is weaker than amphetamines yet better tolerated and less abusable, and its **short half-life** lets morning doses wear off by sleep time.",
+    "pages": "444",
+    "whyNot": [
+     "",
+     "**Armodafinil** acts mainly at the dopamine transporter and has a longer half-life, not a short one.",
+     "**Pitolisant** blocks H3 autoreceptors; it is not a norepinephrine and dopamine reuptake inhibitor.",
+     "**Sodium oxybate** acts at GHB and GABAB receptors and is tightly regulated because of abuse potential.",
+     "**Methylphenidate** also inhibits reuptake but is a controlled substance with high abuse and diversion potential."
+    ],
+    "whyNotPages": [
+     "",
+     "443",
+     "444",
+     "447",
+     "442"
+    ]
+   },
+   {
+    "lead": "Solriamfetol is started, and she asks what else it is approved to treat.",
+    "q": "Besides narcolepsy, for what use is it approved?",
+    "choices": [
+     "Sleepiness in OSA, added to airway treatment",
+     "Shift work disorder",
+     "Cataplexy",
+     "Non-24-hour sleep–wake disorder",
+     "Insomnia with nighttime hyperarousal"
+    ],
+    "answer": 0,
+    "why": "Solriamfetol is approved for sleepiness in **narcolepsy** and is added to mechanical airway therapy when **OSA** leaves a patient sleepy.",
+    "pages": "444",
+    "whyNot": [
+     "",
+     "Shift work disorder is a labeled use of **modafinil/armodafinil** in the book, not of solriamfetol.",
+     "Cataplexy is a labeled use of **sodium oxybate**.",
+     "Non-24-hour disorder is treated with **tasimelteon**.",
+     "Insomnia is a state of excess arousal, whereas a **wake-promoting** drug targets deficient arousal."
+    ],
+    "whyNotPages": [
+     "",
+     "443",
+     "447",
+     "439",
+     "402"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-14",
+  "tag": "Wake agents",
+  "topic": "sleep",
+  "stem": "A 26-year-old man with narcolepsy has constant daytime sleepiness. He misused methylphenidate in the past, and his prescriber wants an effective wake-promoting drug with much lower abuse potential and milder side effects.",
+  "steps": [
+   {
+    "q": "Which drug is the most suitable?",
+    "choices": [
+     "Modafinil",
+     "Dextroamphetamine",
+     "Methylphenidate",
+     "DL-amphetamine",
+     "Sodium oxybate"
+    ],
+    "answer": 0,
+    "why": "**Modafinil** is effective for narcolepsy sleepiness, with far lower abuse potential and milder side effects than amphetamine or methylphenidate.",
+    "pages": "443",
+    "whyNot": [
+     "",
+     "**D-amphetamine** is a controlled substance because of high abuse and diversion potential.",
+     "**Methylphenidate** carries high abuse potential, the exact problem to avoid, and he already misused it.",
+     "**DL-amphetamine** is also a controlled stimulant with abuse, psychosis, and blood pressure risks.",
+     "**Sodium oxybate** is scheduled and tightly regulated because of its abuse potential."
+    ],
+    "whyNotPages": [
+     "",
+     "442",
+     "442",
+     "442",
+     "447"
+    ]
+   },
+   {
+    "lead": "Modafinil is prescribed. He asks why it is less likely to be reinforcing than a stimulant, even though it acts on the dopamine transporter.",
+    "q": "Which property explains this?",
+    "choices": [
+     "A slow rise with incomplete DAT occupancy, favoring tonic dopamine",
+     "Strong, complete DAT blockade that produces phasic dopamine bursts",
+     "Dopamine release through VMAT2 inhibition, as with amphetamine",
+     "Histamine release from H3 autoreceptor blockade",
+     "Adenosine receptor antagonism that restores D2 affinity for dopamine"
+    ],
+    "answer": 0,
+    "why": "Modafinil binds DAT weakly but reaches high levels, rising slowly and staying elevated for hours with **incomplete occupancy**, favoring **tonic** dopamine for wakefulness over phasic dopamine for reinforcement.",
+    "pages": "442",
+    "whyNot": [
+     "",
+     "Modafinil is a **weak** DAT inhibitor with incomplete occupancy; complete blockade and phasic bursts are tied to reinforcement.",
+     "VMAT2 inhibition with dopamine release is a property of **amphetamine**, not modafinil.",
+     "H3 blockade is **pitolisant**'s mechanism; modafinil's histamine effect is downstream of dopamine.",
+     "Adenosine receptor antagonism describes **caffeine**."
+    ],
+    "whyNotPages": [
+     "",
+     "442",
+     "442",
+     "444",
+     "440"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v10-15",
+  "tag": "Oxybate",
+  "topic": "sleep",
+  "stem": "A 24-year-old woman with narcolepsy has daytime sleepiness, cataplexy, hypnagogic hallucinations, and sleep paralysis. Her prescriber wants a drug approved for both cataplexy and sleepiness that works by improving her sleep at night.",
+  "steps": [
+   {
+    "q": "Which drug is the best choice?",
+    "choices": [
+     "Sodium oxybate",
+     "Modafinil",
+     "Armodafinil",
+     "Solriamfetol",
+     "Methylphenidate"
+    ],
+    "answer": 0,
+    "why": "**Sodium oxybate** is approved for cataplexy and sleepiness, enhances slow-wave sleep, and reduces hypnagogic hallucinations and sleep paralysis, rather than raising wake-promoting transmitters.",
+    "pages": "447",
+    "whyNot": [
+     "",
+     "**Modafinil** promotes wakefulness through **dopamine transporter** inhibition, rather than through nighttime slow-wave sleep.",
+     "**Armodafinil**, the R enantiomer, works the same way, raising dopamine tone to promote daytime wakefulness.",
+     "**Solriamfetol** blocks norepinephrine and dopamine reuptake to promote wakefulness rather than acting on sleep.",
+     "**Methylphenidate** is a wake-promoting reuptake inhibitor acting on dopamine and norepinephrine, not on slow-wave sleep."
+    ],
+    "whyNotPages": [
+     "",
+     "442",
+     "443",
+     "444",
+     "442"
+    ]
+   },
+   {
+    "lead": "Sodium oxybate is started. Her pharmacist explains that it is a partial agonist at GABAB receptors.",
+    "q": "How does it behave at GABAB receptors when GABA levels are high?",
+    "choices": [
+     "As an antagonist, reducing GABAB stimulation",
+     "As a full agonist, adding to GABA's stimulation",
+     "As a positive allosteric modulator, amplifying GABA's effect",
+     "As a presynaptic autoreceptor blocker, releasing more GABA",
+     "As a silent ligand with no effect on GABAB receptors"
+    ],
+    "answer": 0,
+    "why": "As a **partial agonist** it stimulates GABAB receptors less than GABA itself, so when GABA is high it lowers stimulation, and when GABA is low it raises it.",
+    "pages": "446–447",
+    "whyNot": [
+     "",
+     "Full agonism applies to its action at **GHB receptors**, not at GABAB receptors.",
+     "Positive allosteric modulation is the mechanism of **benzodiazepines and Z drugs** at GABAA, not oxybate at GABAB.",
+     "Releasing GABA through autoreceptor blockade is not its mechanism; it is a **partial agonist** at GABAB.",
+     "Oxybate changes GABAB signaling in **both directions**, depending on ambient GABA, so it is not silent."
+    ],
+    "whyNotPages": [
+     "",
+     "446",
+     "421",
+     "446",
+     "447"
+    ]
+   }
+  ]
+ }
+]

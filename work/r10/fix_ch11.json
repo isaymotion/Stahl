@@ -1,0 +1,24 @@
+{
+ "v11-04": {
+  "steps": {
+   "0": {
+    "why": "Oppositional symptoms are hypothetically linked to a **very low NE** signal in the ventromedial prefrontal cortex. A stimulant cuts noise through dopamine but cannot correct so strong an NE deficit, so the gain is partial."
+   }
+  }
+ },
+ "v11-12": {
+  "steps": {
+   "1": {
+    "choices": {
+     "4": "A higher dose of clonidine"
+    },
+    "whyNot": {
+     "4": "More **clonidine** adds more of the same sedating, blood-pressure-lowering action that caused the problem."
+    },
+    "whyNotPages": {
+     "4": "482"
+    }
+   }
+  }
+ }
+}

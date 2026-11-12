@@ -1,0 +1,947 @@
+[
+ {
+  "id": "v11-01",
+  "tag": "Circuits",
+  "topic": "circuits",
+  "stem": "A 9-year-old boy is brought in by his mother because he starts homework but rarely finishes it, loses track of multistep tasks, and avoids anything demanding prolonged mental effort. He is not especially restless and does not blurt out answers. His teacher calls him disorganized and says he gives up on long assignments.",
+  "steps": [
+   {
+    "q": "Inefficient processing in which prefrontal region best accounts for this symptom pattern?",
+    "choices": [
+     "Dorsal anterior cingulate cortex",
+     "Orbitofrontal cortex",
+     "Dorsolateral prefrontal cortex",
+     "Prefrontal motor cortex",
+     "Ventromedial prefrontal cortex"
+    ],
+    "answer": 2,
+    "why": "Failing to finish tasks, disorganization and avoiding mental effort reflect weak **sustained attention and problem solving**, hypothesized to depend on a loop running through the **dorsolateral prefrontal cortex**.",
+    "pages": "449",
+    "whyNot": [
+     "That region handles **selective attention** (focusing, careless mistakes, distractibility), not following tasks through.",
+     "Linked to **impulsivity** such as interrupting and blurting out, which this boy does not show.",
+     "",
+     "Modulates motor **hyperactivity** such as fidgeting and leaving the seat, which is absent here.",
+     "Tied to comorbid conduct, oppositional and mood symptoms rather than to unfinished tasks."
+    ],
+    "whyNotPages": [
+     "450",
+     "452",
+     "",
+     "452",
+     "453"
+    ]
+   },
+   {
+    "lead": "The clinician notes that inefficient processing in this same prefrontal region also underlies executive dysfunction in schizophrenia, major depression and anxiety.",
+    "q": "What shift in psychiatric diagnosis does this overlap support?",
+    "choices": [
+     "Moving from mixed syndromes toward single symptom dimensions, such as executive dysfunction, that cross disorders",
+     "Splitting ADHD into more categorical syndromes that each combine many symptoms",
+     "Restricting executive dysfunction to childhood-onset disorders only",
+     "Assigning every psychiatric disorder its own unique prefrontal circuit",
+     "Replacing symptom assessment with a single neurotransmitter measurement"
+    ],
+    "answer": 0,
+    "why": "The same executive dysfunction appears in many conditions, so research increasingly characterizes **symptom domains** across disorders, hoping to find better neuroimaging, biomarker and genetic correlates.",
+    "pages": "449",
+    "whyNot": [
+     "",
+     "That runs the opposite way: the field is moving **away** from categorical syndromes that mix many symptoms.",
+     "Executive dysfunction is described across schizophrenia, depression, mania, anxiety, pain and sleep disorders, not just childhood-onset ones.",
+     "Shared symptom dimensions such as executive dysfunction cut **across** disorders, rather than belonging to one circuit per disorder.",
+     "The trend relies on neuroimaging, biomarkers and genetics, not on a single transmitter measurement."
+    ],
+    "whyNotPages": [
+     "",
+     "449",
+     "449",
+     "449",
+     "449"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-02",
+  "tag": "Circuits",
+  "topic": "circuits",
+  "stem": "A 7-year-old girl is referred because she interrupts constantly, blurts out answers before questions are finished, cannot wait her turn in line, and talks excessively. She can sit through a short story reasonably well, and she completes her classwork when helped to start.",
+  "steps": [
+   {
+    "q": "Which prefrontal region is hypothesized to be inefficient in these symptoms?",
+    "choices": [
+     "Dorsolateral prefrontal cortex",
+     "Dorsal anterior cingulate cortex",
+     "Prefrontal motor cortex",
+     "Orbitofrontal cortex",
+     "Ventromedial prefrontal cortex"
+    ],
+    "answer": 3,
+    "why": "Interrupting, blurting and not waiting a turn are **impulsive** symptoms, arising from a cortico-striato-thalamo-cortical loop centered on the **orbitofrontal cortex** rather than on attention or motor areas.",
+    "pages": "452",
+    "whyNot": [
+     "That region is tied to **sustained attention** and problem solving, which is relatively spared here.",
+     "That region underlies **selective attention** problems such as distractibility and careless mistakes.",
+     "That area modulates motor **hyperactivity**, such as fidgeting and climbing, which she lacks.",
+     "",
+     "That region relates to comorbid conduct, oppositional and mood symptoms rather than interrupting and blurting."
+    ],
+    "whyNotPages": [
+     "451",
+     "450",
+     "452",
+     "",
+     "453"
+    ]
+   },
+   {
+    "lead": "The clinician explains that this same region is hypothesized to contribute to different symptoms in several other psychiatric disorders.",
+    "q": "In which other condition is dysfunction of this region linked specifically to suicidality?",
+    "choices": [
+     "Schizophrenia",
+     "Mania",
+     "Major depression",
+     "Substance abuse",
+     "Conduct disorder"
+    ],
+    "answer": 2,
+    "why": "Beyond impulsivity in ADHD, the orbitofrontal cortex is tied to varied symptoms across disorders, and in **depression** it is linked to suicidality.",
+    "pages": "454",
+    "whyNot": [
+     "There it is linked to **impulsivity and violence**, not suicidality.",
+     "There it is linked to **impulsivity** rather than to suicidality.",
+     "",
+     "There it is linked to **impulsivity and compulsivity** around drug use.",
+     "Impulsive symptoms of conduct disorder map onto this region, but suicidality is not the linked symptom."
+    ],
+    "whyNotPages": [
+     "454",
+     "454",
+     "",
+     "454",
+     "454"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-03",
+  "tag": "Stress",
+  "topic": "norepinephrine",
+  "stem": "A 31-year-old woman with ADHD and generalized anxiety reports that her concentration and working memory fail badly during high-pressure deadlines, when she feels intensely stressed. When calm, she functions adequately. She asks why more arousal makes her thinking worse rather than better.",
+  "steps": [
+   {
+    "q": "Which mechanism best explains the impaired working memory under stress?",
+    "choices": [
+     "Further stimulation of α2A receptors alone",
+     "Recruitment of less sensitive α1 and β1 receptors by excess NE",
+     "Loss of D3 receptor sensitivity to dopamine",
+     "Blockade of NETs in the nucleus accumbens",
+     "Reduced opening of HCN channels on spines"
+    ],
+    "answer": 1,
+    "why": "Modest NE improves prefrontal function through sensitive **α2A** receptors, but stress pushes NE higher and also recruits the less sensitive **α1 and β1** receptors, which impairs working memory.",
+    "pages": "455",
+    "whyNot": [
+     "Stimulating α2A receptors at modest NE **improves** prefrontal function; it is not the harmful step.",
+     "",
+     "Low DA stimulates the sensitive D3 receptors first; this item concerns **norepinephrine**, not dopamine.",
+     "Few NETs and little NE exist in the **nucleus accumbens**, and the problem here is in the prefrontal cortex.",
+     "Closed HCN channels preserve signals, so **less** opening would help, not impair, the signal."
+    ],
+    "whyNotPages": [
+     "455",
+     "",
+     "455",
+     "480",
+     "457"
+    ]
+   },
+   {
+    "lead": "Because excess NE and stress drive her cognitive symptoms, the clinician wants an ADHD treatment that will not worsen her anxiety.",
+    "q": "Which approach does the book favor over a stimulant for augmenting her anxiolytic treatment?",
+    "choices": [
+     "Immediate-release methylphenidate",
+     "A long-lasting norepinephrine transporter inhibitor",
+     "Immediate-release D,L-amphetamine salts",
+     "A higher dose of lisdexamfetamine",
+     "D-methylphenidate extended release"
+    ],
+    "answer": 1,
+    "why": "With ADHD plus anxiety, stimulants risk worsening anxiety, so a **long-lasting NET inhibitor** (or an α2A agonist) is suggested instead as a tonic activator of NE and DA.",
+    "pages": "469",
+    "whyNot": [
+     "Pulsatile immediate-release dosing is increasingly avoided, and a stimulant can worsen her **anxiety**.",
+     "",
+     "Immediate-release amphetamine gives rapid, pulsatile DA and NE surges, a poor fit when arousal is already **excessive**.",
+     "Raising a stimulant dose adds more DA and NE drive to a patient whose problem is already **excess** NE.",
+     "Even an extended-release stimulant is still a **stimulant**, which the book advises against here."
+    ],
+    "whyNotPages": [
+     "479",
+     "",
+     "478",
+     "468",
+     "468"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-04",
+  "tag": "Oppositional",
+  "topic": "adhd",
+  "stem": "A 10-year-old boy takes a stimulant that has clearly improved his attention and fidgeting. At home and school he remains argumentative, disobedient and aggressive, with frequent temper tantrums. His prescriber wonders why the stimulant has helped his focus much more than his behavior.",
+  "steps": [
+   {
+    "q": "Why does the stimulant only partly improve the oppositional behavior?",
+    "choices": [
+     "It lowers noise through dopamine but leaves a hypothesized severe NE deficit uncorrected",
+     "It raises NE so high that α1 receptors are recruited and the signal is lost",
+     "The ventromedial prefrontal cortex lacks dopamine input, so DAT blockade cannot act there",
+     "It closes HCN channels on spines, which weakens the incoming signal",
+     "It blocks α2A receptors and removes the NE signal"
+    ],
+    "answer": 0,
+    "why": "Oppositional symptoms are hypothetically linked to a **very low NE** signal in the ventromedial prefrontal cortex. A stimulant cuts noise through dopamine but cannot correct so strong an NE deficit, so the gain is partial.",
+    "pages": "484",
+    "whyNot": [
+     "",
+     "Here NE is hypothesized to be **very low**, not excessive, so excess α1 recruitment is not the issue.",
+     "Low DA is hypothesized in that region and the stimulant does reduce its **noise**, so DA input exists.",
+     "Closing HCN channels **strengthens** the signal; it is the NE effect at α2A receptors.",
+     "Stimulants block **transporters** and raise transmitter levels; they do not block α2A receptors."
+    ],
+    "whyNotPages": [
+     "",
+     "484",
+     "484",
+     "461",
+     "469"
+    ]
+   },
+   {
+    "lead": "The prescriber decides to add guanfacine ER to the stimulant to address the hypothesized norepinephrine deficit and is asked how it differs from clonidine.",
+    "q": "Which property most favors guanfacine over clonidine for this purpose?",
+    "choices": [
+     "Stronger binding to imidazoline receptors",
+     "About 15 to 60 times greater selectivity for α2A than for α2B and α2C",
+     "Preferential action on thalamic α2B receptors",
+     "Direct blockade of the norepinephrine transporter",
+     "An immediate-release form approved for ADHD"
+    ],
+    "answer": 1,
+    "why": "Guanfacine is far more selective for **α2A** receptors, which strengthen prefrontal signals, so it adds NE signal with less sedation and hypotension than clonidine.",
+    "pages": "482",
+    "whyNot": [
+     "Imidazoline binding belongs to **clonidine** and adds sedating and hypotensive effects.",
+     "",
+     "Thalamic α2B receptors are linked to **sedation**, which is a drawback rather than a benefit.",
+     "Guanfacine is a direct **receptor agonist**, not a transporter inhibitor.",
+     "Only the **controlled-release** version of guanfacine is approved for ADHD."
+    ],
+    "whyNotPages": [
+     "482",
+     "",
+     "481",
+     "482",
+     "482"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-05",
+  "tag": "Development",
+  "topic": "genes-development",
+  "stem": "A 16-year-old boy was diagnosed with ADHD at age 8 with prominent hyperactivity. Over the past few years his symptoms have faded, and he now sits through classes without medication. His parents ask why some children seem to outgrow ADHD.",
+  "steps": [
+   {
+    "q": "Which explanation does the book propose for such patients?",
+    "choices": [
+     "They compensate for prefrontal abnormalities through new synapse formation after about age 12",
+     "Synaptic pruning increases after age 12 and removes the abnormal synapses",
+     "Their limbic regions mature later than their prefrontal cortex",
+     "Their genetic loading disappears at puberty",
+     "Their prefrontal cortex matured earlier than normal"
+    ],
+    "answer": 0,
+    "why": "Prefrontal maturation is delayed in ADHD, and those who build new synapses after about age 12 into early adulthood may **compensate** and appear to outgrow the disorder, consistent with lower adult prevalence.",
+    "pages": "463",
+    "whyNot": [
+     "",
+     "Pruning of up to half of synapses happens by adolescence in everyone; faulty selection may **contribute** to ADHD instead.",
+     "Limbic regions normally mature **first** and the prefrontal cortex later, the reverse of this option.",
+     "ADHD heritability is about **75%**, and nothing in the book suggests it fades with puberty.",
+     "ADHD involves **delayed**, not early, prefrontal maturation."
+    ],
+    "whyNotPages": [
+     "",
+     "463",
+     "465",
+     "463",
+     "465"
+    ]
+   },
+   {
+    "lead": "Some patients do not compensate and remain symptomatic into adulthood, where the course of their symptom profile changes.",
+    "q": "In adulthood, which feature is expected to become more frequent in patients whose symptoms do persist?",
+    "choices": [
+     "Motor hyperactivity",
+     "Impulsivity at childhood rates",
+     "Recognized comorbid disorders",
+     "The proportion who are diagnosed and treated",
+     "Adult prevalence relative to childhood"
+    ],
+    "answer": 2,
+    "why": "Inattention remains once prominent, while hyperactivity and impulsivity decline, and recognized **comorbidities** become much more frequent as patients enter adulthood.",
+    "pages": "463",
+    "whyNot": [
+     "Hyperactivity **declines** notably by adolescence and early adulthood.",
+     "Impulsivity likewise **declines** by adolescence and early adulthood.",
+     "",
+     "Fewer than 1 in 5 adults are diagnosed and treated, versus about half of children, so this proportion **falls**.",
+     "Adult prevalence is only about **half** that in children, so it falls rather than rises."
+    ],
+    "whyNotPages": [
+     "463",
+     "463",
+     "",
+     "463",
+     "463"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-06",
+  "tag": "Priorities",
+  "topic": "adhd",
+  "stem": "A 38-year-old man drinks heavily every day, has low mood and anxiety, and cannot concentrate at work. He recalls inattention since school and asks for a stimulant for his ADHD. His clinician considers the sequence of treatment in this complex presentation.",
+  "steps": [
+   {
+    "q": "Which problem do experts suggest managing first?",
+    "choices": [
+     "Depressive symptoms",
+     "Heavy alcohol use",
+     "Anxiety symptoms",
+     "ADHD cognitive symptoms",
+     "Nicotine dependence"
+    ],
+    "answer": 1,
+    "why": "In complex cases, little therapeutic progress is possible while a patient keeps abusing alcohol or stimulants, so **substance abuse** often has to be managed first.",
+    "pages": "466",
+    "whyNot": [
+     "Mood disorders come after substance abuse in the usual priority order.",
+     "",
+     "Anxiety is addressed after the substance problem, alongside mood treatment.",
+     "ADHD cognitive symptoms are treated as a **fine-tune** adjustment once mood and anxiety improve.",
+     "Nicotine dependence is addressed **last**, once cognitive symptoms are under control."
+    ],
+    "whyNotPages": [
+     "466",
+     "",
+     "467",
+     "466",
+     "466"
+    ]
+   },
+   {
+    "lead": "Heavy drinking has now been stabilized and his mood and anxiety are being treated, but his cognitive symptoms persist.",
+    "q": "How does the book suggest the ADHD treatment then be used?",
+    "choices": [
+     "As the sole initial treatment, with the other disorders addressed afterward",
+     "As an augmenting agent added to first-line treatment of the mood, anxiety or substance disorder",
+     "Withheld indefinitely, since ADHD is only a childhood disorder",
+     "As an immediate-release stimulant for quick onset in a former drug abuser",
+     "Replaced by nicotine-dependence treatment"
+    ],
+    "answer": 1,
+    "why": "The modern approach keeps a high suspicion for ADHD in mood, anxiety and substance disorders and explores ADHD treatments as **augmenting agents** to first-line therapy, not the other way around.",
+    "pages": "466",
+    "whyNot": [
+     "The book says the reverse: ADHD agents augment first-line treatments, **not** the other way around.",
+     "",
+     "ADHD often persists into adulthood and is meant to be treated, though it is under-recognized.",
+     "Immediate-release stimulants are increasingly avoided in adults, and stimulants are a poor fit for substance abusers.",
+     "Nicotine dependence is addressed only in long-term management after cognitive symptoms are controlled."
+    ],
+    "whyNotPages": [
+     "466",
+     "",
+     "463",
+     "479",
+     "466"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-07",
+  "tag": "DAT",
+  "topic": "adhd",
+  "stem": "A 13-year-old boy takes an extended-release stimulant each morning. His teachers report that he is disorganized and unfocused until about mid-morning, but he functions well from late morning through the afternoon and has no trouble falling asleep.",
+  "steps": [
+   {
+    "q": "Which feature of his DAT occupancy over the day best explains this?",
+    "choices": [
+     "Occupancy staying above threshold too long",
+     "Delayed onset of occupancy above the therapeutic threshold",
+     "Occupancy dropping below threshold too soon",
+     "Excess phasic firing in the nucleus accumbens",
+     "Rebound as evening levels fall early"
+    ],
+    "answer": 1,
+    "why": "Benefit starts only when DAT occupancy passes the therapeutic threshold, so slow onset leaves **morning symptoms**; he does well once the drug reaches that level.",
+    "pages": "475",
+    "whyNot": [
+     "That would produce late-day **side effects and insomnia**, which he does not have.",
+     "",
+     "Too early an offset causes **late afternoon and evening** symptoms, not morning ones.",
+     "Rapid, high occupancy drives euphoria and abuse risk rather than a slow morning start.",
+     "Rebound is evening **hyperactivity and insomnia** as levels drop early."
+    ],
+    "whyNotPages": [
+     "475",
+     "",
+     "475",
+     "476",
+     "475"
+    ]
+   },
+   {
+    "lead": "The clinician wants drug levels already above threshold when he wakes, using a methylphenidate preparation with an unusual dosing time.",
+    "q": "Which methylphenidate product is designed to address this problem?",
+    "choices": [
+     "Concerta",
+     "Daytrana",
+     "Ritalin LA",
+     "Jornay PM",
+     "Focalin XR"
+    ],
+    "answer": 3,
+    "why": "**Jornay PM** is given in the evening with absorption delayed about 10 hours, so drug is already present as the patient wakes and levels reach threshold early.",
+    "pages": "470",
+    "whyNot": [
+     "It is taken in the **morning**, with only a small early peak, so it does not pre-load.",
+     "The patch is applied in the **morning** and peaks 7 to 10 hours later, too late.",
+     "It is given in the **morning** with two peaks, early and at 4 hours.",
+     "",
+     "It is given in the **morning**, with peaks after 1.5 and 6.5 hours."
+    ],
+    "whyNotPages": [
+     "470",
+     "470",
+     "470",
+     "",
+     "470"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-08",
+  "tag": "Slow-dose",
+  "topic": "adhd",
+  "stem": "A 16-year-old boy with ADHD is starting treatment. His prescriber knows that other students in his school divert and snort stimulant pills, and wants a preparation with a lower abuse liability and smooth coverage.",
+  "steps": [
+   {
+    "q": "Which preparation best fits this goal?",
+    "choices": [
+     "Immediate-release D,L-amphetamine tablet",
+     "Lisdexamfetamine",
+     "Immediate-release D-amphetamine oral solution",
+     "Immediate-release D-methylphenidate tablet",
+     "Immediate-release methylphenidate oral solution"
+    ],
+    "answer": 1,
+    "why": "Lisdexamfetamine is a prodrug that is cleaved to D-amphetamine and is a **slow-dose** stimulant, giving gradual onset and steady levels instead of the rapid pulses of immediate-release forms.",
+    "pages": "476",
+    "whyNot": [
+     "Immediate-release oral stimulants are **pulsatile**, and their use in adolescents is increasingly avoided.",
+     "",
+     "This immediate-release solution is a **pulsatile** product, dosed again at lunch.",
+     "This immediate-release tablet is **pulsatile**, with an early peak and second dose at lunch.",
+     "This immediate-release solution acts as a **pulsatile** stimulant with a short duration."
+    ],
+    "whyNotPages": [
+     "478",
+     "",
+     "478",
+     "478",
+     "478"
+    ]
+   },
+   {
+    "lead": "Lisdexamfetamine is chosen because it is a slow-dose stimulant.",
+    "q": "What does this slow delivery hypothetically do in the brain?",
+    "choices": [
+     "Raises tonic NE and DA signaling in the PFC without quickly occupying accumbens DATs enough to boost phasic D2 signaling",
+     "Rapidly and completely blocks accumbens DATs to maximize phasic DA bursts",
+     "Reverses DATs to flood the synapse with dopamine",
+     "Closes HCN channels directly on prefrontal spines",
+     "Blocks D2 receptors in limbic areas"
+    ],
+    "answer": 0,
+    "why": "Slow-dose stimulants occupy prefrontal NETs gradually enough to enhance **tonic** signaling, but do not occupy accumbens DATs fast enough to raise **phasic** D2 signaling, hence lower abuse potential.",
+    "pages": "476",
+    "whyNot": [
+     "",
+     "Rapid, complete DAT blockade is the **pulsatile** pattern linked to euphoria and abuse.",
+     "DAT reversal comes with sudden, catastrophic blockade or high-dose **amphetamine**, not gradual dosing.",
+     "HCN channels are closed by α2A receptor effects, not by a stimulant's direct action.",
+     "Blocking limbic D2 receptors describes serotonin–dopamine antagonists, not a stimulant."
+    ],
+    "whyNotPages": [
+     "",
+     "476",
+     "476",
+     "457",
+     "468"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-09",
+  "tag": "Amphetamine",
+  "topic": "adhd",
+  "stem": "A 22-year-old man is brought to the emergency department after taking large quantities of amphetamine tablets. He is euphoric, agitated and sweating. A resident explains that at these doses amphetamine acts differently from the clinically used doses.",
+  "steps": [
+   {
+    "q": "Which mechanism produces the dopamine surge at these doses?",
+    "choices": [
+     "Amphetamine enters the terminal, displaces DA from vesicles, then opens channels and reverses DATs",
+     "Amphetamine binds allosterically to DAT and stops reuptake",
+     "Amphetamine directly stimulates D1 receptors",
+     "Amphetamine blocks VMAT2 so DA cannot leave the neuron",
+     "Amphetamine blocks α2 autoreceptors"
+    ],
+    "answer": 0,
+    "why": "Amphetamine is carried into the terminal via DAT, packed into vesicles by VMAT2, displaces **vesicular DA**, then DA floods out through opened channels and **reversed DATs**, causing euphoria.",
+    "pages": "472",
+    "whyNot": [
+     "",
+     "That allosteric, non-transported action is **methylphenidate's**, not amphetamine's.",
+     "Its effect is presynaptic release, not a direct **D1 agonist** action.",
+     "It acts as a VMAT **substrate** that displaces DA from vesicles, causing release rather than trapping.",
+     "Its high-dose flood comes from **vesicular displacement and DAT reversal**, not autoreceptor blockade."
+    ],
+    "whyNotPages": [
+     "",
+     "472",
+     "472",
+     "472",
+     "472"
+    ]
+   },
+   {
+    "lead": "The resident points out that methylphenidate lacks this high-dose release mechanism despite also being a stimulant.",
+    "q": "Why does methylphenidate not reproduce this mechanism?",
+    "choices": [
+     "It is not transported into the terminal and does not act at VMAT",
+     "It is a competitive substrate that is carried into the terminal",
+     "It is a prodrug that is cleaved to an amphetamine",
+     "It acts only at NET and not at DAT",
+     "Its L-isomer is the only active form"
+    ],
+    "answer": 0,
+    "why": "Methylphenidate binds DAT and NET at an **allosteric** site and is not a hitchhiker into the terminal, nor a VMAT inhibitor, so it lacks the DA-release and reversal actions.",
+    "pages": "472–474",
+    "whyNot": [
+     "",
+     "That describes **amphetamine**, a competitive pseudosubstrate carried in via DAT.",
+     "That describes **lisdexamfetamine**, a lysine-linked D-amphetamine prodrug.",
+     "Methylphenidate blocks **both** NET and DAT.",
+     "The **D-isomer** is the much more potent form at NET and DAT."
+    ],
+    "whyNotPages": [
+     "",
+     "472",
+     "473",
+     "469",
+     "470"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-10",
+  "tag": "NRI",
+  "topic": "adhd",
+  "stem": "A 35-year-old woman with ADHD also has anxiety and heavy weekend drinking under chronic stress. A prior stimulant trial left her more anxious, so she wants a nonstimulant. Her clinician reviews agents with norepinephrine reuptake blocking properties that have been tried in ADHD.",
+  "steps": [
+   {
+    "q": "Which agent is both well investigated and approved for ADHD in children and adults?",
+    "choices": [
+     "Bupropion",
+     "Atomoxetine",
+     "Desipramine",
+     "Nortriptyline",
+     "Venlafaxine"
+    ],
+    "answer": 1,
+    "why": "Several NET-blocking agents have been tried in ADHD with varying success, but only **atomoxetine**, a selective norepinephrine reuptake inhibitor, is well investigated and approved in children and adults.",
+    "pages": "480",
+    "whyNot": [
+     "A weak NRI and weak DAT inhibitor (**NDRI**) that has been used with varying success, not approved.",
+     "",
+     "A tricyclic with notable NRI action, used with **varying success** but not approved.",
+     "A tricyclic with notable NRI action, used with **varying success** but not approved.",
+     "An **SNRI** that blocks NET but is listed only among NET inhibitors, not as an approved ADHD agent."
+    ],
+    "whyNotPages": [
+     "480",
+     "",
+     "480",
+     "480",
+     "481"
+    ]
+   },
+   {
+    "lead": "Atomoxetine is started, and her ADHD is thought to reflect overly active, stress-driven NE and DA circuits.",
+    "q": "What does continuous NET blockade theoretically do to her excessive prefrontal signaling?",
+    "choices": [
+     "It restores tonic D1 and α2A tone, while dampening phasic NE and DA firing and desensitizing receptors",
+     "It raises phasic DA release in the nucleus accumbens",
+     "It increases NE until α1 receptors are recruited",
+     "It works only while plasma levels keep DAT occupancy above 50–60%",
+     "It blocks D1 receptors to cut excess signal"
+    ],
+    "answer": 0,
+    "why": "Slow-onset, perpetual NET inhibition may restore **tonic** postsynaptic signaling and dampen **phasic** NE and DA activity, possibly easing stress, anxiety and drinking as ADHD symptoms improve.",
+    "pages": "480",
+    "whyNot": [
+     "",
+     "Few NETs exist in the nucleus accumbens, so it does **not** raise DA there.",
+     "Pushing NE too high would impair function; the proposed effect is to **normalize** signaling.",
+     "That is the **stimulant** pattern; NRI actions give 24-hour relief independent of momentary occupancy.",
+     "The proposed effect is **restoring** D1 signaling, not blocking D1 receptors."
+    ],
+    "whyNotPages": [
+     "",
+     "480",
+     "455",
+     "480",
+     "480"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-11",
+  "tag": "NRI",
+  "topic": "norepinephrine",
+  "stem": "A 29-year-old man is titrated upward on a selective norepinephrine reuptake inhibitor for ADHD. At a higher dose he feels sedated and mentally foggy rather than sharper, although his focus improved at the lower dose.",
+  "steps": [
+   {
+    "q": "Which mechanism best explains the worsening at the higher dose?",
+    "choices": [
+     "α1 mechanisms taking over as the synapse is swamped with NE",
+     "Excess D3 receptor stimulation",
+     "Activation of imidazoline receptors",
+     "Blockade of α2A receptors by the drug",
+     "Reversal of the norepinephrine transporter"
+    ],
+    "answer": 0,
+    "why": "Low to moderate NE favors **α2** actions, but at high NE the opposing **α1** mechanisms predominate, causing sedation and cognitive impairment.",
+    "pages": "481–482",
+    "whyNot": [
+     "",
+     "D3 receptors are the most sensitive **dopamine** receptors, stimulated at low DA, and are not the NE issue here.",
+     "Imidazoline binding is a property of **clonidine**, not of selective NRIs.",
+     "An NRI raises NE by blocking the **transporter**; it does not block α2A receptors.",
+     "Transporter **reversal** is a feature of high-dose amphetamine, not of NRIs."
+    ],
+    "whyNotPages": [
+     "",
+     "455",
+     "482",
+     "480",
+     "472"
+    ]
+   },
+   {
+    "lead": "Because α1 actions took over when NE swamped the synapse, the clinician lowers the dose so that NE release is moderate again.",
+    "q": "What is expected after the dose is lowered?",
+    "choices": [
+     "Preferential stimulation of postsynaptic α2A receptors that enhances cognitive performance",
+     "Greater α1 activity and more sedation",
+     "Increased dopamine in the nucleus accumbens",
+     "Complete loss of NE effect on the prefrontal cortex",
+     "Immediate euphoria from rapid DAT blockade"
+    ],
+    "answer": 0,
+    "why": "At low doses selective NRIs first raise activity at **postsynaptic α2A** receptors, improving cognition; patients who sedate at high doses may benefit from a lower dose.",
+    "pages": "481–482",
+    "whyNot": [
+     "",
+     "Lower NE reduces, not raises, the opposing **α1** actions.",
+     "Few NETs exist in the accumbens, so NRIs do not raise DA there.",
+     "Lowering the dose reduces excess NE but still leaves useful **α2A** stimulation.",
+     "Euphoria arises from rapid, complete DAT blockade, which NRIs do not produce."
+    ],
+    "whyNotPages": [
+     "",
+     "481",
+     "480",
+     "481",
+     "476"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-12",
+  "tag": "α2",
+  "topic": "norepinephrine",
+  "stem": "An 11-year-old boy is started on an α2-adrenergic agonist for ADHD. Within days he is markedly sleepy during the day and his blood pressure runs low. His physician considers which receptor subtype is responsible for the sedation.",
+  "steps": [
+   {
+    "q": "Which receptor subtype, concentrated in the thalamus, is thought to mediate NE's sedating actions?",
+    "choices": [
+     "α2A",
+     "α2B",
+     "α1A",
+     "β1",
+     "D1"
+    ],
+    "answer": 1,
+    "why": "**α2B** receptors are concentrated in the thalamus and are thought to mediate NE's sedating effects, unlike the cognition-enhancing α2A receptors of the prefrontal cortex.",
+    "pages": "481",
+    "whyNot": [
+     "That subtype in the PFC strengthens signals and **improves** cognition.",
+     "",
+     "α1 receptors generally **oppose** α2 actions and matter when NE is high.",
+     "β1 receptors join α1 in impairing **working memory** at high NE.",
+     "D1 is a **dopamine** receptor, not a noradrenergic subtype."
+    ],
+    "whyNotPages": [
+     "481",
+     "",
+     "481",
+     "455",
+     "455"
+    ]
+   },
+   {
+    "lead": "Reasoning that a more selective drug would cause fewer subtype-related side effects, the physician looks for an alternative α2 agonist.",
+    "q": "Which agent would be expected to cause less sedation and hypotension?",
+    "choices": [
+     "Clonidine",
+     "Guanfacine ER",
+     "Immediate-release clonidine",
+     "Atomoxetine",
+     "A higher dose of clonidine"
+    ],
+    "answer": 1,
+    "why": "Guanfacine is roughly 10 times weaker than clonidine at causing **sedation and low blood pressure** yet about 25 times more potent at enhancing prefrontal function.",
+    "pages": "482",
+    "whyNot": [
+     "It is relatively **nonselective**, acting on α2A, α2B and α2C plus imidazoline receptors.",
+     "",
+     "Only the **controlled-release** clonidine is approved for ADHD, and it is the nonselective agent.",
+     "It is a selective NRI that blocks **transporters**, not an α2 agonist.",
+     "More **clonidine** adds more of the same sedating, blood-pressure-lowering action that caused the problem."
+    ],
+    "whyNotPages": [
+     "482",
+     "",
+     "482",
+     "480",
+     "482"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-13",
+  "tag": "α2",
+  "topic": "adhd",
+  "stem": "An 8-year-old boy has hyperactivity, impulsivity and inattention. His clinician hypothesizes that his prefrontal NE is low while DA function is otherwise unimpaired, so signals are lost in background noise. She asks how to identify and treat such a child.",
+  "steps": [
+   {
+    "q": "What is the available way to identify such a patient?",
+    "choices": [
+     "An empiric trial of guanfacine ER",
+     "A plasma norepinephrine assay",
+     "Scanning with the n-back test",
+     "Combining a stimulant with a serotonin–dopamine antagonist",
+     "High-dose immediate-release amphetamine"
+    ],
+    "answer": 0,
+    "why": "No test currently identifies patients with an isolated NE deficit; the only way is an **empiric trial of guanfacine ER**, a selective α2A agonist.",
+    "pages": "484",
+    "whyNot": [
+     "",
+     "The book states that no way exists to identify them in advance other than an empiric **guanfacine** trial.",
+     "The n-back test measures **DLPFC** activation, not a NE-specific deficit.",
+     "That combination is a **controversial** option for difficult cases, not a way to identify an NE deficit.",
+     "Immediate-release stimulants mainly affect **DA** and are increasingly avoided."
+    ],
+    "whyNotPages": [
+     "",
+     "484",
+     "449",
+     "468",
+     "479"
+    ]
+   },
+   {
+    "lead": "The child improves on guanfacine ER, supporting the idea that he had an isolated NE deficit.",
+    "q": "How does the drug hypothetically improve his function?",
+    "choices": [
+     "By directly stimulating postsynaptic α2A receptors in the prefrontal cortex to increase signal",
+     "By blocking NETs to raise DA in the nucleus accumbens",
+     "By reversing DATs to dump dopamine",
+     "By opening HCN channels on spines",
+     "By blocking D1 receptors to lower noise"
+    ],
+    "answer": 0,
+    "why": "Guanfacine directly stimulates **postsynaptic α2A** receptors, strengthening network inputs so the child can focus, sit still and behave.",
+    "pages": "482–484",
+    "whyNot": [
+     "",
+     "α2A agonists are not transporter blockers, and few NETs or α2 receptors lie in the **accumbens**.",
+     "DAT reversal is an **amphetamine** high-dose mechanism.",
+     "Open HCN channels **leak** the signal; α2A stimulation closes them.",
+     "Guanfacine acts at **α2A**, not D1, and D1 stimulation is what lowers noise."
+    ],
+    "whyNotPages": [
+     "",
+     "480",
+     "472",
+     "461",
+     "461"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-14",
+  "tag": "Comorbidity",
+  "topic": "adhd",
+  "stem": "A 12-year-old boy has ADHD and chronic motor tics. A stimulant markedly improves his schoolwork, but his tics worsen. His clinician considers why a single treatment is hard to find for this combination.",
+  "steps": [
+   {
+    "q": "Which hypothesis best explains the difficulty?",
+    "choices": [
+     "Excess DA in the motor striatum behind the tics, with deficient cortical DA behind the ADHD",
+     "Excess cortical NE behind both problems",
+     "Low striatal DA behind the tics and high cortical DA behind the ADHD",
+     "Overstimulation of α2A receptors in the striatum",
+     "Loss of D1 receptors in the prefrontal cortex"
+    ],
+    "answer": 0,
+    "why": "Tics reflect hypothetically **excessive DA** in the motor striatum, needing blockade, while ADHD reflects **deficient cortical DA**, needing enhancement; stimulants help one and can worsen the other.",
+    "pages": "468",
+    "whyNot": [
+     "",
+     "Excess NE is linked to stress and anxiety, not to this **tic versus ADHD** contrast.",
+     "That reverses both: tics suggest excess striatal DA and ADHD deficient cortical DA.",
+     "The explanation concerns **DA** imbalance, not α2A overstimulation.",
+     "The model concerns DA activity levels, not loss of **D1 receptors**."
+    ],
+    "whyNotPages": [
+     "",
+     "455",
+     "468",
+     "468",
+     "468"
+    ]
+   },
+   {
+    "lead": "Since excess striatal DA drives the tics while cortical DA is deficient, an expert cautiously combines the stimulant with a serotonin–dopamine antagonist in this refractory case.",
+    "q": "What is the rationale for adding a serotonin–dopamine antagonist in a refractory case?",
+    "choices": [
+     "It hypothetically releases DA in the PFC to stimulate D1 while blocking D2 in limbic areas",
+     "It blocks DATs in the nucleus accumbens",
+     "It stimulates α2A receptors in the cortex",
+     "It raises NE by blocking NET",
+     "It makes the stimulant a prodrug"
+    ],
+    "answer": 0,
+    "why": "Serotonin–dopamine antagonists hypothetically **release DA in prefrontal cortex**, stimulating D1 receptors, while **blocking D2** in limbic regions; the book calls this controversial and for experts.",
+    "pages": "468",
+    "whyNot": [
+     "",
+     "The antagonists work through **receptors**, not through DAT blockade.",
+     "They are not α2A **agonists**; that class is guanfacine.",
+     "NET blockade is the mechanism of **atomoxetine** and stimulants.",
+     "A stimulant is not converted to a **prodrug**; lisdexamfetamine is the prodrug."
+    ],
+    "whyNotPages": [
+     "",
+     "468",
+     "482",
+     "480",
+     "473"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "v11-15",
+  "tag": "Priorities",
+  "topic": "addiction",
+  "stem": "A 17-year-old boy with untreated ADHD smokes a pack of cigarettes daily and says smoking helps him focus. Adolescents and adults with ADHD smoke at about twice the general rate, and he asks why nicotine seems to help.",
+  "steps": [
+   {
+    "q": "Which property of nicotine best explains the subjective benefit?",
+    "choices": [
+     "It enhances dopamine release and arousal",
+     "It blocks DAT allosterically like methylphenidate",
+     "It directly stimulates α2A receptors",
+     "It closes HCN channels through Gi",
+     "It blocks NET in the prefrontal cortex"
+    ],
+    "answer": 0,
+    "why": "Nicotine enhances **dopamine release** and arousal, which can subjectively improve ADHD symptoms, especially in untreated patients, helping explain high smoking rates.",
+    "pages": "467",
+    "whyNot": [
+     "",
+     "Allosteric DAT blockade is **methylphenidate's** mechanism.",
+     "Direct α2A agonism is the action of **guanfacine** and clonidine.",
+     "Closing HCN channels is a downstream effect of **α2A** stimulation.",
+     "NET blockade is the mechanism of **atomoxetine**-type drugs."
+    ],
+    "whyNotPages": [
+     "",
+     "469",
+     "482",
+     "461",
+     "480"
+    ]
+   },
+   {
+    "lead": "Nicotine's dopamine-releasing and arousing effects had been masking his ADHD, and with treatment he now concentrates well, so the clinician plans his long-term care.",
+    "q": "What does the book place in his long-term management once cognitive symptoms are controlled?",
+    "choices": [
+     "Treating his nicotine dependence",
+     "Switching him to an immediate-release stimulant to replace smoking",
+     "Adding a serotonin–dopamine antagonist",
+     "Stopping all ADHD treatment",
+     "Treating nicotine dependence only after adulthood"
+    ],
+    "answer": 0,
+    "why": "Long-term ADHD management is meant eventually to include treating **nicotine dependence** once cognitive symptoms are under control.",
+    "pages": "466",
+    "whyNot": [
+     "",
+     "Immediate-release stimulants are increasingly avoided in adolescents and adults for **abuse** reasons.",
+     "That combination is a controversial option for difficult cases, not for smoking.",
+     "Treatment is for ongoing ADHD; stopping it would not address **nicotine**.",
+     "The book includes adolescents, who smoke as often as adults, in this plan."
+    ],
+    "whyNotPages": [
+     "",
+     "479",
+     "468",
+     "466",
+     "466"
+    ]
+   }
+  ]
+ }
+]
