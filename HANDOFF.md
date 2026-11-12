@@ -55,7 +55,7 @@ If a session cannot push (git proxy 403), hand over a bundle: `git -C stahl bund
 
 ## 6. Status (as of 2026-11-12, main = e0dd95e, version 32.0.0)
 
-Committed 2026-11-12 (main e0dd95e = 32.0.0 on top of 5282e4b = 31.0.0; dev-tools: this commit). **Not yet pushed:** the session's git proxy refused push access to isaymotion/Stahl (2026-11-11 and again 2026-11-12). Both branches were handed to the owner as a git bundle (`stahl-32.0.0.bundle`, contains 31.0.0 and 32.0.0); if `origin/main` is still 9421574, push from the bundle first (see the bundle note at the end of §5).
+Pushed 2026-11-12 (main e0dd95e = 32.0.0, which includes 31.0.0 = 5282e4b; dev-tools: this commit). Push access had to be granted to the session first (the git proxy returned 403 until isaymotion/Stahl was added to the session's repositories); if a new session gets a 403 on push, ask the owner to add the repo, or hand over a bundle (end of §5).
 
 | Area | State |
 |---|---|
