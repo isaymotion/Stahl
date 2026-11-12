@@ -363,6 +363,8 @@
       case 'soon': return renderSoon(p[1]);
       case 'review': return renderReview(p[1]);
       case 'mistakes': return renderMistakes();
+      case 'reason': return renderReason(p[1], p[2]);
+      case 'warmup': return renderWarmup(p[1]);
       case 'topics': return p[1] ? (p[2] === 'cards' ? renderTopicCards(p[1]) : renderTopic(p[1])) : renderTopics();
       case 'exam':
         if (p[1] === 'run') return renderExamRun();
@@ -435,6 +437,8 @@
       teach: 'M4 5h16v11H4z M9 20h6 M12 16v4',
       print: 'M7 9V4h10v5 M6 17H4V9h16v8h-2 M7 14h10v6H7z',
       news: 'M5 5h11v14H7a2 2 0 0 1-2-2z M16 9h3v8a2 2 0 0 1-2 2',
+      warm: 'M12 3.5v2 M12 18.5v2 M3.5 12h2 M18.5 12h2 M6 6l1.4 1.4 M16.6 16.6L18 18 M6 18l1.4-1.4 M16.6 7.4L18 6 M8.5 12a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0-7 0z',
+      reason: 'M3 6a2 2 0 1 0 4 0a2 2 0 1 0-4 0z M10 12a2 2 0 1 0 4 0a2 2 0 1 0-4 0z M17 18a2 2 0 1 0 4 0a2 2 0 1 0-4 0z M6.6 7.4l3.8 3.2 M13.6 13.4l3.8 3.2',
       save: 'M12 3v11m0 0l-4-4m4 4l4-4M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3',
       info: 'M12 3a9 9 0 1 0 0 18a9 9 0 1 0 0-18z M12 11v6 M12 7.5v.5',
       external: 'M14 4h6v6 M20 4l-9 9 M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5'
@@ -466,9 +470,11 @@
     var html =
       '<div class="nav-group"><ul>' +
         item('#/', 'home', 'nav.home', 'home') +
+        item('#/warmup', 'warmup', 'nav.warmup', 'warm') +
         item('#/review', 'review', 'nav.review', 'review', 'review') +
         item('#/exam', 'exam', 'nav.exam', 'exam') +
         item('#/mistakes', 'mistakes', 'nav.mistakes', 'mistakes', 'mistakes') +
+        item('#/reason', 'reason', 'nav.reason', 'reason') +
         item('#/topics', 'topics', 'nav.topics', 'topics') +
         item('#/bookmarks', 'bookmarks', 'nav.bookmarks', 'bookmarks') +
       '</ul></div>' +
@@ -689,6 +695,8 @@
           '<a class="tool" href="#/exam"><span class="tool__name">Board-style exam</span><span class="tool__meta">' + (lastExam ? 'Last score ' + pct(lastExam.score, lastExam.total) + '%' : 'Timed questions from the chapters you choose') + '</span></a>' +
           '<a class="tool" href="#/mistakes"><span class="tool__name">Mistakes</span><span class="tool__meta">' + (mk ? plural(mk, 'question') + ' to revisit' : 'Questions you miss collect here') + '</span></a>' +
           '<a class="tool c-drug" href="#/drugs"><span class="tool__name">Drug database</span><span class="tool__meta">' + (nDrugs ? plural(nDrugs, 'agent') + ' so far' : 'Fills in from Chapter 2 onward') + '</span></a>' +
+          '<a class="tool c-mech" href="#/reason"><span class="tool__name">Mechanism reasoning</span><span class="tool__meta">' + (reasonMissed().length ? plural(reasonMissed().length, 'chain') + ' to retry' : 'Drug → action → effect, from the library') + '</span></a>' +
+          '<a class="tool c-clin" href="#/topics"><span class="tool__name">Topics and weak spots</span><span class="tool__meta">Your strength by topic, across chapters</span></a>' +
           '<a class="tool c-mech" href="#/nt"><span class="tool__name">Neurotransmitters</span><span class="tool__meta">' + plural(nNT, 'messenger') + ', ' + plural(nT, 'target') + '</span></a>' +
         '</div>' +
       '</section>';
@@ -725,7 +733,7 @@
           '<div class="bloom__art">' + budSVG() + branchSVG(chapterModes(focus).length) + '</div><ul class="spectrum">' + spectrum + '</ul>' +
         '</nav>' +
       '</div></section>' +
-      iosHintHTML() + newsStrip + todayPanel + progressHTML(chs) +
+      iosHintHTML() + newsStrip + warmCardHTML() + todayPanel + progressHTML(chs) +
       '<section class="wrap home-section"><h2>Chapters</h2><ul class="chapter-list">' + rows + '</ul></section>' +
       '<section class="wrap home-section"><h2>Reference library</h2><div class="tools tools--lib">' +
         LIBRARY.map(function (l) { return '<a class="tool tool--lib c-' + l.css + '" href="' + l.href + '"><span class="tool__name">' + esc(l.label) + '</span><span class="tool__meta">' + esc(l.blurb) + '</span></a>'; }).join('') +
@@ -773,7 +781,7 @@
     }).join('') + '</ol></details>';
     return '<header class="ch-head"><div class="wrap ch-head__inner">' +
       '<div class="chnav" role="navigation" aria-label="Chapters">' + chLink(prev, -1) + menu + chLink(next, 1) + '</div>' +
-      '<div class="ch-head__title"><span class="ch-num" aria-hidden="true">' + ch.number + '</span><div><h1><span class="sr-only">Chapter ' + ch.number + ': </span>' + esc(ch.title) + '</h1><p class="ch-head__pages">Book pages ' + esc(ch.pages) + '</p></div></div>' +
+      '<div class="ch-head__title"><span class="ch-num" aria-hidden="true">' + ch.number + '</span><div><h1><span class="sr-only">Chapter ' + ch.number + ': </span>' + esc(ch.title) + '</h1><p class="ch-head__pages">Book pages ' + esc(ch.pages) + ((ch.cases || []).length ? ' · <a class="ch-head__warm" href="#/warmup/' + ch.id + '">' + esc(pretestLine(ch) || 'Test yourself first') + '</a>' : '') + '</p></div></div>' +
       '</div><nav class="modes wrap" aria-label="Study modes">' + tabs + '</nav></header>';
   }
 
@@ -987,8 +995,31 @@
      o.after    called after every change (to refresh tallies) */
   var LETTERS = 'ABCDE';
   function Player(area, o) {
-    var st = { pos: o.pos || 0, flipped: false, chosen: null, conf: null, step: 0, picks: [null, null], confs: [null, null] };
-    function resetSt() { st.flipped = false; st.chosen = null; st.conf = null; st.step = 0; st.picks = [null, null]; st.confs = [null, null]; }
+    var st = { pos: o.pos || 0, flipped: false, chosen: null, conf: null, step: 0, picks: [null, null], confs: [null, null], xw: null, xwText: '', xwPts: null, xwTicks: {}, xwRated: null, xwOrig: '' };
+    function resetSt() { st.flipped = false; st.chosen = null; st.conf = null; st.step = 0; st.picks = [null, null]; st.confs = [null, null]; st.xw = null; st.xwText = ''; st.xwPts = null; st.xwTicks = {}; st.xwRated = null; st.xwOrig = ''; }
+    /* "Explain why" (33.0.0): st.xw is null, 'ask' (the explanation waits behind the prompt) or 'done'. */
+    function xwQ(c) { return isVig(c) ? c.steps[c.steps.length - 1] : c; }
+    function xwBlock(c, q, key, chosen, isLast) {
+      if (!isLast || !st.xw) return choiceList(q, chosen) + whyBlock(q);
+      if (st.xw === 'ask') return '<div class="xw-hold">' + choiceList(q, chosen) + '</div>' + explainAskHTML(key, q, isVig(c) ? c.steps.length : 0);
+      return choiceList(q, chosen) + whyBlock(q) + explainDoneHTML({ text: st.xwText, pts: st.xwPts || [], ticks: st.xwTicks, rated: st.xwRated });
+    }
+    function grabText() { var ta = area.querySelector('#xw-text'); if (ta) st.xwText = ta.value.trim(); }
+    function xwShow() { var r = cur(); grabText(); st.xw = 'done'; st.xwPts = keyPoints(xwQ(r.c)); st.xwTicks = {}; st.xwRated = null; if (st.xwText) saveExplain(r.key, st.xwText); draw(); refocus(); }
+    function xwRate() {
+      var r = cur(), n = (st.xwPts || []).length, got = Object.keys(st.xwTicks).length;
+      if (n && st.xwRated !== 'missed') st.xwRated = got === 0 ? null : got === n ? 'matched' : 'partly';
+      if (st.xwRated) saveExplain(r.key, st.xwText, st.xwRated);
+      if (okNow(r.c) && st.xwOrig) setLastOutcome(r.key, st.xwRated === 'missed' ? 'G' : st.xwOrig);   // right answer, wrong reasoning = a guess
+      draw();
+    }
+    function xwClick(e) {
+      if (e.target.closest('#xw-show')) return xwShow();
+      var cb = e.target.closest('[data-xp]');
+      if (cb) { var i = cb.getAttribute('data-xp'); if (cb.checked) st.xwTicks[i] = 1; else delete st.xwTicks[i]; if (st.xwRated === 'missed') st.xwRated = null; xwRate(); return; }
+      var rb = e.target.closest('[data-xr]');
+      if (rb) { var v = rb.getAttribute('data-xr'); if ((st.xwPts || []).length) { st.xwTicks = {}; st.xwRated = st.xwRated === 'missed' ? null : 'missed'; } else st.xwRated = st.xwRated === v ? null : v; xwRate(); }
+    }
     function vigRight(c) { var n = 0; c.steps.forEach(function (s, i) { if (st.picks[i] === s.answer) n++; }); return n; }
     function okNow(c) { return isVig(c) ? vigRight(c) === c.steps.length : st.chosen === c.answer; }
     function choiceButtons(q) {
@@ -1042,7 +1073,7 @@
         back = vVerdict + '<p class="vig__stem vig__stem--recap">' + fmt(c.stem) + '</p>' + c.steps.map(function (q, i) {
           var p = st.picks[i];
           return '<section class="vig__rev"><p class="vig__step">Step ' + (i + 1) + '</p>' + (q.lead ? '<p class="vig__lead">' + fmt(q.lead) + '</p>' : '') +
-            '<p class="face__recap">' + fmt(q.q) + '</p>' + (p != null ? confNote(st.confs[i], p === q.answer) : '') + choiceList(q, p) + whyBlock(q) + '</section>';
+            '<p class="face__recap">' + fmt(q.q) + '</p>' + (p != null ? confNote(st.confs[i], p === q.answer) : '') + xwBlock(c, q, key, p, i === c.steps.length - 1) + '</section>';
         }).join('');
       } else if (isCase) {
         front = '<p class="face__q">' + fmt(c.q) + '</p>' + (confAsk() ? confChips(st.conf) : '') + '<ul class="choices">' + c.choices.map(function (ch2, i) {
@@ -1051,10 +1082,14 @@
         var right = st.chosen === c.answer;
         var verdict = st.chosen == null ? '<p class="verdict">Answer</p>' :
           '<p class="verdict ' + (right ? 'is-right">Correct' : 'is-wrong">Not quite. You chose ' + LETTERS[st.chosen]) + '</p>';
-        back = verdict + (st.chosen != null ? confNote(st.conf, right) : '') + '<p class="face__recap">' + fmt(c.q) + '</p>' + choiceList(c, st.chosen) + whyBlock(c);
+        back = verdict + (st.chosen != null ? confNote(st.conf, right) : '') + '<p class="face__recap">' + fmt(c.q) + '</p>' + xwBlock(c, c, key, st.chosen, true);
       } else {
-        front = '<p class="face__q">' + fmt(c.q) + '</p><p class="face__hint">Tap the card or press Space to see the answer.</p>';
-        back = '<p class="face__q face__q--small">' + fmt(c.q) + '</p><p class="face__a">' + fmt(c.a) + '</p>' + (c.why ? '<p class="face__why">' + fmt(c.why) + '</p>' : '');
+        var xLast = EXPL[key] && EXPL[key].t;
+        front = '<p class="face__q">' + fmt(c.q) + '</p>' + (explainFlashDue(key) ? '<div class="xw xw--front"><label class="xw__label" for="xw-text">Explain it first, then flip (optional)</label>' +
+          (xLast ? '<p class="xw__last"><b>Last time you wrote:</b> ' + esc(xLast) + '</p>' : '') +
+          '<textarea class="xw__text" id="xw-text" rows="2" maxlength="400" placeholder="How does it work? One line is enough.">' + esc(st.xwText) + '</textarea></div>' : '') +
+          '<p class="face__hint">Tap the card or press Space to see the answer.</p>';
+        back = '<p class="face__q face__q--small">' + fmt(c.q) + '</p>' + (st.xwText ? '<div class="xw xw--done"><p class="xw__mine"><b>Your explanation:</b> ' + esc(st.xwText) + '</p></div>' : '') + '<p class="face__a">' + fmt(c.a) + '</p>' + (c.why ? '<p class="face__why">' + fmt(c.why) + '</p>' : '');
       }
       var src = o.source ? '<span class="face__src">Ch ' + r.ch.number + ', ' + esc(r.deck.short) + '</span>' : '';
       var tpId = topicOf(key), tpTag = o.topicTag !== false && tpId ? '<a class="face__topic" href="#/topics/' + tpId + '">' + esc(TOPIC[tpId].label) + '</a>' : '';
@@ -1062,7 +1097,9 @@
       var top = '<div class="face__top"><span class="face__tag c-' + r.deck.css + '">' + esc(c.tag || r.deck.short) + '</span>' + src + tpTag + '<span class="face__status">' + esc(mStat) + '</span></div>';
 
       var controls;
-      if (!st.flipped) {
+      if (st.flipped && st.xw === 'ask') {
+        controls = '<p class="xw__wait">Explain it to yourself, then show the reasoning.</p>';
+      } else if (!st.flipped) {
         controls = '<button class="btn btn--solid" type="button" id="flip">' + (isCase ? 'Show answer' : 'Flip card') + '</button>';
       } else if (o.mode === 'mistakes') {
         var ok = okNow(c);
@@ -1094,6 +1131,8 @@
       var fc = area.querySelector('#fc');
       fc.addEventListener('click', function (e) {
         if (e.target.closest('.gl, .face__topic, .pg-chip')) return;
+        if (e.target.closest('.xw')) { xwClick(e); return; }
+        if (st.xw === 'ask') return;
         if (e.target.closest('#vig-next')) { vigNext(); return; }
         var tg = e.target.closest('.whynot-tg');
         if (tg) { toggleWhyNot(tg); return; }
@@ -1133,7 +1172,7 @@
       st.conf = st.conf === v ? null : v;
       area.querySelectorAll('.face--front [data-conf]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-conf') === st.conf)); });
     }
-    function flip() { st.flipped = !st.flipped; draw(); refocus(); }
+    function flip() { grabText(); if (!st.flipped && st.xwText && !isQuestion(cur().c)) saveExplain(cur().key, st.xwText); st.flipped = !st.flipped; draw(); refocus(); }
     function vigNext() { if (st.step === 0 && st.picks[0] != null) { st.step = 1; st.conf = null; draw(); refocus(); } }
     function choose(i) {
       var r = cur();
@@ -1152,6 +1191,7 @@
         if (ok) { clearMistake(r.key); stats.cleared++; rateCard(r.key, st.conf && st.conf !== 'sure' ? 2 : 3); }
         else { addMistake(r.key, 'mistakes', st.conf); rateCard(r.key, 1); }
       } else if (!ok) addMistake(r.key, 'cards', st.conf);
+      if (explainDue(ok, st.conf)) { st.xw = 'ask'; st.xwOrig = lastOutcome(r.key); }
       draw(); refocus();
     }
     function go(d) {
@@ -1187,11 +1227,13 @@
       var c = r.c, k = e.key;
       if (k === ' ' || k === 'Enter') {
         if (e.target.closest && e.target.closest('button, a, .gl') && e.target.id !== 'fc') return;
+        if (st.flipped && st.xw === 'ask') { e.preventDefault(); xwShow(); return; }
         if (o.mode === 'mistakes' && st.flipped) { e.preventDefault(); advanceMistake(); return; }
         if (isVig(c) && !st.flipped) { if (st.step === 0 && st.picks[0] != null) { e.preventDefault(); vigNext(); } return; }
         if (c.choices && !st.flipped) return;
         e.preventDefault(); flip();
       } else if (k === 'ArrowRight') {
+        if (st.xw === 'ask') return;
         if (o.mode === 'mistakes' && st.flipped) { e.preventDefault(); advanceMistake(); }
         else if (!o.consume) { e.preventDefault(); go(1); }
       } else if (k === 'ArrowLeft' && !o.consume) { e.preventDefault(); go(-1); }
@@ -1200,7 +1242,7 @@
         if (i < qq.choices.length && !(isVig(c) && st.picks[st.step] != null)) { e.preventDefault(); choose(i); }
       } else if (isQuestion(c) && !st.flipped && confAsk() && /^[sug]$/i.test(k)) {
         e.preventDefault(); setConf({ s: 'sure', u: 'unsure', g: 'guess' }[k.toLowerCase()]);
-      } else if (st.flipped && o.mode !== 'mistakes' && /^[1-4]$/.test(k)) { e.preventDefault(); rate(parseInt(k, 10)); }
+      } else if (st.flipped && st.xw !== 'ask' && o.mode !== 'mistakes' && /^[1-4]$/.test(k)) { e.preventDefault(); rate(parseInt(k, 10)); }
     }
     document.addEventListener('keydown', onKey);
     draw();
@@ -1381,6 +1423,405 @@
     main.querySelectorAll('[data-remove]').forEach(function (b) {
       b.addEventListener('click', function () { clearMistake(b.getAttribute('data-remove')); b.closest('li').remove(); });
     });
+  }
+
+  /* ---------- "explain why" prompts (33.0.0) ----------
+     After a board question or vignette is answered in practice, the explanation can wait behind one prompt:
+     say (or type) why the answer is right, then compare with the book's reasoning by ticking its key points.
+     Pref explainAsk: 'smart' (default: when you were right but unsure or guessing, plus one in four of the
+     rest), 'always', 'off'. A right answer whose reasoning matched none of the key points is re-recorded as a
+     guess, so it stays in the weak spots. Typed text is kept per item in localStorage `explain`
+     ({ t: text, d: day, r: matched|partly|missed }) and shown the next time the item comes up. */
+  var EXPL = store.get('explain', {});
+  var EXPL_MODES = [['smart', 'Smart'], ['always', 'Always'], ['off', 'Off']];
+  function explainMode() { var m = store.get('explainAsk', 'smart'); return m === 'off' || m === 'always' ? m : 'smart'; }
+  function explainDue(ok, conf) {
+    var m = explainMode();
+    if (m === 'off') return false;
+    if (m === 'always') return true;
+    if (!ok) return false;
+    if (conf === 'unsure' || conf === 'guess') return true;
+    var n = (store.get('explainN', 0) || 0) + 1; store.set('explainN', n);
+    return n % 4 === 0;
+  }
+  function explainFlashDue(key) {          // mechanism flashcards: explain before flipping
+    var m = explainMode(), r = CARDS[key];
+    if (m === 'off' || !r || r.deck.key !== 'mech') return false;
+    if (m === 'always') return true;
+    var lo = lastOutcome(key);
+    return !!lo && lo === lo.toLowerCase();   // smart: only cards you last got wrong
+  }
+  function saveExplain(key, text, rating) {
+    var e = EXPL[key] || {};
+    if (text) e.t = String(text).slice(0, 400);
+    if (rating) e.r = rating;
+    if (!e.t && !e.r) return;
+    e.d = today(); EXPL[key] = e; store.set('explain', EXPL);
+  }
+  function setLastOutcome(key, ch) { var a = ATT[key]; if (!a || !a.h || !ch) return; a.h = a.h.slice(0, -1) + ch; store.set('att', ATT); }
+  /* Up to three things the book's reasoning turns on: its bold terms first, then library names it mentions;
+     terms already in the question are used only to fill up. */
+  var KP_NAMES = null;
+  function keyPoints(q) {
+    var stem = plain(q.q).toLowerCase(), why = String(q.why || ''), text = plain(why), fresh = [], inStem = [], seen = {};
+    function add(s) {
+      s = plain(s).trim().replace(/[.,;:]+$/, ''); var k = s.toLowerCase();
+      if (s.length < 2 || s.length > 70 || seen[k]) return;
+      if (fresh.concat(inStem).some(function (x) { x = x.toLowerCase(); return x.indexOf(k) > -1 || k.indexOf(x) > -1; })) return;   // not "D2" beside "D2 antagonism"
+      seen[k] = 1; (stem.indexOf(k) > -1 ? inStem : fresh).push(s);
+    }
+    why.replace(/\*\*(.+?)\*\*/g, function (m, b) { add(b); return m; });
+    why.replace(XREF_RE, function (m, type, id, label) { if (type === 'drug' || type === 'target' || type === 'nt') add(xrefLabel(type, id, label)); return m; });
+    if (fresh.length < 3) {
+      if (!KP_NAMES) {
+        KP_NAMES = [];
+        (SP.targets || []).forEach(function (x) { if (x.short && x.short.length > 1) KP_NAMES.push(x.short); });
+        (SP.nts || []).forEach(function (x) { KP_NAMES.push(x.name); });
+        (SP.drugs || []).forEach(function (x) { KP_NAMES.push(String(x.name).replace(/\s*\([^)]*\)/g, '')); });
+        KP_NAMES = KP_NAMES.filter(function (n) { return n && n.length > 1; }).sort(function (a, b) { return b.length - a.length; });
+      }
+      for (var i = 0; i < KP_NAMES.length && fresh.length < 3; i++) {
+        var n = KP_NAMES[i];
+        if (new RegExp('(^|[^A-Za-z0-9])' + escRe(n) + '(?![A-Za-z0-9])', 'i').test(text)) add(n);
+      }
+    }
+    return fresh.concat(inStem).slice(0, 3);
+  }
+  SP.keyPoints = keyPoints;   // for tests
+  function explainAskHTML(key, q, step) {
+    var last = EXPL[key] && EXPL[key].t;
+    return '<div class="xw xw--ask"><p class="xw__q"><b>Explain why.</b> Before the explanation: why is <b>' + LETTERS[q.answer] + '</b> the answer' + (step ? ' to step ' + step : '') + '?</p>' +
+      (last ? '<p class="xw__last"><b>Last time you wrote:</b> ' + esc(last) + '</p>' : '') +
+      '<textarea class="xw__text" id="xw-text" rows="3" maxlength="400" aria-label="Your explanation (optional)" placeholder="Say it to yourself, or type a line (optional)"></textarea>' +
+      '<p class="xw__go"><button class="btn btn--solid" type="button" id="xw-show">Show the book’s reasoning</button></p></div>';
+  }
+  /* x: { text, pts: key points, ticks: {i: 1}, rated: matched|partly|missed|null } */
+  function explainDoneHTML(x) {
+    var n = x.pts.length, got = Object.keys(x.ticks || {}).length;
+    var verdict = !x.rated ? '' : x.rated === 'matched' ? 'Your reasoning matched.' : x.rated === 'partly' ? 'Partly there' + (n ? ' (' + got + ' of ' + n + ')' : '') + '.' : 'Reasoning missed: this one is recorded as a guess, so it stays in your weak spots.';
+    return '<div class="xw xw--done">' + (x.text ? '<p class="xw__mine"><b>Your explanation:</b> ' + esc(x.text) + '</p>' : '') +
+      (n ? '<p class="xw__label">Did your reasoning include these?</p><ul class="xw__pts">' + x.pts.map(function (p, i) {
+          return '<li><label><input type="checkbox" data-xp="' + i + '"' + (x.ticks && x.ticks[i] ? ' checked' : '') + '><span>' + esc(p) + '</span></label></li>';
+        }).join('') + '</ul><p class="xw__rate"><button class="btn btn--small" type="button" data-xr="missed" aria-pressed="' + (x.rated === 'missed') + '">None of these</button></p>'
+        : '<p class="xw__label">How did your reasoning compare?</p><p class="xw__rate">' + [['matched', 'Matched'], ['partly', 'Partly'], ['missed', 'Missed']].map(function (o) {
+          return '<button class="btn btn--small" type="button" data-xr="' + o[0] + '" aria-pressed="' + (x.rated === o[0]) + '">' + o[1] + '</button>';
+        }).join('') + '</p>') +
+      '<p class="xw__verdict' + (x.rated === 'missed' ? ' is-missed' : '') + '" aria-live="polite">' + verdict + '</p></div>';
+  }
+
+  /* ---------- quiz runner (33.0.0): reasoning drill and warm-ups ----------
+     A plain, one-at-a-time runner. Items:
+       { type: 'mcq', q: { q, choices, answer, why, whyNot, pages, chain, stem, lead }, tag, src, key }
+       { type: 'flash', card: { q, a }, key, tag, src }      rated Again/Hard/Good/Easy (o.rate)
+       { type: 'blank', text, tag, src }                     a high-yield point with its bold facts hidden
+     o.answer(item, ok, pick) is called once per item; o.done(results) returns the closing HTML. */
+  function Quiz(area, items, o) {
+    var pos = 0, st = { pick: null, shown: false }, results = [];
+    function cur() { return items[pos]; }
+    function chainHTML(ch) { return ch && ch.length ? '<ol class="chain" aria-label="Reasoning chain">' + ch.map(function (x) { return '<li>' + fmt(x) + '</li>'; }).join('') + '</ol>' : ''; }
+    function settle(ok, extra) { var it = cur(); results[pos] = { it: it, ok: ok }; if (o.answer) o.answer(it, ok, extra); }
+    function draw() {
+      if (pos >= items.length) { area.innerHTML = o.done(results); if (o.bindDone) o.bindDone(area, results); return; }
+      var it = cur(), body = '', nav = '';
+      var meta = '<p class="exam-q__meta">' + (pos + 1) + ' of ' + items.length + (it.tag ? ' · ' + esc(it.tag) : '') + (it.src ? ' · ' + esc(it.src) : '') + '</p>';
+      if (it.type === 'mcq') {
+        var q = it.q, done = st.pick != null;
+        body = (q.stem ? '<p class="exam-q__stem vig__stem">' + fmt(q.stem) + '</p>' : '') + (q.lead ? '<p class="vig__lead">' + fmt(q.lead) + '</p>' : '') + '<p class="exam-q__stem">' + fmt(q.q) + '</p>';
+        if (!done) {
+          body += '<ul class="choices">' + q.choices.map(function (c, i) { return '<li><button class="choice" type="button" data-pick="' + i + '"><span class="choice__key">' + LETTERS[i] + '</span><span>' + fmt(c) + '</span></button></li>'; }).join('') + '</ul>';
+        } else {
+          var ok = st.pick === q.answer;
+          body += '<p class="verdict ' + (ok ? 'is-right">Correct' : 'is-wrong">Not quite. You chose ' + LETTERS[st.pick]) + '</p><ul class="choices choices--static wn-open">' + q.choices.map(function (c, i) {
+            var cls = i === q.answer ? ' is-correct' : (i === st.pick ? ' is-wrong' : '');
+            var note = i === q.answer ? '<span class="choice__note">Correct answer</span>' : (i === st.pick ? '<span class="choice__note">Your answer</span>' : '');
+            return '<li><div class="choice' + cls + '"><span class="choice__key">' + LETTERS[i] + '</span><span class="choice__body"><span>' + fmt(c) + note + '</span>' + (i === q.answer ? '' : whyNotLine(q, i, i === st.pick)) + '</span></div></li>';
+          }).join('') + '</ul>' + chainHTML(q.chain) + whyBlock(q);
+        }
+      } else if (it.type === 'flash') {
+        body = '<p class="exam-q__stem">' + fmt(it.card.q) + '</p>' + (st.shown ? '<div class="quiz__a"><p class="face__a">' + fmt(it.card.a) + '</p></div>' : '');
+        nav = st.shown ? '<div class="rate" role="group" aria-label="How well did you know this?">' + [[1, 'Again'], [2, 'Hard'], [3, 'Good'], [4, 'Easy']].map(function (g) {
+          return '<button class="btn rate__b rate__b--' + g[0] + '" type="button" data-rate="' + g[0] + '"><span>' + g[1] + '</span><small>' + ivLabel(srsNext(SRS[it.key], g[0]).i) + '</small></button>';
+        }).join('') + '</div>' : '<button class="btn btn--solid" type="button" id="qz-show">Show answer</button>';
+      } else {
+        body = '<p class="exam-q__stem quiz__blank' + (st.shown ? ' is-open' : '') + '">' + fmt(it.text) + '</p>' +
+          (st.shown ? '' : '<p class="face__hint">Recall each hidden fact, then tap it or press Space to check.</p>');
+        nav = st.shown ? '<div class="quiz__self"><button class="btn" type="button" data-self="0">Missed it</button><button class="btn btn--solid" type="button" data-self="1">Got it</button></div>' : '<button class="btn btn--solid" type="button" id="qz-show">Show the hidden facts</button>';
+      }
+      if (it.type === 'mcq' && st.pick != null) nav = '<button class="btn btn--solid" type="button" id="qz-next">' + (pos < items.length - 1 ? 'Next' : 'Finish') + '</button>';
+      area.innerHTML = '<div class="exam-q quiz c-' + (it.css || 'case') + '" id="qz" tabindex="-1">' + meta + body + (nav ? '<div class="quiz__nav">' + nav + '</div>' : '') + '</div>';
+      var box = area.querySelector('#qz');
+      linkTerms(box, { skip: '.choice, .verdict, .exam-q__meta, .chain, .quiz__blank' });
+      box.addEventListener('click', onClick);
+    }
+    function next() { pos++; st = { pick: null, shown: false }; draw(); var b = area.querySelector('#qz'); if (b) { b.focus({ preventScroll: true }); var top = b.getBoundingClientRect().top + window.pageYOffset - headerH() - 12; if (window.pageYOffset > top) window.scrollTo(0, top); } }
+    function pick(i) { var it = cur(); if (it.type !== 'mcq' || st.pick != null || i >= it.q.choices.length) return; st.pick = i; settle(i === it.q.answer, i); draw(); var b = area.querySelector('#qz-next'); if (b) b.focus({ preventScroll: true }); }
+    function show() { st.shown = true; draw(); }
+    function rate(g) { var it = cur(); settle(g > 1, g); next(); }
+    function self(v) { settle(!!v); next(); }
+    function onClick(e) {
+      var b;
+      if ((b = e.target.closest('[data-pick]'))) return pick(parseInt(b.getAttribute('data-pick'), 10));
+      if (e.target.closest('#qz-next')) return next();
+      if (e.target.closest('#qz-show') || (cur().type === 'blank' && !st.shown && e.target.closest('.quiz__blank strong'))) return show();
+      if ((b = e.target.closest('[data-rate]'))) return rate(parseInt(b.getAttribute('data-rate'), 10));
+      if ((b = e.target.closest('[data-self]'))) return self(b.getAttribute('data-self') === '1');
+    }
+    function onKey(e) {
+      if (e.target.matches && e.target.matches('input, textarea, select')) return;
+      if (e.metaKey || e.ctrlKey || e.altKey || pos >= items.length) return;
+      var it = cur(), k = e.key;
+      if (it.type === 'mcq' && st.pick == null && /^[a-e]$/i.test(k)) { e.preventDefault(); pick('abcde'.indexOf(k.toLowerCase())); }
+      else if (k === ' ' || k === 'Enter' || k === 'ArrowRight') {
+        if ((k === ' ' || k === 'Enter') && e.target.closest && e.target.closest('button, a, .gl')) return;
+        if (it.type === 'mcq') { if (st.pick != null) { e.preventDefault(); next(); } }
+        else if (!st.shown) { e.preventDefault(); show(); }
+      }
+      else if (it.type === 'flash' && st.shown && /^[1-4]$/.test(k)) { e.preventDefault(); rate(parseInt(k, 10)); }
+      else if (it.type === 'blank' && st.shown && /^[yn]$/i.test(k)) { e.preventDefault(); self(k.toLowerCase() === 'y'); }
+    }
+    document.addEventListener('keydown', onKey);
+    draw();
+    return { destroy: function () { document.removeEventListener('keydown', onKey); } };
+  }
+  function scoreLine(results) { var r = 0; results.forEach(function (x) { if (x && x.ok) r++; }); return { right: r, n: results.length }; }
+
+  /* ---------- mechanism-reasoning drill (33.0.0) ----------
+     Questions come from js/reason.js (built from the library and data/mechgrid.js). localStorage `reason` keeps
+     the last 8 outcomes of every question as a string of R (right) and W (wrong), newest last. Missed questions
+     stay out of the book-question Mistakes pile: they have their own "Retry missed" and feed the daily warm-up. */
+  var REASON = store.get('reason', {});
+  function reasonBank() { return SP.reason ? SP.reason.all() : { items: [], byKey: {}, mechs: [], kinds: [] }; }
+  function recordReason(key, ok) { REASON[key] = ((REASON[key] || '') + (ok ? 'R' : 'W')).slice(-8); store.set('reason', REASON); }
+  function reasonLast(key) { var h = REASON[key]; return h ? h.charAt(h.length - 1) : ''; }
+  function reasonMissed() { return reasonBank().items.filter(function (it) { return reasonLast(it.key) === 'W'; }); }
+  function reasonStats(list) { var s = { total: list.length, tried: 0, right: 0 }; list.forEach(function (it) { var l = reasonLast(it.key); if (l) { s.tried++; if (l === 'R') s.right++; } }); return s; }
+  function reasonItem(it) { return { type: 'mcq', q: it, key: it.key, tag: it.tag, css: 'mech', reason: true }; }
+  function reasonPrefs() {
+    var p = store.get('reasonPrefs', null) || {};
+    if (!Array.isArray(p.kinds) || !p.kinds.length) p.kinds = reasonBank().kinds.map(function (k) { return k.id; });
+    p.fam = p.fam || 'all'; p.ch = p.ch || 'all'; p.n = p.n === 20 ? 20 : 10;
+    return p;
+  }
+  function reasonPool(p) {
+    return reasonBank().items.filter(function (it) {
+      if (p.kinds.indexOf(it.kind) < 0) return false;
+      if (p.ch !== 'all' && it.chs.indexOf(p.ch) < 0) return false;
+      if (p.fam !== 'all') { var d = it.drug && byId(SP.drugs, it.drug); if (!d || familyOf(d).id !== p.fam) return false; }
+      return true;
+    });
+  }
+  /* A session: missed questions first (up to half), then unseen, then the rest; kinds take turns, and one
+     mechanism-and-effect pairing appears once (twelve tricyclics would otherwise ask the same thing). */
+  function reasonPick(pool, n) {
+    var byKind = {}, order = [], out = [], sig = {};
+    function rank(it) { var l = reasonLast(it.key); return l === 'W' ? 0 : !l ? 1 : 2; }
+    shuffle(pool.slice()).sort(function (a, b) { return rank(a) - rank(b); }).forEach(function (it) { (byKind[it.kind] = byKind[it.kind] || []).push(it); if (order.indexOf(it.kind) < 0) order.push(it.kind); });
+    shuffle(order);
+    var guard = 0, missed = 0;
+    while (out.length < n && guard++ < 4000) {
+      var k = order[guard % order.length], list = byKind[k];
+      if (!list || !list.length) { if (order.every(function (x) { return !byKind[x].length; })) break; continue; }
+      var it = list.shift(), s = it.kind + '|' + (it.mech || it.target || it.circuit) + '|' + (it.kind === 'se' || it.kind === 'cmp' ? it.key.split('/')[3] || '' : it.kind === 'spot' ? it.key.split('/')[2] : it.key);
+      if (sig[s]) continue;
+      if (reasonLast(it.key) === 'W') { if (missed >= Math.ceil(n / 2)) { list.push(it); if (list.every(function (x) { return reasonLast(x.key) === 'W'; })) byKind[k] = []; continue; } missed++; }
+      sig[s] = 1; out.push(it);
+    }
+    return shuffle(out);
+  }
+  var reasonSession = null;
+  function reasonDoneHTML(results) {
+    var s = scoreLine(results), wrong = results.filter(function (x) { return x && !x.ok; });
+    return '<div class="empty"><h2>' + s.right + ' of ' + s.n + ' right</h2><p>' + (wrong.length ? plural(wrong.length, 'question') + ' to retry: ' + wrong.slice(0, 4).map(function (x) { return esc(plain(x.it.q.chain ? x.it.q.chain.slice(0, 2).join(' → ') : x.it.tag)); }).join('; ') + (wrong.length > 4 ? '…' : '') + '.' : 'Every chain held. Try a different kind or drug type next.') + '</p>' +
+      '<div class="empty__actions"><a class="btn btn--solid" href="#/reason" data-rs-again>Another round</a>' + (reasonMissed().length ? '<a class="btn" href="#/reason/missed">Retry missed (' + reasonMissed().length + ')</a>' : '') + '<a class="btn" href="#/topics">Weak-spot map</a></div></div>';
+  }
+  function renderReason(arg, arg2) {
+    var bank = reasonBank(), p = reasonPrefs();
+    if (!bank.items.length) return renderMissing();
+    var preset = null;
+    if (arg === 'missed') preset = { label: 'Retry missed', items: shuffle(reasonMissed()).slice(0, 20) };
+    else if (arg === 'drug' && byId(SP.drugs, arg2)) preset = { label: byId(SP.drugs, arg2).name, items: shuffle(bank.items.filter(function (it) { return it.drug === arg2 || it.drug2 === arg2; })).slice(0, 20) };
+    var fams = (SP.drugFamilies || []).filter(function (f) { return bank.items.some(function (it) { var d = it.drug && byId(SP.drugs, it.drug); return d && familyOf(d).id === f.id; }); });
+    var missed = reasonMissed().length, all = reasonStats(bank.items);
+    function kindRows() {
+      return bank.kinds.map(function (k) {
+        var s = reasonStats(bank.items.filter(function (it) { return it.kind === k.id; })), v = s.tried >= 3 ? s.right / s.tried : null;
+        return '<li class="rs-row is-' + strengthBand(v) + '"><span class="rs-row__name">' + esc(k.label) + '</span><span class="rs-row__bar" aria-hidden="true"><span style="width:' + (v == null ? 0 : Math.round(v * 100)) + '%"></span></span><span class="rs-row__n">' + (v == null ? (s.tried ? s.tried + ' tried' : 'Not tried') : Math.round(v * 100) + '% of ' + s.tried) + '</span></li>';
+      }).join('');
+    }
+    function mechRows() {
+      var rows = bank.mechs.map(function (m) {
+        var s = reasonStats(bank.items.filter(function (it) { return it.mech === m.id; }));
+        return { m: m, s: s, v: s.tried >= 3 ? s.right / s.tried : null };
+      }).filter(function (x) { return x.v != null; }).sort(function (a, b) { return a.v - b.v; });
+      if (!rows.length) return '<p class="muted">Strength by mechanism appears once you have answered at least three questions on a mechanism.</p>';
+      return '<ul class="rs-rows">' + rows.map(function (x) {
+        return '<li class="rs-row is-' + strengthBand(x.v) + '"><span class="rs-row__name">' + esc(x.m.label) + '</span><span class="rs-row__bar" aria-hidden="true"><span style="width:' + Math.round(x.v * 100) + '%"></span></span><span class="rs-row__n">' + Math.round(x.v * 100) + '% of ' + x.s.tried + '</span></li>';
+      }).join('') + '</ul>';
+    }
+    var html = '<div class="wrap page reason-page">' +
+      '<header class="page__head"><h1>Mechanism reasoning</h1><p>Practise the chain the book teaches: drug → action at a target → pathway → effect. ' + bank.items.length + ' questions built from the drug, receptor and circuit libraries; every answer shows its chain and a book page. These do not touch your Mistakes pile or review schedule.</p></header>' +
+      '<div class="tb rs-setup"' + (preset ? ' hidden' : '') + '>' +
+        '<section class="tb__sec"><h2 class="tb__h">Question kinds</h2><div class="fam-chips rs-kinds">' + bank.kinds.map(function (k) {
+          return '<button type="button" class="filter" data-kind="' + k.id + '" aria-pressed="' + (p.kinds.indexOf(k.id) > -1) + '" title="' + esc(k.blurb) + '">' + esc(k.label) + '</button>'; }).join('') + '</div></section>' +
+        '<section class="tb__sec rs-opts"><label class="select"><span>Drug type</span><select id="rs-fam"><option value="all">All types</option>' + fams.map(function (f) { return '<option value="' + f.id + '"' + (p.fam === f.id ? ' selected' : '') + '>' + esc(f.label) + '</option>'; }).join('') + '</select></label>' +
+          '<label class="select"><span>Chapter</span><select id="rs-ch"><option value="all">All chapters</option>' + allChapters().map(function (ch) { return '<option value="' + ch.id + '"' + (p.ch === ch.id ? ' selected' : '') + '>Chapter ' + ch.number + '</option>'; }).join('') + '</select></label>' +
+          '<div class="seg" role="radiogroup" aria-label="Questions">' + [10, 20].map(function (n) { return '<label><input type="radio" name="rs-n" value="' + n + '"' + (p.n === n ? ' checked' : '') + '><span>' + n + ' questions</span></label>'; }).join('') + '</div></section>' +
+        '<div class="tb__go"><button class="btn btn--solid" type="button" id="rs-start">Start</button>' + (missed ? '<a class="btn" href="#/reason/missed" id="rs-missed">Retry missed (' + missed + ')</a>' : '') + '<p class="tb__sum" id="rs-count" aria-live="polite"></p></div>' +
+      '</div>' +
+      '<div id="rs-area" aria-live="polite"></div>' +
+      '<section class="rs-stats"' + (preset ? ' hidden' : '') + '><h2>Your reasoning so far</h2><p class="muted">' + (all.tried ? all.tried + ' of ' + all.total + ' questions tried; ' + pct(all.right, all.tried) + '% right on the last attempt.' : 'Nothing answered yet.') + '</p><ul class="rs-rows">' + kindRows() + '</ul><h3>By mechanism, weakest first</h3>' + mechRows() + '</section></div>';
+    setView('reason:' + (arg || '') + (arg2 || ''), html);
+    document.title = 'Mechanism reasoning — ' + APP;
+    var area = main.querySelector('#rs-area'), quiz = null;
+    function count() { var n = reasonPool(p).length; main.querySelector('#rs-count').textContent = plural(n, 'question') + ' match'; main.querySelector('#rs-start').disabled = !n; }
+    function run(items) {
+      if (!items.length) { area.innerHTML = '<div class="empty"><h2>Nothing to ask</h2><p>' + (arg === 'missed' ? 'No missed reasoning questions right now.' : 'No questions for that choice yet.') + '</p><a class="btn btn--solid" href="#/reason">Open the drill</a></div>'; return; }
+      main.querySelector('.rs-setup').hidden = true; main.querySelector('.rs-stats').hidden = true;
+      if (quiz) quiz.destroy();
+      quiz = Quiz(area, items.map(reasonItem), {
+        answer: function (it, ok) { recordReason(it.key, ok); },
+        done: reasonDoneHTML,
+        bindDone: function (el) { var a = el.querySelector('[data-rs-again]'); if (a) a.addEventListener('click', function (e) { if (location.hash === '#/reason') { e.preventDefault(); view.key = null; route(); } }); }
+      });
+      window.scrollTo(0, 0);
+    }
+    view.cleanup = function () { if (quiz) quiz.destroy(); };
+    if (preset) { run(preset.items); return; }
+    function savePrefs() { store.set('reasonPrefs', p); count(); }
+    main.querySelectorAll('[data-kind]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var k = b.getAttribute('data-kind'), i = p.kinds.indexOf(k);
+        if (i > -1) { if (p.kinds.length === 1) return; p.kinds.splice(i, 1); } else p.kinds.push(k);
+        b.setAttribute('aria-pressed', String(p.kinds.indexOf(k) > -1)); savePrefs();
+      });
+    });
+    main.querySelector('#rs-fam').addEventListener('change', function (e) { p.fam = e.target.value; savePrefs(); });
+    main.querySelector('#rs-ch').addEventListener('change', function (e) { p.ch = e.target.value; savePrefs(); });
+    main.querySelectorAll('input[name="rs-n"]').forEach(function (i) { i.addEventListener('change', function () { p.n = parseInt(i.value, 10); savePrefs(); }); });
+    main.querySelector('#rs-start').addEventListener('click', function () { run(reasonPick(reasonPool(p), p.n)); });
+    count();
+  }
+
+  /* ---------- warm-ups (33.0.0) ----------
+     Daily warm-up (#/warmup): six quick items — two flashcards (due first; rated into the review schedule),
+     one high-yield point with its facts hidden, two board questions (mistakes, then weakest topics) and one
+     reasoning question (missed first). Chapter warm-up (#/warmup/chNN): five board questions to try before
+     reading; kept apart from attempts, mistakes and the schedule, with a before/after line once the same five
+     are retaken. localStorage `warm`: { days: { dayNumber: [right, n] }, pre: { chNN: { d, keys, right, n, re: [right, n, d] } } }. */
+  function warmData() { var w = store.get('warm', null) || {}; w.days = w.days || {}; w.pre = w.pre || {}; return w; }
+  function weekStart() { return today() - ((new Date().getDay() + 6) % 7); }           // Monday
+  function warmWeek() { var w = warmData(), s = weekStart(), out = []; for (var i = 0; i < 7; i++) out.push(w.days[s + i] || null); return out; }
+  function practisedChapters() {
+    var seen = {};
+    Object.keys(SRS).concat(Object.keys(ATT)).forEach(function (k) { seen[k.split('/')[0]] = 1; });
+    var chs = allChapters().filter(function (ch) { return seen[ch.id]; });
+    return chs.length ? chs : allChapters();
+  }
+  function warmBuild() {
+    var chs = practisedChapters(), ids = {}, items = [];
+    chs.forEach(function (ch) { ids[ch.id] = 1; });
+    function src(r) { return 'Ch ' + r.ch.number + ', ' + r.deck.short; }
+    var flash = CARD_LIST.filter(function (r) { return ids[r.ch.id] && !isQuestion(r.c); });
+    var due = shuffle(flash.filter(function (r) { return isDue(r.key); })).sort(function (a, b) { return SRS[a.key].d - SRS[b.key].d; });
+    var fresh = shuffle(flash.filter(function (r) { return !SRS[r.key]; }));
+    due.concat(fresh).concat(shuffle(flash.slice())).slice(0, 2).forEach(function (r) { items.push({ type: 'flash', card: r.c, key: r.key, tag: r.c.tag || r.deck.short, src: src(r), css: r.deck.css }); });
+    var hy = [];
+    chs.forEach(function (ch) { (ch.highYield || []).forEach(function (tp) { tp.items.forEach(function (txt) { if (/\*\*.+?\*\*/.test(txt)) hy.push({ type: 'blank', text: txt, tag: tp.topic, src: 'Ch ' + ch.number + ', High yield', css: 'hy' }); }); }); });
+    if (hy.length) items.push(hy[Math.floor(Math.random() * hy.length)]);
+    var qs = [], used = {};
+    function addQ(k) { var r = CARDS[k]; if (qs.length >= 2 || used[k] || !r || r.deck.key !== 'cases') return; used[k] = 1; qs.push({ type: 'mcq', q: r.c, key: k, tag: r.c.tag || 'Board question', src: src(r), css: 'case' }); }
+    mistakeKeys().forEach(addQ);
+    weakestTopics(3).forEach(function (w) { shuffle(topicKeys(w.id, function (d) { return d === 'cases'; })).sort(function (a, b) { return (itemScore(a) == null ? 0.5 : itemScore(a)) - (itemScore(b) == null ? 0.5 : itemScore(b)); }).forEach(addQ); });
+    shuffle(CARD_LIST.filter(function (r) { return ids[r.ch.id] && r.deck.key === 'cases'; })).forEach(function (r) { addQ(r.key); });
+    items = items.concat(qs);
+    var bank = reasonBank().items.filter(function (it) { return it.chs.some(function (c) { return ids[c]; }); });
+    var pool = shuffle(bank.filter(function (it) { return reasonLast(it.key) === 'W'; }));
+    if (!pool.length) pool = shuffle(bank.filter(function (it) { return !reasonLast(it.key); }));
+    if (!pool.length) pool = shuffle(bank.slice());
+    if (pool.length) items.push(reasonItem(pool[0]));
+    return items;
+  }
+  function warmCardHTML() {
+    var w = warmData(), t0 = w.days[today()], wk = warmWeek(), n = wk.filter(function (x) { return x; }).length, s = weekStart();
+    var dots = wk.map(function (x, i) {
+      return '<li class="' + (x ? 'is-done' : '') + (s + i === today() ? ' is-today' : '') + '"><span aria-hidden="true">' + 'MTWTFSS'.charAt(i) + '</span><span class="sr-only">' + ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'][i] + (x ? ': done' : ': not done') + '</span></li>';
+    }).join('');
+    return '<section class="wrap home-section warm-card-wrap" aria-labelledby="warm-h"><div class="warm-card">' +
+      '<div class="warm-card__txt"><h2 id="warm-h">Daily warm-up</h2><p>' + (t0 ? 'Done today: <b>' + t0[0] + ' of ' + t0[1] + '</b>. ' : 'Six quick items, about five minutes: flashcards, a high-yield fact, two board questions and one reasoning chain. ') + '<span class="warm-card__wk">' + plural(n, 'day') + ' this week</span></p></div>' +
+      '<ol class="warm-week" aria-label="Warm-ups this week">' + dots + '</ol>' +
+      '<a class="btn btn--solid" href="#/warmup">' + (t0 ? 'Go again' : 'Start warm-up') + '</a></div></section>';
+  }
+  function renderWarmup(chId) {
+    if (chId) return renderPretest(chId);
+    var items = warmBuild();
+    var html = '<div class="wrap page warm-page"><header class="page__head"><h1>Daily warm-up</h1><p>Six quick items from the chapters you have been studying. Flashcard ratings go into your review schedule; a missed board question joins your mistakes.</p></header><div id="wu-area" aria-live="polite"></div></div>';
+    setView('warmup', html);
+    document.title = 'Daily warm-up — ' + APP;
+    var quiz = Quiz(main.querySelector('#wu-area'), items, {
+      answer: function (it, ok, extra) {
+        if (it.type === 'flash') { rateCard(it.key, extra); recordAttempt(it.key, extra > 1, extra === 1 ? null : extra === 2 ? 'unsure' : 'sure'); }
+        else if (it.reason) recordReason(it.key, ok);
+        else if (it.type === 'mcq') { recordAttempt(it.key, ok, null); if (!ok) addMistake(it.key, 'warmup'); }
+      },
+      done: function (results) {
+        var s = scoreLine(results), w = warmData();
+        w.days[today()] = [s.right, s.n];
+        Object.keys(w.days).forEach(function (d) { if (Number(d) < today() - 60) delete w.days[d]; });
+        store.set('warm', w);
+        var n = warmWeek().filter(function (x) { return x; }).length;
+        return '<div class="empty"><h2>Warm-up done: ' + s.right + ' of ' + s.n + '</h2><p>' + plural(n, 'day') + ' this week. ' + (s.right === s.n ? 'A clean round.' : 'Anything you missed comes back in review, mistakes or the reasoning drill.') + '</p>' +
+          '<div class="empty__actions"><a class="btn btn--solid" href="#/review">Daily review</a><a class="btn" href="#/reason">Reasoning drill</a><a class="btn" href="#/">Home</a></div></div>';
+      }
+    });
+    view.cleanup = function () { quiz.destroy(); };
+  }
+  function chapterQStats(ch) {            // this chapter's board questions and vignettes: last outcome of each one tried
+    var s = { tried: 0, right: 0 };
+    deckKeys(ch, 'cases').concat(deckKeys(ch, 'vignettes')).forEach(function (k) { var l = lastOutcome(k); if (l) { s.tried++; if (l === l.toUpperCase()) s.right++; } });
+    return s;
+  }
+  function pretestLine(ch) { var p = warmData().pre[ch.id]; return p ? 'Pre-test ' + p.right + '/' + p.n + (p.re ? ' → ' + p.re[0] + '/' + p.re[1] : '') : ''; }
+  function renderPretest(chId) {
+    var ch = chapter(chId);
+    if (!ch || !(ch.cases || []).length) return renderMissing();
+    var w = warmData(), pre = w.pre[ch.id], keys = deckKeys(ch, 'cases');
+    function summary() {
+      var p = warmData().pre[ch.id], now = chapterQStats(ch);
+      if (!p) return '';
+      return '<div class="pre-sum"><p class="pre-sum__row"><span class="pre-sum__cell"><span class="pre-sum__n">' + p.right + '/' + p.n + '</span><span>Before reading<br><small>' + esc(fmtDate(p.d * 86400000)) + '</small></span></span>' +
+        (p.re ? '<span class="pre-sum__arrow" aria-hidden="true">→</span><span class="pre-sum__cell"><span class="pre-sum__n">' + p.re[0] + '/' + p.re[1] + '</span><span>Same five, retaken<br><small>' + esc(fmtDate(p.re[2] * 86400000)) + '</small></span></span>' : '') + '</p>' +
+        '<p class="muted">' + (now.tried ? 'Now: ' + pct(now.right, now.tried) + '% on this chapter’s board questions and vignettes (' + now.tried + ' tried).' : 'Practise this chapter’s board questions and your current score will show here.') + '</p></div>';
+    }
+    var html = '<div class="wrap page warm-page"><header class="page__head"><p class="crumb"><a href="#/c/' + ch.id + '/guide">Chapter ' + ch.number + ': ' + esc(ch.short || ch.title) + '</a></p><h1>Test yourself first</h1>' +
+      '<p>Five board questions from Chapter ' + ch.number + ' to try <b>before</b> you read it. Expect to miss some: trying first makes the reading stick. Nothing here counts toward your mistakes, weak spots or review schedule.</p></header>' +
+      '<div id="pt-sum">' + summary() + '</div><div class="empty__actions pre-actions" id="pt-actions">' +
+        (pre ? '<button class="btn btn--solid" type="button" id="pt-retake">Retake the same five</button><button class="btn" type="button" id="pt-new">Start a new pre-test</button>' : '<button class="btn btn--solid" type="button" id="pt-new">Start the pre-test</button>') +
+        '<a class="btn" href="#/c/' + ch.id + '/guide">Read the chapter</a></div><div id="pt-area" aria-live="polite"></div></div>';
+    setView('pretest:' + ch.id, html);
+    document.title = 'Ch ' + ch.number + ' pre-test — ' + APP;
+    var quiz = null;
+    function run(ks, retake) {
+      main.querySelector('#pt-actions').hidden = true; main.querySelector('#pt-sum').hidden = true;
+      if (quiz) quiz.destroy();
+      quiz = Quiz(main.querySelector('#pt-area'), ks.map(function (k) { var r = CARDS[k]; return { type: 'mcq', q: r.c, key: k, tag: r.c.tag || 'Board question', src: 'Ch ' + ch.number + ' pre-test', css: 'case' }; }), {
+        done: function (results) {
+          var s = scoreLine(results), d = warmData();
+          if (retake && d.pre[ch.id]) d.pre[ch.id].re = [s.right, s.n, today()];
+          else d.pre[ch.id] = { d: today(), keys: ks, right: s.right, n: s.n };
+          store.set('warm', d);
+          return '<div class="empty"><h2>' + (retake ? 'Retake' : 'Pre-test') + ': ' + s.right + ' of ' + s.n + '</h2>' + summary() +
+            '<p>' + (retake ? 'That is your before and after on the same five questions.' : 'Now read the chapter with these questions in mind, then come back and retake the same five.') + '</p>' +
+            '<div class="empty__actions"><a class="btn btn--solid" href="#/c/' + ch.id + '/guide">Read Chapter ' + ch.number + '</a><a class="btn" href="#/c/' + ch.id + '/cards/cases">Board questions</a></div></div>';
+        }
+      });
+    }
+    view.cleanup = function () { if (quiz) quiz.destroy(); };
+    var nw = main.querySelector('#pt-new'), rt = main.querySelector('#pt-retake');
+    if (nw) nw.addEventListener('click', function () {
+      var untried = shuffle(keys.filter(function (k) { return !ATT[k]; })), rest = shuffle(keys.filter(function (k) { return ATT[k]; }));
+      run(untried.concat(rest).slice(0, 5), false);
+    });
+    if (rt) rt.addEventListener('click', function () { run(pre.keys.filter(function (k) { return CARDS[k]; }), true); });
   }
 
   /* ---------- topics and weak-spot map (24.0.0) ---------- */
@@ -2258,6 +2699,7 @@
     { k: 'clinical', label: 'Clinical cards', unit: 'card', css: 'clin', hint: 'Question on screen; reveal shows the answer.' },
     { k: 'mcq', label: 'Board questions', unit: 'question', css: 'case', hint: 'Single best answer; mark the group’s choice, then reveal the answer and explanation.' },
     { k: 'vig', label: 'Two-step vignettes', unit: 'two-step vignette', css: 'vig', hint: 'A clinical case in two linked board questions. Mark the group’s choice and reveal step 1; Next step (or Space) then shows what happened next and step 2. Each step is scored.' },
+    { k: 'rsn', label: 'Mechanism reasoning', unit: 'reasoning question', css: 'mech', hint: 'Drug → action → effect questions built from the library: explain a side effect, predict an effect, compare two drugs, spot a mechanism, or match a symptom to its circuit. Reveal shows the chain.' },
     { k: 'case', label: 'Clinical vignettes', unit: 'vignette', css: 'guide', hint: 'Short vignettes from the study guides; reveal shows the teaching point.' },
     { k: 'drug', label: 'Name that drug', unit: 'mystery drug', css: 'drug', hint: 'Clues from the drug library appear one at a time (mechanism, binding profile, a side effect, a use) until someone names the drug. Narrow it to one drug type below.' }
   ];
@@ -2270,6 +2712,7 @@
     { id: 'hy', label: 'High-yield lecture', counts: { hy: 'all' }, order: 'order', timer: 0 },
     { id: 'cards', label: 'Flashcards', counts: { mech: 'all', drugs: 'all', clinical: 'all' }, order: 'shuffle', timer: 0 },
     { id: 'drug', label: 'Name that drug', counts: { drug: 10 }, order: 'shuffle', timer: 0 },
+    { id: 'rsn', label: 'Mechanism reasoning', counts: { rsn: 10 }, order: 'shuffle', timer: 0 },
     { id: 'warm', label: 'Lightning warm-up', counts: { hy: 5, drugs: 5, clinical: 5, mcq: 3 }, order: 'mix', timer: 20 }
   ];
   var TEACH_SIZES = ['Normal', 'Large', 'Huge'];
@@ -2323,6 +2766,10 @@
         });
       });
     });
+    reasonBank().items.forEach(function (q) {      // reasoning questions run as board-question slides (kind 'mcq')
+      var chs = q.chs.filter(function (id) { return chapter(id) && (chIds === 'all' || chIds.indexOf(id) >= 0); });
+      if (chs.length) add(cat.rsn, { id: 'rsn:' + q.key, kind: 'mcq', rsn: true, ch: chapter(chs[0]), c: q });
+    });
     (SP.drugs || []).slice().sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (d) {
       var chs = drugChapterIds(d).filter(function (id) { return chapter(id); });
       if (chIds !== 'all') chs = chs.filter(function (id) { return chIds.indexOf(id) >= 0; });
@@ -2343,6 +2790,7 @@
     if (['order', 'shuffle', 'mix'].indexOf(p.order) < 0) p.order = 'order';
     p.timer = p.timer || 0;
     p.teams = !!p.teams;
+    p.xw = !!p.xw;
     p.fam = p.fam || 'all';
     return p;
   }
@@ -2378,6 +2826,7 @@
   }
   function teachMeta(it) {
     if (it.kind === 'drug') return 'Ch ' + it.ch.number + ' · Name that drug';
+    if (it.rsn) return 'Mechanism reasoning · ' + it.c.tag;
     var ty = it.kind === 'hyt' ? 'High yield' : teachTypeBy(it.kind).label.replace(/s$/, '');
     var extra = it.kind === 'hy' || it.kind === 'hyt' ? it.topic : it.kind === 'case' ? it.sec.title : (it.c.tag || '');
     return 'Ch ' + it.ch.number + ' · ' + ty + (extra && it.kind !== 'hyt' ? ' · ' + extra : '');
@@ -2420,7 +2869,8 @@
         }).join('') + '</div><p class="muted tb__note" id="tb-hint"></p></section>' +
         '<section class="tb__sec tb__two"><div><h2 class="tb__h">Order</h2>' + seg('order', [['order', 'Book order'], ['shuffle', 'Shuffled'], ['mix', 'Mixed together']], prefs.order) + '</div>' +
           '<div><h2 class="tb__h">Countdown per slide</h2>' + seg('timer', TEACH_TIMERS, prefs.timer) + '</div>' +
-          '<div><h2 class="tb__h">Scoring</h2>' + seg('teams', [['0', 'Whole room'], ['1', 'Two teams']], prefs.teams ? '1' : '0') + '</div></section>' +
+          '<div><h2 class="tb__h">Scoring</h2>' + seg('teams', [['0', 'Whole room'], ['1', 'Two teams']], prefs.teams ? '1' : '0') + '</div>' +
+          '<div><h2 class="tb__h">Explain-why pause</h2>' + seg('xw', [['0', 'Off'], ['1', 'Before each explanation']], prefs.xw ? '1' : '0') + '</div></section>' +
         '<div class="tb__go"><button class="btn btn--solid" type="button" id="t-start">Start presenting</button><button class="btn" type="button" id="t-reroll" hidden>Reshuffle</button><p class="tb__sum" id="t-count" aria-live="polite"></p></div>' +
       '</div>' +
       '<section class="teach-list"><h2>Slides in this session</h2><p class="muted">Tap any slide to start from it.</p><ol id="t-list"></ol></section></div>';
@@ -2441,6 +2891,7 @@
       prefs.order = main.querySelector('input[name=order]:checked').value;
       prefs.timer = parseInt(main.querySelector('input[name=timer]:checked').value, 10);
       prefs.teams = main.querySelector('input[name=teams]:checked').value === '1';
+      prefs.xw = main.querySelector('input[name=xw]:checked').value === '1';
       prefs.fam = main.querySelector('#tb-fam').value;
       store.set('teachPrefs', prefs);
     }
@@ -2472,7 +2923,7 @@
     }
     function start(from) {
       if (!pending.length) return;
-      store.set('teach', { chs: prefs.chs, order: pending.slice(), pos: from || 0, timer: prefs.timer, teams: prefs.teams, res: {}, team: {}, flags: {}, seed: Math.floor(Math.random() * 1e6) });
+      store.set('teach', { chs: prefs.chs, order: pending.slice(), pos: from || 0, timer: prefs.timer, teams: prefs.teams, xw: prefs.xw, res: {}, team: {}, flags: {}, seed: Math.floor(Math.random() * 1e6) });
       enterFullscreen();
       location.hash = '#/teach/run';
     }
@@ -2533,22 +2984,23 @@
     function save() { store.set('teach', S); }
     function blanksOf(it) { var m = String(it.text).match(/\*\*(.+?)\*\*/g); return m ? m.length : 0; }
     function cluesOf(it) { if (!it._clues) it._clues = drugClues(it.d, S.seed); return it._clues; }
-    function fresh() { st = { revealed: false, picked: null, shown: 0, others: false, step: 0 }; }
+    function fresh() { st = { revealed: false, picked: null, shown: 0, others: false, step: 0, hold: false }; }
     /* room marks and team points: one value per slide, or an array with one value per step for two-step vignettes */
     function resList(id) { var v = S.res[id]; return v === undefined ? [] : Array.isArray(v) ? v.filter(function (x) { return x != null; }) : [v]; }
     function teamList(id) { var v = S.team[id]; return !v ? [] : Array.isArray(v) ? v.filter(function (x) { return x; }) : [v]; }
     function stepVal(o, id) { var v = o[id]; return Array.isArray(v) ? v[st.step] : undefined; }
     function setStepVal(o, id, val) { var v = Array.isArray(o[id]) ? o[id] : [null, null]; v[st.step] = v[st.step] === val ? null : val; if (v.every(function (x) { return x == null; })) delete o[id]; else o[id] = v; }
-    function nextStep() { var it = cur(); if (!it || it.kind !== 'vig' || st.step || !st.revealed) return; st.step = 1; st.revealed = false; st.picked = null; st.others = false; draw(); startTimer(); var stg = box.querySelector('.teach__stage'); if (stg) stg.scrollTop = 0; }
+    function nextStep() { var it = cur(); if (!it || it.kind !== 'vig' || st.step || !st.revealed) return; st.step = 1; st.revealed = false; st.hold = false; st.picked = null; st.others = false; draw(); startTimer(); var stg = box.querySelector('.teach__stage'); if (stg) stg.scrollTop = 0; }
     function mcqHTML(c) {
       return '<ul class="teach__choices">' + c.choices.map(function (ch2, i) {
           var cls = st.revealed ? (i === c.answer ? ' is-correct' : (i === st.picked ? ' is-wrong' : ' is-dim')) : (i === st.picked ? ' is-picked' : '');
           return '<li><button type="button" class="tchoice' + cls + '" data-pick="' + i + '"' + (st.revealed ? ' disabled' : '') + ' aria-pressed="' + (i === st.picked) + '"><span class="tchoice__key">' + LETTERS[i] + '</span><span>' + fmt(ch2) + '</span></button></li>';
         }).join('') + '</ul>' +
         (st.revealed ? '<div class="teach__answer"><p class="teach__label">Answer: ' + LETTERS[c.answer] + (st.picked == null ? '' : st.picked === c.answer ? ', the group got it' : ', the group chose ' + LETTERS[st.picked]) + '</p>' +
+          (st.hold ? '<p class="teach__prompt teach__xw">Explain-why pause: ask the room why <b>' + LETTERS[c.answer] + '</b> is the answer, then press Space for the reasoning.</p>' : '<div class="teach__reason">' +
           (st.picked != null && st.picked !== c.answer ? whyNotLine(c, st.picked, true, 'Why not ' + LETTERS[st.picked] + ':') : '') + whyBlock(c, 'teach__why') +
           (hasWhyNot(c) ? (st.others ? '<div class="teach__others">' + c.choices.map(function (x, i) { return i === c.answer || i === st.picked ? '' : whyNotLine(c, i, false, 'Why not ' + LETTERS[i] + ':'); }).join('') + '</div>' :
-            '<button type="button" class="tbtn tbtn--small teach__discuss" id="t-others">Discuss the other choices (' + c.choices.filter(function (x, i) { return i !== c.answer && i !== st.picked && c.whyNot[i]; }).length + ')</button>') : '') + '</div>' : '');
+            '<button type="button" class="tbtn tbtn--small teach__discuss" id="t-others">Discuss the other choices (' + c.choices.filter(function (x, i) { return i !== c.answer && i !== st.picked && c.whyNot[i]; }).length + ')</button>') : '') + '</div>') + '</div>' : '');
     }
     function revealable(it) { return !!it && it.kind !== 'hyt' && !(it.kind === 'hy' && !blanksOf(it)); }
     function isDone(it) {
@@ -2625,6 +3077,7 @@
       }
       var revealLabel = k === 'hy' ? (st.shown >= blanksOf(it) ? 'Hide facts' : st.shown ? 'Reveal next fact' : 'Reveal first fact')
         : k === 'drug' ? (st.revealed ? 'Hide the drug' : Math.max(1, st.shown) < cluesOf(it).length ? 'Next clue' : 'Reveal the drug')
+        : (k === 'mcq' || k === 'vig') && st.revealed && st.hold ? 'Show the reasoning'
         : k === 'vig' && st.revealed && !st.step ? 'Next step'
         : st.revealed ? 'Hide answer' : k === 'case' ? 'Reveal teaching point' : 'Reveal answer';
       var last = S.pos === S.order.length - 1;
@@ -2736,6 +3189,7 @@
     function toggle() {
       var it = cur();
       if (!revealable(it)) return go(1);
+      if ((it.kind === 'mcq' || it.kind === 'vig') && st.revealed && st.hold) { st.hold = false; draw(); var w = box.querySelector('.teach__reason'); if (w) w.scrollIntoView({ block: 'nearest' }); return; }
       if (it.kind === 'hy') { if (st.shown >= blanksOf(it)) { st.shown = 0; draw(); return; } st.shown++; }
       else if (it.kind === 'vig' && st.revealed && !st.step) { nextStep(); return; }
       else if (it.kind === 'drug') {
@@ -2744,7 +3198,7 @@
         if (n < cluesOf(it).length) { st.shown = n + 1; draw(); var lc = box.querySelector('.tclue:last-child'); if (lc) lc.scrollIntoView({ block: 'nearest' }); return; }
         st.revealed = true;
       }
-      else { st.revealed = !st.revealed; if (!st.revealed) { draw(); return; } }
+      else { st.revealed = !st.revealed; st.hold = st.revealed && !!S.xw && (it.kind === 'mcq' || it.kind === 'vig'); if (!st.revealed) { draw(); return; } }
       afterReveal();
     }
     function revealAll() { var it = cur(); if (it.kind === 'hy') st.shown = blanksOf(it); else { if (it.kind === 'drug') st.shown = cluesOf(it).length; st.revealed = true; } afterReveal(); }
@@ -2998,6 +3452,8 @@
   function relatedDrugsHTML(d) {
     var same = (SP.drugs || []).filter(function (x) { return x.id !== d.id && x.group && x.group === d.group; }).slice(0, 10);
     var fam = familyOf(d), cheat = famById(fam.id) ? '<p class="side-cheat"><a class="btn btn--small" href="#/cheat/' + fam.id + '">Cheat sheet: ' + esc(fam.label) + '</a></p>' : '';
+    var nRs = reasonBank().items.filter(function (it) { return it.drug === d.id || it.drug2 === d.id; }).length;
+    if (nRs) cheat += '<p class="side-reason"><a class="btn btn--small" href="#/reason/drug/' + d.id + '">Reasoning questions (' + nRs + ')</a></p>';
     if (!same.length) return cheat ? '<h2>Same class</h2>' + cheat : '';
     return '<h2>Same class</h2><ul class="side-links">' + same.map(function (x) { return '<li><a href="#/drugs/' + x.id + '">' + esc(x.name) + '</a></li>'; }).join('') + '</ul>' + cheat;
   }
@@ -4155,6 +4611,8 @@
         segGroup('lang', t('about.language'), [['en', t('about.langEn')], ['tl', t('about.langTl')]], lang) +
         segGroup('theme', t('theme.title'), [['auto', t('theme.auto')], ['light', t('theme.light')], ['dark', t('theme.dark')]], getTheme()) +
         segGroup('aboutTextSize', t('textsize.title'), sizes, String(store.get('textSize', '100'))) +
+        segGroup('explainAsk', t('about.explain'), EXPL_MODES.map(function (m) { return [m[0], t('explain.' + m[0])]; }), explainMode()) +
+        '<p class="setting__hint">' + esc(t('explain.hint')) + '</p>' +
       '</div>' +
       '<h2>' + esc(t('about.tips')) + '</h2><div class="card"><ul class="prose" style="margin:0;padding-left:1.2em">' +
         [1, 2, 3, 4, 5, 6].map(function (i) { return '<li>' + rich(t('about.tip' + i)) + '</li>'; }).join('') +
@@ -4168,6 +4626,7 @@
     if (n === 'lang') { setLang(v); var again = main.querySelector('input[name="lang"]:checked'); if (again) again.focus(); }
     else if (n === 'theme') setTheme(v);
     else if (n === 'aboutTextSize') { store.set('textSize', v); applyTextSize(v); }
+    else if (n === 'explainAsk') store.set('explainAsk', v);
   });
 
   /* ---------- language switching: static markup (data-i18n / data-i18n-attr in index.html), then re-render ---------- */

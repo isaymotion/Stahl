@@ -9,6 +9,48 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "33.0.0",
+    "date": "2026-11-12",
+    "title": "Learning features: reasoning drill, warm-ups and “explain why”",
+    "summary": "Three ways to practise thinking, not just recalling: a mechanism-reasoning drill built from the library, a five-minute daily warm-up with a pre-test for each chapter, and a prompt to explain an answer before you read the book’s reasoning.",
+    "items": [
+      {
+        "type": "feature",
+        "text": "Mechanism reasoning: 382 questions built from the drug, receptor and circuit libraries, in five kinds: explain a side effect, predict from an action, compare two drugs of one type, spot the mechanism, and match a symptom to its circuit. Every answer shows the chain (drug → action → effect), a reason for each wrong choice and a book page. Filter by kind, drug type or chapter; your strength by mechanism builds up below, and missed chains have their own retry, apart from the Mistakes pile.",
+        "href": "#/reason",
+        "link": "Open the drill"
+      },
+      {
+        "type": "feature",
+        "text": "Daily warm-up on the home page: six quick items (two flashcards, a high-yield fact, two board questions from your mistakes or weakest topics, one reasoning chain), with the days you did this week instead of a streak.",
+        "href": "#/warmup",
+        "link": "Start a warm-up"
+      },
+      {
+        "type": "feature",
+        "text": "Test yourself first: every chapter has a five-question pre-test to try before reading. It is kept apart from your mistakes, weak spots and review schedule; retake the same five afterwards to see your before and after.",
+        "href": "#/warmup/ch04",
+        "link": "Try Chapter 4"
+      },
+      {
+        "type": "feature",
+        "text": "“Explain why” prompts in practice: after you answer a board question or vignette, the app can ask you to say or type why the answer is right before it shows the book’s reasoning, then tick the key points you covered. A right answer with the reasoning missed is recorded as a guess, so it stays in your weak spots. Smart timing asks when you were right but unsure or guessing; change it under About, Settings. Mechanism flashcards you last missed ask you to explain before flipping.",
+        "href": "#/about",
+        "link": "Settings"
+      },
+      {
+        "type": "feature",
+        "text": "Teaching mode: a Mechanism reasoning slide type and quick start, and an optional explain-why pause that shows the answer first and holds the reasoning until the room has had a go.",
+        "href": "#/teach",
+        "link": "Teaching mode"
+      },
+      {
+        "type": "feature",
+        "text": "Drug pages link to the reasoning questions about that drug, and typed explanations, warm-up days and drill results are included in Backup progress."
+      }
+    ]
+  },
+  {
     "version": "32.0.0",
     "date": "2026-11-12",
     "title": "Two-step vignettes for every chapter",

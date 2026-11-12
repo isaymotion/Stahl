@@ -2,9 +2,9 @@
    Cache names MUST start with this app's PREFIX: all isaymotion apps share one origin and one cache storage,
    so activate deletes only this app's own old caches. */
 const PREFIX = 'stahl-companion-';
-const VERSION = PREFIX + '32.0.0';
+const VERSION = PREFIX + '33.0.0';
 const CORE = [
-  './', './index.html', './css/app.css', './js/app.js', './js/pdf.js', './js/pdf-fonts.js',
+  './', './index.html', './css/app.css', './js/app.js', './js/reason.js', './js/pdf.js', './js/pdf-fonts.js',
   './data/app-meta.js', './data/changelog.js', './data/hospital.js', './data/strings.js', './data/chapters.js',
   './manifest.webmanifest', './icons/favicon-64.png', './icons/home-brain.png', './icons/icon-192.png', './icons/icon-512.png'
 ];

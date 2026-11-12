@@ -109,6 +109,7 @@ SP.manifest = [
 
 /* Shared data loaded with the chapters: databases. */
 SP.extraFiles = [
+  'data/mechgrid.js',
   'data/db/neurotransmitters.js',
   'data/db/targets.js',
   'data/db/drugs.js',
