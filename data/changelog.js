@@ -9,6 +9,50 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "34.0.0",
+    "date": "2026-11-12",
+    "title": "Diagrams: agonist slider, occupancy meter, dopamine pathways and receptor ring",
+    "summary": "Four interactive drawings to move, tap and compare. Each is an original schematic built from the chapters and the drug library, with the book pages it rests on.",
+    "items": [
+      {
+        "type": "feature",
+        "text": "Agonist slider: slide a drug from inverse agonist to full agonist and see what it does alone and on top of the natural transmitter, with or without constitutive activity. A second view places the D2 partial agonists, bifeprunox and OPC4392 between antagonist and dopamine. Positions are rank order only: the book gives no numbers.",
+        "href": "#/diagrams/spectrum",
+        "link": "Open the slider"
+      },
+      {
+        "type": "feature",
+        "text": "Occupancy meter: one hundred receptors that fill as you slide, with the book’s thresholds marked, for D2, the serotonin, norepinephrine and dopamine transporters, H1, orexin and GABA-A receptors, and VMAT2. It shows thresholds only and is not a dosing tool.",
+        "href": "#/diagrams/occupancy",
+        "link": "Open the meter"
+      },
+      {
+        "type": "feature",
+        "text": "Dopamine pathways: the five pathways in untreated schizophrenia, under a D2 antagonist, with 5HT2A antagonism added, and under a D2 partial agonist. Tap a pathway to read what it does and what happens to it, with links to the symptom circuits.",
+        "href": "#/diagrams/pathways",
+        "link": "Open the pathways"
+      },
+      {
+        "type": "feature",
+        "text": "Receptor ring: the whole binding profile of a drug as one ring, in the same order for every drug, for the 21 drugs with seven or more rated targets. Pick a second drug to compare two rings side by side.",
+        "href": "#/diagrams/ring",
+        "link": "Open the ring"
+      },
+      {
+        "type": "feature",
+        "text": "The drawings also sit where the topic is taught: in the Chapter 2, 4 and 5 study guides, on drug pages (ring) and on target pages (meter, and the slider for D2). All four are listed under Library → Diagrams and can be found by search.",
+        "href": "#/diagrams",
+        "link": "All diagrams"
+      },
+      {
+        "type": "feature",
+        "text": "Teaching mode: 18 diagram questions. The drawing hides the answer until you reveal it, then it can be explored with the room.",
+        "href": "#/teach",
+        "link": "Teaching mode"
+      }
+    ]
+  },
+  {
     "version": "33.0.0",
     "date": "2026-11-12",
     "title": "Learning features: reasoning drill, warm-ups and “explain why”",

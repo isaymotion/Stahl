@@ -251,7 +251,8 @@ SP.add("ch02", "guide", {
               ["**Partial agonist**", "Increases signaling (net agonist)", "Reduces signaling to its set point (net antagonist)", "Exceeds it, partially"],
               ["**Antagonist**", "No effect (“silent”)", "Blocks agonist; back to baseline", "Leaves it unchanged"],
               ["**Inverse agonist**", "Reduces signaling below baseline", "Blocks agonist and goes below baseline", "Abolishes it"]
-            ] }
+            ] },
+            { type: "diagram", label: "Agonist slider: inverse agonist, antagonist, partial agonist, full agonist", dia: {kind: "spectrum"} }
           ]
         },
         {

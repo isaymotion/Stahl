@@ -354,6 +354,7 @@
       case 'targets': return p[1] ? renderTarget(p[1]) : renderTargets();
       case 'compare': return renderCompare(p.slice(1).join('/'));
       case 'cheat': return p[1] ? renderCheat(p[1]) : renderCheats();
+      case 'diagrams': return renderDiagrams(p[1], p[2]);
       case 'circuits': return renderCircuits(p[1]);
       case 'nbn': return renderNbN();
       case 'updates': return renderUpdates();
@@ -420,6 +421,7 @@
     { key: 'targets', tkey: 'nav.targets', href: '#/targets', label: 'Receptors & targets', blurb: 'Receptors, transporters, enzymes and channels, and what hitting each one does.', css: 'guide' },
     { key: 'compare', tkey: 'nav.compare', href: '#/compare', label: 'Compare drugs', blurb: 'Two or three agents side by side.', css: 'case' },
     { key: 'cheat', tkey: 'nav.cheat', href: '#/cheat', label: 'Cheat sheets', blurb: 'One sheet per drug type: shared targets, binding at a glance, uses, side effects, pearls. Prints as a PDF.', css: 'drug' },
+    { key: 'diagrams', tkey: 'nav.diagrams', href: '#/diagrams', label: 'Diagrams', blurb: 'Interactive drawings: agonist slider, occupancy meter, dopamine pathways, receptor ring.', css: 'mech' },
     { key: 'circuits', tkey: 'nav.circuits', href: '#/circuits', label: 'Symptoms & circuits', blurb: 'Symptom → malfunctioning circuit → targeted mechanism.', css: 'clin' },
     { key: 'nbn', tkey: 'nav.nbn', href: '#/nbn', label: 'Nomenclature (NbN)', blurb: 'Traditional class names mapped to mechanism-based names.', css: 'hy' },
     { key: 'glossary', tkey: 'nav.glossary', href: '#/glossary', label: 'Glossary', blurb: 'Terms defined in the chapters, tap-to-define everywhere.', css: 'gloss' },
@@ -751,8 +753,8 @@
 
   /* ---------- library hub ---------- */
   function renderLibrary() {
-    var counts = { drugs: (SP.drugs || []).length, nt: (SP.nts || []).length, targets: (SP.targets || []).length, circuits: (SP.circuits || []).length, glossary: (SP.glossary || []).length, updates: collectUpdates().length, nbn: (SP.drugs || []).filter(function (d) { return d.nbn; }).length, compare: (SP.drugs || []).length, monitoring: (SP.monitoring || []).length, cheat: (SP.drugFamilies || []).filter(function (f) { return familyCounts()[f.id]; }).length };
-    var unit = { drugs: 'agent', nt: 'messenger', targets: 'target', circuits: 'symptom map', glossary: 'term', updates: 'update', nbn: 'mapped agent', compare: 'agent', monitoring: 'checklist', cheat: 'drug type' };
+    var counts = { drugs: (SP.drugs || []).length, nt: (SP.nts || []).length, targets: (SP.targets || []).length, circuits: (SP.circuits || []).length, glossary: (SP.glossary || []).length, updates: collectUpdates().length, nbn: (SP.drugs || []).filter(function (d) { return d.nbn; }).length, compare: (SP.drugs || []).length, monitoring: (SP.monitoring || []).length, cheat: (SP.drugFamilies || []).filter(function (f) { return familyCounts()[f.id]; }).length, diagrams: SP.dia ? SP.dia.list().length : 0 };
+    var unit = { drugs: 'agent', nt: 'messenger', targets: 'target', circuits: 'symptom map', glossary: 'term', updates: 'update', nbn: 'mapped agent', compare: 'agent', monitoring: 'checklist', cheat: 'drug type', diagrams: 'diagram' };
     var html = '<div class="wrap page"><header class="page__head"><h1>Reference library</h1><p>Cross-linked databases built from all 13 chapters. Every entry cites the chapter and book pages it comes from; anything from outside the book is boxed as a post-publication update.</p></header>' +
       '<div class="tools tools--lib">' + LIBRARY.map(function (l) {
         return '<a class="tool tool--lib c-' + l.css + '" href="' + l.href + '"><span class="tool__name">' + esc(l.label) + '</span><span class="tool__meta">' + esc(l.blurb) + '</span><span class="tool__ch">' + plural(counts[l.key] || 0, unit[l.key]) + (l.key === 'compare' ? ' to compare' : '') + '</span></a>';
@@ -837,6 +839,8 @@
           if (r.note) g += '<span class="timeline__note">' + fmt(r.note) + '</span>';
         });
         return '<div class="g-block timeline" id="' + id + '">' + (b.title ? '<p class="timeline__title">' + fmt(b.title) + '</p>' : '') + g + '</div></div>';
+      case 'diagram':
+        return '<div class="g-block g-dia" id="' + id + '">' + (SP.dia ? SP.dia.html(b.dia) : '') + '</div>';
       case 'steps':
         return open + (b.title ? '<h4>' + fmt(b.title) + '</h4>' : '') + '<ol class="steps">' +
           b.items.map(function (s) { return '<li><b>' + fmt(s[0]) + '</b>' + fmt(s[1]) + '</li>'; }).join('') + '</ol>' + close;
@@ -857,6 +861,7 @@
       case 'update': return plain('Post-publication update ' + (b.title || '') + ' ' + b.text);
       case 'flow': return plain((b.title || '') + ' ' + b.steps.map(function (s) { return s[0] + ' ' + (s[1] || ''); }).join(' ') + ' ' + (b.note || ''));
       case 'compare': return plain((b.title || '') + ' ' + b.items.map(function (it) { return it.title + ' ' + it.points.join(' '); }).join(' '));
+      case 'diagram': return plain('Interactive diagram ' + (b.label || ''));
     }
     return '';
   }
@@ -2700,6 +2705,7 @@
     { k: 'mcq', label: 'Board questions', unit: 'question', css: 'case', hint: 'Single best answer; mark the group’s choice, then reveal the answer and explanation.' },
     { k: 'vig', label: 'Two-step vignettes', unit: 'two-step vignette', css: 'vig', hint: 'A clinical case in two linked board questions. Mark the group’s choice and reveal step 1; Next step (or Space) then shows what happened next and step 2. Each step is scored.' },
     { k: 'rsn', label: 'Mechanism reasoning', unit: 'reasoning question', css: 'mech', hint: 'Drug → action → effect questions built from the library: explain a side effect, predict an effect, compare two drugs, spot a mechanism, or match a symptom to its circuit. Reveal shows the chain.' },
+    { k: 'dia', label: 'Diagram questions', unit: 'diagram question', css: 'mech', hint: 'A board question with one of the interactive diagrams on screen: agonist slider, occupancy meter or dopamine pathways. The diagram hides the answer until you reveal it, then it can be explored with the room.' },
     { k: 'case', label: 'Clinical vignettes', unit: 'vignette', css: 'guide', hint: 'Short vignettes from the study guides; reveal shows the teaching point.' },
     { k: 'drug', label: 'Name that drug', unit: 'mystery drug', css: 'drug', hint: 'Clues from the drug library appear one at a time (mechanism, binding profile, a side effect, a use) until someone names the drug. Narrow it to one drug type below.' }
   ];
@@ -2713,6 +2719,7 @@
     { id: 'cards', label: 'Flashcards', counts: { mech: 'all', drugs: 'all', clinical: 'all' }, order: 'shuffle', timer: 0 },
     { id: 'drug', label: 'Name that drug', counts: { drug: 10 }, order: 'shuffle', timer: 0 },
     { id: 'rsn', label: 'Mechanism reasoning', counts: { rsn: 10 }, order: 'shuffle', timer: 0 },
+    { id: 'dia', label: 'Diagram questions', counts: { dia: 'all' }, order: 'order', timer: 0 },
     { id: 'warm', label: 'Lightning warm-up', counts: { hy: 5, drugs: 5, clinical: 5, mcq: 3 }, order: 'mix', timer: 20 }
   ];
   var TEACH_SIZES = ['Normal', 'Large', 'Huge'];
@@ -2769,6 +2776,10 @@
     reasonBank().items.forEach(function (q) {      // reasoning questions run as board-question slides (kind 'mcq')
       var chs = q.chs.filter(function (id) { return chapter(id) && (chIds === 'all' || chIds.indexOf(id) >= 0); });
       if (chs.length) add(cat.rsn, { id: 'rsn:' + q.key, kind: 'mcq', rsn: true, ch: chapter(chs[0]), c: q });
+    });
+    (SP.dia ? SP.dia.questions() : []).forEach(function (q) {      // diagram questions: board-question slides with a drawing (kind 'mcq')
+      var chs = q.chs.filter(function (id) { return chapter(id) && (chIds === 'all' || chIds.indexOf(id) >= 0); });
+      if (chs.length) add(cat.dia, { id: 'dia:' + q.key, kind: 'mcq', dia: true, ch: chapter(chs[0]), c: q });
     });
     (SP.drugs || []).slice().sort(function (a, b) { return a.name.localeCompare(b.name); }).forEach(function (d) {
       var chs = drugChapterIds(d).filter(function (id) { return chapter(id); });
@@ -2827,6 +2838,7 @@
   function teachMeta(it) {
     if (it.kind === 'drug') return 'Ch ' + it.ch.number + ' · Name that drug';
     if (it.rsn) return 'Mechanism reasoning · ' + it.c.tag;
+    if (it.dia) return 'Ch ' + it.ch.number + ' · Diagram question · ' + it.c.tag;
     var ty = it.kind === 'hyt' ? 'High yield' : teachTypeBy(it.kind).label.replace(/s$/, '');
     var extra = it.kind === 'hy' || it.kind === 'hyt' ? it.topic : it.kind === 'case' ? it.sec.title : (it.c.tag || '');
     return 'Ch ' + it.ch.number + ' · ' + ty + (extra && it.kind !== 'hyt' ? ' · ' + extra : '');
@@ -3038,7 +3050,7 @@
       if (atEnd()) return drawEnd();
       var it = cur(), k = it.kind, body = '', done = isDone(it);
       if (k === 'mcq') {
-        body = '<p class="teach__stem">' + fmt(it.c.q) + '</p>' + mcqHTML(it.c);
+        body = '<p class="teach__stem">' + fmt(it.c.q) + '</p>' + (it.dia ? teachDiagram(it.c, st.revealed && !st.hold) : '') + mcqHTML(it.c);
       } else if (k === 'vig') {
         var vq = it.c.steps[st.step], v0 = it.c.steps[0];
         body = '<p class="teach__kicker">Two-step vignette · Step ' + (st.step + 1) + ' of ' + it.c.steps.length + (it.c.tag ? ' · ' + esc(it.c.tag) : '') + '</p><p class="teach__stem teach__vstem">' + fmt(it.c.stem) + '</p>' +
@@ -3433,6 +3445,7 @@
         '<dl class="kv">' + (d.cls ? '<dt>Class</dt><dd>' + fmt(d.cls) + '</dd>' : '') + (d.nbn ? '<dt>Mechanism-based name</dt><dd>' + fmt(d.nbn) + '</dd>' : '') + (d.aka && d.aka.length ? '<dt>Also known as</dt><dd>' + esc(d.aka.join(', ')) + '</dd>' : '') + '</dl>' +
         (d.mechanism ? '<section class="lib-sec"><h2>Mechanism of action</h2><p>' + fmt(d.mechanism) + '</p></section>' : '') +
         (d.targets && d.targets.length ? '<section class="lib-sec"><h2>Binding profile</h2>' + profileHTML(d) + '</section>' : '') +
+        (SP.dia && SP.dia.hasRing(d.id) ? '<section class="lib-sec lib-sec--dia"><h2>Receptor ring</h2>' + SP.dia.html({ kind: 'ring', drug: d.id, title: ' ' }) + '</section>' : '') +
         (d.uses && d.uses.length ? '<section class="lib-sec"><h2>Uses discussed in the book</h2><ul>' + d.uses.map(function (u) { return '<li>' + fmt(u) + '</li>'; }).join('') + '</ul></section>' : '') +
         (se ? '<section class="lib-sec"><h2>Side effects and why</h2><div class="table-wrap"><table><thead><tr><th scope="col">Effect</th><th scope="col">Mechanism</th></tr></thead><tbody>' + se + '</tbody></table></div></section>' : '') +
         (d.pearls && d.pearls.length ? '<section class="lib-sec"><h2>Pearls</h2><ul class="pearls">' + d.pearls.map(function (u) { return '<li>' + fmt(u) + '</li>'; }).join('') + '</ul></section>' : '') +
@@ -3456,6 +3469,60 @@
     if (nRs) cheat += '<p class="side-reason"><a class="btn btn--small" href="#/reason/drug/' + d.id + '">Reasoning questions (' + nRs + ')</a></p>';
     if (!same.length) return cheat ? '<h2>Same class</h2>' + cheat : '';
     return '<h2>Same class</h2><ul class="side-links">' + same.map(function (x) { return '<li><a href="#/drugs/' + x.id + '">' + esc(x.name) + '</a></li>'; }).join('') + '</ul>' + cheat;
+  }
+
+  /* ---------- diagrams (34.0.0) ----------
+     The drawings and their handlers live in js/diagrams.js (SP.dia), the content in data/diagrams.js.
+     Here: the Diagrams page (#/diagrams, #/diagrams/<kind>/<arg>), the embeds on target pages, search rows
+     and the teaching-mode slide. Guide sections embed one with a block { type: 'diagram', dia: {spec}, label }. */
+  if (SP.dia) SP.dia.fmt = fmt;
+  function diaSpec(kind, arg) {
+    var spec = { kind: kind, full: true, pick: true };
+    if (kind === 'spectrum') spec.preset = arg || null;
+    if (kind === 'occupancy') spec.target = arg || 'd2';
+    if (kind === 'pathways') spec.state = arg || null;
+    if (kind === 'ring') { var ids = String(arg || '').split(','); spec.drug = ids[0] || null; spec.vs = ids[1] || null; }
+    return spec;
+  }
+  function renderDiagrams(kind, arg) {
+    var list = SP.dia ? SP.dia.list() : [], cur = kind ? list.filter(function (d) { return d.kind === kind; })[0] : null;
+    if (kind && !cur) return renderMissing();
+    if (!cur) {
+      setView('diagrams', '<div class="wrap page">' + libHead(null, null, 'Diagrams', 'Four interactive drawings to move, tap and compare. Each is an original schematic built from the chapters and the drug library, with the book pages it rests on. They also appear inside the study guide, on drug and target pages, and as Diagram questions in Teaching mode.') +
+        '<ul class="cheat-grid dia-grid">' + list.map(function (d) {
+          return '<li><a class="cheat-card c-' + d.css + '" href="#/diagrams/' + d.kind + '"><span class="cheat-card__name">' + esc(d.title) + '</span><span class="cheat-card__groups">' + esc(d.blurb) + '</span></a></li>';
+        }).join('') + '</ul><p class="dia-teach"><a class="btn" href="#/teach">Use them in Teaching mode</a></p></div>');
+      document.title = 'Diagrams — ' + APP;
+      return;
+    }
+    var more = '';
+    if (kind === 'spectrum') {
+      var pre = SP.diagrams.spectrum.presets || {};
+      more = '<p class="dia-switch">' + [['', 'Any receptor']].concat(Object.keys(pre).map(function (k) { return [k, pre[k].title]; })).map(function (x) {
+        return '<a class="filter' + ((arg || '') === x[0] ? ' is-on' : '') + '" href="#/diagrams/spectrum' + (x[0] ? '/' + x[0] : '') + '"' + ((arg || '') === x[0] ? ' aria-current="page"' : '') + '>' + esc(x[1]) + '</a>';
+      }).join('') + '</p>';
+    }
+    setView('diagrams:' + kind + '/' + (arg || ''), '<div class="wrap page lib-page dia-page c-' + cur.css + '">' + libHead('#/diagrams', 'Diagrams', esc(cur.title), esc(cur.blurb)) + more +
+      SP.dia.html(diaSpec(kind, arg)) + '</div>');
+    document.title = cur.title + ' — ' + APP;
+  }
+  function targetDiagrams(t) {
+    if (!SP.dia || !SP.diagrams) return '';
+    var out = '';
+    if ((SP.diagrams.occupancy || {})[t.id]) out += SP.dia.html({ kind: 'occupancy', target: t.id });
+    Object.keys((SP.diagrams.spectrum || {}).presets || {}).forEach(function (k) { if (k === t.id) out += SP.dia.html({ kind: 'spectrum', preset: k }); });
+    return out ? '<section class="lib-sec lib-sec--dia"><h2>Diagrams</h2>' + out + '</section>' : '';
+  }
+  function diagramIndex() {
+    if (!SP.dia) return [];
+    return SP.dia.list().map(function (d) { return { ch: null, kind: 'diagram', title: d.title, text: plain(d.blurb + ' ' + d.text), href: '#/diagrams/' + d.kind }; });
+  }
+  /* teaching slide: the drawing hides the answer (blind) until the slide is revealed */
+  function teachDiagram(q, open) {
+    var spec = {}, k;
+    for (k in q.dia) if (has(q.dia, k)) spec[k] = q.dia[k];
+    spec.blind = !open; spec.teach = true; spec.full = true; spec.pick = false;
+    return '<div class="teach__dia">' + SP.dia.html(spec) + '</div>';
   }
 
   /* ---------- drug-class cheat sheets (28.0.0) ----------
@@ -3735,6 +3802,7 @@
         '<dl class="kv"><dt>Type</dt><dd>' + esc(t.family) + '</dd>' + (nt ? '<dt>Neurotransmitter</dt><dd><a href="#/nt/' + nt.id + '">' + esc(nt.name) + '</a></dd>' : '') + (t.coupling ? '<dt>Coupling</dt><dd>' + fmt(t.coupling) + '</dd>' : '') + (t.location ? '<dt>Location</dt><dd>' + fmt(t.location) + '</dd>' : '') + '</dl>' +
         (t.summary ? '<p class="lib-lede">' + fmt(t.summary) + '</p>' : '') +
         ((t.stim && t.stim.length) || (t.block && t.block.length) ? '<section class="lib-sec"><h2>Side-effect mapper</h2><div class="fx-grid">' + effects('Stimulating it', t.stim, 'stim') + effects('Blocking or inhibiting it', t.block, 'block') + '</div></section>' : '') +
+        targetDiagrams(t) +
         (t.facts && t.facts.length ? '<section class="lib-sec"><h2>From the chapters</h2>' + factsHTML(t.facts) + '</section>' : '') +
         updatesHTML(t.updates) +
       '</div><aside class="lib-side"><h2>Drugs acting here</h2>' +
@@ -4151,7 +4219,8 @@
     target: { label: 'Target', css: 'guide' },
     circuit: { label: 'Symptom & circuit', css: 'clin' },
     monitoring: { label: 'Monitoring', css: 'upd' },
-    cheat: { label: 'Cheat sheet', css: 'drug' }
+    cheat: { label: 'Cheat sheet', css: 'drug' },
+    diagram: { label: 'Diagram', css: 'mech' }
   };
   function buildIndex() {
     INDEX = [];
@@ -4184,6 +4253,7 @@
     (SP.targets || []).forEach(function (t) { INDEX.push({ ch: null, kind: 'target', title: t.name, text: plain([t.family, t.summary, (t.facts || []).map(function (f) { return f.text; }).join(' ')].join(' ')), href: '#/targets/' + t.id }); });
     (SP.circuits || []).forEach(function (c) { INDEX.push({ ch: null, kind: 'circuit', title: c.symptom + ' (' + c.disorder + ')', text: plain([c.circuit, (c.nts || []).join(' '), (c.treat || []).join(' ')].join(' ')), href: '#/circuits/' + c.id }); });
     (SP.drugFamilies || []).forEach(function (f) { var ds = famDrugs(f); if (ds.length) INDEX.push({ ch: null, kind: 'cheat', title: f.label + ' cheat sheet', text: plain([f.groups.join(' '), ds.map(function (d) { return d.name; }).join(' ')].join(' ')), href: '#/cheat/' + f.id }); });
+    diagramIndex().forEach(function (e) { INDEX.push(e); });
     (SP.monitoring || []).forEach(function (m) { INDEX.push({ ch: null, kind: 'monitoring', title: m.name + ' monitoring', text: plain([m.intro || '', (m.rows || []).map(function (r) { return r.param; }).join(', '), (m.bookWhy || []).map(function (w) { return w.text; }).join(' ')].join(' ')), href: '#/monitoring/' + m.id }); });
     INDEX.forEach(function (e) { e.lc = e.text.toLowerCase(); e.lt = e.title.toLowerCase(); });
   }

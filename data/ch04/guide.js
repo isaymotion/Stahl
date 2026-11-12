@@ -119,6 +119,7 @@ SP.add("ch04", "guide", {
               ["**Tuberoinfundibular**", "Hypothalamus → **anterior pituitary**", "Tonically **inhibits prolactin** release", "Relatively **preserved**"],
               ["**Thalamic**", "Periaqueductal gray, ventral mesencephalon, hypothalamic nuclei, lateral parabrachial nucleus → thalamus", "Not well known; may gate thalamic traffic for **sleep and arousal**", "No evidence of abnormality"]
             ] },
+            { type: "diagram", label: "Dopamine pathways drawing: the five pathways in untreated schizophrenia", dia: {kind: "pathways", state: "scz"} },
             { type: "h", text: "Tuberoinfundibular pathway and prolactin" },
             { type: "p", text: "These neurons are normally **tonically active**, holding prolactin down. After childbirth their activity falls, so prolactin rises and **lactation** can occur during breastfeeding. If lesions or drugs disrupt the pathway, prolactin rises too, with **galactorrhea**, **gynecomastia** (especially in men), **amenorrhea** (loss of ovulation and periods) and possibly **sexual dysfunction**. Many D2-blocking drugs for psychosis do exactly this (Chapter 5)." },
             { type: "h", text: "Nigrostriatal pathway: direct and indirect motor loops" },

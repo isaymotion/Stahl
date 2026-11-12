@@ -77,7 +77,8 @@ SP.add("ch05", "guide", {
               ["**Amenorrhea**", "Irregular or absent periods; may interfere with **fertility**, especially in women"],
               ["**Bone demineralization**", "Possibly faster, especially in **postmenopausal** women not on estrogen replacement"],
               ["Sexual dysfunction, weight gain", "Possible; prolactin’s role is **not clear**"]
-            ] }
+            ] },
+            { type: "diagram", label: "Dopamine pathways drawing: D2 antagonist, tuberoinfundibular pathway", dia: {kind: "pathways", state: "d2", path: "tubero"} }
           ]
         },
         {
@@ -86,6 +87,7 @@ SP.add("ch05", "guide", {
           pages: "165–170",
           blocks: [
             { type: "p", text: "Blocking D2 receptors in the **nigrostriatal** pathway, the pathway that degenerates in Parkinson’s disease, causes motor side effects (Figure 5-5). These are often lumped together as **extrapyramidal symptoms (EPS)**, an **old-fashioned, imprecise** term. Lumping them hides the fact that they look different and have **vastly different treatments**." },
+            { type: "diagram", label: "Dopamine pathways drawing: D2 antagonist, nigrostriatal pathway", dia: {kind: "pathways", state: "d2", path: "nigrostriatal"} },
             { type: "table", caption: "D2 blocker motor syndromes", head: ["Syndrome", "Timing", "Features", "Treatment in the book"], rows: [
               ["**Drug-induced parkinsonism (DIP)**", "Acute; the **most common** side effect of D2-targeting drugs", "Tremor, rigidity, **bradykinesia/akinesia**", "**Anticholinergics** (M1 blockade); **amantadine**; switch to a drug without anticholinergic burden"],
               ["**Acute dystonia**", "Often on **first exposure**, especially to D2 blockers with **neither serotonergic nor anticholinergic** properties", "Intermittent or sustained involuntary contraction of face, neck, trunk, pelvis, limbs or **eyes**; frightening", "**IM anticholinergic**: nearly always works within **20 minutes**"],
@@ -236,7 +238,8 @@ SP.add("ch05", "guide", {
               ["**C. Mesocortical** (prefrontal cortex)", "Glutamate → **GABA interneuron in VTA** → mesocortical dopamine neuron", "**Less** prefrontal dopamine → cognitive dysfunction, emotional blunting, flat affect", "**More** prefrontal dopamine → may improve **negative, cognitive and affective** symptoms"]
             ] },
             { type: "callout", kind: "pearl", title: "Why the benefit is inconsistent", text: "The prefrontal benefit is not robust across all 5HT2A/D2 antagonists because their **5HT2A:D2 potency ratios** differ and some have **interfering** properties such as anticholinergic and antihistamine actions. A better approach may be adding a **selective 5HT2A antagonist** to D2 drugs; trials are testing whether this improves positive symptoms or allows lower D2 doses." },
-            { type: "p", text: "In **dementia** and **Parkinson’s disease** psychosis, where D2 blockade causes problems or danger, 5HT2A antagonism alone gives a sufficiently robust antipsychotic effect." }
+            { type: "p", text: "In **dementia** and **Parkinson’s disease** psychosis, where D2 blockade causes problems or danger, 5HT2A antagonism alone gives a sufficiently robust antipsychotic effect." },
+            { type: "diagram", label: "Dopamine pathways drawing: D2 antagonist with 5HT2A antagonism", dia: {kind: "pathways", state: "5ht2a"} }
           ]
         },
         {
@@ -270,7 +273,8 @@ SP.add("ch05", "guide", {
               ["**Aripiprazole** (the original “pip”)", "Closer to antagonist: improves positive symptoms without severe motor effects, but some **akathisia**; some question its efficacy in the most severe psychosis (never proven)"],
               ["**Brexpiprazole** (second pip) and **cariprazine** (the “rip”)", "Similar spectrum position to aripiprazole; antipsychotic, low motor effects, some akathisia; differ mainly in **other receptor** actions"]
             ] },
-            { type: "callout", kind: "pearl", title: "Partial agonists lower prolactin", text: "Lactotroph D2 receptors are **more sensitive** to the intrinsic activity of D2 partial agonists than other pathways: all three partial agonists in clinical use **reduce** prolactin rather than raise it, presumably because lactotrophs “see” them more as agonists. Adding one to a patient with hyperprolactinemia on a D2 antagonist can **reverse** it." }
+            { type: "callout", kind: "pearl", title: "Partial agonists lower prolactin", text: "Lactotroph D2 receptors are **more sensitive** to the intrinsic activity of D2 partial agonists than other pathways: all three partial agonists in clinical use **reduce** prolactin rather than raise it, presumably because lactotrophs “see” them more as agonists. Adding one to a patient with hyperprolactinemia on a D2 antagonist can **reverse** it." },
+            { type: "diagram", label: "Agonist slider: D2 partial agonists on the spectrum", dia: {kind: "spectrum", preset: "d2"} }
           ]
         },
         {
@@ -362,6 +366,7 @@ SP.add("ch05", "guide", {
           pages: "201, 204–222",
           blocks: [
             { type: "p", text: "Each drug’s binding is drawn as a **strip** of boxes, one per receptor, ranked from most potent (left) to least potent (right), with a dotted line through **D2**. Boxes are semi-quantitative (plus signs reflect potency on a standard Ki scale) and are a **consensus** that varies by laboratory, species and method, and evolves over time. The library’s drug pages convert these strips into bars." },
+            { type: "diagram", label: "Occupancy meter: D2 receptor occupancy", dia: {kind: "occupancy", target: "d2"} },
             { type: "list", title: "Rules for reading a strip", items: [
               "Drugs are dosed for psychosis to occupy at least **60–80%** of D2 receptors.",
               "So receptors **left of D2** are occupied **60% or more** at antipsychotic doses; those to the right, **less than 60%**.",
@@ -382,7 +387,8 @@ SP.add("ch05", "guide", {
               ["**H1 / muscarinic**", "Strong H1: clozapine, olanzapine, quetiapine, zotepine; strong **muscarinic**: **clozapine, olanzapine, quetiapine**; asenapine some H1, weak muscarinic", "**No anticholinergic** properties; some H1 (e.g., ziprasidone, iloperidone)", "H1 less than D2; **no muscarinic**"],
               ["**α1**", "Clozapine, quetiapine, zotepine **more** than D2; asenapine similar", "All bind; **paliperidone and iloperidone more** than D2", "Some α1 binding"]
             ], note: "Antidepressant-linked properties: Figures 5-34 to 5-40. Side-effect-linked properties: H1/muscarinic (5-41) and α1 (5-42)." },
-            { type: "callout", kind: "mnemonic", title: "Three whimsical groups", text: "**The pines (“peens”)**: clozapine, olanzapine, quetiapine, asenapine, zotepine. **Many dones and a rone**: risperidone, paliperidone, ziprasidone, iloperidone, lurasidone, and lumateperone. **Two pips and a rip**: aripiprazole, brexpiprazole, and cariprazine." }
+            { type: "callout", kind: "mnemonic", title: "Three whimsical groups", text: "**The pines (“peens”)**: clozapine, olanzapine, quetiapine, asenapine, zotepine. **Many dones and a rone**: risperidone, paliperidone, ziprasidone, iloperidone, lurasidone, and lumateperone. **Two pips and a rip**: aripiprazole, brexpiprazole, and cariprazine." },
+            { type: "diagram", label: "Receptor ring: binding profile of clozapine", dia: {kind: "ring", drug: "clozapine"} }
           ]
         },
         {
