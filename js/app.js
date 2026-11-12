@@ -1583,7 +1583,7 @@
           '<label><input type="radio" name="timed" value="1"' + (prefs.timed ? ' checked' : '') + '><span>Timed</span></label>' +
           '<label><input type="radio" name="timed" value="0"' + (!prefs.timed ? ' checked' : '') + '><span>Untimed</span></label>' +
         '</div></fieldset>' +
-        '<label class="check"><input type="checkbox" id="ex-vig"' + (examVig() ? ' checked' : '') + '> Include two-step vignettes (Chapters 1\u20137 so far). Each counts as two questions; step 1 locks when you move on to step 2.</label>' +
+        '<label class="check"><input type="checkbox" id="ex-vig"' + (examVig() ? ' checked' : '') + '> Include two-step vignettes. Each counts as two questions; step 1 locks when you move on to step 2.</label>' +
         '<label class="check"><input type="checkbox" id="ex-conf"' + (confAsk() ? ' checked' : '') + '> Ask how sure I am on each question (sure, unsure, guessing). Confident misses are flagged in the results.</label>' +
         '<p class="exam-form__sum" id="ex-sum"></p>' +
         '<button class="btn btn--solid" type="button" id="ex-start">Start exam</button>' +

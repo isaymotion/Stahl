@@ -10,7 +10,7 @@ SP.add = function (id, key, value) {
 };
 SP.BOOK = "Stahl’s Essential Psychopharmacology, 5th ed.";
 SP.CHAPTER_FILES = ['guide', 'highyield', 'cards-mech', 'cards-drugs', 'cards-clinical', 'cards-cases', 'glossary'];
-/* chapters that have two-step vignettes (R9: Ch 1–7; R10 adds Ch 8–13) */
+/* every chapter has two-step vignettes (R9: Ch 1–7, R10: Ch 8–13) */
 SP.VIGNETTE_FILES = SP.CHAPTER_FILES.concat(['cards-vignettes']);
 
 SP.manifest = [
@@ -68,42 +68,42 @@ SP.manifest = [
     title: 'Anxiety, Trauma, and Treatment',
     short: 'Anxiety and trauma',
     summary: 'Fear and worry as the two core symptoms of GAD, panic, social anxiety and PTSD; the amygdala and its six fear outputs; CSTC worry loops; how benzodiazepines, α2δ ligands, serotonergic agents, buspirone, NET inhibitors and α1 antagonists act; fear conditioning, extinction, renewal and reconsolidation; and treatment choices for each disorder.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch09', number: 9, ready: true, pages: '379–400',
     title: 'Chronic Pain and Its Treatment',
     short: 'Chronic pain',
     summary: 'Pain as a psychiatric vital sign; the nociceptive pathway from Aβ, Aδ and C fibers through the dorsal horn to the brain; peripheral and central (segmental and suprasegmental) sensitization; the spectrum from mood and anxiety disorders to fibromyalgia and neuropathic pain; descending opioid, noradrenergic and serotonergic inhibition and why SNRIs work; α2δ ligands and open-channel block; and treating the ancillary symptoms of fibromyalgia.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch10', number: 10, ready: true, pages: '401–448',
     title: 'Disorders of Sleep and Wakefulness and Their Treatment: Neurotransmitter Networks for Histamine and Orexin',
     short: 'Sleep and wakefulness',
     summary: 'The arousal spectrum; histamine and orexin networks; homeostatic and circadian drives, the VLPO switch and ultradian cycles; insomnia as hyperarousal and every hypnotic class (benzodiazepines, Z drugs, DORAs, trazodone, antihistamines, melatonergic agents) with occupancy thresholds; and sleepiness from OSA, narcolepsy, idiopathic hypersomnia and circadian disorders, treated with caffeine, stimulants, modafinil, solriamfetol, pitolisant and sodium oxybate.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch11', number: 11, ready: true, pages: '449–485',
     title: 'Attention Deficit Hyperactivity Disorder and Its Treatment',
     short: 'ADHD',
     summary: 'ADHD symptoms mapped to prefrontal circuits (DLPFC, dACC, OFC, motor cortex, VMPFC); NE and DA tuning of pyramidal neurons through α2A, D1 and HCN channels; neurodevelopment and the lifespan; treatment priorities in comorbid ADHD; methylphenidate and amphetamine, the DAT occupancy threshold and slow-dose versus pulsatile stimulants; atomoxetine and other NET inhibitors; guanfacine and clonidine; and the pipeline.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch12', number: 12, ready: true, pages: '486–537',
     title: 'Dementia: Causes, Symptomatic Treatments, and the Neurotransmitter Network Acetylcholine',
     short: 'Dementia and acetylcholine',
     summary: 'MCI versus dementia; Alzheimer, vascular, Lewy body and frontotemporal dementias and mixed pathology; the amyloid cascade, APOE and the three biomarker-defined stages of AD; acetylcholine synthesis, receptors and pathways; cholinesterase inhibitors and memantine; and the networks and treatments of psychosis, agitation, depression, pseudobulbar affect and apathy in dementia, with the post-2021 anti-amyloid antibodies.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   },
   {
     id: 'ch13', number: 13, ready: true, pages: '538–578',
     title: 'Impulsivity, Compulsivity, and Addiction',
     short: 'Impulsivity, compulsivity and addiction',
     summary: 'Impulsivity and compulsivity as ventral and dorsal cortico-striatal loops; the dopamine theory of addiction; stimulants, nicotine, alcohol, sedative hypnotics, GHB, opioids, cannabis, hallucinogens, empathogens and dissociatives with their treatments; habit extinction and psychedelic-assisted psychotherapy; binge eating disorder, OCD, impulse control disorders and violence.',
-    files: SP.CHAPTER_FILES
+    files: SP.VIGNETTE_FILES
   }
 ];
 

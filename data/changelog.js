@@ -9,6 +9,27 @@
    and "Latest version <Month YYYY>" in the footer (index.html), data/app-meta.js and README.md. */
 window.APP_CHANGELOG = [
   {
+    "version": "32.0.0",
+    "date": "2026-11-12",
+    "title": "Two-step vignettes for every chapter",
+    "summary": "Chapters 8\u201313 get two-step vignettes too: 80 new clinical cases, so all 13 chapters now have them (170 in total).",
+    "items": [
+      {
+        "type": "feature",
+        "text": "New two-step vignettes for Chapters 8\u201313 (10 each for Chapters 8 and 9, 15 each for 10\u201313): anxiety and trauma, pain, sleep and wakefulness, ADHD, dementia, and impulsivity, compulsivity and addiction. Every choice has its reason and book page.",
+        "ch": "ch12",
+        "href": "#/c/ch12/cards/vignettes",
+        "link": "Try Chapter 12"
+      },
+      {
+        "type": "feature",
+        "text": "Exams that include vignettes now draw them from any chapter you pick, and teaching mode's Two-step vignettes preset covers all 13 chapters.",
+        "href": "#/exam",
+        "link": "Take an exam"
+      }
+    ]
+  },
+  {
     "version": "31.0.0",
     "date": "2026-11-11",
     "title": "Two-step vignettes for Chapters 1\u20137",
